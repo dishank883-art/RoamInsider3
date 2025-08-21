@@ -2334,26 +2334,100 @@ export class MemStorage implements IStorage {
     return attraction;
   }
 
-  // Comprehensive data population for new cities
+  // Comprehensive data population for all cities that need complete data
   private populateComprehensiveCityData() {
     const gangtokCity = Array.from(this.cities.values()).find(c => c.slug === "gangtok");
     const mcleodganjCity = Array.from(this.cities.values()).find(c => c.slug === "mcleodganj");
     const shillongCity = Array.from(this.cities.values()).find(c => c.slug === "shillong");
+    const puneCity = Array.from(this.cities.values()).find(c => c.slug === "pune");
+    const udaipurCity = Array.from(this.cities.values()).find(c => c.slug === "udaipur");
     
-    if (!gangtokCity || !mcleodganjCity || !shillongCity) return;
+    if (!gangtokCity || !mcleodganjCity || !shillongCity || !puneCity || !udaipurCity) return;
 
-    // Add Internet Connectivity data
+    // Add Internet Connectivity data for all cities
     this.internetConnectivity.set(randomUUID(), {
       id: randomUUID(),
       cityId: gangtokCity.id,
       avgSpeedMbps: 40,
-      coworkingSpaces: [{ name: "Mountain Co-work", address: "MG Marg, Gangtok", pricing: "₹3,500/month", speedMbps: 50, amenities: ["Mountain Views", "Meeting Room", "Cafe"] }],
-      simProviders: [{ provider: "Jio", plans: [{ data: "1.5GB/day", validity: "28 days", price: 399 }] }],
-      wifiAvailability: "Good - Available in hotels and cafes",
+      coworkingSpaces: [
+        { name: "Mountain Co-work", address: "MG Marg, Gangtok", pricing: "₹3,500/month", speedMbps: 50, amenities: ["Mountain Views", "Meeting Room", "Cafe"] },
+        { name: "Sikkim Innovation Hub", address: "Ranipool, Gangtok", pricing: "₹2,800/month", speedMbps: 45, amenities: ["Government Support", "Mentorship", "Events"] }
+      ],
+      simProviders: [
+        { provider: "Jio", plans: [{ data: "1.5GB/day", validity: "28 days", price: 399 }, { data: "2GB/day", validity: "28 days", price: 599 }] },
+        { provider: "Airtel", plans: [{ data: "1.5GB/day", validity: "28 days", price: 419 }] }
+      ],
+      wifiAvailability: "Good - Available in hotels, cafes, and monasteries",
       updatedAt: new Date(),
     });
 
-    // Add comprehensive climate data for these cities 
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: mcleodganjCity.id,
+      avgSpeedMbps: 35,
+      coworkingSpaces: [
+        { name: "Tibet World Co-work", address: "Temple Road, McLeodganj", pricing: "₹3,000/month", speedMbps: 45, amenities: ["Mountain Views", "Meditation Room", "Tibetan Cafe"] },
+        { name: "Himalaya Co-working", address: "Bhagsu Road, McLeodganj", pricing: "₹2,500/month", speedMbps: 40, amenities: ["Spiritual Atmosphere", "Quiet Zones", "Tea Garden"] }
+      ],
+      simProviders: [
+        { provider: "Jio", plans: [{ data: "1.5GB/day", validity: "28 days", price: 399 }] },
+        { provider: "Vi", plans: [{ data: "1.5GB/day", validity: "28 days", price: 449 }] }
+      ],
+      wifiAvailability: "Good - Available in cafes, guesthouses, and temples",
+      updatedAt: new Date(),
+    });
+
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: shillongCity.id,
+      avgSpeedMbps: 50,
+      coworkingSpaces: [
+        { name: "Shillong Co-working Hub", address: "Police Bazaar, Shillong", pricing: "₹4,500/month", speedMbps: 65, amenities: ["Music Room", "Recording Studio", "Hill Views"] },
+        { name: "NE Digital Hub", address: "Laitumkhrah, Shillong", pricing: "₹3,800/month", speedMbps: 55, amenities: ["Tech Focus", "Startup Events", "Mentorship"] }
+      ],
+      simProviders: [
+        { provider: "Jio", plans: [{ data: "1.5GB/day", validity: "28 days", price: 399 }, { data: "2GB/day", validity: "28 days", price: 599 }] },
+        { provider: "Airtel", plans: [{ data: "1.5GB/day", validity: "28 days", price: 419 }] }
+      ],
+      wifiAvailability: "Excellent - Available in most areas including cafes and hotels",
+      updatedAt: new Date(),
+    });
+
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: puneCity.id,
+      avgSpeedMbps: 85,
+      coworkingSpaces: [
+        { name: "91springboard Pune", address: "Koregaon Park, Pune", pricing: "₹8,500/month", speedMbps: 100, amenities: ["Premium Location", "Events", "Networking"] },
+        { name: "Workafella Pune", address: "Baner, Pune", pricing: "₹7,200/month", speedMbps: 90, amenities: ["Modern Design", "Cafe", "Gaming Zone"] },
+        { name: "IndiQube Pune", address: "Viman Nagar, Pune", pricing: "₹6,800/month", speedMbps: 85, amenities: ["Corporate Grade", "Meeting Rooms", "Cafeteria"] }
+      ],
+      simProviders: [
+        { provider: "Jio", plans: [{ data: "1.5GB/day", validity: "28 days", price: 399 }, { data: "2GB/day", validity: "56 days", price: 999 }] },
+        { provider: "Airtel", plans: [{ data: "2GB/day", validity: "28 days", price: 549 }] },
+        { provider: "Vi", plans: [{ data: "1.5GB/day", validity: "28 days", price: 449 }] }
+      ],
+      wifiAvailability: "Excellent - Extensive coverage in IT hubs, cafes, and malls",
+      updatedAt: new Date(),
+    });
+
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: udaipurCity.id,
+      avgSpeedMbps: 45,
+      coworkingSpaces: [
+        { name: "Lake Palace Co-work", address: "City Palace Road, Udaipur", pricing: "₹4,200/month", speedMbps: 60, amenities: ["Lake Views", "Heritage Setting", "Royal Ambiance"] },
+        { name: "Udaipur Startup Hub", address: "Surajpole, Udaipur", pricing: "₹3,500/month", speedMbps: 50, amenities: ["Local Community", "Tourism Focus", "Cultural Events"] }
+      ],
+      simProviders: [
+        { provider: "Jio", plans: [{ data: "1.5GB/day", validity: "28 days", price: 399 }, { data: "2GB/day", validity: "28 days", price: 599 }] },
+        { provider: "Airtel", plans: [{ data: "1.5GB/day", validity: "28 days", price: 419 }] }
+      ],
+      wifiAvailability: "Good - Available in hotels, cafes, and heritage properties",
+      updatedAt: new Date(),
+    });
+
+    // Add comprehensive climate data for all cities 
     this.climate.set(randomUUID(), {
       id: randomUUID(),
       cityId: gangtokCity.id,
@@ -2361,7 +2435,7 @@ export class MemStorage implements IStorage {
       avgHumidity: 70,
       rainyMonths: ["June", "July", "August", "September"],
       bestTimeToVisit: "March to May, October to December",
-      climateType: "Subtropical highland - cool summers",
+      climateType: "Subtropical highland - cool summers, crisp winters",
       currentWeather: { temperature: 12, humidity: 75, description: "Cool mountain air with morning mist", icon: "cloudy" },
       updatedAt: new Date(),
     });
@@ -2373,7 +2447,7 @@ export class MemStorage implements IStorage {
       avgHumidity: 68,
       rainyMonths: ["July", "August", "September"],
       bestTimeToVisit: "March to June, September to November",
-      climateType: "Subtropical highland with spiritual ambiance",
+      climateType: "Subtropical highland with spiritual mountain ambiance",
       currentWeather: { temperature: 14, humidity: 70, description: "Crisp mountain air with prayer flags", icon: "partly-cloudy" },
       updatedAt: new Date(),
     });
@@ -2385,25 +2459,114 @@ export class MemStorage implements IStorage {
       avgHumidity: 75,
       rainyMonths: ["May", "June", "July", "August", "September", "October"],
       bestTimeToVisit: "March to May, September to November",
-      climateType: "Subtropical highland - Scotland of the East",
+      climateType: "Subtropical highland - Scotland of the East with heavy monsoons",
       currentWeather: { temperature: 18, humidity: 78, description: "Cool hill station with musical vibes", icon: "partly-cloudy" },
       updatedAt: new Date(),
     });
 
-    // Add Safety data
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: puneCity.id,
+      avgTempCelsius: 25,
+      avgHumidity: 60,
+      rainyMonths: ["June", "July", "August", "September"],
+      bestTimeToVisit: "October to March",
+      climateType: "Semi-arid with moderate rainfall - student city climate",
+      currentWeather: { temperature: 26, humidity: 58, description: "Pleasant university town weather", icon: "sunny" },
+      updatedAt: new Date(),
+    });
+
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: udaipurCity.id,
+      avgTempCelsius: 28,
+      avgHumidity: 55,
+      rainyMonths: ["July", "August", "September"],
+      bestTimeToVisit: "October to March",
+      climateType: "Semi-arid desert climate with lake moderation",
+      currentWeather: { temperature: 26, humidity: 52, description: "Royal city with lake breezes", icon: "sunny" },
+      updatedAt: new Date(),
+    });
+
+    // Add Safety data for all cities
     this.safety.set(randomUUID(), {
       id: randomUUID(),
       cityId: gangtokCity.id,
       safetyScore: "9.0",
       womenSafetyScore: "8.8",
-      crimeRate: "Very Low - extremely safe, well-policed state",
-      hospitals: [{ name: "STNM Hospital", address: "Sochakgang", type: "Government", emergency: true }],
+      crimeRate: "Very Low - extremely safe, well-policed Buddhist state",
+      hospitals: [
+        { name: "STNM Hospital", address: "Sochakgang", type: "Government", emergency: true },
+        { name: "Manipal Hospital Siliguri", address: "Nearest private (120km)", type: "Private", emergency: true }
+      ],
       emergencyNumbers: { police: "100", medical: "108", fire: "101" },
       pollutionIndex: 45,
       updatedAt: new Date(),
     });
 
-    // Add Transportation data
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: mcleodganjCity.id,
+      safetyScore: "9.2",
+      womenSafetyScore: "9.0",
+      crimeRate: "Very Low - spiritual atmosphere ensures exceptional safety",
+      hospitals: [
+        { name: "Delek Hospital", address: "Gangchen Kyishong", type: "Tibetan Medical", emergency: true },
+        { name: "Dr. Rajendra Prasad Hospital", address: "Tanda (15km)", type: "Government Medical College", emergency: true }
+      ],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
+      pollutionIndex: 35,
+      updatedAt: new Date(),
+    });
+
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: shillongCity.id,
+      safetyScore: "8.7",
+      womenSafetyScore: "8.5",
+      crimeRate: "Low - generally safe with friendly Khasi locals",
+      hospitals: [
+        { name: "NEIGRIHMS", address: "Mawdiangdiang", type: "Medical College", emergency: true },
+        { name: "Shillong Civil Hospital", address: "Civil Hospital", type: "Government", emergency: true }
+      ],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
+      pollutionIndex: 55,
+      updatedAt: new Date(),
+    });
+
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: puneCity.id,
+      safetyScore: "7.8",
+      womenSafetyScore: "7.5",
+      crimeRate: "Moderate - student city with occasional issues in nightlife areas",
+      hospitals: [
+        { name: "Ruby Hall Clinic", address: "Sassoon Road", type: "Private", emergency: true },
+        { name: "Deenanath Mangeshkar Hospital", address: "Erandwane", type: "Private", emergency: true },
+        { name: "Sassoon Hospital", address: "Near Railway Station", type: "Government", emergency: true }
+      ],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
+      pollutionIndex: 75,
+      updatedAt: new Date(),
+    });
+
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: udaipurCity.id,
+      safetyScore: "8.2",
+      womenSafetyScore: "7.8",
+      crimeRate: "Low to Moderate - tourist-focused city with good police presence",
+      hospitals: [
+        { name: "Maharana Bhupal Hospital", address: "RNT Medical College", type: "Government Medical College", emergency: true },
+        { name: "Pacific Medical College", address: "Bedla", type: "Private Medical College", emergency: true },
+        { name: "Aravali Hospital", address: "Titardi", type: "Private", emergency: true }
+      ],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
+      pollutionIndex: 65,
+      updatedAt: new Date(),
+    });
+
+    // Add Transportation data for all cities
     this.transportation.set(randomUUID(), {
       id: randomUUID(),
       cityId: gangtokCity.id,
@@ -2412,11 +2575,59 @@ export class MemStorage implements IStorage {
       rideHailing: ["Ola"],
       airports: [{ name: "Bagdogra Airport", code: "IXB", distance: "124km" }],
       trainStations: [{ name: "New Jalpaiguri", type: "Nearest Major (148km)" }],
-      intercityConnectivity: "Limited - mainly via Siliguri",
+      intercityConnectivity: "Limited - mainly via Siliguri and NJP",
       updatedAt: new Date(),
     });
 
-    // Add Lifestyle data
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: mcleodganjCity.id,
+      localTransport: { metro: false, bus: true, autoRickshaw: false, taxi: true, bike: false },
+      walkabilityScore: 9,
+      rideHailing: [],
+      airports: [{ name: "Kangra Airport", code: "DHM", distance: "18km" }],
+      trainStations: [{ name: "Pathankot Railway", type: "Nearest Major (90km)" }],
+      intercityConnectivity: "Limited - via Pathankot and Delhi",
+      updatedAt: new Date(),
+    });
+
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: shillongCity.id,
+      localTransport: { metro: false, bus: true, autoRickshaw: false, taxi: true, bike: true },
+      walkabilityScore: 7,
+      rideHailing: ["Ola", "Uber"],
+      airports: [{ name: "Umroi Airport", code: "SHL", distance: "35km" }],
+      trainStations: [{ name: "Guwahati Railway", type: "Nearest Major (103km)" }],
+      intercityConnectivity: "Good - well connected to Guwahati and NE states",
+      updatedAt: new Date(),
+    });
+
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: puneCity.id,
+      localTransport: { metro: true, bus: true, autoRickshaw: true, taxi: true, bike: true },
+      walkabilityScore: 6,
+      rideHailing: ["Ola", "Uber", "Rapido"],
+      airports: [{ name: "Pune Airport", code: "PNQ", distance: "8km" }],
+      trainStations: [{ name: "Pune Junction", type: "Major Railway Hub" }],
+      intercityConnectivity: "Excellent - major transportation hub for Western India",
+      updatedAt: new Date(),
+    });
+
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: udaipurCity.id,
+      localTransport: { metro: false, bus: true, autoRickshaw: true, taxi: true, bike: true },
+      walkabilityScore: 7,
+      rideHailing: ["Ola", "Uber"],
+      airports: [{ name: "Maharana Pratap Airport", code: "UDR", distance: "24km" }],
+      trainStations: [{ name: "Udaipur City Railway", type: "Major Station" }],
+      intercityConnectivity: "Good - connected to major Rajasthan and Gujarat cities",
+      updatedAt: new Date(),
+    });
+
+    // Add Lifestyle data for all cities
     this.lifestyle.set(randomUUID(), {
       id: randomUUID(),
       cityId: gangtokCity.id,
@@ -2436,7 +2647,130 @@ export class MemStorage implements IStorage {
       updatedAt: new Date(),
     });
 
-    // Add attractions
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: mcleodganjCity.id,
+      foodScene: {
+        specialties: ["Tibetan Momos", "Thukpa", "Tibetan Bread", "Butter Tea"],
+        vegFriendly: true, streetFood: true, internationalCuisine: true
+      },
+      nightlife: { bars: false, clubs: false, lateNightEating: false, alcoholLaws: "Limited - spiritual town" },
+      fitness: { gyms: 3, parks: 5, yogaStudios: 25, outdoorActivities: ["Trekking", "Meditation", "Yoga retreats"] },
+      culture: {
+        languages: ["English", "Hindi", "Tibetan", "Kangri"],
+        festivals: ["Losar", "Buddha Purnima", "Dalai Lama Birthday"],
+        customs: ["Buddhist meditation", "Respect for Dalai Lama"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - spiritual discourages use",
+      updatedAt: new Date(),
+    });
+
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: shillongCity.id,
+      foodScene: {
+        specialties: ["Jadoh", "Tungrymbai", "Pumaloi", "Dohneiiong", "Pukhlein"],
+        vegFriendly: true, streetFood: true, internationalCuisine: true
+      },
+      nightlife: { bars: true, clubs: true, lateNightEating: true, alcoholLaws: "Available - vibrant music scene" },
+      fitness: { gyms: 25, parks: 15, yogaStudios: 12, outdoorActivities: ["Trekking", "Rock climbing", "Music festivals"] },
+      culture: {
+        languages: ["Khasi", "English", "Hindi", "Garo"],
+        festivals: ["Shad Suk Mynsiem", "Nongkrem Festival", "Behdeinkhlam"],
+        customs: ["Music appreciation", "Matrilineal society"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal but traditionally grown",
+      updatedAt: new Date(),
+    });
+
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: puneCity.id,
+      foodScene: {
+        specialties: ["Misal Pav", "Vada Pav", "Puran Poli", "Bhel Puri", "Pav Bhaji"],
+        vegFriendly: true, streetFood: true, internationalCuisine: true
+      },
+      nightlife: { bars: true, clubs: true, lateNightEating: true, alcoholLaws: "Available - student city nightlife" },
+      fitness: { gyms: 200, parks: 50, yogaStudios: 80, outdoorActivities: ["Trekking", "Cycling", "Rock climbing", "Adventure sports"] },
+      culture: {
+        languages: ["Marathi", "Hindi", "English"],
+        festivals: ["Ganesh Chaturthi", "Navratri", "Gudi Padwa", "Pune Festival"],
+        customs: ["Educational excellence", "Cultural programs", "Theater appreciation"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - strict enforcement",
+      updatedAt: new Date(),
+    });
+
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: udaipurCity.id,
+      foodScene: {
+        specialties: ["Dal Baati Churma", "Laal Maas", "Gatte ki Sabzi", "Ker Sangri", "Rajasthani Thali"],
+        vegFriendly: true, streetFood: true, internationalCuisine: true
+      },
+      nightlife: { bars: true, clubs: false, lateNightEating: true, alcoholLaws: "Available - tourist-friendly" },
+      fitness: { gyms: 35, parks: 20, yogaStudios: 15, outdoorActivities: ["Lake activities", "Heritage walks", "Photography", "Cycling"] },
+      culture: {
+        languages: ["Hindi", "Rajasthani", "English"],
+        festivals: ["Mewar Festival", "Shilpgram Festival", "Hariyali Amavasya", "World Music Festival"],
+        customs: ["Royal heritage", "Mewar traditions", "Lake worship"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - tourist areas monitored",
+      updatedAt: new Date(),
+    });
+
+    // Add comprehensive cost of living data
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: puneCity.id,
+      monthlyBudgetINR: 33500,
+      monthlyBudgetUSD: 402,
+      studioRentINR: 18000,
+      oneBhkRentINR: 22000,
+      twoBhkRentINR: 35000,
+      utilitiesINR: 2500,
+      groceriesINR: 8000,
+      eatingOutINR: 5000,
+      coworkingINR: 7200,
+      transportINR: 3000,
+      simDataINR: 450,
+      gymINR: 1800,
+      coffeeINR: 120,
+      beerINR: 200,
+      accommodationINR: 18000,
+      foodINR: 8000,
+      entertainmentINR: 4000,
+      updatedAt: new Date(),
+    });
+
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: udaipurCity.id,
+      monthlyBudgetINR: 28500,
+      monthlyBudgetUSD: 342,
+      studioRentINR: 15000,
+      oneBhkRentINR: 18000,
+      twoBhkRentINR: 28000,
+      utilitiesINR: 2000,
+      groceriesINR: 6000,
+      eatingOutINR: 4000,
+      coworkingINR: 4200,
+      transportINR: 2500,
+      simDataINR: 450,
+      gymINR: 1500,
+      coffeeINR: 100,
+      beerINR: 180,
+      accommodationINR: 15000,
+      foodINR: 6000,
+      entertainmentINR: 3500,
+      updatedAt: new Date(),
+    });
+
+    // Add attractions for all cities
     const gangtokAttr1 = randomUUID();
     this.attractions.set(gangtokAttr1, {
       id: gangtokAttr1, cityId: gangtokCity.id, name: "MG Marg",
@@ -2446,12 +2780,46 @@ export class MemStorage implements IStorage {
       createdAt: new Date(),
     });
 
-    // Add events
+    const puneAttr1 = randomUUID();
+    this.attractions.set(puneAttr1, {
+      id: puneAttr1, cityId: puneCity.id, name: "Shaniwar Wada",
+      description: "Historic fortified palace of the Peshwas", category: "Historical",
+      priceRange: "₹25", address: "Shaniwar Peth, Pune", timings: "8:00 AM - 6:30 PM",
+      isHiddenGem: false, rating: "4.2", image: "https://images.unsplash.com/photo-1582050542926-2b8b5c7c7900",
+      createdAt: new Date(),
+    });
+
+    const udaipurAttr1 = randomUUID();
+    this.attractions.set(udaipurAttr1, {
+      id: udaipurAttr1, cityId: udaipurCity.id, name: "City Palace Complex",
+      description: "Magnificent royal palace with lake views", category: "Historical",
+      priceRange: "₹300", address: "City Palace Road, Udaipur", timings: "9:30 AM - 5:30 PM",
+      isHiddenGem: false, rating: "4.6", image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+      createdAt: new Date(),
+    });
+
+    // Add events for all cities
     const gangtokEvent1 = randomUUID();
     this.events.set(gangtokEvent1, {
       id: gangtokEvent1, cityId: gangtokCity.id, title: "Losar Festival",
       description: "Tibetan New Year with traditional celebrations", date: new Date("2025-02-10"),
       venue: "Monasteries, Gangtok", category: "Cultural", isPaid: false, price: null, url: null,
+      createdAt: new Date(),
+    });
+
+    const puneEvent1 = randomUUID();
+    this.events.set(puneEvent1, {
+      id: puneEvent1, cityId: puneCity.id, title: "Pune Festival",
+      description: "Cultural celebration with music and dance", date: new Date("2024-09-15"),
+      venue: "Multiple venues, Pune", category: "Cultural", isPaid: true, price: "₹200-500", url: "https://punefestival.com/",
+      createdAt: new Date(),
+    });
+
+    const udaipurEvent1 = randomUUID();
+    this.events.set(udaipurEvent1, {
+      id: udaipurEvent1, cityId: udaipurCity.id, title: "World Music Festival",
+      description: "International music festival at heritage venues", date: new Date("2025-02-14"),
+      venue: "Udaipur Palace", category: "Music", isPaid: true, price: "₹2,000-8,000", url: "https://worldmusic.udaipur.com/",
       createdAt: new Date(),
     });
   }

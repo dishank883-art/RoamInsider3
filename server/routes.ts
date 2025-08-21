@@ -86,7 +86,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const apiKey = process.env.OPENWEATHER_API_KEY;
       
-      // Get city details to create distinct weather data
+      // Get city details by slug (or ID if it's a valid city identifier)
       const city = await storage.getCityBySlug(req.params.cityId);
       if (!city) {
         return res.status(404).json({ message: "City not found" });
