@@ -88,4 +88,20 @@ The current implementation includes placeholder authentication components with s
 ### Session Management
 - **express-session** with **connect-pg-simple** for PostgreSQL-backed sessions
 
+## Deployment Configuration
+
+### Static Deployment Fix
+The application includes a deployment structure fix to resolve compatibility with Replit's static deployment requirements.
+
+**Issue**: The build process outputs frontend files to `dist/public/` while Replit's static deployment expects files directly in `dist/`.
+
+**Solution**: A deployment fix script (`fix-deployment.js`) automatically reorganizes the build output:
+- Moves all files from `dist/public/` to `dist/`
+- Preserves server files like `index.js` from esbuild
+- Ensures `index.html` is in the correct root location
+
+**Usage**: After building, run `node fix-deployment.js` to prepare for deployment.
+
+**Date**: August 2025 - Implemented to resolve static deployment structure requirements.
+
 The application is designed to be scalable and maintainable, with clear separation of concerns and modern development practices. The architecture supports both current requirements and future enhancements like user authentication, real-time features, and additional integrations.
