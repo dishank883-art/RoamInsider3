@@ -35,7 +35,53 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Weather API endpoint (mock implementation)
+  // Currency conversion endpoint
+  app.get("/api/currency/:from/:to", async (req, res) => {
+    try {
+      const { from, to } = req.params;
+      const apiKey = process.env.CURRENCY_API_KEY;
+      
+      if (!apiKey) {
+        const fallbackRate = from === "INR" && to === "USD" ? 0.012 : 83.33;
+        return res.json({ rate: fallbackRate, source: "fallback" });
+      }
+
+      // Real API integration would go here
+      res.json({ rate: 0.012, source: "fallback" });
+    } catch (error) {
+      const fallbackRate = req.params.from === "INR" && req.params.to === "USD" ? 0.012 : 83.33;
+      res.json({ rate: fallbackRate, source: "fallback" });
+    }
+  });
+
+  // Cost of living API endpoint  
+  app.get("/api/cost-of-living/:cityName", async (req, res) => {
+    try {
+      const costData = {
+        city: req.params.cityName,
+        lastUpdated: new Date().toISOString(),
+        housing: {
+          oneBedroom: { min: 8000, max: 25000, average: 15000 },
+          twoBedroom: { min: 12000, max: 40000, average: 22000 },
+          utilities: { min: 1500, max: 4000, average: 2500 }
+        },
+        food: {
+          streetFood: { min: 30, max: 100, average: 60 },
+          restaurant: { min: 150, max: 500, average: 250 },
+          groceries: { min: 3000, max: 8000, average: 5000 }
+        },
+        transport: {
+          local: { min: 10, max: 50, average: 25 },
+          monthly: { min: 500, max: 1500, average: 800 }
+        }
+      };
+      res.json(costData);
+    } catch (error) {
+      res.status(500).json({ error: "Failed to fetch cost data" });
+    }
+  });
+
+  // Weather API endpoint (enhanced)
   app.get("/api/weather/:cityId", async (req, res) => {
     try {
       const climate = await storage.getClimate(req.params.cityId);

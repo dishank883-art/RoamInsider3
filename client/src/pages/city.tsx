@@ -14,6 +14,8 @@ import ThingsToDo from "@/components/city/things-to-do";
 import CommunityNomads from "@/components/city/community-nomads";
 import InsiderHacks from "@/components/city/insider-hacks";
 import CityConnections from "@/components/city/city-connections";
+import FestivalsEvents from "@/components/city/festivals-events";
+import ShoppingMarkets from "@/components/city/shopping-markets";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -31,19 +33,21 @@ export default function CityPage() {
     enabled: !!slug,
   });
 
-  // Tab configuration with icons and content
+  // Complete tab configuration as per requirements
   const tabs = [
     { id: "overview", label: "Overview", icon: Compass, emoji: "🎯" },
     { id: "cost", label: "Cost of Living", icon: DollarSign, emoji: "💰" },
-    { id: "internet", label: "Internet", icon: Wifi, emoji: "🌐" },
-    { id: "transport", label: "Transport", icon: Car, emoji: "🚌" },
-    { id: "climate", label: "Climate", icon: Cloud, emoji: "🌤️" },
-    { id: "safety", label: "Safety", icon: Shield, emoji: "🛡️" },
-    { id: "lifestyle", label: "Lifestyle", icon: Heart, emoji: "❤️" },
-    { id: "things-to-do", label: "Things to Do", icon: Compass, emoji: "🗺️" },
-    { id: "community", label: "Community", icon: Users, emoji: "👥" },
+    { id: "internet", label: "Internet & Connectivity", icon: Wifi, emoji: "🌐" },
+    { id: "transport", label: "Transportation & Accessibility", icon: Car, emoji: "🚌" },
+    { id: "climate", label: "Climate & Best Time", icon: Cloud, emoji: "🌤️" },
+    { id: "safety", label: "Safety & Healthcare", icon: Shield, emoji: "🏥" },
+    { id: "lifestyle", label: "Lifestyle & Culture", icon: Heart, emoji: "🍲" },
+    { id: "festivals", label: "Festivals & Events", icon: Star, emoji: "🎉" },
+    { id: "things-to-do", label: "Things to Do & Experiences", icon: MapPin, emoji: "🗺️" },
+    { id: "shopping", label: "Shopping & Markets", icon: Users, emoji: "🛍️" },
+    { id: "community", label: "Community & Nomad Scene", icon: Users, emoji: "🤝" },
     { id: "hacks", label: "Insider Hacks", icon: Lightbulb, emoji: "💡" },
-    { id: "connectivity", label: "City Connections", icon: Train, emoji: "🚄" },
+    { id: "connectivity", label: "Connectivity to Other Cities", icon: Train, emoji: "✈️" },
   ];
 
   if (isLoading) {
@@ -117,8 +121,12 @@ export default function CityPage() {
         return <SafetyHealthcare safetyData={city.safety} />;
       case "lifestyle":
         return <LifestyleCulture lifestyleData={city.lifestyle} />;
+      case "festivals":
+        return <FestivalsEvents city={city} />;
       case "things-to-do":
         return <ThingsToDo attractions={city.attractions} events={city.events} />;
+      case "shopping":
+        return <ShoppingMarkets city={city} />;
       case "community":
         return <CommunityNomads city={city} />;
       case "hacks":

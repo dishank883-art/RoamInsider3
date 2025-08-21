@@ -1,0 +1,17 @@
+Now fill the city page sections with extensive and high-quality content. Do not leave any section empty. Write each section as if it were a professional digital guidebook for nomads and travelers. Always include prices in INR and USD side by side (₹ / $).
+
+1. Overview: City vibe, pros/cons for nomads, insider intro.
+2. Cost of Living: Rent, groceries, utilities, transport, food, coworking, SIM, entertainment. Use a cost-of-living API where possible. Show in INR and USD.
+3. Internet & Connectivity: Average broadband speeds (API), best coworking spaces (with links), cafés with WiFi, SIM providers with plans.
+4. Transportation: Metro, bus, taxi, ride-hailing, auto fares, airport info. Add links to official transport websites and apps.
+5. Climate: Monthly averages and best seasons, using weather API with daily updates. Show data in table or chart.
+6. Safety & Healthcare: Crime data, scams, AQI (API), women traveler safety, hospital/clinic links.
+7. Lifestyle & Culture: Local food, nightlife, fitness, wellness, alcohol laws. Include links to food/culture guides.
+8. Festivals & Events: Cultural festivals with official dates and state tourism links. Use an events API for dynamic updates.
+9. Things to Do: Top attractions, hikes, hidden gems. Add Google Maps links.
+10. Shopping: Popular bazaars, malls, and souvenirs. Link to markets where available.
+11. Community & Nomad Scene: Nomad meetups, coworking hubs, expat groups (with links to Meetup, Facebook, coworker.com).
+12. Insider Hacks: Local tricks, money-saving tips, unique advice for nomads.
+13. Connectivity: Show train, flight, and bus costs + times to major cities (via API if possible, else links to IRCTC, Redbus, MakeMyTrip).
+
+Every section must have at least 3–5 paragraphs plus structured elements like tables or lists. Use APIs for live data, links for verification, and fallback internal data if APIs are unavailable. The tone must be classy, engaging, and travel-themed, making the site feel premium and useful as a one-stop solution for nomads.
