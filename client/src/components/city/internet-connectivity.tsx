@@ -2,12 +2,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Wifi, MapPin, Clock, Users, Zap, Signal, Smartphone, Router } from "lucide-react";
 import type { InternetConnectivity } from "@shared/schema";
+import { getCitySpecificData } from "@/lib/city-specific-data";
 
 interface InternetConnectivityProps {
   internetData: InternetConnectivity | null;
+  citySlug: string;
 }
 
-export default function InternetConnectivity({ internetData }: InternetConnectivityProps) {
+export default function InternetConnectivity({ internetData, citySlug }: InternetConnectivityProps) {
+  const cityData = getCitySpecificData(citySlug);
   if (!internetData) {
     return (
       <Card className="bg-white rounded-2xl shadow-lg">
@@ -139,53 +142,53 @@ export default function InternetConnectivity({ internetData }: InternetConnectiv
             <div>
               <h4 className="font-semibold text-travel-blue mb-3">Cafes & Restaurants</h4>
               <div className="space-y-3">
-                <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <div>
-                    <span className="font-medium">Starbucks</span>
-                    <div className="text-sm text-muted-navy">50-100 Mbps</div>
+                {cityData?.wifiHotspots.cafes.map((cafe, index) => (
+                  <div key={index} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <div>
+                      <span className="font-medium">{cafe.name}</span>
+                      <div className="text-sm text-muted-navy">{cafe.speed}</div>
+                    </div>
+                    <Badge className={`bg-sage-green/10 text-sage-green ${cafe.quality === 'Excellent' ? 'bg-sage-green/10 text-sage-green' : cafe.quality === 'Good' ? 'bg-vintage-gold/10 text-vintage-gold' : 'bg-travel-blue/10 text-travel-blue'}`}>
+                      {cafe.quality}
+                    </Badge>
                   </div>
-                  <Badge className="bg-sage-green/10 text-sage-green">Excellent</Badge>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <div>
-                    <span className="font-medium">Local Cafes</span>
-                    <div className="text-sm text-muted-navy">10-30 Mbps</div>
-                  </div>
-                  <Badge className="bg-vintage-gold/10 text-vintage-gold">Good</Badge>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <div>
-                    <span className="font-medium">McDonalds/KFC</span>
-                    <div className="text-sm text-muted-navy">5-15 Mbps</div>
-                  </div>
-                  <Badge className="bg-travel-blue/10 text-travel-blue">Fair</Badge>
-                </div>
+                )) || (
+                  <>
+                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                      <div>
+                        <span className="font-medium">Local Cafes</span>
+                        <div className="text-sm text-muted-navy">10-30 Mbps</div>
+                      </div>
+                      <Badge className="bg-vintage-gold/10 text-vintage-gold">Good</Badge>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
             <div>
               <h4 className="font-semibold text-travel-blue mb-3">Public Spaces</h4>
               <div className="space-y-3">
-                <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <div>
-                    <span className="font-medium">Shopping Malls</span>
-                    <div className="text-sm text-muted-navy">20-50 Mbps</div>
+                {cityData?.wifiHotspots.publicSpaces.map((space, index) => (
+                  <div key={index} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <div>
+                      <span className="font-medium">{space.name}</span>
+                      <div className="text-sm text-muted-navy">{space.speed}</div>
+                    </div>
+                    <Badge className={`${space.quality === 'Excellent' ? 'bg-sage-green/10 text-sage-green' : space.quality === 'Good' ? 'bg-vintage-gold/10 text-vintage-gold' : 'bg-travel-blue/10 text-travel-blue'}`}>
+                      {space.quality}
+                    </Badge>
                   </div>
-                  <Badge className="bg-sage-green/10 text-sage-green">Good</Badge>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <div>
-                    <span className="font-medium">Airports</span>
-                    <div className="text-sm text-muted-navy">30-100 Mbps</div>
-                  </div>
-                  <Badge className="bg-sage-green/10 text-sage-green">Excellent</Badge>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <div>
-                    <span className="font-medium">Metro Stations</span>
-                    <div className="text-sm text-muted-navy">5-20 Mbps</div>
-                  </div>
-                  <Badge className="bg-vintage-gold/10 text-vintage-gold">Limited</Badge>
-                </div>
+                )) || (
+                  <>
+                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                      <div>
+                        <span className="font-medium">Public WiFi</span>
+                        <div className="text-sm text-muted-navy">15-30 Mbps</div>
+                      </div>
+                      <Badge className="bg-vintage-gold/10 text-vintage-gold">Fair</Badge>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

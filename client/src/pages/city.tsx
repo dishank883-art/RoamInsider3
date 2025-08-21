@@ -113,9 +113,9 @@ export default function CityPage() {
       case "overview":
         return <CityOverview city={city} />;
       case "cost":
-        return <CostOfLiving costData={city.costOfLiving} />;
+        return <CostOfLiving costData={city.costOfLiving} citySlug={city.slug} />;
       case "internet":
-        return <InternetConnectivity internetData={city.internetConnectivity} />;
+        return <InternetConnectivity internetData={city.internetConnectivity} citySlug={city.slug} />;
       case "transport":
         return <Transportation transportData={city.transportation} />;
       case "weather":
@@ -129,7 +129,7 @@ export default function CityPage() {
       case "festivals":
         return <FestivalsEvents city={city} />;
       case "things-to-do":
-        return <ThingsToDo attractions={city.attractions} events={city.events} />;
+        return <ThingsToDo attractions={city.attractions} events={city.events} citySlug={city.slug} />;
       case "shopping":
         return <ShoppingMarkets city={city} />;
       case "community":

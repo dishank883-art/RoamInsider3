@@ -3,14 +3,20 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Lightbulb, DollarSign, MapPin, Clock, Shield, Zap, ExternalLink, Phone, Coffee, Car } from "lucide-react";
 import type { CityWithDetails } from "@shared/schema";
+import { getCitySpecificData } from "@/lib/city-specific-data";
 
 interface InsiderHacksProps {
   city: CityWithDetails;
 }
 
 export default function InsiderHacks({ city }: InsiderHacksProps) {
-  const goaInsiderHacks = {
-    moneyHacks: {
+  const cityData = getCitySpecificData(city.slug);
+  
+  // Fallback to default data if city-specific data not available
+  const insiderHacks = cityData ? {
+    moneyHacks: cityData.insiderHacks,
+    secretSpots: cityData.secretSpots
+  } : {
       accommodation: [
         "Book monthly stays directly with property owners via Facebook groups for 40-60% discounts",
         "Stay in Arambol/Ashwem instead of Baga/Calangute for 50% cheaper accommodation",
@@ -108,7 +114,7 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
                 Accommodation Savings
               </h4>
               <ul className="space-y-2 text-sm text-muted-navy">
-                {goaInsiderHacks.moneyHacks.accommodation.map((tip, index) => (
+                {insiderHacks.moneyHacks.accommodation.map((tip, index) => (
                   <li key={index}>• {tip}</li>
                 ))}
               </ul>
@@ -120,7 +126,7 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
                 Food & Dining
               </h4>
               <ul className="space-y-2 text-sm text-muted-navy">
-                {goaInsiderHacks.moneyHacks.food.map((tip, index) => (
+                {insiderHacks.moneyHacks.food.map((tip, index) => (
                   <li key={index}>• {tip}</li>
                 ))}
               </ul>
@@ -132,7 +138,7 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
                 Transport Hacks
               </h4>
               <ul className="space-y-2 text-sm text-muted-navy">
-                {goaInsiderHacks.moneyHacks.transport.map((tip, index) => (
+                {insiderHacks.moneyHacks.transport.map((tip, index) => (
                   <li key={index}>• {tip}</li>
                 ))}
               </ul>
@@ -147,7 +153,7 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
             🗺️ Secret Spots & Hidden Gems
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
-            {goaInsiderHacks.secretSpots.map((spot, index) => (
+            {insiderHacks.secretSpots.map((spot, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                 <div className="flex items-start justify-between mb-3">
                   <h4 className="font-semibold text-travel-blue">{spot.name}</h4>

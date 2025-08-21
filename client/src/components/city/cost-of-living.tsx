@@ -3,12 +3,15 @@ import { Badge } from "@/components/ui/badge";
 import { DollarSign, Home, Wifi, Car, Coffee, Dumbbell, ExternalLink, TrendingUp, RefreshCw } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import type { CostOfLiving } from "@shared/schema";
+import { getCitySpecificData } from "@/lib/city-specific-data";
 
 interface CostOfLivingProps {
   costData: CostOfLiving | null;
+  citySlug: string;
 }
 
-export default function CostOfLiving({ costData }: CostOfLivingProps) {
+export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) {
+  const cityData = getCitySpecificData(citySlug);
   // Fetch live currency conversion rate
   const { data: currencyData } = useQuery<{rate: number, source: string}>({
     queryKey: ["/api/currency/INR/USD"],
@@ -185,18 +188,23 @@ export default function CostOfLiving({ costData }: CostOfLivingProps) {
             <div className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
               <h4 className="font-semibold text-sage-green mb-2">Street Food</h4>
               <div className="space-y-1 text-sm">
-                <div className="flex justify-between">
-                  <span>Vada Pav</span>
-                  <span>₹15-25 ($0.20)</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Dosa</span>
-                  <span>₹40-80 ($0.50-1)</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Thali</span>
-                  <span>₹80-150 ($1-2)</span>
-                </div>
+                {cityData?.streetFood.map((item, index) => (
+                  <div key={index} className="flex justify-between">
+                    <span>{item.item}</span>
+                    <span>{item.price}</span>
+                  </div>
+                )) || (
+                  <>
+                    <div className="flex justify-between">
+                      <span>Local Specialty</span>
+                      <span>₹40-80 ($0.50-1)</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Street Snacks</span>
+                      <span>₹20-50 ($0.25-0.60)</span>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
             <div className="bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20">
@@ -238,13 +246,19 @@ export default function CostOfLiving({ costData }: CostOfLivingProps) {
 
         {/* Money Saving Tips */}
         <div className="bg-sage-green/5 rounded-lg p-4 border-l-4 border-sage-green">
-          <h4 className="font-semibold text-sage-green mb-2">💡 Money Saving Tips</h4>
+          <h4 className="font-semibold text-sage-green mb-2">💡 Smart Money Tips for Digital Nomads</h4>
           <ul className="space-y-1 text-muted-navy text-sm">
-            <li>• Cook at home to save 40-50% on food costs</li>
-            <li>• Use local transport instead of ride-hailing for daily commute</li>
-            <li>• Share coworking spaces or find day passes for flexibility</li>
-            <li>• Buy groceries from local markets instead of supermarkets</li>
-            <li>• Look for PG accommodations if staying long-term</li>
+            {cityData?.moneyTips.map((tip, index) => (
+              <li key={index}>• {tip}</li>
+            )) || (
+              <>
+                <li>• Cook at home to save 40-50% on food costs</li>
+                <li>• Use local transport instead of ride-hailing for daily commute</li>
+                <li>• Share coworking spaces or find day passes for flexibility</li>
+                <li>• Buy groceries from local markets instead of supermarkets</li>
+                <li>• Look for PG accommodations if staying long-term</li>
+              </>
+            )}
           </ul>
         </div>
 

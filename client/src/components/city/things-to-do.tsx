@@ -3,13 +3,16 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, Star, Clock, ExternalLink, Calendar, Eye, Camera } from "lucide-react";
 import type { Attraction, Event } from "@shared/schema";
+import { getCitySpecificData } from "@/lib/city-specific-data";
 
 interface ThingsToDoProps {
   attractions: Attraction[];
   events: Event[];
+  citySlug: string;
 }
 
-export default function ThingsToDo({ attractions, events }: ThingsToDoProps) {
+export default function ThingsToDo({ attractions, events, citySlug }: ThingsToDoProps) {
+  const cityData = getCitySpecificData(citySlug);
   const featuredAttractions = attractions.filter(a => !a.isHiddenGem).slice(0, 6);
   const hiddenGems = attractions.filter(a => a.isHiddenGem).slice(0, 4);
   const upcomingEvents = events.filter(e => new Date(e.date) > new Date()).slice(0, 4);
@@ -232,12 +235,18 @@ export default function ThingsToDo({ attractions, events }: ThingsToDoProps) {
             Local Experience Tips
           </h4>
           <ul className="space-y-1 text-muted-navy text-sm">
-            <li>• Book popular attractions in advance, especially during peak season</li>
-            <li>• Early morning visits to attractions mean fewer crowds and better photos</li>
-            <li>• Hire local guides for deeper cultural insights and hidden stories</li>
-            <li>• Check for free walking tours to explore the city cost-effectively</li>
-            <li>• Follow local event pages on social media for last-minute events</li>
-            <li>• Ask locals for recommendations - they know the best spots</li>
+            {cityData?.localExperienceTips.map((tip, index) => (
+              <li key={index}>• {tip}</li>
+            )) || (
+              <>
+                <li>• Book popular attractions in advance, especially during peak season</li>
+                <li>• Early morning visits to attractions mean fewer crowds and better photos</li>
+                <li>• Hire local guides for deeper cultural insights and hidden stories</li>
+                <li>• Check for free walking tours to explore the city cost-effectively</li>
+                <li>• Follow local event pages on social media for last-minute events</li>
+                <li>• Ask locals for recommendations - they know the best spots</li>
+              </>
+            )}
           </ul>
         </div>
       </CardContent>
