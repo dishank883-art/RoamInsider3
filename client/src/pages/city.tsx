@@ -9,7 +9,7 @@ import InternetConnectivity from "@/components/city/internet-connectivity";
 import Transportation from "@/components/city/transportation";
 import ClimateWeather from "@/components/city/climate-weather";
 import WeatherClimate from "@/components/city/weather-climate";
-import CoworkingSpaces from "@/components/city/coworking-spaces";
+import CoworkingSpaces from "@/components/city/coworking-spaces-city-specific";
 import SafetyHealthcare from "@/components/city/safety-healthcare";
 import LifestyleCulture from "@/components/city/lifestyle-culture";
 import ThingsToDo from "@/components/city/things-to-do";
@@ -121,7 +121,7 @@ export default function CityPage() {
       case "weather":
         return <WeatherClimate climateData={city.climate} cityName={city.name} cityId={city.id} />;
       case "coworking":
-        return <CoworkingSpaces cityName={city.name} />;
+        return <CoworkingSpaces city={city} />;
       case "safety":
         return <SafetyHealthcare safetyData={city.safety} />;
       case "lifestyle":
