@@ -11,6 +11,9 @@ import ClimateWeather from "@/components/city/climate-weather";
 import SafetyHealthcare from "@/components/city/safety-healthcare";
 import LifestyleCulture from "@/components/city/lifestyle-culture";
 import ThingsToDo from "@/components/city/things-to-do";
+import CommunityNomads from "@/components/city/community-nomads";
+import InsiderHacks from "@/components/city/insider-hacks";
+import CityConnections from "@/components/city/city-connections";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -38,6 +41,7 @@ export default function CityPage() {
     { id: "safety", label: "Safety", icon: Shield, emoji: "🛡️" },
     { id: "lifestyle", label: "Lifestyle", icon: Heart, emoji: "❤️" },
     { id: "things-to-do", label: "Things to Do", icon: Compass, emoji: "🗺️" },
+    { id: "community", label: "Community", icon: Users, emoji: "👥" },
     { id: "hacks", label: "Insider Hacks", icon: Lightbulb, emoji: "💡" },
     { id: "connectivity", label: "City Connections", icon: Train, emoji: "🚄" },
   ];
@@ -115,6 +119,8 @@ export default function CityPage() {
         return <LifestyleCulture lifestyleData={city.lifestyle} />;
       case "things-to-do":
         return <ThingsToDo attractions={city.attractions} events={city.events} />;
+      case "community":
+        return <CommunityNomads city={city} />;
       case "hacks":
         return <InsiderHacks city={city} />;
       case "connectivity":
@@ -204,11 +210,25 @@ export default function CityPage() {
         </div>
       </section>
 
-      {/* Scrollable Tab Navigation */}
+      {/* Enhanced Tab Navigation with Arrows */}
       <section className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollArea className="w-full">
-            <div className="flex space-x-1 py-4">
+          <div className="relative flex items-center">
+            <button 
+              onClick={() => {
+                const container = document.getElementById('tab-container');
+                if (container) container.scrollLeft -= 200;
+              }}
+              className="absolute left-0 z-10 bg-white/90 hover:bg-white shadow-md rounded-full p-2 text-travel-blue"
+            >
+              <ArrowLeft className="h-4 w-4" />
+            </button>
+            
+            <div 
+              id="tab-container"
+              className="flex space-x-1 py-4 overflow-x-auto scroll-smooth mx-10"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
               {tabs.map((tab) => {
                 const IconComponent = tab.icon;
                 return (
@@ -217,8 +237,8 @@ export default function CityPage() {
                     onClick={() => setActiveTab(tab.id)}
                     className={`flex items-center space-x-2 px-4 py-3 rounded-lg font-medium text-sm whitespace-nowrap transition-all duration-200 ${
                       activeTab === tab.id
-                        ? 'bg-travel-blue text-white shadow-md'
-                        : 'text-travel-blue hover:bg-travel-blue/10 hover:text-travel-blue/80'
+                        ? 'bg-travel-blue text-white shadow-md transform scale-105'
+                        : 'text-travel-blue hover:bg-travel-blue/10 hover:text-travel-blue/80 hover:scale-102'
                     }`}
                   >
                     <span className="text-lg">{tab.emoji}</span>
@@ -228,7 +248,17 @@ export default function CityPage() {
                 );
               })}
             </div>
-          </ScrollArea>
+            
+            <button 
+              onClick={() => {
+                const container = document.getElementById('tab-container');
+                if (container) container.scrollLeft += 200;
+              }}
+              className="absolute right-0 z-10 bg-white/90 hover:bg-white shadow-md rounded-full p-2 text-travel-blue"
+            >
+              <span className="rotate-180"><ArrowLeft className="h-4 w-4" /></span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -244,100 +274,4 @@ export default function CityPage() {
   );
 }
 
-// Helper components for new tabs
-function InsiderHacks({ city }: { city: CityWithDetails }) {
-  return (
-    <div className="bg-white rounded-2xl shadow-lg p-8">
-      <h2 className="font-serif text-3xl font-bold text-travel-blue mb-6">💡 Insider Hacks</h2>
-      <p className="text-muted-navy text-lg mb-8">Local tips and tricks to save money and avoid tourist traps in {city.name}.</p>
-      
-      <div className="grid gap-8">
-        <div className="bg-vintage-gold/5 rounded-lg p-6 border-l-4 border-vintage-gold">
-          <h3 className="font-semibold text-vintage-gold mb-4">💰 Money-Saving Tips</h3>
-          <ul className="space-y-2 text-muted-navy">
-            <li>• Use local buses instead of taxis - saves 70% on transport costs</li>
-            <li>• Shop at local markets before 9 AM for the freshest produce at best prices</li>
-            <li>• Get a prepaid mobile plan from Jio or Airtel for cheapest data rates</li>
-            <li>• Eat at local dhabas and street vendors for authentic food at ₹50-100 per meal</li>
-            <li>• Book accommodations in residential areas instead of commercial zones</li>
-          </ul>
-        </div>
-        
-        <div className="bg-warm-terracotta/5 rounded-lg p-6 border-l-4 border-warm-terracotta">
-          <h3 className="font-semibold text-warm-terracotta mb-4">🚫 Scams to Avoid</h3>
-          <ul className="space-y-2 text-muted-navy">
-            <li>• Fake taxi meters - insist on using the meter or book via app</li>
-            <li>• Overpriced tourist restaurants near monuments</li>
-            <li>• Commission-based shopping guides at markets</li>
-            <li>• Fake travel agents offering "special deals"</li>
-            <li>• ATM skimming - use bank ATMs inside branches when possible</li>
-          </ul>
-        </div>
-        
-        <div className="bg-sage-green/5 rounded-lg p-6 border-l-4 border-sage-green">
-          <h3 className="font-semibold text-sage-green mb-4">🏠 Accommodation Hacks</h3>
-          <ul className="space-y-2 text-muted-navy">
-            <li>• Book paying guest accommodations for stays longer than a month</li>
-            <li>• Look for places with included WiFi and utilities</li>
-            <li>• Stay near metro stations for easy connectivity</li>
-            <li>• Negotiate monthly rates directly with landlords</li>
-            <li>• Use apps like NoBroker to avoid broker fees</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
-}
 
-function CityConnections({ city }: { city: CityWithDetails }) {
-  const connections = [
-    { destination: "Mumbai", trainTime: "12h", trainPrice: "₹500-2000", flightTime: "2h", flightPrice: "₹3000-8000" },
-    { destination: "Delhi", trainTime: "16h", trainPrice: "₹600-2500", flightTime: "2.5h", flightPrice: "₹3500-9000" },
-    { destination: "Bangalore", trainTime: "8h", trainPrice: "₹400-1500", flightTime: "1.5h", flightPrice: "₹2500-6000" },
-    { destination: "Chennai", trainTime: "10h", trainPrice: "₹500-1800", flightTime: "2h", flightPrice: "₹3000-7000" },
-  ];
-  
-  return (
-    <div className="bg-white rounded-2xl shadow-lg p-8">
-      <h2 className="font-serif text-3xl font-bold text-travel-blue mb-6">🚄 City Connections</h2>
-      <p className="text-muted-navy text-lg mb-8">How to travel from {city.name} to other major Indian cities.</p>
-      
-      <div className="grid gap-6">
-        {connections.map((connection, index) => (
-          <div key={index} className="border border-gray-200 rounded-lg p-6">
-            <div className="flex justify-between items-start mb-4">
-              <h3 className="font-semibold text-xl text-travel-blue">{city.name} → {connection.destination}</h3>
-              <Badge className="bg-vintage-gold/10 text-vintage-gold">Popular Route</Badge>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-travel-blue/5 rounded-lg p-4">
-                <h4 className="font-semibold text-travel-blue mb-2 flex items-center">
-                  <Train className="mr-2 h-4 w-4" />
-                  Train
-                </h4>
-                <div className="space-y-1 text-muted-navy text-sm">
-                  <p>Duration: <span className="font-semibold">{connection.trainTime}</span></p>
-                  <p>Price: <span className="font-semibold">{connection.trainPrice}</span></p>
-                  <p>Frequency: Multiple daily trains</p>
-                </div>
-              </div>
-              
-              <div className="bg-sage-green/5 rounded-lg p-4">
-                <h4 className="font-semibold text-sage-green mb-2 flex items-center">
-                  <span className="mr-2">✈️</span>
-                  Flight
-                </h4>
-                <div className="space-y-1 text-muted-navy text-sm">
-                  <p>Duration: <span className="font-semibold">{connection.flightTime}</span></p>
-                  <p>Price: <span className="font-semibold">{connection.flightPrice}</span></p>
-                  <p>Frequency: 5-10 daily flights</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}

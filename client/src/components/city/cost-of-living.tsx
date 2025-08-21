@@ -27,24 +27,24 @@ export default function CostOfLiving({ costData }: CostOfLivingProps) {
   const convertToUSD = (inrAmount: number) => Math.round(inrAmount / 83);
 
   const costItems = [
-    { icon: Home, label: "Studio Rent", valueINR: costData.studioRentINR, valueUSD: convertToUSD(costData.studioRentINR), category: "Housing", note: "City center vs suburbs varies 30-50%" },
-    { icon: Home, label: "1 BHK Rent", valueINR: costData.oneBhkRentINR, valueUSD: convertToUSD(costData.oneBhkRentINR), category: "Housing", note: "Furnished apartments cost 20% more" },
-    { icon: Home, label: "2 BHK Rent", valueINR: costData.twoBhkRentINR, valueUSD: convertToUSD(costData.twoBhkRentINR), category: "Housing", note: "Great for sharing with roommates" },
-    { icon: DollarSign, label: "Utilities", valueINR: costData.utilitiesINR, valueUSD: convertToUSD(costData.utilitiesINR), category: "Monthly", note: "Electricity, water, gas, internet" },
-    { icon: Coffee, label: "Groceries", valueINR: costData.groceriesINR, valueUSD: convertToUSD(costData.groceriesINR), category: "Monthly", note: "Fresh produce, basic cooking ingredients" },
-    { icon: Coffee, label: "Eating Out", valueINR: costData.eatingOutINR, valueUSD: convertToUSD(costData.eatingOutINR), category: "Monthly", note: "Mix of street food and restaurants" },
-    { icon: Wifi, label: "Coworking", valueINR: costData.coworkingINR, valueUSD: convertToUSD(costData.coworkingINR), category: "Monthly", note: "Day passes available for ₹200-500" },
-    { icon: Car, label: "Transport", valueINR: costData.transportINR, valueUSD: convertToUSD(costData.transportINR), category: "Monthly", note: "Metro, bus, auto rickshaw, occasional cab" },
-    { icon: Wifi, label: "SIM & Data", valueINR: costData.simDataINR, valueUSD: convertToUSD(costData.simDataINR), category: "Monthly", note: "Unlimited calls + 2GB/day data" },
-    { icon: Dumbbell, label: "Gym", valueINR: costData.gymINR, valueUSD: convertToUSD(costData.gymINR), category: "Monthly", note: "Basic gym membership with equipment" },
-    { icon: Coffee, label: "Coffee", valueINR: costData.coffeeINR, valueUSD: convertToUSD(costData.coffeeINR), category: "Per Item", note: "Cafe coffee (street tea costs ₹10-20)" },
-    { icon: DollarSign, label: "Entertainment", valueINR: costData.entertainmentINR, valueUSD: convertToUSD(costData.entertainmentINR), category: "Monthly", note: "Movies, bars, events, activities" },
+    { icon: Home, label: "Studio Rent", valueINR: costData.studioRentINR || 0, valueUSD: convertToUSD(costData.studioRentINR || 0), category: "Housing", note: "City center vs suburbs varies 30-50%" },
+    { icon: Home, label: "1 BHK Rent", valueINR: costData.oneBhkRentINR || 0, valueUSD: convertToUSD(costData.oneBhkRentINR || 0), category: "Housing", note: "Furnished apartments cost 20% more" },
+    { icon: Home, label: "2 BHK Rent", valueINR: costData.twoBhkRentINR || 0, valueUSD: convertToUSD(costData.twoBhkRentINR || 0), category: "Housing", note: "Great for sharing with roommates" },
+    { icon: DollarSign, label: "Utilities", valueINR: costData.utilitiesINR || 0, valueUSD: convertToUSD(costData.utilitiesINR || 0), category: "Monthly", note: "Electricity, water, gas, internet" },
+    { icon: Coffee, label: "Groceries", valueINR: costData.groceriesINR || 0, valueUSD: convertToUSD(costData.groceriesINR || 0), category: "Monthly", note: "Fresh produce, basic cooking ingredients" },
+    { icon: Coffee, label: "Eating Out", valueINR: costData.eatingOutINR || 0, valueUSD: convertToUSD(costData.eatingOutINR || 0), category: "Monthly", note: "Mix of street food and restaurants" },
+    { icon: Wifi, label: "Coworking", valueINR: costData.coworkingINR || 0, valueUSD: convertToUSD(costData.coworkingINR || 0), category: "Monthly", note: "Day passes available for ₹200-500" },
+    { icon: Car, label: "Transport", valueINR: costData.transportINR || 0, valueUSD: convertToUSD(costData.transportINR || 0), category: "Monthly", note: "Metro, bus, auto rickshaw, occasional cab" },
+    { icon: Wifi, label: "SIM & Data", valueINR: costData.simDataINR || 0, valueUSD: convertToUSD(costData.simDataINR || 0), category: "Monthly", note: "Unlimited calls + 2GB/day data" },
+    { icon: Dumbbell, label: "Gym", valueINR: costData.gymINR || 0, valueUSD: convertToUSD(costData.gymINR || 0), category: "Monthly", note: "Basic gym membership with equipment" },
+    { icon: Coffee, label: "Coffee", valueINR: costData.coffeeINR || 0, valueUSD: convertToUSD(costData.coffeeINR || 0), category: "Per Item", note: "Cafe coffee (street tea costs ₹10-20)" },
+    { icon: DollarSign, label: "Entertainment", valueINR: costData.entertainmentINR || 0, valueUSD: convertToUSD(costData.entertainmentINR || 0), category: "Monthly", note: "Movies, bars, events, activities" },
   ];
 
   const categories = {
     Housing: costItems.filter(item => item.category === "Housing"),
     Monthly: costItems.filter(item => item.category === "Monthly"),
-    "Per Cup": costItems.filter(item => item.category === "Per Cup"),
+    "Per Item": costItems.filter(item => item.category === "Per Item"),
   };
 
   return (
