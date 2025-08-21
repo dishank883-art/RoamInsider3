@@ -1214,6 +1214,476 @@ export const citySpecificData: Record<string, CitySpecificData> = {
         tip: "Art-filled environment with galleries and peaceful gardens for creative work"
       }
     ]
+  },
+  bir: {
+    moneyTips: [
+      "Stay in budget guesthouses near the paragliding landing site for convenience",
+      "Eat at Tibetan cafes and local dhabas for authentic meals under ₹150",
+      "Book paragliding packages in advance for better rates during season",
+      "Shop for Tibetan handicrafts and prayer flags at monastery gift shops",
+      "Use shared taxis and local buses for economical travel around Dharamshala region"
+    ],
+    streetFood: [
+      { item: "Tibetan Momos", price: "₹80-120 ($1-1.5)" },
+      { item: "Thukpa (Soup)", price: "₹100-150 ($1.2-1.8)" },
+      { item: "Butter Tea", price: "₹30-50 ($0.35-0.60)" },
+      { item: "Tingmo (Steamed Bread)", price: "₹40-60 ($0.50-0.70)" },
+      { item: "Tsampa", price: "₹50-80 ($0.60-1)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "The Hideout Café", speed: "35-50 Mbps", quality: "Good" },
+        { name: "June 16th Café", speed: "25-40 Mbps", quality: "Good" },
+        { name: "Avva's Café", speed: "30-45 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "Paragliding Landing Site", speed: "20-35 Mbps", quality: "Fair" },
+        { name: "Deer Park Institute", speed: "40-60 Mbps", quality: "Good" },
+        { name: "Local Libraries", speed: "25-40 Mbps", quality: "Fair" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "The Hideout Café & Co-working",
+        address: "Bir Road, near Landing Zone",
+        pricing: "₹2,500/month",
+        speedMbps: 40,
+        amenities: ["Mountain View", "Pilot Community", "Equipment Storage", "Strong WiFi"]
+      },
+      {
+        name: "Zostel Bir Co-work",
+        address: "Bir Village Center",
+        pricing: "₹2,000/month",
+        speedMbps: 35,
+        amenities: ["Community Events", "Budget-Friendly", "Social Environment", "Power Backup"]
+      }
+    ],
+    localExperienceTips: [
+      "Visit Chokling Monastery for meditation sessions and Tibetan Buddhist culture",
+      "Try paragliding with certified instructors - one of world's best sites",
+      "Explore nearby Billing for stunning Himalayan views and mountain biking",
+      "Attend spiritual retreats and teachings at Deer Park Institute",
+      "Join sunrise hikes to Rajgundha valley for spectacular mountain panoramas",
+      "Experience traditional Tibetan festivals and ceremonies throughout the year"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Stay in Tibetan colony area for authentic cultural immersion",
+        "Book accommodations with mountain views for best paragliding site access",
+        "Consider monastery guesthouses for spiritual ambiance and budget rates",
+        "Look for places with backup power - frequent outages during monsoon",
+        "Choose locations within walking distance of landing site and cafes"
+      ],
+      food: [
+        "Eat at Tibetan refugee family-run restaurants for authentic cuisine",
+        "Try traditional butter tea and tsampa for genuine Tibetan experience",
+        "Visit monastery kitchens during festival times for community meals",
+        "Shop at local markets for fresh organic produce from nearby farms",
+        "Join cooking classes with local Tibetan families to learn traditional dishes"
+      ],
+      transport: [
+        "Use shared jeeps from Pathankot railway station (most economical route)",
+        "Rent bikes in Bir for exploring Billing and nearby villages",
+        "Join group transportation with paragliding schools for discounted rates",
+        "Walk between main sites - Bir is very compact and pedestrian-friendly",
+        "Share costs with other travelers for trips to Dharamshala and McLeodganj"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Secret Meditation Cave",
+        location: "Above Billing Road",
+        tip: "Hike 1 hour beyond main paragliding takeoff for natural caves",
+        coordinates: "32.02°N, 76.72°E"
+      },
+      {
+        name: "Sunrise View Point",
+        location: "Rajgundha Valley Trail",
+        tip: "Start 5 AM hike for stunning sunrise over Dhauladhar range",
+        timing: "Best in clear weather months"
+      },
+      {
+        name: "Traditional Tibetan Workshop",
+        location: "Tibetan Colony",
+        tip: "Visit traditional carpet weaving and incense making workshops",
+        timing: "9 AM - 5 PM, closed Sundays"
+      }
+    ],
+    transportationTips: [
+      "Use shared jeeps from Pathankot railway station (most economical route)",
+      "Rent bikes in Bir for exploring Billing and nearby villages",
+      "Join group transportation with paragliding schools for discounted rates",
+      "Walk between main sites - Bir is very compact and pedestrian-friendly",
+      "Share costs with other travelers for trips to Dharamshala and McLeodganj"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant mountain climate with cool mornings perfect for focused work",
+        "Monsoon season (Jul-Sep) brings heavy rains affecting outdoor activities",
+        "Clear post-monsoon period (Oct-Dec) ideal for outdoor coworking"
+      ],
+      healthConsiderations: [
+        "Clean mountain air excellent for respiratory health and mental clarity",
+        "Moderate altitude requires gradual acclimatization for some visitors",
+        "UV exposure higher at altitude - sunscreen essential for outdoor work"
+      ],
+      equipmentNeeds: [
+        "Warm clothing necessary for early mornings and winter months",
+        "Power backup solutions recommended during monsoon power cuts",
+        "Good hiking boots essential for exploring surrounding mountain trails"
+      ],
+      bestMonths: "March to June and October to December for optimal conditions"
+    }
+  },
+  dehradun: {
+    moneyTips: [
+      "Stay in student-friendly areas like Patel Nagar for affordable long-term accommodation",
+      "Eat at local Garhwali restaurants and student hangouts for meals under ₹100",
+      "Use city bus system and share autos for economical daily transportation",
+      "Shop at wholesale markets like Paltan Bazaar for groceries and supplies",
+      "Take advantage of educational city discounts with proximity to universities"
+    ],
+    streetFood: [
+      { item: "Aloo Ke Gutke", price: "₹60-90 ($0.70-1.10)" },
+      { item: "Bal Mithai", price: "₹200-300/kg ($2.4-3.6)" },
+      { item: "Kafuli", price: "₹80-120 ($1-1.5)" },
+      { item: "Singori", price: "₹150-250/kg ($1.8-3)" },
+      { item: "Jhangora Kheer", price: "₹50-80 ($0.60-1)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Café Coffee Day (Multiple locations)", speed: "30-50 Mbps", quality: "Good" },
+        { name: "The Clock Tower Café", speed: "40-60 Mbps", quality: "Excellent" },
+        { name: "Ellora's Melting Moments", speed: "25-45 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "Pacific Mall", speed: "50-80 Mbps", quality: "Excellent" },
+        { name: "Railway Station", speed: "30-50 Mbps", quality: "Good" },
+        { name: "University Campuses", speed: "60-100 Mbps", quality: "Excellent" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Doon Co-working Hub",
+        address: "Rajpur Road, Dehradun",
+        pricing: "₹4,000/month",
+        speedMbps: 75,
+        amenities: ["Mountain Views", "24/7 Access", "Conference Rooms", "Student Community"]
+      },
+      {
+        name: "Valley Workspace",
+        address: "Patel Nagar, Dehradun", 
+        pricing: "₹3,200/month",
+        speedMbps: 60,
+        amenities: ["Budget-Friendly", "Study Groups", "Printing Services", "Cafeteria"]
+      }
+    ],
+    localExperienceTips: [
+      "Explore nearby hill stations like Mussoorie and Chakrata on weekends",
+      "Visit Robber's Cave and Tapkeshwar Temple for local natural attractions",
+      "Experience Garhwali culture through local festivals and traditional cuisine",
+      "Take day trips to Rishikesh for yoga and adventure sports experiences",
+      "Join trekking groups for Himalayan foothills exploration from the city",
+      "Attend cultural events at Forest Research Institute's colonial campus"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Stay near educational institutions for student-friendly pricing and community",
+        "Look for PG accommodations in Patel Nagar and Rajpur Road areas",
+        "Consider family accommodations for authentic Garhwali cultural experience",
+        "Choose places with mountain views - many available at reasonable prices",
+        "Select accommodations near main roads for better connectivity and amenities"
+      ],
+      food: [
+        "Try authentic Garhwali thalis at local family restaurants",
+        "Visit Tibetan refugee colony for momos and Tibetan cuisine",
+        "Explore student food joints near universities for budget-friendly meals",
+        "Shop at Gandhi Park market for fresh local produce and hill vegetables",
+        "Experience traditional Garhwali sweets and preparations at local sweet shops"
+      ],
+      transport: [
+        "Use extensive city bus network for affordable daily commuting",
+        "Share auto-rickshaws with students for economical short-distance travel",
+        "Rent bikes for exploring nearby attractions and hill station day trips",
+        "Use app-based rides for convenience - good availability throughout city",
+        "Join group tours to nearby destinations for cost-effective weekend trips"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Forest Research Institute Grounds",
+        location: "FRI Campus",
+        tip: "Colonial architecture campus perfect for peaceful outdoor work",
+        coordinates: "30.37°N, 78.05°E"
+      },
+      {
+        name: "Malsi Deer Park",
+        location: "Mussoorie Road",
+        tip: "Quiet natural setting with deer and peacocks - great for nature work",
+        timing: "9 AM - 5 PM"
+      },
+      {
+        name: "Tapovan Temple Complex",
+        location: "Tapkeshwar Road",
+        tip: "Spiritual riverside location with natural caves and temple atmosphere"
+      }
+    ],
+    transportationTips: [
+      "Use extensive city bus network for affordable daily commuting",
+      "Share auto-rickshaws with students for economical short-distance travel", 
+      "Rent bikes for exploring nearby attractions and hill station day trips",
+      "Use app-based rides for convenience - good availability throughout city",
+      "Join group tours to nearby destinations for cost-effective weekend trips"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant spring and autumn weather ideal for outdoor and coworking spaces",
+        "Hot summers (Apr-Jun) require air-conditioned spaces for comfortable work",
+        "Cool winters (Dec-Feb) perfect for focused indoor work with heating"
+      ],
+      healthConsiderations: [
+        "Clean mountain air beneficial for health compared to major metros",
+        "Moderate pollution levels during winter months due to vehicular traffic",
+        "Pleasant climate year-round with few extreme weather challenges"
+      ],
+      equipmentNeeds: [
+        "Air conditioning or cooling solutions necessary during summer months",
+        "Heating arrangements helpful during cool winter evenings",
+        "Rain protection during monsoon season for outdoor commuting"
+      ],
+      bestMonths: "March to May and September to November for optimal conditions"
+    }
+  },
+  mussoorie: {
+    moneyTips: [
+      "Stay in budget hotels near Library or Landour area away from main Mall Road",
+      "Eat at local cafes and Tibetan restaurants for authentic hill station cuisine",
+      "Walk along Mall Road and avoid taxi rides for short distances within town",
+      "Shop for woolens and local handicrafts at wholesale prices in off-season",
+      "Book accommodations in advance during peak season for better rates"
+    ],
+    streetFood: [
+      { item: "Momos", price: "₹100-150 ($1.2-1.8)" },
+      { item: "Maggi Noodles", price: "₹80-120 ($1-1.5)" },
+      { item: "Aloo Tikki", price: "₹40-60 ($0.50-0.70)" },
+      { item: "Hot Chocolate", price: "₹60-100 ($0.70-1.20)" },
+      { item: "Pancakes", price: "₹150-250 ($1.8-3)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Landour Bakehouse", speed: "40-60 Mbps", quality: "Excellent" },
+        { name: "Char Dukan", speed: "30-50 Mbps", quality: "Good" },
+        { name: "Café Ivy", speed: "35-55 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "Library Point", speed: "25-45 Mbps", quality: "Good" },
+        { name: "Mall Road Area", speed: "30-50 Mbps", quality: "Good" },
+        { name: "Hotel Lobbies", speed: "40-70 Mbps", quality: "Excellent" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Mountain View Workspace",
+        address: "Landour, Mussoorie",
+        pricing: "₹3,500/month",
+        speedMbps: 50,
+        amenities: ["Valley Views", "Colonial Architecture", "Peaceful Environment", "Library Access"]
+      },
+      {
+        name: "Mall Road Co-work",
+        address: "Mall Road, Mussoorie",
+        pricing: "₹4,200/month", 
+        speedMbps: 45,
+        amenities: ["Central Location", "Tourist Hub Access", "Networking Events", "Modern Facilities"]
+      }
+    ],
+    localExperienceTips: [
+      "Take early morning walks along Mall Road before tourist crowds arrive",
+      "Visit Gun Hill via cable car for spectacular Himalayan mountain views",
+      "Explore Landour area for colonial heritage and peaceful walking trails", 
+      "Experience British colonial history at various heritage buildings and churches",
+      "Take day trips to nearby Dhanaulti and Chamba for nature and tranquility",
+      "Attend local cultural events and festivals during tourist season"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Stay in Landour area for authentic colonial experience and lower prices",
+        "Book heritage hotels during off-season for luxury at budget prices",
+        "Consider homestays with local families for cultural immersion",
+        "Look for accommodations with valley views - many available at reasonable rates",
+        "Choose places away from Mall Road for quieter environment and better prices"
+      ],
+      food: [
+        "Try colonial-era bakeries and cafes for authentic hill station cuisine",
+        "Visit local markets for fresh mountain produce and regional specialties",
+        "Experience high tea culture at heritage hotels and colonial cafes",
+        "Explore Tibetan cuisine at refugee-run restaurants in the area",
+        "Join cooking classes to learn traditional Garhwali mountain cuisine"
+      ],
+      transport: [
+        "Walk along Mall Road - most attractions within comfortable walking distance",
+        "Use shared taxis for trips to nearby attractions and viewpoints",
+        "Take cable car to Gun Hill for convenience and scenic mountain views",
+        "Hire bikes for exploring Landour and surrounding colonial-era areas",
+        "Join group tours for day trips to Kempty Falls and nearby destinations"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Sister's Bazaar",
+        location: "Landour",
+        tip: "Quiet colonial area perfect for writing and peaceful work",
+        coordinates: "30.45°N, 78.08°E"
+      },
+      {
+        name: "Camel's Back Road",
+        location: "Circular Walking Path",
+        tip: "Scenic walking trail with mountain views - perfect for thinking walks",
+        timing: "Best during sunrise and sunset"
+      },
+      {
+        name: "St. Paul's Church",
+        location: "Landour",
+        tip: "Historic colonial church with peaceful grounds for quiet contemplation"
+      }
+    ],
+    transportationTips: [
+      "Walk along Mall Road - most attractions within comfortable walking distance",
+      "Use shared taxis for trips to nearby attractions and viewpoints",
+      "Take cable car to Gun Hill for convenience and scenic mountain views",
+      "Hire bikes for exploring Landour and surrounding colonial-era areas",
+      "Join group tours for day trips to Kempty Falls and nearby destinations"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant summer weather (Apr-Jun) perfect for outdoor coworking and cafes",
+        "Cool winter months (Dec-Mar) require heated indoor spaces for comfort",
+        "Monsoon season (Jul-Sep) brings heavy rains - indoor work spaces essential"
+      ],
+      healthConsiderations: [
+        "Cool mountain air excellent for health and mental clarity",
+        "High altitude may cause initial breathing adjustments for some visitors",
+        "Clean environment beneficial for respiratory health and stress reduction"
+      ],
+      equipmentNeeds: [
+        "Warm clothing essential during winter months for comfortable outdoor work",
+        "Rain gear necessary during monsoon season for daily commuting",
+        "Heating solutions helpful for indoor work during cold winter evenings"
+      ],
+      bestMonths: "April to June and September to November for optimal conditions"
+    }
+  },
+  ziro: {
+    moneyTips: [
+      "Stay in local Apatani family homestays for authentic cultural experience",
+      "Eat traditional Apatani cuisine and local organic produce for budget meals",
+      "Use shared vehicles and local transport for economical regional travel",
+      "Shop for traditional handicrafts and organic products directly from villages",
+      "Time visits during Ziro Music Festival for vibrant cultural experiences"
+    ],
+    streetFood: [
+      { item: "Apong (Rice Wine)", price: "₹50-100 ($0.60-1.20)" },
+      { item: "Fish Curry", price: "₹120-180 ($1.4-2.2)" },
+      { item: "Bamboo Shoot Dishes", price: "₹80-150 ($1-1.8)" },
+      { item: "Smoked Fish", price: "₹100-200 ($1.2-2.4)" },
+      { item: "Traditional Rice Meals", price: "₹60-100 ($0.70-1.20)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Ziro Music Café", speed: "20-35 Mbps", quality: "Fair" },
+        { name: "Blue Pine Resort", speed: "25-40 Mbps", quality: "Good" },
+        { name: "Local Restaurants", speed: "15-30 Mbps", quality: "Fair" }
+      ],
+      publicSpaces: [
+        { name: "Main Market Area", speed: "15-25 Mbps", quality: "Fair" },
+        { name: "Government Offices", speed: "30-50 Mbps", quality: "Good" },
+        { name: "Festival Grounds", speed: "10-25 Mbps", quality: "Fair" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Ziro Valley Workspace",
+        address: "Old Ziro, Arunachal Pradesh",
+        pricing: "₹2,000/month",
+        speedMbps: 25,
+        amenities: ["Valley Views", "Cultural Immersion", "Music Community", "Organic Food"]
+      }
+    ],
+    localExperienceTips: [
+      "Experience authentic Apatani tribal culture through homestay accommodations",
+      "Attend Ziro Music Festival in September for indie music and cultural celebration",
+      "Explore traditional Apatani villages and sustainable agricultural practices",
+      "Trek to Talley Valley Wildlife Sanctuary for pristine nature experiences",
+      "Learn about traditional crafts and sustainable living from local Apatani families",
+      "Participate in local festivals like Myoko, Murung, and Dree throughout the year"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Stay with Apatani families for authentic cultural immersion and lower costs",
+        "Book early for Ziro Music Festival period - accommodation fills quickly",
+        "Consider bamboo cottages and eco-friendly accommodations in the valley",
+        "Look for places offering traditional meals as part of accommodation package",
+        "Choose locations within walking distance of main village and cultural sites"
+      ],
+      food: [
+        "Experience traditional Apatani cuisine through family meals and homestays",
+        "Try local organic produce and traditional fermented foods",
+        "Learn about sustainable farming practices from local Apatani families",
+        "Sample traditional rice wine (apong) and local fish preparations",
+        "Join community feasts during festivals for authentic cultural food experiences"
+      ],
+      transport: [
+        "Use shared vehicles from Ziro to nearby destinations and trekking points",
+        "Walk within villages - most Apatani settlements are compact and walkable",
+        "Hire local guides for trekking and cultural village exploration",
+        "Join group transportation during festival times for shared costs",
+        "Use local knowledge for accessing remote areas and hidden natural spots"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Talley Valley Sanctuary",
+        location: "30km from Ziro",
+        tip: "Pristine cloud forest perfect for nature-focused work and contemplation",
+        coordinates: "27.58°N, 93.92°E"
+      },
+      {
+        name: "Traditional Apatani Village",
+        location: "Hong Village",
+        tip: "Experience authentic tribal culture and sustainable living practices",
+        timing: "Best during harvest season (Oct-Nov)"
+      },
+      {
+        name: "Pine Grove Camping",
+        location: "Near Old Ziro",
+        tip: "Peaceful pine forest ideal for outdoor work and music sessions"
+      }
+    ],
+    transportationTips: [
+      "Use shared vehicles from Ziro to nearby destinations and trekking points",
+      "Walk within villages - most Apatani settlements are compact and walkable",
+      "Hire local guides for trekking and cultural village exploration",
+      "Join group transportation during festival times for shared costs",
+      "Use local knowledge for accessing remote areas and hidden natural spots"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant temperate climate year-round ideal for outdoor and nature-based work",
+        "Monsoon season (Jun-Sep) brings heavy rains - indoor spaces necessary",
+        "Cool winters (Dec-Feb) perfect for cozy indoor work with local heating"
+      ],
+      healthConsiderations: [
+        "Clean mountain air and organic environment excellent for health",
+        "High altitude requires gradual acclimatization for some visitors",
+        "Traditional lifestyle and diet beneficial for physical and mental well-being"
+      ],
+      equipmentNeeds: [
+        "Warm clothing necessary for cool evenings and winter months",
+        "Rain gear essential during monsoon season for outdoor activities",
+        "Portable power solutions helpful as electricity can be intermittent"
+      ],
+      bestMonths: "March to May and September to November for optimal conditions"
+    }
   }
 };
 
