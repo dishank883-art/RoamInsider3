@@ -1456,6 +1456,7 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
   };
 
   const cityHacks = getCitySpecificHacks(city.name);
+  console.log('City name for insider hacks:', city.name, 'Found hacks:', !!cityHacks?.moneyHacks);
 
   return (
     <Card className="bg-white rounded-2xl shadow-lg">
