@@ -382,6 +382,299 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
             }
           ]
         }
+      ],
+      "Udaipur": [
+        {
+          traditionalMarkets: [
+            {
+              name: "Hathi Pol Bazaar",
+              type: "Traditional Market",
+              specialties: ["Miniature paintings", "Rajasthani handicrafts", "Textiles", "Jewelry"],
+              hours: "10:00 AM - 8:00 PM",
+              bestTime: "Morning for better selection",
+              priceRange: "₹100-5000",
+              bargaining: "Expected and encouraged",
+              tips: "Famous for authentic Rajasthani miniature paintings",
+              location: "Near City Palace, Udaipur",
+              highlights: ["Authentic art", "Royal heritage items", "Traditional crafts"]
+            },
+            {
+              name: "Bada Bazaar",
+              type: "Local Market",
+              specialties: ["Daily essentials", "Spices", "Textiles", "Local goods"],
+              hours: "9:00 AM - 9:00 PM",
+              bestTime: "Evening for street food along with shopping",
+              priceRange: "₹50-2000",
+              bargaining: "Standard practice",
+              tips: "Best for local prices on daily essentials and spices",
+              location: "City center, Udaipur",
+              highlights: ["Local atmosphere", "Authentic prices", "Wide variety"]
+            },
+            {
+              name: "Shilpgram Market",
+              type: "Craft Market",
+              specialties: ["Rural handicrafts", "Folk art", "Traditional items", "Tribal crafts"],
+              hours: "9:00 AM - 6:00 PM",
+              bestTime: "During craft festivals for best selection",
+              priceRange: "₹200-8000",
+              bargaining: "Moderate bargaining",
+              tips: "Authentic rural Rajasthani crafts directly from artisans",
+              location: "Shilpgram, Udaipur",
+              highlights: ["Direct from artisans", "Rural crafts", "Cultural significance"]
+            }
+          ],
+          modernShopping: [
+            {
+              name: "Celebration Mall",
+              type: "Shopping Mall",
+              brands: ["National", "Regional", "Local brands"],
+              floors: 3,
+              facilities: ["Food court", "Cinema", "Kids zone", "Parking"],
+              hours: "10:00 AM - 10:00 PM",
+              priceRange: "₹500-15000",
+              paymentMethods: ["Card", "UPI", "Cash", "Digital wallets"],
+              highlights: ["AC comfort", "Entertainment", "Family-friendly"]
+            },
+            {
+              name: "Chetak Centre",
+              type: "Shopping Complex",
+              specialties: ["Clothing", "Electronics", "Accessories", "Local brands"],
+              hours: "10:00 AM - 9:00 PM",
+              priceRange: "₹300-8000",
+              bargaining: "Fixed prices, seasonal sales",
+              tips: "Good for standard shopping needs in AC comfort",
+              highlights: ["Central location", "Standard brands", "Fixed prices"]
+            }
+          ]
+        }
+      ],
+      "Gangtok": [
+        {
+          traditionalMarkets: [
+            {
+              name: "MG Marg Market",
+              type: "Pedestrian Market",
+              specialties: ["Tibetan handicrafts", "Woolens", "Souvenirs", "Local products"],
+              hours: "10:00 AM - 8:00 PM",
+              bestTime: "Evening for street atmosphere",
+              priceRange: "₹100-3000",
+              bargaining: "Light bargaining acceptable",
+              tips: "Main shopping street, vehicle-free zone",
+              location: "MG Marg, Gangtok",
+              highlights: ["Pedestrian-only", "Mountain atmosphere", "Tourist-friendly"]
+            },
+            {
+              name: "Lal Market",
+              type: "Local Market",
+              specialties: ["Fresh produce", "Spices", "Local vegetables", "Daily essentials"],
+              hours: "6:00 AM - 7:00 PM",
+              bestTime: "Morning for fresh produce",
+              priceRange: "₹20-500",
+              bargaining: "Minimal",
+              tips: "Local market with authentic Sikkimese products",
+              location: "Below MG Marg, Gangtok",
+              highlights: ["Local prices", "Fresh produce", "Authentic experience"]
+            },
+            {
+              name: "Tibet Road Market",
+              type: "Tibetan Market",
+              specialties: ["Tibetan crafts", "Prayer items", "Traditional clothes", "Monastery goods"],
+              hours: "9:00 AM - 7:00 PM",
+              bestTime: "Afternoon",
+              priceRange: "₹150-4000",
+              bargaining: "Respectful bargaining",
+              tips: "Authentic Tibetan items, respect cultural significance",
+              location: "Tibet Road, Gangtok",
+              highlights: ["Tibetan culture", "Religious items", "Authentic crafts"]
+            }
+          ],
+          modernShopping: [
+            {
+              name: "Metro Point Mall",
+              type: "Shopping Mall",
+              brands: ["National", "Regional brands"],
+              floors: 4,
+              facilities: ["Food court", "Gaming", "Entertainment", "Parking"],
+              hours: "10:00 AM - 9:00 PM",
+              priceRange: "₹500-10000",
+              paymentMethods: ["All payment methods"],
+              highlights: ["Modern amenities", "Entertainment", "AC comfort"]
+            }
+          ]
+        }
+      ],
+      "McLeodganj": [
+        {
+          traditionalMarkets: [
+            {
+              name: "Main Square Market",
+              type: "Tibetan Market",
+              specialties: ["Tibetan handicrafts", "Prayer flags", "Buddhist items", "Woolens"],
+              hours: "9:00 AM - 8:00 PM",
+              bestTime: "Afternoon for relaxed shopping",
+              priceRange: "₹100-2500",
+              bargaining: "Gentle bargaining",
+              tips: "Authentic Tibetan items, support refugee community",
+              location: "Main Square, McLeodganj",
+              highlights: ["Tibetan culture", "Refugee support", "Spiritual items"]
+            },
+            {
+              name: "Temple Road Shops",
+              type: "Street Market",
+              specialties: ["Books", "Spiritual items", "Clothing", "Local crafts"],
+              hours: "8:00 AM - 9:00 PM",
+              bestTime: "Evening after temple visits",
+              priceRange: "₹50-1500",
+              bargaining: "Acceptable",
+              tips: "Good for spiritual books and meditation items",
+              location: "Temple Road, McLeodganj",
+              highlights: ["Spiritual focus", "Book selection", "Meditation items"]
+            },
+            {
+              name: "Kotwali Bazaar",
+              type: "Refugee Market",
+              specialties: ["Tibetan handicrafts", "Carpets", "Traditional clothes", "Monastery items"],
+              hours: "10:00 AM - 6:00 PM (Closed Sunday)",
+              bestTime: "Morning for better selection",
+              priceRange: "₹200-5000",
+              bargaining: "Fair bargaining",
+              tips: "Authentic refugee-made items, fair trade practices",
+              location: "Lower McLeodganj",
+              highlights: ["Refugee support", "Fair trade", "Authentic crafts"]
+            }
+          ],
+          modernShopping: [
+            {
+              name: "Dharamkot Shops",
+              type: "Boutique Shopping",
+              specialties: ["Organic products", "Yoga items", "Wellness products", "Eco-friendly goods"],
+              hours: "9:00 AM - 8:00 PM",
+              priceRange: "₹300-3000",
+              bargaining: "Limited bargaining",
+              tips: "Focus on wellness and organic products",
+              highlights: ["Organic focus", "Wellness items", "Eco-friendly"]
+            }
+          ]
+        }
+      ],
+      "Pune": [
+        {
+          traditionalMarkets: [
+            {
+              name: "Laxmi Road",
+              type: "Traditional Shopping Street",
+              specialties: ["Traditional wear", "Jewelry", "Accessories", "Wedding items"],
+              hours: "10:00 AM - 9:00 PM (Closed Monday)",
+              bestTime: "Evening for full street experience",
+              priceRange: "₹200-10000",
+              bargaining: "Expected",
+              tips: "Historic shopping street, great for traditional Marathi items",
+              location: "Central Pune",
+              highlights: ["Historic street", "Traditional items", "Cultural significance"]
+            },
+            {
+              name: "Pune Central (FC Road)",
+              type: "Shopping District",
+              specialties: ["Books", "Fashion", "Electronics", "Student items"],
+              hours: "10:00 AM - 9:00 PM",
+              bestTime: "Afternoon and evening",
+              priceRange: "₹100-5000",
+              bargaining: "Moderate bargaining",
+              tips: "Popular among students and young professionals",
+              location: "Fergusson College Road, Pune",
+              highlights: ["Student hub", "Books and electronics", "Young crowd"]
+            },
+            {
+              name: "Mandai Market",
+              type: "Wholesale Market",
+              specialties: ["Fresh vegetables", "Fruits", "Grains", "Wholesale goods"],
+              hours: "5:00 AM - 2:00 PM",
+              bestTime: "Early morning for wholesale prices",
+              priceRange: "₹20-1000",
+              bargaining: "Standard for bulk purchases",
+              tips: "Best wholesale prices, bring bags and cash",
+              location: "Mandai, Pune",
+              highlights: ["Wholesale prices", "Fresh produce", "Bulk buying"]
+            }
+          ],
+          modernShopping: [
+            {
+              name: "Phoenix MarketCity",
+              type: "Premium Mall",
+              brands: ["International", "Luxury", "Premium"],
+              floors: 5,
+              facilities: ["Food court", "Cinema", "Events", "Kids zone", "Parking"],
+              hours: "11:00 AM - 11:00 PM",
+              priceRange: "₹800-25000",
+              paymentMethods: ["All payment methods"],
+              highlights: ["Premium shopping", "Entertainment hub", "International brands"]
+            },
+            {
+              name: "Amanora Mall",
+              type: "Shopping Mall",
+              specialties: ["Fashion", "Electronics", "Home goods", "Entertainment"],
+              hours: "11:00 AM - 10:00 PM",
+              priceRange: "₹500-15000",
+              bargaining: "Fixed prices, seasonal sales",
+              tips: "Good for comprehensive shopping with entertainment",
+              highlights: ["All categories", "Family entertainment", "Good food court"]
+            }
+          ]
+        }
+      ],
+      "Shillong": [
+        {
+          traditionalMarkets: [
+            {
+              name: "Bara Bazaar (Iewduh)",
+              type: "Traditional Market",
+              specialties: ["Local produce", "Khasi handicrafts", "Traditional items", "Local food"],
+              hours: "6:00 AM - 6:00 PM (Closed Sunday)",
+              bestTime: "Morning for fresh produce",
+              priceRange: "₹20-2000",
+              bargaining: "Standard practice",
+              tips: "One of Asia's largest traditional markets",
+              location: "Iewduh, Shillong",
+              highlights: ["Largest traditional market", "Local culture", "Authentic prices"]
+            },
+            {
+              name: "Police Bazaar",
+              type: "Commercial Market",
+              specialties: ["Clothing", "Electronics", "Accessories", "Modern goods"],
+              hours: "9:00 AM - 8:00 PM",
+              bestTime: "Afternoon and evening",
+              priceRange: "₹100-5000",
+              bargaining: "Moderate bargaining",
+              tips: "Main commercial area, good for modern shopping needs",
+              location: "Police Bazaar, Shillong",
+              highlights: ["Commercial hub", "Modern goods", "Central location"]
+            },
+            {
+              name: "Khasi Hills Handicrafts",
+              type: "Handicraft Market",
+              specialties: ["Bamboo items", "Cane products", "Traditional crafts", "Local art"],
+              hours: "10:00 AM - 6:00 PM",
+              bestTime: "Afternoon",
+              priceRange: "₹150-3000",
+              bargaining: "Gentle bargaining",
+              tips: "Authentic Khasi handicrafts, support local artisans",
+              location: "Various locations, Shillong",
+              highlights: ["Local crafts", "Bamboo specialties", "Artisan support"]
+            }
+          ],
+          modernShopping: [
+            {
+              name: "Polo Towers",
+              type: "Shopping Complex",
+              specialties: ["Fashion", "Electronics", "Dining", "Entertainment"],
+              hours: "10:00 AM - 9:00 PM",
+              priceRange: "₹300-8000",
+              bargaining: "Fixed prices",
+              tips: "Modern shopping with entertainment options",
+              highlights: ["Modern amenities", "Central location", "Entertainment"]
+            }
+          ]
+        }
       ]
     };
 

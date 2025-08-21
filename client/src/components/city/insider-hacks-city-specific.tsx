@@ -459,6 +459,326 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
           { label: "Trek Emergency", number: "01902-224000" },
           { label: "Tourist Helpline", number: "1363" }
         ]
+      },
+      "Udaipur": {
+        moneyHacks: {
+          accommodation: [
+            "Stay in old city heritage guesthouses for authentic experience at budget rates",
+            "Book lake-facing rooms during off-season (Apr-Sep) for 60% discounts",
+            "Negotiate weekly/monthly rates at family-run havelis for long-term stays",
+            "Use Airbnb alternatives for heritage property stays with cooking facilities",
+            "Share palace hotel amenities during happy hours without staying there"
+          ],
+          food: [
+            "Eat at local thali restaurants near Jagdish Temple for authentic meals under ₹100",
+            "Visit wholesale spice markets for cooking ingredients at local prices",
+            "Join cooking classes at heritage hotels to learn royal Rajasthani cuisine",
+            "Eat during lunch hours at palace hotels for buffet access at lower rates",
+            "Try street food at Chetak Circle away from tourist areas"
+          ],
+          transport: [
+            "Use shared autos and city buses for economical local transport",
+            "Rent scooters for exploring countryside and nearby attractions independently",
+            "Book day tours through local operators vs expensive hotel packages",
+            "Share taxis with other travelers for visits to Chittorgarh/Kumbhalgarh",
+            "Walk around Lake Pichola area - most attractions within walking distance"
+          ]
+        },
+        secretSpots: [
+          {
+            name: "Hidden Sunset Viewpoint",
+            location: "Monsoon Palace Road",
+            tip: "Stop halfway up the hill for panoramic city views without entry fee to palace",
+            coordinates: "24.629°N, 73.682°E"
+          },
+          {
+            name: "Local Art Workshop Access",
+            location: "Shilpgram Village",
+            tip: "Visit during non-festival times to interact directly with artisans and buy at wholesale prices",
+            timing: "10 AM - 5 PM, avoid festival crowds"
+          },
+          {
+            name: "Free Palace Photography",
+            location: "Ambrai Ghat",
+            tip: "Best viewpoint for City Palace photos during golden hour without paying entry fees",
+            timing: "6-7 AM and 6-7 PM"
+          },
+          {
+            name: "Authentic Cooking Experience",
+            location: "Local Family Homes",
+            tip: "Many families offer cooking lessons for ₹500-800 vs ₹3000+ at hotels",
+            website: "Ask at local guesthouses for referrals"
+          }
+        ],
+        apps: [
+          { name: "Udaipur City Guide", description: "Local attractions and transport info", url: "Local tourism office app" },
+          { name: "Heritage Walk App", description: "Self-guided historical tours", url: "Udaipur heritage society" },
+          { name: "Rajasthan Tourism", description: "Official state tourism information", url: "https://rajasthantourism.gov.in/" },
+          { name: "Palace Hotels", description: "Heritage hotel bookings and offers", url: "https://www.hrhhotels.com/" }
+        ],
+        emergencyNumbers: [
+          { label: "Udaipur Police", number: "0294-2411344" },
+          { label: "Tourist Police", number: "1363" },
+          { label: "Ambulance", number: "108" },
+          { label: "Fire", number: "101" },
+          { label: "Women's Helpline", number: "1091" }
+        ]
+      },
+      "Gangtok": {
+        moneyHacks: {
+          accommodation: [
+            "Stay with local families for homestay experience and cultural exchange",
+            "Book government tourism department accommodations for clean, affordable stays",
+            "Look for monastery guesthouses for peaceful environments and donation-based stays",
+            "Negotiate monthly rates at family-run hotels around MG Marg area",
+            "Consider Pelling or Namchi for cheaper alternatives with better mountain views"
+          ],
+          food: [
+            "Eat at local Tibetan and Nepali restaurants for authentic cuisine at honest prices",
+            "Try traditional chang (local barley beer) at local establishments",
+            "Buy organic vegetables directly from local farmers in nearby villages",
+            "Visit community kitchens during festivals for traditional feast experiences",
+            "Learn to make momos from local families - many offer informal cooking classes"
+          ],
+          transport: [
+            "Use shared jeeps to Darjeeling and nearby towns for budget travel",
+            "Book helicopter rides to remote areas only during clear weather windows",
+            "Rent bikes from local shops for exploring nearby villages and tea gardens",
+            "Join shared taxi services to Bagdogra airport - book advance for better rates",
+            "Use local bus services for economical travel to surrounding areas and viewpoints"
+          ]
+        },
+        secretSpots: [
+          {
+            name: "Hidden Monastery Viewpoint",
+            location: "Enchey Monastery Trail",
+            tip: "Hike trail behind monastery for panoramic views of entire Gangtok valley without crowds",
+            coordinates: "27.340°N, 88.630°E"
+          },
+          {
+            name: "Natural Hot Springs",
+            location: "Reshi Village",
+            tip: "Natural hot springs 78km from Gangtok - perfect for relaxation after mountain treks",
+            timing: "Best visited October-March, carry lunch"
+          },
+          {
+            name: "Authentic Tibetan Quarter",
+            location: "Tibet Road Area",
+            tip: "Visit Tibetan refugee settlement for genuine handicrafts and traditional foods at local prices",
+            timing: "9 AM - 6 PM, respectful interaction appreciated"
+          },
+          {
+            name: "Free Cable Car Alternative",
+            location: "Ridge Park",
+            tip: "Walk to Ridge Park for similar valley views as cable car without the cost",
+            timing: "Early morning for clear mountain views"
+          }
+        ],
+        apps: [
+          { name: "Sikkim Tourism", description: "Official state tourism and permits", url: "https://sikkimtourism.gov.in/" },
+          { name: "Weather Sikkim", description: "Mountain weather updates", url: "Local weather service" },
+          { name: "Trek Sikkim", description: "Trekking routes and permissions", url: "Local trekking associations" },
+          { name: "Monastery Guide", description: "Buddhist monastery information and timings", url: "Local Buddhist center app" }
+        ],
+        emergencyNumbers: [
+          { label: "Gangtok Police", number: "03592-202033" },
+          { label: "Tourist Helpline", number: "1363" },
+          { label: "Emergency", number: "108" },
+          { label: "Mountain Rescue", number: "03592-202100" },
+          { label: "State Helpline", number: "1070" }
+        ]
+      },
+      "McLeodganj": {
+        moneyHacks: {
+          accommodation: [
+            "Stay in Dharamkot for mountain views and lower prices than McLeodganj center",
+            "Book monastery guesthouses for spiritual ambiance and minimal donation-based rates",
+            "Look for long-term yoga retreat accommodations with meal packages included",
+            "Consider homestays with Tibetan refugee families for cultural immersion",
+            "Negotiate monthly rates at guesthouses popular with long-term meditation practitioners"
+          ],
+          food: [
+            "Eat at Tibetan refugee-run restaurants for authentic and affordable meals",
+            "Try traditional Tibetan butter tea and tsampa for complete authentic experience",
+            "Visit local bakeries run by refugees for fresh Tibetan bread and pastries",
+            "Join community kitchens at meditation centers for shared meals and cultural exchange",
+            "Shop at weekend markets for fresh organic produce from local mountain farmers"
+          ],
+          transport: [
+            "Use frequent local buses between Dharamshala and McLeodganj for ₹10-15 rides",
+            "Share taxis to Delhi, Chandigarh, or other destinations with fellow travelers",
+            "Rent bikes from local shops for exploring nearby villages and monasteries",
+            "Join organized trekking groups for shared transportation to trailheads",
+            "Use app-based rides sparingly - limited availability but useful during monsoons"
+          ]
+        },
+        secretSpots: [
+          {
+            name: "Secret Meditation Caves",
+            location: "Above Dharamkot Village",
+            tip: "45-minute hike above village leads to natural caves used by serious meditators",
+            coordinates: "32.254°N, 76.325°E"
+          },
+          {
+            name: "Hidden Waterfall Access",
+            location: "Beyond Bhagsu Falls",
+            tip: "Continue hiking 30 minutes past main waterfall for secluded natural pools",
+            timing: "Best after monsoons (September-November) for water flow"
+          },
+          {
+            name: "Tibetan Handicraft Wholesale",
+            location: "Kotwali Bazaar Refugee Center",
+            tip: "Visit Tibetan refugee handicraft cooperative for authentic items at wholesale prices",
+            timing: "10 AM - 5 PM, closed Sundays, support fair trade"
+          },
+          {
+            name: "Free Teachings Location",
+            location: "Library of Tibetan Works",
+            tip: "Free access to extensive Buddhist library and occasional informal teachings",
+            website: "https://ltwa.net/"
+          }
+        ],
+        apps: [
+          { name: "Dalai Lama Teachings", description: "Schedule of public teachings and events", url: "https://dalailama.com/" },
+          { name: "Tibet Museum App", description: "Self-guided museum tours", url: "Local museum information" },
+          { name: "McLeodganj Guide", description: "Local business and monastery information", url: "Local tourism app" },
+          { name: "Buddhist Calendar", description: "Festival dates and monastery events", url: "Buddhist center apps" }
+        ],
+        emergencyNumbers: [
+          { label: "McLeodganj Police", number: "01892-221100" },
+          { label: "Tourist Police", number: "1363" },
+          { label: "Ambulance", number: "108" },
+          { label: "Tibetan Reception Center", number: "01892-221879" },
+          { label: "Emergency Helpline", number: "112" }
+        ]
+      },
+      "Pune": {
+        moneyHacks: {
+          accommodation: [
+            "Share PG accommodations in IT hubs like Hinjewadi, Whitefield for ₹8,000-15,000/month",
+            "Stay in student areas like FC Road, Camp for lower rent and vibrant atmosphere",
+            "Use flat-sharing apps specific to Pune's young professional community",
+            "Book service apartments for 1-3 month stays - better value than hotels for extended visits",
+            "Consider Pimpri-Chinchwad area for industrial job proximity with 30% lower rent"
+          ],
+          food: [
+            "Eat at local Marathi thali restaurants for unlimited authentic meals at ₹100-150",
+            "Visit German Bakery area for student-friendly cafes and budget meals",
+            "Use office cafeterias if working with local companies - heavily subsidized meals",
+            "Try street food at JM Road and FC Road for authentic Pune flavors under ₹100",
+            "Join Marathi cooking classes to learn local cuisine and save on restaurant costs"
+          ],
+          transport: [
+            "Buy PMPML monthly bus passes for unlimited city travel at ₹400-600",
+            "Use Pune Metro for efficient travel between major IT and commercial hubs",
+            "Rent monthly bikes from Bounce/Yulu for IT park commutes at ₹2,500-3,500",
+            "Share rides with colleagues using office WhatsApp groups for suburban commutes",
+            "Walk or cycle short distances - Pune is relatively bike and pedestrian friendly"
+          ]
+        },
+        secretSpots: [
+          {
+            name: "Hidden Fort Trek",
+            location: "Sinhagad Fort Backroute",
+            tip: "Take lesser-known trail from Khadakwasla for peaceful fort experience without weekend crowds",
+            coordinates: "18.366°N, 73.755°E"
+          },
+          {
+            name: "Student Coworking Secret",
+            location: "Symbiosis Campus Library",
+            tip: "Visitor access available for library and campus cafes - quiet work environment with student energy",
+            timing: "9 AM - 6 PM, visitor registration required"
+          },
+          {
+            name: "Riverside Workspace",
+            location: "Mula-Mutha Riverfront",
+            tip: "Developed riverfront areas offer free WiFi zones and outdoor workspace during pleasant weather",
+            timing: "Early morning and evening best for comfort"
+          },
+          {
+            name: "Wholesale Shopping Secret",
+            location: "Mandai Market Early Hours",
+            tip: "Visit vegetable market 6-8 AM for wholesale prices and fresh selection before retail markup",
+            timing: "6 AM - 10 AM for best deals and selection"
+          }
+        ],
+        apps: [
+          { name: "PMPML Chalo", description: "Real-time bus tracking and digital payments", url: "https://play.google.com/store/apps/details?id=com.chalo.pmpml" },
+          { name: "Pune Metro", description: "Metro routes, timings, and travel planning", url: "https://punemetrorail.org/" },
+          { name: "Pune Connect", description: "Local events, meetups, and professional networking", url: "Local community platforms" },
+          { name: "FlatMate Pune", description: "Roommate and flat-sharing specific to Pune", url: "https://flatmates.in/" }
+        ],
+        emergencyNumbers: [
+          { label: "Pune Police", number: "100" },
+          { label: "Ambulance", number: "108" },
+          { label: "Fire", number: "101" },
+          { label: "Women's Helpline", number: "1091" },
+          { label: "Tourist Helpline", number: "1363" }
+        ]
+      },
+      "Shillong": {
+        moneyHacks: {
+          accommodation: [
+            "Stay with Khasi families for homestay experience at ₹800-1,500/night including meals",
+            "Book government tourism accommodations for reliable, clean stays at budget rates",
+            "Share accommodations with other travelers in Laitumkhrah area for authentic local experience",
+            "Negotiate weekly/monthly rates at family-run guesthouses for extended stays",
+            "Consider Ward's Lake area for central location with reasonable walking distance to attractions"
+          ],
+          food: [
+            "Eat at local Khasi restaurants for authentic tribal cuisine at ₹80-150 per meal",
+            "Try traditional fermented foods and local specialties at authentic family restaurants",
+            "Visit Bara Bazaar for fresh local produce and traditional Khasi ingredients",
+            "Join local families for cooking lessons featuring unique northeastern Indian cuisine",
+            "Sample local alcohol like rice beer at traditional establishments for cultural experience"
+          ],
+          transport: [
+            "Use shared Sumo vehicles for intercity travel - much more economical than private taxis",
+            "Take local buses to nearby attractions and waterfalls for budget-friendly exploration",
+            "Rent bikes for exploring city center and nearby viewpoints independently",
+            "Join group tours for distant attractions to share transportation and guide costs",
+            "Walk within city center - most attractions and markets are within comfortable walking distance"
+          ]
+        },
+        secretSpots: [
+          {
+            name: "Hidden Waterfall Access",
+            location: "Krang Suri Falls Back Route",
+            tip: "Take local village path instead of tourist route for more authentic experience and lower entry fees",
+            timing: "Best during post-monsoon season (September-November)"
+          },
+          {
+            name: "Local Music Scene Access",
+            location: "Cloud 9 and Local Pubs",
+            tip: "Shillong has incredible live music scene - visit local venues for authentic northeast rock music",
+            timing: "Weekend evenings for best performances"
+          },
+          {
+            name: "Authentic Market Experience",
+            location: "Iewduh (Bara Bazaar) Early Morning",
+            tip: "Visit Asia's largest traditional market early morning (6-8 AM) for authentic local trade experience",
+            timing: "6 AM - 10 AM for most authentic local prices and cultural interaction"
+          },
+          {
+            name: "Free Panoramic Views",
+            location: "Lady Hydari Park Hills",
+            tip: "Hike behind Lady Hydari Park for free panoramic city views instead of paying for viewpoint entry",
+            timing: "Early morning or late afternoon for best lighting"
+          }
+        ],
+        apps: [
+          { name: "Meghalaya Tourism", description: "Official state tourism info and permits", url: "https://megtourism.gov.in/" },
+          { name: "Shillong Music", description: "Local music events and venue information", url: "Local music community apps" },
+          { name: "Northeast Weather", description: "Regional weather and monsoon updates", url: "Local weather services" },
+          { name: "Khasi Culture", description: "Local cultural information and language basics", url: "Cultural preservation apps" }
+        ],
+        emergencyNumbers: [
+          { label: "Shillong Police", number: "0364-2224747" },
+          { label: "Tourist Helpline", number: "1363" },
+          { label: "Ambulance", number: "108" },
+          { label: "State Emergency", number: "1070" },
+          { label: "Women's Helpline", number: "1091" }
+        ]
       }
     };
 

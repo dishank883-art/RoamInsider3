@@ -234,6 +234,166 @@ export default function FestivalsEvents({ city }: FestivalsEventsProps) {
           bestSpots: ["Kullu town", "Dhalpur Maidan"],
           tipCost: "Free to attend, ₹200-800 for travel"
         }
+      ],
+      "Udaipur": [
+        {
+          name: "Mewar Festival",
+          date: "March/April",
+          duration: "3 days",
+          type: "Cultural",
+          description: "Celebrates arrival of spring with cultural performances and boat processions on Lake Pichola",
+          highlights: ["Cultural performances", "Boat processions", "Traditional costumes", "Folk music"],
+          bestSpots: ["City Palace", "Lake Pichola", "Jagdish Temple", "Bagore Ki Haveli"],
+          tipCost: "Free to watch, ₹500-1500 for special events"
+        },
+        {
+          name: "Shilpgram Crafts Fair",
+          date: "December/January",
+          duration: "10 days",
+          type: "Arts & Crafts",
+          description: "Annual crafts festival showcasing traditional Rajasthani arts, crafts, and folk performances",
+          highlights: ["Traditional crafts", "Folk performances", "Artisan workshops", "Cultural shows"],
+          bestSpots: ["Shilpgram", "Various city venues"],
+          tipCost: "₹50-200 entry, ₹200-2000 for purchases"
+        },
+        {
+          name: "Gangaur Festival",
+          date: "March/April",
+          duration: "18 days",
+          type: "Religious",
+          description: "Major Rajasthani festival honoring Goddess Gauri with processions and celebrations",
+          highlights: ["Grand processions", "Traditional attire", "Cultural performances", "Local delicacies"],
+          bestSpots: ["City Palace", "Jagdish Temple", "Local neighborhoods"],
+          tipCost: "Free to watch processions, ₹100-500 for offerings"
+        }
+      ],
+      "Gangtok": [
+        {
+          name: "Losar (Tibetan New Year)",
+          date: "February/March",
+          duration: "15 days",
+          type: "Religious",
+          description: "Traditional Tibetan New Year celebration with monastery festivities and cultural programs",
+          highlights: ["Monastery celebrations", "Traditional dances", "Tibetan cuisine", "Prayer ceremonies"],
+          bestSpots: ["Rumtek Monastery", "Enchey Monastery", "MG Marg"],
+          tipCost: "Free at monasteries, ₹200-800 for cultural shows"
+        },
+        {
+          name: "Saga Dawa",
+          date: "May/June",
+          duration: "1 month",
+          type: "Religious",
+          description: "Sacred Buddhist festival commemorating Buddha's birth, enlightenment, and nirvana",
+          highlights: ["Prayer flags", "Monastery rituals", "Meditation sessions", "Community gatherings"],
+          bestSpots: ["All monasteries", "Tashiding Monastery", "MG Marg"],
+          tipCost: "Free participation, donations welcome"
+        },
+        {
+          name: "Bumchu Festival",
+          date: "February/March",
+          duration: "3 days",
+          type: "Religious",
+          description: "Sacred water ceremony at Tashiding Monastery predicting the year ahead",
+          highlights: ["Holy water ceremony", "Monastery rituals", "Traditional foods", "Cultural exchanges"],
+          bestSpots: ["Tashiding Monastery", "Local communities"],
+          tipCost: "Free to attend, ₹100-300 for travel expenses"
+        }
+      ],
+      "McLeodganj": [
+        {
+          name: "Dalai Lama's Birthday",
+          date: "July 6",
+          duration: "1 day",
+          type: "Cultural",
+          description: "Celebration of the Dalai Lama's birthday with prayers, cultural performances, and community gatherings",
+          highlights: ["Prayer ceremonies", "Cultural performances", "Community feasts", "Tibetan arts"],
+          bestSpots: ["Tsuglagkhang Complex", "Main Temple", "Tibetan settlements"],
+          tipCost: "Free to attend, donations welcome"
+        },
+        {
+          name: "Losar Festival",
+          date: "February/March",
+          duration: "15 days",
+          type: "Religious",
+          description: "Tibetan New Year celebrated with traditional rituals, dances, and community celebrations",
+          highlights: ["Traditional dances", "Monastery ceremonies", "Tibetan cuisine", "Prayer flags"],
+          bestSpots: ["Main Temple", "Tibetan settlements", "Monasteries"],
+          tipCost: "Free participation, ₹200-500 for meals and offerings"
+        },
+        {
+          name: "World Peace Day",
+          date: "September 21",
+          duration: "1 day",
+          type: "Spiritual",
+          description: "International day of peace celebrated with meditation, prayers, and spiritual discussions",
+          highlights: ["Group meditation", "Peace prayers", "Spiritual talks", "Community unity"],
+          bestSpots: ["Main Temple", "Peace gardens", "Community centers"],
+          tipCost: "Free participation, donations welcome"
+        }
+      ],
+      "Pune": [
+        {
+          name: "Ganesh Chaturthi",
+          date: "August/September",
+          duration: "11 days",
+          type: "Religious",
+          description: "Pune's biggest festival with elaborate Ganesh idols, processions, and cultural programs",
+          highlights: ["Dagdusheth Halwai Ganpati", "Cultural programs", "Grand processions", "Community celebrations"],
+          bestSpots: ["Dagdusheth Halwai", "Shreemant Bhausaheb", "Camp area", "Various pandals"],
+          tipCost: "Free to visit pandals, ₹100-1000 for offerings and travel"
+        },
+        {
+          name: "Pune Festival",
+          date: "August/September",
+          duration: "8 days",
+          type: "Cultural",
+          description: "Annual cultural festival showcasing Marathi arts, music, dance, and theater",
+          highlights: ["Cultural performances", "Music concerts", "Art exhibitions", "Food festivals"],
+          bestSpots: ["Shaniwar Wada", "Cultural venues", "Various city locations"],
+          tipCost: "₹100-500 for events, some free performances"
+        },
+        {
+          name: "Sawai Gandharva Music Festival",
+          date: "December",
+          duration: "3 days",
+          type: "Music",
+          description: "Premier Indian classical music festival featuring renowned artists",
+          highlights: ["Classical music", "Renowned artists", "Traditional performances", "Musical heritage"],
+          bestSpots: ["Shanmukhananda Hall", "Various venues"],
+          tipCost: "₹200-2000 per concert"
+        }
+      ],
+      "Shillong": [
+        {
+          name: "Autumn Festival",
+          date: "November",
+          duration: "5 days",
+          type: "Cultural",
+          description: "Meghalaya's premier festival celebrating local culture, music, and traditions",
+          highlights: ["Local music", "Traditional dances", "Cultural exhibitions", "Food festivals"],
+          bestSpots: ["Polo Ground", "Ward's Lake", "Various venues"],
+          tipCost: "₹50-300 for events, some free performances"
+        },
+        {
+          name: "Shad Suk Mynsiem",
+          date: "April",
+          duration: "3 days",
+          type: "Traditional",
+          description: "Traditional Khasi harvest festival with folk dances and cultural celebrations",
+          highlights: ["Traditional Khasi dances", "Folk music", "Local cuisine", "Cultural performances"],
+          bestSpots: ["Smit", "Various Khasi villages", "Cultural centers"],
+          tipCost: "Free to watch, ₹100-500 for travel to venues"
+        },
+        {
+          name: "Christmas Festival",
+          date: "December",
+          duration: "1 week",
+          type: "Religious",
+          description: "Major celebration in this Christian-majority state with carols, decorations, and festivities",
+          highlights: ["Christmas carols", "Church services", "Community celebrations", "Local delicacies"],
+          bestSpots: ["All Saints Church", "Ward's Lake area", "Police Bazaar"],
+          tipCost: "Free church services, ₹200-1000 for celebrations and meals"
+        }
       ]
     };
 
