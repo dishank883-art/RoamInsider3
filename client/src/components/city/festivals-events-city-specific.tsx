@@ -43,6 +43,176 @@ export default function FestivalsEvents({ city }: FestivalsEventsProps) {
           tipCost: "Free to attend, ₹200-500 for travel to venues"
         }
       ],
+      "Bir": [
+        {
+          name: "Bir Paragliding Festival",
+          date: "October",
+          duration: "3 days",
+          type: "Adventure Sports",
+          description: "International paragliding festival with competitions, workshops, and cultural events",
+          highlights: ["Paragliding competitions", "Adventure workshops", "Cultural performances", "Equipment exhibitions"],
+          bestSpots: ["Billing takeoff site", "Bir landing zone", "Village center"],
+          tipCost: "Free to watch, ₹2000-5000 for participation"
+        },
+        {
+          name: "Tibetan New Year (Losar)",
+          date: "February/March",
+          duration: "3 days",
+          type: "Cultural",
+          description: "Traditional Tibetan New Year celebration with monastery ceremonies and community festivities",
+          highlights: ["Monastery prayers", "Traditional dances", "Community feasts", "Cultural performances"],
+          bestSpots: ["Chokling Monastery", "Deer Park Institute", "Village center"],
+          tipCost: "Free to attend, ₹100-500 for donations/offerings"
+        },
+        {
+          name: "Buddha Purnima",
+          date: "May",
+          duration: "1 day",
+          type: "Religious",
+          description: "Buddhist festival celebrating Buddha's birth, enlightenment, and death",
+          highlights: ["Prayer ceremonies", "Meditation sessions", "Community gatherings", "Teaching sessions"],
+          bestSpots: ["All local monasteries", "Deer Park Institute"],
+          tipCost: "Free to attend"
+        }
+      ],
+      "Dehradun": [
+        {
+          name: "Jhanda Fair",
+          date: "March/April",
+          duration: "3 days",
+          type: "Traditional",
+          description: "Traditional Garhwali fair celebrating spring with local culture, food, and handicrafts",
+          highlights: ["Traditional performances", "Local handicrafts", "Garhwali cuisine", "Cultural competitions"],
+          bestSpots: ["Sahastradhara", "Various venues across city"],
+          tipCost: "Free entry, ₹100-1000 for food and shopping"
+        },
+        {
+          name: "Tapkeshwar Fair",
+          date: "March (Shivratri)",
+          duration: "1 day",
+          type: "Religious",
+          description: "Major religious fair at Tapkeshwar Temple dedicated to Lord Shiva",
+          highlights: ["Temple ceremonies", "Religious processions", "Local vendors", "Cultural activities"],
+          bestSpots: ["Tapkeshwar Temple", "Temple complex"],
+          tipCost: "Free to attend, ₹50-200 for offerings"
+        },
+        {
+          name: "International Film Festival",
+          date: "December",
+          duration: "5 days",
+          type: "Cultural",
+          description: "Film festival showcasing regional and international cinema",
+          highlights: ["Film screenings", "Director interactions", "Workshops", "Cultural events"],
+          bestSpots: ["Various cinemas", "Cultural centers"],
+          tipCost: "₹100-500 per screening"
+        }
+      ],
+      "Mussoorie": [
+        {
+          name: "Summer Festival",
+          date: "June",
+          duration: "3 days",
+          type: "Cultural",
+          description: "Annual summer festival celebrating hill station culture with music, dance, and local crafts",
+          highlights: ["Cultural performances", "Local handicrafts", "Food stalls", "Adventure activities"],
+          bestSpots: ["Mall Road", "Company Garden", "Various venues"],
+          tipCost: "Free to attend, ₹200-1000 for activities"
+        },
+        {
+          name: "Autumn Festival",
+          date: "November",
+          duration: "2 days",
+          type: "Seasonal",
+          description: "Celebration of autumn season with cultural programs and local festivities",
+          highlights: ["Seasonal celebrations", "Local performances", "Food festivals", "Adventure events"],
+          bestSpots: ["Mall Road", "Landour", "Happy Valley"],
+          tipCost: "Free to attend, ₹100-500 for food/activities"
+        },
+        {
+          name: "Winterline Festival",
+          date: "December",
+          duration: "2 days",
+          type: "Adventure",
+          description: "Winter adventure festival with trekking, rock climbing, and winter sports",
+          highlights: ["Adventure activities", "Winter sports", "Equipment exhibitions", "Training workshops"],
+          bestSpots: ["Various adventure sites", "Mall Road"],
+          tipCost: "₹500-2000 for activities"
+        }
+      ],
+      "Ziro": [
+        {
+          name: "Ziro Music Festival",
+          date: "September",
+          duration: "4 days",
+          type: "Music",
+          description: "Independent music festival featuring indie bands from across India and abroad",
+          highlights: ["Live music performances", "Camping experience", "Local food", "Cultural exchange"],
+          bestSpots: ["Ziro valley grounds", "Camping areas"],
+          tipCost: "₹3000-8000 for festival passes including camping"
+        },
+        {
+          name: "Myoko Festival",
+          date: "March",
+          duration: "3 days",
+          type: "Traditional",
+          description: "Traditional Apatani festival celebrating agriculture and community bonding",
+          highlights: ["Traditional rituals", "Community feasts", "Cultural dances", "Agricultural celebrations"],
+          bestSpots: ["Apatani villages", "Community centers"],
+          tipCost: "Free to attend with local invitation"
+        },
+        {
+          name: "Dree Festival",
+          date: "July",
+          duration: "1 day",
+          type: "Agricultural",
+          description: "Agricultural festival of Apatani tribe celebrating crop protection and prosperity",
+          highlights: ["Traditional ceremonies", "Crop blessings", "Community prayers", "Cultural performances"],
+          bestSpots: ["Apatani villages", "Agricultural fields"],
+          tipCost: "Free to attend with community participation"
+        }
+      ],
+      "Kolkata": [
+        {
+          name: "Durga Puja",
+          date: "September/October",
+          duration: "5 days",
+          type: "Religious",
+          description: "Kolkata's biggest festival with elaborate pandals, cultural programs, and community celebrations",
+          highlights: ["Artistic pandals", "Cultural performances", "Street food", "Community bonding"],
+          bestSpots: ["Park Street", "South Kolkata", "Central Kolkata", "Kumartuli"],
+          tipCost: "Free to visit pandals, ₹200-1000 for food and transport"
+        },
+        {
+          name: "Kali Puja",
+          date: "October/November",
+          duration: "1 day",
+          type: "Religious",
+          description: "Festival dedicated to Goddess Kali with nightlong celebrations and fireworks",
+          highlights: ["Temple ceremonies", "Fireworks", "Night celebrations", "Cultural programs"],
+          bestSpots: ["Kalighat Temple", "Various neighborhoods"],
+          tipCost: "Free to attend, ₹100-500 for offerings"
+        },
+        {
+          name: "Kolkata International Film Festival",
+          date: "November",
+          duration: "8 days",
+          type: "Cultural",
+          description: "International film festival showcasing cinema from around the world",
+          highlights: ["International films", "Director interactions", "Workshops", "Cultural events"],
+          bestSpots: ["Various cinemas", "Cultural centers"],
+          tipCost: "₹50-300 per screening"
+        },
+        {
+          name: "Poila Boishakh (Bengali New Year)",
+          date: "April",
+          duration: "1 day",
+          type: "Cultural",
+          description: "Bengali New Year celebration with cultural programs, processions, and traditional festivities",
+          highlights: ["Cultural processions", "Traditional performances", "New clothes", "Festive meals"],
+          bestSpots: ["College Street", "Rabindra Sarovar", "Various cultural centers"],
+          tipCost: "Free to attend, ₹200-1000 for food and shopping"
+        }
+      ],
       "Mumbai": [
         {
           name: "Ganesh Chaturthi",

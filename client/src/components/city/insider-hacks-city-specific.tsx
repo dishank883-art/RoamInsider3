@@ -76,6 +76,285 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
           { label: "Goa Police Control", number: "+918322420001" }
         ]
       },
+      "Bir": {
+        moneyHacks: {
+          accommodation: [
+            "Stay in guesthouses near landing zone for ₹800-1500/night vs ₹3000+ in luxury resorts",
+            "Book monthly stays directly with Tibetan families for cultural immersion (₹8000-12000/month)",
+            "Camp at designated sites for ₹200-300/night including basic facilities",
+            "Share rooms with fellow paragliders to split costs during peak season",
+            "Book advance for Billing area stays - cheaper and closer to takeoff sites"
+          ],
+          food: [
+            "Eat at Tibetan cafes like June 16th Café for authentic momos under ₹120",
+            "Try local dhabas on Bir-Billing road for ₹80-150 meals",
+            "Buy fresh vegetables from weekly village market (Tuesdays)",
+            "Cook in guesthouses with kitchen facilities to save 60% on food costs",
+            "Join group meals at hostels for shared cooking and cultural exchange"
+          ],
+          transport: [
+            "Use shared taxis to Dharamshala (₹50 vs ₹300 private)",
+            "Rent monthly scooters for ₹2000 vs ₹200-300/day rentals",
+            "Walk or cycle to Billing takeoff point (free vs ₹300 taxi)",
+            "Book bus tickets online to Delhi/Chandigarh for early bird discounts",
+            "Share airport transfers to Kangra with other travelers"
+          ]
+        },
+        secretSpots: [
+          {
+            name: "Secret Sunset Point",
+            location: "Behind Chokling Monastery",
+            tip: "Peaceful sunset viewing with 360° mountain views, no crowds",
+            coordinates: "32.0176°N, 76.7234°E"
+          },
+          {
+            name: "Hidden Café WiFi",
+            location: "Avva's Café back room",
+            tip: "Quieter workspace with faster WiFi than main area, order coffee to access",
+            timing: "9 AM - 6 PM"
+          },
+          {
+            name: "Free Meditation Hall",
+            location: "Deer Park Institute",
+            tip: "Free access to quiet meditation halls for work/study during day hours",
+            website: "https://deerpark.in/"
+          }
+        ],
+        apps: [
+          { name: "Ola", description: "Limited but available for airport transfers", url: "https://www.olacabs.com/" },
+          { name: "Weather Underground", description: "Accurate weather for paragliding", url: "https://www.wunderground.com/" },
+          { name: "Zomato", description: "Food delivery in main Bir area", url: "https://www.zomato.com/" }
+        ],
+        emergencyNumbers: [
+          { label: "Tourist Helpline", number: "1363" },
+          { label: "Police", number: "100" },
+          { label: "Ambulance", number: "108" },
+          { label: "Civil Hospital Baijnath", number: "+911894242274" }
+        ]
+      },
+      "Dehradun": {
+        moneyHacks: {
+          accommodation: [
+            "Stay in Rajpur Road area for better connectivity vs expensive city center",
+            "Book monthly PG accommodations near FRI for ₹8000-15000 with meals",
+            "Share flats near ISBT for easy travel access and lower rent",
+            "Book hostels in Mussoorie Road area for backpacker-friendly rates",
+            "Negotiate long-term rates with hotel owners during off-season"
+          ],
+          food: [
+            "Eat at iconic spots like Kumar Sweets for local delicacies under ₹100",
+            "Try street food at Paltan Bazaar for authentic flavors at ₹30-80",
+            "Use food delivery apps for student discounts and offers",
+            "Shop at Paltan Bazaar market for fresh produce (30% cheaper)",
+            "Join office canteens or mess halls for subsidized meals"
+          ],
+          transport: [
+            "Use city buses for ₹5-15 vs ₹50-100 for auto rickshaws",
+            "Book advance train tickets to Delhi for 40% discounts",
+            "Share taxis to Mussoorie/Haridwar with other travelers",
+            "Rent monthly scooters for local transport (₹2500-3500)",
+            "Use Vikram (shared auto) for short distances at ₹10-20"
+          ]
+        },
+        secretSpots: [
+          {
+            name: "Quiet Café Workspace",
+            location: "Orchard Restaurant, Rajpur Road",
+            tip: "Upper floor has quiet workspace area with good WiFi and mountain view",
+            timing: "10 AM - 10 PM"
+          },
+          {
+            name: "Free Library Access",
+            location: "Forest Research Institute Library",
+            tip: "Public access to quiet study halls and research facilities",
+            website: "https://www.icfre.gov.in/"
+          },
+          {
+            name: "Hidden Valley Walk",
+            location: "Lacchiwala",
+            tip: "Local swimming spot and picnic area, ₹20 entry vs ₹500 at commercial spots",
+            coordinates: "30.2854°N, 78.1642°E"
+          }
+        ],
+        apps: [
+          { name: "Ola/Uber", description: "Reliable for city travel and airport transfers", url: "https://www.olacabs.com/" },
+          { name: "IRCTC", description: "Train bookings to major cities", url: "https://www.irctc.co.in/" },
+          { name: "Zomato/Swiggy", description: "Food delivery across the city", url: "https://www.zomato.com/" }
+        ],
+        emergencyNumbers: [
+          { label: "Police", number: "100" },
+          { label: "Ambulance", number: "108" },
+          { label: "Tourist Helpline", number: "1363" },
+          { label: "Doon Hospital", number: "+911352623284" }
+        ]
+      },
+      "Mussoorie": {
+        moneyHacks: {
+          accommodation: [
+            "Stay in Landour area for cheaper rates and better views than Mall Road",
+            "Book homestays with local families for ₹1000-2000/night including meals",
+            "Avoid peak season (April-June) for 50% cheaper accommodation",
+            "Share cottages with groups for significant per-person savings",
+            "Book library area hostels for quiet workspace environment"
+          ],
+          food: [
+            "Eat at local dhabas on Dehradun road for ₹80-150 vs ₹300+ on Mall Road",
+            "Try Tibetan cafes in Landour for authentic food at reasonable prices",
+            "Buy groceries from lower bazaar vs expensive Mall Road shops",
+            "Pack lunches for day trips to avoid overpriced hilltop restaurants",
+            "Look for 'thali' places for complete meals under ₹120"
+          ],
+          transport: [
+            "Use shared taxis from Dehradun (₹80-100 vs ₹800 private)",
+            "Walk on Mall Road instead of taking battery rickshaws (₹50-100)",
+            "Book round-trip bus tickets for discounts to Delhi/Haridwar",
+            "Share cable car costs when traveling in groups",
+            "Use local buses to nearby attractions (₹20-50 vs ₹300+ taxi)"
+          ]
+        },
+        secretSpots: [
+          {
+            name: "Hidden Valley Viewpoint",
+            location: "Behind Landour Clock Tower",
+            tip: "Spectacular valley views without Mall Road crowds, perfect for remote work",
+            timing: "Best in morning for clear mountain views"
+          },
+          {
+            name: "Quiet Library Corner",
+            location: "Mussoorie Library",
+            tip: "Free WiFi and peaceful workspace for digital nomads",
+            website: "Near Picture Palace"
+          },
+          {
+            name: "Secret Sunrise Spot",
+            location: "Camel's Back Road early morning",
+            tip: "Best sunrise views before tourist crowds, great for yoga/meditation",
+            coordinates: "30.4598°N, 78.0664°E"
+          }
+        ],
+        apps: [
+          { name: "Weather Underground", description: "Accurate hill weather forecasts", url: "https://www.wunderground.com/" },
+          { name: "Uber/Ola", description: "Limited service but available", url: "https://www.olacabs.com/" },
+          { name: "Zomato", description: "Food delivery on Mall Road area", url: "https://www.zomato.com/" }
+        ],
+        emergencyNumbers: [
+          { label: "Police", number: "100" },
+          { label: "Ambulance", number: "108" },
+          { label: "Tourist Helpline", number: "1363" },
+          { label: "Community Hospital", number: "+911352632424" }
+        ]
+      },
+      "Ziro": {
+        moneyHacks: {
+          accommodation: [
+            "Stay with Apatani families for cultural homestays (₹800-1500/night)",
+            "Book tribal guesthouses for authentic experience and lower costs",
+            "Camp at designated sites for ₹200-400/night with basic facilities",
+            "Share bamboo huts with fellow travelers during festival season",
+            "Book advance for music festival time to avoid 3x price surge"
+          ],
+          food: [
+            "Try Apatani traditional meals at local homes for ₹100-200",
+            "Buy organic vegetables directly from farmers at weekly market",
+            "Cook with host families to learn traditional recipes and save money",
+            "Try local rice wine and traditional dishes at village gatherings",
+            "Shop at Hapoli market for basic supplies (only commercial area)"
+          ],
+          transport: [
+            "Use shared vehicles from Itanagar (₹200-300 vs ₹2000 private)",
+            "Walk or cycle around valley (free vs ₹500+ for local taxis)",
+            "Book helicopter service in advance for better rates to Guwahati",
+            "Share costs for trips to neighboring villages with other travelers",
+            "Use local guides for trekking (₹500-1000/day vs organized tours)"
+          ]
+        },
+        secretSpots: [
+          {
+            name: "Sacred Grove Meditation",
+            location: "Kile Pakho (Hilltop)",
+            tip: "Sacred Apatani site with panoramic valley views, perfect for quiet reflection",
+            coordinates: "27.5441°N, 93.8237°E"
+          },
+          {
+            name: "Traditional Workspace",
+            location: "Apatani Cultural Center",
+            tip: "Work while learning about indigenous culture, WiFi available",
+            timing: "9 AM - 5 PM"
+          },
+          {
+            name: "Hidden Waterfalls",
+            location: "Talley Valley Wildlife Sanctuary",
+            tip: "Less crowded waterfalls, perfect for nature walks and photography",
+            website: "Contact local guides"
+          }
+        ],
+        apps: [
+          { name: "Google Maps Offline", description: "Download offline maps - limited connectivity", url: "https://maps.google.com/" },
+          { name: "Weather Underground", description: "Weather forecasts for remote area", url: "https://www.wunderground.com/" }
+        ],
+        emergencyNumbers: [
+          { label: "Police", number: "100" },
+          { label: "Ambulance", number: "108" },
+          { label: "Tourist Helpline", number: "1363" },
+          { label: "District Hospital", number: "+913788222108" }
+        ]
+      },
+      "Kolkata": {
+        moneyHacks: {
+          accommodation: [
+            "Stay in South Kolkata (Ballygunge/Gariahat) for better connectivity vs Park Street premium",
+            "Book monthly PG accommodations near IT hubs (Salt Lake/Rajarhat) for ₹8000-15000",
+            "Share flats in university areas (Jadavpur/Presidency) for student-friendly rates",
+            "Use local booking platforms vs international chains for 40% savings",
+            "Book heritage homestays in North Kolkata for cultural immersion"
+          ],
+          food: [
+            "Eat at local 'adda' spots and tea stalls for authentic experience under ₹50",
+            "Try iconic street food: phuchka, kathi rolls, fish fry at ₹20-80",
+            "Use food delivery apps for restaurant discounts and student offers",
+            "Shop at New Market or Gariahat for fresh ingredients (30% cheaper)",
+            "Join Bengali families for festival meals and cultural exchange"
+          ],
+          transport: [
+            "Use metro for efficient travel (₹5-25 vs ₹100+ for cabs)",
+            "Try iconic yellow taxis for cultural experience and fair pricing",
+            "Use buses for ₹8-15 vs ₹50-150 for app-based rides",
+            "Book train tickets to major cities well in advance for discounts",
+            "Share airport cabs or use metro to reduce transfer costs"
+          ]
+        },
+        secretSpots: [
+          {
+            name: "Prinsep Ghat Workspace",
+            location: "Strand Road, River Hooghly",
+            tip: "Riverside peaceful workspace with colonial architecture backdrop",
+            coordinates: "22.56°N, 88.34°E"
+          },
+          {
+            name: "Coffee House Intellectual Hub",
+            location: "Indian Coffee House, College Street",
+            tip: "Historic adda culture spot, perfect for writing and intellectual discussions",
+            timing: "8 AM - 11 PM"
+          },
+          {
+            name: "Academy Garden Workspace",
+            location: "Academy of Fine Arts",
+            tip: "Art-filled environment with galleries and peaceful gardens for creative work",
+            website: "https://www.acadfineartsmuseum.com/"
+          }
+        ],
+        apps: [
+          { name: "Uber/Ola", description: "Reliable for city travel and airport transfers", url: "https://www.olacabs.com/" },
+          { name: "Metro Railway App", description: "Kolkata metro timings and route info", url: "https://play.google.com/store/apps/details?id=com.kmrcl.passenger" },
+          { name: "Zomato/Swiggy", description: "Extensive food delivery network", url: "https://www.zomato.com/" }
+        ],
+        emergencyNumbers: [
+          { label: "Police", number: "100" },
+          { label: "Ambulance", number: "108" },
+          { label: "Tourist Helpline", number: "1363" },
+          { label: "SSKM Hospital", number: "+913322231081" }
+        ]
+      },
       "Mumbai": {
         moneyHacks: {
           accommodation: [

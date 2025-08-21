@@ -54,6 +54,236 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           }
         }
       ],
+      "Bir": [
+        {
+          name: "Avva's Café Workspace",
+          location: "Main Bir Road",
+          type: "Café Coworking",
+          dayPass: "₹300",
+          monthlyDesk: "₹4,000",
+          monthlyPrivate: "Not available",
+          features: ["Mountain views", "Good WiFi", "Healthy food", "Quiet environment", "Power outlets"],
+          rating: 4.2,
+          website: "https://www.facebook.com/avvascafe/",
+          phone: "+91 9816012345",
+          description: "Popular café with coworking-friendly environment and beautiful mountain views.",
+          amenities: {
+            wifi: "25+ Mbps",
+            hours: "8 AM - 8 PM",
+            printers: "No",
+            coffee: "Excellent coffee and food",
+            aircon: "No (natural ventilation)"
+          }
+        },
+        {
+          name: "June 16th Café",
+          location: "Bir Tibetan Colony",
+          type: "Tibetan Café",
+          dayPass: "₹200",
+          monthlyDesk: "₹3,500",
+          monthlyPrivate: "Not available",
+          features: ["Tibetan ambiance", "Good WiFi", "Authentic food", "Community space", "Cultural environment"],
+          rating: 4.0,
+          website: "Contact locally",
+          phone: "+91 9816098765",
+          description: "Authentic Tibetan café perfect for cultural immersion while working.",
+          amenities: {
+            wifi: "20+ Mbps",
+            hours: "7 AM - 9 PM",
+            printers: "Basic printing",
+            coffee: "Tibetan tea and coffee",
+            aircon: "No"
+          }
+        }
+      ],
+      "Dehradun": [
+        {
+          name: "91springboard Dehradun",
+          location: "Rajpur Road",
+          type: "Premium Coworking",
+          dayPass: "₹400",
+          monthlyDesk: "₹6,000",
+          monthlyPrivate: "₹12,000",
+          features: ["High-speed WiFi", "Meeting rooms", "Events", "Cafe", "Parking", "Community"],
+          rating: 4.4,
+          website: "https://www.91springboard.com/",
+          phone: "+91 135 2711234",
+          description: "Professional coworking space with startup ecosystem and networking events.",
+          amenities: {
+            wifi: "100+ Mbps",
+            hours: "24/7 access",
+            printers: "Yes",
+            coffee: "Unlimited",
+            aircon: "Yes"
+          }
+        },
+        {
+          name: "The Doon School Incubation Center",
+          location: "The Doon School Campus",
+          type: "Academic Coworking",
+          dayPass: "₹300",
+          monthlyDesk: "₹5,000",
+          monthlyPrivate: "₹10,000",
+          features: ["Academic environment", "Mentorship", "Good WiFi", "Library access", "Peaceful campus"],
+          rating: 4.1,
+          website: "https://www.doonschool.com/",
+          phone: "+91 135 2526400",
+          description: "Unique coworking space within prestigious school campus with academic atmosphere.",
+          amenities: {
+            wifi: "50+ Mbps",
+            hours: "9 AM - 6 PM",
+            printers: "Yes",
+            coffee: "Canteen available",
+            aircon: "Yes"
+          }
+        }
+      ],
+      "Mussoorie": [
+        {
+          name: "Landour Language School Workspace",
+          location: "Landour",
+          type: "Educational Coworking",
+          dayPass: "₹350",
+          monthlyDesk: "₹5,500",
+          monthlyPrivate: "₹9,000",
+          features: ["Mountain views", "Quiet environment", "Good WiFi", "Library", "Language learning community"],
+          rating: 4.0,
+          website: "https://landourlanguageschool.com/",
+          phone: "+91 135 2631327",
+          description: "Peaceful workspace in educational setting with stunning mountain views.",
+          amenities: {
+            wifi: "30+ Mbps",
+            hours: "9 AM - 6 PM",
+            printers: "Yes",
+            coffee: "Tea/coffee facility",
+            aircon: "No (natural cooling)"
+          }
+        },
+        {
+          name: "Mall Road Café Workspaces",
+          location: "Various Mall Road locations",
+          type: "Café Coworking",
+          dayPass: "₹250",
+          monthlyDesk: "₹4,000",
+          monthlyPrivate: "Not available",
+          features: ["Tourist area", "Good connectivity", "Food options", "Central location", "Multiple café options"],
+          rating: 3.8,
+          website: "Various local cafés",
+          phone: "Contact individual cafés",
+          description: "Multiple café options along Mall Road offering workspace-friendly environments.",
+          amenities: {
+            wifi: "15-25 Mbps",
+            hours: "8 AM - 10 PM",
+            printers: "Limited",
+            coffee: "Good food and beverages",
+            aircon: "Some locations"
+          }
+        }
+      ],
+      "Ziro": [
+        {
+          name: "Apatani Cultural Center",
+          location: "Hapoli",
+          type: "Cultural Workspace",
+          dayPass: "₹200",
+          monthlyDesk: "₹2,500",
+          monthlyPrivate: "₹4,000",
+          features: ["Cultural immersion", "Basic WiFi", "Community interaction", "Traditional environment", "Learning opportunities"],
+          rating: 3.5,
+          website: "Contact local administration",
+          phone: "+91 3788 222333",
+          description: "Unique workspace opportunity to work while learning about Apatani culture.",
+          amenities: {
+            wifi: "10-15 Mbps (limited)",
+            hours: "9 AM - 5 PM",
+            printers: "Basic",
+            coffee: "Local tea available",
+            aircon: "No"
+          }
+        },
+        {
+          name: "Tourist Lodge Common Areas",
+          location: "Various locations in Ziro",
+          type: "Lodge Workspace",
+          dayPass: "₹150",
+          monthlyDesk: "₹2,000",
+          monthlyPrivate: "₹3,500",
+          features: ["Basic facilities", "Common areas", "Accommodation combo", "Local interaction", "Budget-friendly"],
+          rating: 3.0,
+          website: "Contact local lodges",
+          phone: "Various lodge contacts",
+          description: "Basic workspace facilities available in tourist lodges for budget-conscious nomads.",
+          amenities: {
+            wifi: "5-10 Mbps (sporadic)",
+            hours: "24 hours (lodge guests)",
+            printers: "No",
+            coffee: "Lodge dining available",
+            aircon: "No"
+          }
+        }
+      ],
+      "Kolkata": [
+        {
+          name: "91springboard Kolkata",
+          location: "Salt Lake, Sector V",
+          type: "Premium Coworking",
+          dayPass: "₹500",
+          monthlyDesk: "₹8,000",
+          monthlyPrivate: "₹15,000",
+          features: ["High-speed WiFi", "Meeting rooms", "Events", "Cafe", "IT hub location", "Networking"],
+          rating: 4.5,
+          website: "https://www.91springboard.com/",
+          phone: "+91 33 4064 1234",
+          description: "Premium coworking space in Kolkata's IT hub with excellent facilities and community.",
+          amenities: {
+            wifi: "100+ Mbps",
+            hours: "24/7 access",
+            printers: "Yes",
+            coffee: "Unlimited",
+            aircon: "Yes"
+          }
+        },
+        {
+          name: "The ADDA",
+          location: "Park Street",
+          type: "Cultural Coworking",
+          dayPass: "₹400",
+          monthlyDesk: "₹7,000",
+          monthlyPrivate: "₹12,000",
+          features: ["Cultural ambiance", "Good WiFi", "Central location", "Networking events", "Creative community"],
+          rating: 4.2,
+          website: "https://theaddakolkata.com/",
+          phone: "+91 33 2229 1234",
+          description: "Coworking space celebrating Kolkata's cultural heritage with modern facilities.",
+          amenities: {
+            wifi: "80+ Mbps",
+            hours: "9 AM - 11 PM",
+            printers: "Yes",
+            coffee: "Excellent café",
+            aircon: "Yes"
+          }
+        },
+        {
+          name: "Rabindra Sarovar Area Cafés",
+          location: "Near Rabindra Sarovar",
+          type: "Café Coworking",
+          dayPass: "₹250",
+          monthlyDesk: "₹5,000",
+          monthlyPrivate: "Not available",
+          features: ["Lake views", "Peaceful environment", "Good connectivity", "Multiple café options", "Cultural area"],
+          rating: 4.0,
+          website: "Various local cafés",
+          phone: "Contact individual establishments",
+          description: "Multiple cafés around the lake offering peaceful workspace environments.",
+          amenities: {
+            wifi: "30-50 Mbps",
+            hours: "8 AM - 10 PM",
+            printers: "Limited",
+            coffee: "Bengali coffee culture",
+            aircon: "Most locations"
+          }
+        }
+      ],
       "Mumbai": [
         {
           name: "WeWork BKC",
