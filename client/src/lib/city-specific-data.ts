@@ -1133,19 +1133,17 @@ export const citySpecificData: Record<string, CitySpecificData> = {
     coworkingSpaces: [
       {
         name: "91springboard Salt Lake",
-        location: "Salt Lake City, Sector V",
+        address: "Salt Lake City, Sector V",
         pricing: "₹7,500/month",
-        description: "Modern tech hub in IT corridor with startup ecosystem and networking events",
-        amenities: ["Startup Community", "Mentorship", "Events", "High-Speed WiFi"],
-        openHours: "9:00 AM - 9:00 PM"
+        speedMbps: 100,
+        amenities: ["Startup Community", "Mentorship", "Events", "High-Speed WiFi"]
       },
       {
         name: "The Culture Canvas",
-        location: "Park Street Area",
+        address: "Park Street Area",
         pricing: "₹6,000/month",
-        description: "Creative co-working space in cultural heart of city with artist community",
-        amenities: ["Cultural Events", "Art Exhibitions", "Library", "Café Culture"],
-        openHours: "8:00 AM - 10:00 PM"
+        speedMbps: 80,
+        amenities: ["Cultural Events", "Art Exhibitions", "Library", "Café Culture"]
       }
     ],
     nomadCommunity: {
@@ -1214,126 +1212,6 @@ export const citySpecificData: Record<string, CitySpecificData> = {
         tip: "Art-filled environment with galleries and peaceful gardens for creative work"
       }
     ]
-  },
-  bir: {
-    moneyTips: [
-      "Stay in budget guesthouses near the paragliding landing site for convenience",
-      "Eat at Tibetan cafes and local dhabas for authentic meals under ₹150",
-      "Book paragliding packages in advance for better rates during season",
-      "Shop for Tibetan handicrafts and prayer flags at monastery gift shops",
-      "Use shared taxis and local buses for economical travel around Dharamshala region"
-    ],
-    streetFood: [
-      { item: "Tibetan Momos", price: "₹80-120 ($1-1.5)" },
-      { item: "Thukpa (Soup)", price: "₹100-150 ($1.2-1.8)" },
-      { item: "Butter Tea", price: "₹30-50 ($0.35-0.60)" },
-      { item: "Tingmo (Steamed Bread)", price: "₹40-60 ($0.50-0.70)" },
-      { item: "Tsampa", price: "₹50-80 ($0.60-1)" }
-    ],
-    wifiHotspots: {
-      cafes: [
-        { name: "The Hideout Café", speed: "35-50 Mbps", quality: "Good" },
-        { name: "June 16th Café", speed: "25-40 Mbps", quality: "Good" },
-        { name: "Avva's Café", speed: "30-45 Mbps", quality: "Good" }
-      ],
-      publicSpaces: [
-        { name: "Paragliding Landing Site", speed: "20-35 Mbps", quality: "Fair" },
-        { name: "Deer Park Institute", speed: "40-60 Mbps", quality: "Good" },
-        { name: "Local Libraries", speed: "25-40 Mbps", quality: "Fair" }
-      ]
-    },
-    coworkingSpaces: [
-      {
-        name: "The Hideout Café & Co-working",
-        address: "Bir Road, near Landing Zone",
-        pricing: "₹2,500/month",
-        speedMbps: 40,
-        amenities: ["Mountain View", "Pilot Community", "Equipment Storage", "Strong WiFi"]
-      },
-      {
-        name: "Zostel Bir Co-work",
-        address: "Bir Village Center",
-        pricing: "₹2,000/month",
-        speedMbps: 35,
-        amenities: ["Community Events", "Budget-Friendly", "Social Environment", "Power Backup"]
-      }
-    ],
-    localExperienceTips: [
-      "Visit Chokling Monastery for meditation sessions and Tibetan Buddhist culture",
-      "Try paragliding with certified instructors - one of world's best sites",
-      "Explore nearby Billing for stunning Himalayan views and mountain biking",
-      "Attend spiritual retreats and teachings at Deer Park Institute",
-      "Join sunrise hikes to Rajgundha valley for spectacular mountain panoramas",
-      "Experience traditional Tibetan festivals and ceremonies throughout the year"
-    ],
-    insiderHacks: {
-      accommodation: [
-        "Stay in Tibetan colony area for authentic cultural immersion",
-        "Book accommodations with mountain views for best paragliding site access",
-        "Consider monastery guesthouses for spiritual ambiance and budget rates",
-        "Look for places with backup power - frequent outages during monsoon",
-        "Choose locations within walking distance of landing site and cafes"
-      ],
-      food: [
-        "Eat at Tibetan refugee family-run restaurants for authentic cuisine",
-        "Try traditional butter tea and tsampa for genuine Tibetan experience",
-        "Visit monastery kitchens during festival times for community meals",
-        "Shop at local markets for fresh organic produce from nearby farms",
-        "Join cooking classes with local Tibetan families to learn traditional dishes"
-      ],
-      transport: [
-        "Use shared jeeps from Pathankot railway station (most economical route)",
-        "Rent bikes in Bir for exploring Billing and nearby villages",
-        "Join group transportation with paragliding schools for discounted rates",
-        "Walk between main sites - Bir is very compact and pedestrian-friendly",
-        "Share costs with other travelers for trips to Dharamshala and McLeodganj"
-      ]
-    },
-    secretSpots: [
-      {
-        name: "Secret Meditation Cave",
-        location: "Above Billing Road",
-        tip: "Hike 1 hour beyond main paragliding takeoff for natural caves",
-        coordinates: "32.02°N, 76.72°E"
-      },
-      {
-        name: "Sunrise View Point",
-        location: "Rajgundha Valley Trail",
-        tip: "Start 5 AM hike for stunning sunrise over Dhauladhar range",
-        timing: "Best in clear weather months"
-      },
-      {
-        name: "Traditional Tibetan Workshop",
-        location: "Tibetan Colony",
-        tip: "Visit traditional carpet weaving and incense making workshops",
-        timing: "9 AM - 5 PM, closed Sundays"
-      }
-    ],
-    transportationTips: [
-      "Use shared jeeps from Pathankot railway station (most economical route)",
-      "Rent bikes in Bir for exploring Billing and nearby villages",
-      "Join group transportation with paragliding schools for discounted rates",
-      "Walk between main sites - Bir is very compact and pedestrian-friendly",
-      "Share costs with other travelers for trips to Dharamshala and McLeodganj"
-    ],
-    climateImpact: {
-      workingConditions: [
-        "Pleasant mountain climate with cool mornings perfect for focused work",
-        "Monsoon season (Jul-Sep) brings heavy rains affecting outdoor activities",
-        "Clear post-monsoon period (Oct-Dec) ideal for outdoor coworking"
-      ],
-      healthConsiderations: [
-        "Clean mountain air excellent for respiratory health and mental clarity",
-        "Moderate altitude requires gradual acclimatization for some visitors",
-        "UV exposure higher at altitude - sunscreen essential for outdoor work"
-      ],
-      equipmentNeeds: [
-        "Warm clothing necessary for early mornings and winter months",
-        "Power backup solutions recommended during monsoon power cuts",
-        "Good hiking boots essential for exploring surrounding mountain trails"
-      ],
-      bestMonths: "March to June and October to December for optimal conditions"
-    }
   },
   dehradun: {
     moneyTips: [
@@ -1683,6 +1561,782 @@ export const citySpecificData: Record<string, CitySpecificData> = {
         "Portable power solutions helpful as electricity can be intermittent"
       ],
       bestMonths: "March to May and September to November for optimal conditions"
+    }
+  },
+  tosh: {
+    moneyTips: [
+      "Book accommodation in advance during peak trekking seasons (April-June, September-October)",
+      "Carry sufficient cash - ATMs not available, nearest in Barshaini",
+      "Stock up on essentials in Barshaini before the final trek to Tosh",
+      "Share accommodation costs by booking dormitory-style rooms in guesthouses",
+      "Negotiate longer stay discounts for extended remote work periods"
+    ],
+    streetFood: [
+      { item: "Dal Rice", price: "₹80-120 ($1-1.50)" },
+      { item: "Maggi Noodles", price: "₹40-60 ($0.50-0.75)" },
+      { item: "Momos", price: "₹60-80 ($0.75-1)" },
+      { item: "Chai", price: "₹20-30 ($0.25-0.40)" },
+      { item: "Thukpa", price: "₹100-150 ($1.20-1.80)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Pink Floyd Café", speed: "15-25 Mbps", quality: "Fair" },
+        { name: "Stone Garden Café", speed: "20-30 Mbps", quality: "Good" },
+        { name: "Local Dhabas", speed: "10-20 Mbps", quality: "Fair" }
+      ],
+      publicSpaces: [
+        { name: "Village Center", speed: "15-25 Mbps", quality: "Fair" },
+        { name: "Guesthouses Common Areas", speed: "20-35 Mbps", quality: "Good" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Mountain View Guesthouse",
+        address: "Tosh Village, Parvati Valley",
+        pricing: "₹1,500/month (with stay)",
+        speedMbps: 25,
+        amenities: ["Mountain Views", "Basic WiFi", "Common Area", "Peaceful Environment"]
+      }
+    ],
+    localExperienceTips: [
+      "Experience authentic Himalayan village life in remote mountain setting",
+      "Trek to nearby villages like Malana and Chalal for cultural exploration",
+      "Practice sunrise and sunset meditation with panoramic mountain views",
+      "Learn about local farming practices and traditional mountain lifestyle",
+      "Connect with international backpacker community in village cafes",
+      "Explore the Parvati River and surrounding natural hot springs"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Book rooms facing the mountains for inspirational work views",
+        "Choose guesthouses with generators for reliable power backup",
+        "Negotiate weekly/monthly rates for extended digital nomad stays",
+        "Opt for places with common kitchens to save on meal costs",
+        "Book early for peak seasons - limited accommodation options available"
+      ],
+      food: [
+        "Cook your own meals to save money and eat healthier",
+        "Try local mountain honey and organic vegetables from village gardens",
+        "Stock up on packaged foods and essentials during supply runs",
+        "Enjoy fresh trout from local streams at village restaurants",
+        "Share meals with other travelers to reduce costs and socialize"
+      ],
+      transport: [
+        "Take bus to Barshaini, then 30-minute trek to reach Tosh village",
+        "Carry light backpack for comfortable trek to village",
+        "Use shared taxis from Kasol to Barshaini for convenient access",
+        "Plan travel during good weather - monsoon makes trails difficult",
+        "Keep emergency transportation contacts for medical or urgent situations"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Tosh Glacier Point",
+        location: "2-hour trek from village",
+        tip: "Hidden glacier viewpoint with spectacular mountain panoramas and perfect meditation spot"
+      },
+      {
+        name: "Stone Circle Sunrise Point",
+        location: "20 minutes above village",
+        tip: "Ancient stone formations perfect for sunrise meditation and mountain photography"
+      }
+    ],
+    transportationTips: [
+      "Take bus from Delhi/Chandigarh to Bhuntar, then taxi to Barshaini",
+      "Trek final 2km from Barshaini to Tosh - no vehicles beyond this point",
+      "Carry sturdy trekking shoes for mountain paths and village exploration",
+      "Plan for weather delays during monsoon - roads can be blocked",
+      "Keep backup transportation plans for emergency medical access"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant summer months (April-June) ideal for outdoor work and exploration",
+        "Cold winter conditions (December-March) require heated indoor spaces",
+        "Monsoon season (July-September) brings heavy rains affecting internet connectivity"
+      ],
+      healthConsiderations: [
+        "High altitude (2400m) may cause initial acclimatization challenges",
+        "Clean mountain air excellent for respiratory health and mental clarity",
+        "Cold weather requires warm clothing and proper heating arrangements"
+      ],
+      equipmentNeeds: [
+        "Warm clothes and sleeping bags essential for cold mountain nights",
+        "Power banks and backup battery solutions for unreliable electricity",
+        "Rain gear necessary during monsoon season for daily activities"
+      ],
+      bestMonths: "April to June and September to November for optimal conditions"
+    }
+  },
+  rishikesh: {
+    moneyTips: [
+      "Stay in yoga ashrams for affordable accommodation and authentic spiritual experience",
+      "Eat at local dhabas near Ganga for budget-friendly meals (₹80-150)",
+      "Use shared auto-rickshaws and buses for economical local transportation",
+      "Shop at Laxman Jhula market for reasonably priced yoga and spiritual items",
+      "Take advantage of free yoga classes at various ashrams and community centers"
+    ],
+    streetFood: [
+      { item: "Chole Bhature", price: "₹60-100 ($0.75-1.20)" },
+      { item: "Aloo Puri", price: "₹40-70 ($0.50-0.85)" },
+      { item: "Lassi", price: "₹30-60 ($0.40-0.75)" },
+      { item: "Fruit Chat", price: "₹40-80 ($0.50-1)" },
+      { item: "Ganga Aarti Prasad", price: "₹20-50 ($0.25-0.60)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "The Beatles Café", speed: "40-60 Mbps", quality: "Excellent" },
+        { name: "Little Buddha Café", speed: "35-50 Mbps", quality: "Good" },
+        { name: "German Bakery", speed: "30-45 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "Laxman Jhula Area", speed: "25-40 Mbps", quality: "Good" },
+        { name: "Ram Jhula Market", speed: "30-50 Mbps", quality: "Good" },
+        { name: "Parmarth Niketan Ashram", speed: "35-55 Mbps", quality: "Excellent" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "The Hosteller Rishikesh",
+        address: "Tapovan, Rishikesh",
+        pricing: "₹8,000/month",
+        speedMbps: 60,
+        amenities: ["River Views", "Yoga Classes", "Community Events", "24/7 Access"]
+      },
+      {
+        name: "Zostel Rishikesh",
+        address: "Jonk, Rishikesh",
+        pricing: "₹7,500/month",
+        speedMbps: 50,
+        amenities: ["Ganga Views", "Cafe", "Library", "Activity Room"]
+      }
+    ],
+    localExperienceTips: [
+      "Attend daily Ganga Aarti ceremony at sunset for spiritual inspiration",
+      "Practice yoga and meditation at world-renowned ashrams and schools",
+      "Experience white water rafting on the Ganges for adventure and team building",
+      "Explore Beatles Ashram ruins for creative inspiration and historical insight",
+      "Join international yoga teacher training courses for skill development",
+      "Visit local markets for authentic Ayurvedic products and spiritual books"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Stay in Tapovan area for quieter environment away from main tourist crowds",
+        "Book ashram accommodation for authentic spiritual experience at lower costs",
+        "Choose places near suspension bridges for easy access to both sides",
+        "Look for rooms with Ganga views for daily inspiration and meditation",
+        "Negotiate monthly rates during off-season periods for better deals"
+      ],
+      food: [
+        "Eat at ashram dining halls for pure vegetarian meals at budget prices",
+        "Try organic cafes in Tapovan area for healthy international cuisine",
+        "Visit local fruit vendors near ghats for fresh seasonal produce",
+        "Enjoy traditional North Indian thalis at family-run restaurants",
+        "Sample street food near Laxman Jhula but be mindful of hygiene standards"
+      ],
+      transport: [
+        "Walk or cycle across suspension bridges - beautiful and free transportation",
+        "Use shared rickshaws for longer distances within Rishikesh area",
+        "Take local buses to nearby attractions like Haridwar and Dehradun",
+        "Rent scooters for independent exploration of surrounding Himalayan foothills",
+        "Book advance train tickets from Haridwar (30min drive) for major cities"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Neer Garh Waterfall",
+        location: "6km from Laxman Jhula",
+        tip: "Hidden waterfall perfect for meditation and swimming, accessible by short trek through forest"
+      },
+      {
+        name: "Kunjapuri Temple",
+        location: "20km from Rishikesh",
+        tip: "Sunrise temple visit with Himalayan views - perfect for morning meditation and inspiration"
+      }
+    ],
+    transportationTips: [
+      "Take train to Haridwar (30 minutes) then taxi/bus to Rishikesh",
+      "Walk across iconic suspension bridges - Laxman Jhula and Ram Jhula",
+      "Use local buses for budget travel to nearby hill stations and Delhi",
+      "Rent motorcycles for exploring surrounding Himalayan foothills independently",
+      "Book shared taxis for group trips to nearby attractions and airports"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant weather October-March ideal for outdoor yoga and riverside work",
+        "Hot summer months (April-June) require air-conditioned spaces for comfort",
+        "Monsoon season (July-September) brings heavy rains but lush green surroundings"
+      ],
+      healthConsiderations: [
+        "River air beneficial for respiratory health and stress reduction",
+        "Spiritual atmosphere promotes mental well-being and work-life balance",
+        "Hot weather may require adjustment period for some visitors"
+      ],
+      equipmentNeeds: [
+        "Light cotton clothing for hot weather and yoga practice",
+        "Rain gear essential during monsoon season for daily activities",
+        "Comfortable walking shoes for exploring riverfront areas and markets"
+      ],
+      bestMonths: "October to March for optimal weather and spiritual activities"
+    }
+  },
+  pondicherry: {
+    moneyTips: [
+      "Stay in French Quarter heritage guesthouses for authentic colonial experience",
+      "Eat at local Tamil restaurants for authentic South Indian meals (₹50-100)",
+      "Use bicycles for eco-friendly and economical transportation around the city",
+      "Shop at local markets in Tamil Quarter for better prices than tourist areas",
+      "Visit Auroville community for affordable organic food and spiritual experiences"
+    ],
+    streetFood: [
+      { item: "Masala Dosa", price: "₹40-80 ($0.50-1)" },
+      { item: "French Baguette", price: "₹60-120 ($0.75-1.50)" },
+      { item: "Idli Sambar", price: "₹30-60 ($0.40-0.75)" },
+      { item: "Croissant", price: "₹80-150 ($1-1.80)" },
+      { item: "Filter Coffee", price: "₹20-40 ($0.25-0.50)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Café Coffee Day (French Quarter)", speed: "40-60 Mbps", quality: "Excellent" },
+        { name: "Baker Street", speed: "35-55 Mbps", quality: "Good" },
+        { name: "Café Xtasi", speed: "30-50 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "French Institute", speed: "50-80 Mbps", quality: "Excellent" },
+        { name: "Alliance Française", speed: "45-70 Mbps", quality: "Excellent" },
+        { name: "Bharathi Park", speed: "25-40 Mbps", quality: "Good" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Work Café Pondy",
+        address: "French Quarter, Pondicherry",
+        pricing: "₹10,000/month",
+        speedMbps: 75,
+        amenities: ["Colonial Ambiance", "Café", "Meeting Rooms", "Heritage Building"]
+      },
+      {
+        name: "The Heritage Co-working",
+        address: "Mission Street, Pondicherry",
+        pricing: "₹8,500/month",
+        speedMbps: 60,
+        amenities: ["French Architecture", "Library", "Event Space", "Cultural Programs"]
+      }
+    ],
+    localExperienceTips: [
+      "Explore French colonial architecture and heritage buildings in White Town",
+      "Experience unique blend of Tamil and French cultures through food and festivals",
+      "Visit Auroville international community for spiritual and sustainable living insights",
+      "Enjoy beachfront cafes and restaurants along the scenic Promenade Beach",
+      "Learn French language at Alliance Française for cultural immersion",
+      "Participate in local art and cultural events at French Institute"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Stay in heritage hotels in French Quarter for authentic colonial experience",
+        "Book guesthouses in Tamil Quarter for more affordable local atmosphere",
+        "Choose seaside accommodations for morning beach walks and sunset views",
+        "Look for places with traditional French windows and colonial architecture",
+        "Negotiate long-term stays for better rates in heritage properties"
+      ],
+      food: [
+        "Try French bakeries for authentic pastries and European breakfast options",
+        "Eat at Tamil restaurants for traditional South Indian meals at local prices",
+        "Visit Auroville for organic and international cuisine options",
+        "Sample French-Indian fusion dishes unique to Pondicherry culture",
+        "Enjoy beachfront dining with fresh seafood and sunset views"
+      ],
+      transport: [
+        "Rent bicycles for eco-friendly exploration of compact French Quarter",
+        "Use auto-rickshaws for longer distances and trips to Auroville",
+        "Walk along the Promenade for scenic coastal routes and exercise",
+        "Take local buses for budget travel to nearby beaches and attractions",
+        "Rent scooters for independent exploration of surrounding Tamil villages"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Paradise Beach",
+        location: "Chunnambar, 30min by boat",
+        tip: "Hidden pristine beach accessible only by boat - perfect for peaceful work sessions away from crowds"
+      },
+      {
+        name: "Sacred Grove Auroville",
+        location: "Auroville community",
+        tip: "Meditation forest perfect for outdoor work sessions and spiritual inspiration"
+      }
+    ],
+    transportationTips: [
+      "Fly to Chennai (160km) then take bus or taxi to Pondicherry",
+      "Use local buses for economical travel within city and to nearby towns",
+      "Rent bicycles for exploring compact French Quarter and beachfront areas",
+      "Take boats to nearby islands and secluded beaches for day trips",
+      "Use shared autos for group travel to Auroville and surrounding attractions"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant winter months (November-February) ideal for outdoor work and exploration",
+        "Hot summer weather (March-June) requires air-conditioned spaces for comfort",
+        "Monsoon season (October-December) brings refreshing rains and cooler temperatures"
+      ],
+      healthConsiderations: [
+        "Coastal sea breeze beneficial for health and mental well-being",
+        "High humidity during summer months may require adjustment period",
+        "French colonial architecture provides naturally cool indoor spaces"
+      ],
+      equipmentNeeds: [
+        "Light breathable clothing suitable for hot and humid coastal weather",
+        "Rain gear necessary during monsoon season for comfortable travel",
+        "Sun protection essential for beach activities and outdoor exploration"
+      ],
+      bestMonths: "November to February for optimal weather and outdoor activities"
+    }
+  },
+  kochi: {
+    moneyTips: [
+      "Stay in Fort Kochi heritage homestays for authentic local experience at good value",
+      "Eat at local fish markets and toddy shops for budget-friendly authentic Kerala meals",
+      "Use public ferries for economical and scenic transportation between islands",
+      "Shop at spice markets in Mattancherry for direct prices on Kerala spices",
+      "Take advantage of government backwater tours for affordable Kerala experiences"
+    ],
+    streetFood: [
+      { item: "Fish Curry Rice", price: "₹80-150 ($1-1.80)" },
+      { item: "Appam & Stew", price: "₹60-120 ($0.75-1.50)" },
+      { item: "Banana Chips", price: "₹30-60 ($0.40-0.75)" },
+      { item: "Fresh Coconut Water", price: "₹20-40 ($0.25-0.50)" },
+      { item: "Prawn Koliwada", price: "₹100-180 ($1.20-2.20)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Kashi Art Café", speed: "50-70 Mbps", quality: "Excellent" },
+        { name: "Tea Pot Café", speed: "40-60 Mbps", quality: "Good" },
+        { name: "Café Mocha", speed: "35-55 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "Fort Kochi Beach", speed: "30-50 Mbps", quality: "Good" },
+        { name: "Marine Drive", speed: "40-65 Mbps", quality: "Excellent" },
+        { name: "Lulu Mall", speed: "60-100 Mbps", quality: "Excellent" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "WorkSpace Kochi",
+        address: "Marine Drive, Kochi",
+        pricing: "₹12,000/month",
+        speedMbps: 100,
+        amenities: ["Harbor Views", "Meeting Rooms", "Café", "Networking Events"]
+      },
+      {
+        name: "The Office Pass",
+        address: "Kakkanad, Kochi",
+        pricing: "₹9,000/month",
+        speedMbps: 80,
+        amenities: ["IT Hub Location", "24/7 Access", "Conference Rooms", "Parking"]
+      }
+    ],
+    localExperienceTips: [
+      "Explore historic Fort Kochi with colonial architecture and Chinese fishing nets",
+      "Experience traditional Kerala backwaters through houseboat stays and village tours",
+      "Learn about spice trading history at Mattancherry spice markets and warehouses",
+      "Enjoy authentic Kerala cuisine featuring coconut, seafood, and aromatic spices",
+      "Attend Kathakali dance performances for traditional Kerala cultural immersion",
+      "Visit local art galleries and studios in Fort Kochi heritage district"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Stay in heritage homestays in Fort Kochi for authentic colonial experience",
+        "Choose waterfront properties for harbor views and sea breeze comfort",
+        "Book houseboat stays in backwaters for unique Kerala accommodation experience",
+        "Look for places near ferry terminals for easy island-hopping access",
+        "Negotiate long-term rates in residential areas like Panampilly for better value"
+      ],
+      food: [
+        "Eat at local fish markets for freshest seafood at authentic prices",
+        "Try toddy shops for traditional Kerala drinks and local atmosphere",
+        "Visit spice markets to buy authentic Kerala spices at wholesale prices",
+        "Sample street food near ferry terminals for local flavors and budget meals",
+        "Enjoy backwater village meals for traditional home-cooked Kerala cuisine"
+      ],
+      transport: [
+        "Use public ferries for scenic and economical travel between Kochi islands",
+        "Rent scooters for independent exploration of Fort Kochi and surrounding areas",
+        "Take auto-rickshaws for convenient door-to-door transportation within city",
+        "Use app-based cabs for reliable transport to IT hubs and business districts",
+        "Join backwater boat tours for group travel and sightseeing at shared costs"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Kumbakonam Backwaters",
+        location: "45 minutes from Kochi",
+        tip: "Less touristy backwater village perfect for remote work with authentic Kerala village life"
+      },
+      {
+        name: "Cherai Beach",
+        location: "25km from Fort Kochi",
+        tip: "Pristine beach with golden sand, perfect for morning work sessions with ocean views"
+      }
+    ],
+    transportationTips: [
+      "Fly directly to Kochi International Airport with excellent connectivity",
+      "Use metro rail system for fast travel between major city areas",
+      "Take public ferries for scenic routes between Ernakulam and Fort Kochi",
+      "Rent two-wheelers for flexible exploration of narrow heritage streets",
+      "Use app-based transportation for reliable service to IT parks and business areas"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant winter months (December-February) ideal for outdoor work and exploration",
+        "Hot and humid summer (March-May) requires air-conditioned indoor spaces",
+        "Monsoon season (June-September) brings heavy rains but lush green landscapes"
+      ],
+      healthConsiderations: [
+        "Coastal sea breeze provides natural cooling and fresh air quality",
+        "High humidity year-round may require adjustment period for some visitors",
+        "Monsoon rains beneficial for air quality but require waterproof preparations"
+      ],
+      equipmentNeeds: [
+        "Light, breathable clothing suitable for hot and humid tropical climate",
+        "Waterproof bags and rain gear essential during lengthy monsoon season",
+        "Dehumidifiers or moisture control helpful for electronics and documents"
+      ],
+      bestMonths: "December to February for optimal weather and comfortable working conditions"
+    }
+  },
+  wayanad: {
+    moneyTips: [
+      "Stay in tea plantation homestays for authentic experience and reasonable rates",
+      "Buy tea, coffee, and spices directly from plantations for best prices",
+      "Use local buses and shared taxis for economical transportation between attractions",
+      "Shop at Kalpetta and Sultan Bathery markets for local produce and crafts",
+      "Book wildlife safaris through government offices for official rates"
+    ],
+    streetFood: [
+      { item: "Kerala Meals", price: "₹80-150 ($1-1.80)" },
+      { item: "Puttu & Kadala", price: "₹40-80 ($0.50-1)" },
+      { item: "Fresh Tea", price: "₹10-30 ($0.12-0.40)" },
+      { item: "Banana Fritters", price: "₹30-60 ($0.40-0.75)" },
+      { item: "Spiced Coffee", price: "₹20-50 ($0.25-0.60)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Green Gates Hotel", speed: "40-60 Mbps", quality: "Good" },
+        { name: "Woodlands Hotel", speed: "35-50 Mbps", quality: "Good" },
+        { name: "Local Tea Shops", speed: "20-35 Mbps", quality: "Fair" }
+      ],
+      publicSpaces: [
+        { name: "Kalpetta Town Center", speed: "30-50 Mbps", quality: "Good" },
+        { name: "Sultan Bathery Market", speed: "25-45 Mbps", quality: "Good" },
+        { name: "Resort Common Areas", speed: "40-70 Mbps", quality: "Excellent" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Mountain View Resort",
+        address: "Kalpetta, Wayanad",
+        pricing: "₹8,000/month (with accommodation)",
+        speedMbps: 50,
+        amenities: ["Mountain Views", "Tea Plantation Tours", "Nature Walks", "Organic Food"]
+      },
+      {
+        name: "Wayanad WorkSpace",
+        address: "Sultan Bathery, Wayanad",
+        pricing: "₹6,000/month",
+        speedMbps: 40,
+        amenities: ["Quiet Environment", "Spice Garden", "Wildlife Tours", "Local Culture"]
+      }
+    ],
+    localExperienceTips: [
+      "Experience tea and coffee plantation life through guided tours and homestays",
+      "Explore Wayanad Wildlife Sanctuary for elephant sightings and nature photography",
+      "Trek to Chembra Peak for panoramic views and heart-shaped lake discovery",
+      "Visit Edakkal Caves for ancient rock art and archaeological significance",
+      "Learn about sustainable farming practices from local tribal communities",
+      "Enjoy bamboo rafting and nature walks in pristine forest environments"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Stay in plantation bungalows for authentic colonial-era experience",
+        "Book tree houses and eco-resorts for unique nature accommodation",
+        "Choose homestays with families for authentic local culture immersion",
+        "Look for properties offering guided plantation and spice tours",
+        "Negotiate weekly rates during monsoon season for extended stays"
+      ],
+      food: [
+        "Try plantation-to-table meals with fresh organic ingredients",
+        "Sample traditional Kerala cuisine prepared by homestay families",
+        "Visit spice plantations to learn cooking with fresh local spices",
+        "Enjoy fresh mountain honey and homemade preserves from local producers",
+        "Taste traditional tribal cuisine through cultural exchange programs"
+      ],
+      transport: [
+        "Use local buses for economical travel between main towns and attractions",
+        "Hire jeeps for wildlife safaris and rough terrain exploration",
+        "Join group tours for shared transportation costs to remote trekking points",
+        "Rent motorcycles for flexible exploration of mountain roads and plantations",
+        "Book homestay pickup services from nearest bus stops and transportation hubs"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Banasura Hill",
+        location: "Near Banasura Dam",
+        tip: "Less crowded peak with 360-degree mountain views, perfect for morning meditation and work sessions"
+      },
+      {
+        name: "Thirunelli Temple Forest",
+        location: "Thirunelli, Wayanad",
+        tip: "Ancient temple in pristine forest setting - spiritual and peaceful environment for contemplative work"
+      }
+    ],
+    transportationTips: [
+      "Fly to Kozhikode (100km) then take bus or taxi to Wayanad",
+      "Use KSRTC buses for reliable and economical travel within Kerala",
+      "Hire local guides with vehicles for exploring remote plantations and tribal areas",
+      "Book jeep safaris for wildlife sanctuary visits and rough terrain exploration",
+      "Plan extra travel time during monsoon season due to mountain road conditions"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant weather year-round due to high altitude and forest cover",
+        "Cool mornings and evenings ideal for outdoor work and plantation visits",
+        "Monsoon season (June-September) brings heavy rains but spectacular green landscapes"
+      ],
+      healthConsiderations: [
+        "Cool mountain climate beneficial for health and mental well-being",
+        "Clean air quality excellent for respiratory health and stress relief",
+        "High altitude provides natural cooling without need for air conditioning"
+      ],
+      equipmentNeeds: [
+        "Light rain gear essential during monsoon months for outdoor activities",
+        "Comfortable trekking shoes necessary for plantation walks and nature exploration",
+        "Insect repellent helpful for forest areas and wildlife sanctuary visits"
+      ],
+      bestMonths: "October to May for optimal weather and outdoor activities"
+    }
+  },
+  dharamkot: {
+    moneyTips: [
+      "Stay in shared accommodations with other digital nomads for community and cost savings",
+      "Eat at local Tibetan restaurants for authentic meals at reasonable prices",
+      "Join group treks and activities to share transportation and guide costs",
+      "Shop at McLeod Ganj markets but negotiate prices - tourist area markup expected",
+      "Use co-living spaces for inclusive packages with accommodation, meals, and internet"
+    ],
+    streetFood: [
+      { item: "Momos", price: "₹60-100 ($0.75-1.20)" },
+      { item: "Thukpa", price: "₹80-150 ($1-1.80)" },
+      { item: "Tibetan Bread", price: "₹40-80 ($0.50-1)" },
+      { item: "Butter Tea", price: "₹30-60 ($0.40-0.75)" },
+      { item: "Dal Bhat", price: "₹100-180 ($1.20-2.20)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Moonpeak Espresso", speed: "60-80 Mbps", quality: "Excellent" },
+        { name: "Tibet Kitchen", speed: "50-70 Mbps", quality: "Good" },
+        { name: "Common Ground Café", speed: "45-65 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "McLeod Ganj Library", speed: "40-60 Mbps", quality: "Good" },
+        { name: "Namgyal Monastery", speed: "30-50 Mbps", quality: "Good" },
+        { name: "Main Square Dharamkot", speed: "35-55 Mbps", quality: "Good" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "NomadGao Dharamkot",
+        address: "Upper Dharamkot, Himachal Pradesh",
+        pricing: "₹15,000/month (inclusive)",
+        speedMbps: 80,
+        amenities: ["Mountain Views", "Community Events", "Rooftop Restaurant", "Coworking Space"]
+      },
+      {
+        name: "Alt Life Hostel",
+        address: "McLeod Ganj, Dharamshala",
+        pricing: "₹12,000/month",
+        speedMbps: 70,
+        amenities: ["70-Person Workspace", "Music Sessions", "Bonfire Nights", "Community Kitchen"]
+      }
+    ],
+    localExperienceTips: [
+      "Experience Tibetan Buddhist culture through monastery visits and teachings",
+      "Learn meditation and mindfulness practices from resident monks and teachers",
+      "Explore the home of Dalai Lama and Tibetan government in exile",
+      "Trek to nearby villages like Bhagsu and Naddi for scenic mountain views",
+      "Connect with international digital nomad community in village cafes",
+      "Participate in local festivals and cultural events throughout the year"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Book co-living spaces for all-inclusive packages with meals and internet",
+        "Choose upper Dharamkot for quieter environment away from tourist crowds",
+        "Stay in Tibetan-run guesthouses for authentic cultural experience",
+        "Look for places with mountain views to inspire daily work sessions",
+        "Negotiate monthly rates for extended digital nomad stays"
+      ],
+      food: [
+        "Eat at Tibetan restaurants for authentic momos, thukpa, and butter tea",
+        "Try local dhabas for budget-friendly Indian meals and regional specialties",
+        "Join community kitchens in co-living spaces for social cooking experiences",
+        "Sample Israeli cuisine - popular due to large Israeli traveler community",
+        "Shop at local markets for fresh produce and cook your own healthy meals"
+      ],
+      transport: [
+        "Walk between Dharamkot and McLeod Ganj - scenic 15-minute mountain path",
+        "Use shared taxis for trips to Dharamshala town and regional attractions",
+        "Join group treks to share guide costs and meet fellow travelers",
+        "Rent motorcycles for independent exploration of surrounding Himalayan valleys",
+        "Take local buses for budget travel to nearby hill stations and Delhi"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Bhagsu Waterfall Upper Pools",
+        location: "30-minute trek above main falls",
+        tip: "Hidden natural pools above crowded main waterfall - perfect for peaceful work sessions"
+      },
+      {
+        name: "Triund Ridge Sunrise Point",
+        location: "2.5km trek from Dharamkot",
+        tip: "Spectacular sunrise views over Dhauladhar mountains - inspiring location for morning work"
+      }
+    ],
+    transportationTips: [
+      "Fly to Kangra Airport (15km) or take train to Pathankot then bus to Dharamshala",
+      "Use local buses from Delhi/Chandigarh for economical mountain transportation",
+      "Walk mountain paths between villages for exercise and scenic commuting",
+      "Hire taxis for group transportation to trekking points and regional attractions",
+      "Keep emergency contacts for medical evacuation from remote mountain locations"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant summer months (April-June) ideal for outdoor work and mountain exploration",
+        "Cold winter weather (December-March) requires heated indoor workspaces",
+        "Monsoon season (July-September) brings heavy mountain rains affecting connectivity"
+      ],
+      healthConsiderations: [
+        "Clean mountain air excellent for respiratory health and mental clarity",
+        "High altitude (2100m) may require brief acclimatization period",
+        "Peaceful environment ideal for stress reduction and work-life balance"
+      ],
+      equipmentNeeds: [
+        "Warm clothing essential for cold mountain nights and winter months",
+        "Rain gear necessary during monsoon season for comfortable outdoor activities",
+        "Sturdy footwear required for mountain trekking and village exploration"
+      ],
+      bestMonths: "March to June and September to November for optimal conditions"
+    }
+  },
+  darjeeling: {
+    moneyTips: [
+      "Stay in budget hotels near Mall Road for convenient access and reasonable rates",
+      "Buy famous Darjeeling tea directly from gardens for authentic quality and fair prices",
+      "Use shared jeeps and local buses for economical transportation around hill station",
+      "Shop at Chowk Bazaar for local crafts and woolens at better prices than tourist shops",
+      "Take toy train during off-season for lower fares and fewer crowds"
+    ],
+    streetFood: [
+      { item: "Darjeeling Tea", price: "₹20-50 ($0.25-0.60)" },
+      { item: "Momos", price: "₹50-100 ($0.60-1.20)" },
+      { item: "Thukpa", price: "₹80-150 ($1-1.80)" },
+      { item: "Churpee (Yak Cheese)", price: "₹100-200 ($1.20-2.40)" },
+      { item: "Gundruk Soup", price: "₹60-120 ($0.75-1.50)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Glenary's Bakery", speed: "40-60 Mbps", quality: "Good" },
+        { name: "Keventers", speed: "35-55 Mbps", quality: "Good" },
+        { name: "Café Coffee Day", speed: "30-50 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "Mall Road Area", speed: "25-45 Mbps", quality: "Good" },
+        { name: "Chowrasta (Mall)", speed: "30-50 Mbps", quality: "Good" },
+        { name: "Hotels Common Areas", speed: "35-60 Mbps", quality: "Good" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Hidden Monkey Hostel",
+        address: "Gandhi Road, Darjeeling",
+        pricing: "₹8,000/month",
+        speedMbps: 50,
+        amenities: ["Mountain Views", "Café", "Rooftop Workspace", "Networking Meetups"]
+      },
+      {
+        name: "Tara Circle Hostel",
+        address: "Mall Road, Darjeeling",
+        pricing: "₹7,500/month",
+        speedMbps: 45,
+        amenities: ["Central Location", "Heritage Building", "Work Areas", "Cultural Programs"]
+      }
+    ],
+    localExperienceTips: [
+      "Experience world-famous Darjeeling tea culture through garden visits and tastings",
+      "Ride the historic toy train (UNESCO World Heritage) for scenic mountain views",
+      "Watch spectacular sunrise over Kanchenjunga from Tiger Hill viewpoint",
+      "Explore Tibetan Buddhist monasteries and learn about local spiritual practices",
+      "Learn about colonial British hill station history through heritage walks",
+      "Trek to nearby attractions like Sandakphu for Himalayan mountain adventures"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Stay in heritage hotels for authentic colonial hill station experience",
+        "Choose accommodations with Kanchenjunga views for daily mountain inspiration",
+        "Book places near Mall Road for easy access to cafes and cultural sites",
+        "Look for hotels with fireplaces for cozy winter working conditions",
+        "Negotiate off-season rates during monsoon months for budget stays"
+      ],
+      food: [
+        "Try traditional Tibetan and Nepali cuisine at local family restaurants",
+        "Sample authentic Darjeeling tea at gardens and specialty tea houses",
+        "Eat at local markets for budget-friendly traditional hill station meals",
+        "Visit bakeries on Mall Road for British-era style pastries and breakfast",
+        "Experience momos and thukpa - popular among locals and visitors alike"
+      ],
+      transport: [
+        "Use shared jeeps for economical travel to nearby attractions and viewpoints",
+        "Walk along Mall Road - most attractions within comfortable distance",
+        "Take toy train for scenic journey but book advance during peak season",
+        "Hire private taxis for day trips to tea gardens and mountain viewpoints",
+        "Join group treks for shared guide costs and transportation to trekking points"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Tinchuley Village",
+        location: "28km from Darjeeling",
+        tip: "Organic village with homestays, perfect for remote work with authentic hill life experience"
+      },
+      {
+        name: "Rock Garden Waterfall",
+        location: "Chunnu Summer Falls",
+        tip: "Hidden waterfall garden perfect for peaceful work sessions away from tourist crowds"
+      }
+    ],
+    transportationTips: [
+      "Fly to Bagdogra Airport (90km) then take taxi or bus to Darjeeling",
+      "Take train to New Jalpaiguri then toy train or taxi for scenic hill journey",
+      "Use shared jeeps for budget travel within Darjeeling and surrounding hill areas",
+      "Book toy train rides in advance during peak tourist seasons",
+      "Plan extra time for mountain travel due to winding roads and weather delays"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant summer months (April-June) ideal for outdoor work and sightseeing",
+        "Cool winter weather (December-March) requires heated spaces for comfortable work",
+        "Monsoon season (July-September) brings heavy rains but lush green tea gardens"
+      ],
+      healthConsiderations: [
+        "Cool mountain climate beneficial for health and mental clarity",
+        "High altitude (2050m) may require brief adjustment period for some visitors",
+        "Clean air quality excellent for respiratory health compared to plains"
+      ],
+      equipmentNeeds: [
+        "Warm clothing essential for cold mountain evenings and winter months",
+        "Rain gear necessary during heavy monsoon season for comfortable travel",
+        "Good walking shoes required for exploring steep hill station streets"
+      ],
+      bestMonths: "March to May and October to December for optimal weather and visibility"
     }
   }
 };

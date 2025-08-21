@@ -553,6 +553,274 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
             highlights: ["Trekking supplies", "Mountain essentials", "Convenient"]
           }
         ]
+      },
+      "Tosh": {
+        traditionalMarkets: [
+          {
+            name: "Tosh Village Market",
+            type: "Local Mountain Market",
+            specialties: ["Himalayan herbs", "Handmade woolens", "Local produce", "Trekking essentials"],
+            hours: "8:00 AM - 6:00 PM daily",
+            bestTime: "Morning for fresh items",
+            priceRange: "₹50-1500",
+            bargaining: "Light bargaining acceptable",
+            tips: "Limited options, stock up on essentials in Barshaini before trek",
+            location: "Tosh Village Center",
+            highlights: ["Mountain herbs", "Local crafts", "Basic necessities"]
+          }
+        ],
+        modernShopping: [
+          {
+            name: "Village General Store",
+            type: "Basic Store",
+            specialties: ["Packaged foods", "Basic medicines", "Batteries", "Phone cards"],
+            hours: "7:00 AM - 8:00 PM",
+            priceRange: "₹20-800",
+            bargaining: "Fixed prices mostly",
+            tips: "Limited stock, expensive due to transport costs",
+            highlights: ["Emergency supplies", "Remote location", "Essential items"]
+          }
+        ]
+      },
+      "Rishikesh": {
+        traditionalMarkets: [
+          {
+            name: "Laxman Jhula Market",
+            type: "Spiritual Market",
+            specialties: ["Yoga accessories", "Spiritual books", "Ayurvedic medicines", "Rudraksha beads"],
+            hours: "8:00 AM - 10:00 PM daily",
+            bestTime: "Evening after yoga sessions",
+            priceRange: "₹100-5000",
+            bargaining: "Expected for most items",
+            tips: "Great for authentic yoga and spiritual items",
+            location: "Near Laxman Jhula Bridge",
+            highlights: ["Spiritual items", "Yoga gear", "International crowd"]
+          },
+          {
+            name: "Tapovan Market",
+            type: "Local Market",
+            specialties: ["Organic vegetables", "Herbal teas", "Natural cosmetics", "Hemp products"],
+            hours: "7:00 AM - 9:00 PM daily",
+            bestTime: "Morning for fresh produce",
+            priceRange: "₹50-2000",
+            bargaining: "Light bargaining",
+            tips: "Great for organic and natural products",
+            location: "Tapovan Area",
+            highlights: ["Organic produce", "Natural products", "Health conscious"]
+          }
+        ],
+        modernShopping: [
+          {
+            name: "RISHIKESH MALL",
+            type: "Modern Mall",
+            specialties: ["Fashion", "Electronics", "Sports equipment", "Food court"],
+            hours: "10:00 AM - 10:00 PM",
+            priceRange: "₹500-8000",
+            bargaining: "Fixed prices",
+            tips: "Modern shopping with AC comfort",
+            highlights: ["Air conditioning", "Brand stores", "Family-friendly"]
+          }
+        ]
+      },
+      "Pondicherry": {
+        traditionalMarkets: [
+          {
+            name: "French Quarter Market",
+            type: "Heritage Market",
+            specialties: ["French pastries", "Colonial antiques", "Handmade soaps", "Auroville crafts"],
+            hours: "9:00 AM - 8:00 PM (Closed Monday)",
+            bestTime: "Evening strolls",
+            priceRange: "₹200-8000",
+            bargaining: "Limited bargaining",
+            tips: "Heritage items and French-inspired products",
+            location: "White Town, French Quarter",
+            highlights: ["Colonial heritage", "French influence", "Unique finds"]
+          },
+          {
+            name: "Mission Street Market",
+            type: "Local Market",
+            specialties: ["Tamil books", "South Indian textiles", "Traditional jewelry", "Local spices"],
+            hours: "8:00 AM - 9:00 PM daily",
+            bestTime: "Morning for fresh items",
+            priceRange: "₹100-4000",
+            bargaining: "Expected",
+            tips: "Authentic local Tamil culture and products",
+            location: "Mission Street, Black Town",
+            highlights: ["Local culture", "Traditional items", "Authentic experience"]
+          }
+        ],
+        modernShopping: [
+          {
+            name: "Coromandel Plaza",
+            type: "Shopping Complex",
+            specialties: ["Fashion", "Electronics", "Books", "Cafes"],
+            hours: "10:00 AM - 10:00 PM",
+            priceRange: "₹500-10000",
+            bargaining: "Fixed prices",
+            tips: "Modern shopping with good cafe culture",
+            highlights: ["Modern facilities", "Cafe culture", "Air conditioned"]
+          }
+        ]
+      },
+      "Kochi": {
+        traditionalMarkets: [
+          {
+            name: "Fort Kochi Spice Market",
+            type: "Traditional Spice Market",
+            specialties: ["Cardamom", "Black pepper", "Cinnamon", "Coconut products", "Ayurvedic oils"],
+            hours: "8:00 AM - 7:00 PM daily",
+            bestTime: "Morning for fresh spices",
+            priceRange: "₹100-3000",
+            bargaining: "Expected",
+            tips: "Historic spice trading center, authentic Kerala spices",
+            location: "Fort Kochi",
+            highlights: ["Historic spice trade", "Authentic quality", "Export quality"]
+          },
+          {
+            name: "Marine Drive Shopping",
+            type: "Waterfront Market",
+            specialties: ["Handicrafts", "Souvenirs", "Local art", "Kerala sarees"],
+            hours: "10:00 AM - 9:00 PM daily",
+            bestTime: "Evening with sunset views",
+            priceRange: "₹200-5000",
+            bargaining: "Moderate bargaining",
+            tips: "Beautiful waterfront shopping with backwater views",
+            location: "Marine Drive",
+            highlights: ["Waterfront views", "Local art", "Scenic shopping"]
+          }
+        ],
+        modernShopping: [
+          {
+            name: "Lulu Mall",
+            type: "Super Mall",
+            specialties: ["International brands", "Electronics", "Hypermarket", "Entertainment"],
+            hours: "10:00 AM - 11:00 PM",
+            priceRange: "₹500-25000",
+            bargaining: "Fixed prices",
+            tips: "Largest mall in India, complete shopping destination",
+            highlights: ["Massive selection", "International brands", "Entertainment complex"]
+          }
+        ]
+      },
+      "Wayanad": {
+        traditionalMarkets: [
+          {
+            name: "Kalpetta Market",
+            type: "Hill Station Market",
+            specialties: ["Tea", "Coffee", "Spices", "Honey", "Bamboo crafts"],
+            hours: "7:00 AM - 8:00 PM daily",
+            bestTime: "Morning for fresh produce",
+            priceRange: "₹100-2000",
+            bargaining: "Light bargaining",
+            tips: "Direct from plantations, organic products available",
+            location: "Kalpetta Town",
+            highlights: ["Plantation products", "Organic items", "Mountain freshness"]
+          },
+          {
+            name: "Sultan Bathery Market",
+            type: "Spice Market",
+            specialties: ["Pepper", "Cardamom", "Vanilla", "Ginger", "Turmeric"],
+            hours: "8:00 AM - 7:00 PM daily",
+            bestTime: "Morning hours",
+            priceRange: "₹200-4000",
+            bargaining: "Expected",
+            tips: "Major spice trading center, wholesale prices available",
+            location: "Sultan Bathery",
+            highlights: ["Wholesale spices", "Trading center", "Plantation direct"]
+          }
+        ],
+        modernShopping: [
+          {
+            name: "Kalpetta Shopping Complex",
+            type: "Town Center",
+            specialties: ["Basic goods", "Medicines", "Electronics", "Clothing"],
+            hours: "9:00 AM - 9:00 PM",
+            priceRange: "₹100-3000",
+            bargaining: "Limited",
+            tips: "Basic shopping needs, limited modern options",
+            highlights: ["Essential items", "Hill station shopping", "Local needs"]
+          }
+        ]
+      },
+      "Dharamkot": {
+        traditionalMarkets: [
+          {
+            name: "Dharamkot Village Market",
+            type: "Tibetan Market",
+            specialties: ["Tibetan handicrafts", "Prayer flags", "Singing bowls", "Woolen clothes"],
+            hours: "9:00 AM - 8:00 PM daily",
+            bestTime: "Afternoon browsing",
+            priceRange: "₹200-8000",
+            bargaining: "Expected",
+            tips: "Support Tibetan refugee artisans, authentic Buddhist items",
+            location: "Upper Dharamkot",
+            highlights: ["Tibetan culture", "Refugee support", "Authentic crafts"]
+          },
+          {
+            name: "Bhagsu Market",
+            type: "Traveler Market",
+            specialties: ["Hippie clothes", "Hash pipes", "Dreamcatchers", "Israeli food items"],
+            hours: "10:00 AM - 10:00 PM daily",
+            bestTime: "Evening hours",
+            priceRange: "₹100-3000",
+            bargaining: "Standard practice",
+            tips: "Traveler-focused items, international community vibe",
+            location: "Bhagsu Village (15min walk)",
+            highlights: ["Traveler culture", "International vibe", "Hippie items"]
+          }
+        ],
+        modernShopping: [
+          {
+            name: "McLeod Ganj Mall Road",
+            type: "Tourist Shopping",
+            specialties: ["Brand clothes", "Electronics", "Books", "Souvenirs"],
+            hours: "9:00 AM - 9:00 PM",
+            priceRange: "₹300-5000",
+            bargaining: "Limited",
+            tips: "More expensive but reliable quality",
+            highlights: ["Brand options", "Tourist area", "Reliable quality"]
+          }
+        ]
+      },
+      "Darjeeling": {
+        traditionalMarkets: [
+          {
+            name: "Chowk Bazaar",
+            type: "Hill Station Market",
+            specialties: ["Darjeeling tea", "Woolen clothes", "Tibetan handicrafts", "Local honey"],
+            hours: "8:00 AM - 8:00 PM daily",
+            bestTime: "Morning for tea shopping",
+            priceRange: "₹200-5000",
+            bargaining: "Expected",
+            tips: "Authentic Darjeeling tea direct from gardens",
+            location: "Near Mall Road",
+            highlights: ["Famous tea", "Mountain crafts", "Authentic quality"]
+          },
+          {
+            name: "Batasia Loop Market",
+            type: "Tourist Market",
+            specialties: ["Tea", "Local crafts", "Warm clothes", "Souvenirs"],
+            hours: "9:00 AM - 6:00 PM daily",
+            bestTime: "Afternoon visits",
+            priceRange: "₹100-3000",
+            bargaining: "Moderate bargaining",
+            tips: "Near famous Batasia Loop, touristy but convenient",
+            location: "Batasia Loop area",
+            highlights: ["Tourist convenient", "Good variety", "Scenic location"]
+          }
+        ],
+        modernShopping: [
+          {
+            name: "Mall Road Shopping",
+            type: "Colonial Shopping Street",
+            specialties: ["Books", "Branded clothes", "Electronics", "Bakeries"],
+            hours: "9:00 AM - 8:00 PM",
+            priceRange: "₹300-8000",
+            bargaining: "Limited",
+            tips: "Colonial-era shopping street with cafes and bookstores",
+            highlights: ["Colonial heritage", "Book stores", "Cafe culture"]
+          }
+        ]
       }
     };
 
