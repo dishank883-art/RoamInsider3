@@ -1057,7 +1057,398 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
           { label: "Ambulance", number: "108" },
           { label: "State Emergency", number: "1070" },
           { label: "Women's Helpline", number: "1091" }
-        ]
+        ],
+        "Tosh": {
+          moneyHacks: {
+            accommodation: [
+              "Stay in family guesthouses for ₹500-1000/night vs expensive hotels in Kasol",
+              "Book monthly stays with local families for ₹8000-15000 including meals",
+              "Share rooms with fellow trekkers to split costs during peak season",
+              "Camp at designated spots for ₹200-300/night with basic facilities",
+              "Negotiate off-season rates (Nov-Feb) for 50% discounts"
+            ],
+            food: [
+              "Eat at local dhabas for ₹80-150 vs ₹300+ at tourist restaurants",
+              "Buy groceries from Kasol and cook in guesthouse kitchens",
+              "Try traditional Himachali meals with host families for ₹150-250",
+              "Pack dry fruits and energy bars from Delhi for trekking (much cheaper)",
+              "Join community meals during festivals for cultural experience"
+            ],
+            transport: [
+              "Take shared taxis from Kasol (₹50) vs private taxi (₹500)",
+              "Walk the scenic 3km from Kasol to Tosh for free vs ₹300 taxi",
+              "Share helicopter costs from Bhuntar with other travelers",
+              "Book Delhi-Bhuntar flights 2 months early for 60% discounts",
+              "Use local buses to Bhuntar airport (₹100) vs ₹1500 taxi"
+            ]
+          },
+          secretSpots: [
+            {
+              name: "Hidden Valley Viewpoint",
+              location: "30 mins trek above village",
+              tip: "Stunning Parvati Valley views without crowds, perfect for sunrise meditation",
+              coordinates: "32.2494°N, 77.3410°E"
+            },
+            {
+              name: "Secret Workspace",
+              location: "Tosh Village Café upper floor",
+              tip: "Quiet workspace with valley views and reliable WiFi, order coffee to access",
+              timing: "9 AM - 7 PM"
+            },
+            {
+              name: "Local Hot Springs",
+              location: "15 mins trek toward glacier",
+              tip: "Natural hot springs known only to locals, free vs ₹200 at commercial spots",
+              timing: "Early morning or late evening"
+            }
+          ],
+          apps: [
+            { name: "Google Maps Offline", description: "Download offline maps - patchy network", url: "https://maps.google.com/" },
+            { name: "Windy", description: "Weather forecasts for trekking", url: "https://www.windy.com/" }
+          ],
+          emergencyNumbers: [
+            { label: "Police", number: "100" },
+            { label: "Ambulance", number: "108" },
+            { label: "Tourist Helpline", number: "1363" },
+            { label: "Kullu District Hospital", number: "+911902222253" }
+          ]
+        },
+        "Rishikesh": {
+          moneyHacks: {
+            accommodation: [
+              "Stay in Tapovan/Laxman Jhula area for ₹800-2000/night vs ₹3000+ in luxury ashrams",
+              "Book ashram accommodations for spiritual experience and lower costs (₹500-1500)",
+              "Share rooms in backpacker hostels like Zostel for ₹600-1200/night",
+              "Book monthly yoga teacher training packages for accommodation + learning",
+              "Camp at designated riverside spots for ₹200-500/night"
+            ],
+            food: [
+              "Eat at German Bakery and other Laxman Jhula cafes for ₹150-300",
+              "Try authentic ashram meals (simple, sattvic) for ₹80-150",
+              "Avoid alcohol completely - it's banned and expensive if found",
+              "Buy organic produce from local farmers market near Ram Jhula",
+              "Cook in hostel kitchens to save 60% on food costs"
+            ],
+            transport: [
+              "Use shared auto-rickshaws for ₹20-50 vs ₹150+ private",
+              "Walk across suspension bridges for free vs ₹100+ for distant parking",
+              "Take local buses to Haridwar (₹30) vs ₹300+ taxi",
+              "Share taxi costs to Delhi airport with other travelers (₹3000-4000)",
+              "Use cycle rickshaws for local temple visits (₹50-100)"
+            ]
+          },
+          secretSpots: [
+            {
+              name: "Secret Ganga Viewpoint",
+              location: "Above Parmarth Niketan",
+              tip: "Peaceful spot overlooking Ganges, perfect for meditation and remote work",
+              coordinates: "30.0869°N, 78.2676°E"
+            },
+            {
+              name: "Hidden Café Workspace",
+              location: "Little Buddha Café back terrace",
+              tip: "Quiet workspace with Ganges view, reliable WiFi, spiritual atmosphere",
+              timing: "7 AM - 9 PM"
+            },
+            {
+              name: "Free Yoga Classes",
+              location: "Parmarth Niketan daily sessions",
+              tip: "Free morning yoga classes by renowned teachers, no booking needed",
+              timing: "6 AM daily"
+            }
+          ],
+          apps: [
+            { name: "Ola/Uber", description: "Available for city and airport transfers", url: "https://www.olacabs.com/" },
+            { name: "Daily Yoga", description: "Complement your physical practice", url: "https://www.dailyyoga.com/" },
+            { name: "Insight Timer", description: "Meditation app with local teachers", url: "https://insighttimer.com/" }
+          ],
+          emergencyNumbers: [
+            { label: "Police", number: "100" },
+            { label: "Ambulance", number: "108" },
+            { label: "Tourist Helpline", number: "1363" },
+            { label: "All India Institute Medical Sciences", number: "+911352471000" }
+          ]
+        },
+        "Pondicherry": {
+          moneyHacks: {
+            accommodation: [
+              "Stay in Tamil Quarter for ₹1000-2500/night vs ₹4000+ in French Quarter",
+              "Book Auroville community stays for spiritual experience (₹1500-3000)",
+              "Share heritage houses with other digital nomads for cultural immersion",
+              "Book monthly beach house rentals for ₹15000-30000 vs nightly rates",
+              "Use local guesthouses vs international hotel chains for 50% savings"
+            ],
+            food: [
+              "Eat at Tamil local restaurants for ₹80-200 vs ₹500+ French cuisine",
+              "Try Auroville organic cafes for healthy, affordable meals (₹200-400)",
+              "Shop at local markets for fresh produce vs expensive French Quarter",
+              "Join community kitchens in Auroville for shared cooking experiences",
+              "Use food delivery apps for Tamil cuisine discounts"
+            ],
+            transport: [
+              "Rent scooters monthly for ₹2500-3500 vs ₹300-500/day",
+              "Use local buses for ₹10-25 vs ₹100+ auto-rickshaws",
+              "Cycle around French Quarter and Auroville (many free rental programs)",
+              "Share taxis to Chennai airport with other travelers (₹2500-3500)",
+              "Walk in French Quarter - most attractions are within 2km"
+            ]
+          },
+          secretSpots: [
+            {
+              name: "Hidden Beach Access",
+              location: "Serenity Beach via backroads",
+              tip: "Avoid crowded main beach, access via fishermen's path for peaceful workspace",
+              coordinates: "11.9416°N, 79.8083°E"
+            },
+            {
+              name: "French Architecture Workspace",
+              location: "Le Café upper floor, Rue Suffren",
+              tip: "Work in colonial heritage building with authentic French atmosphere and WiFi",
+              timing: "8 AM - 10 PM"
+            },
+            {
+              name: "Meditation Hall Access",
+              location: "Auroville Matrimandir surrounding gardens",
+              tip: "Free access to peaceful gardens for meditation and quiet work, inner chamber requires pass",
+              timing: "6 AM - 6 PM"
+            }
+          ],
+          apps: [
+            { name: "Ola/Uber", description: "Good coverage for city and airport trips", url: "https://www.olacabs.com/" },
+            { name: "Zomato", description: "Food delivery and restaurant discovery", url: "https://www.zomato.com/" },
+            { name: "Auroville Connect", description: "Community events and services", url: "Contact Auroville visitors center" }
+          ],
+          emergencyNumbers: [
+            { label: "Police", number: "100" },
+            { label: "Ambulance", number: "108" },
+            { label: "Tourist Helpline", number: "1363" },
+            { label: "JIPMER Hospital", number: "+914132272380" }
+          ]
+        },
+        "Kochi": {
+          moneyHacks: {
+            accommodation: [
+              "Stay in Kakkanad IT area for ₹1500-3000/night with better connectivity",
+              "Book homestays in Fort Kochi for heritage experience (₹2000-4000)",
+              "Share apartments with IT professionals for monthly rates (₹10000-20000)",
+              "Use backwater homestays for unique experience vs expensive resorts",
+              "Book advance during Biennale season to avoid 3x price surge"
+            ],
+            food: [
+              "Eat at local fish curry-rice restaurants for ₹100-200 vs ₹500+ tourist spots",
+              "Try toddy shops for authentic Kerala experience and cheap seafood",
+              "Shop at Broadway market for spices and ingredients (wholesale prices)",
+              "Use food delivery apps for restaurant discounts and variety",
+              "Join cooking classes for cultural learning and meal inclusion"
+            ],
+            transport: [
+              "Use Kochi Metro for efficient city travel (₹10-40 vs ₹150+ cabs)",
+              "Take government ferries for ₹4-15 vs ₹500+ private boat tours",
+              "Use buses for ₹15-30 vs ₹100+ auto-rickshaws",
+              "Share airport transfers with other IT professionals (₹300-500 per person)",
+              "Rent scooters monthly for ₹3000 vs ₹400-500/day"
+            ]
+          },
+          secretSpots: [
+            {
+              name: "Heritage Workspace",
+              location: "Koder House, Fort Kochi",
+              tip: "Historic building turned hotel with workspace area, great WiFi and heritage views",
+              timing: "24/7 for guests, day passes available"
+            },
+            {
+              name: "Backwater Office Boat",
+              location: "Kumbakonam backwaters",
+              tip: "Work from traditional houseboat office setup, mobile hotspot needed",
+              coordinates: "9.9312°N, 76.2673°E"
+            },
+            {
+              name: "Tech Hub Networking",
+              location: "Infopark cafeterias",
+              tip: "Access tech community networking events and co-working during lunch hours",
+              timing: "12 PM - 2 PM, 5 PM - 7 PM"
+            }
+          ],
+          apps: [
+            { name: "Kochi Metro", description: "Metro rail navigation and payments", url: "https://kochimetro.org/" },
+            { name: "Ola/Uber", description: "Reliable for city and airport travel", url: "https://www.olacabs.com/" },
+            { name: "Swiggy/Zomato", description: "Food delivery across the city", url: "https://www.zomato.com/" }
+          ],
+          emergencyNumbers: [
+            { label: "Police", number: "100" },
+            { label: "Ambulance", number: "108" },
+            { label: "Tourist Helpline", number: "1363" },
+            { label: "Medical College Hospital", number: "+914842358001" }
+          ]
+        },
+        "Wayanad": {
+          moneyHacks: {
+            accommodation: [
+              "Stay in plantation homestays for ₹1500-3000/night including meals and cultural experience",
+              "Book treehouse accommodations for unique experience vs expensive resorts",
+              "Share eco-lodges with nature enthusiasts to split costs",
+              "Use government guest houses for basic, affordable stays (₹800-1500)",
+              "Negotiate monthly rates at plantation stays for long-term digital nomad setup"
+            ],
+            food: [
+              "Eat traditional Kerala meals at homestays (included in accommodation)",
+              "Try local tribal cuisine and organic farm-to-table meals",
+              "Shop at weekly markets in Kalpetta for fresh spices and produce",
+              "Join cooking classes to learn Kerala cuisine and enjoy the meals",
+              "Buy direct from spice plantations for authentic flavors at wholesale prices"
+            ],
+            transport: [
+              "Use KSRTC buses for ₹30-100 vs ₹800+ private taxis between towns",
+              "Rent jeeps for wildlife safaris in groups (₹2000-3000 split 6 ways)",
+              "Trek between attractions when possible - many are connected by trails",
+              "Share costs for plantation tours and guide services",
+              "Use local guides familiar with wildlife spotting areas (₹500-1000/day)"
+            ]
+          },
+          secretSpots: [
+            {
+              name: "Hidden Waterfall Workspace",
+              location: "Kanthanpara Falls upper pools",
+              tip: "Natural infinity pools above main falls, perfect for digital detox workspace",
+              coordinates: "11.6854°N, 76.1319°E"
+            },
+            {
+              name: "Plantation Office Setup",
+              location: "Wayanad Coffee Plantation stays",
+              tip: "Work among coffee plants with WiFi, nature sounds, and fresh air",
+              timing: "Best productivity 6 AM - 10 AM"
+            },
+            {
+              name: "Tribal Cultural Center",
+              location: "Wayanad Heritage Museum area",
+              tip: "Learn about indigenous culture while working in peaceful cultural center",
+              timing: "9 AM - 5 PM"
+            }
+          ],
+          apps: [
+            { name: "Kerala Tourism", description: "Official tourism app with local information", url: "https://www.keralatourism.org/" },
+            { name: "Forest Department", description: "Wildlife sanctuary bookings", url: "Contact local forest office" },
+            { name: "Weather Underground", description: "Accurate weather for outdoor activities", url: "https://www.wunderground.com/" }
+          ],
+          emergencyNumbers: [
+            { label: "Police", number: "100" },
+            { label: "Ambulance", number: "108" },
+            { label: "Forest Emergency", number: "+914936202349" },
+            { label: "District Hospital Kalpetta", number: "+914936202203" }
+          ]
+        },
+        "Dharamkot": {
+          moneyHacks: {
+            accommodation: [
+              "Stay in upper Dharamkot for ₹800-2000/night vs ₹3000+ in McLeod Ganj",
+              "Book monthly stays with Tibetan families for cultural immersion (₹8000-15000)",
+              "Share rooms in backpacker hostels popular with spiritual seekers",
+              "Camp at designated sites for ₹200-400/night during good weather",
+              "Book ashram accommodations for meditation retreats including meals"
+            ],
+            food: [
+              "Eat at Tibetan family restaurants for momos and thukpa (₹100-250)",
+              "Try Peace Café and common café for international nomad community",
+              "Shop at McLeod Ganj market for groceries (2km downhill walk)",
+              "Join community kitchens during Buddhist festivals and gatherings",
+              "Buy organic produce from local Tibetan farmers"
+            ],
+            transport: [
+              "Walk to/from McLeod Ganj (2km) for free vs ₹150-300 taxi",
+              "Share taxis from Dharamshala bus stand with other travelers (₹100-150 per person)",
+              "Use local buses to Dharamshala for ₹20-30 vs ₹200+ private taxi",
+              "Trek to nearby villages and monasteries instead of hiring transport",
+              "Share costs for day trips to Triund and other trekking destinations"
+            ]
+          },
+          secretSpots: [
+            {
+              name: "Sunrise Meditation Point",
+              location: "Above Tse Chok Ling Monastery",
+              tip: "Peaceful sunrise spot with Kangra valley views, perfect for morning meditation",
+              coordinates: "32.2396°N, 76.3214°E"
+            },
+            {
+              name: "Hidden Café Workspace",
+              location: "Trek and Dine upper terrace",
+              tip: "Quiet workspace with mountain views, strong WiFi, and nomad community",
+              timing: "8 AM - 9 PM"
+            },
+            {
+              name: "Monastery Guest Access",
+              location: "Various local monasteries",
+              tip: "Many monasteries welcome respectful visitors for meditation and quiet work",
+              timing: "Contact individual monasteries for visiting hours"
+            }
+          ],
+          apps: [
+            { name: "Tibet Travel", description: "Information on Tibetan Buddhism and local events", url: "Contact local monasteries" },
+            { name: "Windy", description: "Mountain weather forecasts", url: "https://www.windy.com/" },
+            { name: "Google Translate", description: "Hindi-English translation for local interaction", url: "https://translate.google.com/" }
+          ],
+          emergencyNumbers: [
+            { label: "Police", number: "100" },
+            { label: "Ambulance", number: "108" },
+            { label: "Tourist Helpline", number: "1363" },
+            { label: "Civil Hospital Dharamshala", number: "+911892224085" }
+          ]
+        },
+        "Darjeeling": {
+          moneyHacks: {
+            accommodation: [
+              "Stay in homestays below Mall Road for ₹1200-2500/night vs ₹4000+ hotels",
+              "Book tea garden guest houses for authentic experience (₹1500-3000)",
+              "Share colonial heritage houses with other travelers for cultural immersion",
+              "Use youth hostels and backpacker accommodations (₹600-1500/night)",
+              "Negotiate off-season rates (July-Sept, Dec-Feb) for significant discounts"
+            ],
+            food: [
+              "Eat at local Tibetan and Nepali restaurants for ₹100-300 vs ₹500+ tourist spots",
+              "Try authentic tea house experiences for ₹150-400 including tea tastings",
+              "Shop at local markets for fresh produce and Himalayan ingredients",
+              "Join tea plantation tours that include meals and tastings",
+              "Use food delivery apps for variety during monsoon season"
+            ],
+            transport: [
+              "Use shared taxis from Siliguri/NJP for ₹150-200 vs ₹2000+ private",
+              "Walk on Mall Road and within town center (most attractions within 3km)",
+              "Take toy train for cultural experience vs expensive helicopter rides",
+              "Share costs for day trips to Tiger Hill, Batasia Loop, and monasteries",
+              "Use local buses to nearby attractions (₹20-80 vs ₹500+ taxi)"
+            ]
+          },
+          secretSpots: [
+            {
+              name: "Hidden Valley Viewpoint",
+              location: "Above Happy Valley Tea Estate",
+              tip: "Spectacular views without crowds, perfect spot for remote work with mountain backdrop",
+              coordinates: "27.0410°N, 88.2663°E"
+            },
+            {
+              name: "Tea Garden Office",
+              location: "Castleton Tea Estate",
+              tip: "Work among world-famous tea gardens, some estates offer WiFi for visitors",
+              timing: "9 AM - 4 PM (contact estate office)"
+            },
+            {
+              name: "Monastery Study Hall",
+              location: "Ghum Monastery complex",
+              tip: "Peaceful study environment with mountain views, respectful visitors welcome",
+              timing: "6 AM - 6 PM"
+            }
+          ],
+          apps: [
+            { name: "Weather Underground", description: "Accurate hill station weather", url: "https://www.wunderground.com/" },
+            { name: "Google Translate", description: "Bengali-English-Nepali translation", url: "https://translate.google.com/" },
+            { name: "IRCTC", description: "Toy train and regular train bookings", url: "https://www.irctc.co.in/" }
+          ],
+          emergencyNumbers: [
+            { label: "Police", number: "100" },
+            { label: "Ambulance", number: "108" },
+            { label: "Tourist Helpline", number: "1363" },
+            { label: "Darjeeling District Hospital", number: "+913542254477" }
+          ]
+        }
       }
     };
 

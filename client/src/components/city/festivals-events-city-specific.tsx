@@ -564,6 +564,230 @@ export default function FestivalsEvents({ city }: FestivalsEventsProps) {
           bestSpots: ["All Saints Church", "Ward's Lake area", "Police Bazaar"],
           tipCost: "Free church services, ₹200-1000 for celebrations and meals"
         }
+      ],
+      "Tosh": [
+        {
+          name: "Parvati Valley Music Festival",
+          date: "May",
+          duration: "3 days",
+          type: "Music",
+          description: "Annual music festival celebrating mountain culture with international and local artists in stunning Himalayan setting",
+          highlights: ["International DJs", "Live bands", "Mountain backdrop", "Cultural fusion", "Trekker community"],
+          bestSpots: ["Tosh Village Grounds", "Outdoor amphitheater"],
+          tipCost: "₹1500-3000 for weekend passes"
+        },
+        {
+          name: "Himalayan Trekking Season Opening",
+          date: "April",
+          duration: "1 day",
+          type: "Cultural",
+          description: "Traditional ceremony marking the start of safe trekking season with blessings from local guides and community",
+          highlights: ["Traditional rituals", "Community blessing", "Guide introductions", "Safety briefings"],
+          bestSpots: ["Village Temple", "Community center"],
+          tipCost: "Free to attend, donations welcome"
+        },
+        {
+          name: "Harvest Festival",
+          date: "October",
+          duration: "2 days",
+          type: "Agricultural",
+          description: "Local harvest celebration with traditional Himachali folk dances, music, and community feasting",
+          highlights: ["Folk performances", "Community meals", "Local traditions", "Harvest displays"],
+          bestSpots: ["Village center", "Agricultural fields"],
+          tipCost: "Free community event"
+        }
+      ],
+      "Rishikesh": [
+        {
+          name: "International Yoga Festival",
+          date: "March",
+          duration: "7 days",
+          type: "Spiritual",
+          description: "World's largest yoga gathering with renowned masters from around the globe teaching various yoga disciplines",
+          highlights: ["World-class yoga teachers", "Meditation workshops", "Spiritual discourses", "Ganga Aarti ceremonies"],
+          bestSpots: ["Parmarth Niketan", "Various ashrams", "Ganges banks"],
+          tipCost: "₹2500-8000 for full festival pass"
+        },
+        {
+          name: "Ganga Aarti Ceremony",
+          date: "Daily",
+          duration: "1 hour",
+          type: "Spiritual",
+          description: "Daily spiritual ceremony at sunset with fire offerings to the sacred Ganges River, deeply moving experience",
+          highlights: ["Sacred fire ceremony", "Devotional singing", "River blessings", "Spiritual atmosphere"],
+          bestSpots: ["Triveni Ghat", "Parmarth Niketan", "Ram Jhula area"],
+          tipCost: "Free to attend, donations welcome"
+        },
+        {
+          name: "Mahashivratri Festival",
+          date: "February/March",
+          duration: "1 day",
+          type: "Religious",
+          description: "Major Hindu festival honoring Lord Shiva with night-long prayers and celebrations at temples",
+          highlights: ["Temple ceremonies", "Night vigils", "Devotional music", "Sacred rituals"],
+          bestSpots: ["Neelkanth Mahadev Temple", "Various Shiva temples"],
+          tipCost: "Free temple access, ₹100-500 for offerings"
+        }
+      ],
+      "Pondicherry": [
+        {
+          name: "Bastille Day Celebration",
+          date: "July 14",
+          duration: "1 day",
+          type: "Cultural",
+          description: "French national day celebration with cultural performances, French cuisine festivals, and colonial heritage tours",
+          highlights: ["French cultural programs", "Colonial architecture tours", "French cuisine", "Cultural exhibitions"],
+          bestSpots: ["French Quarter", "Government buildings", "Cultural centers"],
+          tipCost: "Free events, ₹200-1000 for food and tours"
+        },
+        {
+          name: "Auroville Foundation Day",
+          date: "February 28",
+          duration: "1 day",
+          type: "Spiritual",
+          description: "Celebration of international spiritual community with workshops, cultural programs, meditation, and unity focus",
+          highlights: ["Unity ceremony", "Cultural diversity programs", "Meditation sessions", "Community workshops"],
+          bestSpots: ["Auroville Amphitheatre", "Matrimandir area"],
+          tipCost: "Free community events"
+        },
+        {
+          name: "Pondicherry Heritage Festival",
+          date: "January",
+          duration: "10 days",
+          type: "Heritage",
+          description: "Celebration of Franco-Tamil heritage with art exhibitions, historical walks, and cultural fusion events",
+          highlights: ["Heritage walks", "Art exhibitions", "Cultural fusion", "Historical presentations"],
+          bestSpots: ["French Quarter", "Museums", "Heritage buildings"],
+          tipCost: "₹200-800 for guided tours and events"
+        }
+      ],
+      "Kochi": [
+        {
+          name: "Kochi-Muziris Biennale",
+          date: "December-April (Biennial)",
+          duration: "108 days",
+          type: "Arts",
+          description: "International contemporary art exhibition showcasing global artists in historic venues across the city",
+          highlights: ["Contemporary art installations", "International artists", "Historic venues", "Cultural dialogues"],
+          bestSpots: ["Fort Kochi", "Mattancherry", "Various heritage buildings"],
+          tipCost: "₹500-1500 for season passes"
+        },
+        {
+          name: "Onam Festival Celebrations",
+          date: "August/September",
+          duration: "10 days",
+          type: "Cultural",
+          description: "Kerala's most important harvest festival with traditional Sadhya feasts, boat races, and cultural performances",
+          highlights: ["Pookalam flower carpets", "Onam Sadhya feast", "Traditional dances", "Boat races"],
+          bestSpots: ["Throughout the city", "Cultural centers", "Backwaters"],
+          tipCost: "₹300-1200 for Sadhya meals and events"
+        },
+        {
+          name: "Ernakulam Shiva Ratri",
+          date: "February/March",
+          duration: "1 day",
+          type: "Religious",
+          description: "Major Hindu festival with temple processions, cultural programs, and traditional performances",
+          highlights: ["Temple processions", "Cultural performances", "Traditional music", "Community celebrations"],
+          bestSpots: ["Ernakulathappan Temple", "Various Shiva temples"],
+          tipCost: "Free temple visits, ₹100-500 for offerings"
+        }
+      ],
+      "Wayanad": [
+        {
+          name: "Wildlife Photography Festival",
+          date: "November",
+          duration: "5 days",
+          type: "Nature",
+          description: "Celebration of Western Ghats biodiversity with photography workshops, jungle safaris, and conservation programs",
+          highlights: ["Photography workshops", "Wildlife safaris", "Conservation talks", "Nature exhibitions"],
+          bestSpots: ["Wayanad Wildlife Sanctuary", "Eco-lodges", "Forest areas"],
+          tipCost: "₹3000-8000 for workshop packages"
+        },
+        {
+          name: "Tribal Heritage Festival",
+          date: "January 26",
+          duration: "3 days",
+          type: "Cultural",
+          description: "Celebration of indigenous tribal culture with traditional arts, crafts, dances, and authentic cultural performances",
+          highlights: ["Tribal art displays", "Traditional dances", "Handicraft exhibitions", "Cultural performances"],
+          bestSpots: ["Kalpetta Cultural Center", "Tribal settlements", "Heritage sites"],
+          tipCost: "Free cultural events, ₹200-600 for workshops"
+        },
+        {
+          name: "Spice Plantation Festival",
+          date: "December",
+          duration: "2 days",
+          type: "Agricultural",
+          description: "Celebration of spice cultivation with plantation tours, cooking demonstrations, and spice trading exhibitions",
+          highlights: ["Plantation tours", "Spice tastings", "Cooking classes", "Agricultural displays"],
+          bestSpots: ["Various spice plantations", "Agricultural centers"],
+          tipCost: "₹500-1500 for tour packages"
+        }
+      ],
+      "Dharamkot": [
+        {
+          name: "Losar Tibetan New Year",
+          date: "February/March",
+          duration: "3 days",
+          type: "Cultural",
+          description: "Traditional Tibetan New Year celebration with monastery ceremonies, prayer flags, and cultural performances",
+          highlights: ["Monastery ceremonies", "Prayer flag raising", "Traditional dances", "Community feasts"],
+          bestSpots: ["McLeod Ganj Monastery", "Tibetan settlements", "Community centers"],
+          tipCost: "Free community events, donations appreciated"
+        },
+        {
+          name: "Dalai Lama Teaching Sessions",
+          date: "October (varies)",
+          duration: "3-7 days",
+          type: "Spiritual",
+          description: "Rare opportunity to attend teachings by His Holiness the Dalai Lama on Buddhist philosophy and meditation",
+          highlights: ["Dalai Lama teachings", "Buddhist philosophy", "Meditation instructions", "Spiritual community"],
+          bestSpots: ["Main Temple Complex", "Tsuglagkhang"],
+          tipCost: "Free attendance, advance registration required"
+        },
+        {
+          name: "Buddha Purnima Celebration",
+          date: "May",
+          duration: "1 day",
+          type: "Religious",
+          description: "Buddhist festival celebrating Buddha's birth, enlightenment, and death with prayers and meditation sessions",
+          highlights: ["Prayer ceremonies", "Meditation sessions", "Cultural programs", "Community gatherings"],
+          bestSpots: ["All local monasteries", "Temple complex"],
+          tipCost: "Free to attend all events"
+        }
+      ],
+      "Darjeeling": [
+        {
+          name: "Darjeeling Tea Festival",
+          date: "May",
+          duration: "3 days",
+          type: "Cultural",
+          description: "Annual celebration of world-famous Darjeeling tea with tastings, plantation tours, and tea master workshops",
+          highlights: ["Tea tastings", "Plantation tours", "Tea master sessions", "Cultural programs"],
+          bestSpots: ["Various tea gardens", "Town center", "Tea estates"],
+          tipCost: "₹800-2500 for comprehensive packages"
+        },
+        {
+          name: "Dasain Festival",
+          date: "September/October",
+          duration: "15 days",
+          type: "Cultural",
+          description: "Major Nepali festival celebration with traditional rituals, family gatherings, kite flying, and cultural programs",
+          highlights: ["Traditional rituals", "Kite festivals", "Cultural performances", "Community celebrations"],
+          bestSpots: ["Throughout the city", "Nepali community centers", "Observatory Hill"],
+          tipCost: "Free community events, ₹200-800 for food and activities"
+        },
+        {
+          name: "Darjeeling Carnival",
+          date: "December/January",
+          duration: "10 days",
+          type: "Cultural",
+          description: "Winter carnival celebrating hill station culture with music, dance, food festivals, and adventure sports",
+          highlights: ["Musical performances", "Food festivals", "Adventure sports", "Cultural diversity"],
+          bestSpots: ["Mall Road", "Chowrasta", "Various venues"],
+          tipCost: "₹300-1200 for events and activities"
+        }
       ]
     };
 

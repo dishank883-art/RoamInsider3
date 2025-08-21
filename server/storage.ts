@@ -4275,6 +4275,111 @@ export class MemStorage implements IStorage {
       currentWeather: { temperature: 12, humidity: 78, description: "Crisp mountain air with tea garden freshness", icon: "cloudy" },
       updatedAt: new Date(),
     });
+
+    // Add comprehensive Events for all 7 cities
+    const toshEvent1 = randomUUID();
+    this.events.set(toshEvent1, {
+      id: toshEvent1, cityId: toshId, title: "Parvati Valley Music Festival",
+      description: "Annual music festival celebrating mountain culture with international and local artists", 
+      date: new Date("2025-05-15"), venue: "Tosh Village Grounds", category: "Music", isPaid: true, price: 1500, url: null,
+      createdAt: new Date(),
+    });
+
+    const toshEvent2 = randomUUID();
+    this.events.set(toshEvent2, {
+      id: toshEvent2, cityId: toshId, title: "Himalayan Trekking Season Opening",
+      description: "Traditional ceremony marking the start of safe trekking season with local guides", 
+      date: new Date("2025-04-01"), venue: "Village Temple", category: "Cultural", isPaid: false, price: null, url: null,
+      createdAt: new Date(),
+    });
+
+    const rishikeshEvent3 = randomUUID();
+    this.events.set(rishikeshEvent3, {
+      id: rishikeshEvent3, cityId: rishikeshId, title: "Mahashivratri Festival",
+      description: "Major Hindu festival honoring Lord Shiva with night-long prayers and celebrations at temples", 
+      date: new Date("2025-02-26"), venue: "Neelkanth Mahadev Temple", category: "Religious", isPaid: false, price: null, url: null,
+      createdAt: new Date(),
+    });
+
+    const pondicherryEvent3 = randomUUID();
+    this.events.set(pondicherryEvent3, {
+      id: pondicherryEvent3, cityId: pondicherryId, title: "Heritage Festival",
+      description: "Franco-Tamil heritage celebration with art exhibitions, historical walks, and cultural fusion events", 
+      date: new Date("2025-01-15"), venue: "French Quarter", category: "Heritage", isPaid: true, price: 200, url: null,
+      createdAt: new Date(),
+    });
+
+    const pondicherryEvent2 = randomUUID();
+    this.events.set(pondicherryEvent2, {
+      id: pondicherryEvent2, cityId: pondicherryId, title: "Auroville Foundation Day",
+      description: "Celebration of international spiritual community with workshops, cultural programs, and meditation", 
+      date: new Date("2025-02-28"), venue: "Auroville", category: "Spiritual", isPaid: false, price: null, url: "https://auroville.org",
+      createdAt: new Date(),
+    });
+
+    const kochiEvent1 = randomUUID();
+    this.events.set(kochiEvent1, {
+      id: kochiEvent1, cityId: kochiId, title: "Kochi-Muziris Biennale",
+      description: "International contemporary art exhibition showcasing global artists in historic venues", 
+      date: new Date("2025-12-12"), venue: "Various Historic Venues", category: "Arts", isPaid: true, price: 500, url: "https://kochimuzirisbiennale.org",
+      createdAt: new Date(),
+    });
+
+    const kochiEvent2 = randomUUID();
+    this.events.set(kochiEvent2, {
+      id: kochiEvent2, cityId: kochiId, title: "Onam Festival Celebrations",
+      description: "Kerala's harvest festival with traditional Sadhya feasts, boat races, and cultural performances", 
+      date: new Date("2025-09-10"), venue: "Citywide", category: "Cultural", isPaid: false, price: null, url: null,
+      createdAt: new Date(),
+    });
+
+    const wayanadEvent1 = randomUUID();
+    this.events.set(wayanadEvent1, {
+      id: wayanadEvent1, cityId: wayanadId, title: "Wildlife Photography Festival",
+      description: "Celebration of Western Ghats biodiversity with photography workshops and jungle safaris", 
+      date: new Date("2025-11-15"), venue: "Wayanad Wildlife Sanctuary", category: "Nature", isPaid: true, price: 3000, url: null,
+      createdAt: new Date(),
+    });
+
+    const wayanadEvent2 = randomUUID();
+    this.events.set(wayanadEvent2, {
+      id: wayanadEvent2, cityId: wayanadId, title: "Tribal Heritage Festival",
+      description: "Celebration of indigenous tribal culture with traditional arts, crafts, and authentic performances", 
+      date: new Date("2025-01-26"), venue: "Kalpetta Cultural Center", category: "Cultural", isPaid: false, price: null, url: null,
+      createdAt: new Date(),
+    });
+
+    const dharamkotEvent2 = randomUUID();
+    this.events.set(dharamkotEvent2, {
+      id: dharamkotEvent2, cityId: dharamkotId, title: "Losar Tibetan New Year",
+      description: "Traditional Tibetan New Year celebration with monasteries, prayer flags, and cultural performances", 
+      date: new Date("2025-02-15"), venue: "McLeod Ganj Monastery", category: "Cultural", isPaid: false, price: null, url: null,
+      createdAt: new Date(),
+    });
+
+    const dharamkotEvent3 = randomUUID();
+    this.events.set(dharamkotEvent3, {
+      id: dharamkotEvent3, cityId: dharamkotId, title: "Dalai Lama Teaching Sessions",
+      description: "Rare opportunity to attend teachings by His Holiness the Dalai Lama on Buddhist philosophy", 
+      date: new Date("2025-10-05"), venue: "Main Temple Complex", category: "Spiritual", isPaid: false, price: null, url: "https://dalailama.com",
+      createdAt: new Date(),
+    });
+
+    const darjeelingEvent1 = randomUUID();
+    this.events.set(darjeelingEvent1, {
+      id: darjeelingEvent1, cityId: darjeelingId, title: "Darjeeling Tea Festival",
+      description: "Annual celebration of world-famous tea with tastings, plantation tours, and tea master workshops", 
+      date: new Date("2025-05-20"), venue: "Tea Gardens", category: "Cultural", isPaid: true, price: 800, url: null,
+      createdAt: new Date(),
+    });
+
+    const darjeelingEvent2 = randomUUID();
+    this.events.set(darjeelingEvent2, {
+      id: darjeelingEvent2, cityId: darjeelingId, title: "Dasain Festival",
+      description: "Major Nepali festival celebration with traditional rituals, family gatherings, and cultural programs", 
+      date: new Date("2025-10-15"), venue: "Citywide", category: "Cultural", isPaid: false, price: null, url: null,
+      createdAt: new Date(),
+    });
   }
 }
 
