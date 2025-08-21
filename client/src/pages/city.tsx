@@ -8,11 +8,13 @@ import CostOfLiving from "@/components/city/cost-of-living";
 import InternetConnectivity from "@/components/city/internet-connectivity";
 import Transportation from "@/components/city/transportation";
 import ClimateWeather from "@/components/city/climate-weather";
+import WeatherClimate from "@/components/city/weather-climate";
+import CoworkingSpaces from "@/components/city/coworking-spaces";
 import SafetyHealthcare from "@/components/city/safety-healthcare";
 import LifestyleCulture from "@/components/city/lifestyle-culture";
 import ThingsToDo from "@/components/city/things-to-do";
 import CommunityNomads from "@/components/city/community-nomads";
-import InsiderHacks from "@/components/city/insider-hacks";
+import InsiderHacks from "@/components/city/insider-hacks-fixed";
 import CityConnections from "@/components/city/city-connections";
 import FestivalsEvents from "@/components/city/festivals-events";
 import ShoppingMarkets from "@/components/city/shopping-markets";
@@ -39,7 +41,8 @@ export default function CityPage() {
     { id: "cost", label: "Cost of Living", icon: DollarSign, emoji: "💰" },
     { id: "internet", label: "Internet & Connectivity", icon: Wifi, emoji: "🌐" },
     { id: "transport", label: "Transportation & Accessibility", icon: Car, emoji: "🚌" },
-    { id: "climate", label: "Climate & Best Time", icon: Cloud, emoji: "🌤️" },
+    { id: "weather", label: "Weather & Climate", icon: Cloud, emoji: "🌤️" },
+    { id: "coworking", label: "Coworking Spaces", icon: Users, emoji: "💻" },
     { id: "safety", label: "Safety & Healthcare", icon: Shield, emoji: "🏥" },
     { id: "lifestyle", label: "Lifestyle & Culture", icon: Heart, emoji: "🍲" },
     { id: "festivals", label: "Festivals & Events", icon: Star, emoji: "🎉" },
@@ -115,8 +118,10 @@ export default function CityPage() {
         return <InternetConnectivity internetData={city.internetConnectivity} />;
       case "transport":
         return <Transportation transportData={city.transportation} />;
-      case "climate":
-        return <ClimateWeather climateData={city.climate} cityId={city.id} />;
+      case "weather":
+        return <WeatherClimate climateData={city.climate} cityName={city.name} cityId={city.id} />;
+      case "coworking":
+        return <CoworkingSpaces cityName={city.name} />;
       case "safety":
         return <SafetyHealthcare safetyData={city.safety} />;
       case "lifestyle":

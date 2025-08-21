@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Lightbulb, AlertTriangle, DollarSign, MapPin, Clock, Shield, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Lightbulb, DollarSign, MapPin, Clock, Shield, Zap, ExternalLink, Phone, Coffee, Car } from "lucide-react";
 import type { CityWithDetails } from "@shared/schema";
 
 interface InsiderHacksProps {
@@ -8,91 +9,220 @@ interface InsiderHacksProps {
 }
 
 export default function InsiderHacks({ city }: InsiderHacksProps) {
+  const goaInsiderHacks = {
+    moneyHacks: {
+      accommodation: [
+        "Book monthly stays directly with property owners via Facebook groups for 40-60% discounts",
+        "Stay in Arambol/Ashwem instead of Baga/Calangute for 50% cheaper accommodation",
+        "House-sit for expats during Apr-Oct off-season for free accommodation",
+        "Share beach houses with 4-6 nomads to split costs (₹3,000-5,000/month per person)",
+        "Book homestays through Airbnb alternatives like StayVista for better rates"
+      ],
+      food: [
+        "Eat at local 'fish curry rice' joints for ₹80-120 vs ₹400+ at beach shacks",
+        "Buy seafood directly from fishermen at Chapora/Anjuna fish market (60% cheaper)",
+        "Use Zomato Pro for unlimited free deliveries and restaurant discounts",
+        "Shop at municipal markets (Mapusa, Margao) instead of tourist areas",
+        "Attend Saturday Night Market for free tastings and samples"
+      ],
+      transport: [
+        "Rent monthly scooters for ₹2,500-3,500 vs ₹300-500/day rentals",
+        "Use KTC bus passes for unlimited travel across Goa (₹150/month)",
+        "Share taxis to Mumbai/Pune airports with other nomads (WhatsApp groups)",
+        "Book Kadamba AC buses online for 30% discounts on advance bookings",
+        "Use bike taxis (Rapido) during monsoons when regular taxis are expensive"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Butterfly Beach Secret Entry",
+        location: "Palolem",
+        tip: "Access via fishing boat from Palolem for ₹50 instead of ₹500 boat tours",
+        coordinates: "15.009°N, 74.023°E"
+      },
+      {
+        name: "Hidden Coworking at Fontainhas",
+        location: "Panaji",
+        tip: "Work from Café Bodega's upper floor - quiet, AC, great WiFi, ₹200/day including coffee",
+        website: "https://www.facebook.com/cafebodegagoa/"
+      },
+      {
+        name: "Free Sunset Point",
+        location: "Chapora Fort",
+        tip: "Park at bottom hill, walk 10 mins instead of paying ₹100 parking at top",
+        timing: "Best at 6-7 PM"
+      },
+      {
+        name: "Local Fish Market Timing",
+        location: "Anjuna",
+        tip: "Arrive at 6 AM for fresh catch at wholesale prices before restaurants buy",
+        days: "Tuesday, Friday, Saturday"
+      }
+    ],
+    localKnowledge: {
+      seasonal: [
+        "Peak season (Dec-Feb): Book everything 2 months ahead, prices are 3x higher",
+        "Monsoon season (Jun-Sep): Many places close, but Ayurveda retreats are 50% off",
+        "Shoulder season (Mar-May, Oct-Nov): Best time for deals and fewer crowds",
+        "Festival season (Oct-Nov): Diwali and Christmas bring special events and discounts"
+      ],
+      cultural: [
+        "Learn basic Konkani phrases - locals appreciate it and offer better prices",
+        "Respect siesta time (1-4 PM) - many shops close, plan accordingly",
+        "Dress modestly in local markets vs beach areas for better treatment",
+        "Understand 'susegad' culture - things move slower, don't rush",
+        "Join local fishing trips from Betalbatim beach for authentic experience"
+      ],
+      practical: [
+        "Download offline maps - GPS can be unreliable in interior villages",
+        "Keep photocopies of documents - required for bike rentals and accommodation",
+        "Use UPI payments for better exchange rates vs cash/cards",
+        "Carry cash for local buses, street food, and small vendors",
+        "Keep emergency contacts of local police and tourist helpline"
+      ]
+    }
+  };
+
   return (
     <Card className="bg-white rounded-2xl shadow-lg">
       <CardHeader>
         <CardTitle className="font-serif text-3xl font-bold text-travel-blue flex items-center">
           <Lightbulb className="mr-3 h-8 w-8 text-vintage-gold" />
-          Insider Hacks & Local Tips
+          Insider Hacks & Local Secrets
         </CardTitle>
         <p className="text-muted-navy text-lg">
-          Discover money-saving secrets, local tricks, and insider knowledge to live like a pro in {city.name}.
+          Exclusive money-saving secrets, hidden gems, and local knowledge that only long-term residents and smart nomads know about {city.name}.
         </p>
       </CardHeader>
       <CardContent className="space-y-8">
-        
         {/* Money-Saving Hacks */}
         <div>
-          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
+          <h3 className="font-semibold text-travel-blue mb-6 flex items-center">
             <DollarSign className="mr-2 h-5 w-5" />
             💰 Money-Saving Hacks
           </h3>
-          <div className="grid gap-4">
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
-              <h4 className="font-semibold text-sage-green mb-2">Food & Dining</h4>
-              <ul className="space-y-1 text-sm text-muted-navy">
-                <li>• Eat at local "tiffin" centers for ₹50-80 full meals vs ₹200+ at tourist spots</li>
-                <li>• Download Zomato/Swiggy for 40-60% off first-time user discounts</li>
-                <li>• Street food between 11 AM-2 PM is freshest and cheapest</li>
-                <li>• Ask for "half plate" portions at restaurants to save 30-40%</li>
-                <li>• Local markets close around 8 PM - get 20-30% discounts after 7 PM</li>
+              <h4 className="font-semibold text-sage-green mb-3 flex items-center">
+                <DollarSign className="mr-2 h-4 w-4" />
+                Accommodation Savings
+              </h4>
+              <ul className="space-y-2 text-sm text-muted-navy">
+                {goaInsiderHacks.moneyHacks.accommodation.map((tip, index) => (
+                  <li key={index}>• {tip}</li>
+                ))}
               </ul>
             </div>
+            
             <div className="bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20">
-              <h4 className="font-semibold text-travel-blue mb-2">Transportation</h4>
-              <ul className="space-y-1 text-sm text-muted-navy">
-                <li>• Use metro day passes (₹200) if taking 4+ trips, saves vs individual tickets</li>
-                <li>• Book Ola/Uber during non-peak hours for 30-50% cheaper rides</li>
-                <li>• Learn basic auto-rickshaw negotiation: start at 60% of quoted price</li>
-                <li>• Use local buses (₹10-30) instead of AC buses (₹20-50) for short distances</li>
-                <li>• Share autos with locals going same direction - common practice</li>
+              <h4 className="font-semibold text-travel-blue mb-3 flex items-center">
+                <Coffee className="mr-2 h-4 w-4" />
+                Food & Dining
+              </h4>
+              <ul className="space-y-2 text-sm text-muted-navy">
+                {goaInsiderHacks.moneyHacks.food.map((tip, index) => (
+                  <li key={index}>• {tip}</li>
+                ))}
               </ul>
             </div>
+            
             <div className="bg-vintage-gold/5 rounded-lg p-4 border border-vintage-gold/20">
-              <h4 className="font-semibold text-vintage-gold mb-2">Accommodation</h4>
-              <ul className="space-y-1 text-sm text-muted-navy">
-                <li>• Book PGs (paying guest) for monthly stays - 50% cheaper than Airbnb</li>
-                <li>• Negotiate rent directly with landlords vs brokers to save 1-month commission</li>
-                <li>• Stay 2-3 km from city center for 40-60% cheaper rent with same amenities</li>
-                <li>• Join Facebook housing groups for better deals than OYO/hotels</li>
-                <li>• Ask for "corporate rates" at hotels if staying 7+ days</li>
+              <h4 className="font-semibold text-vintage-gold mb-3 flex items-center">
+                <Car className="mr-2 h-4 w-4" />
+                Transport Hacks
+              </h4>
+              <ul className="space-y-2 text-sm text-muted-navy">
+                {goaInsiderHacks.moneyHacks.transport.map((tip, index) => (
+                  <li key={index}>• {tip}</li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
 
-        {/* Local Navigation Secrets */}
+        {/* Secret Spots & Hidden Gems */}
         <div>
-          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
+          <h3 className="font-semibold text-travel-blue mb-6 flex items-center">
             <MapPin className="mr-2 h-5 w-5" />
-            🗺️ Navigation & Getting Around
+            🗺️ Secret Spots & Hidden Gems
           </h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h4 className="font-semibold text-travel-blue mb-2">Traffic Hacks</h4>
-              <ul className="space-y-1 text-sm text-muted-navy">
-                <li>• Avoid 8-10 AM and 6-8 PM rush hours at all costs</li>
-                <li>• Use Google Maps "departure time" feature to plan optimal travel</li>
-                <li>• Side streets often faster than main roads during peak hours</li>
-                <li>• Learn 2-3 alternate routes to your regular destinations</li>
-                <li>• Metro is always faster than road transport during rush hour</li>
+          <div className="grid md:grid-cols-2 gap-6">
+            {goaInsiderHacks.secretSpots.map((spot, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                <div className="flex items-start justify-between mb-3">
+                  <h4 className="font-semibold text-travel-blue">{spot.name}</h4>
+                  <Badge variant="secondary" className="bg-vintage-gold/10 text-vintage-gold">
+                    {spot.location}
+                  </Badge>
+                </div>
+                <p className="text-sm text-muted-navy mb-3">{spot.tip}</p>
+                <div className="flex items-center justify-between text-xs text-muted-navy">
+                  {spot.coordinates && (
+                    <span className="flex items-center">
+                      <MapPin className="h-3 w-3 mr-1" />
+                      {spot.coordinates}
+                    </span>
+                  )}
+                  {spot.website && (
+                    <a href={spot.website} target="_blank" rel="noopener noreferrer" 
+                       className="flex items-center text-travel-blue hover:underline">
+                      <ExternalLink className="h-3 w-3 mr-1" />
+                      Visit
+                    </a>
+                  )}
+                  {spot.timing && (
+                    <span className="flex items-center">
+                      <Clock className="h-3 w-3 mr-1" />
+                      {spot.timing}
+                    </span>
+                  )}
+                  {spot.days && (
+                    <span className="flex items-center">
+                      <Clock className="h-3 w-3 mr-1" />
+                      {spot.days}
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Local Knowledge */}
+        <div>
+          <h3 className="font-semibold text-travel-blue mb-6 flex items-center">
+            <Zap className="mr-2 h-5 w-5" />
+            🧠 Essential Local Knowledge
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
+              <h4 className="font-semibold text-sage-green mb-3">Seasonal Timing</h4>
+              <ul className="space-y-2 text-sm text-muted-navy">
+                {goaInsiderHacks.localKnowledge.seasonal.map((tip, index) => (
+                  <li key={index}>• {tip}</li>
+                ))}
               </ul>
             </div>
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h4 className="font-semibold text-travel-blue mb-2">Local Language</h4>
-              <ul className="space-y-1 text-sm text-muted-navy">
-                <li>• "Kitna paisa?" = How much money? (for price negotiation)</li>
-                <li>• "Kam karo" = Reduce the price (essential for bargaining)</li>
-                <li>• "Meter se chalo" = Go by meter (for auto-rickshaws)</li>
-                <li>• "Paas hai" = It's nearby (when asking for directions)</li>
-                <li>• Learning 10 basic Hindi phrases saves 20-30% on everything</li>
+            
+            <div className="bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20">
+              <h4 className="font-semibold text-travel-blue mb-3">Cultural Insights</h4>
+              <ul className="space-y-2 text-sm text-muted-navy">
+                {goaInsiderHacks.localKnowledge.cultural.map((tip, index) => (
+                  <li key={index}>• {tip}</li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="bg-vintage-gold/5 rounded-lg p-4 border border-vintage-gold/20">
+              <h4 className="font-semibold text-vintage-gold mb-3">Practical Tips</h4>
+              <ul className="space-y-2 text-sm text-muted-navy">
+                {goaInsiderHacks.localKnowledge.practical.map((tip, index) => (
+                  <li key={index}>• {tip}</li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
-
-        {/* Time-Based Hacks */}
-        <div>
           <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
             <Clock className="mr-2 h-5 w-5" />
             ⏰ Perfect Timing Secrets

@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Train, Plane, Car, Clock, DollarSign, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Train, Plane, Car, Clock, DollarSign, MapPin, ExternalLink, Users, Star } from "lucide-react";
 import type { CityWithDetails } from "@shared/schema";
 
 interface CityConnectionsProps {
@@ -8,32 +9,138 @@ interface CityConnectionsProps {
 }
 
 export default function CityConnections({ city }: CityConnectionsProps) {
-  // Mock comprehensive transportation data
+  // Comprehensive Goa transportation connections with booking links
   const trainConnections = [
-    { city: "Mumbai", duration: "12h 30m", price: "₹450-2200", frequency: "10+ daily", type: "Rajdhani/Express" },
-    { city: "Delhi", duration: "15h 45m", price: "₹520-2800", frequency: "8+ daily", type: "Rajdhani/Duronto" },
-    { city: "Bangalore", duration: "11h 20m", price: "₹380-1800", frequency: "6+ daily", type: "Shatabdi/Express" },
-    { city: "Chennai", duration: "14h 15m", price: "₹420-2200", frequency: "5+ daily", type: "Express/Superfast" },
-    { city: "Kolkata", duration: "18h 30m", price: "₹580-3200", frequency: "4+ daily", type: "Rajdhani/Express" },
-    { city: "Pune", duration: "8h 45m", price: "₹320-1400", frequency: "12+ daily", type: "Express/Intercity" }
+    { 
+      city: "Mumbai", 
+      duration: "12h", 
+      price: "₹450-2,200", 
+      frequency: "Daily", 
+      type: "Konkan Railway Express",
+      bookingUrl: "https://www.irctc.co.in/nget/train-search"
+    },
+    { 
+      city: "Delhi", 
+      duration: "26h", 
+      price: "₹800-3,500", 
+      frequency: "Daily", 
+      type: "Rajdhani Express",
+      bookingUrl: "https://www.irctc.co.in/nget/train-search"
+    },
+    { 
+      city: "Bangalore", 
+      duration: "15h", 
+      price: "₹600-2,800", 
+      frequency: "Daily", 
+      type: "Goa Express",
+      bookingUrl: "https://www.irctc.co.in/nget/train-search"
+    },
+    { 
+      city: "Chennai", 
+      duration: "14h", 
+      price: "₹700-3,000", 
+      frequency: "3x/week", 
+      type: "Express",
+      bookingUrl: "https://www.irctc.co.in/nget/train-search"
+    },
+    { 
+      city: "Pune", 
+      duration: "12h", 
+      price: "₹400-1,800", 
+      frequency: "Daily", 
+      type: "Mandovi Express",
+      bookingUrl: "https://www.irctc.co.in/nget/train-search"
+    }
   ];
 
   const flightConnections = [
-    { city: "Mumbai", duration: "1h 30m", price: "₹3500-12000", frequency: "20+ daily", airlines: "IndiGo, Air India, Vistara" },
-    { city: "Delhi", duration: "2h 15m", price: "₹4200-15000", frequency: "25+ daily", airlines: "IndiGo, SpiceJet, Vistara" },
-    { city: "Bangalore", duration: "1h 45m", price: "₹3800-13500", frequency: "18+ daily", airlines: "IndiGo, Air India, Akasa" },
-    { city: "Chennai", duration: "2h 00m", price: "₹4000-14000", frequency: "15+ daily", airlines: "IndiGo, Air India, Vistara" },
-    { city: "Kolkata", duration: "2h 30m", price: "₹4500-16000", frequency: "12+ daily", airlines: "IndiGo, SpiceJet, Air India" },
-    { city: "Hyderabad", duration: "1h 40m", price: "₹3600-12500", frequency: "14+ daily", airlines: "IndiGo, Air India, Vistara" }
+    { 
+      city: "Mumbai", 
+      duration: "1h 30m", 
+      price: "₹3,500-12,000", 
+      frequency: "20+ daily", 
+      airlines: "IndiGo, Air India, Vistara",
+      bookingUrl: "https://www.makemytrip.com/flight/search?itinerary=GOI-BOM"
+    },
+    { 
+      city: "Delhi", 
+      duration: "2h 15m", 
+      price: "₹4,200-15,000", 
+      frequency: "25+ daily", 
+      airlines: "IndiGo, SpiceJet, Vistara",
+      bookingUrl: "https://www.makemytrip.com/flight/search?itinerary=GOI-DEL"
+    },
+    { 
+      city: "Bangalore", 
+      duration: "1h 45m", 
+      price: "₹3,800-13,500", 
+      frequency: "18+ daily", 
+      airlines: "IndiGo, Air India, Akasa",
+      bookingUrl: "https://www.makemytrip.com/flight/search?itinerary=GOI-BLR"
+    },
+    { 
+      city: "Chennai", 
+      duration: "2h", 
+      price: "₹4,000-14,000", 
+      frequency: "15+ daily", 
+      airlines: "IndiGo, Air India, Vistara",
+      bookingUrl: "https://www.makemytrip.com/flight/search?itinerary=GOI-MAA"
+    },
+    { 
+      city: "Kolkata", 
+      duration: "2h 30m", 
+      price: "₹4,500-16,000", 
+      frequency: "12+ daily", 
+      airlines: "IndiGo, SpiceJet, Air India",
+      bookingUrl: "https://www.makemytrip.com/flight/search?itinerary=GOI-CCU"
+    },
+    { 
+      city: "Hyderabad", 
+      duration: "1h 40m", 
+      price: "₹3,600-12,500", 
+      frequency: "14+ daily", 
+      airlines: "IndiGo, Air India, Vistara",
+      bookingUrl: "https://www.makemytrip.com/flight/search?itinerary=GOI-HYD"
+    }
   ];
 
   const busConnections = [
-    { city: "Mumbai", duration: "14h 30m", price: "₹800-2500", frequency: "15+ daily", type: "Volvo AC, Sleeper" },
-    { city: "Pune", duration: "10h 15m", price: "₹600-1800", frequency: "20+ daily", type: "AC Semi-Sleeper" },
-    { city: "Bangalore", duration: "13h 45m", price: "₹900-2800", frequency: "12+ daily", type: "Volvo Multi-Axle" },
-    { city: "Hyderabad", duration: "11h 20m", price: "₹700-2200", frequency: "10+ daily", type: "AC Sleeper" },
-    { city: "Ahmedabad", duration: "7h 30m", price: "₹500-1500", frequency: "8+ daily", type: "AC Semi-Sleeper" },
-    { city: "Indore", duration: "6h 45m", price: "₹400-1200", frequency: "6+ daily", type: "AC/Non-AC" }
+    { 
+      city: "Mumbai", 
+      duration: "14h 30m", 
+      price: "₹800-2,500", 
+      frequency: "15+ daily", 
+      type: "Volvo AC Sleeper",
+      operator: "Paulo Travels, Neeta",
+      bookingUrl: "https://www.redbus.in/bus-tickets/goa-to-mumbai"
+    },
+    { 
+      city: "Pune", 
+      duration: "10h 15m", 
+      price: "₹600-1,800", 
+      frequency: "20+ daily", 
+      type: "AC Semi-Sleeper",
+      operator: "Paulo Travels, Orange",
+      bookingUrl: "https://www.redbus.in/bus-tickets/goa-to-pune"
+    },
+    { 
+      city: "Bangalore", 
+      duration: "13h 45m", 
+      price: "₹900-2,800", 
+      frequency: "12+ daily", 
+      type: "Volvo Multi-Axle",
+      operator: "VRL, SRS Travels",
+      bookingUrl: "https://www.redbus.in/bus-tickets/goa-to-bangalore"
+    },
+    { 
+      city: "Hyderabad", 
+      duration: "11h 20m", 
+      price: "₹700-2,200", 
+      frequency: "10+ daily", 
+      type: "AC Sleeper",
+      operator: "Orange Travels, VRL",
+      bookingUrl: "https://www.redbus.in/bus-tickets/goa-to-hyderabad"
+    }
   ];
 
   const internationalFlights = [
@@ -96,10 +203,31 @@ export default function CityConnections({ city }: CityConnectionsProps) {
                     <Clock className="h-3 w-3 mr-1" />
                     {route.duration}
                   </div>
-                  <Badge className="bg-sage-green/10 text-sage-green">Book on IRCTC</Badge>
+                  <a href={route.bookingUrl} target="_blank" rel="noopener noreferrer">
+                    <Badge className="bg-sage-green/10 text-sage-green hover:bg-sage-green/20 cursor-pointer">
+                      Book Now
+                    </Badge>
+                  </a>
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-4 grid md:grid-cols-3 gap-4">
+            <a href="https://www.irctc.co.in/nget/train-search" target="_blank" rel="noopener noreferrer" 
+               className="flex items-center justify-center p-3 bg-travel-blue/5 rounded-lg border border-travel-blue/20 text-travel-blue hover:bg-travel-blue/10 transition-colors">
+              <ExternalLink className="h-4 w-4 mr-2" />
+              IRCTC Official
+            </a>
+            <a href="https://www.makemytrip.com/railways/" target="_blank" rel="noopener noreferrer" 
+               className="flex items-center justify-center p-3 bg-vintage-gold/5 rounded-lg border border-vintage-gold/20 text-vintage-gold hover:bg-vintage-gold/10 transition-colors">
+              <ExternalLink className="h-4 w-4 mr-2" />
+              MakeMyTrip
+            </a>
+            <a href="https://www.ixigo.com/trains" target="_blank" rel="noopener noreferrer" 
+               className="flex items-center justify-center p-3 bg-sage-green/5 rounded-lg border border-sage-green/20 text-sage-green hover:bg-sage-green/10 transition-colors">
+              <ExternalLink className="h-4 w-4 mr-2" />
+              Ixigo Trains
+            </a>
           </div>
           <div className="mt-4 bg-vintage-gold/5 rounded-lg p-3 border-l-4 border-vintage-gold">
             <p className="text-sm text-muted-navy">
