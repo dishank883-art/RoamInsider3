@@ -286,6 +286,158 @@ export class MemStorage implements IStorage {
       updatedAt: new Date(),
     });
 
+    // Bangalore Internet Connectivity
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: bangaloreId,
+      avgSpeedMbps: 65,
+      coworkingSpaces: [
+        {
+          name: "CoWrks RMZ Ecoworld",
+          address: "Outer Ring Road, Bellandur",
+          pricing: "₹12,000/month",
+          speedMbps: 150,
+          amenities: ["24/7 Access", "Meeting Rooms", "Events", "Cafe", "Gym"]
+        },
+        {
+          name: "BHIVE Workspace HSR",
+          address: "HSR Layout Sector 1",
+          pricing: "₹8,500/month",
+          speedMbps: 100,
+          amenities: ["Community Events", "Mentorship", "Networking", "Games Room"]
+        },
+        {
+          name: "IndiQube Orion",
+          address: "Infantry Road",
+          pricing: "₹10,000/month",
+          speedMbps: 120,
+          amenities: ["Premium Amenities", "Phone Booths", "Rooftop"]
+        }
+      ],
+      simProviders: [
+        {
+          provider: "Jio",
+          plans: [
+            { data: "2GB/day", validity: "28 days", price: 399 },
+            { data: "3GB/day", validity: "28 days", price: 599 }
+          ]
+        },
+        {
+          provider: "Airtel",
+          plans: [
+            { data: "2GB/day", validity: "28 days", price: 449 },
+            { data: "3GB/day", validity: "28 days", price: 649 }
+          ]
+        },
+        {
+          provider: "Vodafone",
+          plans: [
+            { data: "1.5GB/day", validity: "28 days", price: 379 },
+            { data: "2GB/day", validity: "28 days", price: 479 }
+          ]
+        }
+      ],
+      wifiAvailability: "Excellent - Free WiFi in cafes, malls, Metro stations, and most coworking spaces",
+      updatedAt: new Date(),
+    });
+
+    // Bangalore Transportation
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: bangaloreId,
+      localTransport: {
+        metro: true,
+        bus: true,
+        autoRickshaw: true,
+        taxi: true,
+        bike: true
+      },
+      walkabilityScore: 6,
+      rideHailing: ["Uber", "Ola", "Rapido", "Bounce"],
+      airports: [
+        { name: "Kempegowda International Airport", code: "BLR", distance: "40-60km" }
+      ],
+      trainStations: [
+        { name: "Bangalore City Railway Station", type: "Major Junction" },
+        { name: "Yesvantpur Junction", type: "Major Junction" },
+        { name: "Bangalore Cantonment", type: "Important Station" }
+      ],
+      intercityConnectivity: "Excellent connectivity to Chennai, Hyderabad, Mumbai, and other South Indian cities",
+      updatedAt: new Date(),
+    });
+
+    // Bangalore Climate
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: bangaloreId,
+      avgTempCelsius: 24,
+      avgHumidity: 65,
+      rainyMonths: ["June", "July", "August", "September", "October"],
+      bestTimeToVisit: "October to February",
+      climateType: "Tropical savanna climate",
+      currentWeather: {
+        temperature: 23,
+        humidity: 68,
+        description: "Pleasant weather",
+        icon: "partly-cloudy"
+      },
+      updatedAt: new Date(),
+    });
+
+    // Bangalore Safety
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: bangaloreId,
+      safetyScore: "8.0",
+      womenSafetyScore: "7.5",
+      crimeRate: "Low to Moderate - generally safe with good police presence",
+      hospitals: [
+        { name: "Manipal Hospital", address: "HAL Old Airport Road", type: "Multi-specialty", emergency: true },
+        { name: "Apollo Hospital", address: "Bannerghatta Road", type: "Multi-specialty", emergency: true },
+        { name: "Narayana Health City", address: "Bommasandra", type: "Multi-specialty", emergency: true },
+        { name: "Fortis Hospital", address: "Bannerghatta Road", type: "Multi-specialty", emergency: true }
+      ],
+      emergencyNumbers: {
+        police: "100",
+        medical: "108",
+        fire: "101"
+      },
+      pollutionIndex: 156,
+      updatedAt: new Date(),
+    });
+
+    // Bangalore Lifestyle
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: bangaloreId,
+      foodScene: {
+        specialties: ["Masala Dosa", "Bisi Bele Bath", "Ragi Mudde", "Filter Coffee"],
+        vegFriendly: true,
+        streetFood: true,
+        internationalCuisine: true
+      },
+      nightlife: {
+        bars: true,
+        clubs: true,
+        lateNightEating: true,
+        alcoholLaws: "Available; bars open till 1 AM, restaurants till 11:30 PM"
+      },
+      fitness: {
+        gyms: 1200,
+        parks: 50,
+        yogaStudios: 300,
+        outdoorActivities: ["Cycling", "Trekking", "Rock climbing", "Badminton", "Cricket"]
+      },
+      culture: {
+        languages: ["Kannada", "English", "Tamil", "Telugu", "Hindi"],
+        festivals: ["Dasara", "Karaga", "Ugadi", "Diwali", "Christmas"],
+        customs: ["Respect for local language", "Traditional dress during festivals", "Tech-friendly culture"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - strict penalties, avoid completely",
+      updatedAt: new Date(),
+    });
+
     // Goa
     const goaId = randomUUID();
     this.cities.set(goaId, {
@@ -323,6 +475,171 @@ export class MemStorage implements IStorage {
       isPopular: true,
       tags: ["Education", "Affordable", "IT Hub"],
       createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Pune Cost of Living
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: puneId,
+      monthlyBudgetINR: 32000,
+      monthlyBudgetUSD: 384,
+      studioRentINR: 15000,
+      oneBhkRentINR: 22000,
+      twoBhkRentINR: 35000,
+      utilitiesINR: 2200,
+      groceriesINR: 6000,
+      eatingOutINR: 4500,
+      coworkingINR: 6000,
+      transportINR: 1800,
+      simDataINR: 400,
+      gymINR: 1500,
+      coffeeINR: 100,
+      entertainmentINR: 3500,
+      updatedAt: new Date(),
+    });
+
+    // Pune Internet Connectivity
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: puneId,
+      avgSpeedMbps: 55,
+      coworkingSpaces: [
+        {
+          name: "91springboard Pune",
+          address: "Koregaon Park",
+          pricing: "₹7,000/month",
+          speedMbps: 100,
+          amenities: ["24/7 Access", "Meeting Rooms", "Events", "Cafe"]
+        },
+        {
+          name: "BHIVE Workspace Kalyani Nagar",
+          address: "Kalyani Nagar",
+          pricing: "₹6,500/month",
+          speedMbps: 80,
+          amenities: ["Community Events", "Mentorship", "Networking"]
+        },
+        {
+          name: "WeWork Baner",
+          address: "Baner Road",
+          pricing: "₹8,000/month",
+          speedMbps: 120,
+          amenities: ["Premium Amenities", "Phone Booths", "Gaming Zone"]
+        }
+      ],
+      simProviders: [
+        {
+          provider: "Jio",
+          plans: [
+            { data: "2GB/day", validity: "28 days", price: 399 },
+            { data: "3GB/day", validity: "28 days", price: 599 }
+          ]
+        },
+        {
+          provider: "Airtel",
+          plans: [
+            { data: "2GB/day", validity: "28 days", price: 449 },
+            { data: "3GB/day", validity: "28 days", price: 649 }
+          ]
+        }
+      ],
+      wifiAvailability: "Good - Available in cafes, malls, coworking spaces, and many restaurants",
+      updatedAt: new Date(),
+    });
+
+    // Pune Transportation
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: puneId,
+      localTransport: {
+        metro: true,
+        bus: true,
+        autoRickshaw: true,
+        taxi: true,
+        bike: true
+      },
+      walkabilityScore: 7,
+      rideHailing: ["Uber", "Ola", "Rapido"],
+      airports: [
+        { name: "Pune Airport", code: "PNQ", distance: "10-15km" }
+      ],
+      trainStations: [
+        { name: "Pune Junction", type: "Major Junction" },
+        { name: "Shivajinagar", type: "Important Station" }
+      ],
+      intercityConnectivity: "Excellent connectivity to Mumbai, Bangalore, and other major cities",
+      updatedAt: new Date(),
+    });
+
+    // Pune Climate
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: puneId,
+      avgTempCelsius: 26,
+      avgHumidity: 58,
+      rainyMonths: ["June", "July", "August", "September"],
+      bestTimeToVisit: "October to March",
+      climateType: "Tropical wet and dry climate",
+      currentWeather: {
+        temperature: 25,
+        humidity: 62,
+        description: "Pleasant weather",
+        icon: "sunny"
+      },
+      updatedAt: new Date(),
+    });
+
+    // Pune Safety
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: puneId,
+      safetyScore: "8.3",
+      womenSafetyScore: "8.0",
+      crimeRate: "Low - very safe city with good law and order",
+      hospitals: [
+        { name: "Ruby Hall Clinic", address: "Pune Cantonment", type: "Multi-specialty", emergency: true },
+        { name: "Jehangir Hospital", address: "Sassoon Road", type: "Multi-specialty", emergency: true },
+        { name: "KEM Hospital", address: "Rasta Peth", type: "Government Hospital", emergency: true },
+        { name: "Deenanath Mangeshkar Hospital", address: "Erandwane", type: "Multi-specialty", emergency: true }
+      ],
+      emergencyNumbers: {
+        police: "100",
+        medical: "108",
+        fire: "101"
+      },
+      pollutionIndex: 134,
+      updatedAt: new Date(),
+    });
+
+    // Pune Lifestyle
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: puneId,
+      foodScene: {
+        specialties: ["Misal Pav", "Puran Poli", "Mastani", "Bhel Puri"],
+        vegFriendly: true,
+        streetFood: true,
+        internationalCuisine: true
+      },
+      nightlife: {
+        bars: true,
+        clubs: true,
+        lateNightEating: true,
+        alcoholLaws: "Available; bars close at 1:30 AM, restaurants serve till midnight"
+      },
+      fitness: {
+        gyms: 800,
+        parks: 40,
+        yogaStudios: 200,
+        outdoorActivities: ["Trekking", "Cycling", "Badminton", "Cricket", "River rafting"]
+      },
+      culture: {
+        languages: ["Marathi", "English", "Hindi"],
+        festivals: ["Ganesh Chaturthi", "Navratri", "Diwali", "Gudi Padwa"],
+        customs: ["Respect for Marathi culture", "Traditional dress during festivals", "Student-friendly environment"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - strict penalties, avoid completely",
       updatedAt: new Date(),
     });
 
@@ -765,6 +1082,8 @@ export class MemStorage implements IStorage {
       address: "Kumarakom, 16km from Alleppey",
       timings: "6:00 AM - 6:00 PM",
       isHiddenGem: true,
+      rating: "4.2",
+      image: "https://images.unsplash.com/photo-1571985969114-7c47498d6b43",
       createdAt: new Date(),
     });
 
@@ -780,6 +1099,8 @@ export class MemStorage implements IStorage {
       address: "Varkala Cliff, North Cliff Road",
       timings: "24 hours",
       isHiddenGem: false,
+      rating: "4.5",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
       createdAt: new Date(),
     });
 
@@ -794,6 +1115,8 @@ export class MemStorage implements IStorage {
       address: "Papanasam Beach, Varkala",
       timings: "24 hours",
       isHiddenGem: false,
+      rating: "4.4",
+      image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f",
       createdAt: new Date(),
     });
 
@@ -808,6 +1131,8 @@ export class MemStorage implements IStorage {
       address: "Sivagiri Hills, Varkala",
       timings: "5:00 AM - 12:00 PM, 4:00 PM - 8:00 PM",
       isHiddenGem: true,
+      rating: "4.6",
+      image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f",
       createdAt: new Date(),
     });
 
@@ -823,6 +1148,8 @@ export class MemStorage implements IStorage {
       address: "Parvati Valley, Kasol",
       timings: "24 hours",
       isHiddenGem: false,
+      rating: "4.7",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
       createdAt: new Date(),
     });
 
@@ -837,6 +1164,8 @@ export class MemStorage implements IStorage {
       address: "Malana Village, 22km from Kasol",
       timings: "Day visits only",
       isHiddenGem: true,
+      rating: "4.3",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
       createdAt: new Date(),
     });
 
@@ -851,10 +1180,234 @@ export class MemStorage implements IStorage {
       address: "Chalal Village, 30-min walk from Kasol",
       timings: "24 hours",
       isHiddenGem: true,
+      rating: "4.5",
+      image: "https://images.unsplash.com/photo-1571985969114-7c47498d6b43",
+      createdAt: new Date(),
+    });
+
+    // Bangalore Attractions
+    const bangaloreAttr1 = randomUUID();
+    this.attractions.set(bangaloreAttr1, {
+      id: bangaloreAttr1,
+      cityId: bangaloreId,
+      name: "Lalbagh Botanical Garden",
+      description: "240-acre botanical garden with diverse flora, glass house, and beautiful lake for morning walks.",
+      category: "Nature",
+      priceRange: "₹10-30",
+      address: "Mavalli, Bangalore",
+      timings: "6:00 AM - 7:00 PM",
+      isHiddenGem: false,
+      rating: "4.5",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      createdAt: new Date(),
+    });
+
+    const bangaloreAttr2 = randomUUID();
+    this.attractions.set(bangaloreAttr2, {
+      id: bangaloreAttr2,
+      cityId: bangaloreId,
+      name: "Bangalore Palace",
+      description: "Magnificent Tudor-style palace with ornate interiors, vintage furniture, and royal architecture.",
+      category: "Historical",
+      priceRange: "₹230-460",
+      address: "Vasanth Nagar, Bangalore",
+      timings: "10:00 AM - 5:30 PM",
+      isHiddenGem: false,
+      rating: "4.3",
+      image: "https://images.unsplash.com/photo-1477587458883-47145ed94245",
+      createdAt: new Date(),
+    });
+
+    const bangaloreAttr3 = randomUUID();
+    this.attractions.set(bangaloreAttr3, {
+      id: bangaloreAttr3,
+      cityId: bangaloreId,
+      name: "Nandi Hills",
+      description: "Scenic hill station 60km from city, perfect for sunrise, trekking, and weekend getaways.",
+      category: "Nature",
+      priceRange: "₹5 (parking ₹30)",
+      address: "Nandi Hills, Chikkaballapur District",
+      timings: "6:00 AM - 10:00 PM",
+      isHiddenGem: true,
+      rating: "4.4",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      createdAt: new Date(),
+    });
+
+    const bangaloreAttr4 = randomUUID();
+    this.attractions.set(bangaloreAttr4, {
+      id: bangaloreAttr4,
+      cityId: bangaloreId,
+      name: "UB City Mall",
+      description: "Luxury shopping destination with high-end brands, fine dining, and premium experiences.",
+      category: "Shopping",
+      priceRange: "Free entry (shopping varies)",
+      address: "UB City, Vittal Mallya Road",
+      timings: "10:00 AM - 10:00 PM",
+      isHiddenGem: false,
+      rating: "4.2",
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8",
+      createdAt: new Date(),
+    });
+
+    // Pune Attractions
+    const puneAttr1 = randomUUID();
+    this.attractions.set(puneAttr1, {
+      id: puneAttr1,
+      cityId: puneId,
+      name: "Shaniwar Wada",
+      description: "Historic 18th-century palace complex with rich Maratha heritage and sound-light shows.",
+      category: "Historical",
+      priceRange: "₹5-25",
+      address: "Shaniwar Peth, Pune",
+      timings: "8:00 AM - 6:30 PM",
+      isHiddenGem: false,
+      rating: "4.1",
+      image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220",
+      createdAt: new Date(),
+    });
+
+    const puneAttr2 = randomUUID();
+    this.attractions.set(puneAttr2, {
+      id: puneAttr2,
+      cityId: puneId,
+      name: "Sinhagad Fort",
+      description: "Historic hill fort with panoramic views, trekking trails, and famous for Tanaji's battle.",
+      category: "Historical",
+      priceRange: "Free (transport ₹30-50)",
+      address: "Sinhagad, 35km from Pune",
+      timings: "9:00 AM - 6:00 PM",
+      isHiddenGem: false,
+      rating: "4.3",
+      image: "https://images.unsplash.com/photo-1477587458883-47145ed94245",
+      createdAt: new Date(),
+    });
+
+    const puneAttr3 = randomUUID();
+    this.attractions.set(puneAttr3, {
+      id: puneAttr3,
+      cityId: puneId,
+      name: "Koregaon Park",
+      description: "Upscale neighborhood with trendy cafes, boutiques, Osho Ashram, and vibrant nightlife.",
+      category: "Entertainment",
+      priceRange: "Free (spending varies)",
+      address: "Koregaon Park, Pune",
+      timings: "24 hours",
+      isHiddenGem: false,
+      rating: "4.4",
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8",
+      createdAt: new Date(),
+    });
+
+    const puneAttr4 = randomUUID();
+    this.attractions.set(puneAttr4, {
+      id: puneAttr4,
+      cityId: puneId,
+      name: "Mulshi Dam",
+      description: "Scenic reservoir surrounded by Western Ghats, perfect for picnics and monsoon visits.",
+      category: "Nature",
+      priceRange: "Free",
+      address: "Mulshi, 50km from Pune",
+      timings: "6:00 AM - 6:00 PM",
+      isHiddenGem: true,
+      rating: "4.5",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
       createdAt: new Date(),
     });
 
     // Add city-specific events
+    // Bangalore Events
+    const bangaloreEvent1 = randomUUID();
+    this.events.set(bangaloreEvent1, {
+      id: bangaloreEvent1,
+      cityId: bangaloreId,
+      title: "Bangalore Tech Summit",
+      description: "India's largest technology conference with global tech leaders, startups, and innovation showcases.",
+      date: new Date("2024-11-29"),
+      venue: "Palace Grounds, Bangalore",
+      category: "Technology",
+      isPaid: true,
+      price: "₹2,000-15,000",
+      url: "https://bengalurutechsummit.com/",
+      createdAt: new Date(),
+    });
+
+    const bangaloreEvent2 = randomUUID();
+    this.events.set(bangaloreEvent2, {
+      id: bangaloreEvent2,
+      cityId: bangaloreId,
+      title: "Lalbagh Flower Show",
+      description: "Biannual flower exhibition during Republic Day and Independence Day with stunning displays.",
+      date: new Date("2025-01-26"),
+      venue: "Lalbagh Botanical Garden",
+      category: "Culture",
+      isPaid: true,
+      price: "₹20-50",
+      url: null,
+      createdAt: new Date(),
+    });
+
+    const bangaloreEvent3 = randomUUID();
+    this.events.set(bangaloreEvent3, {
+      id: bangaloreEvent3,
+      cityId: bangaloreId,
+      title: "Bangalore Literature Festival",
+      description: "Literary festival featuring renowned authors, poets, panel discussions, and book launches.",
+      date: new Date("2024-12-07"),
+      venue: "Various venues across Bangalore",
+      category: "Literature",
+      isPaid: false,
+      price: null,
+      url: "https://bangaloreliteraturefestival.org/",
+      createdAt: new Date(),
+    });
+
+    // Pune Events
+    const puneEvent1 = randomUUID();
+    this.events.set(puneEvent1, {
+      id: puneEvent1,
+      cityId: puneId,
+      title: "Pune International Film Festival",
+      description: "Premier film festival showcasing international and Indian cinema with industry workshops.",
+      date: new Date("2025-01-09"),
+      venue: "Multiple venues in Pune",
+      category: "Film",
+      isPaid: true,
+      price: "₹100-800",
+      url: "https://piff.co.in/",
+      createdAt: new Date(),
+    });
+
+    const puneEvent2 = randomUUID();
+    this.events.set(puneEvent2, {
+      id: puneEvent2,
+      cityId: puneId,
+      title: "Sawai Gandharva Bhimsen Festival",
+      description: "Classical music festival honoring legendary vocalist Pandit Bhimsen Joshi.",
+      date: new Date("2024-12-13"),
+      venue: "Shanmukhananda Hall, Pune",
+      category: "Music",
+      isPaid: true,
+      price: "₹200-2,000",
+      url: "https://sawai-gandharva.com/",
+      createdAt: new Date(),
+    });
+
+    const puneEvent3 = randomUUID();
+    this.events.set(puneEvent3, {
+      id: puneEvent3,
+      cityId: puneId,
+      title: "Ganesh Chaturthi Celebration",
+      description: "Grand celebration of Lord Ganesha with elaborate pandals, processions, and cultural programs.",
+      date: new Date("2024-09-07"),
+      venue: "Throughout Pune City",
+      category: "Religious",
+      isPaid: false,
+      price: null,
+      url: null,
+      createdAt: new Date(),
+    });
+
     // New Delhi Events
     const delhiEvent1 = randomUUID();
     this.events.set(delhiEvent1, {
@@ -1386,6 +1939,164 @@ export class MemStorage implements IStorage {
         artScene: true
       },
       cannabisLaws: "Illegal but traditionally grown - very relaxed enforcement",
+      updatedAt: new Date(),
+    });
+
+    // Add 4 New Cities: Gangtok, McLeodganj, Shillong, Udaipur
+    
+    // Gangtok
+    const gangtokId = randomUUID();
+    this.cities.set(gangtokId, {
+      id: gangtokId,
+      name: "Gangtok",
+      state: "Sikkim",
+      slug: "gangtok",
+      description: "Beautiful Himalayan capital with stunning mountain views, Buddhist culture, and adventure sports.",
+      heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      latitude: "27.3389",
+      longitude: "88.6065",
+      population: 200000,
+      rating: "4.6",
+      isPopular: false,
+      tags: ["Mountains", "Buddhism", "Adventure"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: gangtokId,
+      monthlyBudgetINR: 28000,
+      monthlyBudgetUSD: 336,
+      studioRentINR: 12000,
+      oneBhkRentINR: 18000,
+      twoBhkRentINR: 28000,
+      utilitiesINR: 2000,
+      groceriesINR: 5500,
+      eatingOutINR: 3500,
+      coworkingINR: 4500,
+      transportINR: 1200,
+      simDataINR: 400,
+      gymINR: 1200,
+      coffeeINR: 80,
+      entertainmentINR: 2500,
+      updatedAt: new Date(),
+    });
+
+    // McLeodganj  
+    const mcleodganjId = randomUUID();
+    this.cities.set(mcleodganjId, {
+      id: mcleodganjId,
+      name: "McLeodganj",
+      state: "Himachal Pradesh", 
+      slug: "mcleodganj",
+      description: "Little Lhasa with Dalai Lama's residence, Tibetan culture, trekking, and spiritual retreats.",
+      heroImage: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+      latitude: "32.2396",
+      longitude: "76.3200",
+      population: 9000,
+      rating: "4.7",
+      isPopular: false,
+      tags: ["Spirituality", "Tibetan Culture", "Trekking"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: mcleodganjId,
+      monthlyBudgetINR: 25000,
+      monthlyBudgetUSD: 300,
+      studioRentINR: 10000,
+      oneBhkRentINR: 15000,
+      twoBhkRentINR: 22000,
+      utilitiesINR: 1800,
+      groceriesINR: 5000,
+      eatingOutINR: 3000,
+      coworkingINR: 4000,
+      transportINR: 1000,
+      simDataINR: 400,
+      gymINR: 1000,
+      coffeeINR: 70,
+      entertainmentINR: 2000,
+      updatedAt: new Date(),
+    });
+
+    // Shillong
+    const shillongId = randomUUID();
+    this.cities.set(shillongId, {
+      id: shillongId,
+      name: "Shillong",
+      state: "Meghalaya",
+      slug: "shillong", 
+      description: "Scotland of the East with rolling hills, waterfalls, music culture, and cool climate year-round.",
+      heroImage: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f",
+      latitude: "25.5788",
+      longitude: "91.8933",
+      population: 354325,
+      rating: "4.5",
+      isPopular: false,
+      tags: ["Hills", "Music", "Waterfalls"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: shillongId,
+      monthlyBudgetINR: 30000,
+      monthlyBudgetUSD: 360,
+      studioRentINR: 13000,
+      oneBhkRentINR: 20000,
+      twoBhkRentINR: 30000,
+      utilitiesINR: 2200,
+      groceriesINR: 6000,
+      eatingOutINR: 4000,
+      coworkingINR: 5000,
+      transportINR: 1500,
+      simDataINR: 400,
+      gymINR: 1300,
+      coffeeINR: 90,
+      entertainmentINR: 3000,
+      updatedAt: new Date(),
+    });
+
+    // Udaipur
+    const udaipurId = randomUUID();
+    this.cities.set(udaipurId, {
+      id: udaipurId,
+      name: "Udaipur",
+      state: "Rajasthan",
+      slug: "udaipur",
+      description: "City of Lakes with royal palaces, stunning architecture, romantic boat rides, and heritage hotels.",
+      heroImage: "https://images.unsplash.com/photo-1477587458883-47145ed94245", 
+      latitude: "24.5854",
+      longitude: "73.7125",
+      population: 691000,
+      rating: "4.8",
+      isPopular: true,
+      tags: ["Royal", "Lakes", "Heritage"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: udaipurId,
+      monthlyBudgetINR: 33000,
+      monthlyBudgetUSD: 396,
+      studioRentINR: 14000,
+      oneBhkRentINR: 22000,
+      twoBhkRentINR: 35000,
+      utilitiesINR: 2300,
+      groceriesINR: 6500,
+      eatingOutINR: 4500,
+      coworkingINR: 5500,
+      transportINR: 1800,
+      simDataINR: 400,
+      gymINR: 1500,
+      coffeeINR: 100,
+      entertainmentINR: 3500,
       updatedAt: new Date(),
     });
   }
