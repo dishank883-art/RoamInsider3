@@ -305,24 +305,7 @@ export class MemStorage implements IStorage {
       updatedAt: new Date(),
     });
 
-    // Delhi
-    const delhiId = randomUUID();
-    this.cities.set(delhiId, {
-      id: delhiId,
-      name: "Delhi",
-      state: "Delhi",
-      slug: "delhi",
-      description: "India's capital with rich history, amazing food scene, and excellent connectivity to everywhere.",
-      heroImage: "https://images.unsplash.com/photo-1587474260584-136574528ed5",
-      latitude: "28.7041",
-      longitude: "77.1025",
-      population: 29399141,
-      rating: "4.6",
-      isPopular: true,
-      tags: ["History", "Food Capital", "Transport Hub"],
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    });
+
 
     // Pune
     const puneId = randomUUID();
@@ -701,6 +684,8 @@ export class MemStorage implements IStorage {
       address: "Netaji Subhash Marg, Lal Qila, Chandni Chowk",
       timings: "9:30 AM - 4:30 PM (Closed Monday)",
       isHiddenGem: false,
+      rating: "4.4",
+      image: "https://images.unsplash.com/photo-1587474260584-136574528ed5",
       createdAt: new Date(),
     });
 
@@ -715,6 +700,8 @@ export class MemStorage implements IStorage {
       address: "Lotus Temple Road, Bahapur, Shambhu Dayal Bagh",
       timings: "9:00 AM - 5:30 PM (Closed Monday)",
       isHiddenGem: false,
+      rating: "4.5",
+      image: "https://images.unsplash.com/photo-1580050334438-3b44b0e7c33c",
       createdAt: new Date(),
     });
 
@@ -729,6 +716,8 @@ export class MemStorage implements IStorage {
       address: "Hauz Khas Village, South Delhi",
       timings: "24 hours (shops 11 AM - 11 PM)",
       isHiddenGem: true,
+      rating: "4.2",
+      image: "https://images.unsplash.com/photo-1582719508461-905c673771fd",
       createdAt: new Date(),
     });
 
@@ -744,6 +733,8 @@ export class MemStorage implements IStorage {
       address: "Alleppey Backwater, Finishing Point",
       timings: "All day cruises available",
       isHiddenGem: false,
+      rating: "4.6",
+      image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944",
       createdAt: new Date(),
     });
 
@@ -758,6 +749,8 @@ export class MemStorage implements IStorage {
       address: "Alleppey Beach Road",
       timings: "24 hours",
       isHiddenGem: false,
+      rating: "4.3",
+      image: "https://images.unsplash.com/photo-1582719508461-905c673771fd",
       createdAt: new Date(),
     });
 
@@ -1471,11 +1464,14 @@ export class MemStorage implements IStorage {
       studioRentINR: insertCost.studioRentINR ?? null,
       oneBhkRentINR: insertCost.oneBhkRentINR ?? null,
       twoBhkRentINR: insertCost.twoBhkRentINR ?? null,
-      foodINR: insertCost.foodINR ?? null,
+      groceriesINR: insertCost.groceriesINR ?? null,
+      eatingOutINR: insertCost.eatingOutINR ?? null,
+      coworkingINR: insertCost.coworkingINR ?? null,
       transportINR: insertCost.transportINR ?? null,
       utilitiesINR: insertCost.utilitiesINR ?? null,
-      internetINR: insertCost.internetINR ?? null,
-      gymMembershipINR: insertCost.gymMembershipINR ?? null,
+      simDataINR: insertCost.simDataINR ?? null,
+      gymINR: insertCost.gymINR ?? null,
+      coffeeINR: insertCost.coffeeINR ?? null,
       entertainmentINR: insertCost.entertainmentINR ?? null,
       updatedAt: new Date(),
     };

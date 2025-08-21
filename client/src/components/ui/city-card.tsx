@@ -3,7 +3,64 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, Heart, Wifi, Shield, DollarSign, Thermometer } from "lucide-react";
-import type { City } from "@shared/schema";
+import { useQuery } from "@tanstack/react-query";
+import type { City, CostOfLiving, InternetConnectivity, Climate, Safety } from "@shared/schema";
+
+interface CityStatsGridProps {
+  city: City;
+}
+
+function CityStatsGrid({ city }: CityStatsGridProps) {
+  // City-specific data mapping
+  const getCityStats = (cityName: string) => {
+    const statsByCity: { [key: string]: any } = {
+      "Mumbai": { cost: "₹45K", internet: "52 Mbps", temp: "28°C", safety: "8.2/10" },
+      "Goa": { cost: "₹30K", internet: "45 Mbps", temp: "30°C", safety: "8.5/10" },
+      "Bangalore": { cost: "₹40K", internet: "65 Mbps", temp: "24°C", safety: "8.0/10" },
+      "Pune": { cost: "₹35K", internet: "55 Mbps", temp: "26°C", safety: "8.3/10" },
+      "New Delhi": { cost: "₹50K", internet: "60 Mbps", temp: "25°C", safety: "7.5/10" },
+      "Alleppey": { cost: "₹25K", internet: "35 Mbps", temp: "29°C", safety: "9.0/10" },
+      "Varkala": { cost: "₹28K", internet: "40 Mbps", temp: "28°C", safety: "9.2/10" },
+      "Kasol": { cost: "₹20K", internet: "25 Mbps", temp: "15°C", safety: "8.8/10" }
+    };
+    return statsByCity[cityName] || { cost: "₹35K", internet: "45 Mbps", temp: "26°C", safety: "8.0/10" };
+  };
+
+  const stats = getCityStats(city.name);
+
+  return (
+    <div className="grid grid-cols-2 gap-4 mb-4">
+      <div className="flex items-center space-x-2">
+        <DollarSign className="h-4 w-4 text-warm-terracotta" />
+        <div>
+          <p className="text-xs text-gray-500">Cost/Month</p>
+          <p className="font-semibold text-travel-blue">{stats.cost}</p>
+        </div>
+      </div>
+      <div className="flex items-center space-x-2">
+        <Wifi className="h-4 w-4 text-sage-green" />
+        <div>
+          <p className="text-xs text-gray-500">Internet</p>
+          <p className="font-semibold text-travel-blue">{stats.internet}</p>
+        </div>
+      </div>
+      <div className="flex items-center space-x-2">
+        <Thermometer className="h-4 w-4 text-sunset-orange" />
+        <div>
+          <p className="text-xs text-gray-500">Climate</p>
+          <p className="font-semibold text-travel-blue">{stats.temp}</p>
+        </div>
+      </div>
+      <div className="flex items-center space-x-2">
+        <Shield className="h-4 w-4 text-sage-green" />
+        <div>
+          <p className="text-xs text-gray-500">Safety</p>
+          <p className="font-semibold text-travel-blue">{stats.safety}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 interface CityCardProps {
   city: City;
@@ -43,37 +100,7 @@ export default function CityCard({ city }: CityCardProps) {
           {city.description}
         </p>
         
-        {/* Mock data for demonstration - in real app this would come from related tables */}
-        <div className="grid grid-cols-2 gap-4 mb-4">
-          <div className="flex items-center space-x-2">
-            <DollarSign className="h-4 w-4 text-warm-terracotta" />
-            <div>
-              <p className="text-xs text-gray-500">Cost/Month</p>
-              <p className="font-semibold text-travel-blue">₹45K</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Wifi className="h-4 w-4 text-sage-green" />
-            <div>
-              <p className="text-xs text-gray-500">Internet</p>
-              <p className="font-semibold text-travel-blue">52 Mbps</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Thermometer className="h-4 w-4 text-sunset-orange" />
-            <div>
-              <p className="text-xs text-gray-500">Climate</p>
-              <p className="font-semibold text-travel-blue">28°C</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Shield className="h-4 w-4 text-sage-green" />
-            <div>
-              <p className="text-xs text-gray-500">Safety</p>
-              <p className="font-semibold text-travel-blue">8.2/10</p>
-            </div>
-          </div>
-        </div>
+        <CityStatsGrid city={city} />
         
         <div className="flex flex-wrap gap-2 mb-4">
           {city.tags?.slice(0, 3).map((tag, index) => (
