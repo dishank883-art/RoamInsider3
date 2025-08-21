@@ -1188,6 +1188,554 @@ export class MemStorage implements IStorage {
       updatedAt: new Date(),
     });
 
+    // Bir Internet Connectivity
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: birId,
+      avgSpeedMbps: 30,
+      coworkingSpaces: [
+        {
+          name: "The Hideout Café & Co-working",
+          address: "Bir Road, near Landing Zone",
+          pricing: "₹2,500/month",
+          speedMbps: 40,
+          amenities: ["Mountain View", "Pilot Community", "Equipment Storage", "Strong WiFi"]
+        },
+        {
+          name: "Zostel Bir Co-work",
+          address: "Bir Village Center", 
+          pricing: "₹2,000/month",
+          speedMbps: 35,
+          amenities: ["Community Events", "Budget-Friendly", "Social Environment", "Power Backup"]
+        }
+      ],
+      simProviders: [
+        {
+          provider: "Jio",
+          plans: [
+            { data: "1.5GB/day", validity: "28 days", price: 349 },
+            { data: "2GB/day", validity: "28 days", price: 399 }
+          ]
+        },
+        {
+          provider: "Airtel",
+          plans: [
+            { data: "1.5GB/day", validity: "28 days", price: 399 },
+            { data: "2GB/day", validity: "28 days", price: 449 }
+          ]
+        }
+      ],
+      wifiAvailability: "Good - Most cafes and hostels have WiFi, reliable in main areas",
+      updatedAt: new Date(),
+    });
+
+    // Dehradun Internet Connectivity
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: dehradunId,
+      avgSpeedMbps: 55,
+      coworkingSpaces: [
+        {
+          name: "91springboard Dehradun",
+          address: "Rajpur Road, IT Park",
+          pricing: "₹4,500/month",
+          speedMbps: 100,
+          amenities: ["Startup Ecosystem", "Mentorship Programs", "Events", "Meeting Rooms"]
+        },
+        {
+          name: "The Workspace Café",
+          address: "Clock Tower, Paltan Bazaar",
+          pricing: "₹3,500/month",
+          speedMbps: 80,
+          amenities: ["Central Location", "Café Culture", "High-Speed WiFi", "Phone Booths"]
+        }
+      ],
+      simProviders: [
+        {
+          provider: "Jio",
+          plans: [
+            { data: "2GB/day", validity: "28 days", price: 399 },
+            { data: "3GB/day", validity: "28 days", price: 599 }
+          ]
+        },
+        {
+          provider: "Airtel",
+          plans: [
+            { data: "2GB/day", validity: "28 days", price: 449 },
+            { data: "3GB/day", validity: "28 days", price: 649 }
+          ]
+        }
+      ],
+      wifiAvailability: "Excellent - IT Park, malls, cafes, and educational institutions have reliable WiFi",
+      updatedAt: new Date(),
+    });
+
+    // Mussoorie Internet Connectivity
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: mussoorieId,
+      avgSpeedMbps: 45,
+      coworkingSpaces: [
+        {
+          name: "The Writer's Den",
+          address: "Mall Road, near Library Point",
+          pricing: "₹4,000/month",
+          speedMbps: 70,
+          amenities: ["Library Access", "Writing Workshops", "Author Events", "Mountain Views"]
+        },
+        {
+          name: "Himalayan Co-work Hub",
+          address: "Landour, near Char Dukan",
+          pricing: "₹3,500/month",
+          speedMbps: 60,
+          amenities: ["Colonial Architecture", "Peaceful Environment", "High-Speed WiFi", "Terrace Workspace"]
+        }
+      ],
+      simProviders: [
+        {
+          provider: "Jio",
+          plans: [
+            { data: "1.5GB/day", validity: "28 days", price: 349 },
+            { data: "2GB/day", validity: "28 days", price: 399 }
+          ]
+        },
+        {
+          provider: "Airtel",
+          plans: [
+            { data: "1.5GB/day", validity: "28 days", price: 399 },
+            { data: "2GB/day", validity: "28 days", price: 449 }
+          ]
+        }
+      ],
+      wifiAvailability: "Good - Mall Road cafes and hotels have WiFi, some areas affected by weather",
+      updatedAt: new Date(),
+    });
+
+    // Ziro Internet Connectivity
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: ziroId,
+      avgSpeedMbps: 20,
+      coworkingSpaces: [
+        {
+          name: "Apatani Cultural Hub",
+          address: "Ziro Town Center",
+          pricing: "₹2,500/month",
+          speedMbps: 25,
+          amenities: ["Cultural Events", "Local Art", "Community Kitchen", "Mountain Views"]
+        },
+        {
+          name: "Music Valley Co-work",
+          address: "Near Festival Grounds",
+          pricing: "₹2,000/month",
+          speedMbps: 20,
+          amenities: ["Music Rooms", "Festival Events", "Creative Community", "Natural Lighting"]
+        }
+      ],
+      simProviders: [
+        {
+          provider: "Jio",
+          plans: [
+            { data: "1GB/day", validity: "28 days", price: 299 },
+            { data: "1.5GB/day", validity: "28 days", price: 349 }
+          ]
+        },
+        {
+          provider: "BSNL",
+          plans: [
+            { data: "1GB/day", validity: "28 days", price: 299 },
+            { data: "1.5GB/day", validity: "28 days", price: 349 }
+          ]
+        }
+      ],
+      wifiAvailability: "Limited - Main town areas and some lodges have WiFi, remote areas have poor connectivity",
+      updatedAt: new Date(),
+    });
+
+    // Kolkata Internet Connectivity
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: kolkataId,
+      avgSpeedMbps: 60,
+      coworkingSpaces: [
+        {
+          name: "91springboard Salt Lake",
+          address: "Salt Lake City, Sector V",
+          pricing: "₹7,500/month",
+          speedMbps: 120,
+          amenities: ["Startup Community", "Mentorship", "Events", "High-Speed WiFi"]
+        },
+        {
+          name: "The Culture Canvas",
+          address: "Park Street Area",
+          pricing: "₹6,000/month",
+          speedMbps: 100,
+          amenities: ["Cultural Events", "Art Exhibitions", "Library", "Café Culture"]
+        }
+      ],
+      simProviders: [
+        {
+          provider: "Jio",
+          plans: [
+            { data: "2GB/day", validity: "28 days", price: 399 },
+            { data: "3GB/day", validity: "28 days", price: 599 }
+          ]
+        },
+        {
+          provider: "Airtel",
+          plans: [
+            { data: "2GB/day", validity: "28 days", price: 449 },
+            { data: "3GB/day", validity: "28 days", price: 649 }
+          ]
+        }
+      ],
+      wifiAvailability: "Excellent - Metro stations, IT areas, malls, and cultural centers have reliable WiFi",
+      updatedAt: new Date(),
+    });
+
+    // Add transportation data for new cities
+    // Bir Transportation
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: birId,
+      localTransport: ["Shared taxis", "Auto rickshaws", "Local buses", "Rental bikes"],
+      walkabilityScore: 7,
+      rideHailing: ["Ola (limited)", "Local taxi services"],
+      airports: [
+        { name: "Kangra Airport", code: "DHM", distance: "65km" },
+        { name: "Chandigarh Airport", code: "IXC", distance: "285km" }
+      ],
+      trainStations: [
+        { name: "Pathankot Junction", type: "Major Junction" },
+        { name: "Ahju Station", type: "Local Station" }
+      ],
+      intercityConnectivity: "Good road connections to Dharamshala, McLeod Ganj, and Delhi via bus",
+      updatedAt: new Date(),
+    });
+
+    // Dehradun Transportation
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: dehradunId,
+      localTransport: ["City buses", "Auto rickshaws", "Shared taxis", "E-rickshaws", "Vikram"],
+      walkabilityScore: 6,
+      rideHailing: ["Ola", "Uber", "Rapido"],
+      airports: [
+        { name: "Jolly Grant Airport", code: "DED", distance: "25km" }
+      ],
+      trainStations: [
+        { name: "Dehradun Railway Station", type: "Major Terminal" },
+        { name: "Haridwar Junction", type: "Major Junction" }
+      ],
+      intercityConnectivity: "Excellent connectivity to Delhi, Mumbai, and hill stations",
+      updatedAt: new Date(),
+    });
+
+    // Mussoorie Transportation
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: mussoorieId,
+      localTransport: ["Shared taxis", "Private cars", "Cable car", "Walking"],
+      walkabilityScore: 8,
+      rideHailing: ["Limited Ola", "Local taxi operators"],
+      airports: [
+        { name: "Jolly Grant Airport", code: "DED", distance: "60km via Dehradun" }
+      ],
+      trainStations: [
+        { name: "Dehradun Railway Station", type: "Nearest major station" }
+      ],
+      intercityConnectivity: "Connected via Dehradun, regular buses and taxis from Delhi",
+      updatedAt: new Date(),
+    });
+
+    // Ziro Transportation
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: ziroId,
+      localTransport: ["Shared Sumos", "Private vehicles", "Local buses", "Walking"],
+      walkabilityScore: 9,
+      rideHailing: ["None available"],
+      airports: [
+        { name: "Ziro Airport", code: "ZER", distance: "5km" },
+        { name: "Itanagar Airport", code: "HGI", distance: "115km" }
+      ],
+      trainStations: [
+        { name: "Naharlagun Railway Station", type: "Nearest station" }
+      ],
+      intercityConnectivity: "Limited connectivity, mainly through Itanagar and Guwahati",
+      updatedAt: new Date(),
+    });
+
+    // Kolkata Transportation
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: kolkataId,
+      localTransport: ["Metro", "Buses", "Trams", "Auto rickshaws", "Taxis", "E-rickshaws"],
+      walkabilityScore: 7,
+      rideHailing: ["Ola", "Uber", "Rapido"],
+      airports: [
+        { name: "Netaji Subhas Chandra Bose International Airport", code: "CCU", distance: "15km" }
+      ],
+      trainStations: [
+        { name: "Howrah Junction", type: "Major Terminal" },
+        { name: "Sealdah Station", type: "Major Terminal" },
+        { name: "Kolkata Station", type: "Major Junction" }
+      ],
+      intercityConnectivity: "Excellent rail and air connectivity across India and international",
+      updatedAt: new Date(),
+    });
+
+    // Add climate data for new cities
+    // Bir Climate
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: birId,
+      avgTempCelsius: 18,
+      avgHumidity: 65,
+      rainyMonths: ["July", "August", "September"],
+      bestTimeToVisit: "March to June, September to November",
+      climateType: "Subtropical highland climate",
+      currentWeather: "Pleasant mountain weather with clear skies ideal for paragliding",
+      updatedAt: new Date(),
+    });
+
+    // Dehradun Climate
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: dehradunId,
+      avgTempCelsius: 21,
+      avgHumidity: 70,
+      rainyMonths: ["June", "July", "August", "September"],
+      bestTimeToVisit: "March to June, September to November",
+      climateType: "Humid subtropical climate",
+      currentWeather: "Pleasant weather with cool evenings, ideal for outdoor activities",
+      updatedAt: new Date(),
+    });
+
+    // Mussoorie Climate
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: mussoorieId,
+      avgTempCelsius: 16,
+      avgHumidity: 75,
+      rainyMonths: ["June", "July", "August", "September"],
+      bestTimeToVisit: "April to June, September to November",
+      climateType: "Humid subtropical highland climate",
+      currentWeather: "Cool mountain air with misty mornings, perfect hill station weather",
+      updatedAt: new Date(),
+    });
+
+    // Ziro Climate
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: ziroId,
+      avgTempCelsius: 20,
+      avgHumidity: 80,
+      rainyMonths: ["May", "June", "July", "August", "September"],
+      bestTimeToVisit: "March to May, September to November",
+      climateType: "Subtropical highland climate",
+      currentWeather: "Fresh mountain air with lush green valleys, perfect for outdoor festivals",
+      updatedAt: new Date(),
+    });
+
+    // Kolkata Climate
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: kolkataId,
+      avgTempCelsius: 27,
+      avgHumidity: 85,
+      rainyMonths: ["June", "July", "August", "September"],
+      bestTimeToVisit: "October to March",
+      climateType: "Tropical wet-and-dry climate",
+      currentWeather: "Warm and humid with cultural richness, monsoons bring relief",
+      updatedAt: new Date(),
+    });
+
+    // Add safety data for new cities
+    // Bir Safety
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: birId,
+      overallSafetyScore: 8,
+      womenSafetyScore: 8,
+      crimeRate: "Very Low",
+      hospitals: [
+        { name: "Civil Hospital Baijnath", type: "Government", address: "Baijnath, 15km from Bir", emergency: true },
+        { name: "Tanda Medical College", type: "Government", address: "Tanda, 25km from Bir", emergency: true }
+      ],
+      emergencyNumbers: ["Police: 100", "Ambulance: 108", "Tourist Helpline: 1363"],
+      pollutionIndex: 25,
+      updatedAt: new Date(),
+    });
+
+    // Dehradun Safety
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: dehradunId,
+      overallSafetyScore: 7,
+      womenSafetyScore: 7,
+      crimeRate: "Low",
+      hospitals: [
+        { name: "Doon Hospital", type: "Private", address: "Rajpur Road, Dehradun", emergency: true },
+        { name: "Shri Mahant Indiresh Hospital", type: "Private", address: "Patel Nagar, Dehradun", emergency: true },
+        { name: "Combined Hospital", type: "Government", address: "Clement Town, Dehradun", emergency: true }
+      ],
+      emergencyNumbers: ["Police: 100", "Ambulance: 108", "Fire: 101", "Women Helpline: 1090"],
+      pollutionIndex: 65,
+      updatedAt: new Date(),
+    });
+
+    // Mussoorie Safety
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: mussoorieId,
+      overallSafetyScore: 8,
+      womenSafetyScore: 8,
+      crimeRate: "Very Low",
+      hospitals: [
+        { name: "Mussoorie Hospital", type: "Government", address: "Mall Road, Mussoorie", emergency: true },
+        { name: "Landour Community Hospital", type: "Private", address: "Landour, Mussoorie", emergency: true }
+      ],
+      emergencyNumbers: ["Police: 100", "Ambulance: 108", "Tourist Helpline: 1363", "Mountain Rescue: 1906"],
+      pollutionIndex: 20,
+      updatedAt: new Date(),
+    });
+
+    // Ziro Safety
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: ziroId,
+      overallSafetyScore: 9,
+      womenSafetyScore: 9,
+      crimeRate: "Very Low",
+      hospitals: [
+        { name: "District Hospital Ziro", type: "Government", address: "Ziro Town", emergency: true },
+        { name: "Christian Medical Centre", type: "Private", address: "Old Ziro", emergency: false }
+      ],
+      emergencyNumbers: ["Police: 100", "Ambulance: 108", "District Collector: +91-3788-222224"],
+      pollutionIndex: 15,
+      updatedAt: new Date(),
+    });
+
+    // Kolkata Safety
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: kolkataId,
+      overallSafetyScore: 6,
+      womenSafetyScore: 6,
+      crimeRate: "Medium",
+      hospitals: [
+        { name: "AMRI Hospital", type: "Private", address: "Salt Lake City, Kolkata", emergency: true },
+        { name: "Apollo Gleneagles Hospital", type: "Private", address: "EM Bypass, Kolkata", emergency: true },
+        { name: "SSKM Hospital", type: "Government", address: "College Street, Kolkata", emergency: true },
+        { name: "Ruby General Hospital", type: "Private", address: "Kasba, Kolkata", emergency: true }
+      ],
+      emergencyNumbers: ["Police: 100", "Ambulance: 108", "Fire: 101", "Women Helpline: 1090", "Tourist Helpline: 1363"],
+      pollutionIndex: 85,
+      updatedAt: new Date(),
+    });
+
+    // Add lifestyle data for new cities
+    // Bir Lifestyle
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: birId,
+      nightlife: { bars: false, clubs: false, lateNightEating: false, alcoholLaws: "Limited availability - tourist areas only" },
+      foodScene: {
+        specialties: ["Tibetan momos", "Thukpa", "Parathas", "Local Himachali dishes", "Israeli cuisine"],
+        vegFriendly: true, streetFood: false, internationalCuisine: true
+      },
+      fitness: { gyms: 2, parks: 5, yogaStudios: 8, outdoorActivities: ["Paragliding", "Trekking", "Mountain biking", "Meditation retreats"] },
+      culture: {
+        languages: ["Hindi", "English", "Tibetan", "Himachali"],
+        festivals: ["Paragliding World Cup", "Buddhist festivals", "Local Himachali festivals"],
+        customs: ["Tibetan Buddhist culture", "Adventure sports community", "Spiritual retreats"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - remote area with limited monitoring",
+      updatedAt: new Date(),
+    });
+
+    // Dehradun Lifestyle
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: dehradunId,
+      nightlife: { bars: true, clubs: true, lateNightEating: true, alcoholLaws: "Available - licensed venues and shops" },
+      foodScene: {
+        specialties: ["Garhwali cuisine", "Aloo ke gutke", "Kafuli", "Bal mithai", "Street food"],
+        vegFriendly: true, streetFood: true, internationalCuisine: true
+      },
+      fitness: { gyms: 45, parks: 25, yogaStudios: 20, outdoorActivities: ["Trekking", "River rafting", "Rock climbing", "Nature walks"] },
+      culture: {
+        languages: ["Hindi", "English", "Garhwali", "Punjabi"],
+        festivals: ["Tapkeshwar Fair", "Buddha Purnima", "Basant Panchami", "Cultural festivals"],
+        customs: ["Garhwali traditions", "Educational hub culture", "Military heritage"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - strictly monitored due to educational institutions",
+      updatedAt: new Date(),
+    });
+
+    // Mussoorie Lifestyle
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: mussoorieId,
+      nightlife: { bars: true, clubs: false, lateNightEating: true, alcoholLaws: "Available - tourist-friendly policies" },
+      foodScene: {
+        specialties: ["Momos", "Maggi noodles", "British colonial cuisine", "Local Garhwali dishes", "Cafe culture"],
+        vegFriendly: true, streetFood: true, internationalCuisine: true
+      },
+      fitness: { gyms: 8, parks: 15, yogaStudios: 12, outdoorActivities: ["Hill walking", "Cable car rides", "Nature photography", "Mall Road strolling"] },
+      culture: {
+        languages: ["Hindi", "English", "Garhwali"],
+        festivals: ["Summer Festival", "Autumn Festival", "Christmas celebrations", "Colonial heritage events"],
+        customs: ["British colonial heritage", "Hill station culture", "Tourist hospitality"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - tourist area with regular monitoring",
+      updatedAt: new Date(),
+    });
+
+    // Ziro Lifestyle
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: ziroId,
+      nightlife: { bars: false, clubs: false, lateNightEating: false, alcoholLaws: "Limited availability - local rice wine culture" },
+      foodScene: {
+        specialties: ["Apong (rice wine)", "Fish curry", "Bamboo shoot dishes", "Smoked fish", "Traditional Apatani cuisine"],
+        vegFriendly: false, streetFood: false, internationalCuisine: false
+      },
+      fitness: { gyms: 1, parks: 10, yogaStudios: 2, outdoorActivities: ["Trekking", "Music festivals", "Cultural walks", "Bird watching"] },
+      culture: {
+        languages: ["Apatani", "Hindi", "English"],
+        festivals: ["Ziro Music Festival", "Myoko festival", "Murung festival", "Dree festival"],
+        customs: ["Apatani tribal culture", "Sustainable agriculture", "Traditional crafts", "Music community"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - traditional community with own customs",
+      updatedAt: new Date(),
+    });
+
+    // Kolkata Lifestyle
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: kolkataId,
+      nightlife: { bars: true, clubs: true, lateNightEating: true, alcoholLaws: "Available - established bar culture and licensed venues" },
+      foodScene: {
+        specialties: ["Fish curry", "Mishti doi", "Rosogolla", "Street food", "Biryani", "Puchka"],
+        vegFriendly: true, streetFood: true, internationalCuisine: true
+      },
+      fitness: { gyms: 120, parks: 40, yogaStudios: 35, outdoorActivities: ["River cruises", "Football", "Cricket", "Cultural walks"] },
+      culture: {
+        languages: ["Bengali", "Hindi", "English"],
+        festivals: ["Durga Puja", "Kali Puja", "Poila Boishakh", "Book Fair", "Film Festival"],
+        customs: ["Bengali culture", "Intellectual traditions", "Art and literature", "Adda culture"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - metropolitan city with strict enforcement",
+      updatedAt: new Date(),
+    });
+
     // Add attractions for new cities
     // New Delhi Attractions
     const delhiAttr1 = randomUUID();
@@ -1527,7 +2075,7 @@ export class MemStorage implements IStorage {
       venue: "Palace Grounds, Bangalore",
       category: "Technology",
       isPaid: true,
-      price: "₹2,000-15,000",
+      price: 2000,
       url: "https://bengalurutechsummit.com/",
       createdAt: new Date(),
     });
@@ -1542,7 +2090,7 @@ export class MemStorage implements IStorage {
       venue: "Lalbagh Botanical Garden",
       category: "Culture",
       isPaid: true,
-      price: "₹20-50",
+      price: 20,
       url: null,
       createdAt: new Date(),
     });
@@ -1573,7 +2121,7 @@ export class MemStorage implements IStorage {
       venue: "Multiple venues in Pune",
       category: "Film",
       isPaid: true,
-      price: "₹100-800",
+      price: 100,
       url: "https://piff.co.in/",
       createdAt: new Date(),
     });
@@ -2940,7 +3488,6 @@ export class MemStorage implements IStorage {
       simDataINR: 450,
       gymINR: 1800,
       coffeeINR: 120,
-      beerINR: 200,
       accommodationINR: 18000,
       foodINR: 8000,
       entertainmentINR: 4000,
@@ -2963,7 +3510,6 @@ export class MemStorage implements IStorage {
       simDataINR: 450,
       gymINR: 1500,
       coffeeINR: 100,
-      beerINR: 180,
       accommodationINR: 15000,
       foodINR: 6000,
       entertainmentINR: 3500,
@@ -3011,7 +3557,7 @@ export class MemStorage implements IStorage {
     this.events.set(puneEvent1, {
       id: puneEvent1, cityId: puneCity.id, title: "Pune Festival",
       description: "Cultural celebration with music and dance", date: new Date("2024-09-15"),
-      venue: "Multiple venues, Pune", category: "Cultural", isPaid: true, price: "₹200-500", url: "https://punefestival.com/",
+      venue: "Multiple venues, Pune", category: "Cultural", isPaid: true, price: 200, url: "https://punefestival.com/",
       createdAt: new Date(),
     });
 
@@ -3019,7 +3565,7 @@ export class MemStorage implements IStorage {
     this.events.set(udaipurEvent1, {
       id: udaipurEvent1, cityId: udaipurCity.id, title: "World Music Festival",
       description: "International music festival at heritage venues", date: new Date("2025-02-14"),
-      venue: "Udaipur Palace", category: "Music", isPaid: true, price: "₹2,000-8,000", url: "https://worldmusic.udaipur.com/",
+      venue: "Udaipur Palace", category: "Music", isPaid: true, price: 2000, url: "https://worldmusic.udaipur.com/",
       createdAt: new Date(),
     });
   }

@@ -35,6 +35,103 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Individual city data endpoints
+  app.get("/api/cities/:slug/cost-of-living", async (req, res) => {
+    try {
+      const city = await storage.getCityBySlug(req.params.slug);
+      if (!city) {
+        return res.status(404).json({ message: "City not found" });
+      }
+      res.json(city.costOfLiving);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch cost of living data" });
+    }
+  });
+
+  app.get("/api/cities/:slug/internet-connectivity", async (req, res) => {
+    try {
+      const city = await storage.getCityBySlug(req.params.slug);
+      if (!city) {
+        return res.status(404).json({ message: "City not found" });
+      }
+      res.json(city.internetConnectivity);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch internet connectivity data" });
+    }
+  });
+
+  app.get("/api/cities/:slug/transportation", async (req, res) => {
+    try {
+      const city = await storage.getCityBySlug(req.params.slug);
+      if (!city) {
+        return res.status(404).json({ message: "City not found" });
+      }
+      res.json(city.transportation);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch transportation data" });
+    }
+  });
+
+  app.get("/api/cities/:slug/climate", async (req, res) => {
+    try {
+      const city = await storage.getCityBySlug(req.params.slug);
+      if (!city) {
+        return res.status(404).json({ message: "City not found" });
+      }
+      res.json(city.climate);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch climate data" });
+    }
+  });
+
+  app.get("/api/cities/:slug/safety", async (req, res) => {
+    try {
+      const city = await storage.getCityBySlug(req.params.slug);
+      if (!city) {
+        return res.status(404).json({ message: "City not found" });
+      }
+      res.json(city.safety);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch safety data" });
+    }
+  });
+
+  app.get("/api/cities/:slug/lifestyle", async (req, res) => {
+    try {
+      const city = await storage.getCityBySlug(req.params.slug);
+      if (!city) {
+        return res.status(404).json({ message: "City not found" });
+      }
+      res.json(city.lifestyle);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch lifestyle data" });
+    }
+  });
+
+  app.get("/api/cities/:slug/attractions", async (req, res) => {
+    try {
+      const city = await storage.getCityBySlug(req.params.slug);
+      if (!city) {
+        return res.status(404).json({ message: "City not found" });
+      }
+      res.json(city.attractions);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch attractions data" });
+    }
+  });
+
+  app.get("/api/cities/:slug/events", async (req, res) => {
+    try {
+      const city = await storage.getCityBySlug(req.params.slug);
+      if (!city) {
+        return res.status(404).json({ message: "City not found" });
+      }
+      res.json(city.events);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch events data" });
+    }
+  });
+
   // Currency conversion endpoint
   app.get("/api/currency/:from/:to", async (req, res) => {
     try {
