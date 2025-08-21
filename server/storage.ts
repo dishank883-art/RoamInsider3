@@ -3945,6 +3945,336 @@ export class MemStorage implements IStorage {
       venue: "Community Center, Dharamkot", category: "Networking", isPaid: false, price: null, url: null,
       createdAt: new Date(),
     });
+
+    // Add comprehensive Transportation data for all 7 cities
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(), cityId: toshId,
+      localTransport: { metro: false, bus: false, autoRickshaw: false, taxi: false, bike: false },
+      walkabilityScore: 10, rideHailing: [], 
+      airports: [{ name: "Bhuntar Airport", code: "KUL", distance: "31km" }],
+      trainStations: [{ name: "Pathankot", type: "Nearest Major (200km)" }],
+      intercityConnectivity: "Very Limited - mainly via Kasol and Bhuntar",
+      updatedAt: new Date(),
+    });
+
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(), cityId: rishikeshId,
+      localTransport: { metro: false, bus: true, autoRickshaw: true, taxi: true, bike: true },
+      walkabilityScore: 8, rideHailing: ["Ola", "Uber"],
+      airports: [{ name: "Jolly Grant Airport", code: "DED", distance: "18km" }],
+      trainStations: [{ name: "Rishikesh Railway Station", type: "Local" }, { name: "Haridwar Junction", type: "Major (25km)" }],
+      intercityConnectivity: "Excellent - well connected to Delhi and major cities",
+      updatedAt: new Date(),
+    });
+
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(), cityId: pondicherryId,
+      localTransport: { metro: false, bus: true, autoRickshaw: true, taxi: true, bike: true },
+      walkabilityScore: 9, rideHailing: ["Ola", "Uber"],
+      airports: [{ name: "Chennai Airport", code: "MAA", distance: "135km" }],
+      trainStations: [{ name: "Pondicherry Railway Station", type: "Local" }],
+      intercityConnectivity: "Good - connected to Chennai and major South Indian cities",
+      updatedAt: new Date(),
+    });
+
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(), cityId: kochiId,
+      localTransport: { metro: true, bus: true, autoRickshaw: true, taxi: true, bike: true },
+      walkabilityScore: 7, rideHailing: ["Ola", "Uber"],
+      airports: [{ name: "Cochin International Airport", code: "COK", distance: "27km" }],
+      trainStations: [{ name: "Ernakulam Junction", type: "Major" }],
+      intercityConnectivity: "Excellent - major transport hub of Kerala",
+      updatedAt: new Date(),
+    });
+
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(), cityId: wayanadId,
+      localTransport: { metro: false, bus: true, autoRickshaw: false, taxi: true, bike: true },
+      walkabilityScore: 6, rideHailing: ["Ola"],
+      airports: [{ name: "Calicut Airport", code: "CCJ", distance: "65km" }],
+      trainStations: [{ name: "Kozhikode", type: "Nearest Major (100km)" }],
+      intercityConnectivity: "Moderate - connected via Kozhikode and Mysore",
+      updatedAt: new Date(),
+    });
+
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(), cityId: dharamkotId,
+      localTransport: { metro: false, bus: true, autoRickshaw: false, taxi: true, bike: false },
+      walkabilityScore: 9, rideHailing: [],
+      airports: [{ name: "Kangra Airport", code: "DHM", distance: "22km" }],
+      trainStations: [{ name: "Pathankot", type: "Nearest Major (90km)" }],
+      intercityConnectivity: "Limited - via McLeod Ganj and Pathankot",
+      updatedAt: new Date(),
+    });
+
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(), cityId: darjeelingId,
+      localTransport: { metro: false, bus: true, autoRickshaw: false, taxi: true, bike: false },
+      walkabilityScore: 8, rideHailing: ["Ola"],
+      airports: [{ name: "Bagdogra Airport", code: "IXB", distance: "90km" }],
+      trainStations: [{ name: "New Jalpaiguri", type: "Major (88km)" }, { name: "Darjeeling Himalayan Railway", type: "Toy Train" }],
+      intercityConnectivity: "Good - connected via Siliguri and NJP",
+      updatedAt: new Date(),
+    });
+
+    // Add comprehensive Safety data for all 7 cities  
+    this.safety.set(randomUUID(), {
+      id: randomUUID(), cityId: toshId, safetyScore: "9.5", womenSafetyScore: "9.2",
+      crimeRate: "Very Low - extremely safe small mountain village",
+      hospitals: [{ name: "Kasol Health Center", address: "Kasol, 4km", type: "Primary", emergency: false }],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
+      pollutionIndex: 25, updatedAt: new Date(),
+    });
+
+    this.safety.set(randomUUID(), {
+      id: randomUUID(), cityId: rishikeshId, safetyScore: "8.5", womenSafetyScore: "8.0",
+      crimeRate: "Low - spiritual town with good police presence",
+      hospitals: [
+        { name: "All India Institute of Medical Sciences", address: "AIIMS Rishikesh", type: "Super Specialty", emergency: true },
+        { name: "Himalayan Hospital", address: "Jolly Grant", type: "Multi-specialty", emergency: true }
+      ],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
+      pollutionIndex: 85, updatedAt: new Date(),
+    });
+
+    this.safety.set(randomUUID(), {
+      id: randomUUID(), cityId: pondicherryId, safetyScore: "8.2", womenSafetyScore: "7.8",
+      crimeRate: "Low - peaceful union territory with good law enforcement",
+      hospitals: [
+        { name: "JIPMER", address: "Dhanvantari Nagar", type: "Government Medical College", emergency: true },
+        { name: "Sri Manakula Vinayagar Medical College", address: "Madagadipet", type: "Private Medical College", emergency: true }
+      ],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
+      pollutionIndex: 78, updatedAt: new Date(),
+    });
+
+    this.safety.set(randomUUID(), {
+      id: randomUUID(), cityId: kochiId, safetyScore: "8.0", womenSafetyScore: "7.5",
+      crimeRate: "Moderate - generally safe with typical urban precautions needed",
+      hospitals: [
+        { name: "Amrita Institute of Medical Sciences", address: "Kochi", type: "Super Specialty", emergency: true },
+        { name: "Medical Trust Hospital", address: "MG Road", type: "Multi-specialty", emergency: true }
+      ],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
+      pollutionIndex: 92, updatedAt: new Date(),
+    });
+
+    this.safety.set(randomUUID(), {
+      id: randomUUID(), cityId: wayanadId, safetyScore: "9.0", womenSafetyScore: "8.8",
+      crimeRate: "Very Low - peaceful hill district with minimal crime",
+      hospitals: [
+        { name: "District Hospital Kalpetta", address: "Kalpetta", type: "Government", emergency: true },
+        { name: "Baby Memorial Hospital", address: "Kalpetta", type: "Private", emergency: true }
+      ],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
+      pollutionIndex: 35, updatedAt: new Date(),
+    });
+
+    this.safety.set(randomUUID(), {
+      id: randomUUID(), cityId: dharamkotId, safetyScore: "9.2", womenSafetyScore: "9.0",
+      crimeRate: "Very Low - safe spiritual community with strong social bonds",
+      hospitals: [
+        { name: "Delek Hospital", address: "McLeod Ganj (2km)", type: "Tibetan Medical", emergency: true },
+        { name: "Civil Hospital Dharamshala", address: "Dharamshala (6km)", type: "Government", emergency: true }
+      ],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
+      pollutionIndex: 30, updatedAt: new Date(),
+    });
+
+    this.safety.set(randomUUID(), {
+      id: randomUUID(), cityId: darjeelingId, safetyScore: "8.8", womenSafetyScore: "8.5",
+      crimeRate: "Low - safe hill station with good tourist police",
+      hospitals: [
+        { name: "Darjeeling District Hospital", address: "Lebong Cart Road", type: "Government", emergency: true },
+        { name: "Planters Hospital", address: "Darjeeling", type: "Private", emergency: true }
+      ],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
+      pollutionIndex: 65, updatedAt: new Date(),
+    });
+
+    // Add comprehensive Lifestyle data for all 7 cities
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(), cityId: toshId,
+      foodScene: {
+        specialties: ["Israeli Cuisine", "Maggi", "Parathas", "Local Himachali Dham", "Organic Vegetables"],
+        vegFriendly: true, streetFood: false, internationalCuisine: true
+      },
+      nightlife: { bars: false, clubs: false, lateNightEating: false, alcoholLaws: "Limited availability" },
+      fitness: { gyms: 0, parks: 0, yogaStudios: 2, outdoorActivities: ["Trekking", "Rock climbing", "Nature walks", "Photography"] },
+      culture: {
+        languages: ["English", "Hindi", "Hebrew", "Himachali"], 
+        festivals: ["Diwali", "Holi", "Local Village Festivals"],
+        customs: ["Respect for local customs", "Leave no trace principles", "Community living"],
+        artScene: false
+      },
+      cannabisLaws: "Illegal but socially tolerated - use discretion and respect local customs",
+      updatedAt: new Date(),
+    });
+
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(), cityId: rishikeshId,
+      foodScene: {
+        specialties: ["Sattvic Vegetarian Food", "Ayurvedic Meals", "Ganga Aarti Prasad", "Chole Bhature", "Aloo Puri"],
+        vegFriendly: true, streetFood: true, internationalCuisine: true
+      },
+      nightlife: { bars: false, clubs: false, lateNightEating: false, alcoholLaws: "Alcohol banned - holy city" },
+      fitness: { gyms: 15, parks: 8, yogaStudios: 150, outdoorActivities: ["Yoga", "Meditation", "River rafting", "Trekking", "Bungee jumping"] },
+      culture: {
+        languages: ["Hindi", "English", "Sanskrit"],
+        festivals: ["Ganga Aarti", "International Yoga Festival", "Mahashivratri", "Ganga Dussehra"],
+        customs: ["No alcohol/drugs", "Vegetarian lifestyle", "Spiritual practices", "River reverence"],
+        artScene: true
+      },
+      cannabisLaws: "Strictly illegal - zero tolerance in holy city",
+      updatedAt: new Date(),
+    });
+
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(), cityId: pondicherryId,
+      foodScene: {
+        specialties: ["French Pastries", "Crepes", "Tamil Cuisine", "Seafood", "French-Tamil Fusion", "Filter Coffee"],
+        vegFriendly: true, streetFood: true, internationalCuisine: true
+      },
+      nightlife: { bars: true, clubs: false, lateNightEating: true, alcoholLaws: "Available - more liberal than other Indian states" },
+      fitness: { gyms: 25, parks: 12, yogaStudios: 30, outdoorActivities: ["Beach activities", "Cycling", "Auroville exploration", "Scuba diving"] },
+      culture: {
+        languages: ["Tamil", "French", "English", "Hindi"],
+        festivals: ["Bastille Day", "Diwali", "Pongal", "Auroville Foundation Day"],
+        customs: ["French colonial heritage", "Auroville spirituality", "Beach culture"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal but penalties less strict than other Indian states",
+      updatedAt: new Date(),
+    });
+
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(), cityId: kochiId,
+      foodScene: {
+        specialties: ["Kerala Sadhya", "Fish Curry", "Appam", "Puttu", "Spice-infused Dishes", "Coconut-based Curries"],
+        vegFriendly: true, streetFood: true, internationalCuisine: true
+      },
+      nightlife: { bars: true, clubs: true, lateNightEating: true, alcoholLaws: "Available with restrictions - bars close at 11 PM" },
+      fitness: { gyms: 40, parks: 15, yogaStudios: 25, outdoorActivities: ["Backwater cruises", "Spice plantation tours", "Kathakali performances", "Fort walking"] },
+      culture: {
+        languages: ["Malayalam", "English", "Tamil", "Hindi"],
+        festivals: ["Onam", "Cochin Carnival", "Ernakulathappan Festival", "Biennale"],
+        customs: ["Spice trade heritage", "Marine culture", "Artistic traditions"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - strict enforcement, avoid completely",
+      updatedAt: new Date(),
+    });
+
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(), cityId: wayanadId,
+      foodScene: {
+        specialties: ["Bamboo Rice", "Wild Honey", "Spiced Tea", "Tribal Cuisine", "Organic Produce", "Forest Mushrooms"],
+        vegFriendly: true, streetFood: false, internationalCuisine: false
+      },
+      nightlife: { bars: false, clubs: false, lateNightEating: false, alcoholLaws: "Limited availability in resorts" },
+      fitness: { gyms: 5, parks: 20, yogaStudios: 8, outdoorActivities: ["Wildlife safaris", "Tea plantation tours", "Trekking", "Bird watching", "Nature photography"] },
+      culture: {
+        languages: ["Malayalam", "English", "Tamil"],
+        festivals: ["Onam", "Tribal Festivals", "Harvest Festivals"],
+        customs: ["Tribal heritage", "Eco-tourism", "Wildlife conservation"],
+        artScene: false
+      },
+      cannabisLaws: "Illegal - rural area with strict enforcement",
+      updatedAt: new Date(),
+    });
+
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(), cityId: dharamkotId,
+      foodScene: {
+        specialties: ["Tibetan Momos", "Thukpa", "Israeli Cuisine", "Tibetan Bread", "Butter Tea", "International Backpacker Food"],
+        vegFriendly: true, streetFood: true, internationalCuisine: true
+      },
+      nightlife: { bars: false, clubs: false, lateNightEating: false, alcoholLaws: "Limited - spiritual atmosphere discourages alcohol" },
+      fitness: { gyms: 2, parks: 5, yogaStudios: 20, outdoorActivities: ["Trekking", "Meditation", "Yoga retreats", "Mountain biking"] },
+      culture: {
+        languages: ["English", "Hindi", "Tibetan", "Hebrew"],
+        festivals: ["Losar", "Buddha Purnima", "Dalai Lama Birthday", "Digital Nomad Meetups"],
+        customs: ["Tibetan Buddhist culture", "Digital nomad community", "Environmental consciousness"],
+        artScene: true
+      },
+      cannabisLaws: "Socially tolerated but technically illegal - respect community values",
+      updatedAt: new Date(),
+    });
+
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(), cityId: darjeelingId,
+      foodScene: {
+        specialties: ["Darjeeling Tea", "Momos", "Thukpa", "Churpee", "Himalayan Trout", "Tibetan Bread"],
+        vegFriendly: true, streetFood: true, internationalCuisine: false
+      },
+      nightlife: { bars: true, clubs: false, lateNightEating: false, alcoholLaws: "Available - bars close early due to cold weather" },
+      fitness: { gyms: 8, parks: 6, yogaStudios: 12, outdoorActivities: ["Tea garden walks", "Toy train rides", "Himalayan trekking", "Sunrise viewing"] },
+      culture: {
+        languages: ["Nepali", "English", "Hindi", "Bengali"],
+        festivals: ["Dasain", "Tihar", "Buddha Jayanti", "Tea Festival"],
+        customs: ["Tea culture", "Himalayan traditions", "Colonial heritage"],
+        artScene: false
+      },
+      cannabisLaws: "Illegal - hill station with tourist police presence",
+      updatedAt: new Date(),
+    });
+
+    // Add comprehensive Climate data for all 7 cities
+    this.climate.set(randomUUID(), {
+      id: randomUUID(), cityId: toshId, avgTempCelsius: 8, avgHumidity: 65,
+      rainyMonths: ["July", "August", "September"], bestTimeToVisit: "April to June, September to November",
+      climateType: "Cold mountain desert - harsh winters, mild summers",
+      currentWeather: { temperature: 5, humidity: 70, description: "Cool mountain air with snow-capped peaks", icon: "snow" },
+      updatedAt: new Date(),
+    });
+
+    this.climate.set(randomUUID(), {
+      id: randomUUID(), cityId: rishikeshId, avgTempCelsius: 18, avgHumidity: 72,
+      rainyMonths: ["July", "August", "September"], bestTimeToVisit: "February to April, October to December",
+      climateType: "Subtropical highland - hot summers, cool winters",
+      currentWeather: { temperature: 16, humidity: 75, description: "Pleasant riverside climate with Ganges breeze", icon: "partly-cloudy" },
+      updatedAt: new Date(),
+    });
+
+    this.climate.set(randomUUID(), {
+      id: randomUUID(), cityId: pondicherryId, avgTempCelsius: 28, avgHumidity: 78,
+      rainyMonths: ["October", "November", "December"], bestTimeToVisit: "December to March",
+      climateType: "Tropical - hot summers, pleasant winters",
+      currentWeather: { temperature: 26, humidity: 80, description: "Coastal breeze with French colonial charm", icon: "sunny" },
+      updatedAt: new Date(),
+    });
+
+    this.climate.set(randomUUID(), {
+      id: randomUUID(), cityId: kochiId, avgTempCelsius: 27, avgHumidity: 85,
+      rainyMonths: ["June", "July", "August", "September"], bestTimeToVisit: "December to March",
+      climateType: "Tropical monsoon - humid year-round with heavy monsoons",
+      currentWeather: { temperature: 25, humidity: 88, description: "Humid coastal climate with backwater breeze", icon: "rainy" },
+      updatedAt: new Date(),
+    });
+
+    this.climate.set(randomUUID(), {
+      id: randomUUID(), cityId: wayanadId, avgTempCelsius: 20, avgHumidity: 80,
+      rainyMonths: ["June", "July", "August", "September"], bestTimeToVisit: "October to May",
+      climateType: "Tropical highland - cool temperatures, heavy monsoons",
+      currentWeather: { temperature: 18, humidity: 85, description: "Cool mountain climate with tea garden mist", icon: "cloudy" },
+      updatedAt: new Date(),
+    });
+
+    this.climate.set(randomUUID(), {
+      id: randomUUID(), cityId: dharamkotId, avgTempCelsius: 12, avgHumidity: 68,
+      rainyMonths: ["July", "August", "September"], bestTimeToVisit: "March to June, September to November",
+      climateType: "Mountain subtropical - cold winters, mild summers",
+      currentWeather: { temperature: 10, humidity: 72, description: "Clear mountain air with Tibetan prayer flags", icon: "partly-cloudy" },
+      updatedAt: new Date(),
+    });
+
+    this.climate.set(randomUUID(), {
+      id: randomUUID(), cityId: darjeelingId, avgTempCelsius: 14, avgHumidity: 75,
+      rainyMonths: ["June", "July", "August", "September"], bestTimeToVisit: "March to May, October to December",
+      climateType: "Subtropical highland - cool year-round with distinct seasons",
+      currentWeather: { temperature: 12, humidity: 78, description: "Crisp mountain air with tea garden freshness", icon: "cloudy" },
+      updatedAt: new Date(),
+    });
   }
 }
 

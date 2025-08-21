@@ -575,6 +575,280 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
             aircon: "Mountain breeze"
           }
         }
+      ],
+      "Tosh": [
+        {
+          name: "Mountain View Workspace",
+          location: "Tosh Village Center",
+          type: "Himalayan Village",
+          dayPass: "₹150",
+          monthlyDesk: "₹2,000",
+          monthlyPrivate: "₹3,500",
+          features: ["Valley Views", "Quiet Space", "Solar Power", "Outdoor Deck", "Basic amenities"],
+          rating: 4.0,
+          website: "Local guesthouse arrangements",
+          phone: "Contact locally",
+          description: "Simple workspace in Himalayan village with stunning valley views and peaceful environment.",
+          amenities: {
+            wifi: "15-20 Mbps (weather dependent)",
+            hours: "Flexible (guesthouse arrangement)",
+            printers: "No",
+            coffee: "Local chai available",
+            aircon: "No (natural mountain air)"
+          }
+        }
+      ],
+      "Rishikesh": [
+        {
+          name: "Zostel Rishikesh Co-work",
+          location: "Tapovan, Rishikesh",
+          type: "Backpacker Coworking",
+          dayPass: "₹300",
+          monthlyDesk: "₹4,500",
+          monthlyPrivate: "₹8,000",
+          features: ["Ganges views", "Yoga sessions", "Community space", "Rooftop workspace", "Spiritual environment"],
+          rating: 4.2,
+          website: "https://zostel.com/",
+          phone: "+91 135 2430 678",
+          description: "Spiritual coworking space with Ganges views and yoga-friendly environment.",
+          amenities: {
+            wifi: "50+ Mbps",
+            hours: "6 AM - 11 PM",
+            printers: "Basic printing",
+            coffee: "Healthy café with organic options",
+            aircon: "No (river breeze cooling)"
+          }
+        },
+        {
+          name: "Rishikesh Digital Hub",
+          location: "Laxman Jhula",
+          type: "Spiritual Coworking",
+          dayPass: "₹250",
+          monthlyDesk: "₹3,500",
+          monthlyPrivate: "₹6,500",
+          features: ["Temple proximity", "Meditation sessions", "River views", "Quiet zones", "Spiritual community"],
+          rating: 4.0,
+          website: "Contact local spiritual centers",
+          phone: "+91 135 2431 234",
+          description: "Unique coworking combining digital work with spiritual practices and meditation.",
+          amenities: {
+            wifi: "30+ Mbps",
+            hours: "5 AM - 10 PM",
+            printers: "Basic",
+            coffee: "Herbal teas and healthy drinks",
+            aircon: "No (natural ventilation)"
+          }
+        }
+      ],
+      "Pondicherry": [
+        {
+          name: "Auroville Coworking",
+          location: "Auroville Township",
+          type: "Spiritual Community",
+          dayPass: "₹400",
+          monthlyDesk: "₹6,000",
+          monthlyPrivate: "₹10,000",
+          features: ["Spiritual community", "Sustainable practices", "International environment", "Workshops", "Meditation"],
+          rating: 4.3,
+          website: "https://auroville.org/",
+          phone: "+91 413 2622 657",
+          description: "Unique coworking experience in international spiritual community focused on conscious living.",
+          amenities: {
+            wifi: "60+ Mbps",
+            hours: "6 AM - 9 PM",
+            printers: "Yes",
+            coffee: "Organic café with international cuisine",
+            aircon: "Eco-friendly cooling"
+          }
+        },
+        {
+          name: "French Quarter Café Workspaces",
+          location: "White Town, Pondicherry",
+          type: "Colonial Heritage",
+          dayPass: "₹350",
+          monthlyDesk: "₹5,500",
+          monthlyPrivate: "₹9,000",
+          features: ["Colonial architecture", "French ambiance", "Heritage cafés", "Beach proximity", "Cultural immersion"],
+          rating: 4.1,
+          website: "Various French Quarter cafés",
+          phone: "Contact individual cafés",
+          description: "Work in French colonial heritage cafés with unique architecture and cultural atmosphere.",
+          amenities: {
+            wifi: "40+ Mbps",
+            hours: "7 AM - 10 PM",
+            printers: "Limited",
+            coffee: "French pastries and coffee culture",
+            aircon: "Yes"
+          }
+        }
+      ],
+      "Kochi": [
+        {
+          name: "Cochin Innovation Hub",
+          location: "Infopark, Kakkanad",
+          type: "Tech Hub",
+          dayPass: "₹500",
+          monthlyDesk: "₹7,500",
+          monthlyPrivate: "₹14,000",
+          features: ["IT ecosystem", "Startup programs", "Mentorship", "Networking events", "Modern facilities"],
+          rating: 4.4,
+          website: "https://www.infopark.in/",
+          phone: "+91 484 2801 234",
+          description: "Premier tech coworking in Kerala's IT hub with strong startup ecosystem and mentorship.",
+          amenities: {
+            wifi: "100+ Mbps",
+            hours: "24/7 access",
+            printers: "Yes",
+            coffee: "Tech café with healthy options",
+            aircon: "Central AC"
+          }
+        },
+        {
+          name: "Fort Kochi Heritage Workspace",
+          location: "Fort Kochi",
+          type: "Heritage Coworking",
+          dayPass: "₹400",
+          monthlyDesk: "₹6,000",
+          monthlyPrivate: "₹11,000",
+          features: ["Heritage buildings", "Cultural atmosphere", "Art galleries proximity", "Backwater views", "Tourist area"],
+          rating: 4.2,
+          website: "Heritage hotel partnerships",
+          phone: "+91 484 2666 789",
+          description: "Work in colonial heritage buildings with cultural atmosphere and backwater views.",
+          amenities: {
+            wifi: "50+ Mbps",
+            hours: "8 AM - 8 PM",
+            printers: "Yes",
+            coffee: "Kerala specialties and international options",
+            aircon: "Yes"
+          }
+        }
+      ],
+      "Wayanad": [
+        {
+          name: "Nature Valley Workspace",
+          location: "Kalpetta, Wayanad",
+          type: "Eco Coworking",
+          dayPass: "₹300",
+          monthlyDesk: "₹4,000",
+          monthlyPrivate: "₹7,000",
+          features: ["Forest views", "Eco-friendly", "Wildlife proximity", "Organic food", "Nature immersion"],
+          rating: 4.0,
+          website: "Eco-resort partnerships",
+          phone: "+91 4936 202 345",
+          description: "Eco-friendly workspace surrounded by Western Ghats forests with wildlife and nature focus.",
+          amenities: {
+            wifi: "25+ Mbps",
+            hours: "6 AM - 8 PM",
+            printers: "Basic",
+            coffee: "Organic local produce and spiced tea",
+            aircon: "No (natural mountain cooling)"
+          }
+        },
+        {
+          name: "Plantation Stay Workspaces",
+          location: "Various plantation stays",
+          type: "Plantation Coworking",
+          dayPass: "₹250",
+          monthlyDesk: "₹3,500",
+          monthlyPrivate: "₹6,000",
+          features: ["Tea plantation views", "Rural atmosphere", "Farm-to-table food", "Cultural learning", "Peaceful environment"],
+          rating: 3.8,
+          website: "Contact plantation stays",
+          phone: "Various plantation contacts",
+          description: "Work among tea and spice plantations with authentic rural experience and local culture.",
+          amenities: {
+            wifi: "15-20 Mbps (variable)",
+            hours: "Flexible (stay-dependent)",
+            printers: "No",
+            coffee: "Fresh plantation tea and coffee",
+            aircon: "No (plantation natural cooling)"
+          }
+        }
+      ],
+      "Dharamkot": [
+        {
+          name: "Himalayan Coworking Village",
+          location: "Upper Dharamkot",
+          type: "Mountain Community",
+          dayPass: "₹250",
+          monthlyDesk: "₹3,000",
+          monthlyPrivate: "₹5,500",
+          features: ["Mountain views", "Tibetan community", "Meditation sessions", "Digital nomad friendly", "International community"],
+          rating: 4.1,
+          website: "Community-based workspace",
+          phone: "+91 1892 221 456",
+          description: "Community-driven coworking space with strong Tibetan Buddhist influence and nomad community.",
+          amenities: {
+            wifi: "30+ Mbps",
+            hours: "6 AM - 10 PM",
+            printers: "Basic",
+            coffee: "Tibetan butter tea and international options",
+            aircon: "No (mountain air)"
+          }
+        },
+        {
+          name: "McLeod Shared Spaces",
+          location: "McLeod Ganj (2km)",
+          type: "Spiritual Hub",
+          dayPass: "₹300",
+          monthlyDesk: "₹4,000",
+          monthlyPrivate: "₹7,000",
+          features: ["Dalai Lama proximity", "Spiritual teachings", "International community", "Library access", "Cultural events"],
+          rating: 4.2,
+          website: "Various spiritual centers",
+          phone: "+91 1892 221 789",
+          description: "Access spiritual center workspaces with teachings, international community, and library resources.",
+          amenities: {
+            wifi: "35+ Mbps",
+            hours: "5 AM - 9 PM",
+            printers: "Yes",
+            coffee: "Tibetan tea culture",
+            aircon: "No"
+          }
+        }
+      ],
+      "Darjeeling": [
+        {
+          name: "Tea Garden Workspace",
+          location: "Observatory Hill Area",
+          type: "Heritage Hill Station",
+          dayPass: "₹300",
+          monthlyDesk: "₹4,500",
+          monthlyPrivate: "₹8,000",
+          features: ["Tea garden views", "Colonial heritage", "Mountain vistas", "Cool climate", "Cultural atmosphere"],
+          rating: 4.0,
+          website: "Heritage hotel partnerships",
+          phone: "+91 354 225 4567",
+          description: "Work with stunning tea garden views in historic hill station with colonial charm and cool climate.",
+          amenities: {
+            wifi: "35+ Mbps",
+            hours: "7 AM - 8 PM",
+            printers: "Yes",
+            coffee: "World-famous Darjeeling tea",
+            aircon: "No (naturally cool climate)"
+          }
+        },
+        {
+          name: "Mall Road Co-working Cafés",
+          location: "Mall Road, Darjeeling",
+          type: "Tourist Area",
+          dayPass: "₹250",
+          monthlyDesk: "₹3,500",
+          monthlyPrivate: "₹6,500",
+          features: ["Tourist hub", "Multiple café options", "Central location", "Mountain views", "Cultural shopping"],
+          rating: 3.9,
+          website: "Various Mall Road cafés",
+          phone: "Contact individual cafés",
+          description: "Work in various cafés along historic Mall Road with mountain views and cultural shopping access.",
+          amenities: {
+            wifi: "20-30 Mbps",
+            hours: "8 AM - 9 PM",
+            printers: "Limited",
+            coffee: "Tea culture and local snacks",
+            aircon: "No (cool mountain air)"
+          }
+        }
       ]
     };
 
