@@ -14,7 +14,7 @@ import SafetyHealthcare from "@/components/city/safety-healthcare";
 import LifestyleCulture from "@/components/city/lifestyle-culture";
 import ThingsToDo from "@/components/city/things-to-do";
 import CommunityNomads from "@/components/city/community-nomads";
-import InsiderHacks from "@/components/city/insider-hacks-city-specific";
+import InsiderHacksFixed from "@/components/city/insider-hacks-city-specific";
 import CityConnections from "@/components/city/city-connections-city-specific";
 import FestivalsEvents from "@/components/city/festivals-events-city-specific";
 import ShoppingMarkets from "@/components/city/shopping-markets-city-specific";
@@ -135,7 +135,7 @@ export default function CityPage() {
       case "community":
         return <CommunityNomads city={city} />;
       case "hacks":
-        return <InsiderHacks city={city} />;
+        return <InsiderHacksFixed city={city} />;
       case "connectivity":
         return <CityConnections city={city} />;
       default:
