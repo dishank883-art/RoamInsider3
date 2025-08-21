@@ -21,6 +21,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
   const exchangeRate = currencyData?.rate || 0.012;
   const convertToUSD = (inrAmount: number) => Math.round(inrAmount * exchangeRate * 100) / 100;
 
+  // Early return if no cost data to prevent any further processing
   if (!costData) {
     return (
       <Card className="bg-white rounded-2xl shadow-lg">
@@ -188,12 +189,14 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
             <div className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
               <h4 className="font-semibold text-sage-green mb-2">Street Food</h4>
               <div className="space-y-1 text-sm">
-                {cityData?.streetFood.map((item, index) => (
-                  <div key={index} className="flex justify-between">
-                    <span>{item.item}</span>
-                    <span>{item.price}</span>
-                  </div>
-                )) || (
+                {cityData?.streetFood && cityData.streetFood.length > 0 ? (
+                  cityData.streetFood.map((item, index) => (
+                    <div key={index} className="flex justify-between">
+                      <span>{item.item}</span>
+                      <span>{item.price}</span>
+                    </div>
+                  ))
+                ) : (
                   <>
                     <div className="flex justify-between">
                       <span>Local Specialty</span>
@@ -248,9 +251,11 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
         <div className="bg-sage-green/5 rounded-lg p-4 border-l-4 border-sage-green">
           <h4 className="font-semibold text-sage-green mb-2">💡 Smart Money Tips for Digital Nomads</h4>
           <ul className="space-y-1 text-muted-navy text-sm">
-            {cityData?.moneyTips.map((tip, index) => (
-              <li key={index}>• {tip}</li>
-            )) || (
+            {cityData?.moneyTips && cityData.moneyTips.length > 0 ? (
+              cityData.moneyTips.map((tip, index) => (
+                <li key={index}>• {tip}</li>
+              ))
+            ) : (
               <>
                 <li>• Cook at home to save 40-50% on food costs</li>
                 <li>• Use local transport instead of ride-hailing for daily commute</li>

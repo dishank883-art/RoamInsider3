@@ -142,17 +142,19 @@ export default function InternetConnectivity({ internetData, citySlug }: Interne
             <div>
               <h4 className="font-semibold text-travel-blue mb-3">Cafes & Restaurants</h4>
               <div className="space-y-3">
-                {cityData?.wifiHotspots.cafes.map((cafe, index) => (
-                  <div key={index} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                    <div>
-                      <span className="font-medium">{cafe.name}</span>
-                      <div className="text-sm text-muted-navy">{cafe.speed}</div>
+                {cityData?.wifiHotspots?.cafes && cityData.wifiHotspots.cafes.length > 0 ? (
+                  cityData.wifiHotspots.cafes.map((cafe, index) => (
+                    <div key={index} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                      <div>
+                        <span className="font-medium">{cafe.name}</span>
+                        <div className="text-sm text-muted-navy">{cafe.speed}</div>
+                      </div>
+                      <Badge className={`bg-sage-green/10 text-sage-green ${cafe.quality === 'Excellent' ? 'bg-sage-green/10 text-sage-green' : cafe.quality === 'Good' ? 'bg-vintage-gold/10 text-vintage-gold' : 'bg-travel-blue/10 text-travel-blue'}`}>
+                        {cafe.quality}
+                      </Badge>
                     </div>
-                    <Badge className={`bg-sage-green/10 text-sage-green ${cafe.quality === 'Excellent' ? 'bg-sage-green/10 text-sage-green' : cafe.quality === 'Good' ? 'bg-vintage-gold/10 text-vintage-gold' : 'bg-travel-blue/10 text-travel-blue'}`}>
-                      {cafe.quality}
-                    </Badge>
-                  </div>
-                )) || (
+                  ))
+                ) : (
                   <>
                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                       <div>
@@ -168,17 +170,19 @@ export default function InternetConnectivity({ internetData, citySlug }: Interne
             <div>
               <h4 className="font-semibold text-travel-blue mb-3">Public Spaces</h4>
               <div className="space-y-3">
-                {cityData?.wifiHotspots.publicSpaces.map((space, index) => (
-                  <div key={index} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                    <div>
-                      <span className="font-medium">{space.name}</span>
-                      <div className="text-sm text-muted-navy">{space.speed}</div>
+                {cityData?.wifiHotspots?.publicSpaces && cityData.wifiHotspots.publicSpaces.length > 0 ? (
+                  cityData.wifiHotspots.publicSpaces.map((space, index) => (
+                    <div key={index} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                      <div>
+                        <span className="font-medium">{space.name}</span>
+                        <div className="text-sm text-muted-navy">{space.speed}</div>
+                      </div>
+                      <Badge className={`${space.quality === 'Excellent' ? 'bg-sage-green/10 text-sage-green' : space.quality === 'Good' ? 'bg-vintage-gold/10 text-vintage-gold' : 'bg-travel-blue/10 text-travel-blue'}`}>
+                        {space.quality}
+                      </Badge>
                     </div>
-                    <Badge className={`${space.quality === 'Excellent' ? 'bg-sage-green/10 text-sage-green' : space.quality === 'Good' ? 'bg-vintage-gold/10 text-vintage-gold' : 'bg-travel-blue/10 text-travel-blue'}`}>
-                      {space.quality}
-                    </Badge>
-                  </div>
-                )) || (
+                  ))
+                ) : (
                   <>
                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                       <div>
