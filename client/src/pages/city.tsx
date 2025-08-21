@@ -117,9 +117,9 @@ export default function CityPage() {
       case "internet":
         return <InternetConnectivity internetData={city.internetConnectivity} citySlug={city.slug} />;
       case "transport":
-        return <Transportation transportData={city.transportation} citySlug={citySlug} />;
+        return <Transportation transportData={city.transportation} citySlug={city.slug} />;
       case "weather":
-        return <WeatherClimate climateData={city.climate} cityName={city.name} cityId={city.id} citySlug={citySlug} />;
+        return <WeatherClimate climateData={city.climate} cityName={city.name} cityId={city.id} citySlug={city.slug} />;
       case "coworking":
         return <CoworkingSpaces city={city} />;
       case "safety":
