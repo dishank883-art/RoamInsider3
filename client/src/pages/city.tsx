@@ -14,7 +14,7 @@ import SafetyHealthcare from "@/components/city/safety-healthcare";
 import LifestyleCulture from "@/components/city/lifestyle-culture";
 import ThingsToDo from "@/components/city/things-to-do";
 import CommunityNomads from "@/components/city/community-nomads";
-import InsiderHacks from "@/components/city/insider-hacks-fixed";
+import InsiderHacks from "@/components/city/insider-hacks-city-specific";
 import CityConnections from "@/components/city/city-connections";
 import FestivalsEvents from "@/components/city/festivals-events";
 import ShoppingMarkets from "@/components/city/shopping-markets";

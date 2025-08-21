@@ -9,8 +9,11 @@ interface InsiderHacksProps {
 }
 
 export default function InsiderHacks({ city }: InsiderHacksProps) {
-  const goaInsiderHacks = {
-    moneyHacks: {
+  // City-specific insider hacks data
+  const getCitySpecificHacks = (cityName: string) => {
+    const hacksByCity: { [key: string]: any } = {
+      "Goa": {
+        moneyHacks: {
       accommodation: [
         "Book monthly stays directly with property owners via Facebook groups for 40-60% discounts",
         "Stay in Arambol/Ashwem instead of Baga/Calangute for 50% cheaper accommodation",
@@ -59,7 +62,115 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
         days: "Tuesday, Friday, Saturday"
       }
     ]
-  };
+      },
+      "Mumbai": {
+        moneyHacks: {
+      accommodation: [
+        "Stay in suburbs like Malad/Kandivali for 60% cheaper rent than South Mumbai",
+        "Book PG accommodations in Andheri/Powai for tech professionals (₹15,000-25,000)",
+        "Share 2-3 BHK flats with roommates near metro stations for easy commute",
+        "Avoid broker fees by using NoBroker app or direct owner contacts",
+        "Book corporate guest houses for short stays - cheaper than hotels"
+      ],
+      food: [
+        "Eat at local khanavals (home-style restaurants) for ₹80-150 meals",
+        "Use Zomato Gold for 1+1 offers at premium restaurants",
+        "Street food at Juhu Beach/Marine Drive costs 70% less than mall food courts",
+        "Buy groceries at DMart/Big Bazaar for 20-30% savings vs local stores",
+        "Office lunch dabbawalas deliver home-cooked meals for ₹100-150/day"
+      ],
+      transport: [
+        "Buy monthly local train passes for unlimited travel (₹300-500)",
+        "Use Mumbai Metro + local train combo passes for integrated travel",
+        "Bike rentals from Bounce/Vogo cheaper than Uber for short distances",
+        "Share auto-rickshaws with others going same direction",
+        "Walk short distances - many areas are well-connected"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Hidden Beach at Worli Fort",
+        location: "Worli",
+        tip: "Walk through fishing village to access secluded beach with skyline views",
+        timing: "Sunset hours"
+      },
+      {
+        name: "Rooftop Coworking Secret",
+        location: "Bandra",
+        tip: "Cafe Mocha's 3rd floor has unlimited WiFi + workspace for ₹200/day",
+        website: "https://www.cafemocha.in/"
+      },
+      {
+        name: "Free City Views",
+        location: "Hanging Gardens",
+        tip: "Malabar Hill gardens offer free panoramic city views - better than paid observation decks",
+        timing: "Early morning or evening"
+      },
+      {
+        name: "Wholesale Shopping Secret",
+        location: "Crawford Market",
+        tip: "Shop before 10 AM for wholesale prices on electronics/clothes",
+        days: "Tuesday to Saturday"
+      }
+    ]
+  },
+  "Bangalore": {
+    moneyHacks: {
+      accommodation: [
+        "Stay in HSR Layout/Marathahalli for tech jobs with lower rent than Koramangala",
+        "PG accommodations near Electronic City/Whitefield for IT professionals",
+        "Hostels in Indiranagar for ₹8,000-12,000/month with networking opportunities",
+        "Flat-sharing apps like FlatMate/SpareRoom for verified roommates",
+        "Book service apartments for 1-3 months stays - better rates than hotels"
+      ],
+      food: [
+        "Darshinis (local fast food chains) offer meals for ₹50-100",
+        "Use Swiggy Super/Zomato Pro for unlimited free deliveries",
+        "MTR/Vidyarthi Bhavan for authentic South Indian breakfast under ₹100",
+        "Eat at office cafeterias - most tech companies have subsidized food",
+        "Brigade Road/Commercial Street have budget-friendly restaurants"
+      ],
+      transport: [
+        "Namma Metro passes for unlimited monthly travel (₹900)",
+        "Bounce/Vogo bike rentals cheaper than auto-rickshaws for tech parks",
+        "BMTC Volvo buses comfortable and affordable for long distances",
+        "Share Uber/Ola with colleagues for office commutes",
+        "Cycle rentals available near metro stations"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Hidden Lake Access",
+        location: "Ulsoor Lake",
+        tip: "Enter from backside gate near Trinity Church for peaceful boating",
+        timing: "Early morning"
+      },
+      {
+        name: "Startup Coworking Hub",
+        location: "Koramangala",
+        tip: "The Hive's day passes include networking events and mentorship",
+        website: "https://thehive.work/"
+      },
+      {
+        name: "Free Sunset Views",
+        location: "Nandi Hills",
+        tip: "Drive/bike early morning to avoid crowds and parking fees",
+        timing: "5-7 AM arrival"
+      },
+      {
+        name: "Tech Meetup Spot",
+        location: "Indiranagar",
+        tip: "Attend free tech meetups at CoWrks for networking and job opportunities",
+        days: "Weekends"
+      }
+    ]
+  }
+};
+
+return hacksByCity[cityName] || hacksByCity["Goa"];
+};
+
+const cityHacks = getCitySpecificHacks(city.name);
 
   return (
     <Card className="bg-white rounded-2xl shadow-lg">
@@ -86,7 +197,7 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
                 Accommodation Savings
               </h4>
               <ul className="space-y-2 text-sm text-muted-navy">
-                {goaInsiderHacks.moneyHacks.accommodation.map((tip, index) => (
+                {cityHacks.moneyHacks.accommodation.map((tip, index) => (
                   <li key={index}>• {tip}</li>
                 ))}
               </ul>
@@ -98,7 +209,7 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
                 Food & Dining
               </h4>
               <ul className="space-y-2 text-sm text-muted-navy">
-                {goaInsiderHacks.moneyHacks.food.map((tip, index) => (
+                {cityHacks.moneyHacks.food.map((tip, index) => (
                   <li key={index}>• {tip}</li>
                 ))}
               </ul>
@@ -110,7 +221,7 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
                 Transport Hacks
               </h4>
               <ul className="space-y-2 text-sm text-muted-navy">
-                {goaInsiderHacks.moneyHacks.transport.map((tip, index) => (
+                {cityHacks.moneyHacks.transport.map((tip, index) => (
                   <li key={index}>• {tip}</li>
                 ))}
               </ul>
@@ -125,7 +236,7 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
             🗺️ Secret Spots & Hidden Gems
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
-            {goaInsiderHacks.secretSpots.map((spot, index) => (
+            {cityHacks.secretSpots.map((spot, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                 <div className="flex items-start justify-between mb-3">
                   <h4 className="font-semibold text-travel-blue">{spot.name}</h4>

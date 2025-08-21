@@ -362,6 +362,82 @@ export class MemStorage implements IStorage {
       updatedAt: new Date(),
     });
 
+    // Add New Delhi
+    const newDelhiId = randomUUID();
+    this.cities.set(newDelhiId, {
+      id: newDelhiId,
+      name: "New Delhi",
+      state: "Delhi",
+      slug: "new-delhi",
+      description: "India's vibrant capital with rich history, government opportunities, and emerging startup ecosystem.",
+      heroImage: "https://images.unsplash.com/photo-1587474260584-136574528ed5",
+      latitude: "28.6139",
+      longitude: "77.2090",
+      population: 32900000,
+      rating: "4.5",
+      isPopular: true,
+      tags: ["Capital City", "Government", "History", "Politics"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Add Alleppey
+    const alleppeyId = randomUUID();
+    this.cities.set(alleppeyId, {
+      id: alleppeyId,
+      name: "Alleppey",
+      state: "Kerala",
+      slug: "alleppey",
+      description: "Venice of the East with serene backwaters, houseboats, and peaceful digital nomad environment.",
+      heroImage: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944",
+      latitude: "9.4981",
+      longitude: "76.3388",
+      population: 174000,
+      rating: "4.7",
+      isPopular: true,
+      tags: ["Backwaters", "Houseboats", "Peaceful", "Nature"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Add Varkala
+    const varkalaId = randomUUID();
+    this.cities.set(varkalaId, {
+      id: varkalaId,
+      name: "Varkala",
+      state: "Kerala",
+      slug: "varkala",
+      description: "Cliff-top beach town with spiritual vibes, yoga retreats, and growing nomad community.",
+      heroImage: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+      latitude: "8.7379",
+      longitude: "76.7160",
+      population: 42100,
+      rating: "4.8",
+      isPopular: true,
+      tags: ["Cliffs", "Yoga", "Spiritual", "Beach"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Add Kasol
+    const kasolId = randomUUID();
+    this.cities.set(kasolId, {
+      id: kasolId,
+      name: "Kasol",
+      state: "Himachal Pradesh",
+      slug: "kasol",
+      description: "Mountain paradise in Parvati Valley with Israeli culture, trekking opportunities, and peaceful environment.",
+      heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      latitude: "32.0997",
+      longitude: "77.3102",
+      population: 1200,
+      rating: "4.9",
+      isPopular: true,
+      tags: ["Mountains", "Trekking", "Israeli Culture", "Valley"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
     // Add some events
     const eventId1 = randomUUID();
     this.events.set(eventId1, {
