@@ -72,12 +72,12 @@ export default function Transportation({ transportData }: TransportationProps) {
             </div>
             <div className="text-center">
               <h3 className="font-semibold text-travel-blue mb-2">Ride Hailing</h3>
-              <div className="text-3xl font-bold text-travel-blue">{transportData.rideHailing.length}</div>
+              <div className="text-3xl font-bold text-travel-blue">{transportData.rideHailing?.length || 0}</div>
               <div className="text-sm text-muted-navy">Services</div>
             </div>
             <div className="text-center">
               <h3 className="font-semibold text-travel-blue mb-2">Airports</h3>
-              <div className="text-3xl font-bold text-sage-green">{transportData.airports.length}</div>
+              <div className="text-3xl font-bold text-sage-green">{transportData.airports?.length || 0}</div>
               <div className="text-sm text-muted-navy">Available</div>
             </div>
           </div>
@@ -121,7 +121,7 @@ export default function Transportation({ transportData }: TransportationProps) {
             Ride Hailing Services
           </h3>
           <div className="flex flex-wrap gap-3">
-            {transportData.rideHailing.map((service, index) => (
+            {transportData.rideHailing?.map((service, index) => (
               <Badge 
                 key={index}
                 className="bg-travel-blue/10 text-travel-blue px-4 py-2 text-sm"
@@ -139,7 +139,7 @@ export default function Transportation({ transportData }: TransportationProps) {
             Airports
           </h3>
           <div className="grid gap-4">
-            {transportData.airports.map((airport, index) => (
+            {transportData.airports?.map((airport, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-4">
                 <div className="flex justify-between items-start">
                   <div>
@@ -166,7 +166,7 @@ export default function Transportation({ transportData }: TransportationProps) {
             Railway Stations
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
-            {transportData.trainStations.map((station, index) => (
+            {transportData.trainStations?.map((station, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-4">
                 <div className="flex justify-between items-center">
                   <div>

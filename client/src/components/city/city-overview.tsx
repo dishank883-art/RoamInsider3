@@ -23,9 +23,9 @@ export default function CityOverview({ city }: CityOverviewProps) {
           </p>
           <p className="text-muted-navy leading-relaxed">
             Located in {city.state}, {city.name} has become a hotspot for digital nomads seeking 
-            {city.tags.includes("Beach") ? " a perfect work-life balance by the sea" : 
-             city.tags.includes("Tech Scene") ? " thriving tech opportunities and innovation" :
-             city.tags.includes("Heritage") ? " rich cultural experiences and historical significance" :
+            {city.tags?.includes("Beach") ? " a perfect work-life balance by the sea" : 
+             city.tags?.includes("Tech Scene") ? " thriving tech opportunities and innovation" :
+             city.tags?.includes("Heritage") ? " rich cultural experiences and historical significance" :
              " unique experiences and opportunities"}. 
             The city offers a perfect blend of modern amenities and local culture, making it an ideal 
             destination for remote workers.

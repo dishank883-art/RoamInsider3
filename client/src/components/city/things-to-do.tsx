@@ -183,7 +183,7 @@ export default function ThingsToDo({ attractions, events }: ThingsToDoProps) {
                       variant="outline" 
                       size="sm"
                       className="mt-2"
-                      onClick={() => window.open(event.url, '_blank')}
+                      onClick={() => window.open(event.url!, '_blank')}
                     >
                       <ExternalLink className="h-3 w-3 mr-1" />
                       Learn More

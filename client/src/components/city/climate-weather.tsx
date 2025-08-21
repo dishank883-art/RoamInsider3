@@ -48,7 +48,7 @@ export default function ClimateWeather({ climateData, cityId }: ClimateWeatherPr
   const tempColor = getTemperatureColor(climateData.avgTempCelsius);
   const humidityColor = climateData.avgHumidity ? getHumidityColor(climateData.avgHumidity) : "vintage-gold";
 
-  const weatherIcon = currentWeather?.icon === "sunny" ? Sun : Cloud;
+  const weatherIcon = (currentWeather as any)?.icon === "sunny" ? Sun : Cloud;
 
   return (
     <Card className="bg-white rounded-2xl shadow-lg">
@@ -68,18 +68,18 @@ export default function ClimateWeather({ climateData, cityId }: ClimateWeatherPr
                 <div className="text-3xl font-bold text-muted-navy">Loading...</div>
               ) : (
                 <div className={`text-3xl font-bold text-${tempColor}`}>
-                  {currentWeather?.temperature || climateData.avgTempCelsius}°C
+                  {(currentWeather as any)?.temperature || climateData.avgTempCelsius}°C
                 </div>
               )}
               <div className="text-sm text-muted-navy">
-                {currentWeather?.description || "Average temperature"}
+                {(currentWeather as any)?.description || "Average temperature"}
               </div>
             </div>
             <div className="text-center">
               <h3 className="font-semibold text-travel-blue mb-2">Humidity</h3>
               <div className={`text-3xl font-bold text-${humidityColor}`}>
-                {currentWeather?.humidity || climateData.avgHumidity || "N/A"}
-                {(currentWeather?.humidity || climateData.avgHumidity) && "%"}
+                {(currentWeather as any)?.humidity || climateData.avgHumidity || "N/A"}
+                {((currentWeather as any)?.humidity || climateData.avgHumidity) && "%"}
               </div>
               <div className="text-sm text-muted-navy">
                 {weatherLoading ? "Loading..." : "Current humidity"}
@@ -111,15 +111,15 @@ export default function ClimateWeather({ climateData, cityId }: ClimateWeatherPr
                     <Sun className="h-6 w-6 text-vintage-gold" />
                   </div>
                   <div>
-                    <div className="font-semibold text-travel-blue">{currentWeather.description}</div>
+                    <div className="font-semibold text-travel-blue">{(currentWeather as any).description}</div>
                     <div className="text-sm text-muted-navy">
-                      Updated: {new Date(currentWeather.updatedAt).toLocaleTimeString()}
+                      Updated: {new Date((currentWeather as any).updatedAt).toLocaleTimeString()}
                     </div>
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-vintage-gold">{currentWeather.temperature}°C</div>
-                  <div className="text-sm text-muted-navy">{currentWeather.humidity}% humidity</div>
+                  <div className="text-2xl font-bold text-vintage-gold">{(currentWeather as any).temperature}°C</div>
+                  <div className="text-sm text-muted-navy">{(currentWeather as any).humidity}% humidity</div>
                 </div>
               </div>
             </div>
@@ -155,7 +155,7 @@ export default function ClimateWeather({ climateData, cityId }: ClimateWeatherPr
                   <span className="font-semibold text-travel-blue">Monsoon Months</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {climateData.rainyMonths.map((month, index) => (
+                  {climateData.rainyMonths?.map((month, index) => (
                     <Badge key={index} variant="secondary" className="bg-travel-blue/10 text-travel-blue">
                       {month}
                     </Badge>
@@ -206,7 +206,7 @@ export default function ClimateWeather({ climateData, cityId }: ClimateWeatherPr
             Weather Tips
           </h4>
           <ul className="space-y-1 text-muted-navy text-sm">
-            <li>• Carry an umbrella during monsoon season ({climateData.rainyMonths.join(", ")})</li>
+            <li>• Carry an umbrella during monsoon season ({climateData.rainyMonths?.join(", ") || "Jun-Sep"})</li>
             <li>• Light cotton clothes work best in hot and humid weather</li>
             <li>• Air conditioning is essential during summer months</li>
             <li>• Winter evenings can get cool, pack light jackets</li>

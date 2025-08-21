@@ -13,7 +13,8 @@ import type { City } from "@shared/schema";
 
 export default function Home() {
   const { data: cities, isLoading } = useQuery<City[]>({
-    queryKey: ["/api/cities", "popular=true"],
+    queryKey: ["/api/cities", { popular: true }],
+    queryFn: () => fetch('/api/cities?popular=true').then(res => res.json()),
   });
 
   return (

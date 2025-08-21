@@ -124,7 +124,7 @@ export default function CityPage() {
               </div>
               
               <div className="flex flex-wrap gap-2">
-                {city.tags.map((tag, index) => (
+                {city.tags?.map((tag, index) => (
                   <span 
                     key={index}
                     className="px-3 py-1 bg-vintage-gold/20 text-vintage-gold rounded-full text-sm font-medium border border-vintage-gold/30"

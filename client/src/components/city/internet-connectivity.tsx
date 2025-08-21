@@ -54,7 +54,7 @@ export default function InternetConnectivity({ internetData }: InternetConnectiv
             </div>
             <div className="text-center">
               <h3 className="font-semibold text-travel-blue mb-2">Coworking Spaces</h3>
-              <div className="text-3xl font-bold text-travel-blue">{internetData.coworkingSpaces.length}+</div>
+              <div className="text-3xl font-bold text-travel-blue">{internetData.coworkingSpaces?.length || 0}+</div>
               <div className="text-sm text-muted-navy">Available</div>
             </div>
             <div className="text-center">
@@ -85,7 +85,7 @@ export default function InternetConnectivity({ internetData }: InternetConnectiv
             Top Coworking Spaces
           </h3>
           <div className="grid gap-4">
-            {internetData.coworkingSpaces.map((space, index) => (
+            {internetData.coworkingSpaces?.map((space, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
                 <div className="flex justify-between items-start mb-3">
                   <div>
@@ -126,7 +126,7 @@ export default function InternetConnectivity({ internetData }: InternetConnectiv
             SIM & Data Plans
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
-            {internetData.simProviders.map((provider, index) => (
+            {internetData.simProviders?.map((provider, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-4">
                 <h4 className="font-semibold text-travel-blue mb-3">{provider.provider}</h4>
                 <div className="space-y-2">

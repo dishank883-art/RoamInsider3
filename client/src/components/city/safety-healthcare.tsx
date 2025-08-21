@@ -164,7 +164,7 @@ export default function SafetyHealthcare({ safetyData }: SafetyHealthcareProps) 
             Healthcare Facilities
           </h3>
           <div className="grid gap-4">
-            {safetyData.hospitals.map((hospital, index) => (
+            {safetyData.hospitals?.map((hospital, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-4">
                 <div className="flex justify-between items-start">
                   <div>

@@ -432,7 +432,7 @@ export class MemStorage implements IStorage {
       city.name.toLowerCase().includes(searchTerm) ||
       city.state.toLowerCase().includes(searchTerm) ||
       city.description.toLowerCase().includes(searchTerm) ||
-      city.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+      city.tags?.some(tag => tag.toLowerCase().includes(searchTerm))
     );
   }
 
@@ -447,6 +447,10 @@ export class MemStorage implements IStorage {
     const city: City = {
       ...insertCity,
       id,
+      population: insertCity.population ?? null,
+      rating: insertCity.rating ?? null,
+      isPopular: insertCity.isPopular ?? null,
+      tags: insertCity.tags ?? null,
       createdAt: new Date(),
       updatedAt: new Date(),
     };
@@ -463,6 +467,15 @@ export class MemStorage implements IStorage {
     const cost: CostOfLiving = {
       ...insertCost,
       id,
+      studioRentINR: insertCost.studioRentINR ?? null,
+      oneBhkRentINR: insertCost.oneBhkRentINR ?? null,
+      twoBhkRentINR: insertCost.twoBhkRentINR ?? null,
+      foodINR: insertCost.foodINR ?? null,
+      transportINR: insertCost.transportINR ?? null,
+      utilitiesINR: insertCost.utilitiesINR ?? null,
+      internetINR: insertCost.internetINR ?? null,
+      gymMembershipINR: insertCost.gymMembershipINR ?? null,
+      entertainmentINR: insertCost.entertainmentINR ?? null,
       updatedAt: new Date(),
     };
     this.costsOfLiving.set(id, cost);
@@ -478,6 +491,9 @@ export class MemStorage implements IStorage {
     const internet: InternetConnectivity = {
       ...insertInternet,
       id,
+      coworkingSpaces: insertInternet.coworkingSpaces ?? null,
+      simProviders: insertInternet.simProviders ?? null,
+      wifiAvailability: insertInternet.wifiAvailability ?? null,
       updatedAt: new Date(),
     };
     this.internetConnectivity.set(id, internet);
@@ -493,6 +509,12 @@ export class MemStorage implements IStorage {
     const transport: Transportation = {
       ...insertTransport,
       id,
+      localTransport: insertTransport.localTransport ?? null,
+      walkabilityScore: insertTransport.walkabilityScore ?? null,
+      rideHailing: insertTransport.rideHailing ?? null,
+      airports: insertTransport.airports ?? null,
+      trainStations: insertTransport.trainStations ?? null,
+      intercityConnectivity: insertTransport.intercityConnectivity ?? null,
       updatedAt: new Date(),
     };
     this.transportation.set(id, transport);
@@ -508,6 +530,11 @@ export class MemStorage implements IStorage {
     const climate: Climate = {
       ...insertClimate,
       id,
+      avgHumidity: insertClimate.avgHumidity ?? null,
+      rainyMonths: insertClimate.rainyMonths ?? null,
+      bestTimeToVisit: insertClimate.bestTimeToVisit ?? null,
+      climateType: insertClimate.climateType ?? null,
+      currentWeather: insertClimate.currentWeather ?? null,
       updatedAt: new Date(),
     };
     this.climate.set(id, climate);
@@ -523,6 +550,11 @@ export class MemStorage implements IStorage {
     const safety: Safety = {
       ...insertSafety,
       id,
+      womenSafetyScore: insertSafety.womenSafetyScore ?? null,
+      crimeRate: insertSafety.crimeRate ?? null,
+      hospitals: insertSafety.hospitals ?? null,
+      emergencyNumbers: insertSafety.emergencyNumbers ?? null,
+      pollutionIndex: insertSafety.pollutionIndex ?? null,
       updatedAt: new Date(),
     };
     this.safety.set(id, safety);
@@ -538,6 +570,10 @@ export class MemStorage implements IStorage {
     const lifestyle: Lifestyle = {
       ...insertLifestyle,
       id,
+      nightlife: insertLifestyle.nightlife ?? null,
+      foodScene: insertLifestyle.foodScene ?? null,
+      fitness: insertLifestyle.fitness ?? null,
+      culture: insertLifestyle.culture ?? null,
       updatedAt: new Date(),
     };
     this.lifestyle.set(id, lifestyle);
@@ -553,6 +589,12 @@ export class MemStorage implements IStorage {
     const event: Event = {
       ...insertEvent,
       id,
+      description: insertEvent.description ?? null,
+      url: insertEvent.url ?? null,
+      venue: insertEvent.venue ?? null,
+      category: insertEvent.category ?? null,
+      isPaid: insertEvent.isPaid ?? null,
+      price: insertEvent.price ?? null,
       createdAt: new Date(),
     };
     this.events.set(id, event);
@@ -568,6 +610,13 @@ export class MemStorage implements IStorage {
     const attraction: Attraction = {
       ...insertAttraction,
       id,
+      address: insertAttraction.address ?? null,
+      image: insertAttraction.image ?? null,
+      description: insertAttraction.description ?? null,
+      rating: insertAttraction.rating ?? null,
+      priceRange: insertAttraction.priceRange ?? null,
+      timings: insertAttraction.timings ?? null,
+      isHiddenGem: insertAttraction.isHiddenGem ?? null,
       createdAt: new Date(),
     };
     this.attractions.set(id, attraction);

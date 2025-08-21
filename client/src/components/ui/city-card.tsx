@@ -76,7 +76,7 @@ export default function CityCard({ city }: CityCardProps) {
         </div>
         
         <div className="flex flex-wrap gap-2 mb-4">
-          {city.tags.slice(0, 3).map((tag, index) => (
+          {city.tags?.slice(0, 3).map((tag, index) => (
             <Badge 
               key={index}
               variant="secondary"
