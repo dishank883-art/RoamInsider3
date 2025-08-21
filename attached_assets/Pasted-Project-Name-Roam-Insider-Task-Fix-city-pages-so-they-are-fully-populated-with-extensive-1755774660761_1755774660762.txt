@@ -1,0 +1,139 @@
+Project Name: Roam Insider
+
+
+
+Task:
+
+Fix city pages so they are fully populated with extensive content in every section, not just empty headings. All city guide sections should be implemented as scrolling tabs (tabbed navigation at the top, content loads on click).
+
+🔹 Instructions for City Pages
+Layout
+
+At the top of each city page, add a scrollable horizontal tab navigation bar.
+
+Each tab corresponds to a section (Overview, Cost of Living, Internet, Transport, Climate, Safety, etc.).
+
+Clicking a tab shows its full content below (smooth scroll or dynamic load).
+
+Sections (ALL must be filled with real content, no placeholders)
+
+Overview & Insider Tips
+
+Short, engaging intro, city vibe, what makes it unique.
+
+Cost of Living (INR + USD)
+
+Rent (studio, 1BHK, 2BHK, city center vs suburb)
+
+Utilities (electricity, water, internet, gas)
+
+Food (grocery basket, street food, mid-range meal, fine dining)
+
+Coffee, coworking, gyms, SIM/data packs
+
+Transport (metro pass, bus ticket, auto fare, cab rates)
+
+Entertainment (cinema, bars, concerts, memberships)
+
+Show both INR and USD values side by side
+
+Internet & Connectivity
+
+Avg. broadband speed, mobile internet coverage
+
+Coworking spaces, cafes with WiFi, SIM card providers
+
+Transportation & Accessibility
+
+Public transport options (metro, bus, rickshaw, taxi)
+
+Intercity travel (train, bus, flights)
+
+Airport info
+
+Walkability & traffic conditions
+
+Climate & Best Time to Visit
+
+Monthly avg. temps, rainfall, humidity
+
+Best seasons for nomads/travelers
+
+API for live weather (update twice daily)
+
+Safety & Healthcare
+
+Crime stats, scams to avoid
+
+Hospitals/clinics, air quality index, women traveler safety
+
+Lifestyle & Culture
+
+Local food scene, nightlife, fitness/wellness options
+
+Local customs, alcohol/cannabis rules
+
+Festivals & Events
+
+Major cultural/religious festivals (with dates)
+
+Local events via API (monthly updates)
+
+Things to Do & Experiences
+
+Attractions, hikes, day trips
+
+Hidden gems / insider recommendations
+
+Shopping & Markets
+
+Local bazaars, malls, souvenirs
+
+Community & Nomad Scene
+
+Meetup groups, coworking communities, expat hubs
+
+Insider Hacks
+
+How to save money, avoid scams, quick tips
+
+Connectivity to Other Cities
+
+Trains, flights, buses with avg. cost & duration
+
+🔹 Design & UX
+Tabs should be scrollable, with icons (e.g. 💰 for cost, 🌐 for internet, 🚌 for transport).
+
+Each section should look like a mini guidebook:
+
+Tables (for costs INR + USD)
+
+Charts (for climate/weather)
+
+Maps (for transport & attractions)
+
+Lists (for things to do, hacks, festivals)
+
+Keep it classy, elegant, and traveler-themed (unique, not generic).
+
+🔹 Technical
+Use Next.js/React components.
+
+All sections must auto-populate with content using:
+
+APIs (weather, internet, events, cost-of-living) → update 2x daily
+
+Internal knowledge for fixed content
+
+If API data is missing, auto-fill with best knowledge available.
+
+No empty placeholders allowed — every section must have content.
+
+🎯 Goal
+City pages should feel like a one-stop digital nomad/travel guide.
+
+All sections filled → no “Coming soon”.
+
+Data always in INR + USD.
+
+Smooth, scrollable tab navigation → fun & engaging UX.

@@ -23,19 +23,22 @@ export default function CostOfLiving({ costData }: CostOfLivingProps) {
     );
   }
 
+  // Helper function to convert INR to USD (approximate rate: 1 USD = 83 INR)
+  const convertToUSD = (inrAmount: number) => Math.round(inrAmount / 83);
+
   const costItems = [
-    { icon: Home, label: "Studio Rent", value: costData.studioRentINR, category: "Housing" },
-    { icon: Home, label: "1 BHK Rent", value: costData.oneBhkRentINR, category: "Housing" },
-    { icon: Home, label: "2 BHK Rent", value: costData.twoBhkRentINR, category: "Housing" },
-    { icon: DollarSign, label: "Utilities", value: costData.utilitiesINR, category: "Monthly" },
-    { icon: Coffee, label: "Groceries", value: costData.groceriesINR, category: "Monthly" },
-    { icon: Coffee, label: "Eating Out", value: costData.eatingOutINR, category: "Monthly" },
-    { icon: Wifi, label: "Coworking", value: costData.coworkingINR, category: "Monthly" },
-    { icon: Car, label: "Transport", value: costData.transportINR, category: "Monthly" },
-    { icon: Wifi, label: "SIM & Data", value: costData.simDataINR, category: "Monthly" },
-    { icon: Dumbbell, label: "Gym", value: costData.gymINR, category: "Monthly" },
-    { icon: Coffee, label: "Coffee", value: costData.coffeeINR, category: "Per Cup" },
-    { icon: DollarSign, label: "Entertainment", value: costData.entertainmentINR, category: "Monthly" },
+    { icon: Home, label: "Studio Rent", valueINR: costData.studioRentINR, valueUSD: convertToUSD(costData.studioRentINR), category: "Housing", note: "City center vs suburbs varies 30-50%" },
+    { icon: Home, label: "1 BHK Rent", valueINR: costData.oneBhkRentINR, valueUSD: convertToUSD(costData.oneBhkRentINR), category: "Housing", note: "Furnished apartments cost 20% more" },
+    { icon: Home, label: "2 BHK Rent", valueINR: costData.twoBhkRentINR, valueUSD: convertToUSD(costData.twoBhkRentINR), category: "Housing", note: "Great for sharing with roommates" },
+    { icon: DollarSign, label: "Utilities", valueINR: costData.utilitiesINR, valueUSD: convertToUSD(costData.utilitiesINR), category: "Monthly", note: "Electricity, water, gas, internet" },
+    { icon: Coffee, label: "Groceries", valueINR: costData.groceriesINR, valueUSD: convertToUSD(costData.groceriesINR), category: "Monthly", note: "Fresh produce, basic cooking ingredients" },
+    { icon: Coffee, label: "Eating Out", valueINR: costData.eatingOutINR, valueUSD: convertToUSD(costData.eatingOutINR), category: "Monthly", note: "Mix of street food and restaurants" },
+    { icon: Wifi, label: "Coworking", valueINR: costData.coworkingINR, valueUSD: convertToUSD(costData.coworkingINR), category: "Monthly", note: "Day passes available for ₹200-500" },
+    { icon: Car, label: "Transport", valueINR: costData.transportINR, valueUSD: convertToUSD(costData.transportINR), category: "Monthly", note: "Metro, bus, auto rickshaw, occasional cab" },
+    { icon: Wifi, label: "SIM & Data", valueINR: costData.simDataINR, valueUSD: convertToUSD(costData.simDataINR), category: "Monthly", note: "Unlimited calls + 2GB/day data" },
+    { icon: Dumbbell, label: "Gym", valueINR: costData.gymINR, valueUSD: convertToUSD(costData.gymINR), category: "Monthly", note: "Basic gym membership with equipment" },
+    { icon: Coffee, label: "Coffee", valueINR: costData.coffeeINR, valueUSD: convertToUSD(costData.coffeeINR), category: "Per Item", note: "Cafe coffee (street tea costs ₹10-20)" },
+    { icon: DollarSign, label: "Entertainment", valueINR: costData.entertainmentINR, valueUSD: convertToUSD(costData.entertainmentINR), category: "Monthly", note: "Movies, bars, events, activities" },
   ];
 
   const categories = {
@@ -75,15 +78,21 @@ export default function CostOfLiving({ costData }: CostOfLivingProps) {
             <Home className="mr-2 h-5 w-5" />
             Housing (Monthly Rent)
           </h3>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid gap-4">
             {categories.Housing.map((item, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-muted-navy">{item.label}</span>
-                  <span className="font-semibold text-travel-blue">
-                    {item.value ? `₹${item.value.toLocaleString()}` : 'N/A'}
-                  </span>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-medium text-travel-blue">{item.label}</span>
+                  <div className="text-right">
+                    <div className="font-bold text-travel-blue">
+                      {item.valueINR ? `₹${item.valueINR.toLocaleString()}` : 'N/A'}
+                    </div>
+                    <div className="text-sm text-muted-navy">
+                      {item.valueUSD ? `$${item.valueUSD}` : ''}
+                    </div>
+                  </div>
                 </div>
+                <p className="text-xs text-muted-navy">{item.note}</p>
               </div>
             ))}
           </div>
@@ -95,36 +104,110 @@ export default function CostOfLiving({ costData }: CostOfLivingProps) {
             <DollarSign className="mr-2 h-5 w-5" />
             Monthly Expenses
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid gap-4">
             {categories.Monthly.map((item, index) => (
-              <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div className="flex items-center space-x-3">
-                  <item.icon className="h-4 w-4 text-vintage-gold" />
-                  <span className="text-muted-navy">{item.label}</span>
+              <div key={index} className="bg-gray-50 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center space-x-3">
+                    <item.icon className="h-4 w-4 text-vintage-gold" />
+                    <span className="font-medium text-travel-blue">{item.label}</span>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-bold text-travel-blue">
+                      {item.valueINR ? `₹${item.valueINR.toLocaleString()}` : 'N/A'}
+                    </div>
+                    <div className="text-sm text-muted-navy">
+                      {item.valueUSD ? `$${item.valueUSD}` : ''}
+                    </div>
+                  </div>
                 </div>
-                <span className="font-semibold text-travel-blue">
-                  {item.value ? `₹${item.value.toLocaleString()}` : 'N/A'}
-                </span>
+                <p className="text-xs text-muted-navy">{item.note}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Other Costs */}
+        {/* Per-Item Costs */}
         <div>
-          <h3 className="font-semibold text-travel-blue mb-4">Other Costs</h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            {categories["Per Cup"].map((item, index) => (
-              <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div className="flex items-center space-x-3">
-                  <item.icon className="h-4 w-4 text-vintage-gold" />
-                  <span className="text-muted-navy">{item.label}</span>
+          <h3 className="font-semibold text-travel-blue mb-4">Per-Item Costs</h3>
+          <div className="grid gap-4">
+            {categories["Per Item"].map((item, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center space-x-3">
+                    <item.icon className="h-4 w-4 text-vintage-gold" />
+                    <span className="font-medium text-travel-blue">{item.label}</span>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-bold text-travel-blue">
+                      {item.valueINR ? `₹${item.valueINR}` : 'N/A'}
+                    </div>
+                    <div className="text-sm text-muted-navy">
+                      {item.valueUSD ? `$${item.valueUSD}` : ''}
+                    </div>
+                  </div>
                 </div>
-                <span className="font-semibold text-travel-blue">
-                  {item.value ? `₹${item.value}` : 'N/A'}
-                </span>
+                <p className="text-xs text-muted-navy">{item.note}</p>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Food Cost Breakdown */}
+        <div>
+          <h3 className="font-semibold text-travel-blue mb-4">🍽️ Food Price Guide</h3>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
+              <h4 className="font-semibold text-sage-green mb-2">Street Food</h4>
+              <div className="space-y-1 text-sm">
+                <div className="flex justify-between">
+                  <span>Vada Pav</span>
+                  <span>₹15-25 ($0.20)</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Dosa</span>
+                  <span>₹40-80 ($0.50-1)</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Thali</span>
+                  <span>₹80-150 ($1-2)</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20">
+              <h4 className="font-semibold text-travel-blue mb-2">Mid-Range</h4>
+              <div className="space-y-1 text-sm">
+                <div className="flex justify-between">
+                  <span>Restaurant Meal</span>
+                  <span>₹200-400 ($2.5-5)</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Pizza</span>
+                  <span>₹300-600 ($4-7)</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Cafe Meal</span>
+                  <span>₹250-500 ($3-6)</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-vintage-gold/5 rounded-lg p-4 border border-vintage-gold/20">
+              <h4 className="font-semibold text-vintage-gold mb-2">Fine Dining</h4>
+              <div className="space-y-1 text-sm">
+                <div className="flex justify-between">
+                  <span>Multi-course</span>
+                  <span>₹800-1500 ($10-18)</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Hotel Restaurant</span>
+                  <span>₹600-1200 ($7-15)</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>International</span>
+                  <span>₹700-1400 ($8-17)</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
