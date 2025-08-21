@@ -176,33 +176,7 @@ export const citySpecificData: Record<string, CitySpecificData> = {
         tip: "Visit early morning (6-8 AM) for wholesale vegetable prices and fresh selection",
         timing: "6 AM - 10 AM"
       }
-    ],
-    transportationTips: [
-      "Use BMTC buses extensively - get monthly passes for ₹1,000",
-      "Namma Metro connects major tech hubs like Koramangala and Electronic City",
-      "Book Ola/Uber Share during peak hours to save money",
-      "Rent bikes from Bounce or Yulu for short IT park commutes",
-      "Avoid Outer Ring Road during rush hours (8-10 AM, 7-9 PM)",
-      "Use suburban trains to reach distant areas like Whitefield"
-    ],
-    climateImpact: {
-      workingConditions: [
-        "Pleasant climate year-round (15-28°C) - perfect for outdoor coworking",
-        "Minimal monsoon disruption compared to other Indian cities",
-        "Cool evenings ideal for balcony workspaces and rooftop cafes"
-      ],
-      healthConsiderations: [
-        "Moderate pollution levels - air purifiers recommended during winter",
-        "Excellent weather reduces health issues compared to extreme climate cities",
-        "Tree-lined streets provide natural air filtration in many areas"
-      ],
-      equipmentNeeds: [
-        "Light cooling sufficient - fans often enough instead of AC",
-        "Minimal heating required - light woolens for December-January mornings",
-        "Stable power grid - backup power less critical than other metros"
-      ],
-      bestMonths: "October to February for optimal working conditions"
-    }
+    ]
   },
   udaipur: {
     moneyTips: [
@@ -418,7 +392,32 @@ export const citySpecificData: Record<string, CitySpecificData> = {
         tip: "Visit Tibetan refugee market for genuine handicrafts and traditional foods",
         timing: "9 AM - 6 PM"
       }
-    ]
+    ],
+    transportationTips: [
+      "Use shared jeeps to Darjeeling and nearby towns for budget travel",
+      "Book helicopter rides to remote areas during clear weather windows",
+      "Rent bikes for exploring nearby villages and tea gardens",
+      "Join shared taxi services to Bagdogra airport booked in advance",
+      "Use local bus services for very economical travel to surrounding areas"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Cool mountain climate year-round requires warm clothing for work",
+        "Monsoon season (Jun-Sep) brings frequent rain and connectivity issues",
+        "Clear winter days (Oct-Mar) perfect for outdoor coworking with mountain views"
+      ],
+      healthConsiderations: [
+        "High altitude (1,650m) may cause initial breathlessness for some",
+        "Cold and dry air requires increased water intake and lip protection",
+        "UV exposure higher at altitude - sunscreen essential year-round"
+      ],
+      equipmentNeeds: [
+        "Essential heating during winter months (Dec-Feb)",
+        "Backup power solutions for frequent power cuts during monsoon",
+        "Warm clothing and blankets necessary for comfortable work environment"
+      ],
+      bestMonths: "March to May and October to December for optimal working conditions"
+    }
   },
   mcleodganj: {
     moneyTips: [
@@ -513,7 +512,32 @@ export const citySpecificData: Record<string, CitySpecificData> = {
         tip: "Visit refugee handicraft center for authentic items at wholesale prices",
         timing: "10 AM - 5 PM, closed Sundays"
       }
-    ]
+    ],
+    transportationTips: [
+      "Use local buses between Dharamshala and McLeodganj for ₹10 rides",
+      "Share taxis to Delhi or Chandigarh with other travelers",
+      "Rent bikes for exploring nearby villages and monasteries",
+      "Join trekking groups for shared transportation to trail heads",
+      "Use app-based rides during monsoon when local transport is limited"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Cool mountain climate requires warm clothing for comfortable work",
+        "Monsoon season (Jun-Sep) brings heavy rains affecting outdoor work",
+        "Clear post-monsoon period (Oct-Nov) ideal for outdoor coworking"
+      ],
+      healthConsiderations: [
+        "High altitude (2,082m) may cause initial breathlessness",
+        "Cold and dry air requires increased hydration and skin protection",
+        "UV exposure higher at altitude - sunscreen essential"
+      ],
+      equipmentNeeds: [
+        "Essential heating during winter months (Dec-Feb)",
+        "Backup power solutions for monsoon power cuts",
+        "Warm blankets and clothing necessary for year-round comfort"
+      ],
+      bestMonths: "March to May and October to December for optimal conditions"
+    }
   },
   shillong: {
     moneyTips: [
@@ -752,8 +776,7 @@ export const citySpecificData: Record<string, CitySpecificData> = {
       {
         name: "Ancient Temple Complex",
         location: "Malana Village",
-        tip: "Respect photography restrictions but stunning views for peaceful work",
-        note: "Follow local customs strictly"
+        tip: "Respect photography restrictions but stunning views for peaceful work - Follow local customs strictly"
       }
     ]
   }
