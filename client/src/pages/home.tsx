@@ -9,13 +9,65 @@ import CityCard from "@/components/ui/city-card";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useState, useMemo } from "react";
 import type { City } from "@shared/schema";
 
 export default function Home() {
-  const { data: cities, isLoading } = useQuery<City[]>({
-    queryKey: ["/api/cities", { popular: true }],
-    queryFn: () => fetch('/api/cities?popular=true').then(res => res.json()),
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [budgetRange, setBudgetRange] = useState<[number, number]>([0, 100000]);
+  const [showAllCities, setShowAllCities] = useState(false);
+
+  const { data: allCities, isLoading } = useQuery<City[]>({
+    queryKey: ["/api/cities"],
+    queryFn: () => fetch('/api/cities').then(res => res.json()),
   });
+
+  // Filter and search cities
+  const filteredCities = useMemo(() => {
+    if (!allCities) return [];
+
+    let filtered = allCities.filter(city => {
+      // Search query filter
+      if (searchQuery) {
+        const query = searchQuery.toLowerCase();
+        if (
+          !city.name.toLowerCase().includes(query) &&
+          !city.state.toLowerCase().includes(query) &&
+          !city.description.toLowerCase().includes(query) &&
+          !city.tags?.some(tag => tag.toLowerCase().includes(query))
+        ) {
+          return false;
+        }
+      }
+
+      // Tags filter
+      if (selectedTags.length > 0) {
+        if (!city.tags?.some(tag => selectedTags.includes(tag))) {
+          return false;
+        }
+      }
+
+      return true;
+    });
+
+    // Show only popular cities initially, or all if requested
+    if (!showAllCities && !searchQuery && selectedTags.length === 0) {
+      filtered = filtered.filter(city => city.isPopular);
+    }
+
+    return filtered;
+  }, [allCities, searchQuery, selectedTags, budgetRange, showAllCities]);
+
+  // Get all unique tags for filter options
+  const allTags = useMemo(() => {
+    if (!allCities) return [];
+    const tags = new Set<string>();
+    allCities.forEach(city => {
+      city.tags?.forEach(tag => tags.add(tag));
+    });
+    return Array.from(tags).sort();
+  }, [allCities]);
 
   return (
     <div className="bg-cream min-h-screen">
@@ -27,10 +79,16 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h2 className="font-serif text-4xl lg:text-5xl font-bold text-travel-blue mb-4">
-            Popular Digital Nomad Destinations
+            {showAllCities || searchQuery || selectedTags.length > 0 
+              ? `Found ${filteredCities.length} Cities` 
+              : "Popular Digital Nomad Destinations"
+            }
           </h2>
           <p className="text-xl text-muted-navy max-w-3xl mx-auto">
-            Handpicked cities with thriving nomad communities, excellent infrastructure, and unique cultural experiences
+            {showAllCities || searchQuery || selectedTags.length > 0 
+              ? "Explore these amazing destinations perfect for digital nomads"
+              : "Handpicked cities with thriving nomad communities, excellent infrastructure, and unique cultural experiences"
+            }
           </p>
         </div>
         
@@ -53,26 +111,40 @@ export default function Home() {
                 </div>
               </div>
             ))
-          ) : cities ? (
-            cities.map((city) => (
+          ) : filteredCities && filteredCities.length > 0 ? (
+            filteredCities.map((city) => (
               <CityCard key={city.id} city={city} />
             ))
           ) : (
             <div className="col-span-full text-center py-12">
-              <p className="text-muted-navy text-lg">No cities available at the moment.</p>
+              <p className="text-muted-navy text-lg">No cities match your search criteria.</p>
+              <Button 
+                onClick={() => {
+                  setSearchQuery("");
+                  setSelectedTags([]);
+                  setShowAllCities(false);
+                }}
+                variant="outline"
+                className="mt-4"
+              >
+                Clear Filters
+              </Button>
             </div>
           )}
         </div>
         
-        <div className="text-center mt-12">
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="px-8 py-4 border-2 border-travel-blue text-travel-blue rounded-xl font-semibold text-lg hover:bg-travel-blue hover:text-white transition-all duration-200"
-          >
-            View All 50+ Cities
-          </Button>
-        </div>
+        {!showAllCities && !searchQuery && selectedTags.length === 0 && (
+          <div className="text-center mt-12">
+            <Button 
+              onClick={() => setShowAllCities(true)}
+              variant="outline" 
+              size="lg"
+              className="px-8 py-4 border-2 border-travel-blue text-travel-blue rounded-xl font-semibold text-lg hover:bg-travel-blue hover:text-white transition-all duration-200"
+            >
+              View All {allCities?.length || 0}+ Cities
+            </Button>
+          </div>
+        )}
       </section>
 
       <FeaturesSection />

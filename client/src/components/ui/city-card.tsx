@@ -11,22 +11,26 @@ interface CityStatsGridProps {
 }
 
 function CityStatsGrid({ city }: CityStatsGridProps) {
-  // City-specific data mapping
-  const getCityStats = (cityName: string) => {
-    const statsByCity: { [key: string]: any } = {
-      "Mumbai": { cost: "₹45K", internet: "52 Mbps", temp: "28°C", safety: "8.2/10" },
-      "Goa": { cost: "₹30K", internet: "45 Mbps", temp: "30°C", safety: "8.5/10" },
-      "Bangalore": { cost: "₹40K", internet: "65 Mbps", temp: "24°C", safety: "8.0/10" },
-      "Pune": { cost: "₹35K", internet: "55 Mbps", temp: "26°C", safety: "8.3/10" },
-      "New Delhi": { cost: "₹50K", internet: "60 Mbps", temp: "25°C", safety: "7.5/10" },
-      "Alleppey": { cost: "₹25K", internet: "35 Mbps", temp: "29°C", safety: "9.0/10" },
-      "Varkala": { cost: "₹28K", internet: "40 Mbps", temp: "28°C", safety: "9.2/10" },
-      "Kasol": { cost: "₹20K", internet: "25 Mbps", temp: "15°C", safety: "8.8/10" }
-    };
-    return statsByCity[cityName] || { cost: "₹35K", internet: "45 Mbps", temp: "26°C", safety: "8.0/10" };
-  };
+  // Fetch real data from API for each city
+  const { data: costData } = useQuery<CostOfLiving>({
+    queryKey: ["/api/cities", city.slug, "cost-of-living"],
+    queryFn: () => fetch(`/api/cities/${city.slug}`).then(res => res.json()).then(data => data.costOfLiving),
+  });
 
-  const stats = getCityStats(city.name);
+  const { data: internetData } = useQuery<InternetConnectivity>({
+    queryKey: ["/api/cities", city.slug, "internet"],
+    queryFn: () => fetch(`/api/cities/${city.slug}`).then(res => res.json()).then(data => data.internetConnectivity),
+  });
+
+  const { data: climateData } = useQuery<Climate>({
+    queryKey: ["/api/cities", city.slug, "climate"],
+    queryFn: () => fetch(`/api/cities/${city.slug}`).then(res => res.json()).then(data => data.climate),
+  });
+
+  const { data: safetyData } = useQuery<Safety>({
+    queryKey: ["/api/cities", city.slug, "safety"],
+    queryFn: () => fetch(`/api/cities/${city.slug}`).then(res => res.json()).then(data => data.safety),
+  });
 
   return (
     <div className="grid grid-cols-2 gap-4 mb-4">
@@ -34,28 +38,36 @@ function CityStatsGrid({ city }: CityStatsGridProps) {
         <DollarSign className="h-4 w-4 text-warm-terracotta" />
         <div>
           <p className="text-xs text-gray-500">Cost/Month</p>
-          <p className="font-semibold text-travel-blue">{stats.cost}</p>
+          <p className="font-semibold text-travel-blue">
+            {costData ? `₹${(costData.monthlyBudgetINR / 1000).toFixed(0)}K` : "Loading..."}
+          </p>
         </div>
       </div>
       <div className="flex items-center space-x-2">
         <Wifi className="h-4 w-4 text-sage-green" />
         <div>
           <p className="text-xs text-gray-500">Internet</p>
-          <p className="font-semibold text-travel-blue">{stats.internet}</p>
+          <p className="font-semibold text-travel-blue">
+            {internetData ? `${internetData.avgSpeedMbps} Mbps` : "Loading..."}
+          </p>
         </div>
       </div>
       <div className="flex items-center space-x-2">
         <Thermometer className="h-4 w-4 text-sunset-orange" />
         <div>
           <p className="text-xs text-gray-500">Climate</p>
-          <p className="font-semibold text-travel-blue">{stats.temp}</p>
+          <p className="font-semibold text-travel-blue">
+            {climateData ? `${climateData.avgTempCelsius}°C` : "Loading..."}
+          </p>
         </div>
       </div>
       <div className="flex items-center space-x-2">
         <Shield className="h-4 w-4 text-sage-green" />
         <div>
           <p className="text-xs text-gray-500">Safety</p>
-          <p className="font-semibold text-travel-blue">{stats.safety}</p>
+          <p className="font-semibold text-travel-blue">
+            {safetyData ? `${safetyData.safetyScore}/10` : "Loading..."}
+          </p>
         </div>
       </div>
     </div>

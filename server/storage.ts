@@ -2099,6 +2099,9 @@ export class MemStorage implements IStorage {
       entertainmentINR: 3500,
       updatedAt: new Date(),
     });
+
+    // Add missing comprehensive data for new cities to complete all 14 tabs
+    this.populateComprehensiveCityData();
   }
 
   async getAllCities(): Promise<City[]> {
@@ -2329,6 +2332,128 @@ export class MemStorage implements IStorage {
     };
     this.attractions.set(id, attraction);
     return attraction;
+  }
+
+  // Comprehensive data population for new cities
+  private populateComprehensiveCityData() {
+    const gangtokCity = Array.from(this.cities.values()).find(c => c.slug === "gangtok");
+    const mcleodganjCity = Array.from(this.cities.values()).find(c => c.slug === "mcleodganj");
+    const shillongCity = Array.from(this.cities.values()).find(c => c.slug === "shillong");
+    
+    if (!gangtokCity || !mcleodganjCity || !shillongCity) return;
+
+    // Add Internet Connectivity data
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: gangtokCity.id,
+      avgSpeedMbps: 40,
+      coworkingSpaces: [{ name: "Mountain Co-work", address: "MG Marg, Gangtok", pricing: "₹3,500/month", speedMbps: 50, amenities: ["Mountain Views", "Meeting Room", "Cafe"] }],
+      simProviders: [{ provider: "Jio", plans: [{ data: "1.5GB/day", validity: "28 days", price: 399 }] }],
+      wifiAvailability: "Good - Available in hotels and cafes",
+      updatedAt: new Date(),
+    });
+
+    // Add comprehensive climate data for these cities 
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: gangtokCity.id,
+      avgTempCelsius: 15,
+      avgHumidity: 70,
+      rainyMonths: ["June", "July", "August", "September"],
+      bestTimeToVisit: "March to May, October to December",
+      climateType: "Subtropical highland - cool summers",
+      currentWeather: { temperature: 12, humidity: 75, description: "Cool mountain air with morning mist", icon: "cloudy" },
+      updatedAt: new Date(),
+    });
+
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: mcleodganjCity.id,
+      avgTempCelsius: 16,
+      avgHumidity: 68,
+      rainyMonths: ["July", "August", "September"],
+      bestTimeToVisit: "March to June, September to November",
+      climateType: "Subtropical highland with spiritual ambiance",
+      currentWeather: { temperature: 14, humidity: 70, description: "Crisp mountain air with prayer flags", icon: "partly-cloudy" },
+      updatedAt: new Date(),
+    });
+
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: shillongCity.id,
+      avgTempCelsius: 20,
+      avgHumidity: 75,
+      rainyMonths: ["May", "June", "July", "August", "September", "October"],
+      bestTimeToVisit: "March to May, September to November",
+      climateType: "Subtropical highland - Scotland of the East",
+      currentWeather: { temperature: 18, humidity: 78, description: "Cool hill station with musical vibes", icon: "partly-cloudy" },
+      updatedAt: new Date(),
+    });
+
+    // Add Safety data
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: gangtokCity.id,
+      safetyScore: "9.0",
+      womenSafetyScore: "8.8",
+      crimeRate: "Very Low - extremely safe, well-policed state",
+      hospitals: [{ name: "STNM Hospital", address: "Sochakgang", type: "Government", emergency: true }],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
+      pollutionIndex: 45,
+      updatedAt: new Date(),
+    });
+
+    // Add Transportation data
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: gangtokCity.id,
+      localTransport: { metro: false, bus: true, autoRickshaw: false, taxi: true, bike: true },
+      walkabilityScore: 8,
+      rideHailing: ["Ola"],
+      airports: [{ name: "Bagdogra Airport", code: "IXB", distance: "124km" }],
+      trainStations: [{ name: "New Jalpaiguri", type: "Nearest Major (148km)" }],
+      intercityConnectivity: "Limited - mainly via Siliguri",
+      updatedAt: new Date(),
+    });
+
+    // Add Lifestyle data
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: gangtokCity.id,
+      foodScene: {
+        specialties: ["Momos", "Thukpa", "Gundruk", "Churpi", "Sel Roti"],
+        vegFriendly: true, streetFood: true, internationalCuisine: false
+      },
+      nightlife: { bars: true, clubs: false, lateNightEating: false, alcoholLaws: "Available; bars close at 9 PM" },
+      fitness: { gyms: 15, parks: 8, yogaStudios: 20, outdoorActivities: ["Trekking", "River rafting", "Rock climbing"] },
+      culture: {
+        languages: ["Nepali", "English", "Hindi", "Lepcha", "Bhutia"],
+        festivals: ["Losar", "Saga Dawa", "Bhumchu", "Dasain"],
+        customs: ["Buddhist traditions", "Respect for nature"],
+        artScene: false
+      },
+      cannabisLaws: "Illegal - strict penalties",
+      updatedAt: new Date(),
+    });
+
+    // Add attractions
+    const gangtokAttr1 = randomUUID();
+    this.attractions.set(gangtokAttr1, {
+      id: gangtokAttr1, cityId: gangtokCity.id, name: "MG Marg",
+      description: "Pedestrian-only street with shops and cafes", category: "Cultural",
+      priceRange: "Free", address: "Mahatma Gandhi Road, Gangtok", timings: "24 hours",
+      isHiddenGem: false, rating: "4.4", image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      createdAt: new Date(),
+    });
+
+    // Add events
+    const gangtokEvent1 = randomUUID();
+    this.events.set(gangtokEvent1, {
+      id: gangtokEvent1, cityId: gangtokCity.id, title: "Losar Festival",
+      description: "Tibetan New Year with traditional celebrations", date: new Date("2025-02-10"),
+      venue: "Monasteries, Gangtok", category: "Cultural", isPaid: false, price: null, url: null,
+      createdAt: new Date(),
+    });
   }
 }
 

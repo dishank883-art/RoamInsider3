@@ -22,47 +22,302 @@ export default function WeatherClimate({ climateData, cityName, cityId }: Weathe
     refetchInterval: 86400000, // Refresh once daily
   });
 
-  const goaWeatherData = {
-    bestTime: {
-      optimal: "November to February",
-      avoid: "June to September (Monsoon)",
-      shoulder: "March to May, October"
-    },
-    seasons: [
-      {
-        name: "Winter (Nov-Feb)",
-        temp: "20-32°C",
-        weather: "Perfect for nomads",
-        rainfall: "Minimal",
-        humidity: "60-70%",
-        activities: ["Beach activities", "Outdoor work", "Sightseeing", "Water sports"]
+  // City-specific weather patterns - completely distinct for each city
+  const getCitySpecificWeatherData = (cityName: string) => {
+    const weatherByCity = {
+      "Goa": {
+        bestTime: {
+          optimal: "November to February",
+          avoid: "June to September (Monsoon)",
+          shoulder: "March to May, October"
+        },
+        seasons: [
+          {
+            name: "Winter (Nov-Feb)",
+            temp: "20-32°C",
+            weather: "Perfect beach weather",
+            rainfall: "Minimal",
+            humidity: "60-70%",
+            activities: ["Beach activities", "Water sports", "Outdoor coworking"]
+          },
+          {
+            name: "Summer (Mar-May)", 
+            temp: "25-35°C",
+            weather: "Hot coastal climate",
+            rainfall: "Occasional showers",
+            humidity: "70-80%",
+            activities: ["Early morning beach", "Indoor AC spaces", "Evening shacks"]
+          },
+          {
+            name: "Monsoon (Jun-Sep)",
+            temp: "24-30°C", 
+            weather: "Heavy rains, flooding",
+            rainfall: "2500mm annually",
+            humidity: "85-95%",
+            activities: ["Indoor work", "Monsoon photography", "Ayurveda retreats"]
+          },
+          {
+            name: "Post-Monsoon (Oct)",
+            temp: "22-31°C",
+            weather: "Pleasant transition",
+            rainfall: "Light showers",
+            humidity: "75-85%",
+            activities: ["Festival season", "Nature walks", "Beach return"]
+          }
+        ]
       },
-      {
-        name: "Summer (Mar-May)", 
-        temp: "25-35°C",
-        weather: "Hot but manageable",
-        rainfall: "Occasional showers",
-        humidity: "70-80%",
-        activities: ["Early morning beach", "Indoor coworking", "Evening activities"]
+      "Bangalore": {
+        bestTime: {
+          optimal: "October to March",
+          avoid: "None - year-round destination",
+          shoulder: "April to September"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "15-28°C",
+            weather: "Perfect for outdoor work",
+            rainfall: "Minimal",
+            humidity: "50-65%",
+            activities: ["Outdoor coworking", "Park visits", "Rooftop events", "Trekking nearby"]
+          },
+          {
+            name: "Summer (Mar-May)",
+            temp: "20-35°C",
+            weather: "Warm but pleasant",
+            rainfall: "Pre-monsoon showers",
+            humidity: "55-70%",
+            activities: ["Mall coworking", "Indoor activities", "Evening pub crawls"]
+          },
+          {
+            name: "Monsoon (Jun-Sep)",
+            temp: "19-29°C",
+            weather: "Cool and refreshing",
+            rainfall: "970mm annually",
+            humidity: "70-85%",
+            activities: ["Indoor coworking", "Monsoon drives", "Food delivery peak"]
+          },
+          {
+            name: "Post-Monsoon (Oct-Nov)",
+            temp: "18-28°C",
+            weather: "Ideal tech city climate",
+            rainfall: "Light showers",
+            humidity: "60-75%",
+            activities: ["Startup events", "Outdoor meetings", "Festival season"]
+          }
+        ]
       },
-      {
-        name: "Monsoon (Jun-Sep)",
-        temp: "24-30°C", 
-        weather: "Heavy rains, flooding",
-        rainfall: "2500mm annually",
-        humidity: "85-95%",
-        activities: ["Indoor work", "Monsoon photography", "Ayurveda retreats"]
+      "Pune": {
+        bestTime: {
+          optimal: "October to March",
+          avoid: "April to June (Hot)",
+          shoulder: "July to September"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "12-30°C",
+            weather: "Perfect for students & professionals",
+            rainfall: "Minimal",
+            humidity: "45-60%",
+            activities: ["Campus visits", "Outdoor coworking", "Cultural events", "Trekking"]
+          },
+          {
+            name: "Summer (Mar-Jun)",
+            temp: "22-42°C",
+            weather: "Hot and dry",
+            rainfall: "Minimal",
+            humidity: "30-50%",
+            activities: ["Air-conditioned malls", "Early morning activities", "Hill station trips"]
+          },
+          {
+            name: "Monsoon (Jul-Sep)",
+            temp: "22-32°C",
+            weather: "Heavy rains, lush greenery",
+            rainfall: "722mm annually",
+            humidity: "75-90%",
+            activities: ["Monsoon treks", "Indoor coworking", "Waterfall visits"]
+          },
+          {
+            name: "Post-Monsoon (Oct-Nov)",
+            temp: "18-32°C",
+            weather: "Pleasant university town vibe",
+            rainfall: "Occasional",
+            humidity: "55-70%",
+            activities: ["Festival celebrations", "Outdoor work", "Cafe hopping"]
+          }
+        ]
       },
-      {
-        name: "Post-Monsoon (Oct)",
-        temp: "22-31°C",
-        weather: "Pleasant transition",
-        rainfall: "Light showers",
-        humidity: "75-85%",
-        activities: ["Festival season", "Nature walks", "Beach return"]
+      "Gangtok": {
+        bestTime: {
+          optimal: "March to May, October to December",
+          avoid: "June to September (Monsoon)",
+          shoulder: "January to February"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "0-15°C",
+            weather: "Cold mountain air, clear skies",
+            rainfall: "Minimal, some snow",
+            humidity: "60-75%",
+            activities: ["Mountain photography", "Monastery visits", "Hot spring trips"]
+          },
+          {
+            name: "Spring (Mar-May)",
+            temp: "10-25°C",
+            weather: "Perfect Himalayan weather",
+            rainfall: "Light showers",
+            humidity: "65-80%",
+            activities: ["Trekking", "Rhododendron blooms", "Outdoor adventure", "Clear mountain views"]
+          },
+          {
+            name: "Monsoon (Jun-Sep)",
+            temp: "15-25°C",
+            weather: "Heavy rains, landslides possible",
+            rainfall: "2500mm annually",
+            humidity: "80-95%",
+            activities: ["Indoor meditation", "Cultural centers", "Hot tea sessions"]
+          },
+          {
+            name: "Autumn (Oct-Nov)",
+            temp: "10-22°C",
+            weather: "Crystal clear mountain views",
+            rainfall: "Minimal",
+            humidity: "65-78%",
+            activities: ["Trekking season", "Festival celebrations", "Mountain biking"]
+          }
+        ]
+      },
+      "McLeodganj": {
+        bestTime: {
+          optimal: "March to June, September to November",
+          avoid: "December to February (Cold), July to August (Monsoon)",
+          shoulder: "October, December"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "0-15°C",
+            weather: "Cold Himalayan winter, snow possible",
+            rainfall: "Snow and light rain",
+            humidity: "55-70%",
+            activities: ["Meditation retreats", "Hot chai sessions", "Spiritual practices"]
+          },
+          {
+            name: "Spring/Summer (Mar-Jun)",
+            temp: "15-30°C",
+            weather: "Perfect for spiritual tourism",
+            rainfall: "Occasional light showers",
+            humidity: "60-75%",
+            activities: ["Trekking", "Dalai Lama teachings", "Outdoor yoga", "Temple visits"]
+          },
+          {
+            name: "Monsoon (Jul-Aug)",
+            temp: "20-25°C",
+            weather: "Heavy mountain rains",
+            rainfall: "1500mm annually",
+            humidity: "80-90%",
+            activities: ["Indoor meditation", "Reading in cafes", "Spiritual discussions"]
+          },
+          {
+            name: "Autumn (Sep-Nov)",
+            temp: "10-25°C",
+            weather: "Clear mountain air, spiritual vibes",
+            rainfall: "Minimal",
+            humidity: "65-80%",
+            activities: ["Trekking season", "Festival celebrations", "Photography"]
+          }
+        ]
+      },
+      "Shillong": {
+        bestTime: {
+          optimal: "March to May, September to November",
+          avoid: "June to August (Heavy monsoon)",
+          shoulder: "December to February"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "4-18°C",
+            weather: "Cool hill station, Scotland vibes",
+            rainfall: "Light winter showers",
+            humidity: "65-80%",
+            activities: ["Music festivals", "Cozy cafe work", "Cultural events"]
+          },
+          {
+            name: "Spring (Mar-May)",
+            temp: "15-25°C",
+            weather: "Pleasant Scotland of the East",
+            rainfall: "Occasional spring showers",
+            humidity: "70-85%",
+            activities: ["Waterfall visits", "Outdoor music", "Nature photography", "Cherry blossoms"]
+          },
+          {
+            name: "Monsoon (Jun-Aug)",
+            temp: "20-25°C",
+            weather: "Heavy northeastern monsoon",
+            rainfall: "2200mm annually",
+            humidity: "85-95%",
+            activities: ["Indoor music sessions", "Coworking spaces", "Traditional performances"]
+          },
+          {
+            name: "Autumn (Sep-Nov)",
+            temp: "12-22°C",
+            weather: "Clear skies, music festival season",
+            rainfall: "Light post-monsoon showers",
+            humidity: "75-85%",
+            activities: ["Autumn festivals", "Live music venues", "Waterfall photography"]
+          }
+        ]
+      },
+      "Udaipur": {
+        bestTime: {
+          optimal: "October to March",
+          avoid: "April to June (Extremely hot)",
+          shoulder: "July to September"
+        },
+        seasons: [
+          {
+            name: "Winter (Nov-Feb)",
+            temp: "10-25°C",
+            weather: "Perfect royal city weather",
+            rainfall: "Minimal",
+            humidity: "45-60%",
+            activities: ["Lake boat rides", "Palace visits", "Outdoor dining", "Heritage walks"]
+          },
+          {
+            name: "Summer (Mar-Jun)",
+            temp: "23-45°C",
+            weather: "Extremely hot desert climate",
+            rainfall: "Minimal",
+            humidity: "25-40%",
+            activities: ["Early morning lake visits", "Air-conditioned heritage hotels", "Indoor activities"]
+          },
+          {
+            name: "Monsoon (Jul-Sep)",
+            temp: "25-35°C",
+            weather: "Moderate rains, lake levels rise",
+            rainfall: "635mm annually",
+            humidity: "70-85%",
+            activities: ["Monsoon palace visits", "Indoor cultural shows", "Lake photography"]
+          },
+          {
+            name: "Post-Monsoon (Oct)",
+            temp: "20-32°C",
+            weather: "Pleasant return of tourists",
+            rainfall: "Occasional",
+            humidity: "55-70%",
+            activities: ["Festival season", "Heritage tourism", "Romantic lake evenings"]
+          }
+        ]
       }
-    ]
+    };
+    
+    return (weatherByCity as any)[cityName] || weatherByCity["Goa"];
   };
+
+  const cityWeatherData = getCitySpecificWeatherData(cityName);
 
   return (
     <Card className="bg-white rounded-2xl shadow-lg">
@@ -128,17 +383,17 @@ export default function WeatherClimate({ climateData, cityName, cityId }: Weathe
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
               <h4 className="font-semibold text-sage-green mb-2">🌟 Optimal Season</h4>
-              <div className="text-lg font-medium text-travel-blue mb-2">{goaWeatherData.bestTime.optimal}</div>
+              <div className="text-lg font-medium text-travel-blue mb-2">{cityWeatherData.bestTime.optimal}</div>
               <p className="text-sm text-muted-navy">Perfect weather, comfortable temperatures, ideal for all activities. Peak nomad season.</p>
             </div>
             <div className="bg-vintage-gold/5 rounded-lg p-4 border border-vintage-gold/20">
               <h4 className="font-semibold text-vintage-gold mb-2">⚠️ Avoid Period</h4>
-              <div className="text-lg font-medium text-travel-blue mb-2">{goaWeatherData.bestTime.avoid}</div>
+              <div className="text-lg font-medium text-travel-blue mb-2">{cityWeatherData.bestTime.avoid}</div>
               <p className="text-sm text-muted-navy">Heavy monsoons, frequent flooding, limited outdoor activities.</p>
             </div>
             <div className="bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20">
               <h4 className="font-semibold text-travel-blue mb-2">👍 Shoulder Season</h4>
-              <div className="text-lg font-medium text-travel-blue mb-2">{goaWeatherData.bestTime.shoulder}</div>
+              <div className="text-lg font-medium text-travel-blue mb-2">{cityWeatherData.bestTime.shoulder}</div>
               <p className="text-sm text-muted-navy">Good weather, fewer crowds, better accommodation rates.</p>
             </div>
           </div>
@@ -151,7 +406,7 @@ export default function WeatherClimate({ climateData, cityName, cityId }: Weathe
             🌦️ Seasonal Weather Patterns
           </h3>
           <div className="space-y-6">
-            {goaWeatherData.seasons.map((season, index) => (
+            {cityWeatherData.seasons.map((season: any, index: number) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
@@ -178,7 +433,7 @@ export default function WeatherClimate({ climateData, cityName, cityId }: Weathe
                   <div>
                     <span className="font-medium text-muted-navy mb-2 block">Recommended Activities:</span>
                     <div className="flex flex-wrap gap-2">
-                      {season.activities.map((activity, actIndex) => (
+                      {season.activities.map((activity: string, actIndex: number) => (
                         <Badge key={actIndex} variant="secondary" className="bg-vintage-gold/10 text-vintage-gold">
                           {activity}
                         </Badge>

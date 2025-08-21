@@ -71,6 +71,29 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
     }
   ];
 
+  // National and State-specific Online Shopping Portals
+  const onlineShoppingPortals = [
+    {
+      category: "National E-commerce Platforms",
+      platforms: [
+        { name: "Amazon India", website: "amazon.in", description: "Global marketplace with fastest delivery in metros", offers: "Prime benefits, same-day delivery available" },
+        { name: "Flipkart", website: "flipkart.com", description: "India's leading e-commerce with Big Billion Days sales", offers: "No-cost EMI, exchange offers" },
+        { name: "Myntra", website: "myntra.com", description: "Fashion and lifestyle destination with curated brands", offers: "Free shipping above ₹799, easy returns" },
+        { name: "Nykaa", website: "nykaa.com", description: "Beauty and wellness platform with authentic products", offers: "Free samples, beauty consultations" },
+        { name: "BigBasket", website: "bigbasket.com", description: "Online grocery delivery with fresh produce", offers: "Subscription plans, early morning delivery" },
+        { name: "Swiggy Instamart", website: "swiggy.com/instamart", description: "Quick grocery and essentials delivery in 15-30 mins", offers: "Super membership benefits" },
+      ]
+    },
+    {
+      category: "Regional & City-Specific Platforms",
+      platforms: [
+        { name: "Grofers (Blinkit)", website: "blinkit.com", description: "Ultra-fast delivery in 10-15 minutes for daily essentials", offers: "No minimum order, lightning fast delivery" },
+        { name: "Dunzo", website: "dunzo.com", description: "Hyperlocal delivery platform for anything from anywhere", offers: "Pick-up and drop services, medicine delivery" },
+        { name: "Zepto", website: "zepto.com", description: "10-minute grocery delivery in select cities", offers: "Fresh produce, household essentials" },
+      ]
+    }
+  ];
+
   const shoppingCategories = [
     {
       category: "Clothing & Textiles",
@@ -262,61 +285,39 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
           </div>
         </div>
 
-        {/* Shopping Apps & Services */}
+        {/* Enhanced Online Shopping Platforms */}
         <div>
           <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
             <Truck className="mr-2 h-5 w-5" />
-            📱 Online Shopping & Delivery
+            🛒 Online Shopping Platforms & Delivery
           </h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
-              <h4 className="font-semibold text-sage-green mb-3">Popular E-commerce Platforms</h4>
-              <div className="space-y-2 text-sm">
-                <a href="https://www.amazon.in" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  Amazon India - Electronics, books, everything
-                </a>
-                <a href="https://www.flipkart.com" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  Flipkart - Fashion, electronics, home
-                </a>
-                <a href="https://www.myntra.com" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  Myntra - Fashion and lifestyle
-                </a>
-                <a href="https://www.bigbasket.com" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  BigBasket - Groceries and essentials
-                </a>
+          {onlineShoppingPortals.map((category, catIndex) => (
+            <div key={catIndex} className="mb-6">
+              <h4 className="font-semibold text-vintage-gold mb-3 text-lg">{category.category}</h4>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {category.platforms.map((platform, platIndex) => (
+                  <div key={platIndex} className="bg-white rounded-lg p-4 border border-travel-blue/20 hover:shadow-md transition-all duration-200 hover:border-vintage-gold/50">
+                    <div className="flex items-start justify-between mb-2">
+                      <h5 className="font-semibold text-travel-blue text-sm">{platform.name}</h5>
+                      <a 
+                        href={`https://${platform.website}`} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-vintage-gold hover:text-vintage-gold/80 text-xs flex items-center"
+                      >
+                        <ExternalLink className="h-3 w-3 mr-1" />
+                        Visit
+                      </a>
+                    </div>
+                    <p className="text-xs text-muted-navy mb-2 line-clamp-2">{platform.description}</p>
+                    <div className="text-xs text-sage-green bg-sage-green/10 rounded-full px-2 py-1">
+                      💡 {platform.offers}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-            
-            <div className="bg-warm-terracotta/5 rounded-lg p-4 border border-warm-terracotta/20">
-              <h4 className="font-semibold text-warm-terracotta mb-3">Local Delivery Services</h4>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center text-muted-navy">
-                  <Truck className="h-3 w-3 mr-1" />
-                  <span>Dunzo - Instant delivery (₹30-100 delivery charges)</span>
-                </div>
-                <div className="flex items-center text-muted-navy">
-                  <Truck className="h-3 w-3 mr-1" />
-                  <span>Swiggy Instamart - Groceries (Free above ₹99)</span>
-                </div>
-                <div className="flex items-center text-muted-navy">
-                  <Truck className="h-3 w-3 mr-1" />
-                  <span>Zepto - 10-minute delivery (₹25 delivery fee)</span>
-                </div>
-                <div className="flex items-center text-muted-navy">
-                  <Truck className="h-3 w-3 mr-1" />
-                  <span>BlinkIt - Quick commerce (Free above ₹149)</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Shopping Etiquette & Tips */}
