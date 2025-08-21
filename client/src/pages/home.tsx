@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useState, useMemo } from "react";
 import type { City } from "@shared/schema";
+import { staticCitiesData, getAllTags } from "@/lib/static-cities-data";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -20,7 +21,19 @@ export default function Home() {
 
   const { data: allCities, isLoading } = useQuery<City[]>({
     queryKey: ["/api/cities"],
-    queryFn: () => fetch('/api/cities').then(res => res.json()),
+    queryFn: async () => {
+      try {
+        const res = await fetch('/api/cities');
+        if (!res.ok) {
+          throw new Error('API not available');
+        }
+        return await res.json();
+      } catch (error) {
+        // Fallback to static data for deployment
+        console.log('Using static data fallback');
+        return staticCitiesData;
+      }
+    },
   });
 
   // Filter and search cities
@@ -61,7 +74,7 @@ export default function Home() {
 
   // Get all unique tags for filter options
   const allTags = useMemo(() => {
-    if (!allCities) return [];
+    if (!allCities) return getAllTags();
     const tags = new Set<string>();
     allCities.forEach(city => {
       city.tags?.forEach(tag => tags.add(tag));
