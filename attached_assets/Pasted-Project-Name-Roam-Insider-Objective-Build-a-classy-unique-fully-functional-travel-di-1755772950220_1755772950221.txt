@@ -1,0 +1,139 @@
+Project Name: Roam Insider
+
+
+
+Objective:
+
+Build a classy, unique, fully functional travel & digital nomad platform for Indian cities. It should surpass Nomad List in both depth and quality of information, while being aesthetic, interactive, and useful for both Indians and foreigners traveling/living in India.
+
+🔹 Requirements
+Pages
+
+Homepage with:
+
+Hero section introducing Roam Insider
+
+Search & filters to discover cities
+
+List/grid of city cards showing key highlights (cost, internet, lifestyle, weather, etc.)
+
+Travel-themed classy design (not generic)
+
+City Pages for each city in India, with real detailed content (no placeholders):
+
+Sections must include:
+
+Overview & Insider Tips
+
+Cost of Living (detailed, in INR & USD)
+
+Rent (studio, 1BHK, 2BHK)
+
+Utilities, groceries, eating out, coworking, transport passes, SIM/data plans, gym, coffee, entertainment, etc.
+
+Internet & Connectivity (avg. speed, coworking spaces, SIM providers, WiFi availability)
+
+Transportation (local transport, intercity, ride-hailing, walking friendliness, airports, trains)
+
+Climate & Best Time to Visit (with API for live weather, updated twice daily)
+
+Safety & Healthcare (crime rates, hospitals, women traveler safety, pollution)
+
+Lifestyle & Culture (food, nightlife, fitness, local customs, alcohol/cannabis laws)
+
+Festivals & Events (API-driven, updated monthly with local events)
+
+Things to Do (top attractions, hidden gems, experiences)
+
+Shopping & Markets (souvenirs, local bazaars, malls)
+
+Community & Digital Nomad Scene (meetups, expat/nomad hubs)
+
+Day Trips & Connectivity to other cities
+
+Insider Hacks (money-saving tips, safety hacks, cultural etiquette)
+
+✅ All sections should be auto-filled with real, high-quality content wherever possible.
+
+✅ Use external APIs (weather, festivals/events, internet speed, cost-of-living data, etc.), but update only twice daily.
+
+✅ For anything unavailable via API, auto-generate the best possible info.
+
+Filters (Homepage & Explore Page)
+
+Cost of living (low → high)
+
+Internet speed
+
+Weather/climate (hot/cold, humidity)
+
+Safety score
+
+Lifestyle preferences (party, spiritual, chill, adventure, foodie)
+
+Popularity (based on searches/views)
+
+Festivals/events happening soon
+
+Walkability & transport ease
+
+Outdoor/nature vs. urban vibe
+
+✅ Filters should be multi-select, sliders, dropdowns, and interactive.
+
+APIs
+
+Weather API (live, updated twice daily)
+
+Cost of living API (housing, groceries, dining, coworking)
+
+Internet speed API (city averages)
+
+Events/festivals API (monthly, city-based)
+
+Transport API (local + intercity routes/prices)
+
+Design & UX
+
+Theme must be classy, unique, and elegant, not like Nomad List or generic bootstrap sites
+
+Use icons, cards, tables, and charts where useful
+
+Traveler theme (maps, stamps, vintage-postcard-inspired colors, subtle) but not overdone
+
+Fully responsive (desktop + mobile)
+
+Technical
+
+Built with Next.js (React)
+
+Modular component structure (e.g., CityCard, GuideSection, FilterPanel, MapEmbed, Table, IconSet)
+
+SEO optimized for each city page
+
+Content auto-filled where possible, placeholders only if absolutely necessary
+
+🔹 Instructions for Riplet
+Build Roam Insider with the above specs
+
+Ensure all missing components/pages are auto-created so the build never breaks
+
+Fill all city page content automatically to the best of your knowledge using APIs + internal knowledge
+
+Leave hooks for me to add/modify content later if needed
+
+Ensure the site builds without any errors
+
+🎯 Goal
+
+
+A fully working, classy, interactive website called Roam Insider, with:
+
+Vast city-specific guides (better than Nomad List, focused on India)
+
+Powerful filters & search
+
+Auto-updated API-driven data
+
+Classy, traveler-themed design
+
