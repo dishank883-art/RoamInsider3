@@ -3568,6 +3568,383 @@ export class MemStorage implements IStorage {
       venue: "Udaipur Palace", category: "Music", isPaid: true, price: 2000, url: "https://worldmusic.udaipur.com/",
       createdAt: new Date(),
     });
+
+    // Add the 7 new cities that were missing from the API
+    // Tosh
+    const toshId = randomUUID();
+    this.cities.set(toshId, {
+      id: toshId,
+      name: "Tosh",
+      state: "Himachal Pradesh",
+      slug: "tosh",
+      description: "Remote Himalayan village offering the ultimate digital nomad retreat with stunning mountain views, affordable living, and surprisingly good internet connectivity.",
+      heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      latitude: "32.0543",
+      longitude: "77.3493",
+      population: 800,
+      rating: "8.9",
+      isPopular: false,
+      tags: ["himalayan", "remote", "budget-friendly", "mountain-views", "peaceful"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Rishikesh
+    const rishikeshId = randomUUID();
+    this.cities.set(rishikeshId, {
+      id: rishikeshId,
+      name: "Rishikesh",
+      state: "Uttarakhand",
+      slug: "rishikesh",
+      description: "Yoga capital of the world with growing digital nomad infrastructure, offering spiritual atmosphere, riverside cafes, and excellent coworking spaces.",
+      heroImage: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&h=600&fit=crop",
+      latitude: "30.0869",
+      longitude: "78.2676",
+      population: 75000,
+      rating: "8.7",
+      isPopular: true,
+      tags: ["yoga", "spiritual", "riverside", "adventure", "wellness"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Pondicherry
+    const pondicherryId = randomUUID();
+    this.cities.set(pondicherryId, {
+      id: pondicherryId,
+      name: "Pondicherry",
+      state: "Puducherry",
+      slug: "pondicherry",
+      description: "French colonial charm meets digital nomad lifestyle with heritage cafes, coastal vibes, and affordable living in India's most European city.",
+      heroImage: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      latitude: "11.9416",
+      longitude: "79.8083",
+      population: 950000,
+      rating: "8.4",
+      isPopular: true,
+      tags: ["french-colonial", "coastal", "heritage", "cafes", "european"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Kochi
+    const kochiId = randomUUID();
+    this.cities.set(kochiId, {
+      id: kochiId,
+      name: "Kochi",
+      state: "Kerala",
+      slug: "kochi",
+      description: "Kerala's commercial hub combining historic Fort Kochi charm with modern coworking spaces, offering digital nomads authentic South Indian culture at budget prices.",
+      heroImage: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&h=600&fit=crop",
+      latitude: "9.9312",
+      longitude: "76.2673",
+      population: 677000,
+      rating: "8.3",
+      isPopular: true,
+      tags: ["backwaters", "spices", "historic", "port-city", "kerala-culture"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Wayanad
+    const wayanadId = randomUUID();
+    this.cities.set(wayanadId, {
+      id: wayanadId,
+      name: "Wayanad",
+      state: "Kerala",
+      slug: "wayanad",
+      description: "Mountain retreat in Kerala's Western Ghats offering tea plantations, wildlife, and peaceful work environments for nature-loving digital nomads.",
+      heroImage: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&h=600&fit=crop",
+      latitude: "11.6854",
+      longitude: "76.1320",
+      population: 817000,
+      rating: "8.6",
+      isPopular: false,
+      tags: ["tea-plantations", "wildlife", "western-ghats", "nature", "mountain-retreat"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Dharamkot
+    const dharamkotId = randomUUID();
+    this.cities.set(dharamkotId, {
+      id: dharamkotId,
+      name: "Dharamkot",
+      state: "Himachal Pradesh",
+      slug: "dharamkot",
+      description: "Himalayan village above McLeod Ganj offering established digital nomad community, excellent internet, and stunning mountain views with Tibetan culture.",
+      heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      latitude: "32.2432",
+      longitude: "76.3222",
+      population: 2500,
+      rating: "8.8",
+      isPopular: true,
+      tags: ["digital-nomads", "tibetan-culture", "mountain-views", "community", "himalayan"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Darjeeling
+    const darjeelingId = randomUUID();
+    this.cities.set(darjeelingId, {
+      id: darjeelingId,
+      name: "Darjeeling",
+      state: "West Bengal",
+      slug: "darjeeling",
+      description: "Famous hill station with tea gardens, colonial architecture, and Himalayan views, emerging as a peaceful digital nomad destination with improving connectivity.",
+      heroImage: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      latitude: "27.0360",
+      longitude: "88.2627",
+      population: 120000,
+      rating: "8.5",
+      isPopular: true,
+      tags: ["tea-gardens", "colonial", "toy-train", "himalayan-views", "hill-station"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Add cost of living data for the new cities
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(), cityId: toshId, monthlyBudgetINR: 18000, monthlyBudgetUSD: 216,
+      studioRentINR: 8000, oneBhkRentINR: 12000, twoBhkRentINR: 18000, utilitiesINR: 1500,
+      groceriesINR: 4000, eatingOutINR: 2500, coworkingINR: 2000, transportINR: 800,
+      simDataINR: 400, gymINR: 0, coffeeINR: 80, entertainmentINR: 1500, updatedAt: new Date(),
+    });
+
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(), cityId: rishikeshId, monthlyBudgetINR: 25000, monthlyBudgetUSD: 300,
+      studioRentINR: 10000, oneBhkRentINR: 15000, twoBhkRentINR: 22000, utilitiesINR: 1800,
+      groceriesINR: 5000, eatingOutINR: 3500, coworkingINR: 3500, transportINR: 1200,
+      simDataINR: 400, gymINR: 1000, coffeeINR: 120, entertainmentINR: 2000, updatedAt: new Date(),
+    });
+
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(), cityId: pondicherryId, monthlyBudgetINR: 28000, monthlyBudgetUSD: 336,
+      studioRentINR: 12000, oneBhkRentINR: 18000, twoBhkRentINR: 25000, utilitiesINR: 2000,
+      groceriesINR: 5500, eatingOutINR: 4000, coworkingINR: 4000, transportINR: 1500,
+      simDataINR: 400, gymINR: 1200, coffeeINR: 150, entertainmentINR: 2500, updatedAt: new Date(),
+    });
+
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(), cityId: kochiId, monthlyBudgetINR: 30000, monthlyBudgetUSD: 360,
+      studioRentINR: 13000, oneBhkRentINR: 20000, twoBhkRentINR: 28000, utilitiesINR: 2200,
+      groceriesINR: 6000, eatingOutINR: 4500, coworkingINR: 4500, transportINR: 1800,
+      simDataINR: 400, gymINR: 1500, coffeeINR: 130, entertainmentINR: 2800, updatedAt: new Date(),
+    });
+
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(), cityId: wayanadId, monthlyBudgetINR: 22000, monthlyBudgetUSD: 264,
+      studioRentINR: 9000, oneBhkRentINR: 14000, twoBhkRentINR: 20000, utilitiesINR: 1600,
+      groceriesINR: 4500, eatingOutINR: 3000, coworkingINR: 2500, transportINR: 1000,
+      simDataINR: 400, gymINR: 800, coffeeINR: 100, entertainmentINR: 1800, updatedAt: new Date(),
+    });
+
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(), cityId: dharamkotId, monthlyBudgetINR: 20000, monthlyBudgetUSD: 240,
+      studioRentINR: 8500, oneBhkRentINR: 13000, twoBhkRentINR: 19000, utilitiesINR: 1400,
+      groceriesINR: 4200, eatingOutINR: 2800, coworkingINR: 2500, transportINR: 900,
+      simDataINR: 400, gymINR: 0, coffeeINR: 90, entertainmentINR: 1600, updatedAt: new Date(),
+    });
+
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(), cityId: darjeelingId, monthlyBudgetINR: 24000, monthlyBudgetUSD: 288,
+      studioRentINR: 10000, oneBhkRentINR: 15000, twoBhkRentINR: 22000, utilitiesINR: 1700,
+      groceriesINR: 4800, eatingOutINR: 3200, coworkingINR: 3000, transportINR: 1100,
+      simDataINR: 400, gymINR: 1000, coffeeINR: 110, entertainmentINR: 1900, updatedAt: new Date(),
+    });
+
+    // Add Internet Connectivity for all 7 cities
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(), cityId: toshId, avgSpeedMbps: 15,
+      coworkingSpaces: [{
+        name: "Mountain View Workspace", address: "Tosh Village Center", pricing: "₹2,000/month",
+        speedMbps: 20, amenities: ["Valley Views", "Quiet Space", "Solar Power", "Outdoor Deck"]
+      }],
+      simProviders: [{
+        provider: "Jio", plans: [{ data: "1.5GB/day", validity: "28 days", price: 399 }]
+      }],
+      wifiAvailability: "Limited - Available in cafes and guesthouses",
+      updatedAt: new Date(),
+    });
+
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(), cityId: rishikeshId, avgSpeedMbps: 45,
+      coworkingSpaces: [{
+        name: "Ganga Coworking", address: "Ram Jhula Area", pricing: "₹3,500/month",
+        speedMbps: 60, amenities: ["River Views", "Yoga Classes", "Meditation Room", "Cafe"]
+      }, {
+        name: "Yoga Valley Workspace", address: "Tapovan", pricing: "₹4,000/month",
+        speedMbps: 50, amenities: ["Spiritual Atmosphere", "24/7 Access", "Organic Cafe"]
+      }],
+      simProviders: [{
+        provider: "Jio", plans: [{ data: "2GB/day", validity: "28 days", price: 599 }]
+      }],
+      wifiAvailability: "Good - Available in most cafes and accommodations",
+      updatedAt: new Date(),
+    });
+
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(), cityId: pondicherryId, avgSpeedMbps: 40,
+      coworkingSpaces: [{
+        name: "French Quarter Coworking", address: "White Town", pricing: "₹4,000/month",
+        speedMbps: 55, amenities: ["Colonial Heritage", "Cafe", "Courtyard", "Art Gallery"]
+      }, {
+        name: "Auroville Community Workspace", address: "Auroville", pricing: "₹3,500/month",
+        speedMbps: 45, amenities: ["International Community", "Eco-friendly", "Library"]
+      }],
+      simProviders: [{
+        provider: "Airtel", plans: [{ data: "2GB/day", validity: "28 days", price: 599 }]
+      }],
+      wifiAvailability: "Excellent - Available in most cafes and public spaces",
+      updatedAt: new Date(),
+    });
+
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(), cityId: kochiId, avgSpeedMbps: 50,
+      coworkingSpaces: [{
+        name: "Fort Kochi Workspace", address: "Fort Kochi", pricing: "₹4,500/month",
+        speedMbps: 70, amenities: ["Historic Location", "Harbor Views", "Spice Cafe", "Events"]
+      }, {
+        name: "Kerala Digital Hub", address: "Marine Drive", pricing: "₹5,000/month",
+        speedMbps: 80, amenities: ["Waterfront Views", "Modern Facilities", "Networking Events"]
+      }],
+      simProviders: [{
+        provider: "Jio", plans: [{ data: "2GB/day", validity: "28 days", price: 599 }]
+      }],
+      wifiAvailability: "Excellent - Strong coverage in urban areas",
+      updatedAt: new Date(),
+    });
+
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(), cityId: wayanadId, avgSpeedMbps: 25,
+      coworkingSpaces: [{
+        name: "Tea Plantation Workspace", address: "Meppadi", pricing: "₹2,500/month",
+        speedMbps: 30, amenities: ["Plantation Views", "Nature Setting", "Organic Food", "Wildlife"]
+      }],
+      simProviders: [{
+        provider: "Jio", plans: [{ data: "1.5GB/day", validity: "28 days", price: 399 }]
+      }],
+      wifiAvailability: "Moderate - Available in resorts and cafes",
+      updatedAt: new Date(),
+    });
+
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(), cityId: dharamkotId, avgSpeedMbps: 35,
+      coworkingSpaces: [{
+        name: "Himalayan Digital Nomads", address: "Dharamkot Village", pricing: "₹3,000/month",
+        speedMbps: 45, amenities: ["Mountain Views", "Community Events", "Cafe", "Meditation Space"]
+      }, {
+        name: "Tibetan Culture Workspace", address: "Upper Dharamkot", pricing: "₹2,800/month",
+        speedMbps: 40, amenities: ["Tibetan Community", "Prayer Flags", "Quiet Environment"]
+      }],
+      simProviders: [{
+        provider: "Jio", plans: [{ data: "1.5GB/day", validity: "28 days", price: 399 }]
+      }],
+      wifiAvailability: "Good - Strong nomad community with WiFi sharing",
+      updatedAt: new Date(),
+    });
+
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(), cityId: darjeelingId, avgSpeedMbps: 30,
+      coworkingSpaces: [{
+        name: "Tea Garden Workspace", address: "Mall Road", pricing: "₹3,000/month",
+        speedMbps: 40, amenities: ["Tea Garden Views", "Colonial Architecture", "Quiet Space"]
+      }],
+      simProviders: [{
+        provider: "Jio", plans: [{ data: "1.5GB/day", validity: "28 days", price: 399 }]
+      }],
+      wifiAvailability: "Good - Available in hotels and main tourist areas",
+      updatedAt: new Date(),
+    });
+
+    // Add sample attractions for key cities
+    const toshAttr1 = randomUUID();
+    this.attractions.set(toshAttr1, {
+      id: toshAttr1, cityId: toshId, name: "Parvati Valley Trek",
+      description: "Scenic trek through pristine Himalayan valley", category: "Adventure",
+      priceRange: "Free", address: "Tosh Village", timings: "Sunrise to sunset",
+      isHiddenGem: true, rating: "4.8", image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      createdAt: new Date(),
+    });
+
+    const rishikeshAttr1 = randomUUID();
+    this.attractions.set(rishikeshAttr1, {
+      id: rishikeshAttr1, cityId: rishikeshId, name: "Ram Jhula",
+      description: "Iconic suspension bridge over Ganges river", category: "Spiritual",
+      priceRange: "Free", address: "Ram Jhula, Rishikesh", timings: "24 hours",
+      isHiddenGem: false, rating: "4.5", image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da",
+      createdAt: new Date(),
+    });
+
+    const pondicherryAttr1 = randomUUID();
+    this.attractions.set(pondicherryAttr1, {
+      id: pondicherryAttr1, cityId: pondicherryId, name: "French Quarter",
+      description: "Colonial architecture with heritage cafes", category: "Cultural",
+      priceRange: "Free", address: "White Town, Pondicherry", timings: "24 hours",
+      isHiddenGem: false, rating: "4.6", image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+      createdAt: new Date(),
+    });
+
+    const kochiAttr1 = randomUUID();
+    this.attractions.set(kochiAttr1, {
+      id: kochiAttr1, cityId: kochiId, name: "Chinese Fishing Nets",
+      description: "Traditional fishing nets at Fort Kochi beach", category: "Cultural",
+      priceRange: "Free", address: "Fort Kochi Beach", timings: "Sunrise to sunset",
+      isHiddenGem: false, rating: "4.4", image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220",
+      createdAt: new Date(),
+    });
+
+    const wayanadAttr1 = randomUUID();
+    this.attractions.set(wayanadAttr1, {
+      id: wayanadAttr1, cityId: wayanadId, name: "Tea Plantations",
+      description: "Rolling hills covered with tea gardens", category: "Nature",
+      priceRange: "₹50", address: "Meppadi, Wayanad", timings: "9:00 AM - 5:00 PM",
+      isHiddenGem: false, rating: "4.7", image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa",
+      createdAt: new Date(),
+    });
+
+    const dharamkotAttr1 = randomUUID();
+    this.attractions.set(dharamkotAttr1, {
+      id: dharamkotAttr1, cityId: dharamkotId, name: "Triund Trek Base",
+      description: "Starting point for popular Himalayan trek", category: "Adventure",
+      priceRange: "Free", address: "Upper Dharamkot", timings: "Early morning start",
+      isHiddenGem: true, rating: "4.8", image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      createdAt: new Date(),
+    });
+
+    const darjeelingAttr1 = randomUUID();
+    this.attractions.set(darjeelingAttr1, {
+      id: darjeelingAttr1, cityId: darjeelingId, name: "Tiger Hill Sunrise",
+      description: "Spectacular sunrise views over Kanchenjunga", category: "Nature",
+      priceRange: "₹30", address: "Tiger Hill, Darjeeling", timings: "4:30 AM - 6:30 AM",
+      isHiddenGem: false, rating: "4.9", image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+      createdAt: new Date(),
+    });
+
+    // Add sample events for key cities
+    const rishikeshEvent1 = randomUUID();
+    this.events.set(rishikeshEvent1, {
+      id: rishikeshEvent1, cityId: rishikeshId, title: "International Yoga Festival",
+      description: "Week-long yoga and spiritual celebration", date: new Date("2025-03-01"),
+      venue: "Parmarth Niketan, Rishikesh", category: "Spiritual", isPaid: false, price: null, url: null,
+      createdAt: new Date(),
+    });
+
+    const pondicherryEvent1 = randomUUID();
+    this.events.set(pondicherryEvent1, {
+      id: pondicherryEvent1, cityId: pondicherryId, title: "Auroville Foundation Day",
+      description: "Celebrating the experimental township", date: new Date("2025-02-28"),
+      venue: "Auroville", category: "Cultural", isPaid: false, price: null, url: null,
+      createdAt: new Date(),
+    });
+
+    const dharamkotEvent1 = randomUUID();
+    this.events.set(dharamkotEvent1, {
+      id: dharamkotEvent1, cityId: dharamkotId, title: "Digital Nomad Meetup",
+      description: "Monthly community gathering for remote workers", date: new Date("2024-12-15"),
+      venue: "Community Center, Dharamkot", category: "Networking", isPaid: false, price: null, url: null,
+      createdAt: new Date(),
+    });
   }
 }
 
