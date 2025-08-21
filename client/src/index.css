@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(44, 87%, 98%);
+  --foreground: hsl(212, 25%, 8%);
+  --card: hsl(44, 87%, 98%);
+  --card-foreground: hsl(212, 25%, 8%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(212, 25%, 8%);
+  --primary: hsl(38, 43%, 65%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(203, 46%, 31%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --accent: hsl(210, 40%, 98%);
+  --accent-foreground: hsl(222, 84%, 5%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --ring: hsl(38, 43%, 65%);
+  --chart-1: hsl(38, 43%, 65%);
+  --chart-2: hsl(98, 35%, 49%);
+  --chart-3: hsl(21, 77%, 66%);
+  --chart-4: hsl(147, 79%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+  
+  /* Travel Theme Colors */
+  --vintage-gold: hsl(38, 43%, 65%);
+  --travel-blue: hsl(203, 46%, 31%);
+  --warm-terracotta: hsl(4, 38%, 51%);
+  --sage-green: hsl(98, 35%, 49%);
+  --cream: hsl(44, 87%, 98%);
+  --sunset-orange: hsl(21, 77%, 66%);
+  --muted-navy: hsl(215, 16%, 47%);
+  
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-script: 'Dancing Script', cursive;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: hsl(222, 84%, 5%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 5%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(38, 43%, 65%);
+  --primary-foreground: hsl(222, 84%, 5%);
+  --secondary: hsl(217, 32%, 17%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --accent: hsl(217, 32%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --ring: hsl(38, 43%, 65%);
+  --chart-1: hsl(38, 43%, 65%);
+  --chart-2: hsl(98, 35%, 49%);
+  --chart-3: hsl(21, 77%, 66%);
+  --chart-4: hsl(147, 79%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  
+  .font-script {
+    font-family: var(--font-script);
+  }
+  
+  .text-vintage-gold {
+    color: var(--vintage-gold);
+  }
+  
+  .text-travel-blue {
+    color: var(--travel-blue);
+  }
+  
+  .text-warm-terracotta {
+    color: var(--warm-terracotta);
+  }
+  
+  .text-sage-green {
+    color: var(--sage-green);
+  }
+  
+  .text-sunset-orange {
+    color: var(--sunset-orange);
+  }
+  
+  .text-muted-navy {
+    color: var(--muted-navy);
+  }
+  
+  .bg-vintage-gold {
+    background-color: var(--vintage-gold);
+  }
+  
+  .bg-travel-blue {
+    background-color: var(--travel-blue);
+  }
+  
+  .bg-warm-terracotta {
+    background-color: var(--warm-terracotta);
+  }
+  
+  .bg-sage-green {
+    background-color: var(--sage-green);
+  }
+  
+  .bg-cream {
+    background-color: var(--cream);
+  }
+  
+  .bg-sunset-orange {
+    background-color: var(--sunset-orange);
+  }
+  
+  .bg-muted-navy {
+    background-color: var(--muted-navy);
+  }
+  
+  .border-vintage-gold {
+    border-color: var(--vintage-gold);
+  }
+  
+  .border-travel-blue {
+    border-color: var(--travel-blue);
+  }
+  
+  .hover\:bg-vintage-gold\/90:hover {
+    background-color: hsl(38, 43%, 58%);
+  }
+  
+  .hover\:bg-travel-blue\/90:hover {
+    background-color: hsl(203, 46%, 28%);
+  }
+  
+  .vintage-texture {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAuNSIgb3BhY2l0eT0iMC4xIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+");
+  }
+}
