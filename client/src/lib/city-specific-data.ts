@@ -1,3 +1,6 @@
+// Import the complete data at the top level
+import { getCitySpecificDataComplete } from './city-data-complete';
+
 export interface CitySpecificData {
   moneyTips: string[];
   streetFood: Array<{
@@ -173,7 +176,33 @@ export const citySpecificData: Record<string, CitySpecificData> = {
         tip: "Visit early morning (6-8 AM) for wholesale vegetable prices and fresh selection",
         timing: "6 AM - 10 AM"
       }
-    ]
+    ],
+    transportationTips: [
+      "Use BMTC buses extensively - get monthly passes for ₹1,000",
+      "Namma Metro connects major tech hubs like Koramangala and Electronic City",
+      "Book Ola/Uber Share during peak hours to save money",
+      "Rent bikes from Bounce or Yulu for short IT park commutes",
+      "Avoid Outer Ring Road during rush hours (8-10 AM, 7-9 PM)",
+      "Use suburban trains to reach distant areas like Whitefield"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant climate year-round (15-28°C) - perfect for outdoor coworking",
+        "Minimal monsoon disruption compared to other Indian cities",
+        "Cool evenings ideal for balcony workspaces and rooftop cafes"
+      ],
+      healthConsiderations: [
+        "Moderate pollution levels - air purifiers recommended during winter",
+        "Excellent weather reduces health issues compared to extreme climate cities",
+        "Tree-lined streets provide natural air filtration in many areas"
+      ],
+      equipmentNeeds: [
+        "Light cooling sufficient - fans often enough instead of AC",
+        "Minimal heating required - light woolens for December-January mornings",
+        "Stable power grid - backup power less critical than other metros"
+      ],
+      bestMonths: "October to February for optimal working conditions"
+    }
   },
   udaipur: {
     moneyTips: [
@@ -268,7 +297,33 @@ export const citySpecificData: Record<string, CitySpecificData> = {
         tip: "Visit early morning (6-7 AM) for photography without crowds and better light",
         timing: "6 AM - 8 AM"
       }
-    ]
+    ],
+    transportationTips: [
+      "Use local buses and shared autos for intercity travel - very affordable",
+      "Book private taxis for day trips to Chittorgarh and Kumbhalgarh",
+      "Rent scooters from local providers for ₹300-500/day",
+      "Use app-based rides during early morning and late evening for better rates",
+      "Walk around Lake Pichola area - most attractions within walking distance",
+      "Join group tours for cost-effective visits to multiple attractions"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant winter mornings (Oct-Mar) perfect for lakeside coworking",
+        "Extreme summer heat (Apr-Jun) requires indoor AC workspaces",
+        "Monsoon season (Jul-Sep) brings humidity and occasional power cuts"
+      ],
+      healthConsiderations: [
+        "High temperatures in summer (up to 45°C) - heat exhaustion risk",
+        "Dry desert air requires increased water intake year-round",
+        "Low humidity in winter can cause skin and respiratory dryness"
+      ],
+      equipmentNeeds: [
+        "Essential air conditioning during summer months (Apr-Jun)",
+        "Desert coolers insufficient during peak summer",
+        "Minimal heating needed - light woolens for Dec-Jan nights only"
+      ],
+      bestMonths: "October to March for comfortable working conditions"
+    }
   },
   gangtok: {
     moneyTips: [
@@ -553,11 +608,157 @@ export const citySpecificData: Record<string, CitySpecificData> = {
         tip: "Visit early morning (6-8 AM) to see authentic local trade and fresh produce",
         timing: "6 AM - 10 AM for best experience"
       }
+    ],
+    transportationTips: [
+      "Use shared jeeps from Siliguri and NJP railway station to reach Gangtok",
+      "Book helicopter rides to Tsomgo Lake during peak season for time-saving",
+      "Use local taxis for point-to-point travel within Gangtok - negotiate fares",
+      "Take shared vehicles to Rumtek Monastery and Tsomgo Lake for lower costs",
+      "Walk along MG Marg - most cafes and shops are within walking distance",
+      "Use government buses for intercity travel to nearby towns like Pelling"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant spring/fall weather (Mar-May, Sep-Nov) ideal for outdoor work",
+        "Cold winters (Dec-Feb) require heated spaces - many cafes have heaters", 
+        "Monsoon season (Jun-Aug) brings heavy rains and frequent internet disruptions"
+      ],
+      healthConsiderations: [
+        "High altitude (5,500 ft) may cause initial breathing adjustments",
+        "Clean mountain air excellent for health and mental clarity",
+        "Cold winters require warm clothing - temperatures can drop to 2°C"
+      ],
+      equipmentNeeds: [
+        "Room heaters essential during winter months for comfortable working",
+        "Backup power solutions recommended during monsoon season",
+        "Warm clothing and blankets necessary from December to February"
+      ],
+      bestMonths: "March to May and September to November for optimal conditions"
+    }
+  },
+  kasol: {
+    moneyTips: [
+      "Stay in budget guesthouses and Israeli-run cafes in main Kasol area",
+      "Eat at local dhabas and Pakistani/Israeli fusion restaurants",
+      "Trek to nearby villages like Tosh and Malana for authentic experiences",
+      "Shop for local handicrafts and charas-themed items at reasonable prices",
+      "Use shared jeeps and local buses for cost-effective regional travel"
+    ],
+    streetFood: [
+      { item: "Momos", price: "₹80-120 ($1-1.5)" },
+      { item: "Maggi with Vegetables", price: "₹60-100 ($0.70-1.20)" },
+      { item: "Israeli Hummus", price: "₹150-200 ($1.8-2.4)" },
+      { item: "Pancakes", price: "₹120-180 ($1.4-2.2)" },
+      { item: "Lemon Honey Ginger Tea", price: "₹50-80 ($0.60-1)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Stone Garden Café", speed: "20-35 Mbps", quality: "Fair" },
+        { name: "Moon Dance Café", speed: "15-30 Mbps", quality: "Fair" },
+        { name: "Evergreen Café", speed: "25-40 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "Main Market Area", speed: "10-20 Mbps", quality: "Fair" },
+        { name: "Bus Stand WiFi", speed: "15-25 Mbps", quality: "Fair" },
+        { name: "Some Hotels/Guesthouses", speed: "20-35 Mbps", quality: "Good" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Parvati Valley Digital Nomads",
+        address: "Old Kasol Road",
+        pricing: "₹2,000/month",
+        speedMbps: 30,
+        amenities: ["Mountain Views", "Chillout Areas", "Backpacker Community", "Music"]
+      },
+      {
+        name: "Tosh Village Workspace",
+        address: "Tosh Village (30min trek from Kasol)",
+        pricing: "₹1,500/month",
+        speedMbps: 25,
+        amenities: ["Complete Isolation", "Mountain Air", "Spiritual Environment", "Hiking"]
+      }
+    ],
+    localExperienceTips: [
+      "Trek to Tosh village for spectacular Parvati Valley views and hippie culture",
+      "Visit Malana village for ancient culture (respect local customs - no photography)",
+      "Attend full moon parties and jam sessions at riverside cafes",
+      "Explore hot springs at Kheerganga after 3-hour moderate trek",
+      "Experience Israeli-influenced culture and cuisine throughout the valley",
+      "Join meditation and yoga sessions offered at various cafes and guesthouses"
+    ],
+    transportationTips: [
+      "Use shared taxis and buses from Delhi (₹800-1,200) or Chandigarh (₹400-600)",
+      "Local buses connect Kasol to nearby villages like Tosh and Malana",
+      "Trek between villages - most destinations are 2-4 hours walking distance",
+      "Rent bikes in Kasol for exploring the valley at your own pace",
+      "Use app-based rides only for short local distances - limited availability",
+      "Join group treks to remote areas for safety and cost-sharing"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant summer months (Apr-Jun) perfect for outdoor riverside coworking",
+        "Cold winters (Dec-Mar) require warm indoor spaces - many cafes have heaters",
+        "Monsoon season (Jul-Sep) brings heavy rains and potential landslides"
+      ],
+      healthConsiderations: [
+        "High altitude (5,200 ft) may cause initial adjustment period",
+        "Pure mountain air excellent for respiratory health and mental clarity",
+        "Cold winters and monsoons can affect internet connectivity frequently"
+      ],
+      equipmentNeeds: [
+        "Warm winter clothing essential - temperatures drop below 0°C",
+        "Waterproof gear during monsoon season for electronics protection",
+        "Power banks and backup charging as electricity can be unreliable"
+      ],
+      bestMonths: "March to June and September to November for optimal conditions"
+    },
+    insiderHacks: {
+      accommodation: [
+        "Stay in Israeli-run guesthouses for authentic Middle Eastern vibe",
+        "Book rooms with valley views - worth the extra cost for inspiration",
+        "Negotiate monthly rates during off-season for significant savings",
+        "Consider staying in Tosh or Pulga for quieter, more authentic experience",
+        "Look for places with backup generators during power outage season"
+      ],
+      food: [
+        "Try Israeli dishes like shakshuka and hummus at authentic cafes",
+        "Eat at local Himachali dhabas for traditional mountain cuisine",
+        "Join communal dinners at backpacker hostels for social experience",
+        "Buy fresh fruits from local orchards during season (apples, cherries)",
+        "Learn to cook local dishes - many places offer cooking sessions"
+      ],
+      transport: [
+        "Use overnight buses from Delhi to save on accommodation costs",
+        "Trek between villages instead of taking expensive taxis",
+        "Join group transportation with other backpackers and digital nomads",
+        "Rent bikes for valley exploration - cheaper than constant taxi rides",
+        "Use local bus services for budget-friendly regional connectivity"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Hidden Riverside Spot",
+        location: "Between Kasol and Tosh",
+        tip: "Trek 45 minutes from main road for secluded riverside workspace",
+        coordinates: "32.01°N, 77.34°E"
+      },
+      {
+        name: "Quiet Café with WiFi",
+        location: "Pulga Village", 
+        tip: "Less crowded alternative to main Kasol strip with reliable internet",
+        timing: "9 AM - 8 PM"
+      },
+      {
+        name: "Ancient Temple Complex",
+        location: "Malana Village",
+        tip: "Respect photography restrictions but stunning views for peaceful work",
+        note: "Follow local customs strictly"
+      }
     ]
   }
 };
 
 export function getCitySpecificData(citySlug: string): CitySpecificData | null {
-  const { getCitySpecificDataComplete } = require('./city-data-complete');
   return getCitySpecificDataComplete(citySlug) || citySpecificData[citySlug] || null;
 }

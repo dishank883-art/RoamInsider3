@@ -603,6 +603,73 @@ export const citySpecificDataComplete: Record<string, CitySpecificData> = {
         timing: "6 AM - 8 AM"
       }
     ]
+  },
+  // Add remaining cities with basic structure to prevent undefined errors
+  bangalore: {
+    moneyTips: ["Stay in PG accommodations in HSR Layout for ₹12,000-18,000/month", "Eat at local Darshinis for South Indian meals under ₹100", "Use Namma Metro and BMTC buses with monthly passes", "Shop at Commercial Street and Brigade Road markets", "Take advantage of IT hub networking events"],
+    streetFood: [{ item: "Masala Dosa", price: "₹40-70 ($0.50)" }, { item: "Idli Sambar", price: "₹30-50 ($0.40)" }, { item: "Bisi Bele Bath", price: "₹60-90 ($0.70-1.10)" }],
+    wifiHotspots: { cafes: [{ name: "Third Wave Coffee", speed: "50-80 Mbps", quality: "Excellent" }], publicSpaces: [{ name: "UB City Mall", speed: "40-70 Mbps", quality: "Good" }] },
+    coworkingSpaces: [{ name: "91springboard Bangalore", address: "Koramangala", pricing: "₹9,500/month", speedMbps: 100, amenities: ["Tech Community", "Events", "24/7 Access"] }],
+    localExperienceTips: ["Explore Cubbon Park for morning jogs", "Visit tech meetups in Koramangala", "Take weekend trips to Nandi Hills"],
+    transportationTips: ["Use Namma Metro for fast travel across the city", "Book Ola/Uber during off-peak hours", "Rent bikes for short commutes in IT corridors"],
+    climateImpact: { workingConditions: ["Pleasant weather year-round perfect for outdoor work"], healthConsiderations: ["Moderate pollution - use air purifiers"], equipmentNeeds: ["Light cooling needed during summer"], bestMonths: "October to March" },
+    insiderHacks: { accommodation: ["Stay near tech hubs for networking"], food: ["Try authentic South Indian breakfast"], transport: ["Use metro during peak hours"] },
+    secretSpots: [{ name: "Peaceful Park", location: "Cubbon Park", tip: "Early morning for quiet work" }]
+  },
+  delhi: {
+    moneyTips: ["Share apartments in Hauz Khas or Lajpat Nagar", "Eat at local dhabas and street food", "Use Delhi Metro extensively", "Shop at Sarojini Nagar and Lajpat Nagar markets"],
+    streetFood: [{ item: "Chole Bhature", price: "₹60-100 ($0.70-1.20)" }, { item: "Paranthas", price: "₹40-80 ($0.50-1)" }],
+    wifiHotspots: { cafes: [{ name: "Cafe Coffee Day", speed: "30-50 Mbps", quality: "Good" }], publicSpaces: [{ name: "Select City Walk", speed: "50-80 Mbps", quality: "Excellent" }] },
+    coworkingSpaces: [{ name: "91springboard Delhi", address: "Sector 44, Gurgaon", pricing: "₹10,500/month", speedMbps: 100, amenities: ["Business Hub", "Events", "Meeting Rooms"] }],
+    localExperienceTips: ["Visit India Gate area", "Explore Old Delhi markets", "Take heritage walks"],
+    transportationTips: ["Use Delhi Metro for all major destinations", "Keep cash for auto-rickshaws", "Avoid peak hours 8-10 AM and 6-8 PM"],
+    climateImpact: { workingConditions: ["Extreme weather - AC essential in summer"], healthConsiderations: ["High pollution levels - masks recommended"], equipmentNeeds: ["Air purifiers mandatory", "Backup power during summer"], bestMonths: "October to March" },
+    insiderHacks: { accommodation: ["Stay in South Delhi for better connectivity"], food: ["Try street food in Chandni Chowk"], transport: ["Download Delhi Metro app"] },
+    secretSpots: [{ name: "Quiet Garden", location: "Lodhi Gardens", tip: "Early morning for peaceful work" }]
+  },
+  alleppey: {
+    moneyTips: ["Stay in backwater homestays", "Eat at local toddy shops", "Use country boats for transport", "Shop at local spice markets"],
+    streetFood: [{ item: "Fish Curry Rice", price: "₹80-150 ($1-1.8)" }, { item: "Appam", price: "₹20-40 ($0.25-0.50)" }],
+    wifiHotspots: { cafes: [{ name: "Backwater Café", speed: "25-40 Mbps", quality: "Good" }], publicSpaces: [{ name: "Beach Resort", speed: "30-50 Mbps", quality: "Good" }] },
+    coworkingSpaces: [{ name: "Backwater Workspace", address: "Alleppey", pricing: "₹4,500/month", speedMbps: 50, amenities: ["Lake Views", "Peaceful Environment"] }],
+    localExperienceTips: ["Take houseboat tours", "Visit backwater villages", "Learn about coir making"],
+    transportationTips: ["Use boats for backwater exploration", "Rent scooters for mainland travel", "Book auto-rickshaws for short distances"],
+    climateImpact: { workingConditions: ["High humidity - use dehumidifiers"], healthConsiderations: ["Monsoon health risks"], equipmentNeeds: ["Waterproof equipment storage"], bestMonths: "October to March" },
+    insiderHacks: { accommodation: ["Book backwater homestays"], food: ["Try toddy and seafood"], transport: ["Use country boats"] },
+    secretSpots: [{ name: "Hidden Beach", location: "Marari Beach", tip: "Quiet spot for remote work" }]
+  },
+  varkala: {
+    moneyTips: ["Stay in cliff-top guesthouses", "Eat at beach shacks", "Walk or rent bikes", "Shop at local markets"],
+    streetFood: [{ item: "Fish Thali", price: "₹150-250 ($1.8-3)" }, { item: "Coconut Water", price: "₹30-50 ($0.40)" }],
+    wifiHotspots: { cafes: [{ name: "Cliff Café", speed: "30-50 Mbps", quality: "Good" }], publicSpaces: [{ name: "Beach Resort", speed: "40-60 Mbps", quality: "Good" }] },
+    coworkingSpaces: [{ name: "Cliff Coworking", address: "Varkala Cliff", pricing: "₹5,000/month", speedMbps: 60, amenities: ["Ocean Views", "Peaceful Environment"] }],
+    localExperienceTips: ["Watch sunset from cliff", "Visit Sivagiri Mutt", "Try Ayurvedic treatments"],
+    transportationTips: ["Walk along the cliff", "Rent scooters for exploration", "Use auto-rickshaws to beach"],
+    climateImpact: { workingConditions: ["Sea breeze keeps it cool"], healthConsiderations: ["Sun protection essential"], equipmentNeeds: ["Salt air protection for equipment"], bestMonths: "October to March" },
+    insiderHacks: { accommodation: ["Book cliff-facing rooms"], food: ["Try seafood at beach shacks"], transport: ["Walk the cliff path"] },
+    secretSpots: [{ name: "Hidden Beach", location: "Kappil Beach", tip: "Quiet backwaters for work" }]
+  },
+  kasol: {
+    moneyTips: ["Stay in Israeli cafes/guesthouses", "Eat at local dhabas", "Trek to nearby villages", "Shop at Kasol market"],
+    streetFood: [{ item: "Momos", price: "₹80-120 ($1-1.5)" }, { item: "Maggi", price: "₹60-100 ($0.70-1.20)" }],
+    wifiHotspots: { cafes: [{ name: "Moon Dance Café", speed: "20-35 Mbps", quality: "Fair" }], publicSpaces: [{ name: "Main Market", speed: "15-25 Mbps", quality: "Fair" }] },
+    coworkingSpaces: [{ name: "Mountain Café Workspace", address: "Kasol Main Road", pricing: "₹3,000/month", speedMbps: 30, amenities: ["Mountain Views", "Trekking Community"] }],
+    localExperienceTips: ["Trek to Tosh and Malana", "Visit hot springs", "Experience Israeli culture"],
+    transportationTips: ["Walk within Kasol", "Take local buses to nearby villages", "Trek to remote locations"],
+    climateImpact: { workingConditions: ["Cool mountain weather perfect for work"], healthConsiderations: ["High altitude adjustment"], equipmentNeeds: ["Warm clothing essential"], bestMonths: "March to June, September to November" },
+    insiderHacks: { accommodation: ["Stay in Israeli-run places"], food: ["Try Israeli and local food"], transport: ["Trek to hidden villages"] },
+    secretSpots: [{ name: "Hidden Valley", location: "Tosh Village", tip: "Quiet spot for mountain work" }]
+  },
+  jaipur: {
+    moneyTips: ["Stay in old city guesthouses", "Eat at local Rajasthani thali places", "Use local buses", "Shop at Johari Bazaar"],
+    streetFood: [{ item: "Dal Baati Churma", price: "₹100-150 ($1.2-1.8)" }, { item: "Kachori", price: "₹20-40 ($0.25-0.50)" }],
+    wifiHotspots: { cafes: [{ name: "Tapri Central", speed: "35-50 Mbps", quality: "Good" }], publicSpaces: [{ name: "Jaipur Airport", speed: "50-80 Mbps", quality: "Excellent" }] },
+    coworkingSpaces: [{ name: "Pink City Coworking", address: "C-Scheme, Jaipur", pricing: "₹6,500/month", speedMbps: 70, amenities: ["Heritage Setting", "Cultural Events"] }],
+    localExperienceTips: ["Visit City Palace", "Explore Hawa Mahal", "Take heritage walks"],
+    transportationTips: ["Use auto-rickshaws", "Rent bikes for city exploration", "Take buses to nearby attractions"],
+    climateImpact: { workingConditions: ["Hot summers require AC", "Pleasant winters perfect for outdoor work"], healthConsiderations: ["Desert heat in summer"], equipmentNeeds: ["Cooling systems essential"], bestMonths: "October to March" },
+    insiderHacks: { accommodation: ["Stay near City Palace"], food: ["Try authentic Rajasthani cuisine"], transport: ["Use pre-paid auto stands"] },
+    secretSpots: [{ name: "Peaceful Garden", location: "Central Park", tip: "Early morning for quiet work" }]
   }
 };
 
