@@ -738,6 +738,101 @@ export class MemStorage implements IStorage {
       updatedAt: new Date(),
     });
 
+    // Add Bir 
+    const birId = randomUUID();
+    this.cities.set(birId, {
+      id: birId,
+      name: "Bir",
+      state: "Himachal Pradesh",
+      slug: "bir",
+      description: "World-famous paragliding destination with Tibetan monasteries, quiet mountain life, and spectacular Himalayan views.",
+      heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      latitude: "32.0176",
+      longitude: "76.7234",
+      population: 1200,
+      rating: "4.8",
+      isPopular: true,
+      tags: ["Paragliding", "Mountains", "Tibetan Culture", "Adventure"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Add Dehradun
+    const dehradunId = randomUUID();
+    this.cities.set(dehradunId, {
+      id: dehradunId,
+      name: "Dehradun",
+      state: "Uttarakhand",
+      slug: "dehradun",
+      description: "Gateway to the Himalayas with excellent education infrastructure, pleasant climate, and growing tech scene.",
+      heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      latitude: "30.3165",
+      longitude: "78.0322",
+      population: 1400000,
+      rating: "4.5",
+      isPopular: true,
+      tags: ["Education Hub", "Gateway to Himalayas", "Pleasant Climate", "IT Sector"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Add Mussoorie  
+    const mussoorieId = randomUUID();
+    this.cities.set(mussoorieId, {
+      id: mussoorieId,
+      name: "Mussoorie",
+      state: "Uttarakhand",
+      slug: "mussoorie",
+      description: "Queen of Hills with colonial charm, mall road culture, scenic mountain views, and inspiring writing retreats.",
+      heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      latitude: "30.4598",
+      longitude: "78.0664",
+      population: 30118,
+      rating: "4.6",
+      isPopular: true,
+      tags: ["Hill Station", "Colonial Heritage", "Scenic Views", "Writing Retreats"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Add Ziro
+    const ziroId = randomUUID();
+    this.cities.set(ziroId, {
+      id: ziroId,
+      name: "Ziro",
+      state: "Arunachal Pradesh",
+      slug: "ziro",
+      description: "UNESCO heritage site with unique Apatani tribal culture, music festivals, and pristine mountain valleys.",
+      heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      latitude: "27.5450",
+      longitude: "93.8209",
+      population: 5757,
+      rating: "4.7",
+      isPopular: true,
+      tags: ["Tribal Culture", "Music Festival", "UNESCO Heritage", "Pristine Nature"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Add Kolkata
+    const kolkataId = randomUUID();
+    this.cities.set(kolkataId, {
+      id: kolkataId,
+      name: "Kolkata",
+      state: "West Bengal", 
+      slug: "kolkata",
+      description: "Cultural capital of India with rich literary heritage, vibrant arts scene, affordable living, and intellectual community.",
+      heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      latitude: "22.5726",
+      longitude: "88.3639",
+      population: 14850000,
+      rating: "4.3",
+      isPopular: true,
+      tags: ["Cultural Capital", "Literature", "Arts", "Intellectual Hub"],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
     // Add cost of living data for new cities
     // New Delhi Cost of Living
     this.costsOfLiving.set(randomUUID(), {
@@ -820,6 +915,111 @@ export class MemStorage implements IStorage {
       gymINR: 800,
       coffeeINR: 120,
       entertainmentINR: 2000,
+      updatedAt: new Date(),
+    });
+
+    // Bir Cost of Living
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: birId,
+      monthlyBudgetINR: 22000,
+      monthlyBudgetUSD: 264,
+      studioRentINR: 8000,
+      oneBhkRentINR: 12000,
+      twoBhkRentINR: 18000,
+      utilitiesINR: 1200,
+      groceriesINR: 4000,
+      eatingOutINR: 2500,
+      coworkingINR: 2500,
+      transportINR: 600,
+      simDataINR: 400,
+      gymINR: 500,
+      coffeeINR: 100,
+      entertainmentINR: 1500,
+      updatedAt: new Date(),
+    });
+
+    // Dehradun Cost of Living
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: dehradunId,
+      monthlyBudgetINR: 35000,
+      monthlyBudgetUSD: 420,
+      studioRentINR: 12000,
+      oneBhkRentINR: 18000,
+      twoBhkRentINR: 28000,
+      utilitiesINR: 2000,
+      groceriesINR: 6000,
+      eatingOutINR: 4500,
+      coworkingINR: 4500,
+      transportINR: 1800,
+      simDataINR: 400,
+      gymINR: 1500,
+      coffeeINR: 90,
+      entertainmentINR: 3000,
+      updatedAt: new Date(),
+    });
+
+    // Mussoorie Cost of Living
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: mussoorieId,
+      monthlyBudgetINR: 32000,
+      monthlyBudgetUSD: 384,
+      studioRentINR: 15000,
+      oneBhkRentINR: 22000,
+      twoBhkRentINR: 35000,
+      utilitiesINR: 2500,
+      groceriesINR: 6500,
+      eatingOutINR: 4000,
+      coworkingINR: 4000,
+      transportINR: 1200,
+      simDataINR: 400,
+      gymINR: 1200,
+      coffeeINR: 120,
+      entertainmentINR: 2800,
+      updatedAt: new Date(),
+    });
+
+    // Ziro Cost of Living
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: ziroId,
+      monthlyBudgetINR: 26000,
+      monthlyBudgetUSD: 312,
+      studioRentINR: 8000,
+      oneBhkRentINR: 12000,
+      twoBhkRentINR: 18000,
+      utilitiesINR: 1500,
+      groceriesINR: 5000,
+      eatingOutINR: 3500,
+      coworkingINR: 2500,
+      transportINR: 1000,
+      simDataINR: 400,
+      gymINR: 800,
+      coffeeINR: 80,
+      entertainmentINR: 2000,
+      updatedAt: new Date(),
+    });
+
+    // Kolkata Cost of Living
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: kolkataId,
+      monthlyBudgetINR: 40000,
+      monthlyBudgetUSD: 480,
+      studioRentINR: 15000,
+      oneBhkRentINR: 22000,
+      twoBhkRentINR: 35000,
+      utilitiesINR: 2800,
+      groceriesINR: 7500,
+      eatingOutINR: 5500,
+      coworkingINR: 7500,
+      transportINR: 2200,
+      simDataINR: 400,
+      gymINR: 2000,
+      coffeeINR: 80,
+      entertainmentINR: 4500,
       updatedAt: new Date(),
     });
 

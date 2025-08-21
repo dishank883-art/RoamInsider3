@@ -779,6 +779,441 @@ export const citySpecificData: Record<string, CitySpecificData> = {
         tip: "Respect photography restrictions but stunning views for peaceful work - Follow local customs strictly"
       }
     ]
+  },
+
+  "bir": {
+    coworkingSpaces: [
+      {
+        name: "The Hideout Café & Co-working",
+        location: "Bir Road, near Landing Zone",
+        pricing: "₹2,500/month",
+        description: "Paragliding pilots' favorite co-working space with mountain views and reliable WiFi for remote work sessions",
+        amenities: ["Mountain View", "Pilot Community", "Equipment Storage", "Strong WiFi"],
+        openHours: "7:00 AM - 9:00 PM"
+      },
+      {
+        name: "Zostel Bir Co-work", 
+        location: "Bir Village Center",
+        pricing: "₹2,000/month",
+        description: "Backpacker-friendly co-working space with communal vibes and regular nomad networking events",
+        amenities: ["Community Events", "Budget-Friendly", "Social Environment", "Power Backup"],
+        openHours: "24/7"
+      }
+    ],
+    nomadCommunity: {
+      size: "50-80 active nomads",
+      platforms: ["WhatsApp: Bir Digital Nomads", "Instagram: @birparagliding"],
+      events: ["Weekly Pilot Meetups", "Monthly Networking", "Seasonal Flying Events"],
+      description: "Close-knit community of adventure-seeking nomads and pilots with regular social gatherings"
+    },
+    climateInsights: {
+      workingConditions: [
+        "Perfect flying weather (Apr-Jun, Sep-Nov) brings high energy and motivation",
+        "Mountain air and 2,500ft altitude ideal for clear thinking and productivity",
+        "Monsoon season (Jul-Aug) requires indoor workspaces and backup power solutions"
+      ],
+      healthConsiderations: [
+        "Moderate altitude (2,500 ft) - no acclimatization needed for most people",
+        "Clean mountain air excellent for respiratory health and mental clarity", 
+        "Cold winters require proper heating for comfortable work environment"
+      ],
+      equipmentNeeds: [
+        "Light jacket for morning/evening temperatures year-round",
+        "Power banks essential during monsoon season electricity fluctuations",
+        "Good quality headphones for video calls due to occasional wind noise"
+      ],
+      bestMonths: "March to June and September to November for optimal flying and working conditions"
+    },
+    insiderHacks: {
+      accommodation: [
+        "Book rooms with takeoff view for daily paragliding inspiration",
+        "Stay near Billing for easier access to launch sites and pilot community",
+        "Negotiate monthly rates in off-season (Dec-Feb) for 40-50% savings",
+        "Consider homestays in Chaugan for authentic local experience",
+        "Look for places with backup generators for reliable power during storms"
+      ],
+      food: [
+        "Try Tibetan momos and thukpa at local monastery kitchens",
+        "Eat at pilot hangouts for adventure stories and local flying tips",
+        "Buy fresh vegetables from weekly village markets (Wednesdays/Saturdays)",
+        "Learn basic Tibetan cooking from monastery volunteers",
+        "Join communal dinners at backpacker hostels for social networking"
+      ],
+      transport: [
+        "Use local buses to Billing for budget-friendly mountain access",
+        "Join group taxis with other pilots/tourists to share costs",
+        "Rent bikes for valley exploration and independent mobility",
+        "Take overnight buses from Delhi/Chandigarh to save accommodation costs",
+        "Walk between Bir and Billing for daily exercise and scenic views"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Sunrise Workspace Rock",
+        location: "Billing takeoff area",
+        tip: "Early morning workspace with panoramic Dhauladhar views - arrive by 6 AM",
+        coordinates: "32.05°N, 76.73°E"
+      },
+      {
+        name: "Monastery Library",
+        location: "Chokling Monastery",
+        tip: "Quiet study space with WiFi, meditation vibes, and respectful silence policy",
+        timing: "9 AM - 5 PM (closed Sundays)"
+      },
+      {
+        name: "Forest Trail Office",
+        location: "Bir-Billing trek path", 
+        tip: "Mobile workstation spots along forest trail with natural shade and mountain views"
+      }
+    ]
+  },
+
+  "dehradun": {
+    coworkingSpaces: [
+      {
+        name: "91springboard Dehradun",
+        location: "Rajpur Road, IT Park",
+        pricing: "₹4,500/month",
+        description: "Professional tech hub with startup community and regular networking events",
+        amenities: ["Startup Ecosystem", "Mentorship Programs", "Events", "Meeting Rooms"],
+        openHours: "9:00 AM - 9:00 PM"
+      },
+      {
+        name: "The Workspace Café",
+        location: "Clock Tower, Paltan Bazaar",
+        pricing: "₹3,500/month", 
+        description: "City center co-working with café culture and young professional community",
+        amenities: ["Central Location", "Café Culture", "High-Speed WiFi", "Phone Booths"],
+        openHours: "8:00 AM - 10:00 PM"
+      }
+    ],
+    nomadCommunity: {
+      size: "150-200 active nomads",
+      platforms: ["WhatsApp: Dehradun Tech Community", "Meetup: DehraDun Digital Nomads"],
+      events: ["Tech Meetups", "Startup Events", "Weekend Treks", "Cultural Evenings"],
+      description: "Growing tech community with mix of local entrepreneurs and digital nomads"
+    },
+    climateInsights: {
+      workingConditions: [
+        "Pleasant year-round climate (20-30°C) ideal for consistent productivity",
+        "Fresh mountain air from nearby Himalayas enhances mental clarity",
+        "Monsoon season (Jul-Sep) brings greenery but occasional power cuts"
+      ],
+      healthConsiderations: [
+        "Moderate altitude (700m) - comfortable for all fitness levels",
+        "Excellent air quality compared to plains cities like Delhi",
+        "Winter fog (Dec-Jan) may affect morning commutes and mood"
+      ],
+      equipmentNeeds: [
+        "Light sweater for winter evenings and air-conditioned spaces",
+        "Umbrella or raincoat during monsoon season",
+        "Power surge protectors for electronic equipment during storms"
+      ],
+      bestMonths: "October to April for optimal weather and outdoor activities"
+    },
+    insiderHacks: {
+      accommodation: [
+        "Stay near IT Park for tech community access and modern amenities",
+        "Consider areas like Race Course or Dalanwala for quieter environments",
+        "Look for furnished apartments with WiFi and power backup",
+        "Negotiate long-term rates with property owners for significant savings",
+        "Choose places near main markets for convenience and local food access"
+      ],
+      food: [
+        "Try local Garhwali cuisine at authentic mountain restaurants",
+        "Explore Tibetan food in nearby Clement Town area",
+        "Visit Saharanpur Road for diverse North Indian street food",
+        "Join local cooking classes to learn regional mountain cuisine",
+        "Eat at IMA (Indian Military Academy) canteen for subsidized quality meals"
+      ],
+      transport: [
+        "Use city buses and shared auto-rickshaws for daily commuting",
+        "Rent bikes for independent exploration of nearby hill stations", 
+        "Take advantage of proximity to Delhi (4-5 hours) for business trips",
+        "Use train connectivity for budget travel to other Indian cities",
+        "Join group trips to nearby attractions like Mussoorie and Rishikesh"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Forest Research Institute Grounds",
+        location: "FRI Campus",
+        tip: "Peaceful outdoor workspace in colonial-era campus with historic architecture",
+        coordinates: "30.32°N, 78.05°E"
+      },
+      {
+        name: "Malsi Deer Park Café",
+        location: "Mussoorie Road",
+        tip: "Nature workspace with deer sightings and mountain views - ideal for creative work",
+        timing: "9 AM - 6 PM"
+      },
+      {
+        name: "Robber's Cave Stream Side",
+        location: "Anarwala Village",
+        tip: "Natural cave workspace by flowing stream - unique environment for inspiration"
+      }
+    ]
+  },
+
+  "mussoorie": {
+    coworkingSpaces: [
+      {
+        name: "The Writer's Den",
+        location: "Mall Road, near Library Point",
+        pricing: "₹4,000/month",
+        description: "Literary-focused co-working space popular with writers and creative professionals",
+        amenities: ["Library Access", "Writing Workshops", "Author Events", "Mountain Views"],
+        openHours: "8:00 AM - 8:00 PM"
+      },
+      {
+        name: "Himalayan Co-work Hub",
+        location: "Landour, near Char Dukan",
+        pricing: "₹3,500/month",
+        description: "Quiet hill station workspace with colonial charm and inspiring mountain vistas",
+        amenities: ["Colonial Architecture", "Peaceful Environment", "High-Speed WiFi", "Terrace Workspace"],
+        openHours: "9:00 AM - 7:00 PM"
+      }
+    ],
+    nomadCommunity: {
+      size: "80-120 active nomads",
+      platforms: ["Facebook: Mussoorie Digital Nomads", "WhatsApp: Hill Station Workers"],
+      events: ["Literary Evenings", "Photography Walks", "Weekend Treks", "Writer Meetups"],
+      description: "Creative community of writers, artists, and digital nomads seeking inspiration in the hills"
+    },
+    climateInsights: {
+      workingConditions: [
+        "Cool mountain climate (15-25°C) perfect for focused work and creativity",
+        "Fresh Himalayan air enhances mental clarity and reduces stress levels",
+        "Winter snow (Dec-Feb) creates magical but cold working environment"
+      ],
+      healthConsiderations: [
+        "High altitude (6,000 ft) requires initial acclimatization for some people",
+        "Pure mountain air excellent for respiratory health and mental wellness",
+        "Cold winters may aggravate joint problems - proper heating essential"
+      ],
+      equipmentNeeds: [
+        "Warm winter clothing essential - temperatures can drop below freezing",
+        "Room heaters for comfortable winter working conditions",
+        "Waterproof gear for monsoon season equipment protection"
+      ],
+      bestMonths: "March to June and September to November for comfortable working weather"
+    },
+    insiderHacks: {
+      accommodation: [
+        "Stay in Landour for quieter, more authentic hill station experience",
+        "Book heritage hotels during off-season for luxury at budget prices",
+        "Look for places with valley views and morning sunlight for natural lighting",
+        "Consider writer's retreats and residential programs for creative immersion",
+        "Choose accommodations with fireplaces for cozy winter working sessions"
+      ],
+      food: [
+        "Try local Garhwali cuisine at mountain restaurants and local homes",
+        "Visit Char Dukan for famous bun-omelette and mountain tea",
+        "Explore Mall Road for diverse food options and people-watching",
+        "Join cooking classes to learn traditional hill station recipes",
+        "Buy fresh produce from local markets for healthy mountain living"
+      ],
+      transport: [
+        "Use local taxi services for convenient hill station transportation",
+        "Walk along Mall Road for daily exercise and scenic commutes", 
+        "Take cable car rides for unique aerial workspace perspectives",
+        "Join group tours to nearby attractions like Kempty Falls",
+        "Use train connectivity to Delhi via Dehradun for business travel"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Camel's Back Road Benches",
+        location: "Camel's Back Road",
+        tip: "Sunrise workspace with Doon Valley views - perfect for morning productivity sessions",
+        coordinates: "30.46°N, 78.08°E"
+      },
+      {
+        name: "St. Paul's Church Grounds",
+        location: "Landour",
+        tip: "Historic church campus with peaceful gardens and colonial architecture inspiration",
+        timing: "6 AM - 6 PM"
+      },
+      {
+        name: "Cloud's End Forest",
+        location: "Beyond Happy Valley",
+        tip: "Forest trail workspace surrounded by oak and deodar trees - ultimate nature office"
+      }
+    ]
+  },
+
+  "ziro": {
+    coworkingSpaces: [
+      {
+        name: "Apatani Cultural Hub",
+        location: "Ziro Town Center",
+        pricing: "₹2,500/month",
+        description: "Community space celebrating local Apatani culture with modern amenities for digital nomads",
+        amenities: ["Cultural Events", "Local Art", "Community Kitchen", "Mountain Views"],
+        openHours: "8:00 AM - 8:00 PM"
+      },
+      {
+        name: "Music Valley Co-work",
+        location: "Near Festival Grounds",
+        pricing: "₹2,000/month",
+        description: "Creative workspace popular during festival season with musicians and artists",
+        amenities: ["Music Rooms", "Festival Events", "Creative Community", "Natural Lighting"],
+        openHours: "9:00 AM - 7:00 PM"
+      }
+    ],
+    nomadCommunity: {
+      size: "30-50 active nomads",
+      platforms: ["Instagram: @zirofestival", "WhatsApp: Ziro Valley Travelers"],
+      events: ["Ziro Music Festival", "Cultural Exchange Programs", "Nature Walks", "Tribal Art Workshops"],
+      description: "Small but passionate community of culture enthusiasts and nature lovers"
+    },
+    climateInsights: {
+      workingConditions: [
+        "Cool mountain climate (10-20°C) ideal for productive work sessions",
+        "Festival season (September) brings high energy and creative inspiration",
+        "Winter frost (Dec-Feb) requires proper heating for comfortable work"
+      ],
+      healthConsiderations: [
+        "High altitude (5,000 ft) may require acclimatization period for some visitors",
+        "Pristine air quality excellent for respiratory health and mental clarity",
+        "Remote location requires good health preparation and basic medical supplies"
+      ],
+      equipmentNeeds: [
+        "Warm clothing essential year-round due to mountain altitude",
+        "Power banks and solar chargers for reliable equipment power",
+        "Satellite internet backup for important connectivity requirements"
+      ],
+      bestMonths: "March to May and September to November for optimal weather and cultural events"
+    },
+    insiderHacks: {
+      accommodation: [
+        "Stay with Apatani families for authentic cultural immersion experience",
+        "Book early for Ziro Music Festival season (September) - accommodations fill quickly",
+        "Consider camping options during festival for budget and community experience",
+        "Look for eco-lodges that support local sustainability initiatives",
+        "Choose places with backup power for reliable equipment charging"
+      ],
+      food: [
+        "Try traditional Apatani cuisine including bamboo shoot and local fish dishes",
+        "Participate in community cooking sessions to learn tribal recipes",
+        "Buy fresh organic vegetables from local Apatani farms",
+        "Respect local customs around food sharing and community meals",
+        "Stock up on packaged foods during supply runs to nearby towns"
+      ],
+      transport: [
+        "Fly to Ziro via Tezpur airport for quickest access to remote valley",
+        "Use local transport cooperatives for sustainable travel within valley",
+        "Join group transportation for supply runs to larger towns",
+        "Walk or cycle for daily transportation - valley is compact and scenic",
+        "Plan travel carefully during monsoon season due to landslide risks"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Talley Valley Wildlife Sanctuary",
+        location: "20km from Ziro",
+        tip: "Pristine nature workspace with rare wildlife spotting and complete silence",
+        coordinates: "27.58°N, 93.78°E"
+      },
+      {
+        name: "Apatani Rice Fields",
+        location: "Ziro Valley Floor",
+        tip: "UNESCO heritage rice terraces - perfect outdoor office with cultural significance",
+        timing: "Best in early morning or late afternoon"
+      },
+      {
+        name: "Dolo Mando Sunrise Point",
+        location: "Ziro Valley Ridge",
+        tip: "Panoramic valley views for morning meditation and inspiring work sessions"
+      }
+    ]
+  },
+
+  "kolkata": {
+    coworkingSpaces: [
+      {
+        name: "91springboard Salt Lake",
+        location: "Salt Lake City, Sector V",
+        pricing: "₹7,500/month",
+        description: "Modern tech hub in IT corridor with startup ecosystem and networking events",
+        amenities: ["Startup Community", "Mentorship", "Events", "High-Speed WiFi"],
+        openHours: "9:00 AM - 9:00 PM"
+      },
+      {
+        name: "The Culture Canvas",
+        location: "Park Street Area",
+        pricing: "₹6,000/month",
+        description: "Creative co-working space in cultural heart of city with artist community",
+        amenities: ["Cultural Events", "Art Exhibitions", "Library", "Café Culture"],
+        openHours: "8:00 AM - 10:00 PM"
+      }
+    ],
+    nomadCommunity: {
+      size: "200-300 active nomads",
+      platforms: ["Meetup: Kolkata Digital Nomads", "Facebook: Calcutta Creative Community"],
+      events: ["Literary Meets", "Cultural Festivals", "Startup Events", "Art Exhibitions"],
+      description: "Vibrant intellectual community with strong emphasis on arts, literature, and cultural exchange"
+    },
+    climateInsights: {
+      workingConditions: [
+        "Tropical climate requires air conditioning for comfortable summer work (Apr-Jun)",
+        "Monsoon season (Jul-Sep) brings relief but humid conditions and power cuts",
+        "Pleasant winter months (Nov-Feb) ideal for outdoor and natural light workspaces"
+      ],
+      healthConsiderations: [
+        "High humidity year-round requires good ventilation and hydration",
+        "Air quality concerns during winter months - consider air purifiers",
+        "Monsoon season may affect commuting and internet connectivity"
+      ],
+      equipmentNeeds: [
+        "Dehumidifiers for electronics protection during humid months",
+        "Power surge protectors essential during monsoon thunderstorms",
+        "Air purifiers recommended for cleaner indoor air quality"
+      ],
+      bestMonths: "October to March for comfortable weather and optimal productivity"
+    },
+    insiderHacks: {
+      accommodation: [
+        "Stay in Park Street or New Market area for cultural immersion and convenience",
+        "Consider Kolkata University area for intellectual community and budget options",
+        "Look for places with backup power and air conditioning for summer comfort",
+        "Choose heritage accommodations in North Kolkata for authentic cultural experience",
+        "Select modern apartments in Salt Lake for tech community access"
+      ],
+      food: [
+        "Explore authentic Bengali cuisine at local family restaurants and street stalls",
+        "Try intellectual café culture at Indian Coffee House and Oxford Bookstore Café",
+        "Join cooking classes to learn traditional Bengali fish and rice preparations",
+        "Visit local markets like New Market and Gariahat for fresh ingredients",
+        "Experience adda (intellectual conversation) culture over tea and snacks"
+      ],
+      transport: [
+        "Use extensive metro network for convenient and affordable city transportation",
+        "Take iconic yellow taxis for cultural experience and local navigation",
+        "Walk along Ganges riverfront for daily exercise and cultural inspiration",
+        "Use app-based ride sharing for convenient door-to-door transportation",
+        "Join group cultural tours to explore city's rich historical heritage"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Prinsep Ghat Riverside",
+        location: "Strand Road, River Hooghly",
+        tip: "Peaceful river workspace with colonial architecture and boat watching",
+        coordinates: "22.56°N, 88.34°E"
+      },
+      {
+        name: "Coffee House Adda Culture",
+        location: "Indian Coffee House, College Street",
+        tip: "Historic intellectual café perfect for writing and cultural conversations",
+        timing: "8 AM - 11 PM"
+      },
+      {
+        name: "Academy of Fine Arts Garden",
+        location: "Cathedral Road",
+        tip: "Art-filled environment with galleries and peaceful gardens for creative work"
+      }
+    ]
   }
 };
 
