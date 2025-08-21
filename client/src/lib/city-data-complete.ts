@@ -1,0 +1,611 @@
+export interface CitySpecificData {
+  moneyTips: string[];
+  streetFood: Array<{
+    item: string;
+    price: string;
+  }>;
+  wifiHotspots: {
+    cafes: Array<{
+      name: string;
+      speed: string;
+      quality: string;
+    }>;
+    publicSpaces: Array<{
+      name: string;
+      speed: string;
+      quality: string;
+    }>;
+  };
+  coworkingSpaces: Array<{
+    name: string;
+    address: string;
+    pricing: string;
+    speedMbps: number;
+    amenities: string[];
+  }>;
+  localExperienceTips: string[];
+  transportationTips: string[];
+  climateImpact: {
+    workingConditions: string[];
+    healthConsiderations: string[];
+    equipmentNeeds: string[];
+    bestMonths: string;
+  };
+  insiderHacks: {
+    accommodation: string[];
+    food: string[];
+    transport: string[];
+  };
+  secretSpots: Array<{
+    name: string;
+    location: string;
+    tip: string;
+    coordinates?: string;
+    website?: string;
+    timing?: string;
+  }>;
+}
+
+export const citySpecificDataComplete: Record<string, CitySpecificData> = {
+  pune: {
+    moneyTips: [
+      "Share PG accommodation in Koregaon Park or Baner for ₹12,000-15,000/month",
+      "Eat at Marathi thali restaurants for authentic meals at ₹100-150",
+      "Use PMPML bus passes for unlimited local travel (₹400/month)",
+      "Shop at wholesale markets in Camp area for groceries",
+      "Take advantage of student city discounts with college ID proximity"
+    ],
+    streetFood: [
+      { item: "Misal Pav", price: "₹40-60 ($0.50)" },
+      { item: "Vada Pav", price: "₹15-25 ($0.20)" },
+      { item: "Puran Poli", price: "₹30-50 ($0.40)" },
+      { item: "Bhel Puri", price: "₹25-40 ($0.30)" },
+      { item: "Pav Bhaji", price: "₹50-80 ($0.60-1)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Blue Tokai Coffee Roasters", speed: "50-80 Mbps", quality: "Excellent" },
+        { name: "The Flour Works", speed: "30-50 Mbps", quality: "Good" },
+        { name: "Café Coffee Day (Multiple)", speed: "25-40 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "Phoenix MarketCity", speed: "40-70 Mbps", quality: "Excellent" },
+        { name: "Pune Airport", speed: "60-100 Mbps", quality: "Excellent" },
+        { name: "Pune Metro Stations", speed: "15-30 Mbps", quality: "Good" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "91springboard Pune",
+        address: "Koregaon Park, Pune",
+        pricing: "₹8,500/month",
+        speedMbps: 100,
+        amenities: ["Premium Location", "Events", "Networking", "Meeting Rooms"]
+      },
+      {
+        name: "Workafella Pune",
+        address: "Baner, Pune",
+        pricing: "₹7,200/month",
+        speedMbps: 90,
+        amenities: ["Modern Design", "Cafe", "Gaming Zone", "24/7 Access"]
+      }
+    ],
+    localExperienceTips: [
+      "Visit Shaniwar Wada early morning to avoid crowds",
+      "Explore Koregaon Park for trendy cafes and international cuisine",
+      "Take day trips to Lonavala and Khandala hill stations",
+      "Join weekend treks to nearby Sahyadri mountains",
+      "Experience Pune's famous Ganesh Chaturthi celebrations"
+    ],
+    transportationTips: [
+      "Use Pune Metro Purple Line connecting PCMC to Swargate - covers IT hubs",
+      "Book Rapido bikes for short distances during peak hours (₹25-50)",
+      "PMPML Rainbow BRTS buses connect all major areas - get monthly pass ₹400",
+      "Avoid Baner-Pashan Link Road during 8-10 AM and 7-9 PM rush",
+      "Share auto-rickshaws from IT parks - negotiate group rates ₹100-150",
+      "Rent monthly bikes in Baner/Hinjewadi for IT corridor commute (₹2,000-3,000)"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Monsoon season (June-September): Indoor coworking preferred due to heavy rains",
+        "Summer heat (March-May): Air conditioning essential for home offices",
+        "Pleasant winters (November-February): Perfect for outdoor meetings and balcony work"
+      ],
+      healthConsiderations: [
+        "Air quality drops during winter months - consider air purifiers",
+        "Monsoon brings dengue/malaria risk - use mosquito protection",
+        "Stay hydrated during hot summers - temperature reaches 42°C"
+      ],
+      equipmentNeeds: [
+        "Monsoon backup power solutions for frequent outages",
+        "Dehumidifier for equipment protection during rains",
+        "Air conditioning crucial for summer productivity"
+      ],
+      bestMonths: "November to February for optimal working conditions"
+    },
+    insiderHacks: {
+      accommodation: [
+        "Stay in Kothrud or Karve Nagar for better value than Koregaon Park",
+        "Book serviced apartments for monthly stays - often cheaper than hotels",
+        "Look for 'paying guest' accommodations near IT hubs for networking",
+        "Negotiate monthly rates in Airbnb for 30+ day stays"
+      ],
+      food: [
+        "Eat at local 'katta' joints for authentic Pune street food experience",
+        "Visit Goodluck Cafe for famous bun maska and Irani chai",
+        "Try Marathi thali at Shabree for regional specialties",
+        "Shop at Mahatma Phule Market for fresh produce at wholesale prices"
+      ],
+      transport: [
+        "Use Pune Metro for fastest travel between major areas",
+        "Book Ola/Uber Share for cost-effective rides during peak hours",
+        "Rent monthly bikes from Bounce for ₹2,500-3,000",
+        "Use PMPML Chalo app for real-time bus tracking"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Quieter Coworking at Symbiosis",
+        location: "Lavale",
+        tip: "Access library and campus cafes for peaceful work - visitor pass available",
+        timing: "9 AM - 6 PM"
+      },
+      {
+        name: "Hidden Sunset Point",
+        location: "Sinhagad Fort",
+        tip: "Trek during weekdays for empty fort and stunning valley views",
+        coordinates: "18.366°N, 73.755°E"
+      }
+    ]
+  },
+  udaipur: {
+    moneyTips: [
+      "Stay in old city areas like Jagdish Chowk for authentic experience at lower costs",
+      "Eat at local dhabas outside tourist areas for meals under ₹100",
+      "Use local buses and shared autos instead of tourist taxis",
+      "Shop at Hathi Pol and Bada Bazaar for souvenirs at local prices",
+      "Visit during shoulder season (Mar-May) for 40% lower accommodation rates"
+    ],
+    streetFood: [
+      { item: "Dal Baati Churma", price: "₹80-120 ($1-1.5)" },
+      { item: "Kachoris", price: "₹20-30 ($0.25)" },
+      { item: "Pyaaz Kachori", price: "₹25-35 ($0.30)" },
+      { item: "Mirchi Bada", price: "₹15-25 ($0.20)" },
+      { item: "Rajasthani Thali", price: "₹150-250 ($2-3)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Café Edelweiss", speed: "35-50 Mbps", quality: "Good" },
+        { name: "Jheel's Ginger Coffee Bar", speed: "25-40 Mbps", quality: "Good" },
+        { name: "Lake Palace Hotel Café", speed: "40-60 Mbps", quality: "Excellent" }
+      ],
+      publicSpaces: [
+        { name: "City Palace Complex", speed: "20-35 Mbps", quality: "Fair" },
+        { name: "Maharana Pratap Airport", speed: "50-80 Mbps", quality: "Excellent" },
+        { name: "Celebration Mall", speed: "30-50 Mbps", quality: "Good" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Lake Palace Co-work",
+        address: "City Palace Road, Udaipur",
+        pricing: "₹4,200/month",
+        speedMbps: 60,
+        amenities: ["Lake Views", "Heritage Setting", "Royal Ambiance", "Meeting Rooms"]
+      },
+      {
+        name: "Udaipur Startup Hub",
+        address: "Surajpole, Udaipur", 
+        pricing: "₹3,500/month",
+        speedMbps: 50,
+        amenities: ["Local Community", "Tourism Focus", "Cultural Events", "Mentorship"]
+      }
+    ],
+    localExperienceTips: [
+      "Take boat rides on Lake Pichola during sunset for magical views",
+      "Explore City Palace complex early morning before crowds",
+      "Attend traditional Rajasthani cultural shows at heritage hotels",
+      "Visit local miniature painting workshops for authentic art",
+      "Take heritage walks through narrow lanes with local guides"
+    ],
+    transportationTips: [
+      "Use auto-rickshaws for short distances - negotiate rates (₹50-100)",
+      "Rent scooters from local shops for ₹300-500/day to explore city",
+      "Take shared taxis to Udaipur Airport - cheaper than private cabs",
+      "Walk around old city area - most attractions within 2km radius",
+      "Book Uber/Ola for longer distances or night travel for safety",
+      "Use bicycle rentals from guesthouses for eco-friendly exploration"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Hot summers (April-June): Work early morning/evening - too hot midday",
+        "Pleasant winters (October-March): Perfect for outdoor workspaces and rooftop offices",
+        "Monsoon season (July-September): Limited but refreshing - good for indoor work"
+      ],
+      healthConsiderations: [
+        "Extreme summer heat reaches 45°C - heat stroke risk during outdoor activities",
+        "Dry climate year-round - stay hydrated and use moisturizers",
+        "Low pollution levels compared to metros - good for respiratory health"
+      ],
+      equipmentNeeds: [
+        "Desert coolers more effective than AC during dry summers",
+        "Backup power essential - frequent outages in summer",
+        "UV protection for outdoor work - strong desert sun"
+      ],
+      bestMonths: "October to March for comfortable working temperatures"
+    },
+    insiderHacks: {
+      accommodation: [
+        "Stay in heritage havelis converted to guesthouses for authentic experience",
+        "Book palace hotels during off-season for royal experience at lower rates",
+        "Look for rooftop accommodations overlooking City Palace",
+        "Negotiate long-term stays at family-run guesthouses near Jagdish Temple"
+      ],
+      food: [
+        "Eat at local 'thali' places in old city for authentic Rajasthani cuisine",
+        "Try street food at Chetak Circle for local flavors away from tourists",
+        "Visit Nathdwara for famous pedas and traditional sweets",
+        "Book cooking classes at heritage hotels for royal recipes"
+      ],
+      transport: [
+        "Use shared autos and city buses for economical city travel",
+        "Rent bikes to explore countryside and nearby villages",
+        "Book private taxis for day trips to Chittorgarh and Kumbhalgarh",
+        "Use app-based rides during early morning for better rates"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Hidden Sunset Viewpoint",
+        location: "Monsoon Palace Road",
+        tip: "Stop halfway up the hill for panoramic city views without entry fee",
+        coordinates: "24.629°N, 73.682°E"
+      },
+      {
+        name: "Local Art District",
+        location: "Shilpgram",
+        tip: "Visit during non-festival times to interact directly with artisans",
+        timing: "10 AM - 5 PM"
+      }
+    ]
+  },
+  gangtok: {
+    moneyTips: [
+      "Stay in local homestays around MG Marg for authentic Sikkimese experience",
+      "Eat at local momos shops and Tibetan restaurants for hearty meals under ₹150", 
+      "Use shared jeeps for intercity travel - much cheaper than private taxis",
+      "Shop at local markets like Lal Bazaar instead of tourist shops on MG Marg",
+      "Book permits and tours through local agencies rather than hotel concierges"
+    ],
+    streetFood: [
+      { item: "Momos (Steamed/Fried)", price: "₹60-100 ($0.70-1.20)" },
+      { item: "Thukpa (Noodle Soup)", price: "₹80-120 ($1-1.5)" },
+      { item: "Gundruk Soup", price: "₹40-60 ($0.50)" },
+      { item: "Sel Roti", price: "₹20-30 ($0.25)" },
+      { item: "Tibetan Bread", price: "₹25-40 ($0.30)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Café Live & Loud", speed: "25-35 Mbps", quality: "Good" },
+        { name: "The Coffee Shop MG Marg", speed: "20-30 Mbps", quality: "Fair" },
+        { name: "Hotel Tashi Delek Café", speed: "30-45 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "MG Marg Pedestrian Area", speed: "15-25 Mbps", quality: "Fair" },
+        { name: "Gangtok Airport", speed: "40-60 Mbps", quality: "Good" },
+        { name: "Palzor Stadium Area", speed: "20-30 Mbps", quality: "Fair" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Mountain View Coworking",
+        address: "MG Marg, Gangtok",
+        pricing: "₹3,800/month",
+        speedMbps: 45,
+        amenities: ["Mountain Views", "Tibetan Culture", "Local Community", "Tea Service"]
+      },
+      {
+        name: "Himalayan Hub",
+        address: "Development Area, Gangtok",
+        pricing: "₹3,200/month", 
+        speedMbps: 40,
+        amenities: ["Peaceful Environment", "Local Networking", "Cultural Events", "Meditation Space"]
+      }
+    ],
+    localExperienceTips: [
+      "Visit Rumtek Monastery for peaceful meditation and mountain views",
+      "Take cable car rides for panoramic Kanchenjunga mountain views",
+      "Explore local markets for authentic Sikkimese handicrafts and teas",
+      "Join Buddhist meditation sessions at local monasteries",
+      "Experience traditional Sikkimese cuisine at family-run restaurants"
+    ],
+    transportationTips: [
+      "Use shared jeeps (shared taxis) for intercity travel - ₹50-100 per person",
+      "Book private taxis for day trips to Tsomgo Lake and Nathula Pass",
+      "Walk around MG Marg area - most attractions within walking distance",
+      "Use local buses for budget travel to nearby towns (₹20-50)",
+      "Rent bikes carefully - mountain roads require experience",
+      "Keep permits ready - required for many tourist destinations"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Cool temperatures year-round perfect for focused work - rarely exceeds 25°C",
+        "Monsoon season (June-September): Indoor work preferred due to heavy rains and landslides",
+        "Clear winter mornings (December-February) offer stunning mountain views for motivation"
+      ],
+      healthConsiderations: [
+        "High altitude (5,410 ft) may cause initial breathlessness - acclimatize gradually",
+        "Clean mountain air excellent for respiratory health and mental clarity",
+        "Strong UV rays at altitude - use sunscreen even on cloudy days"
+      ],
+      equipmentNeeds: [
+        "Warm clothing essential - temperatures drop to 2°C in winter",
+        "Backup power advisable during monsoon season due to landslides affecting electricity",
+        "Humidifier may be needed during dry winter months"
+      ],
+      bestMonths: "March to May and September to November for optimal conditions"
+    },
+    insiderHacks: {
+      accommodation: [
+        "Stay in homestays for authentic Sikkimese family experience and home-cooked meals",
+        "Book accommodations with mountain views - worth the slight extra cost",
+        "Look for places near MG Marg for easy access to cafes and services",
+        "Negotiate weekly/monthly rates for extended stays in guest houses"
+      ],
+      food: [
+        "Try authentic Sikkimese momos at local joints rather than tourist restaurants",
+        "Visit local tea gardens and buy fresh Sikkim tea directly from producers",
+        "Eat at Tibetan refugee community restaurants for authentic Tibetan cuisine",
+        "Try local fermented foods like gundruk and sinki for unique flavors"
+      ],
+      transport: [
+        "Share costs with other travelers for expensive permit-required destinations",
+        "Use government buses for budget travel to nearby hill stations",
+        "Book jeeps through local travel agents for better rates than hotels",
+        "Walk whenever possible - the city is compact and pedestrian-friendly"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Peaceful Monastery Work Spot",
+        location: "Enchey Monastery",
+        tip: "Visit during prayer times for spiritual ambiance while working on laptop",
+        timing: "6 AM - 6 PM",
+        coordinates: "27.341°N, 88.625°E"
+      },
+      {
+        name: "Hidden Valley View",
+        location: "Tashi View Point",
+        tip: "Early morning visits offer solitude and perfect lighting for video calls",
+        timing: "5:30 AM - 7 AM"
+      }
+    ]
+  },
+  mcleodganj: {
+    moneyTips: [
+      "Stay in Tibetan refugee-run guesthouses for authentic experience and lower costs",
+      "Eat at local Tibetan restaurants instead of Western cafes - much cheaper and authentic",
+      "Use local buses to Dharamshala instead of expensive taxis (₹20 vs ₹200)",
+      "Shop for Tibetan handicrafts directly from monasteries and refugee cooperatives",
+      "Book meditation retreats and yoga courses directly with teachers, not through agencies"
+    ],
+    streetFood: [
+      { item: "Tibetan Momos", price: "₹80-120 ($1-1.5)" },
+      { item: "Thukpa", price: "₹100-150 ($1.2-1.8)" },
+      { item: "Tibetan Bread with Yak Cheese", price: "₹60-90 ($0.7-1.1)" },
+      { item: "Tingmo (Steamed Bread)", price: "₹40-60 ($0.5)" },
+      { item: "Butter Tea", price: "₹30-50 ($0.4)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Common Ground Café", speed: "30-50 Mbps", quality: "Good" },
+        { name: "Moonpeak Espresso", speed: "25-40 Mbps", quality: "Good" },
+        { name: "Tibet Kitchen Café", speed: "20-35 Mbps", quality: "Fair" }
+      ],
+      publicSpaces: [
+        { name: "Main Temple Complex", speed: "15-25 Mbps", quality: "Fair" },
+        { name: "McLeod Square", speed: "10-20 Mbps", quality: "Fair" },
+        { name: "Library of Tibetan Works", speed: "35-50 Mbps", quality: "Good" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Dharamkot Digital Nomad Hub",
+        address: "Dharamkot Village, McLeodganj",
+        pricing: "₹2,800/month",
+        speedMbps: 35,
+        amenities: ["Mountain Views", "Meditation Space", "Community Garden", "Library"]
+      },
+      {
+        name: "Bhagsu Cowork Mountain",
+        address: "Bhagsunag Road, McLeodganj",
+        pricing: "₹2,200/month",
+        speedMbps: 30,
+        amenities: ["Himalayan Views", "Yoga Studio", "Organic Café", "Spiritual Community"]
+      }
+    ],
+    localExperienceTips: [
+      "Attend teachings by Dalai Lama (when in residence) - register early online",
+      "Join meditation courses at Tushita Meditation Centre for inner peace",
+      "Trek to Triund for spectacular Dhauladhar mountain views",
+      "Visit Library of Tibetan Works for deep dive into Buddhist philosophy",
+      "Experience authentic Tibetan culture at refugee settlements"
+    ],
+    transportationTips: [
+      "Use shared taxis from Dharamshala bus stand - ₹25 per person vs ₹300 private",
+      "Walk between McLeodganj and Dharamkot (2km) for daily exercise and views",
+      "Take local buses to nearby hill stations like Palampur and Bir",
+      "Rent motorcycles for exploring Kangra Valley (₹600-800/day)",
+      "Use auto-rickshaws for short distances within McLeodganj (₹50-100)",
+      "Book Volvo buses online for comfortable overnight travel to Delhi/Chandigarh"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant summers (April-June): Perfect working weather 15-25°C with cool breezes",
+        "Monsoon season (July-September): Heavy rains may disrupt internet, indoor work advised",
+        "Cold winters (December-February): Snow possible, heating essential, stunning views"
+      ],
+      healthConsiderations: [
+        "High altitude (6,831 ft) may cause initial adjustment issues - drink water, rest",
+        "Excellent air quality benefits respiratory health and mental clarity",
+        "Strong mountain UV rays - sunscreen essential even in winter"
+      ],
+      equipmentNeeds: [
+        "Warm winter clothing essential - temperatures can drop below freezing",
+        "Reliable heating for winter months - room heaters or hot water bottles",
+        "Backup internet dongles - mountain weather can affect connectivity"
+      ],
+      bestMonths: "March to June and September to November for ideal working conditions"
+    },
+    insiderHacks: {
+      accommodation: [
+        "Stay in Dharamkot village for mountain views and peaceful environment",
+        "Book guesthouses run by Tibetan refugees for cultural immersion",
+        "Look for places with sunrise mountain views - magical for morning work",
+        "Negotiate monthly rates - significant discounts for 30+ day stays"
+      ],
+      food: [
+        "Eat at local Tibetan family restaurants for authentic home-cooked meals",
+        "Try yak cheese and Tibetan butter tea for unique mountain experience", 
+        "Buy organic vegetables from local farms in Dharamkot village",
+        "Order from Common Ground Café for healthy Western options when needed"
+      ],
+      transport: [
+        "Share trek costs with other nomads for weekend mountain adventures",
+        "Use government buses for budget travel to nearby destinations",
+        "Walk to Bhagsu waterfall and beyond for free mountain exercise",
+        "Join group travels to Spiti Valley and Ladakh organized by local agencies"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Hidden Meditation Cave",
+        location: "Dharamkot Forest",
+        tip: "Trek 30 minutes beyond Dharamkot village for quiet work space in nature",
+        coordinates: "32.248°N, 76.325°E"
+      },
+      {
+        name: "Sunrise Point Office",
+        location: "Naddi Village",
+        tip: "Work during sunrise with panoramic Dhauladhar range views - bring warm clothes",
+        timing: "5:30 AM - 8 AM"
+      }
+    ]
+  },
+  shillong: {
+    moneyTips: [
+      "Stay in local Khasi family homestays in Laitumkhrah for authentic experience",
+      "Eat at local Khasi restaurants for traditional meals under ₹150",
+      "Use shared taxis (shared sumos) for intercity travel - very economical",
+      "Shop at Bara Bazaar for local produce and handmade items at wholesale prices",
+      "Book music lessons with local musicians - Shillong is known as 'Rock Capital of India'"
+    ],
+    streetFood: [
+      { item: "Jadoh (Khasi Rice Dish)", price: "₹80-120 ($1-1.5)" },
+      { item: "Tungrymbai (Fermented Soybean)", price: "₹60-90 ($0.7-1.1)" },
+      { item: "Dohneiiong (Pork Curry)", price: "₹120-180 ($1.5-2.2)" },
+      { item: "Pukhlein (Rice Cake)", price: "₹30-50 ($0.4)" },
+      { item: "Local Momos", price: "₹70-100 ($0.8-1.2)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Café Shillong Heritage", speed: "25-40 Mbps", quality: "Good" },
+        { name: "ML 05 Café", speed: "30-45 Mbps", quality: "Good" },
+        { name: "Café Umbir", speed: "20-35 Mbps", quality: "Fair" }
+      ],
+      publicSpaces: [
+        { name: "Ward's Lake Area", speed: "15-25 Mbps", quality: "Fair" },
+        { name: "Police Bazaar", speed: "20-30 Mbps", quality: "Fair" },
+        { name: "Don Bosco Centre", speed: "35-50 Mbps", quality: "Good" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Northeast Digital Hub",
+        address: "Police Bazaar, Shillong",
+        pricing: "₹3,200/month",
+        speedMbps: 40,
+        amenities: ["Local Community", "Cultural Events", "Music Studio", "Startup Support"]
+      },
+      {
+        name: "Shillong Innovation Centre",
+        address: "Laitumkhrah, Shillong",
+        pricing: "₹2,800/month",
+        speedMbps: 35,
+        amenities: ["Pine Forest Views", "Quiet Environment", "Local Networking", "Mentorship"]
+      }
+    ],
+    localExperienceTips: [
+      "Experience live music scene - Shillong has incredible rock and blues culture",
+      "Visit living root bridges in nearby Cherrapunji - UNESCO World Heritage site",
+      "Explore Khasi Hills for waterfalls and pristine natural beauty",
+      "Learn about matrilineal society and Khasi culture from local families",
+      "Attend traditional Khasi festivals and ceremonies when possible"
+    ],
+    transportationTips: [
+      "Use shared sumos (shared taxis) for long-distance travel - ₹100-200 vs ₹1500+ private",
+      "Local taxis for city travel - negotiate fixed rates (₹200-500 for full day)",
+      "Walk around city center - Police Bazaar to Ward's Lake area is very walkable",
+      "Rent bikes for exploring nearby villages and waterfalls (₹400-600/day)",
+      "Use government buses for budget travel to Guwahati and other cities",
+      "Book helicopter rides to remote areas during good weather seasons"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant year-round climate (15-25°C) - one of India's most comfortable cities",
+        "Heavy monsoon (June-September) - very high rainfall but lush green environment",
+        "Cool summers perfect for productivity - rarely gets too hot for work"
+      ],
+      healthConsiderations: [
+        "High humidity during monsoons - may affect sensitive electronic equipment",
+        "Excellent air quality due to extensive forests - great for health",
+        "Moderate altitude (4,908 ft) - generally no acclimatization issues"
+      ],
+      equipmentNeeds: [
+        "Dehumidifiers essential during monsoon for equipment protection",
+        "Light woolens needed year-round - temperatures can drop suddenly",
+        "Waterproof bags for electronics during heavy monsoon season"
+      ],
+      bestMonths: "October to May for optimal working conditions with less rainfall"
+    },
+    insiderHacks: {
+      accommodation: [
+        "Stay with Khasi families to experience matrilineal culture firsthand",
+        "Book accommodations near Ward's Lake for peaceful morning work environment",
+        "Look for places in Laitumkhrah area for authentic local neighborhood feel",
+        "Negotiate long-term homestay rates for cultural immersion experience"
+      ],
+      food: [
+        "Try traditional Khasi cuisine - completely different from mainland Indian food",
+        "Visit local meat markets for fresh organic produce from hill farms",
+        "Eat at family-run restaurants for authentic home-style Khasi meals",
+        "Try locally brewed rice beer and traditional fermented foods"
+      ],
+      transport: [
+        "Join group travels to Cherrapunji and Mawlynnong (cleanest village in Asia)",
+        "Share costs for visits to living root bridges and remote waterfalls",
+        "Use local knowledge - ask families about seasonal road conditions",
+        "Book early for helicopter services to remote areas during peak season"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Hidden Waterfall Office",
+        location: "Elephant Falls backside",
+        tip: "Trek behind main falls for secluded natural workspace with water sounds",
+        timing: "9 AM - 4 PM",
+        coordinates: "25.556°N, 91.898°E"
+      },
+      {
+        name: "Quiet Lake Workspace",
+        location: "Ward's Lake early morning",
+        tip: "Work lakeside before 8 AM for peaceful environment before tourists arrive",
+        timing: "6 AM - 8 AM"
+      }
+    ]
+  }
+};
+
+export const getCitySpecificDataComplete = (citySlug: string): CitySpecificData | undefined => {
+  return citySpecificDataComplete[citySlug];
+};

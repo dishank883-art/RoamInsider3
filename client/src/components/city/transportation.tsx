@@ -1,13 +1,16 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Car, Train, Plane, MapPin, Clock, Navigation, Bus, Star } from "lucide-react";
+import { Car, Train, Plane, MapPin, Clock, Navigation, Bus, Star, Zap } from "lucide-react";
 import type { Transportation } from "@shared/schema";
+import { getCitySpecificData } from "@/lib/city-specific-data";
 
 interface TransportationProps {
   transportData: Transportation | null;
+  citySlug: string;
 }
 
-export default function Transportation({ transportData }: TransportationProps) {
+export default function Transportation({ transportData, citySlug }: TransportationProps) {
+  const cityData = getCitySpecificData(citySlug);
   if (!transportData) {
     return (
       <Card className="bg-white rounded-2xl shadow-lg">
@@ -198,15 +201,21 @@ export default function Transportation({ transportData }: TransportationProps) {
         {/* Transportation Tips */}
         <div className="bg-travel-blue/5 rounded-lg p-4 border-l-4 border-travel-blue">
           <h4 className="font-semibold text-travel-blue mb-2 flex items-center">
-            <Car className="mr-2 h-4 w-4" />
-            Transportation Tips
+            <Zap className="mr-2 h-4 w-4" />
+            City-Specific Transportation Tips
           </h4>
           <ul className="space-y-1 text-muted-navy text-sm">
-            <li>• Download Ola and Uber apps for reliable ride-hailing services</li>
-            <li>• Auto-rickshaws are often cheaper but negotiate fare beforehand</li>
-            <li>• Rush hours are typically 8-10 AM and 6-8 PM</li>
-            <li>• Local trains/metro are usually the fastest during peak hours</li>
-            <li>• Keep small denominations for local transport payments</li>
+            {cityData?.transportationTips.map((tip, index) => (
+              <li key={index}>• {tip}</li>
+            )) || (
+              <>
+                <li>• Download Ola and Uber apps for reliable ride-hailing services</li>
+                <li>• Auto-rickshaws are often cheaper but negotiate fare beforehand</li>
+                <li>• Rush hours are typically 8-10 AM and 6-8 PM</li>
+                <li>• Local trains/metro are usually the fastest during peak hours</li>
+                <li>• Keep small denominations for local transport payments</li>
+              </>
+            )}
           </ul>
         </div>
       </CardContent>

@@ -24,6 +24,13 @@ export interface CitySpecificData {
     amenities: string[];
   }>;
   localExperienceTips: string[];
+  transportationTips: string[];
+  climateImpact: {
+    workingConditions: string[];
+    healthConsiderations: string[];
+    equipmentNeeds: string[];
+    bestMonths: string;
+  };
   insiderHacks: {
     accommodation: string[];
     food: string[];
@@ -98,6 +105,32 @@ export const citySpecificData: Record<string, CitySpecificData> = {
       "Join weekend treks to nearby Sahyadri mountains organized by local groups",
       "Experience Pune's famous Ganesh Chaturthi celebrations in August/September"
     ],
+    transportationTips: [
+      "Use Pune Metro Purple Line connecting PCMC to Swargate - covers IT hubs",
+      "Book Rapido bikes for short distances during peak hours (₹25-50)",
+      "PMPML Rainbow BRTS buses connect all major areas - get monthly pass ₹400",
+      "Avoid Baner-Pashan Link Road during 8-10 AM and 7-9 PM rush",
+      "Share auto-rickshaws from IT parks - negotiate group rates ₹100-150",
+      "Rent monthly bikes in Baner/Hinjewadi for IT corridor commute (₹2,000-3,000)"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Monsoon season (June-September): Indoor coworking preferred due to heavy rains",
+        "Summer heat (March-May): Air conditioning essential for home offices",
+        "Pleasant winters (November-February): Perfect for outdoor meetings and balcony work"
+      ],
+      healthConsiderations: [
+        "Air quality drops during winter months - consider air purifiers",
+        "Monsoon brings dengue/malaria risk - use mosquito protection",
+        "Stay hydrated during hot summers - temperature reaches 42°C"
+      ],
+      equipmentNeeds: [
+        "Monsoon backup power solutions for frequent outages",
+        "Dehumidifier for equipment protection during rains",
+        "Air conditioning crucial for summer productivity"
+      ],
+      bestMonths: "November to February for optimal working conditions"
+    },
     insiderHacks: {
       accommodation: [
         "Stay in Kothrud or Karve Nagar for better value than Koregaon Park",
@@ -525,5 +558,6 @@ export const citySpecificData: Record<string, CitySpecificData> = {
 };
 
 export function getCitySpecificData(citySlug: string): CitySpecificData | null {
-  return citySpecificData[citySlug] || null;
+  const { getCitySpecificDataComplete } = require('./city-data-complete');
+  return getCitySpecificDataComplete(citySlug) || citySpecificData[citySlug] || null;
 }

@@ -1,16 +1,19 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Cloud, Sun, Droplets, Wind, Thermometer, Eye, ExternalLink, RefreshCw } from "lucide-react";
+import { Cloud, Sun, Droplets, Wind, Thermometer, Eye, ExternalLink, RefreshCw, Zap } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import type { Climate } from "@shared/schema";
+import { getCitySpecificData } from "@/lib/city-specific-data";
 
 interface WeatherClimateProps {
   climateData: Climate | null;
   cityName: string;
   cityId: string;
+  citySlug: string;
 }
 
-export default function WeatherClimate({ climateData, cityName, cityId }: WeatherClimateProps) {
+export default function WeatherClimate({ climateData, cityName, cityId, citySlug }: WeatherClimateProps) {
+  const cityData = getCitySpecificData(citySlug);
   // Fetch live weather data
   const { data: weatherData, isLoading: weatherLoading } = useQuery<{
     current: any;
@@ -498,34 +501,72 @@ export default function WeatherClimate({ climateData, cityName, cityId }: Weathe
         </div>
 
         {/* Climate Impact on Nomad Life */}
-        <div className="bg-sage-green/5 rounded-lg p-6 border-l-4 border-sage-green">
-          <h4 className="font-semibold text-sage-green mb-3 flex items-center">
-            <Thermometer className="mr-2 h-4 w-4" />
-            Climate Impact on Digital Nomad Life
-          </h4>
-          <div className="grid md:grid-cols-2 gap-6 text-sm text-muted-navy">
-            <div>
-              <h5 className="font-medium text-travel-blue mb-2">Working Conditions</h5>
-              <ul className="space-y-1">
-                <li>• AC costs: ₹1,500-3,000/month in summer</li>
-                <li>• Monsoon internet outages: 2-3 times/month</li>
-                <li>• Best outdoor workspaces: Nov-Feb</li>
-                <li>• Power cuts during storms: 2-4 hours</li>
-                <li>• Humidity affects electronics: use silica gel</li>
-              </ul>
+        {cityData && cityData.climateImpact ? (
+          <div className="bg-sage-green/5 rounded-lg p-6 border-l-4 border-sage-green">
+            <h4 className="font-semibold text-sage-green mb-3 flex items-center">
+              <Zap className="mr-2 h-4 w-4" />
+              Climate Impact on Digital Nomad Life in {cityName}
+            </h4>
+            <div className="grid md:grid-cols-3 gap-6 text-sm text-muted-navy">
+              <div>
+                <h5 className="font-medium text-travel-blue mb-2">Working Conditions</h5>
+                <ul className="space-y-1">
+                  {cityData.climateImpact.workingConditions.map((condition, index) => (
+                    <li key={index}>• {condition}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-medium text-travel-blue mb-2">Health & Equipment</h5>
+                <ul className="space-y-1">
+                  {cityData.climateImpact.healthConsiderations.map((health, index) => (
+                    <li key={index}>• {health}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-medium text-travel-blue mb-2">Equipment Needs</h5>
+                <ul className="space-y-1">
+                  {cityData.climateImpact.equipmentNeeds.map((equipment, index) => (
+                    <li key={index}>• {equipment}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div>
-              <h5 className="font-medium text-travel-blue mb-2">Health & Comfort</h5>
-              <ul className="space-y-1">
-                <li>• Monsoon health risks: water-borne diseases</li>
-                <li>• UV protection essential: SPF 30+ year-round</li>
-                <li>• Dehydration risk in summer: 3-4L water/day</li>
-                <li>• Mosquito season: Jun-Oct (dengue, malaria)</li>
-                <li>• Vitamin D deficiency during monsoons</li>
-              </ul>
+            <div className="mt-4 p-3 bg-vintage-gold/10 rounded-lg">
+              <p className="text-vintage-gold font-semibold">Best Months: {cityData.climateImpact.bestMonths}</p>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className="bg-sage-green/5 rounded-lg p-6 border-l-4 border-sage-green">
+            <h4 className="font-semibold text-sage-green mb-3 flex items-center">
+              <Thermometer className="mr-2 h-4 w-4" />
+              Climate Impact on Digital Nomad Life
+            </h4>
+            <div className="grid md:grid-cols-2 gap-6 text-sm text-muted-navy">
+              <div>
+                <h5 className="font-medium text-travel-blue mb-2">Working Conditions</h5>
+                <ul className="space-y-1">
+                  <li>• AC costs: ₹1,500-3,000/month in summer</li>
+                  <li>• Monsoon internet outages: 2-3 times/month</li>
+                  <li>• Best outdoor workspaces: Nov-Feb</li>
+                  <li>• Power cuts during storms: 2-4 hours</li>
+                  <li>• Humidity affects electronics: use silica gel</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-medium text-travel-blue mb-2">Health & Comfort</h5>
+                <ul className="space-y-1">
+                  <li>• Monsoon health risks: water-borne diseases</li>
+                  <li>• UV protection essential: SPF 30+ year-round</li>
+                  <li>• Dehydration risk in summer: 3-4L water/day</li>
+                  <li>• Mosquito season: Jun-Oct (dengue, malaria)</li>
+                  <li>• Vitamin D deficiency during monsoons</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
       </CardContent>
     </Card>
   );
