@@ -69,16 +69,16 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
     const accommodationData: Record<string, any> = {
       mumbai: {
         hostels: [
-          { name: "Zostel Mumbai", area: "Fort", price: "₹800-1200/night ($10-14)", rating: 4.2, amenities: ["WiFi", "AC", "Kitchen", "Lounge"] },
-          { name: "Backpacker Panda", area: "Andheri", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Common area", "Kitchen"] },
-          { name: "Mad Monkey Hostel", area: "Colaba", price: "₹900-1400/night ($11-17)", rating: 4.3, amenities: ["WiFi", "Bar", "Tours", "AC"] }
+          { name: "Zostel Mumbai", area: "Fort", price: "₹800-1200/night ($10-14)", rating: 4.2, amenities: ["WiFi", "AC", "Kitchen", "Lounge"], bookingUrl: "https://www.zostel.com/zostel/mumbai/" },
+          { name: "Backpacker Panda", area: "Andheri", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Common area", "Kitchen"], bookingUrl: "https://www.backpackerpanda.com/mumbai" },
+          { name: "Mad Monkey Hostel", area: "Colaba", price: "₹900-1400/night ($11-17)", rating: 4.3, amenities: ["WiFi", "Bar", "Tours", "AC"], bookingUrl: "https://www.madmonkeyhostels.com/mumbai/" }
         ],
         platforms: [
-          { name: "Agoda", commission: "12-18%", features: ["Instant booking", "Local support", "Best price guarantee"] },
-          { name: "Booking.com", commission: "15-20%", features: ["Free cancellation", "24/7 support", "Verified reviews"] },
-          { name: "Hostelworld", commission: "10-12%", features: ["Hostel specialist", "Community", "City guides"] },
-          { name: "Airbnb", commission: "3% + 14-20%", features: ["Local experiences", "Monthly discounts", "Verified hosts"] },
-          { name: "OYO", commission: "20-25%", features: ["Local chain", "Standardized rooms", "Easy booking"] }
+          { name: "Agoda", url: "https://www.agoda.com/city/mumbai-in.html", features: ["Instant booking", "Local support", "Best price guarantee"] },
+          { name: "Booking.com", url: "https://www.booking.com/city/in/mumbai.html", features: ["Free cancellation", "24/7 support", "Verified reviews"] },
+          { name: "Hostelworld", url: "https://www.hostelworld.com/hostels/Mumbai", features: ["Hostel specialist", "Community", "City guides"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Mumbai--India", features: ["Local experiences", "Monthly discounts", "Verified hosts"] },
+          { name: "OYO", url: "https://www.oyorooms.com/hotels-in-mumbai/", features: ["Local chain", "Standardized rooms", "Easy booking"] }
         ],
         monthlyOptions: [
           { type: "PG (Paying Guest)", price: "₹8000-15000/month ($96-180)", includes: "Meals, WiFi, cleaning" },
@@ -88,16 +88,16 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       delhi: {
         hostels: [
-          { name: "Zostel Delhi", area: "Paharganj", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "AC", "Kitchen", "Terrace"] },
-          { name: "Jugaad Hostels", area: "Hauz Khas", price: "₹800-1200/night ($10-14)", rating: 4.4, amenities: ["WiFi", "Events", "Kitchen", "Co-working"] },
-          { name: "Bleisure Hospitality", area: "Connaught Place", price: "₹900-1300/night ($11-16)", rating: 4.2, amenities: ["WiFi", "Restaurant", "AC"] }
+          { name: "Zostel Delhi", area: "Paharganj", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "AC", "Kitchen", "Terrace"], bookingUrl: "https://www.zostel.com/zostel/delhi/" },
+          { name: "Jugaad Hostels", area: "Hauz Khas", price: "₹800-1200/night ($10-14)", rating: 4.4, amenities: ["WiFi", "Events", "Kitchen", "Co-working"], bookingUrl: "https://www.jugaadhostels.com/delhi" },
+          { name: "Bleisure Hospitality", area: "Connaught Place", price: "₹900-1300/night ($11-16)", rating: 4.2, amenities: ["WiFi", "Restaurant", "AC"], bookingUrl: "https://www.bleisure.in/delhi" }
         ],
         platforms: [
-          { name: "Agoda", commission: "12-18%", features: ["Best prices", "Local partnerships", "Mobile app"] },
-          { name: "Booking.com", commission: "15-20%", features: ["Largest inventory", "Multiple languages", "Flexible booking"] },
-          { name: "Hostelworld", commission: "10-12%", features: ["Hostel focus", "Social features", "Group bookings"] },
-          { name: "Airbnb", commission: "3% + 14-20%", features: ["Unique spaces", "Long-term stays", "Local experiences"] },
-          { name: "Treebo", commission: "18-22%", features: ["Indian chain", "Consistent quality", "Good locations"] }
+          { name: "Agoda", url: "https://www.agoda.com/city/new-delhi-in.html", features: ["Best prices", "Local partnerships", "Mobile app"] },
+          { name: "Booking.com", url: "https://www.booking.com/city/in/new-delhi.html", features: ["Largest inventory", "Multiple languages", "Flexible booking"] },
+          { name: "Hostelworld", url: "https://www.hostelworld.com/hostels/New-Delhi", features: ["Hostel focus", "Social features", "Group bookings"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/New-Delhi--India", features: ["Unique spaces", "Long-term stays", "Local experiences"] },
+          { name: "Treebo", url: "https://www.treebohotels.com/hotels-in-delhi", features: ["Indian chain", "Consistent quality", "Good locations"] }
         ],
         monthlyOptions: [
           { type: "PG accommodations", price: "₹6000-12000/month ($72-144)", includes: "Meals, utilities, basic amenities" },
@@ -112,11 +112,11 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
           { name: "Backpacker Panda", area: "MG Road", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Tours", "Kitchen"] }
         ],
         platforms: [
-          { name: "Agoda", commission: "12-18%", features: ["Tech-friendly", "Best rates", "Easy booking"] },
-          { name: "Booking.com", commission: "15-20%", features: ["Wide selection", "Verified reviews", "Mobile booking"] },
-          { name: "Airbnb", commission: "3% + 14-20%", features: ["Tech community", "Long stays", "Unique properties"] },
-          { name: "Zolo", commission: "15-20%", features: ["Co-living specialist", "Tech nomads", "Flexible terms"] },
-          { name: "NestAway", commission: "20-25%", features: ["Fully managed", "No brokerage", "Quick move-in"] }
+          { name: "Agoda", url: "https://www.agoda.com/city/bangalore-in.html", features: ["Tech-friendly", "Best rates", "Easy booking"] },
+          { name: "Booking.com", url: "https://www.booking.com/city/in/bangalore.html", features: ["Wide selection", "Verified reviews", "Mobile booking"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Bangalore--India", features: ["Tech community", "Long stays", "Unique properties"] },
+          { name: "Zolo", url: "https://www.zolo.in/bangalore", features: ["Co-living specialist", "Tech nomads", "Flexible terms"] },
+          { name: "NestAway", url: "https://www.nestaway.com/bangalore", features: ["Fully managed", "No brokerage", "Quick move-in"] }
         ],
         monthlyOptions: [
           { type: "Co-living spaces", price: "₹12000-22000/month ($144-264)", includes: "Fully furnished, high-speed WiFi, community" },
@@ -131,10 +131,10 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
           { name: "Mad Monkey Hostel", area: "Calangute", price: "₹800-1200/night ($10-14)", rating: 4.1, amenities: ["WiFi", "Pool", "Bar", "Tours"] }
         ],
         platforms: [
-          { name: "Agoda", commission: "12-18%", features: ["Beach properties", "Local deals", "Easy booking"] },
-          { name: "Booking.com", commission: "15-20%", features: ["Largest selection", "Beach resorts", "Flexible dates"] },
-          { name: "Airbnb", commission: "3% + 14-20%", features: ["Beach houses", "Monthly discounts", "Local hosts"] },
-          { name: "OYO", commission: "20-25%", features: ["Budget options", "Standardized quality", "Beach locations"] }
+          { name: "Agoda", url: "https://www.agoda.com/city/goa-in.html", features: ["Beach properties", "Local deals", "Easy booking"] },
+          { name: "Booking.com", url: "https://www.booking.com/region/in/goa.html", features: ["Largest selection", "Beach resorts", "Flexible dates"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Goa--India", features: ["Beach houses", "Monthly discounts", "Local hosts"] },
+          { name: "OYO", url: "https://www.oyorooms.com/hotels-in-goa/", features: ["Budget options", "Standardized quality", "Beach locations"] }
         ],
         monthlyOptions: [
           { type: "Beach house rentals", price: "₹10000-25000/month ($120-300)", includes: "Beach access, basic furnishing" },
@@ -149,9 +149,10 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
           { name: "The Hosteller", area: "Ram Jhula", price: "₹500-800/night ($6-10)", rating: 4.1, amenities: ["WiFi", "Yoga deck", "Kitchen", "Library"] }
         ],
         platforms: [
-          { name: "Booking.com", commission: "15-20%", features: ["Spiritual retreats", "Ashram bookings", "Nature stays"] },
-          { name: "Agoda", commission: "12-18%", features: ["Adventure packages", "Yoga retreats", "Budget options"] },
-          { name: "Airbnb", commission: "3% + 14-20%", features: ["River-view properties", "Spiritual experiences", "Long stays"] }
+          { name: "Booking.com", url: "https://www.booking.com/city/in/rishikesh.html", features: ["Spiritual retreats", "Ashram bookings", "Nature stays"] },
+          { name: "Agoda", url: "https://www.agoda.com/city/rishikesh-in.html", features: ["Adventure packages", "Yoga retreats", "Budget options"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Rishikesh--Uttarakhand--India", features: ["River-view properties", "Spiritual experiences", "Long stays"] },
+          { name: "Zostel", url: "https://www.zostel.com/zostel/rishikesh/", features: ["Backpacker community", "Yoga programs", "Adventure activities"] }
         ],
         monthlyOptions: [
           { type: "Ashram accommodation", price: "₹3000-8000/month ($36-96)", includes: "Meals, yoga, meditation, simple living" },
@@ -167,9 +168,9 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
         { name: "Local Budget Hostel", area: "City center", price: "₹500-800/night ($6-10)", rating: 3.8, amenities: ["WiFi", "Kitchen", "Common area"] }
       ],
       platforms: [
-        { name: "Booking.com", commission: "15-20%", features: ["Wide selection", "Free cancellation", "Reviews"] },
-        { name: "Agoda", commission: "12-18%", features: ["Best prices", "Easy booking", "Local partnerships"] },
-        { name: "Airbnb", commission: "3% + 14-20%", features: ["Unique stays", "Local experiences", "Monthly discounts"] }
+        { name: "Booking.com", url: "https://www.booking.com/", features: ["Wide selection", "Free cancellation", "Reviews"] },
+        { name: "Agoda", url: "https://www.agoda.com/", features: ["Best prices", "Easy booking", "Local partnerships"] },
+        { name: "Airbnb", url: "https://www.airbnb.com/", features: ["Unique stays", "Local experiences", "Monthly discounts"] }
       ],
       monthlyOptions: [
         { type: "Local PG", price: "₹6000-12000/month ($72-144)", includes: "Basic amenities, local community" }
@@ -188,7 +189,19 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
               <div key={index} className="bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <h5 className="font-semibold text-travel-blue">{hostel.name}</h5>
+                    {hostel.bookingUrl ? (
+                      <a 
+                        href={hostel.bookingUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="font-semibold text-travel-blue hover:text-vintage-gold flex items-center"
+                      >
+                        {hostel.name}
+                        <ExternalLink className="ml-1 h-3 w-3" />
+                      </a>
+                    ) : (
+                      <h5 className="font-semibold text-travel-blue">{hostel.name}</h5>
+                    )}
                     <p className="text-sm text-muted-navy">{hostel.area}</p>
                   </div>
                   <div className="text-right">
@@ -215,8 +228,15 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
             {data.platforms.map((platform, index) => (
               <div key={index} className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
                 <div className="flex items-center justify-between mb-2">
-                  <h5 className="font-semibold text-sage-green">{platform.name}</h5>
-                  <span className="text-xs text-muted-navy">Commission: {platform.commission}</span>
+                  <a 
+                    href={platform.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="font-semibold text-sage-green hover:text-vintage-gold flex items-center"
+                  >
+                    {platform.name}
+                    <ExternalLink className="ml-1 h-3 w-3" />
+                  </a>
                 </div>
                 <ul className="text-sm text-muted-navy space-y-1">
                   {platform.features.map((feature, i) => (
