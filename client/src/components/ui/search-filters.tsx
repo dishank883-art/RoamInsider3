@@ -131,10 +131,13 @@ export default function SearchFilters({
               <div>
                 <label className="block text-sm font-medium text-muted-navy mb-2">
                   Monthly Budget (INR)
+                  <span className="text-xs text-gray-500 ml-1">
+                    (Budget: ₹10-20k, Mid-range: ₹20-35k, Premium: ₹35k+)
+                  </span>
                 </label>
                 <div className="flex space-x-2">
                   <Input 
-                    placeholder="Min" 
+                    placeholder="Min (e.g. 15000)" 
                     type="number" 
                     value={advancedFilters.minBudget || ""}
                     onChange={(e) => setAdvancedFilters({
@@ -144,7 +147,7 @@ export default function SearchFilters({
                     data-testid="min-budget-input"
                   />
                   <Input 
-                    placeholder="Max" 
+                    placeholder="Max (e.g. 30000)" 
                     type="number" 
                     value={advancedFilters.maxBudget === 100000 ? "" : advancedFilters.maxBudget}
                     onChange={(e) => setAdvancedFilters({

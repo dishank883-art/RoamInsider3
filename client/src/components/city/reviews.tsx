@@ -36,7 +36,7 @@ export default function Reviews({ city }: ReviewsProps) {
   const reviews: Review[] = [
     {
       id: "1",
-      author: "Sarah M.",
+      author: "Priya Sharma",
       rating: 4,
       title: "Great for digital nomads but can be expensive",
       content: `Spent 3 months in ${city.name} and overall had a fantastic experience. The coworking spaces are excellent and the internet connectivity is reliable. The local food scene is amazing and there's always something to do. However, accommodation costs can be quite high during peak season.`,
@@ -50,7 +50,7 @@ export default function Reviews({ city }: ReviewsProps) {
     },
     {
       id: "2", 
-      author: "Marcus K.",
+      author: "Arjun Mehta",
       rating: 5,
       title: "Perfect work-life balance destination",
       content: `${city.name} exceeded all my expectations. The combination of affordable living, reliable internet, and incredible culture made this my favorite nomad destination so far. The local community is welcoming and there are tons of networking opportunities.`,
@@ -64,7 +64,7 @@ export default function Reviews({ city }: ReviewsProps) {
     },
     {
       id: "3",
-      author: "Elena R.",
+      author: "Kavya Patel",
       rating: 3,
       title: "Good for short stays, challenging for longer",
       content: `${city.name} is beautiful and has a lot to offer, but I found it challenging for extended work periods. While the scenery is breathtaking and perfect for inspiration, the internet can be unreliable in some areas and finding quiet workspaces was difficult.`,
@@ -75,6 +75,34 @@ export default function Reviews({ city }: ReviewsProps) {
       cons: ["Inconsistent internet", "Limited coworking options", "Power outages"],
       helpful: 5,
       verified: false
+    },
+    {
+      id: "4",
+      author: "Rohit Singh",
+      rating: 5,
+      title: "Amazing experience for remote workers",
+      content: `As a freelancer working remotely, ${city.name} provided everything I needed. The cost of living is very reasonable, locals are friendly, and the food is incredible. I extended my stay by 2 months because I loved it so much.`,
+      date: "2023-12-20",
+      stayDuration: "4 months",
+      workType: "Freelance Designer",
+      pros: ["Very affordable", "Excellent food", "Helpful locals", "Good infrastructure"],
+      cons: ["Monsoon can be challenging", "Limited international cuisine"],
+      helpful: 15,
+      verified: true
+    },
+    {
+      id: "5",
+      author: "Jessica Wong",
+      rating: 4,
+      title: "International perspective on this gem",
+      content: `Coming from Singapore, I was amazed by how welcoming ${city.name} is to international remote workers. The cultural experiences are unmatched and the value for money is incredible. Definitely planning to return next year.`,
+      date: "2023-12-10",
+      stayDuration: "6 weeks",
+      workType: "UX Designer",
+      pros: ["Cultural richness", "Great value", "Welcoming atmosphere", "Unique experiences"],
+      cons: ["Climate adjustment needed", "Different work culture"],
+      helpful: 9,
+      verified: true
     }
   ];
 

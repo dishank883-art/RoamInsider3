@@ -70,15 +70,53 @@ export default function Home() {
 
       // Advanced filters
       if (advancedFilters.minBudget > 0 || advancedFilters.maxBudget < 100000) {
-        // Budget filtering based on city cost level (rough estimation)
-        const avgCost = city.rating ? (parseFloat(city.rating) * 8000) : 20000; // Rough estimation
+        // Budget filtering based on city characteristics
+        let avgCost = 25000; // Default mid-range cost
+        
+        // Budget-friendly cities (marked with budget tags)
+        if (city.tags?.some(tag => 
+          tag.toLowerCase().includes('budget') || 
+          tag.toLowerCase().includes('affordable') ||
+          tag.toLowerCase().includes('cheap')
+        )) {
+          avgCost = 15000; // Budget range: 10k-20k
+        }
+        // Tech hubs and major cities tend to be more expensive  
+        else if (city.tags?.some(tag => 
+          tag.toLowerCase().includes('tech-hub') ||
+          tag.toLowerCase().includes('finance') ||
+          city.name.toLowerCase().includes('mumbai') ||
+          city.name.toLowerCase().includes('bangalore')
+        )) {
+          avgCost = 40000; // Higher cost: 35k-50k
+        }
+        // Tourist destinations can be expensive
+        else if (city.tags?.some(tag => 
+          tag.toLowerCase().includes('tourism') ||
+          tag.toLowerCase().includes('beaches')
+        )) {
+          avgCost = 30000; // Mid-high: 25k-35k
+        }
+        
         if (avgCost < advancedFilters.minBudget || avgCost > advancedFilters.maxBudget) {
           return false;
         }
       }
 
       if (advancedFilters.minSafetyScore > 0) {
-        const safetyScore = city.rating ? parseFloat(city.rating) : 5;
+        // Map safety based on city characteristics and rating
+        let safetyScore = city.rating ? parseFloat(city.rating) : 6;
+        
+        // Cities marked as safe get higher scores
+        if (city.tags?.some(tag => tag.toLowerCase().includes('safe'))) {
+          safetyScore = Math.max(safetyScore, 8);
+        }
+        
+        // Tech hubs typically have better safety infrastructure
+        if (city.tags?.some(tag => tag.toLowerCase().includes('tech-hub'))) {
+          safetyScore = Math.max(safetyScore, 7.5);
+        }
+        
         if (safetyScore < advancedFilters.minSafetyScore) {
           return false;
         }
