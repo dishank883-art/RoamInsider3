@@ -159,10 +159,167 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
           { type: "Guesthouse rooms", price: "₹5000-12000/month ($60-144)", includes: "Basic amenities, mountain views" },
           { type: "Yoga retreat centers", price: "₹8000-15000/month ($96-180)", includes: "Yoga classes, healthy meals, community" }
         ]
+      },
+      kochi: {
+        hostels: [
+          { name: "Zostel Kochi", area: "Fort Kochi", price: "₹700-1000/night ($8-12)", rating: 4.1, amenities: ["WiFi", "AC", "Kitchen", "Heritage location"], bookingUrl: "https://www.zostel.com/zostel/kochi/" },
+          { name: "Backpacker Panda", area: "Marine Drive", price: "₹600-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Backwater views", "Kitchen"], bookingUrl: "https://www.backpackerpanda.com/kochi" },
+          { name: "The Tea Bungalow", area: "Mattancherry", price: "₹800-1200/night ($10-14)", rating: 4.2, amenities: ["WiFi", "Heritage building", "Cultural tours"], bookingUrl: "https://www.teabungalow.com/" }
+        ],
+        platforms: [
+          { name: "Agoda", url: "https://www.agoda.com/city/kochi-in.html", features: ["Backwater properties", "Heritage stays", "Local partnerships"] },
+          { name: "Booking.com", url: "https://www.booking.com/city/in/kochi.html", features: ["Houseboat bookings", "Heritage hotels", "Cultural experiences"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Kochi--Kerala--India", features: ["Heritage homes", "Backwater views", "Local experiences"] },
+          { name: "OYO", url: "https://www.oyorooms.com/hotels-in-kochi/", features: ["Budget options", "Airport connectivity", "Business travelers"] }
+        ],
+        monthlyOptions: [
+          { type: "Heritage homestays", price: "₹8000-15000/month ($96-180)", includes: "Cultural immersion, home meals, local guidance" },
+          { type: "Backwater apartments", price: "₹12000-25000/month ($144-300)", includes: "Water views, peaceful environment" },
+          { type: "IT professional PGs", price: "₹10000-18000/month ($120-216)", includes: "High-speed WiFi, professional crowd" }
+        ]
+      },
+      pune: {
+        hostels: [
+          { name: "Zostel Pune", area: "Koregaon Park", price: "₹700-1100/night ($8-13)", rating: 4.0, amenities: ["WiFi", "AC", "Kitchen", "Party area"], bookingUrl: "https://www.zostel.com/zostel/pune/" },
+          { name: "Backpacker Panda", area: "Camp", price: "₹500-800/night ($6-10)", rating: 3.8, amenities: ["WiFi", "Common area", "Tours"], bookingUrl: "https://www.backpackerpanda.com/pune" },
+          { name: "The Hosteller", area: "Viman Nagar", price: "₹600-900/night ($7-11)", rating: 4.1, amenities: ["WiFi", "Kitchen", "Airport proximity"], bookingUrl: "https://www.thehosteller.com/pune/" }
+        ],
+        platforms: [
+          { name: "Agoda", url: "https://www.agoda.com/city/pune-in.html", features: ["IT hub properties", "Student accommodations", "Airport hotels"] },
+          { name: "Booking.com", url: "https://www.booking.com/city/in/pune.html", features: ["Business hotels", "Hill station access", "Corporate rates"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Pune--Maharashtra--India", features: ["Modern apartments", "IT professional hosts", "Co-living spaces"] },
+          { name: "Zolo", url: "https://www.zolo.in/pune", features: ["Co-living specialist", "IT crowd", "Modern amenities"] }
+        ],
+        monthlyOptions: [
+          { type: "IT professional PGs", price: "₹8000-16000/month ($96-192)", includes: "High-speed WiFi, professional crowd, meals" },
+          { type: "Co-living spaces", price: "₹12000-20000/month ($144-240)", includes: "Fully furnished, community events, flexibility" },
+          { type: "Student accommodations", price: "₹6000-12000/month ($72-144)", includes: "Near colleges, basic amenities, shared spaces" }
+        ]
+      },
+      udaipur: {
+        hostels: [
+          { name: "Zostel Udaipur", area: "Hanuman Ghat", price: "₹600-900/night ($7-11)", rating: 4.2, amenities: ["WiFi", "Lake views", "Rooftop", "Cultural tours"], bookingUrl: "https://www.zostel.com/zostel/udaipur/" },
+          { name: "Backpacker Panda", area: "Old City", price: "₹500-750/night ($6-9)", rating: 3.9, amenities: ["WiFi", "Heritage location", "Palace views"], bookingUrl: "https://www.backpackerpanda.com/udaipur" },
+          { name: "Mad Monkey Hostel", area: "Lake Pichola", price: "₹700-1000/night ($8-12)", rating: 4.0, amenities: ["WiFi", "Lake access", "Cultural activities"], bookingUrl: "https://www.madmonkeyhostels.com/udaipur/" }
+        ],
+        platforms: [
+          { name: "Agoda", url: "https://www.agoda.com/city/udaipur-in.html", features: ["Palace hotels", "Lake views", "Heritage properties"] },
+          { name: "Booking.com", url: "https://www.booking.com/city/in/udaipur.html", features: ["Heritage stays", "Palace experiences", "Cultural tours"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Udaipur--Rajasthan--India", features: ["Heritage haveli", "Lake views", "Royal experiences"] },
+          { name: "OYO", url: "https://www.oyorooms.com/hotels-in-udaipur/", features: ["Budget palace stays", "Tourist locations", "Standard amenities"] }
+        ],
+        monthlyOptions: [
+          { type: "Heritage haveli rooms", price: "₹8000-15000/month ($96-180)", includes: "Royal architecture, cultural immersion" },
+          { type: "Lake-view apartments", price: "₹10000-20000/month ($120-240)", includes: "Scenic views, peaceful environment" },
+          { type: "Old city guesthouses", price: "₹5000-12000/month ($60-144)", includes: "Cultural experience, local community" }
+        ]
+      },
+      pondicherry: {
+        hostels: [
+          { name: "Villa Shanti Backpackers", area: "French Quarter", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "French architecture", "Beach proximity"], bookingUrl: "https://villashanti.com/backpackers" },
+          { name: "Backpacker Panda", area: "White Town", price: "₹600-900/night ($7-11)", rating: 3.9, amenities: ["WiFi", "Colonial charm", "Beach access"], bookingUrl: "https://www.backpackerpanda.com/pondicherry" },
+          { name: "Zostel Pondicherry", area: "Auroville Road", price: "₹650-950/night ($8-11)", rating: 4.0, amenities: ["WiFi", "Spiritual vibes", "Auroville access"], bookingUrl: "https://www.zostel.com/zostel/pondicherry/" }
+        ],
+        platforms: [
+          { name: "Agoda", url: "https://www.agoda.com/city/pondicherry-in.html", features: ["French colonial stays", "Beach resorts", "Spiritual retreats"] },
+          { name: "Booking.com", url: "https://www.booking.com/city/in/pondicherry.html", features: ["Heritage hotels", "Auroville access", "Beach properties"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Puducherry--India", features: ["French villas", "Beach houses", "Spiritual experiences"] },
+          { name: "OYO", url: "https://www.oyorooms.com/hotels-in-pondicherry/", features: ["Budget beach stays", "French Quarter locations", "Tourist friendly"] }
+        ],
+        monthlyOptions: [
+          { type: "French colonial apartments", price: "₹8000-18000/month ($96-216)", includes: "Heritage charm, French culture, beach access" },
+          { type: "Auroville community stays", price: "₹6000-14000/month ($72-168)", includes: "Spiritual community, organic food, meditation" },
+          { type: "Beach-side guesthouses", price: "₹7000-16000/month ($84-192)", includes: "Beach access, local fishing community" }
+        ]
+      },
+      darjeeling: {
+        hostels: [
+          { name: "Zostel Darjeeling", area: "Mall Road", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Mountain views", "Tea garden tours", "Heating"], bookingUrl: "https://www.zostel.com/zostel/darjeeling/" },
+          { name: "Backpacker Panda", area: "Chowrasta", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Himalayan views", "Warm blankets"], bookingUrl: "https://www.backpackerpanda.com/darjeeling" },
+          { name: "The Hosteller", area: "Observatory Hill", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Sunrise views", "Tea tasting", "Library"], bookingUrl: "https://www.thehosteller.com/darjeeling/" }
+        ],
+        platforms: [
+          { name: "Agoda", url: "https://www.agoda.com/city/darjeeling-in.html", features: ["Mountain resorts", "Tea estate stays", "Himalayan views"] },
+          { name: "Booking.com", url: "https://www.booking.com/city/in/darjeeling.html", features: ["Hill station hotels", "Heritage properties", "Tea garden stays"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Darjeeling--West-Bengal--India", features: ["Mountain cottages", "Tea estate homes", "Local families"] },
+          { name: "OYO", url: "https://www.oyorooms.com/hotels-in-darjeeling/", features: ["Budget hill stations", "Heating facilities", "Tourist locations"] }
+        ],
+        monthlyOptions: [
+          { type: "Tea estate cottages", price: "₹6000-12000/month ($72-144)", includes: "Tea garden access, mountain views, fresh air" },
+          { type: "Hill station guesthouses", price: "₹5000-10000/month ($60-120)", includes: "Heating, mountain community, local food" },
+          { type: "Tibetan monastery stays", price: "₹3000-8000/month ($36-96)", includes: "Spiritual atmosphere, meditation, simple living" }
+        ]
+      },
+      mussoorie: {
+        hostels: [
+          { name: "Zostel Mussoorie", area: "Mall Road", price: "₹600-900/night ($7-11)", rating: 3.9, amenities: ["WiFi", "Mountain views", "Heating", "Library"], bookingUrl: "https://www.zostel.com/zostel/mussoorie/" },
+          { name: "Backpacker Panda", area: "Landour", price: "₹500-750/night ($6-9)", rating: 3.7, amenities: ["WiFi", "Hill station charm", "Warm blankets"], bookingUrl: "https://www.backpackerpanda.com/mussoorie" },
+          { name: "The Hosteller", area: "Picture Palace", price: "₹550-800/night ($7-10)", rating: 3.8, amenities: ["WiFi", "Valley views", "Common kitchen"], bookingUrl: "https://www.thehosteller.com/mussoorie/" }
+        ],
+        platforms: [
+          { name: "Booking.com", url: "https://www.booking.com/city/in/mussoorie.html", features: ["Hill station hotels", "Mountain resorts", "Valley views"] },
+          { name: "Agoda", url: "https://www.agoda.com/city/mussoorie-in.html", features: ["Mountain properties", "Heritage hotels", "Scenic stays"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Mussoorie--Uttarakhand--India", features: ["Mountain cottages", "British-era homes", "Hill views"] }
+        ],
+        monthlyOptions: [
+          { type: "Hill station guesthouses", price: "₹5000-12000/month ($60-144)", includes: "Mountain views, heating, local community" },
+          { type: "British-era cottages", price: "₹8000-15000/month ($96-180)", includes: "Heritage charm, valley views, peaceful environment" }
+        ]
+      },
+      dehradun: {
+        hostels: [
+          { name: "Zostel Dehradun", area: "Clock Tower", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "AC", "Kitchen", "City access"], bookingUrl: "https://www.zostel.com/zostel/dehradun/" },
+          { name: "Backpacker Panda", area: "Paltan Bazaar", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Central location", "Budget friendly"], bookingUrl: "https://www.backpackerpanda.com/dehradun" },
+          { name: "The Hosteller", area: "Rajpur Road", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Modern amenities", "Hill access"], bookingUrl: "https://www.thehosteller.com/dehradun/" }
+        ],
+        platforms: [
+          { name: "Booking.com", url: "https://www.booking.com/city/in/dehradun.html", features: ["Gateway to hills", "Business hotels", "Transit stays"] },
+          { name: "Agoda", url: "https://www.agoda.com/city/dehradun-in.html", features: ["Hill station access", "Educational hub", "Budget options"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Dehradun--Uttarakhand--India", features: ["Modern apartments", "Hill access", "Local families"] }
+        ],
+        monthlyOptions: [
+          { type: "Student accommodations", price: "₹6000-12000/month ($72-144)", includes: "Near colleges, study environment, basic amenities" },
+          { type: "Professional PGs", price: "₹8000-15000/month ($96-180)", includes: "WiFi, meals, working professionals" }
+        ]
+      },
+      kolkata: {
+        hostels: [
+          { name: "Backpacker Panda", area: "Park Street", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Cultural heart", "Metro access", "AC"], bookingUrl: "https://www.backpackerpanda.com/kolkata" },
+          { name: "The Hosteller", area: "New Market", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Heritage location", "Cultural tours"], bookingUrl: "https://www.thehosteller.com/kolkata/" },
+          { name: "Mad Monkey Hostel", area: "Salt Lake", price: "₹700-1000/night ($8-12)", rating: 4.1, amenities: ["WiFi", "Modern area", "IT hub proximity"], bookingUrl: "https://www.madmonkeyhostels.com/kolkata/" }
+        ],
+        platforms: [
+          { name: "Agoda", url: "https://www.agoda.com/city/kolkata-in.html", features: ["Cultural heritage", "Metro connectivity", "Budget options"] },
+          { name: "Booking.com", url: "https://www.booking.com/city/in/kolkata.html", features: ["Heritage hotels", "Cultural experiences", "River views"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Kolkata--West-Bengal--India", features: ["Heritage homes", "Cultural immersion", "Local families"] },
+          { name: "OYO", url: "https://www.oyorooms.com/hotels-in-kolkata/", features: ["Budget stays", "Metro access", "Business locations"] }
+        ],
+        monthlyOptions: [
+          { type: "Heritage neighborhood PGs", price: "₹7000-14000/month ($84-168)", includes: "Cultural immersion, Bengali food, local community" },
+          { type: "IT professional accommodations", price: "₹10000-18000/month ($120-216)", includes: "Modern amenities, IT hub access, high-speed WiFi" }
+        ]
+      },
+      dharamkot: {
+        hostels: [
+          { name: "Pink House Cafe & Hostel", area: "Upper Dharamkot", price: "₹400-600/night ($5-7)", rating: 4.2, amenities: ["WiFi", "Mountain views", "Cafe", "Trekking"], bookingUrl: "https://www.pinkhouse-dharamkot.com/" },
+          { name: "Zostel Dharamshala", area: "McLeod Ganj", price: "₹500-750/night ($6-9)", rating: 4.0, amenities: ["WiFi", "Tibetan culture", "Mountain treks"], bookingUrl: "https://www.zostel.com/zostel/dharamshala/" },
+          { name: "Backpacker Panda", area: "Dharamkot", price: "₹350-550/night ($4-7)", rating: 3.9, amenities: ["WiFi", "Budget stay", "Yoga classes"], bookingUrl: "https://www.backpackerpanda.com/dharamshala" }
+        ],
+        platforms: [
+          { name: "Booking.com", url: "https://www.booking.com/city/in/dharamshala.html", features: ["Tibetan culture", "Mountain treks", "Spiritual stays"] },
+          { name: "Agoda", url: "https://www.agoda.com/city/dharamshala-in.html", features: ["Budget mountains", "Spiritual retreats", "Trekking base"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Dharamkot--Himachal-Pradesh--India", features: ["Mountain cottages", "Local families", "Spiritual experiences"] }
+        ],
+        monthlyOptions: [
+          { type: "Mountain guesthouses", price: "₹4000-8000/month ($48-96)", includes: "Mountain views, basic amenities, trekking access" },
+          { type: "Tibetan family homestays", price: "₹5000-10000/month ($60-120)", includes: "Cultural immersion, home meals, spiritual environment" }
+        ]
       }
     };
 
-    const cityLower = citySlug.toLowerCase();
+    // Convert city slug to match our data keys
+    const cityLower = citySlug.toLowerCase().replace(/\s+/g, '-');
+    
     const defaultAccommodation = {
       hostels: [
         { name: "Local Budget Hostel", area: "City center", price: "₹500-800/night ($6-10)", rating: 3.8, amenities: ["WiFi", "Kitchen", "Common area"] }
