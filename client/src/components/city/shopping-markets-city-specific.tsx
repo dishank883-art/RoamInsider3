@@ -8,6 +8,283 @@ interface ShoppingMarketsProps {
 }
 
 export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
+  
+  // City-specific traditional markets data
+  const getCitySpecificMarkets = (cityName: string) => {
+    const cityLower = cityName.toLowerCase().replace(/\s+/g, '-');
+    
+    const marketsByCity: Record<string, any[]> = {
+      mumbai: [
+        {
+          name: "Crawford Market",
+          type: "Historic Market",
+          specialties: ["Fresh fruits", "Vegetables", "Spices", "Imported goods"],
+          hours: "6:00 AM - 8:00 PM",
+          bestTime: "Early morning for freshest produce",
+          priceRange: "₹20-2000 ($0.24-24)",
+          bargaining: "Expected",
+          tips: "Famous for exotic fruits and spices, bargain for bulk purchases",
+          location: "Fort, South Mumbai",
+          highlights: ["Victorian architecture", "Wholesale rates", "150+ years old"]
+        },
+        {
+          name: "Colaba Causeway",
+          type: "Street Market",
+          specialties: ["Fashion accessories", "Jewelry", "Antiques", "Handicrafts"],
+          hours: "10:00 AM - 10:00 PM",
+          bestTime: "Evening for street shopping experience",
+          priceRange: "₹100-5000 ($1.20-60)",
+          bargaining: "High",
+          tips: "Perfect for tourist souvenirs, negotiate prices heavily",
+          location: "Colaba, South Mumbai",
+          highlights: ["Tourist hub", "Antique finds", "Late night shopping"]
+        },
+        {
+          name: "Linking Road Market",
+          type: "Fashion Market",
+          specialties: ["Trendy clothes", "Shoes", "Bags", "Fashion accessories"],
+          hours: "11:00 AM - 10:00 PM",
+          bestTime: "Weekday evenings to avoid crowds",
+          priceRange: "₹200-3000 ($2.40-36)",
+          bargaining: "Moderate to High",
+          tips: "Check quality before buying, popular for Bollywood fashion",
+          location: "Bandra West",
+          highlights: ["Trendy fashion", "Celebrity shopping", "Instagram worthy"]
+        }
+      ],
+      delhi: [
+        {
+          name: "Chandni Chowk",
+          type: "Historic Bazaar",
+          specialties: ["Textiles", "Jewelry", "Spices", "Traditional wear"],
+          hours: "9:00 AM - 9:00 PM",
+          bestTime: "Morning to avoid afternoon crowds",
+          priceRange: "₹50-10000 ($0.60-120)",
+          bargaining: "Essential",
+          tips: "Oldest market in Delhi, start at 40% of quoted price",
+          location: "Old Delhi",
+          highlights: ["400+ years old", "Mughal heritage", "Wholesale hub"]
+        },
+        {
+          name: "Karol Bagh Market",
+          type: "Shopping District",
+          specialties: ["Electronics", "Clothing", "Home goods", "Footwear"],
+          hours: "10:00 AM - 9:00 PM",
+          bestTime: "Weekday afternoons",
+          priceRange: "₹100-15000 ($1.20-180)",
+          bargaining: "Expected",
+          tips: "Best for wedding shopping and electronics",
+          location: "Central Delhi",
+          highlights: ["Wedding shopping hub", "Electronics paradise", "Metro connected"]
+        }
+      ],
+      bangalore: [
+        {
+          name: "Commercial Street",
+          type: "Shopping Street",
+          specialties: ["Fashion", "Footwear", "Accessories", "Books"],
+          hours: "10:00 AM - 9:00 PM",
+          bestTime: "Evening for vibrant atmosphere",
+          priceRange: "₹200-5000 ($2.40-60)",
+          bargaining: "Moderate",
+          tips: "Mix of brands and street shopping, great for casual wear",
+          location: "Central Bangalore",
+          highlights: ["IT crowd favorite", "Brand outlets", "Café culture"]
+        },
+        {
+          name: "Chickpet Market",
+          type: "Traditional Wholesale Market",
+          specialties: ["Sarees", "Silk fabrics", "Traditional wear", "Jewelry"],
+          hours: "9:00 AM - 8:00 PM",
+          bestTime: "Morning for wholesale rates",
+          priceRange: "₹300-25000 ($3.60-300)",
+          bargaining: "High",
+          tips: "Famous for silk sarees, bring cash for best deals",
+          location: "Central Bangalore",
+          highlights: ["Silk capital", "Wholesale prices", "Traditional crafts"]
+        }
+      ],
+      goa: [
+        {
+          name: "Mapusa Market",
+          type: "Weekly Market",
+          specialties: ["Fresh seafood", "Spices", "Cashews", "Local produce"],
+          hours: "6:00 AM - 2:00 PM (Friday only)",
+          bestTime: "Early morning for best selection",
+          priceRange: "₹20-1000 ($0.24-12)",
+          bargaining: "Moderate",
+          tips: "Famous Friday market, try local cashews and feni",
+          location: "Mapusa, North Goa",
+          highlights: ["Weekly tradition", "Local seafood", "Authentic Goan products"]
+        },
+        {
+          name: "Anjuna Flea Market",
+          type: "Hippie Market",
+          specialties: ["Hippie jewelry", "Clothes", "Souvenirs", "Tibetan items"],
+          hours: "9:00 AM - 6:00 PM (Wednesday only)",
+          bestTime: "Late morning for full selection",
+          priceRange: "₹100-2000 ($1.20-24)",
+          bargaining: "Expected",
+          tips: "Iconic hippie market, unique finds and vintage items",
+          location: "Anjuna Beach",
+          highlights: ["Hippie culture", "Unique crafts", "Beach vibes"]
+        }
+      ],
+      rishikesh: [
+        {
+          name: "Rishikesh Main Market",
+          type: "Spiritual Market",
+          specialties: ["Yoga equipment", "Rudraksha beads", "Ayurvedic herbs", "Spiritual books"],
+          hours: "8:00 AM - 9:00 PM",
+          bestTime: "Evening after yoga sessions",
+          priceRange: "₹50-5000 ($0.60-60)",
+          bargaining: "Moderate",
+          tips: "Perfect for yoga and meditation supplies",
+          location: "Near Ram Jhula",
+          highlights: ["Yoga capital", "Spiritual items", "Ganges proximity"]
+        },
+        {
+          name: "Laxman Jhula Market",
+          type: "Tourist Market",
+          specialties: ["Handicrafts", "Gemstones", "Incense", "Tibetan goods"],
+          hours: "9:00 AM - 10:00 PM",
+          bestTime: "Evening with Ganga aarti",
+          priceRange: "₹30-3000 ($0.36-36)",
+          bargaining: "High",
+          tips: "Combine with Ganga aarti for cultural experience",
+          location: "Laxman Jhula area",
+          highlights: ["Ganga views", "Spiritual atmosphere", "Evening aarti"]
+        }
+      ],
+      kochi: [
+        {
+          name: "Mattancherry Spice Market",
+          type: "Historic Spice Market",
+          specialties: ["Cardamom", "Black pepper", "Ginger", "Turmeric"],
+          hours: "9:00 AM - 6:00 PM",
+          bestTime: "Morning for aromatic experience",
+          priceRange: "₹100-2000 per kg ($1.20-24)",
+          bargaining: "Moderate",
+          tips: "500+ year old spice trade center, buy in bulk",
+          location: "Fort Kochi",
+          highlights: ["Historic spice route", "Authentic spices", "Colonial architecture"]
+        },
+        {
+          name: "Marine Drive Shopping",
+          type: "Waterfront Market",
+          specialties: ["Seafood", "Coconut products", "Local snacks", "Souvenirs"],
+          hours: "6:00 AM - 10:00 PM",
+          bestTime: "Evening with backwater views",
+          priceRange: "₹50-1500 ($0.60-18)",
+          bargaining: "Low to Moderate",
+          tips: "Fresh catch of the day, enjoy backwater sunset",
+          location: "Marine Drive",
+          highlights: ["Backwater views", "Fresh seafood", "Local experience"]
+        }
+      ],
+      pondicherry: [
+        {
+          name: "Mission Street Market",
+          type: "French Quarter Market",
+          specialties: ["French pastries", "Local crafts", "Antiques", "Textiles"],
+          hours: "8:00 AM - 8:00 PM",
+          bestTime: "Morning for French breakfast experience",
+          priceRange: "₹100-3000 ($1.20-36)",
+          bargaining: "Limited",
+          tips: "French colonial influence, try local handmade paper",
+          location: "French Quarter",
+          highlights: ["French heritage", "Colonial architecture", "Artisan products"]
+        }
+      ],
+      darjeeling: [
+        {
+          name: "Darjeeling Tea Market",
+          type: "Tea Trading Center",
+          specialties: ["Darjeeling tea", "Himalayan honey", "Yak cheese", "Woolen goods"],
+          hours: "9:00 AM - 7:00 PM",
+          bestTime: "Afternoon tea tasting sessions",
+          priceRange: "₹200-5000 ($2.40-60)",
+          bargaining: "Low",
+          tips: "World's finest tea, ask for tasting before buying",
+          location: "Mall Road",
+          highlights: ["World famous tea", "Himalayan views", "Colonial charm"]
+        }
+      ],
+      tosh: [
+        {
+          name: "Tosh Village Market",
+          type: "Mountain Village Market",
+          specialties: ["Local apples", "Herbs", "Woolen clothes", "Basic supplies"],
+          hours: "8:00 AM - 6:00 PM",
+          bestTime: "Morning before trekking",
+          priceRange: "₹20-1000 ($0.24-12)",
+          bargaining: "Minimal",
+          tips: "Limited supplies, stock up for treks, organic apples in season",
+          location: "Village center",
+          highlights: ["Mountain produce", "Trek supplies", "Local community"]
+        }
+      ],
+      dharamkot: [
+        {
+          name: "Dharamkot Local Market",
+          type: "Hill Station Market",
+          specialties: ["Tibetan handicrafts", "Trekking gear", "Local produce", "Meditation supplies"],
+          hours: "8:00 AM - 8:00 PM",
+          bestTime: "Evening after meditation sessions",
+          priceRange: "₹50-2000 ($0.60-24)",
+          bargaining: "Moderate",
+          tips: "Tibetan refugee community, authentic Tibetan goods",
+          location: "Main village road",
+          highlights: ["Tibetan culture", "Mountain views", "Spiritual items"]
+        }
+      ],
+      wayanad: [
+        {
+          name: "Wayanad Spice Plantation Market",
+          type: "Plantation Market",
+          specialties: ["Coffee beans", "Cardamom", "Pepper", "Vanilla"],
+          hours: "9:00 AM - 6:00 PM",
+          bestTime: "Morning plantation tours",
+          priceRange: "₹200-3000 ($2.40-36)",
+          bargaining: "Low",
+          tips: "Direct from plantations, organic certified products",
+          location: "Various plantation sites",
+          highlights: ["Organic spices", "Plantation fresh", "Western Ghats"]
+        }
+      ]
+    };
+
+    // Default markets for cities not specifically listed
+    const defaultMarkets = [
+      {
+        name: `${cityName} Central Market`,
+        type: "City Market",
+        specialties: ["Local produce", "Textiles", "Handicrafts", "Spices"],
+        hours: "7:00 AM - 8:00 PM",
+        bestTime: "Morning for freshest items",
+        priceRange: "₹30-2000 ($0.36-24)",
+        bargaining: "Expected",
+        tips: "Ask locals for best stalls and seasonal specialties",
+        location: "City center",
+        highlights: ["Local flavors", "Community atmosphere", "Authentic experience"]
+      },
+      {
+        name: `${cityName} Handicrafts Bazaar`,
+        type: "Artisan Market",
+        specialties: ["Local crafts", "Traditional items", "Souvenirs", "Textiles"],
+        hours: "10:00 AM - 8:00 PM",
+        bestTime: "Afternoon to meet artisans",
+        priceRange: "₹100-5000 ($1.20-60)",
+        bargaining: "Moderate",
+        tips: "Support local artisans, look for authenticity marks",
+        location: "Cultural district",
+        highlights: ["Local artisans", "Unique crafts", "Cultural heritage"]
+      }
+    ];
+
+    return marketsByCity[cityLower] || defaultMarkets;
+  };
+
   // Get city-specific available platforms based on location and infrastructure
   const getCitySpecificPlatforms = (cityName: string) => {
     const allPlatforms = [
@@ -214,68 +491,88 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
       }
     ];
 
-    // City categorization for platform availability
-    const majorMetros = ['mumbai', 'delhi', 'new-delhi', 'bangalore', 'kolkata', 'chennai', 'pune', 'hyderabad'];
-    const tier2Cities = ['goa', 'kochi', 'udaipur', 'pondicherry', 'dehradun', 'mussoorie', 'rishikesh'];
-    const hillStations = ['mussoorie', 'dehradun', 'dharamkot', 'kasol', 'bir', 'darjeeling', 'tosh', 'wayanad'];
-    const coastalCities = ['goa', 'mumbai', 'kochi', 'pondicherry', 'varkala', 'alleppey'];
-    const remoteCities = ['ziro', 'tosh', 'dharamkot', 'kasol'];
-    
+    // Detailed city-specific platform availability
     const cityLower = cityName.toLowerCase().replace(/\s+/g, '-');
+    
+    const platformAvailability: Record<string, string[]> = {
+      // Tier 1 Cities - All platforms available
+      mumbai: ["Amazon India", "Flipkart", "Myntra", "Nykaa", "BigBasket", "Grofers (Blinkit)", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Ajio", "Meesho", "Snapdeal", "Croma", "Lenskart", "FirstCry", "Tata CLiQ", "BookMyShow", "Urban Ladder"],
+      delhi: ["Amazon India", "Flipkart", "Myntra", "Nykaa", "BigBasket", "Grofers (Blinkit)", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Ajio", "Meesho", "Snapdeal", "Croma", "Lenskart", "FirstCry", "Tata CLiQ", "BookMyShow", "Urban Ladder"],
+      'new-delhi': ["Amazon India", "Flipkart", "Myntra", "Nykaa", "BigBasket", "Grofers (Blinkit)", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Ajio", "Meesho", "Snapdeal", "Croma", "Lenskart", "FirstCry", "Tata CLiQ", "BookMyShow", "Urban Ladder"],
+      bangalore: ["Amazon India", "Flipkart", "Myntra", "Nykaa", "BigBasket", "Grofers (Blinkit)", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Ajio", "Meesho", "Snapdeal", "Croma", "Lenskart", "FirstCry", "Tata CLiQ", "BookMyShow", "Urban Ladder"],
+      pune: ["Amazon India", "Flipkart", "Myntra", "Nykaa", "BigBasket", "Grofers (Blinkit)", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Ajio", "Meesho", "Snapdeal", "Croma", "Lenskart", "FirstCry", "Tata CLiQ", "BookMyShow"],
+      hyderabad: ["Amazon India", "Flipkart", "Myntra", "Nykaa", "BigBasket", "Grofers (Blinkit)", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Ajio", "Meesho", "Snapdeal", "Croma", "Lenskart", "FirstCry", "Tata CLiQ", "BookMyShow"],
+      chennai: ["Amazon India", "Flipkart", "Myntra", "Nykaa", "BigBasket", "Grofers (Blinkit)", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Ajio", "Meesho", "Snapdeal", "Croma", "Lenskart", "FirstCry", "Tata CLiQ", "BookMyShow"],
+      kolkata: ["Amazon India", "Flipkart", "Myntra", "Nykaa", "BigBasket", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Ajio", "Meesho", "Snapdeal", "Croma", "Lenskart", "FirstCry", "Tata CLiQ", "BookMyShow"],
+      
+      // Tier 2 Cities - Most platforms, limited ultra-fast delivery
+      goa: ["Amazon India", "Flipkart", "Myntra", "Nykaa", "BigBasket", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Ajio", "Meesho", "Snapdeal", "Lenskart", "FirstCry", "BookMyShow"],
+      kochi: ["Amazon India", "Flipkart", "Myntra", "Nykaa", "BigBasket", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Ajio", "Meesho", "Snapdeal", "Lenskart", "FirstCry", "Tata CLiQ", "BookMyShow"],
+      udaipur: ["Amazon India", "Flipkart", "Myntra", "BigBasket", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Ajio", "Meesho", "Snapdeal", "Lenskart", "BookMyShow"],
+      pondicherry: ["Amazon India", "Flipkart", "Myntra", "BigBasket", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Meesho", "Snapdeal", "Lenskart"],
+      dehradun: ["Amazon India", "Flipkart", "BigBasket", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Meesho", "Snapdeal"],
+      
+      // Hill Stations - Essential platforms only
+      rishikesh: ["Amazon India", "Flipkart", "BigBasket", "Swiggy", "Zomato", "1mg", "PharmEasy", "JioMart"],
+      mussoorie: ["Amazon India", "Flipkart", "BigBasket", "Swiggy", "1mg", "PharmEasy", "JioMart"],
+      darjeeling: ["Amazon India", "Flipkart", "BigBasket", "1mg", "PharmEasy", "Swiggy"],
+      dharamkot: ["Amazon India", "Flipkart", "1mg", "Swiggy"],
+      tosh: ["Amazon India", "Flipkart", "1mg"],
+      kasol: ["Amazon India", "Flipkart", "1mg"],
+      bir: ["Amazon India", "Flipkart", "1mg", "PharmEasy"],
+      wayanad: ["Amazon India", "Flipkart", "BigBasket", "1mg", "PharmEasy", "JioMart"],
+      
+      // Remote areas - Very limited
+      ziro: ["Amazon India", "Flipkart", "1mg"],
+      
+      // Coastal cities
+      varkala: ["Amazon India", "Flipkart", "BigBasket", "Swiggy", "Zomato", "1mg", "PharmEasy"],
+      alleppey: ["Amazon India", "Flipkart", "BigBasket", "Swiggy", "Zomato", "1mg", "PharmEasy", "JioMart"]
+    };
+    
+    // Get available platforms for the city
+    const availablePlatformNames = platformAvailability[cityLower] || [
+      "Amazon India", "Flipkart", "BigBasket", "JioMart", "Swiggy", "Zomato", "1mg", "PharmEasy", "Meesho"
+    ];
+    
+    // Filter platforms based on city availability
+    let availablePlatforms = allPlatforms.filter(platform => 
+      availablePlatformNames.includes(platform.name)
+    );
 
-    // Filter platforms based on city type and infrastructure
-    let availablePlatforms = allPlatforms.filter(platform => {
-      // All platforms available in major metros
-      if (majorMetros.includes(cityLower)) {
-        return true;
-      }
-      
-      // Most platforms available in tier-2 cities, except ultra-fast delivery
-      if (tier2Cities.includes(cityLower)) {
-        if (platform.name === "Grofers (Blinkit)") {
-          return false; // Ultra-fast delivery not available in smaller cities
-        }
-        return true;
-      }
-      
-      // Limited platforms in hill stations and remote areas
-      if (hillStations.includes(cityLower) || remoteCities.includes(cityLower)) {
-        const limitedPlatforms = [
-          "Amazon India", "Flipkart", "BigBasket", "1mg", "PharmEasy", 
-          "JioMart", "Swiggy", "Zomato"
-        ];
-        return limitedPlatforms.includes(platform.name);
-      }
-      
-      // Default for other cities - most platforms available
-      return platform.name !== "Grofers (Blinkit)"; // Ultra-fast delivery limited
-    });
-
-    // Adjust delivery times based on city location
+    // Adjust delivery times and add city-specific notes based on city location
     availablePlatforms = availablePlatforms.map(platform => {
       let adjustedDeliveryTime = platform.deliveryTime;
       let citySpecificNote = "";
 
-      if (majorMetros.includes(cityLower)) {
-        // Keep original fast delivery times
+      // Delivery time adjustments based on city infrastructure
+      if (['mumbai', 'delhi', 'new-delhi', 'bangalore', 'pune', 'hyderabad', 'chennai'].includes(cityLower)) {
+        // Keep original fast delivery times for tier 1 cities
         adjustedDeliveryTime = platform.deliveryTime;
-      } else if (tier2Cities.includes(cityLower)) {
+      } else if (['goa', 'kochi', 'udaipur', 'pondicherry', 'dehradun', 'kolkata'].includes(cityLower)) {
+        // Tier 2 cities - slightly extended times
         if (platform.deliveryTime.includes("Same day")) {
           adjustedDeliveryTime = "Next day delivery";
         } else if (platform.deliveryTime.includes("8-15 minutes")) {
           adjustedDeliveryTime = "2-4 hours";
         }
-      } else if (hillStations.includes(cityLower) || remoteCities.includes(cityLower)) {
+      } else if (['rishikesh', 'mussoorie', 'darjeeling', 'bir', 'wayanad', 'dharamkot', 'tosh', 'kasol', 'ziro'].includes(cityLower)) {
+        // Hill stations and remote areas - extended delivery times
         if (platform.deliveryTime.includes("Same day") || platform.deliveryTime.includes("Next day")) {
           adjustedDeliveryTime = "2-5 days";
         } else if (platform.deliveryTime.includes("30-45 minutes")) {
           adjustedDeliveryTime = "1-2 hours";
         } else if (platform.deliveryTime.includes("minutes")) {
           adjustedDeliveryTime = "Same day";
+        } else if (platform.deliveryTime.includes("1-3 days")) {
+          adjustedDeliveryTime = "3-7 days";
         }
       }
 
-      // Add city-specific notes
+      // Add city-specific notes based on geography and local specialties
+      const coastalCities = ['goa', 'mumbai', 'kochi', 'pondicherry', 'varkala', 'alleppey'];
+      const hillStations = ['rishikesh', 'mussoorie', 'darjeeling', 'dharamkot', 'tosh', 'kasol', 'bir', 'wayanad'];
+      
       if (platform.name === "BigBasket" && coastalCities.includes(cityLower)) {
         citySpecificNote = "Fresh seafood and coconut products available";
       }
@@ -284,6 +581,9 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
       }
       if (platform.name === "Swiggy" && hillStations.includes(cityLower)) {
         citySpecificNote = "Limited restaurant options, focus on local cuisine";
+      }
+      if (platform.name === "1mg" && cityLower === "ziro") {
+        citySpecificNote = "Essential medicines only, limited healthcare products";
       }
 
       return {
@@ -299,21 +599,35 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
   // Get city-specific platforms
   const onlineShoppingPortals = getCitySpecificPlatforms(city.name);
 
-  const getCityAvailabilityNote = (cityName: string) => {
+  const getCityAvailabilityNote = (cityName: string, platformCount: number) => {
     const cityLower = cityName.toLowerCase().replace(/\s+/g, '-');
-    const majorMetros = ['mumbai', 'delhi', 'new-delhi', 'bangalore', 'kolkata', 'chennai', 'pune', 'hyderabad'];
-    const tier2Cities = ['goa', 'kochi', 'udaipur', 'pondicherry', 'dehradun', 'mussoorie', 'rishikesh'];
-    const hillStations = ['mussoorie', 'dehradun', 'dharamkot', 'kasol', 'bir', 'darjeeling', 'tosh', 'wayanad'];
-    const remoteCities = ['ziro', 'tosh', 'dharamkot', 'kasol'];
-
-    if (majorMetros.includes(cityLower)) {
-      return "All major platforms available with fastest delivery options including 10-minute delivery services.";
-    } else if (tier2Cities.includes(cityLower)) {
-      return "Most platforms available with standard delivery. Ultra-fast delivery services may be limited.";
-    } else if (hillStations.includes(cityLower) || remoteCities.includes(cityLower)) {
-      return "Essential platforms available. Delivery times may be extended due to terrain and weather conditions.";
+    
+    // Tier 1 Cities
+    if (['mumbai', 'delhi', 'new-delhi', 'bangalore', 'pune', 'hyderabad', 'chennai'].includes(cityLower)) {
+      return `All ${platformCount} major platforms available with fastest delivery options including 10-minute delivery services like Blinkit.`;
     }
-    return "Most platforms available with standard delivery times for this region.";
+    
+    // Tier 2 Cities
+    if (['goa', 'kochi', 'udaipur', 'pondicherry', 'dehradun', 'kolkata'].includes(cityLower)) {
+      return `${platformCount} major platforms available. Standard delivery services with some same-day options.`;
+    }
+    
+    // Hill Stations
+    if (['rishikesh', 'mussoorie', 'darjeeling', 'bir', 'wayanad'].includes(cityLower)) {
+      return `${platformCount} essential platforms available. Delivery may take 2-5 days due to mountain terrain.`;
+    }
+    
+    // Remote Hill Areas
+    if (['dharamkot', 'tosh', 'kasol', 'ziro'].includes(cityLower)) {
+      return `${platformCount} basic platforms available. Limited delivery due to remote location and weather dependency.`;
+    }
+    
+    // Coastal Cities
+    if (['varkala', 'alleppey'].includes(cityLower)) {
+      return `${platformCount} platforms available with good connectivity. Fresh seafood and local products readily delivered.`;
+    }
+    
+    return `${platformCount} platforms available with standard delivery times for this region.`;
   };
 
   return (
@@ -333,44 +647,7 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
             Traditional Markets & Local Shopping
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            {[
-              {
-                name: "Main Bazaar Market",
-                type: "Traditional Market",
-                specialties: ["Textiles", "Spices", "Handicrafts", "Jewelry"],
-                hours: "6:00 AM - 9:00 PM",
-                bestTime: "Early morning or evening",
-                priceRange: "₹50-5000 ($0.60-60)",
-                bargaining: "Expected",
-                tips: "Start negotiating at 50% of quoted price",
-                location: "City center, near main temple",
-                highlights: ["Authentic local products", "Best prices for bulk buying", "Cultural experience"]
-              },
-              {
-                name: "Spice Market",
-                type: "Specialty Market",
-                specialties: ["Whole spices", "Tea", "Dry fruits", "Ayurvedic herbs"],
-                hours: "7:00 AM - 8:00 PM",
-                bestTime: "Morning for freshest selection",
-                priceRange: "₹20-2000 ($0.24-24)",
-                bargaining: "Moderate",
-                tips: "Ask for small samples to taste quality",
-                location: "Old city area",
-                highlights: ["Organic options available", "Expert spice mixing", "Export quality products"]
-              },
-              {
-                name: "Handicrafts Emporium",
-                type: "Artisan Market",
-                specialties: ["Handwoven textiles", "Pottery", "Wood carvings", "Paintings"],
-                hours: "10:00 AM - 8:00 PM",
-                bestTime: "Afternoon to interact with artisans",
-                priceRange: "₹100-15000 ($1.20-180)",
-                bargaining: "Limited",
-                tips: "Look for authenticity certificates",
-                location: "Cultural district",
-                highlights: ["Direct from artisans", "Unique pieces", "Cultural authenticity"]
-              }
-            ].map((market, index) => (
+            {getCitySpecificMarkets(city.name).map((market, index) => (
               <div key={index} className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
                 <div className="flex items-start justify-between mb-2">
                   <div>
@@ -528,7 +805,7 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
           {/* City-specific platform availability note */}
           <div className="mt-4 p-3 bg-vintage-gold/5 rounded-lg border-l-4 border-vintage-gold">
             <p className="text-sm text-muted-navy">
-              <strong>Platform Availability:</strong> {getCityAvailabilityNote(city.name)}
+              <strong>Platform Availability:</strong> {getCityAvailabilityNote(city.name, onlineShoppingPortals.length)}
             </p>
           </div>
         </div>
