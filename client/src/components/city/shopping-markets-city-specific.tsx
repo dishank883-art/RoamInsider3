@@ -8,973 +8,417 @@ interface ShoppingMarketsProps {
 }
 
 export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
-  // City-specific shopping and markets data
-  const getCitySpecificMarkets = (cityName: string) => {
-    const marketsByCity = {
-      "Goa": {
-        traditionalMarkets: [
-          {
-            name: "Anjuna Flea Market",
-            type: "Beach Market",
-            specialties: ["Hippie fashion", "Jewelry", "Souvenirs", "Handmade items"],
-            hours: "Wednesdays 9:00 AM - 6:00 PM",
-            bestTime: "Morning for best selection",
-            priceRange: "₹50-3000",
-            bargaining: "Expected and encouraged",
-            tips: "Start at 30% of quoted price, cash preferred",
-            location: "Anjuna Beach, North Goa",
-            highlights: ["Beach setting", "International vendors", "Unique finds"]
-          },
-          {
-            name: "Mapusa Friday Market",
-            type: "Local Market",
-            specialties: ["Fresh produce", "Spices", "Goan specialties", "Feni"],
-            hours: "Fridays 6:00 AM - 8:00 PM",
-            bestTime: "Early morning for fresh items",
-            priceRange: "₹20-2000",
-            bargaining: "Light bargaining acceptable",
-            tips: "Best place for authentic Goan spices and cashews",
-            location: "Mapusa, 13km from Panaji",
-            highlights: ["Local atmosphere", "Authentic items", "Direct-from-producer pricing"]
-          },
-          {
-            name: "Arpora Saturday Night Market",
-            type: "Night Market",
-            specialties: ["International cuisines", "Live music", "Handicrafts", "Souvenirs"],
-            hours: "Saturdays 6:00 PM - late night",
-            bestTime: "Evening atmosphere",
-            priceRange: "₹100-3000",
-            bargaining: "Moderate bargaining",
-            tips: "Great for dinner and entertainment with shopping",
-            location: "Arpora, North Goa",
-            highlights: ["Live entertainment", "Food variety", "Night market vibes"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "DB Mall Goa",
-            type: "Shopping Center",
-            specialties: ["Fashion", "Electronics", "Home goods", "Food court"],
-            hours: "10:00 AM - 9:30 PM",
-            priceRange: "₹300-10000",
-            bargaining: "No bargaining, fixed prices",
-            tips: "Check for seasonal sales and offers",
-            highlights: ["Central location", "Local and national brands", "Good dining"]
-          }
-        ]
+  // Get city-specific available platforms based on location and infrastructure
+  const getCitySpecificPlatforms = (cityName: string) => {
+    const allPlatforms = [
+      // Major E-commerce Platforms
+      {
+        name: "Amazon India",
+        category: "Everything Store",
+        description: "Largest online retailer with same-day delivery in major cities",
+        url: "https://amazon.in",
+        specialties: ["Electronics", "Books", "Fashion", "Home & Kitchen", "Groceries"],
+        deliveryTime: "Same day/Next day",
+        paymentMethods: ["Cards", "UPI", "EMI", "Cash on Delivery"],
+        benefits: ["Prime membership", "Easy returns", "Customer service"]
       },
-      "Bir": {
-        traditionalMarkets: [
-          {
-            name: "Bir Local Market",
-            type: "Village Market",
-            specialties: ["Local produce", "Basic supplies", "Trekking gear", "Handmade items"],
-            hours: "8:00 AM - 6:00 PM",
-            bestTime: "Morning for fresh items",
-            priceRange: "₹20-800",
-            bargaining: "Light bargaining acceptable",
-            tips: "Limited options, bring essentials from outside",
-            location: "Bir village center",
-            highlights: ["Local atmosphere", "Basic necessities", "Traveler essentials"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Bir General Store",
-            type: "Local Store",
-            specialties: ["Basic supplies", "Trekking gear", "Snacks", "Essentials"],
-            hours: "8:00 AM - 8:00 PM",
-            priceRange: "₹20-1000",
-            bargaining: "Fixed prices mostly",
-            tips: "Stock up on essentials, limited options available",
-            highlights: ["Convenient location", "Basic necessities", "Traveler-friendly"]
-          }
-        ]
+      {
+        name: "Flipkart",
+        category: "Multi-category",
+        description: "India's homegrown e-commerce giant with excellent customer service",
+        url: "https://flipkart.com",
+        specialties: ["Electronics", "Fashion", "Mobile phones", "Appliances", "Books"],
+        deliveryTime: "1-7 days",
+        paymentMethods: ["Cards", "UPI", "EMI", "Cash on Delivery"],
+        benefits: ["Plus membership", "Exchange offers", "No-cost EMI"]
       },
-      "Dehradun": {
-        traditionalMarkets: [
-          {
-            name: "Paltan Bazaar",
-            type: "Traditional Market",
-            specialties: ["Local goods", "Clothing", "Spices", "Handicrafts"],
-            hours: "10:00 AM - 8:00 PM",
-            bestTime: "Evening for cooler shopping",
-            priceRange: "₹50-2000",
-            bargaining: "Expected",
-            tips: "Great place for local Garhwali items",
-            location: "Central Dehradun",
-            highlights: ["Local culture", "Traditional items", "Good prices"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Pacific Mall",
-            type: "Shopping Mall",
-            brands: ["National", "International", "Local brands"],
-            floors: 4,
-            facilities: ["Food court", "Cinema", "Gaming", "Parking"],
-            hours: "11:00 AM - 10:00 PM",
-            priceRange: "₹500-10000",
-            paymentMethods: ["Card", "UPI", "Cash", "Wallets"],
-            highlights: ["AC comfort", "Entertainment", "Dining options"]
-          }
-        ]
+      {
+        name: "Myntra",
+        category: "Fashion & Lifestyle",
+        description: "Leading fashion platform with latest trends and brands",
+        url: "https://myntra.com",
+        specialties: ["Fashion", "Beauty", "Home decor", "Personal care"],
+        deliveryTime: "2-7 days",
+        paymentMethods: ["Cards", "UPI", "Wallets", "EMI"],
+        benefits: ["Try & Buy", "Free returns", "Style recommendations"]
       },
-      "Mumbai": {
-        traditionalMarkets: [
-          {
-            name: "Crawford Market (Mahatma Jyotiba Phule Mandai)",
-            type: "Historic Market",
-            specialties: ["Fresh fruits", "Imported cheeses", "Handmade chocolates", "Toys", "Flowers"],
-            hours: "9:00 AM - 10:30 PM (Closed Sunday)",
-            bestTime: "Morning for fresh items",
-            priceRange: "₹50-5000",
-            bargaining: "Expected",
-            tips: "First market in India to get electricity (1869), historic colonial building",
-            location: "Near Chhatrapati Shivaji Terminus",
-            highlights: ["Colonial architecture", "Historic significance", "Variety"]
-          },
-          {
-            name: "Chor Bazaar (Thieves Market)",
-            type: "Antique Market",
-            specialties: ["Antiques", "Vintage items", "Old furniture", "Brass lamps", "Collectibles"],
-            hours: "11:00 AM - 7:30 PM (Closed Friday)",
-            bestTime: "Afternoon for better browsing",
-            priceRange: "₹100-50000",
-            bargaining: "Essential skill required",
-            tips: "Legend says if you lose anything in Mumbai, you can buy it back here",
-            location: "Mutton Street, near Mohammed Ali Road",
-            highlights: ["Unique finds", "Historical items", "Adventure shopping"]
-          },
-          {
-            name: "Colaba Causeway",
-            type: "Street Market",
-            specialties: ["Clothes", "Accessories", "Souvenirs", "Handicrafts", "Jewelry"],
-            hours: "10:00 AM - 10:00 PM daily",
-            bestTime: "Evening for cooler shopping",
-            priceRange: "₹100-3000",
-            bargaining: "Great bargaining opportunities",
-            tips: "Tourist-friendly with good variety of items",
-            location: "Colaba, South Mumbai",
-            highlights: ["Tourist popular", "Good variety", "Easy access"]
-          },
-          {
-            name: "Fashion Street",
-            type: "Fashion Market",
-            specialties: ["Latest fashion trends", "Affordable clothes", "Accessories", "Footwear"],
-            hours: "11:00 AM - 9:00 PM daily",
-            bestTime: "Weekday evenings",
-            priceRange: "₹50-1500",
-            bargaining: "Expected and effective",
-            tips: "390 street shops selling trendy clothes at cheap prices",
-            location: "MG Road, Fort",
-            highlights: ["Trendy fashion", "Budget-friendly", "Large selection"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Phoenix Mills",
-            type: "Premium Mall",
-            brands: ["Luxury", "International", "Designer"],
-            floors: 4,
-            facilities: ["Fine dining", "Cinema", "Events", "Valet parking"],
-            hours: "11:00 AM - 11:00 PM",
-            priceRange: "₹1000-50000",
-            paymentMethods: ["All cards", "UPI", "Digital wallets"],
-            highlights: ["Luxury shopping", "Premium brands", "Entertainment"]
-          }
-        ]
+      {
+        name: "Nykaa",
+        category: "Beauty & Wellness",
+        description: "Premium beauty and wellness products",
+        url: "https://nykaa.com",
+        specialties: ["Cosmetics", "Skincare", "Hair care", "Fragrances", "Wellness"],
+        deliveryTime: "2-5 days",
+        paymentMethods: ["Cards", "UPI", "Wallets", "EMI"],
+        benefits: ["Beauty consultations", "Authentic products", "Loyalty rewards"]
       },
-      "Bangalore": {
-        traditionalMarkets: [
-          {
-            name: "Commercial Street",
-            type: "Shopping Street",
-            specialties: ["Export surplus clothing", "Affordable shoes", "Trendy jewelry", "Electronics"],
-            hours: "10:00 AM - 9:00 PM (Closed Monday)",
-            bestTime: "Weekday afternoons",
-            priceRange: "₹100-5000",
-            bargaining: "Excellent bargaining opportunities",
-            tips: "Hole-in-the-wall retailers with great deals",
-            location: "Shivaji Nagar, Central Bangalore",
-            highlights: ["Export quality clothes", "Budget shopping", "Variety"]
-          },
-          {
-            name: "Brigade Road",
-            type: "Street Shopping Area",
-            specialties: ["Street fashion", "Accessories", "Books", "Food"],
-            hours: "10:00 AM - 10:00 PM daily",
-            bestTime: "Evening hours",
-            priceRange: "₹50-3000",
-            bargaining: "Expected",
-            tips: "CBD area with mix of street vendors and branded stores",
-            location: "Off MG Road, Central Bangalore",
-            highlights: ["Central location", "Mix of options", "Good food nearby"]
-          },
-          {
-            name: "Chickpet Market",
-            type: "Wholesale Market",
-            specialties: ["Textiles", "Silk sarees", "Traditional wear", "Wholesale goods"],
-            hours: "10:00 AM - 8:00 PM (Closed Sunday)",
-            bestTime: "Morning for better selection",
-            priceRange: "₹200-15000",
-            bargaining: "Essential for good deals",
-            tips: "Best place for traditional South Indian clothing",
-            location: "Chickpet, Central Bangalore",
-            highlights: ["Wholesale prices", "Traditional items", "Bulk buying"]
-          },
-          {
-            name: "Gandhi Bazaar",
-            type: "Local Market",
-            specialties: ["Fresh produce", "Spices", "Condiments", "Local goods"],
-            hours: "6:00 AM - 9:00 PM daily",
-            bestTime: "Early morning",
-            priceRange: "₹20-1000",
-            bargaining: "Common practice",
-            tips: "Local market experience with fresh ingredients",
-            location: "Basavanagudi, South Bangalore",
-            highlights: ["Fresh produce", "Local experience", "Authentic"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "UB City Mall",
-            type: "Luxury Mall",
-            brands: ["International luxury", "Premium", "Designer"],
-            floors: 5,
-            facilities: ["Fine dining", "Rooftop", "Valet", "Events"],
-            hours: "11:00 AM - 11:00 PM",
-            priceRange: "₹1500-75000",
-            paymentMethods: ["Premium cards", "UPI", "Digital wallets"],
-            highlights: ["Luxury destination", "Premium brands", "Upscale dining"]
-          }
-        ]
+      {
+        name: "BigBasket",
+        category: "Groceries",
+        description: "Leading online grocery platform",
+        url: "https://bigbasket.com",
+        specialties: ["Groceries", "Fresh produce", "Gourmet food", "Personal care"],
+        deliveryTime: "Same day/Next day",
+        paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+        benefits: ["Fresh guarantee", "Subscription discounts", "Express delivery"]
       },
-      "Kolkata": {
-        traditionalMarkets: [
-          {
-            name: "New Market",
-            type: "Historic Market",
-            specialties: ["Clothes", "Shoes", "Gifts", "Traditional items", "Electronics"],
-            hours: "10:00 AM - 8:00 PM (Closed Sunday)",
-            bestTime: "Weekday mornings",
-            priceRange: "₹100-3000",
-            bargaining: "Expected but aggressive vendors",
-            tips: "Better experience with local guide, be prepared for persistent vendors",
-            location: "Lindsay Street, Central Kolkata",
-            highlights: ["Historic significance", "Bargain prices", "Variety"]
-          },
-          {
-            name: "College Street Book Market",
-            type: "Book Market",
-            specialties: ["Books", "Academic texts", "Rare books", "Manuscripts"],
-            hours: "10:00 AM - 8:00 PM daily",
-            bestTime: "Afternoon browsing",
-            priceRange: "₹20-5000",
-            bargaining: "Limited bargaining",
-            tips: "World's largest second-hand book market",
-            location: "College Street, Central Kolkata",
-            highlights: ["Largest book market", "Academic hub", "Rare finds"]
-          },
-          {
-            name: "Gariahat Market",
-            type: "Shopping Market",
-            specialties: ["Sarees", "Bengali handicrafts", "Traditional wear", "Accessories"],
-            hours: "10:00 AM - 9:00 PM daily",
-            bestTime: "Evening hours",
-            priceRange: "₹200-8000",
-            bargaining: "Expected",
-            tips: "Great for traditional Bengali clothing and handicrafts",
-            location: "Gariahat, South Kolkata",
-            highlights: ["Bengali culture", "Traditional items", "Local atmosphere"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Quest Mall",
-            type: "Modern Mall",
-            specialties: ["Fashion", "Electronics", "Food", "Entertainment"],
-            hours: "11:00 AM - 10:00 PM",
-            priceRange: "₹300-15000",
-            bargaining: "Fixed prices",
-            tips: "Modern shopping experience with good food options",
-            highlights: ["Central location", "Good brands", "Family-friendly"]
-          }
-        ]
+      {
+        name: "Grofers (Blinkit)",
+        category: "Quick Commerce",
+        description: "Ultra-fast grocery delivery in minutes",
+        url: "https://blinkit.com",
+        specialties: ["Groceries", "Fruits & vegetables", "Daily essentials", "Medicine"],
+        deliveryTime: "8-15 minutes",
+        paymentMethods: ["Cards", "UPI", "Wallets"],
+        benefits: ["Ultra-fast delivery", "Fresh products", "No minimum order"]
       },
-      "New Delhi": {
-        traditionalMarkets: [
-          {
-            name: "Chandni Chowk",
-            type: "Historic Bazaar",
-            specialties: ["Silver jewelry", "Traditional wear", "Electronics", "Spices", "Books"],
-            hours: "9:00 AM - 7:30 PM (Closed Sunday)",
-            bestTime: "Morning hours",
-            priceRange: "₹50-10000",
-            bargaining: "Essential and expected",
-            tips: "Founded in 1650 by Shah Jahan, explore sub-markets like Dariba Kalan",
-            location: "Old Delhi, Metro: Chandni Chowk",
-            highlights: ["Historic significance", "Cultural experience", "Authentic Delhi"]
-          },
-          {
-            name: "Karol Bagh Market",
-            type: "Shopping Hub",
-            specialties: ["Affordable jewelry", "Wedding wear", "Electronics", "Clothing"],
-            hours: "10:00 AM - 9:00 PM daily",
-            bestTime: "Evening hours",
-            priceRange: "₹100-5000",
-            bargaining: "Standard practice",
-            tips: "Mix of branded stores and street stalls, famous for chole bhature",
-            location: "Central Delhi, Metro: Karol Bagh",
-            highlights: ["Budget shopping", "Wedding preparations", "Electronics"]
-          },
-          {
-            name: "Khari Baoli",
-            type: "Spice Market",
-            specialties: ["Spices", "Dried fruits", "Nuts", "Herbs", "Condiments"],
-            hours: "9:00 AM - 7:00 PM (Closed Sunday)",
-            bestTime: "Morning for freshest items",
-            priceRange: "₹20-2000",
-            bargaining: "Expected",
-            tips: "Asia's largest spice market, part of Chandni Chowk area",
-            location: "Old Delhi, near Red Fort",
-            highlights: ["Aromatic experience", "Wholesale prices", "Authentic spices"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Khan Market",
-            type: "Upscale Market",
-            specialties: ["High-end brands", "Boutiques", "Books", "Fine dining"],
-            hours: "10:00 AM - 8:00 PM daily",
-            priceRange: "₹1000-50000",
-            bargaining: "Limited, premium pricing",
-            tips: "World's 20th most expensive retail location, expat favorite",
-            highlights: ["Premium brands", "International crowd", "Upscale dining"]
-          }
-        ]
+      {
+        name: "JioMart",
+        category: "Groceries & More",
+        description: "Reliance's digital marketplace",
+        url: "https://jiomart.com",
+        specialties: ["Groceries", "Electronics", "Fashion", "Pharmacy"],
+        deliveryTime: "Same day/Next day",
+        paymentMethods: ["JioMoney", "Cards", "UPI", "COD"],
+        benefits: ["No delivery charges", "WhatsApp ordering", "JioCoins rewards"]
       },
-      "Udaipur": {
-        traditionalMarkets: [
-          {
-            name: "Hathi Pol Bazaar",
-            type: "Art & Craft Market",
-            specialties: ["Pichwai paintings", "Phad art", "Bandhej fabrics", "Wooden handicrafts"],
-            hours: "10:00 AM - 9:00 PM daily",
-            bestTime: "Evening hours",
-            priceRange: "₹200-15000",
-            bargaining: "Negotiable prices",
-            tips: "Named after historic Elephant Gate, near City Palace",
-            location: "Near City Palace, Old City",
-            highlights: ["Traditional art", "Rajasthani culture", "Authentic crafts"]
-          },
-          {
-            name: "Bapu Bazaar",
-            type: "General Market",
-            specialties: ["Bandhani textiles", "Leather goods", "Electronics", "Khadi products"],
-            hours: "9:00 AM - 10:00 PM (Closed Sunday)",
-            bestTime: "Evening hours",
-            priceRange: "₹100-5000",
-            bargaining: "Expected",
-            tips: "Everything under one roof, great for budget shopping",
-            location: "Central Udaipur",
-            highlights: ["Budget-friendly", "Variety", "Local atmosphere"]
-          },
-          {
-            name: "Jagdish Temple Street",
-            type: "Silver Market",
-            specialties: ["Silver jewelry", "Antique pieces", "Metal artifacts", "Religious items"],
-            hours: "10:00 AM - 8:00 PM daily",
-            bestTime: "Afternoon browsing",
-            priceRange: "₹500-25000",
-            bargaining: "Standard practice",
-            tips: "Near famous Jagdish Temple, mix of traditional and contemporary",
-            location: "Near Jagdish Temple, Old City",
-            highlights: ["Silver crafts", "Temple vicinity", "Antique finds"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Celebration Mall",
-            type: "Modern Mall",
-            specialties: ["Fashion", "Electronics", "Food court", "Entertainment"],
-            hours: "11:00 AM - 10:00 PM",
-            priceRange: "₹500-8000",
-            bargaining: "Fixed prices",
-            tips: "Modern shopping with AC comfort",
-            highlights: ["Modern amenities", "Entertainment", "Family-friendly"]
-          }
-        ]
+      {
+        name: "Swiggy",
+        category: "Food Delivery",
+        description: "Food delivery and quick commerce platform",
+        url: "https://swiggy.com",
+        specialties: ["Restaurant delivery", "Groceries", "Medicine", "Alcohol"],
+        deliveryTime: "30-45 minutes",
+        paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+        benefits: ["Live tracking", "Multiple cuisines", "Super membership"]
       },
-      "Pune": {
-        traditionalMarkets: [
-          {
-            name: "Laxmi Road",
-            type: "Traditional Shopping Street",
-            specialties: ["Paithani sarees", "Silk sarees", "Traditional jewelry", "Footwear"],
-            hours: "10:00 AM - 11:00 PM (Closed Monday)",
-            bestTime: "Evening hours",
-            priceRange: "₹500-50000",
-            bargaining: "Expected",
-            tips: "4km stretch in heart of old city, famous for traditional Maharashtrian items",
-            location: "Old City Pune",
-            highlights: ["Traditional sarees", "Authentic culture", "Historic area"]
-          },
-          {
-            name: "Tulsi Baug",
-            type: "General Market",
-            specialties: ["Ready-made garments", "Household items", "Bargain shopping"],
-            hours: "9:00 AM - 11:00 PM daily",
-            bestTime: "Weekday evenings",
-            priceRange: "₹100-3000",
-            bargaining: "Standard practice",
-            tips: "Great for budget shopping and everyday items",
-            location: "Tulshibaug, Budhwar Peth",
-            highlights: ["Budget shopping", "Local items", "Convenient"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Phoenix MarketCity",
-            type: "Premium Mall",
-            specialties: ["Fashion", "Electronics", "Entertainment", "Fine dining"],
-            hours: "11:00 AM - 11:00 PM",
-            priceRange: "₹1000-25000",
-            bargaining: "Fixed premium pricing",
-            tips: "Modern mall with premium brands and entertainment",
-            highlights: ["Premium brands", "Entertainment complex", "Fine dining"]
-          }
-        ]
+      {
+        name: "Zomato",
+        category: "Food Delivery",
+        description: "Restaurant discovery and food delivery",
+        url: "https://zomato.com",
+        specialties: ["Food delivery", "Dining out", "Pro membership"],
+        deliveryTime: "30-45 minutes",
+        paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+        benefits: ["Restaurant reviews", "Gold membership", "Live tracking"]
       },
-      "McLeodganj": {
-        traditionalMarkets: [
-          {
-            name: "Kotwali Bazaar",
-            type: "Tibetan Market",
-            specialties: ["Tibetan rugs", "Woolen shawls", "Buddha statues", "Prayer flags"],
-            hours: "9:00 AM - 8:00 PM daily",
-            bestTime: "Afternoon browsing",
-            priceRange: "₹200-8000",
-            bargaining: "Expected and common",
-            tips: "Support Tibetan refugee communities with authentic handicrafts",
-            location: "Main McLeodganj area",
-            highlights: ["Tibetan culture", "Authentic handicrafts", "Cultural significance"]
-          },
-          {
-            name: "Temple Road Market",
-            type: "Spiritual Market",
-            specialties: ["Thangka paintings", "Singing bowls", "Traditional clothing", "Incense"],
-            hours: "10:00 AM - 7:00 PM daily",
-            bestTime: "Morning hours",
-            priceRange: "₹300-12000",
-            bargaining: "Moderate bargaining",
-            tips: "Near Dalai Lama Temple, authentic spiritual items",
-            location: "Temple Road, McLeodganj",
-            highlights: ["Spiritual items", "Buddhist culture", "Unique finds"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Mall Road Shops",
-            type: "Tourist Shopping",
-            specialties: ["Branded clothes", "Shoes", "Accessories", "Souvenirs"],
-            hours: "10:00 AM - 10:00 PM",
-            priceRange: "₹500-8000",
-            bargaining: "Limited bargaining",
-            tips: "Higher prices but quality assured",
-            highlights: ["Brand options", "Quality items", "Tourist convenience"]
-          }
-        ]
+      {
+        name: "1mg",
+        category: "Healthcare",
+        description: "Online pharmacy and health platform",
+        url: "https://1mg.com",
+        specialties: ["Medicines", "Health tests", "Consultations", "Wellness"],
+        deliveryTime: "Same day/Next day",
+        paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+        benefits: ["Medicine reminders", "Doctor consultations", "Health records"]
       },
-      "Alleppey": {
-        traditionalMarkets: [
-          {
-            name: "Mullakkal Street Market",
-            type: "Traditional Kerala Market",
-            specialties: ["Spices", "Coir products", "Handicrafts", "Traditional jewelry"],
-            hours: "9:00 AM - 9:00 PM daily",
-            bestTime: "Morning for fresh items",
-            priceRange: "₹50-5000",
-            bargaining: "Expected",
-            tips: "Oldest market in Alleppey, known for pure spices and traditional Kerala items",
-            location: "Mullakkal Street, Central Alleppey",
-            highlights: ["Authentic spices", "Coir crafts", "Local culture"]
-          },
-          {
-            name: "Canal Bazaar",
-            type: "Waterside Market",
-            specialties: ["Fresh vegetables", "Spices", "Handicrafts", "Local produce"],
-            hours: "6:00 AM - 8:00 PM daily",
-            bestTime: "Early morning",
-            priceRange: "₹20-1500",
-            bargaining: "Light bargaining",
-            tips: "Located along beautiful canals, fresh produce from backwaters",
-            location: "Along the canals, Alleppey",
-            highlights: ["Scenic location", "Fresh produce", "Backwater culture"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Alleppey Shopping Complex",
-            type: "Local Shopping Center",
-            specialties: ["Textiles", "Electronics", "Local goods", "Souvenirs"],
-            hours: "10:00 AM - 9:00 PM",
-            priceRange: "₹200-3000",
-            bargaining: "Limited",
-            tips: "Modern shopping in traditional town setting",
-            highlights: ["Modern facilities", "Local products", "Convenient"]
-          }
-        ]
+      {
+        name: "PharmEasy",
+        category: "Healthcare",
+        description: "Online medicine delivery platform",
+        url: "https://pharmeasy.in",
+        specialties: ["Medicines", "Healthcare products", "Lab tests"],
+        deliveryTime: "Same day/Next day",
+        paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+        benefits: ["Prescription management", "Medicine reminder", "Health wallet"]
       },
-      "Kasol": {
-        traditionalMarkets: [
-          {
-            name: "Kasol Flea Market",
-            type: "Hippie Market",
-            specialties: ["Himachali caps", "Dream catchers", "Hippie accessories", "Local handicrafts"],
-            hours: "10:00 AM - 8:00 PM daily",
-            bestTime: "Afternoon hours",
-            priceRange: "₹100-2000",
-            bargaining: "Must bargain, prices negotiable",
-            tips: "Vibrant market with authentic Himachali handicrafts and hippie culture",
-            location: "Main Kasol area, Parvati Valley",
-            highlights: ["Hippie culture", "Mountain crafts", "Unique atmosphere"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Local Shops",
-            type: "General Stores",
-            specialties: ["Trekking gear", "Basic supplies", "Snacks", "Essentials"],
-            hours: "8:00 AM - 10:00 PM",
-            priceRange: "₹50-1500",
-            bargaining: "Limited",
-            tips: "Stock up on trekking essentials and basic supplies",
-            highlights: ["Trekking supplies", "Mountain essentials", "Convenient"]
-          }
-        ]
+      {
+        name: "Ajio",
+        category: "Fashion & Lifestyle",
+        description: "Reliance's fashion platform with trendy collections",
+        url: "https://ajio.com",
+        specialties: ["Fashion", "Accessories", "Home decor", "Beauty"],
+        deliveryTime: "3-7 days",
+        paymentMethods: ["Cards", "UPI", "JioMoney", "EMI"],
+        benefits: ["Exclusive brands", "Seasonal sales", "Easy exchanges"]
       },
-      "Tosh": {
-        traditionalMarkets: [
-          {
-            name: "Tosh Village Market",
-            type: "Local Mountain Market",
-            specialties: ["Himalayan herbs", "Handmade woolens", "Local produce", "Trekking essentials"],
-            hours: "8:00 AM - 6:00 PM daily",
-            bestTime: "Morning for fresh items",
-            priceRange: "₹50-1500",
-            bargaining: "Light bargaining acceptable",
-            tips: "Limited options, stock up on essentials in Barshaini before trek",
-            location: "Tosh Village Center",
-            highlights: ["Mountain herbs", "Local crafts", "Basic necessities"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Village General Store",
-            type: "Basic Store",
-            specialties: ["Packaged foods", "Basic medicines", "Batteries", "Phone cards"],
-            hours: "7:00 AM - 8:00 PM",
-            priceRange: "₹20-800",
-            bargaining: "Fixed prices mostly",
-            tips: "Limited stock, expensive due to transport costs",
-            highlights: ["Emergency supplies", "Remote location", "Essential items"]
-          }
-        ]
+      {
+        name: "Meesho",
+        category: "Social Commerce",
+        description: "Social selling platform with affordable products",
+        url: "https://meesho.com",
+        specialties: ["Fashion", "Home & Kitchen", "Electronics", "Beauty"],
+        deliveryTime: "3-7 days",
+        paymentMethods: ["UPI", "Cards", "Cash on Delivery"],
+        benefits: ["No shipping charges", "Supplier prices", "Return policy"]
       },
-      "Rishikesh": {
-        traditionalMarkets: [
-          {
-            name: "Laxman Jhula Market",
-            type: "Spiritual Market",
-            specialties: ["Yoga accessories", "Spiritual books", "Ayurvedic medicines", "Rudraksha beads"],
-            hours: "8:00 AM - 10:00 PM daily",
-            bestTime: "Evening after yoga sessions",
-            priceRange: "₹100-5000",
-            bargaining: "Expected for most items",
-            tips: "Great for authentic yoga and spiritual items",
-            location: "Near Laxman Jhula Bridge",
-            highlights: ["Spiritual items", "Yoga gear", "International crowd"]
-          },
-          {
-            name: "Tapovan Market",
-            type: "Local Market",
-            specialties: ["Organic vegetables", "Herbal teas", "Natural cosmetics", "Hemp products"],
-            hours: "7:00 AM - 9:00 PM daily",
-            bestTime: "Morning for fresh produce",
-            priceRange: "₹50-2000",
-            bargaining: "Light bargaining",
-            tips: "Great for organic and natural products",
-            location: "Tapovan Area",
-            highlights: ["Organic produce", "Natural products", "Health conscious"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "RISHIKESH MALL",
-            type: "Modern Mall",
-            specialties: ["Fashion", "Electronics", "Sports equipment", "Food court"],
-            hours: "10:00 AM - 10:00 PM",
-            priceRange: "₹500-8000",
-            bargaining: "Fixed prices",
-            tips: "Modern shopping with AC comfort",
-            highlights: ["Air conditioning", "Brand stores", "Family-friendly"]
-          }
-        ]
+      {
+        name: "Snapdeal",
+        category: "Value Commerce",
+        description: "Value-focused platform with competitive prices",
+        url: "https://snapdeal.com",
+        specialties: ["Electronics", "Fashion", "Home", "Sports", "Automotive"],
+        deliveryTime: "2-7 days",
+        paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+        benefits: ["Daily deals", "Brand warranty", "Easy returns"]
       },
-      "Pondicherry": {
-        traditionalMarkets: [
-          {
-            name: "French Quarter Market",
-            type: "Heritage Market",
-            specialties: ["French pastries", "Colonial antiques", "Handmade soaps", "Auroville crafts"],
-            hours: "9:00 AM - 8:00 PM (Closed Monday)",
-            bestTime: "Evening strolls",
-            priceRange: "₹200-8000",
-            bargaining: "Limited bargaining",
-            tips: "Heritage items and French-inspired products",
-            location: "White Town, French Quarter",
-            highlights: ["Colonial heritage", "French influence", "Unique finds"]
-          },
-          {
-            name: "Mission Street Market",
-            type: "Local Market",
-            specialties: ["Tamil books", "South Indian textiles", "Traditional jewelry", "Local spices"],
-            hours: "8:00 AM - 9:00 PM daily",
-            bestTime: "Morning for fresh items",
-            priceRange: "₹100-4000",
-            bargaining: "Expected",
-            tips: "Authentic local Tamil culture and products",
-            location: "Mission Street, Black Town",
-            highlights: ["Local culture", "Traditional items", "Authentic experience"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Coromandel Plaza",
-            type: "Shopping Complex",
-            specialties: ["Fashion", "Electronics", "Books", "Cafes"],
-            hours: "10:00 AM - 10:00 PM",
-            priceRange: "₹500-10000",
-            bargaining: "Fixed prices",
-            tips: "Modern shopping with good cafe culture",
-            highlights: ["Modern facilities", "Cafe culture", "Air conditioned"]
-          }
-        ]
+      {
+        name: "Croma",
+        category: "Electronics",
+        description: "Electronics retail chain with online presence",
+        url: "https://croma.com",
+        specialties: ["Electronics", "Appliances", "Mobile phones", "Gaming"],
+        deliveryTime: "1-3 days",
+        paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+        benefits: ["Extended warranty", "Installation service", "Tech support"]
       },
-      "Kochi": {
-        traditionalMarkets: [
-          {
-            name: "Fort Kochi Spice Market",
-            type: "Traditional Spice Market",
-            specialties: ["Cardamom", "Black pepper", "Cinnamon", "Coconut products", "Ayurvedic oils"],
-            hours: "8:00 AM - 7:00 PM daily",
-            bestTime: "Morning for fresh spices",
-            priceRange: "₹100-3000",
-            bargaining: "Expected",
-            tips: "Historic spice trading center, authentic Kerala spices",
-            location: "Fort Kochi",
-            highlights: ["Historic spice trade", "Authentic quality", "Export quality"]
-          },
-          {
-            name: "Marine Drive Shopping",
-            type: "Waterfront Market",
-            specialties: ["Handicrafts", "Souvenirs", "Local art", "Kerala sarees"],
-            hours: "10:00 AM - 9:00 PM daily",
-            bestTime: "Evening with sunset views",
-            priceRange: "₹200-5000",
-            bargaining: "Moderate bargaining",
-            tips: "Beautiful waterfront shopping with backwater views",
-            location: "Marine Drive",
-            highlights: ["Waterfront views", "Local art", "Scenic shopping"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Lulu Mall",
-            type: "Super Mall",
-            specialties: ["International brands", "Electronics", "Hypermarket", "Entertainment"],
-            hours: "10:00 AM - 11:00 PM",
-            priceRange: "₹500-25000",
-            bargaining: "Fixed prices",
-            tips: "Largest mall in India, complete shopping destination",
-            highlights: ["Massive selection", "International brands", "Entertainment complex"]
-          }
-        ]
+      {
+        name: "Lenskart",
+        category: "Eyewear",
+        description: "Online eyewear retailer with home eye checkup",
+        url: "https://lenskart.com",
+        specialties: ["Eyeglasses", "Sunglasses", "Contact lenses", "Eye checkup"],
+        deliveryTime: "3-7 days",
+        paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+        benefits: ["Home eye test", "3D try-on", "Free delivery"]
       },
-      "Wayanad": {
-        traditionalMarkets: [
-          {
-            name: "Kalpetta Market",
-            type: "Hill Station Market",
-            specialties: ["Tea", "Coffee", "Spices", "Honey", "Bamboo crafts"],
-            hours: "7:00 AM - 8:00 PM daily",
-            bestTime: "Morning for fresh produce",
-            priceRange: "₹100-2000",
-            bargaining: "Light bargaining",
-            tips: "Direct from plantations, organic products available",
-            location: "Kalpetta Town",
-            highlights: ["Plantation products", "Organic items", "Mountain freshness"]
-          },
-          {
-            name: "Sultan Bathery Market",
-            type: "Spice Market",
-            specialties: ["Pepper", "Cardamom", "Vanilla", "Ginger", "Turmeric"],
-            hours: "8:00 AM - 7:00 PM daily",
-            bestTime: "Morning hours",
-            priceRange: "₹200-4000",
-            bargaining: "Expected",
-            tips: "Major spice trading center, wholesale prices available",
-            location: "Sultan Bathery",
-            highlights: ["Wholesale spices", "Trading center", "Plantation direct"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Kalpetta Shopping Complex",
-            type: "Town Center",
-            specialties: ["Basic goods", "Medicines", "Electronics", "Clothing"],
-            hours: "9:00 AM - 9:00 PM",
-            priceRange: "₹100-3000",
-            bargaining: "Limited",
-            tips: "Basic shopping needs, limited modern options",
-            highlights: ["Essential items", "Hill station shopping", "Local needs"]
-          }
-        ]
+      {
+        name: "FirstCry",
+        category: "Kids & Baby",
+        description: "Baby and kids products specialist",
+        url: "https://firstcry.com",
+        specialties: ["Baby products", "Kids clothing", "Toys", "Maternity"],
+        deliveryTime: "2-7 days",
+        paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+        benefits: ["Expert advice", "Easy returns", "Loyalty rewards"]
       },
-      "Dharamkot": {
-        traditionalMarkets: [
-          {
-            name: "Dharamkot Village Market",
-            type: "Tibetan Market",
-            specialties: ["Tibetan handicrafts", "Prayer flags", "Singing bowls", "Woolen clothes"],
-            hours: "9:00 AM - 8:00 PM daily",
-            bestTime: "Afternoon browsing",
-            priceRange: "₹200-8000",
-            bargaining: "Expected",
-            tips: "Support Tibetan refugee artisans, authentic Buddhist items",
-            location: "Upper Dharamkot",
-            highlights: ["Tibetan culture", "Refugee support", "Authentic crafts"]
-          },
-          {
-            name: "Bhagsu Market",
-            type: "Traveler Market",
-            specialties: ["Hippie clothes", "Hash pipes", "Dreamcatchers", "Israeli food items"],
-            hours: "10:00 AM - 10:00 PM daily",
-            bestTime: "Evening hours",
-            priceRange: "₹100-3000",
-            bargaining: "Standard practice",
-            tips: "Traveler-focused items, international community vibe",
-            location: "Bhagsu Village (15min walk)",
-            highlights: ["Traveler culture", "International vibe", "Hippie items"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "McLeod Ganj Mall Road",
-            type: "Tourist Shopping",
-            specialties: ["Brand clothes", "Electronics", "Books", "Souvenirs"],
-            hours: "9:00 AM - 9:00 PM",
-            priceRange: "₹300-5000",
-            bargaining: "Limited",
-            tips: "More expensive but reliable quality",
-            highlights: ["Brand options", "Tourist area", "Reliable quality"]
-          }
-        ]
+      {
+        name: "Tata CLiQ",
+        category: "Multi-category",
+        description: "Tata Group's omnichannel marketplace",
+        url: "https://tatacliq.com",
+        specialties: ["Electronics", "Fashion", "Home", "Luxury brands"],
+        deliveryTime: "1-7 days",
+        paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+        benefits: ["Authentic products", "NeuCoins rewards", "Tata brand trust"]
       },
-      "Darjeeling": {
-        traditionalMarkets: [
-          {
-            name: "Chowk Bazaar",
-            type: "Hill Station Market",
-            specialties: ["Darjeeling tea", "Woolen clothes", "Tibetan handicrafts", "Local honey"],
-            hours: "8:00 AM - 8:00 PM daily",
-            bestTime: "Morning for tea shopping",
-            priceRange: "₹200-5000",
-            bargaining: "Expected",
-            tips: "Authentic Darjeeling tea direct from gardens",
-            location: "Near Mall Road",
-            highlights: ["Famous tea", "Mountain crafts", "Authentic quality"]
-          },
-          {
-            name: "Batasia Loop Market",
-            type: "Tourist Market",
-            specialties: ["Tea", "Local crafts", "Warm clothes", "Souvenirs"],
-            hours: "9:00 AM - 6:00 PM daily",
-            bestTime: "Afternoon visits",
-            priceRange: "₹100-3000",
-            bargaining: "Moderate bargaining",
-            tips: "Near famous Batasia Loop, touristy but convenient",
-            location: "Batasia Loop area",
-            highlights: ["Tourist convenient", "Good variety", "Scenic location"]
-          }
-        ],
-        modernShopping: [
-          {
-            name: "Mall Road Shopping",
-            type: "Colonial Shopping Street",
-            specialties: ["Books", "Branded clothes", "Electronics", "Bakeries"],
-            hours: "9:00 AM - 8:00 PM",
-            priceRange: "₹300-8000",
-            bargaining: "Limited",
-            tips: "Colonial-era shopping street with cafes and bookstores",
-            highlights: ["Colonial heritage", "Book stores", "Cafe culture"]
-          }
-        ]
+      {
+        name: "BookMyShow",
+        category: "Entertainment",
+        description: "Movie tickets and event bookings",
+        url: "https://bookmyshow.com",
+        specialties: ["Movie tickets", "Events", "Plays", "Sports"],
+        deliveryTime: "Instant booking",
+        paymentMethods: ["Cards", "UPI", "Wallets", "Net banking"],
+        benefits: ["Advance booking", "Seat selection", "Instant confirmation"]
+      },
+      {
+        name: "Urban Ladder",
+        category: "Furniture",
+        description: "Premium furniture and home decor",
+        url: "https://urbanladder.com",
+        specialties: ["Furniture", "Home decor", "Furnishing", "Lighting"],
+        deliveryTime: "7-21 days",
+        paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+        benefits: ["Design consultation", "Installation service", "Warranty"]
       }
-    };
+    ];
 
-    return (marketsByCity as any)[cityName] || marketsByCity["Goa"];
+    // City categorization for platform availability
+    const majorMetros = ['mumbai', 'delhi', 'new-delhi', 'bangalore', 'kolkata', 'chennai', 'pune', 'hyderabad'];
+    const tier2Cities = ['goa', 'kochi', 'udaipur', 'pondicherry', 'dehradun', 'mussoorie', 'rishikesh'];
+    const hillStations = ['mussoorie', 'dehradun', 'dharamkot', 'kasol', 'bir', 'darjeeling', 'tosh', 'wayanad'];
+    const coastalCities = ['goa', 'mumbai', 'kochi', 'pondicherry', 'varkala', 'alleppey'];
+    const remoteCities = ['ziro', 'tosh', 'dharamkot', 'kasol'];
+    
+    const cityLower = cityName.toLowerCase().replace(/\s+/g, '-');
+
+    // Filter platforms based on city type and infrastructure
+    let availablePlatforms = allPlatforms.filter(platform => {
+      // All platforms available in major metros
+      if (majorMetros.includes(cityLower)) {
+        return true;
+      }
+      
+      // Most platforms available in tier-2 cities, except ultra-fast delivery
+      if (tier2Cities.includes(cityLower)) {
+        if (platform.name === "Grofers (Blinkit)") {
+          return false; // Ultra-fast delivery not available in smaller cities
+        }
+        return true;
+      }
+      
+      // Limited platforms in hill stations and remote areas
+      if (hillStations.includes(cityLower) || remoteCities.includes(cityLower)) {
+        const limitedPlatforms = [
+          "Amazon India", "Flipkart", "BigBasket", "1mg", "PharmEasy", 
+          "JioMart", "Swiggy", "Zomato"
+        ];
+        return limitedPlatforms.includes(platform.name);
+      }
+      
+      // Default for other cities - most platforms available
+      return platform.name !== "Grofers (Blinkit)"; // Ultra-fast delivery limited
+    });
+
+    // Adjust delivery times based on city location
+    availablePlatforms = availablePlatforms.map(platform => {
+      let adjustedDeliveryTime = platform.deliveryTime;
+      let citySpecificNote = "";
+
+      if (majorMetros.includes(cityLower)) {
+        // Keep original fast delivery times
+        adjustedDeliveryTime = platform.deliveryTime;
+      } else if (tier2Cities.includes(cityLower)) {
+        if (platform.deliveryTime.includes("Same day")) {
+          adjustedDeliveryTime = "Next day delivery";
+        } else if (platform.deliveryTime.includes("8-15 minutes")) {
+          adjustedDeliveryTime = "2-4 hours";
+        }
+      } else if (hillStations.includes(cityLower) || remoteCities.includes(cityLower)) {
+        if (platform.deliveryTime.includes("Same day") || platform.deliveryTime.includes("Next day")) {
+          adjustedDeliveryTime = "2-5 days";
+        } else if (platform.deliveryTime.includes("30-45 minutes")) {
+          adjustedDeliveryTime = "1-2 hours";
+        } else if (platform.deliveryTime.includes("minutes")) {
+          adjustedDeliveryTime = "Same day";
+        }
+      }
+
+      // Add city-specific notes
+      if (platform.name === "BigBasket" && coastalCities.includes(cityLower)) {
+        citySpecificNote = "Fresh seafood and coconut products available";
+      }
+      if (platform.name === "Amazon India" && hillStations.includes(cityLower)) {
+        citySpecificNote = "Mountain delivery available but weather dependent";
+      }
+      if (platform.name === "Swiggy" && hillStations.includes(cityLower)) {
+        citySpecificNote = "Limited restaurant options, focus on local cuisine";
+      }
+
+      return {
+        ...platform,
+        deliveryTime: adjustedDeliveryTime,
+        citySpecificNote
+      };
+    });
+
+    return availablePlatforms;
   };
 
-  const cityMarkets = getCitySpecificMarkets(city.name);
-  const traditionalMarkets = cityMarkets.traditionalMarkets || [];
-  const modernShopping = cityMarkets.modernShopping || [];
+  // Get city-specific platforms
+  const onlineShoppingPortals = getCitySpecificPlatforms(city.name);
+
+  const getCityAvailabilityNote = (cityName: string) => {
+    const cityLower = cityName.toLowerCase().replace(/\s+/g, '-');
+    const majorMetros = ['mumbai', 'delhi', 'new-delhi', 'bangalore', 'kolkata', 'chennai', 'pune', 'hyderabad'];
+    const tier2Cities = ['goa', 'kochi', 'udaipur', 'pondicherry', 'dehradun', 'mussoorie', 'rishikesh'];
+    const hillStations = ['mussoorie', 'dehradun', 'dharamkot', 'kasol', 'bir', 'darjeeling', 'tosh', 'wayanad'];
+    const remoteCities = ['ziro', 'tosh', 'dharamkot', 'kasol'];
+
+    if (majorMetros.includes(cityLower)) {
+      return "All major platforms available with fastest delivery options including 10-minute delivery services.";
+    } else if (tier2Cities.includes(cityLower)) {
+      return "Most platforms available with standard delivery. Ultra-fast delivery services may be limited.";
+    } else if (hillStations.includes(cityLower) || remoteCities.includes(cityLower)) {
+      return "Essential platforms available. Delivery times may be extended due to terrain and weather conditions.";
+    }
+    return "Most platforms available with standard delivery times for this region.";
+  };
 
   return (
-    <Card className="w-full">
+    <Card className="bg-white rounded-2xl shadow-lg">
       <CardHeader>
-        <CardTitle className="flex items-center text-travel-blue">
-          <ShoppingBag className="h-6 w-6 mr-2" />
+        <CardTitle className="font-serif text-3xl font-bold text-travel-blue flex items-center">
+          <ShoppingBag className="mr-3 h-8 w-8 text-vintage-gold" />
           Shopping & Markets in {city.name}
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
-        {/* Traditional Markets */}
-        {traditionalMarkets.length > 0 && (
-          <div>
-            <h3 className="text-lg font-semibold text-travel-blue mb-4">Traditional Markets</h3>
-            <div className="grid gap-4">
-              {traditionalMarkets.map((market: any, index: any) => (
-                <div key={index} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h4 className="font-semibold text-lg text-dark-navy">{market.name}</h4>
-                      <div className="flex items-center text-muted-navy text-sm mt-1">
-                        <MapPin className="h-4 w-4 mr-1" />
-                        <span>{market.type}</span>
-                      </div>
-                    </div>
-                    <Badge variant="secondary" className="text-xs">{market.priceRange}</Badge>
-                  </div>
+      <CardContent className="space-y-8">
 
-                  <div className="grid md:grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <h5 className="font-semibold text-travel-blue mb-2">Specialties</h5>
-                      <div className="flex flex-wrap gap-1">
-                        {market.specialties.map((specialty: any, idx: any) => (
-                          <Badge key={idx} variant="outline" className="text-xs">{specialty}</Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold text-travel-blue mb-2">Timings</h5>
-                      <div className="flex items-center text-sm">
-                        <Clock className="h-4 w-4 mr-1 text-muted-navy" />
-                        <span>{market.hours}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {market.tips && (
-                    <div className="bg-vintage-gold/10 rounded-lg p-3 border border-vintage-gold/20">
-                      <div className="flex items-center mb-1">
-                        <Star className="h-4 w-4 text-vintage-gold mr-1" />
-                        <span className="font-semibold text-vintage-gold">Local Tip</span>
-                      </div>
-                      <p className="text-sm text-muted-navy">{market.tips}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+        {/* City-Specific Online Shopping Platforms */}
+        <div>
+          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
+            <Truck className="mr-2 h-5 w-5" />
+            Online Shopping Platforms Available in {city.name}
+          </h3>
+          <div className="mb-4 p-3 bg-travel-blue/5 rounded-lg border border-travel-blue/20">
+            <p className="text-sm text-muted-navy">
+              <strong>{onlineShoppingPortals.length} platforms available</strong> with delivery to {city.name}. 
+              Delivery times may vary based on location and weather conditions.
+            </p>
           </div>
-        )}
-
-        {/* Modern Shopping */}
-        {modernShopping.length > 0 && (
-          <div>
-            <h3 className="text-lg font-semibold text-travel-blue mb-4">Modern Shopping</h3>
-            <div className="grid gap-4">
-              {modernShopping.map((mall: any, index: any) => (
-                <div key={index} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h4 className="font-semibold text-lg text-dark-navy">{mall.name}</h4>
-                      <div className="flex items-center text-muted-navy text-sm mt-1">
-                        <MapPin className="h-4 w-4 mr-1" />
-                        <span>{mall.type}</span>
-                      </div>
-                    </div>
-                    <Badge variant="secondary" className="text-xs">{mall.priceRange}</Badge>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {onlineShoppingPortals.map((platform, index) => (
+              <div key={index} className="bg-white rounded-lg p-4 border border-travel-blue/20 hover:shadow-md transition-all duration-200 hover:border-vintage-gold/50">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <h5 className="font-semibold text-travel-blue text-sm">{platform.name}</h5>
+                    <span className="text-xs text-vintage-gold bg-vintage-gold/10 rounded-full px-2 py-1">
+                      {platform.category}
+                    </span>
                   </div>
-
-                  <div className="grid md:grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <h5 className="font-semibold text-travel-blue mb-2">Features</h5>
-                      <div className="flex flex-wrap gap-1">
-                        {(mall.specialties || mall.brands || []).map((feature: any, idx: any) => (
-                          <Badge key={idx} variant="outline" className="text-xs">{feature}</Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold text-travel-blue mb-2">Timings</h5>
-                      <div className="flex items-center text-sm">
-                        <Clock className="h-4 w-4 mr-1 text-muted-navy" />
-                        <span>{mall.hours}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {mall.facilities && (
-                    <div className="mb-4">
-                      <h5 className="font-semibold text-travel-blue mb-2">Facilities</h5>
-                      <div className="flex flex-wrap gap-1">
-                        {mall.facilities.map((facility: any, idx: any) => (
-                          <Badge key={idx} variant="outline" className="text-xs">{facility}</Badge>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {mall.tips && (
-                    <div className="bg-white rounded-lg p-3 border">
-                      <div className="flex items-center mb-1">
-                        <ShoppingBag className="h-4 w-4 text-travel-blue mr-1" />
-                        <span className="font-semibold text-travel-blue">Shopping Tip</span>
-                      </div>
-                      <p className="text-sm text-muted-navy">{mall.tips}</p>
-                    </div>
-                  )}
+                  <a 
+                    href={platform.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-vintage-gold hover:text-vintage-gold/80 text-xs flex items-center"
+                  >
+                    <ExternalLink className="h-3 w-3 mr-1" />
+                    Visit
+                  </a>
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
+                <p className="text-xs text-muted-navy mb-3 line-clamp-2">{platform.description}</p>
+                
+                {/* Specialties */}
+                <div className="mb-2">
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {platform.specialties.slice(0, 3).map((specialty, i) => (
+                      <span key={i} className="text-xs bg-sage-green/10 text-sage-green rounded px-2 py-1">
+                        {specialty}
+                      </span>
+                    ))}
+                  </div>
+                </div>
 
-        {/* Shopping Tips for the City */}
-        <div className="bg-gradient-to-r from-vintage-gold/10 to-travel-blue/10 rounded-lg p-6">
-          <h3 className="font-semibold text-travel-blue mb-4">Shopping Guide for {city.name}</h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <h4 className="font-semibold text-travel-blue mb-2">Bargaining Tips</h4>
-              <ul className="space-y-1 text-sm text-muted-navy">
-                <li>• Start at 40-50% of the quoted price</li>
-                <li>• Be polite but persistent</li>
-                <li>• Walk away if price doesn't match your budget</li>
-                <li>• Cash payments often get better deals</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-travel-blue mb-2">Best Shopping Times</h4>
-              <ul className="space-y-1 text-sm text-muted-navy">
-                <li>• Morning: Fresh items and better selection</li>
-                <li>• Weekdays: Less crowded, better service</li>
-                <li>• Evening: Cooler weather for street shopping</li>
-                <li>• End of season: Best discounts and sales</li>
-              </ul>
-            </div>
+                {/* Delivery Info */}
+                <div className="flex items-center text-xs text-muted-navy mb-2">
+                  <Clock className="h-3 w-3 mr-1" />
+                  <span>{platform.deliveryTime}</span>
+                </div>
+
+                {/* City-specific note */}
+                {(platform as any).citySpecificNote && (
+                  <div className="text-xs text-travel-blue bg-travel-blue/10 rounded px-2 py-1 mb-2">
+                    📍 {(platform as any).citySpecificNote}
+                  </div>
+                )}
+
+                {/* Benefits */}
+                <div className="text-xs text-sage-green bg-sage-green/10 rounded px-2 py-1">
+                  💡 {platform.benefits.slice(0, 2).join(", ")}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {/* City-specific platform availability note */}
+          <div className="mt-4 p-3 bg-vintage-gold/5 rounded-lg border-l-4 border-vintage-gold">
+            <p className="text-sm text-muted-navy">
+              <strong>Platform Availability:</strong> {getCityAvailabilityNote(city.name)}
+            </p>
+          </div>
+        </div>
+
+        {/* Shopping Tips */}
+        <div className="bg-vintage-gold/5 rounded-lg p-4 border-l-4 border-vintage-gold">
+          <h4 className="font-semibold text-vintage-gold mb-2 flex items-center">
+            <Star className="mr-2 h-4 w-4" />
+            Smart Shopping Tips for {city.name}
+          </h4>
+          <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-navy">
+            <ul className="space-y-1">
+              <li>• Compare prices across multiple platforms before buying</li>
+              <li>• Use digital payments for cashback and exclusive offers</li>
+              <li>• Check for platform-specific membership benefits</li>
+              <li>• Track delivery status and keep contact numbers handy</li>
+            </ul>
+            <ul className="space-y-1">
+              <li>• Subscribe to newsletters for early access to sales</li>
+              <li>• Use wishlist features to track price drops</li>
+              <li>• Read reviews and ratings before purchasing</li>
+              <li>• Keep alternative delivery addresses ready</li>
+            </ul>
           </div>
         </div>
       </CardContent>
