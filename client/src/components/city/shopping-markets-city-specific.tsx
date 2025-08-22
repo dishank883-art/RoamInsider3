@@ -326,101 +326,6 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
       </CardHeader>
       <CardContent className="space-y-8">
 
-        {/* City-Specific Online Shopping Platforms */}
-        <div>
-          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
-            <Truck className="mr-2 h-5 w-5" />
-            Online Shopping Platforms Available in {city.name}
-          </h3>
-          <div className="mb-4 p-3 bg-travel-blue/5 rounded-lg border border-travel-blue/20">
-            <p className="text-sm text-muted-navy">
-              <strong>{onlineShoppingPortals.length} platforms available</strong> with delivery to {city.name}. 
-              Delivery times may vary based on location and weather conditions.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {onlineShoppingPortals.map((platform, index) => (
-              <div key={index} className="bg-white rounded-lg p-4 border border-travel-blue/20 hover:shadow-md transition-all duration-200 hover:border-vintage-gold/50">
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <h5 className="font-semibold text-travel-blue text-sm">{platform.name}</h5>
-                    <span className="text-xs text-vintage-gold bg-vintage-gold/10 rounded-full px-2 py-1">
-                      {platform.category}
-                    </span>
-                  </div>
-                  <a 
-                    href={platform.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-vintage-gold hover:text-vintage-gold/80 text-xs flex items-center"
-                  >
-                    <ExternalLink className="h-3 w-3 mr-1" />
-                    Visit
-                  </a>
-                </div>
-                <p className="text-xs text-muted-navy mb-3 line-clamp-2">{platform.description}</p>
-                
-                {/* Specialties */}
-                <div className="mb-2">
-                  <div className="flex flex-wrap gap-1 mb-2">
-                    {platform.specialties.slice(0, 3).map((specialty, i) => (
-                      <span key={i} className="text-xs bg-sage-green/10 text-sage-green rounded px-2 py-1">
-                        {specialty}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Delivery Info */}
-                <div className="flex items-center text-xs text-muted-navy mb-2">
-                  <Clock className="h-3 w-3 mr-1" />
-                  <span>{platform.deliveryTime}</span>
-                </div>
-
-                {/* City-specific note */}
-                {(platform as any).citySpecificNote && (
-                  <div className="text-xs text-travel-blue bg-travel-blue/10 rounded px-2 py-1 mb-2">
-                    📍 {(platform as any).citySpecificNote}
-                  </div>
-                )}
-
-                {/* Benefits */}
-                <div className="text-xs text-sage-green bg-sage-green/10 rounded px-2 py-1">
-                  💡 {platform.benefits.slice(0, 2).join(", ")}
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          {/* City-specific platform availability note */}
-          <div className="mt-4 p-3 bg-vintage-gold/5 rounded-lg border-l-4 border-vintage-gold">
-            <p className="text-sm text-muted-navy">
-              <strong>Platform Availability:</strong> {getCityAvailabilityNote(city.name)}
-            </p>
-          </div>
-        </div>
-
-        {/* Shopping Tips */}
-        <div className="bg-vintage-gold/5 rounded-lg p-4 border-l-4 border-vintage-gold">
-          <h4 className="font-semibold text-vintage-gold mb-2 flex items-center">
-            <Star className="mr-2 h-4 w-4" />
-            Smart Shopping Tips for {city.name}
-          </h4>
-          <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-navy">
-            <ul className="space-y-1">
-              <li>• Compare prices across multiple platforms before buying</li>
-              <li>• Use digital payments for cashback and exclusive offers</li>
-              <li>• Check for platform-specific membership benefits</li>
-              <li>• Track delivery status and keep contact numbers handy</li>
-            </ul>
-            <ul className="space-y-1">
-              <li>• Subscribe to newsletters for early access to sales</li>
-              <li>• Use wishlist features to track price drops</li>
-              <li>• Read reviews and ratings before purchasing</li>
-              <li>• Keep alternative delivery addresses ready</li>
-            </ul>
-          </div>
-        </div>
         {/* Traditional Markets & Local Shopping */}
         <div>
           <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
@@ -551,6 +456,102 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* City-Specific Online Shopping Platforms */}
+        <div>
+          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
+            <Truck className="mr-2 h-5 w-5" />
+            Online Shopping Platforms Available in {city.name}
+          </h3>
+          <div className="mb-4 p-3 bg-travel-blue/5 rounded-lg border border-travel-blue/20">
+            <p className="text-sm text-muted-navy">
+              <strong>{onlineShoppingPortals.length} platforms available</strong> with delivery to {city.name}. 
+              Delivery times may vary based on location and weather conditions.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {onlineShoppingPortals.map((platform, index) => (
+              <div key={index} className="bg-white rounded-lg p-4 border border-travel-blue/20 hover:shadow-md transition-all duration-200 hover:border-vintage-gold/50">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <h5 className="font-semibold text-travel-blue text-sm">{platform.name}</h5>
+                    <span className="text-xs text-vintage-gold bg-vintage-gold/10 rounded-full px-2 py-1">
+                      {platform.category}
+                    </span>
+                  </div>
+                  <a 
+                    href={platform.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-vintage-gold hover:text-vintage-gold/80 text-xs flex items-center"
+                  >
+                    <ExternalLink className="h-3 w-3 mr-1" />
+                    Visit
+                  </a>
+                </div>
+                <p className="text-xs text-muted-navy mb-3 line-clamp-2">{platform.description}</p>
+                
+                {/* Specialties */}
+                <div className="mb-2">
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {platform.specialties.slice(0, 3).map((specialty, i) => (
+                      <span key={i} className="text-xs bg-sage-green/10 text-sage-green rounded px-2 py-1">
+                        {specialty}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Delivery Info */}
+                <div className="flex items-center text-xs text-muted-navy mb-2">
+                  <Clock className="h-3 w-3 mr-1" />
+                  <span>{platform.deliveryTime}</span>
+                </div>
+
+                {/* City-specific note */}
+                {(platform as any).citySpecificNote && (
+                  <div className="text-xs text-travel-blue bg-travel-blue/10 rounded px-2 py-1 mb-2">
+                    📍 {(platform as any).citySpecificNote}
+                  </div>
+                )}
+
+                {/* Benefits */}
+                <div className="text-xs text-sage-green bg-sage-green/10 rounded px-2 py-1">
+                  💡 {platform.benefits.slice(0, 2).join(", ")}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {/* City-specific platform availability note */}
+          <div className="mt-4 p-3 bg-vintage-gold/5 rounded-lg border-l-4 border-vintage-gold">
+            <p className="text-sm text-muted-navy">
+              <strong>Platform Availability:</strong> {getCityAvailabilityNote(city.name)}
+            </p>
+          </div>
+        </div>
+
+        {/* Shopping Tips */}
+        <div className="bg-vintage-gold/5 rounded-lg p-4 border-l-4 border-vintage-gold">
+          <h4 className="font-semibold text-vintage-gold mb-2 flex items-center">
+            <Star className="mr-2 h-4 w-4" />
+            Smart Shopping Tips for {city.name}
+          </h4>
+          <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-navy">
+            <ul className="space-y-1">
+              <li>• Compare prices across multiple platforms before buying</li>
+              <li>• Use digital payments for cashback and exclusive offers</li>
+              <li>• Check for platform-specific membership benefits</li>
+              <li>• Track delivery status and keep contact numbers handy</li>
+            </ul>
+            <ul className="space-y-1">
+              <li>• Subscribe to newsletters for early access to sales</li>
+              <li>• Use wishlist features to track price drops</li>
+              <li>• Read reviews and ratings before purchasing</li>
+              <li>• Keep alternative delivery addresses ready</li>
+            </ul>
           </div>
         </div>
 
