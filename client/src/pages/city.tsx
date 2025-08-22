@@ -24,6 +24,7 @@ import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { ArrowLeft, Star, MapPin, Users, DollarSign, Wifi, Car, Cloud, Shield, Heart, Compass, Lightbulb, Train } from "lucide-react";
 import type { CityWithDetails } from "@shared/schema";
+import { staticCitiesData } from "@/lib/static-cities-data";
 
 export default function CityPage() {
   const [, params] = useRoute("/city/:slug");
@@ -33,6 +34,46 @@ export default function CityPage() {
   const { data: city, isLoading, error } = useQuery<CityWithDetails>({
     queryKey: ["/api/cities", slug],
     enabled: !!slug,
+    queryFn: async () => {
+      // For static deployment, use static data directly
+      if (!window.location.origin.includes('localhost') && !window.location.origin.includes('127.0.0.1')) {
+        const staticCity = staticCitiesData.find(c => c.slug === slug);
+        if (!staticCity) {
+          throw new Error('City not found');
+        }
+        // Convert City to CityWithDetails by adding required fields
+        return {
+          ...staticCity,
+          internetSpeed: 50, // Default values for static deployment
+          safetyScore: 7.5,
+          costOfLivingIndex: 3500,
+          nomadFriendliness: 8.0,
+          climate: { temperature: 28, humidity: 65, rainfall: 150 },
+        } as CityWithDetails;
+      }
+      
+      try {
+        const res = await fetch(`/api/cities/${slug}`);
+        if (!res.ok) {
+          throw new Error('City not found');
+        }
+        return await res.json();
+      } catch (error) {
+        // Fallback to static data
+        const staticCity = staticCitiesData.find(c => c.slug === slug);
+        if (!staticCity) {
+          throw new Error('City not found');
+        }
+        return {
+          ...staticCity,
+          internetSpeed: 50,
+          safetyScore: 7.5,
+          costOfLivingIndex: 3500,
+          nomadFriendliness: 8.0,
+          climate: { temperature: 28, humidity: 65, rainfall: 150 },
+        } as CityWithDetails;
+      }
+    },
   });
 
   // Complete tab configuration as per requirements

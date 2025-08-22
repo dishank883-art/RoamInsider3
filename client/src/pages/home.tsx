@@ -22,6 +22,11 @@ export default function Home() {
   const { data: allCities, isLoading } = useQuery<City[]>({
     queryKey: ["/api/cities"],
     queryFn: async () => {
+      // For static deployment, use static data directly
+      if (!window.location.origin.includes('localhost') && !window.location.origin.includes('127.0.0.1')) {
+        return staticCitiesData;
+      }
+      
       try {
         const res = await fetch('/api/cities');
         if (!res.ok) {
