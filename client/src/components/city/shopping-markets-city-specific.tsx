@@ -421,6 +421,217 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
             </ul>
           </div>
         </div>
+        {/* Traditional Markets & Local Shopping */}
+        <div>
+          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
+            <MapPin className="mr-2 h-5 w-5" />
+            Traditional Markets & Local Shopping
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            {[
+              {
+                name: "Main Bazaar Market",
+                type: "Traditional Market",
+                specialties: ["Textiles", "Spices", "Handicrafts", "Jewelry"],
+                hours: "6:00 AM - 9:00 PM",
+                bestTime: "Early morning or evening",
+                priceRange: "₹50-5000 ($0.60-60)",
+                bargaining: "Expected",
+                tips: "Start negotiating at 50% of quoted price",
+                location: "City center, near main temple",
+                highlights: ["Authentic local products", "Best prices for bulk buying", "Cultural experience"]
+              },
+              {
+                name: "Spice Market",
+                type: "Specialty Market",
+                specialties: ["Whole spices", "Tea", "Dry fruits", "Ayurvedic herbs"],
+                hours: "7:00 AM - 8:00 PM",
+                bestTime: "Morning for freshest selection",
+                priceRange: "₹20-2000 ($0.24-24)",
+                bargaining: "Moderate",
+                tips: "Ask for small samples to taste quality",
+                location: "Old city area",
+                highlights: ["Organic options available", "Expert spice mixing", "Export quality products"]
+              },
+              {
+                name: "Handicrafts Emporium",
+                type: "Artisan Market",
+                specialties: ["Handwoven textiles", "Pottery", "Wood carvings", "Paintings"],
+                hours: "10:00 AM - 8:00 PM",
+                bestTime: "Afternoon to interact with artisans",
+                priceRange: "₹100-15000 ($1.20-180)",
+                bargaining: "Limited",
+                tips: "Look for authenticity certificates",
+                location: "Cultural district",
+                highlights: ["Direct from artisans", "Unique pieces", "Cultural authenticity"]
+              }
+            ].map((market, index) => (
+              <div key={index} className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <h4 className="font-semibold text-sage-green">{market.name}</h4>
+                    <Badge variant="outline" className="text-xs">{market.type}</Badge>
+                  </div>
+                </div>
+                <div className="space-y-2 text-sm text-muted-navy">
+                  <div><strong>Specialties:</strong> {market.specialties.join(", ")}</div>
+                  <div><strong>Hours:</strong> {market.hours}</div>
+                  <div><strong>Best Time:</strong> {market.bestTime}</div>
+                  <div><strong>Price Range:</strong> {market.priceRange}</div>
+                  <div><strong>Bargaining:</strong> {market.bargaining}</div>
+                  <div><strong>Location:</strong> {market.location}</div>
+                  <div className="bg-vintage-gold/10 rounded px-2 py-1 text-xs">
+                    💡 {market.tips}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Modern Shopping Centers */}
+        <div>
+          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
+            <ShoppingBag className="mr-2 h-5 w-5" />
+            Modern Shopping Centers & Malls
+          </h3>
+          <div className="grid md:grid-cols-2 gap-4 mb-6">
+            {[
+              {
+                name: "City Center Mall",
+                type: "Shopping Mall",
+                brands: ["International", "National", "Local"],
+                floors: 4,
+                hours: "10:00 AM - 10:00 PM",
+                priceRange: "₹500-50000 ($6-600)",
+                bargaining: "No bargaining",
+                tips: "Look for end-of-season sales",
+                location: "CBD area",
+                highlights: ["AC comfort", "Brand guarantees", "Fixed pricing"],
+                facilities: ["Food court", "Parking", "ATM", "Rest areas"]
+              },
+              {
+                name: "Electronics Hub",
+                type: "Electronics Market",
+                specialties: ["Mobile phones", "Laptops", "Accessories", "Repairs"],
+                hours: "10:00 AM - 8:00 PM",
+                bestTime: "Weekdays for better deals",
+                priceRange: "₹200-100000 ($2.40-1200)",
+                bargaining: "Moderate to high",
+                tips: "Compare prices across multiple shops",
+                location: "Commercial district",
+                highlights: ["Latest tech", "Service centers nearby", "Competitive pricing"],
+                facilities: ["Warranty service", "Tech support", "Installation"]
+              }
+            ].map((center, index) => (
+              <div key={index} className="bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <h4 className="font-semibold text-travel-blue">{center.name}</h4>
+                    <Badge variant="outline" className="text-xs">{center.type}</Badge>
+                  </div>
+                </div>
+                <div className="space-y-2 text-sm text-muted-navy">
+                  <div><strong>Hours:</strong> {center.hours}</div>
+                  <div><strong>Price Range:</strong> {center.priceRange}</div>
+                  <div><strong>Location:</strong> {center.location}</div>
+                  {center.facilities && (
+                    <div><strong>Facilities:</strong> {center.facilities.join(", ")}</div>
+                  )}
+                  <div className="bg-vintage-gold/10 rounded px-2 py-1 text-xs">
+                    💡 {center.tips}
+                  </div>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {center.highlights.map((highlight, i) => (
+                      <span key={i} className="text-xs bg-sage-green/10 text-sage-green rounded px-2 py-1">
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Shopping Categories & Pricing */}
+        <div>
+          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
+            <CreditCard className="mr-2 h-5 w-5" />
+            Price Guide by Category
+          </h3>
+          <div className="space-y-6">
+            {[
+              {
+                category: "Clothing & Textiles",
+                items: [
+                  { item: "Cotton kurtas", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Local boutiques" },
+                  { item: "Silk sarees", priceRange: "₹2000-25000 ($24-300)", bestPlace: "Traditional markets" },
+                  { item: "Branded jeans", priceRange: "₹1500-5000 ($18-60)", bestPlace: "Malls" },
+                  { item: "Handloom fabrics", priceRange: "₹200-2000 per meter ($2.40-24)", bestPlace: "Weaver cooperatives" }
+                ]
+              },
+              {
+                category: "Spices & Food Items",
+                items: [
+                  { item: "Turmeric powder (1kg)", priceRange: "₹150-300 ($1.80-3.60)", bestPlace: "Spice markets" },
+                  { item: "Premium tea (250g)", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Tea estates" },
+                  { item: "Organic honey (500g)", priceRange: "₹250-600 ($3-7.20)", bestPlace: "Organic stores" },
+                  { item: "Dry fruits mix (1kg)", priceRange: "₹800-2000 ($9.60-24)", bestPlace: "Wholesale markets" }
+                ]
+              },
+              {
+                category: "Handicrafts & Souvenirs",
+                items: [
+                  { item: "Wooden sculptures", priceRange: "₹500-5000 ($6-60)", bestPlace: "Artisan workshops" },
+                  { item: "Brass items", priceRange: "₹200-2000 ($2.40-24)", bestPlace: "Metal craft centers" },
+                  { item: "Paintings", priceRange: "₹800-8000 ($9.60-96)", bestPlace: "Art galleries" },
+                  { item: "Pottery items", priceRange: "₹100-1500 ($1.20-18)", bestPlace: "Potter villages" }
+                ]
+              }
+            ].map((category, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-4">
+                <h4 className="font-semibold text-travel-blue mb-3">{category.category}</h4>
+                <div className="grid md:grid-cols-2 gap-3">
+                  {category.items.map((item, i) => (
+                    <div key={i} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
+                      <div>
+                        <div className="font-medium text-muted-navy">{item.item}</div>
+                        <div className="text-xs text-gray-500">{item.bestPlace}</div>
+                      </div>
+                      <div className="font-semibold text-vintage-gold text-sm">{item.priceRange}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Seasonal Shopping */}
+        <div>
+          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
+            <Star className="mr-2 h-5 w-5" />
+            Seasonal Shopping Guide
+          </h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { season: "Festival Season (Oct-Nov)", discounts: "20-50%", bestFor: "Clothing, jewelry, home decor" },
+              { season: "Wedding Season (Nov-Feb)", discounts: "10-30%", bestFor: "Silk, gold, gift items" },
+              { season: "Summer Sale (Apr-Jun)", discounts: "30-60%", bestFor: "Electronics, branded clothing" },
+              { season: "Monsoon (Jul-Sep)", discounts: "15-40%", bestFor: "Indoor items, books, crafts" }
+            ].map((season, index) => (
+              <div key={index} className="bg-vintage-gold/5 rounded-lg p-4 border border-vintage-gold/20">
+                <h4 className="font-semibold text-vintage-gold mb-2">{season.season}</h4>
+                <div className="space-y-1 text-sm text-muted-navy">
+                  <div><strong>Discounts:</strong> {season.discounts}</div>
+                  <div><strong>Best for:</strong> {season.bestFor}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </CardContent>
     </Card>
   );
