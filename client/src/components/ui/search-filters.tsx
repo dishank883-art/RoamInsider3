@@ -14,13 +14,22 @@ interface SearchFiltersProps {
   setSearchQuery: (query: string) => void;
   selectedFilters: string[];
   setSelectedFilters: (filters: string[]) => void;
+  advancedFilters: {
+    minBudget: number;
+    maxBudget: number;
+    minInternetSpeed: number;
+    minSafetyScore: number;
+  };
+  setAdvancedFilters: (filters: any) => void;
 }
 
 export default function SearchFilters({ 
   searchQuery, 
   setSearchQuery, 
   selectedFilters, 
-  setSelectedFilters 
+  setSelectedFilters,
+  advancedFilters,
+  setAdvancedFilters
 }: SearchFiltersProps) {
   const [showAdvanced, setShowAdvanced] = useState(false);
 
@@ -124,29 +133,78 @@ export default function SearchFilters({
                   Monthly Budget (INR)
                 </label>
                 <div className="flex space-x-2">
-                  <Input placeholder="Min" type="number" />
-                  <Input placeholder="Max" type="number" />
+                  <Input 
+                    placeholder="Min" 
+                    type="number" 
+                    value={advancedFilters.minBudget || ""}
+                    onChange={(e) => setAdvancedFilters({
+                      ...advancedFilters,
+                      minBudget: parseInt(e.target.value) || 0
+                    })}
+                    data-testid="min-budget-input"
+                  />
+                  <Input 
+                    placeholder="Max" 
+                    type="number" 
+                    value={advancedFilters.maxBudget === 100000 ? "" : advancedFilters.maxBudget}
+                    onChange={(e) => setAdvancedFilters({
+                      ...advancedFilters,
+                      maxBudget: parseInt(e.target.value) || 100000
+                    })}
+                    data-testid="max-budget-input"
+                  />
                 </div>
               </div>
               <div>
                 <label className="block text-sm font-medium text-muted-navy mb-2">
                   Internet Speed (Mbps)
                 </label>
-                <Input placeholder="Minimum speed" type="number" />
+                <Input 
+                  placeholder="Minimum speed" 
+                  type="number" 
+                  value={advancedFilters.minInternetSpeed || ""}
+                  onChange={(e) => setAdvancedFilters({
+                    ...advancedFilters,
+                    minInternetSpeed: parseInt(e.target.value) || 0
+                  })}
+                  data-testid="min-internet-speed-input"
+                />
               </div>
               <div>
                 <label className="block text-sm font-medium text-muted-navy mb-2">
                   Safety Score
                 </label>
-                <Input placeholder="Minimum score (1-10)" type="number" min="1" max="10" />
+                <Input 
+                  placeholder="Minimum score (1-10)" 
+                  type="number" 
+                  min="1" 
+                  max="10" 
+                  value={advancedFilters.minSafetyScore || ""}
+                  onChange={(e) => setAdvancedFilters({
+                    ...advancedFilters,
+                    minSafetyScore: parseInt(e.target.value) || 0
+                  })}
+                  data-testid="min-safety-score-input"
+                />
               </div>
             </div>
             <div className="mt-4 flex justify-end space-x-3">
-              <Button variant="outline" onClick={() => setShowAdvanced(false)}>
-                Cancel
+              <Button 
+                variant="outline" 
+                onClick={() => {
+                  setAdvancedFilters({ minBudget: 0, maxBudget: 100000, minInternetSpeed: 0, minSafetyScore: 0 });
+                  setShowAdvanced(false);
+                }}
+                data-testid="clear-advanced-filters"
+              >
+                Clear Filters
               </Button>
-              <Button className="bg-vintage-gold text-white hover:bg-vintage-gold/90">
-                Apply Filters
+              <Button 
+                variant="outline" 
+                onClick={() => setShowAdvanced(false)}
+                data-testid="close-advanced-filters"
+              >
+                Close
               </Button>
             </div>
           </div>

@@ -18,6 +18,7 @@ import InsiderHacksFixed from "@/components/city/insider-hacks-city-specific";
 import CityConnections from "@/components/city/city-connections-city-specific";
 import FestivalsEvents from "@/components/city/festivals-events-city-specific";
 import ShoppingMarkets from "@/components/city/shopping-markets-city-specific";
+import Reviews from "@/components/city/reviews";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -49,6 +50,7 @@ export default function CityPage() {
     { id: "things-to-do", label: "Things to Do & Experiences", icon: MapPin, emoji: "🗺️" },
     { id: "shopping", label: "Shopping & Markets", icon: Users, emoji: "🛍️" },
     { id: "community", label: "Community & Nomad Scene", icon: Users, emoji: "🤝" },
+    { id: "reviews", label: "Reviews & Experiences", icon: Star, emoji: "⭐" },
     { id: "hacks", label: "Insider Hacks", icon: Lightbulb, emoji: "💡" },
     { id: "connectivity", label: "Connectivity to Other Cities", icon: Train, emoji: "✈️" },
   ];
@@ -134,6 +136,8 @@ export default function CityPage() {
         return <ShoppingMarkets city={city} />;
       case "community":
         return <CommunityNomads city={city} />;
+      case "reviews":
+        return <Reviews city={city} />;
       case "hacks":
         return <InsiderHacksFixed city={city} />;
       case "connectivity":
