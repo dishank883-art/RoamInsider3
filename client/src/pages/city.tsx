@@ -1,6 +1,6 @@
 import { useRoute } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import CityOverview from "@/components/city/city-overview";
@@ -30,51 +30,39 @@ export default function CityPage() {
   const [, params] = useRoute("/city/:slug");
   const slug = params?.slug;
   const [activeTab, setActiveTab] = useState("overview");
+  const [city, setCity] = useState<CityWithDetails | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const { data: city, isLoading, error } = useQuery<CityWithDetails>({
-    queryKey: ["/api/cities", slug],
-    enabled: !!slug,
-    queryFn: async () => {
-      // For static deployment, use static data directly
-      if (!window.location.origin.includes('localhost') && !window.location.origin.includes('127.0.0.1')) {
-        const staticCity = staticCitiesData.find(c => c.slug === slug);
-        if (!staticCity) {
-          throw new Error('City not found');
-        }
-        // Convert City to CityWithDetails by adding required fields
-        return {
-          ...staticCity,
-          internetSpeed: 50, // Default values for static deployment
-          safetyScore: 7.5,
-          costOfLivingIndex: 3500,
-          nomadFriendliness: 8.0,
-          climate: { temperature: 28, humidity: 65, rainfall: 150 },
-        } as CityWithDetails;
-      }
-      
-      try {
-        const res = await fetch(`/api/cities/${slug}`);
-        if (!res.ok) {
-          throw new Error('City not found');
-        }
-        return await res.json();
-      } catch (error) {
-        // Fallback to static data
-        const staticCity = staticCitiesData.find(c => c.slug === slug);
-        if (!staticCity) {
-          throw new Error('City not found');
-        }
-        return {
-          ...staticCity,
-          internetSpeed: 50,
-          safetyScore: 7.5,
-          costOfLivingIndex: 3500,
-          nomadFriendliness: 8.0,
-          climate: { temperature: 28, humidity: 65, rainfall: 150 },
-        } as CityWithDetails;
-      }
-    },
-  });
+  // Load city data on component mount
+  useEffect(() => {
+    if (!slug) {
+      setError('No city slug provided');
+      setIsLoading(false);
+      return;
+    }
+
+    // For static deployment, use static data directly
+    const staticCity = staticCitiesData.find(c => c.slug === slug);
+    if (!staticCity) {
+      setError('City not found');
+      setIsLoading(false);
+      return;
+    }
+
+    // Convert City to CityWithDetails
+    const cityWithDetails: CityWithDetails = {
+      ...staticCity,
+      internetSpeed: 50,
+      safetyScore: 7.5,
+      costOfLivingIndex: 3500,
+      nomadFriendliness: 8.0,
+      climate: { temperature: 28, humidity: 65, rainfall: 150 },
+    };
+
+    setCity(cityWithDetails);
+    setIsLoading(false);
+  }, [slug]);
 
   // Complete tab configuration as per requirements
   const tabs = [
