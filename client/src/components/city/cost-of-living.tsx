@@ -64,6 +64,200 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
     "Per Item": costItems.filter(item => item.category === "Per Item"),
   };
 
+  // Get city-specific digital nomad accommodation data
+  const getCitySpecificAccommodation = () => {
+    const accommodationData: Record<string, any> = {
+      mumbai: {
+        hostels: [
+          { name: "Zostel Mumbai", area: "Fort", price: "₹800-1200/night ($10-14)", rating: 4.2, amenities: ["WiFi", "AC", "Kitchen", "Lounge"] },
+          { name: "Backpacker Panda", area: "Andheri", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Common area", "Kitchen"] },
+          { name: "Mad Monkey Hostel", area: "Colaba", price: "₹900-1400/night ($11-17)", rating: 4.3, amenities: ["WiFi", "Bar", "Tours", "AC"] }
+        ],
+        platforms: [
+          { name: "Agoda", commission: "12-18%", features: ["Instant booking", "Local support", "Best price guarantee"] },
+          { name: "Booking.com", commission: "15-20%", features: ["Free cancellation", "24/7 support", "Verified reviews"] },
+          { name: "Hostelworld", commission: "10-12%", features: ["Hostel specialist", "Community", "City guides"] },
+          { name: "Airbnb", commission: "3% + 14-20%", features: ["Local experiences", "Monthly discounts", "Verified hosts"] },
+          { name: "OYO", commission: "20-25%", features: ["Local chain", "Standardized rooms", "Easy booking"] }
+        ],
+        monthlyOptions: [
+          { type: "PG (Paying Guest)", price: "₹8000-15000/month ($96-180)", includes: "Meals, WiFi, cleaning" },
+          { type: "Co-living spaces", price: "₹12000-25000/month ($144-300)", includes: "Fully furnished, community events" },
+          { type: "Service apartments", price: "₹20000-40000/month ($240-480)", includes: "Hotel-like services, flexibility" }
+        ]
+      },
+      delhi: {
+        hostels: [
+          { name: "Zostel Delhi", area: "Paharganj", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "AC", "Kitchen", "Terrace"] },
+          { name: "Jugaad Hostels", area: "Hauz Khas", price: "₹800-1200/night ($10-14)", rating: 4.4, amenities: ["WiFi", "Events", "Kitchen", "Co-working"] },
+          { name: "Bleisure Hospitality", area: "Connaught Place", price: "₹900-1300/night ($11-16)", rating: 4.2, amenities: ["WiFi", "Restaurant", "AC"] }
+        ],
+        platforms: [
+          { name: "Agoda", commission: "12-18%", features: ["Best prices", "Local partnerships", "Mobile app"] },
+          { name: "Booking.com", commission: "15-20%", features: ["Largest inventory", "Multiple languages", "Flexible booking"] },
+          { name: "Hostelworld", commission: "10-12%", features: ["Hostel focus", "Social features", "Group bookings"] },
+          { name: "Airbnb", commission: "3% + 14-20%", features: ["Unique spaces", "Long-term stays", "Local experiences"] },
+          { name: "Treebo", commission: "18-22%", features: ["Indian chain", "Consistent quality", "Good locations"] }
+        ],
+        monthlyOptions: [
+          { type: "PG accommodations", price: "₹6000-12000/month ($72-144)", includes: "Meals, utilities, basic amenities" },
+          { type: "Co-living", price: "₹10000-20000/month ($120-240)", includes: "Furnished rooms, community, events" },
+          { type: "Studio apartments", price: "₹15000-30000/month ($180-360)", includes: "Independent living, kitchen" }
+        ]
+      },
+      bangalore: {
+        hostels: [
+          { name: "Zostel Bangalore", area: "Koramangala", price: "₹800-1200/night ($10-14)", rating: 4.3, amenities: ["WiFi", "AC", "Kitchen", "Co-working"] },
+          { name: "The Hive Hostel", area: "Indiranagar", price: "₹700-1000/night ($8-12)", rating: 4.1, amenities: ["WiFi", "Kitchen", "Common area"] },
+          { name: "Backpacker Panda", area: "MG Road", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Tours", "Kitchen"] }
+        ],
+        platforms: [
+          { name: "Agoda", commission: "12-18%", features: ["Tech-friendly", "Best rates", "Easy booking"] },
+          { name: "Booking.com", commission: "15-20%", features: ["Wide selection", "Verified reviews", "Mobile booking"] },
+          { name: "Airbnb", commission: "3% + 14-20%", features: ["Tech community", "Long stays", "Unique properties"] },
+          { name: "Zolo", commission: "15-20%", features: ["Co-living specialist", "Tech nomads", "Flexible terms"] },
+          { name: "NestAway", commission: "20-25%", features: ["Fully managed", "No brokerage", "Quick move-in"] }
+        ],
+        monthlyOptions: [
+          { type: "Co-living spaces", price: "₹12000-22000/month ($144-264)", includes: "Fully furnished, high-speed WiFi, community" },
+          { type: "PG for professionals", price: "₹8000-15000/month ($96-180)", includes: "Meals, cleaning, WiFi" },
+          { type: "Tech-friendly apartments", price: "₹18000-35000/month ($216-420)", includes: "High-speed internet, flexible lease" }
+        ]
+      },
+      goa: {
+        hostels: [
+          { name: "Zostel Goa", area: "Anjuna", price: "₹700-1100/night ($8-13)", rating: 4.2, amenities: ["WiFi", "Pool", "Beach access", "Kitchen"] },
+          { name: "Backpacker Panda", area: "Arambol", price: "₹500-800/night ($6-10)", rating: 3.9, amenities: ["WiFi", "Beach nearby", "Kitchen"] },
+          { name: "Mad Monkey Hostel", area: "Calangute", price: "₹800-1200/night ($10-14)", rating: 4.1, amenities: ["WiFi", "Pool", "Bar", "Tours"] }
+        ],
+        platforms: [
+          { name: "Agoda", commission: "12-18%", features: ["Beach properties", "Local deals", "Easy booking"] },
+          { name: "Booking.com", commission: "15-20%", features: ["Largest selection", "Beach resorts", "Flexible dates"] },
+          { name: "Airbnb", commission: "3% + 14-20%", features: ["Beach houses", "Monthly discounts", "Local hosts"] },
+          { name: "OYO", commission: "20-25%", features: ["Budget options", "Standardized quality", "Beach locations"] }
+        ],
+        monthlyOptions: [
+          { type: "Beach house rentals", price: "₹10000-25000/month ($120-300)", includes: "Beach access, basic furnishing" },
+          { type: "Portuguese villa rooms", price: "₹8000-18000/month ($96-216)", includes: "Cultural experience, garden access" },
+          { type: "Nomad-friendly apartments", price: "₹12000-30000/month ($144-360)", includes: "Good WiFi, workspace, balcony" }
+        ]
+      },
+      rishikesh: {
+        hostels: [
+          { name: "Zostel Rishikesh", area: "Tapovan", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Yoga space", "Kitchen", "River views"] },
+          { name: "Backpacker Panda", area: "Laxman Jhula", price: "₹400-700/night ($5-8)", rating: 3.8, amenities: ["WiFi", "Yoga", "Simple rooms"] },
+          { name: "The Hosteller", area: "Ram Jhula", price: "₹500-800/night ($6-10)", rating: 4.1, amenities: ["WiFi", "Yoga deck", "Kitchen", "Library"] }
+        ],
+        platforms: [
+          { name: "Booking.com", commission: "15-20%", features: ["Spiritual retreats", "Ashram bookings", "Nature stays"] },
+          { name: "Agoda", commission: "12-18%", features: ["Adventure packages", "Yoga retreats", "Budget options"] },
+          { name: "Airbnb", commission: "3% + 14-20%", features: ["River-view properties", "Spiritual experiences", "Long stays"] }
+        ],
+        monthlyOptions: [
+          { type: "Ashram accommodation", price: "₹3000-8000/month ($36-96)", includes: "Meals, yoga, meditation, simple living" },
+          { type: "Guesthouse rooms", price: "₹5000-12000/month ($60-144)", includes: "Basic amenities, mountain views" },
+          { type: "Yoga retreat centers", price: "₹8000-15000/month ($96-180)", includes: "Yoga classes, healthy meals, community" }
+        ]
+      }
+    };
+
+    const cityLower = citySlug.toLowerCase();
+    const defaultAccommodation = {
+      hostels: [
+        { name: "Local Budget Hostel", area: "City center", price: "₹500-800/night ($6-10)", rating: 3.8, amenities: ["WiFi", "Kitchen", "Common area"] }
+      ],
+      platforms: [
+        { name: "Booking.com", commission: "15-20%", features: ["Wide selection", "Free cancellation", "Reviews"] },
+        { name: "Agoda", commission: "12-18%", features: ["Best prices", "Easy booking", "Local partnerships"] },
+        { name: "Airbnb", commission: "3% + 14-20%", features: ["Unique stays", "Local experiences", "Monthly discounts"] }
+      ],
+      monthlyOptions: [
+        { type: "Local PG", price: "₹6000-12000/month ($72-144)", includes: "Basic amenities, local community" }
+      ]
+    };
+
+    const data = accommodationData[cityLower] || defaultAccommodation;
+
+    return (
+      <div>
+        {/* Hostels */}
+        <div className="mb-6">
+          <h4 className="font-semibold text-vintage-gold mb-3">Popular Hostels & Budget Stays</h4>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {data.hostels.map((hostel, index) => (
+              <div key={index} className="bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <h5 className="font-semibold text-travel-blue">{hostel.name}</h5>
+                    <p className="text-sm text-muted-navy">{hostel.area}</p>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-bold text-vintage-gold">{hostel.price}</div>
+                    <div className="text-xs text-muted-navy">⭐ {hostel.rating}</div>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-1 mt-2">
+                  {hostel.amenities.map((amenity, i) => (
+                    <Badge key={i} variant="secondary" className="text-xs bg-sage-green/10 text-sage-green">
+                      {amenity}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Booking Platforms */}
+        <div className="mb-6">
+          <h4 className="font-semibold text-vintage-gold mb-3">Best Booking Platforms</h4>
+          <div className="grid md:grid-cols-2 gap-4">
+            {data.platforms.map((platform, index) => (
+              <div key={index} className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
+                <div className="flex items-center justify-between mb-2">
+                  <h5 className="font-semibold text-sage-green">{platform.name}</h5>
+                  <span className="text-xs text-muted-navy">Commission: {platform.commission}</span>
+                </div>
+                <ul className="text-sm text-muted-navy space-y-1">
+                  {platform.features.map((feature, i) => (
+                    <li key={i}>• {feature}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Monthly Options */}
+        <div className="mb-6">
+          <h4 className="font-semibold text-vintage-gold mb-3">Monthly Stay Options</h4>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {data.monthlyOptions.map((option, index) => (
+              <div key={index} className="bg-vintage-gold/5 rounded-lg p-4 border border-vintage-gold/20">
+                <h5 className="font-semibold text-vintage-gold mb-2">{option.type}</h5>
+                <div className="font-bold text-travel-blue mb-2">{option.price}</div>
+                <p className="text-sm text-muted-navy">{option.includes}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Booking Tips */}
+        <div className="bg-travel-blue/5 rounded-lg p-4 border-l-4 border-travel-blue">
+          <h4 className="font-semibold text-travel-blue mb-2">💡 Smart Booking Tips</h4>
+          <ul className="space-y-1 text-muted-navy text-sm">
+            <li>• Book 3-7 days ahead for better hostel rates and availability</li>
+            <li>• Use Agoda for Asia-focused deals and local partnerships</li>
+            <li>• Booking.com offers best cancellation policies for uncertain travel plans</li>
+            <li>• Airbnb gives 20-50% monthly discounts for stays over 28 days</li>
+            <li>• Contact hostels directly for weekly/monthly rates not shown online</li>
+            <li>• Join nomad Facebook groups for sublet opportunities and local recommendations</li>
+          </ul>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <Card className="bg-white rounded-2xl shadow-lg">
       <CardHeader>
@@ -265,6 +459,15 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
               </>
             )}
           </ul>
+        </div>
+
+        {/* Digital Nomad Accommodation */}
+        <div>
+          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
+            <Home className="mr-2 h-5 w-5" />
+            🏨 Digital Nomad Accommodation
+          </h3>
+          {getCitySpecificAccommodation()}
         </div>
 
         {/* External Data Sources & Verification */}
