@@ -1,38 +1,51 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Search, Filter, Wifi, Sun, Shield, Wine, Mountain, Coffee } from "lucide-react";
+import { Search, Filter, Wifi, Sun, Shield, Wine, Mountain, Coffee, Snowflake } from "lucide-react";
 
 interface FilterButton {
   id: string;
   label: string;
   icon: React.ReactNode;
-  active: boolean;
 }
 
-export default function SearchFilters() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filters, setFilters] = useState<FilterButton[]>([
-    { id: "budget", label: "Budget", icon: <span className="text-xs">₹</span>, active: true },
-    { id: "wifi", label: "Fast WiFi", icon: <Wifi className="w-3 h-3" />, active: false },
-    { id: "warm", label: "Warm", icon: <Sun className="w-3 h-3" />, active: false },
-    { id: "safe", label: "Safe", icon: <Shield className="w-3 h-3" />, active: false },
-    { id: "nightlife", label: "Nightlife", icon: <Wine className="w-3 h-3" />, active: false },
-    { id: "nature", label: "Nature", icon: <Mountain className="w-3 h-3" />, active: false },
-    { id: "foodie", label: "Foodie", icon: <Coffee className="w-3 h-3" />, active: false },
-    { id: "more", label: "More", icon: <Filter className="w-3 h-3" />, active: false },
-  ]);
+interface SearchFiltersProps {
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+  selectedFilters: string[];
+  setSelectedFilters: (filters: string[]) => void;
+}
+
+export default function SearchFilters({ 
+  searchQuery, 
+  setSearchQuery, 
+  selectedFilters, 
+  setSelectedFilters 
+}: SearchFiltersProps) {
   const [showAdvanced, setShowAdvanced] = useState(false);
 
+  const filters: FilterButton[] = [
+    { id: "budget", label: "Budget", icon: <span className="text-xs">₹</span> },
+    { id: "wifi", label: "Fast WiFi", icon: <Wifi className="w-3 h-3" /> },
+    { id: "warm", label: "Warm", icon: <Sun className="w-3 h-3" /> },
+    { id: "cold", label: "Cold", icon: <Snowflake className="w-3 h-3" /> },
+    { id: "safe", label: "Safe", icon: <Shield className="w-3 h-3" /> },
+    { id: "nightlife", label: "Nightlife", icon: <Wine className="w-3 h-3" /> },
+    { id: "nature", label: "Nature", icon: <Mountain className="w-3 h-3" /> },
+    { id: "foodie", label: "Foodie", icon: <Coffee className="w-3 h-3" /> },
+  ];
+
   const toggleFilter = (id: string) => {
-    setFilters(prev => prev.map(filter => 
-      filter.id === id ? { ...filter, active: !filter.active } : filter
-    ));
+    if (selectedFilters.includes(id)) {
+      setSelectedFilters(selectedFilters.filter(f => f !== id));
+    } else {
+      setSelectedFilters([...selectedFilters, id]);
+    }
   };
 
   const handleSearch = () => {
-    // TODO: Implement search functionality
-    console.log("Searching for:", searchQuery, "with filters:", filters.filter(f => f.active));
+    // Search functionality is handled through the passed props
+    console.log("Searching for:", searchQuery, "with filters:", selectedFilters);
   };
 
   return (
@@ -61,21 +74,25 @@ export default function SearchFilters() {
         
         {/* Quick Filters */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 mb-6">
-          {filters.map((filter) => (
-            <Button
-              key={filter.id}
-              onClick={() => toggleFilter(filter.id)}
-              variant={filter.active ? "default" : "secondary"}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center space-x-1 ${
-                filter.active 
-                  ? "bg-travel-blue text-white hover:bg-travel-blue/90" 
-                  : "bg-gray-100 text-muted-navy hover:bg-gray-200"
-              }`}
-            >
-              {filter.icon}
+          {filters.map((filter) => {
+            const isActive = selectedFilters.includes(filter.id);
+            return (
+              <Button
+                key={filter.id}
+                onClick={() => toggleFilter(filter.id)}
+                variant={isActive ? "default" : "secondary"}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center space-x-1 ${
+                  isActive
+                    ? "bg-travel-blue text-white hover:bg-travel-blue/90" 
+                    : "bg-gray-100 text-muted-navy hover:bg-gray-200"
+                }`}
+                data-testid={`filter-${filter.id}`}
+              >
+                {filter.icon}
               <span>{filter.label}</span>
-            </Button>
-          ))}
+              </Button>
+            );
+          })}
         </div>
         
         {/* Advanced Filters Toggle */}

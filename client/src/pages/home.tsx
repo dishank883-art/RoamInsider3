@@ -16,6 +16,7 @@ import { staticCitiesData, getAllTags } from "@/lib/static-cities-data";
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
   const [budgetRange, setBudgetRange] = useState<[number, number]>([0, 100000]);
   const [showAllCities, setShowAllCities] = useState(false);
 
@@ -61,16 +62,98 @@ export default function Home() {
         }
       }
 
+      // Filter categories (Budget, WiFi, Weather, etc.)
+      if (selectedFilters.length > 0) {
+        const cityTags = city.tags || [];
+        
+        for (const filter of selectedFilters) {
+          let hasFilterMatch = false;
+          
+          switch (filter) {
+            case 'budget':
+              hasFilterMatch = cityTags.some(tag => 
+                tag.toLowerCase().includes('budget') || 
+                tag.toLowerCase().includes('affordable') ||
+                tag.toLowerCase().includes('cheap')
+              );
+              break;
+            case 'wifi':
+              hasFilterMatch = cityTags.some(tag => 
+                tag.toLowerCase().includes('wifi') || 
+                tag.toLowerCase().includes('internet') ||
+                tag.toLowerCase().includes('digital nomad') ||
+                tag.toLowerCase().includes('coworking')
+              );
+              break;
+            case 'warm':
+              hasFilterMatch = cityTags.some(tag => 
+                tag.toLowerCase().includes('warm') || 
+                tag.toLowerCase().includes('tropical') ||
+                tag.toLowerCase().includes('beach') ||
+                tag.toLowerCase().includes('hot')
+              );
+              break;
+            case 'cold':
+              hasFilterMatch = cityTags.some(tag => 
+                tag.toLowerCase().includes('cold') || 
+                tag.toLowerCase().includes('mountain') ||
+                tag.toLowerCase().includes('hill') ||
+                tag.toLowerCase().includes('winter')
+              );
+              break;
+            case 'safe':
+              hasFilterMatch = cityTags.some(tag => 
+                tag.toLowerCase().includes('safe') || 
+                tag.toLowerCase().includes('secure') ||
+                tag.toLowerCase().includes('family')
+              );
+              break;
+            case 'nightlife':
+              hasFilterMatch = cityTags.some(tag => 
+                tag.toLowerCase().includes('nightlife') || 
+                tag.toLowerCase().includes('party') ||
+                tag.toLowerCase().includes('bars') ||
+                tag.toLowerCase().includes('clubs')
+              );
+              break;
+            case 'nature':
+              hasFilterMatch = cityTags.some(tag => 
+                tag.toLowerCase().includes('nature') || 
+                tag.toLowerCase().includes('outdoor') ||
+                tag.toLowerCase().includes('trekking') ||
+                tag.toLowerCase().includes('adventure') ||
+                tag.toLowerCase().includes('mountain') ||
+                tag.toLowerCase().includes('forest')
+              );
+              break;
+            case 'foodie':
+              hasFilterMatch = cityTags.some(tag => 
+                tag.toLowerCase().includes('food') || 
+                tag.toLowerCase().includes('cuisine') ||
+                tag.toLowerCase().includes('culinary') ||
+                tag.toLowerCase().includes('restaurant')
+              );
+              break;
+            default:
+              hasFilterMatch = true;
+          }
+          
+          if (!hasFilterMatch) {
+            return false;
+          }
+        }
+      }
+
       return true;
     });
 
     // Show only popular cities initially, or all if requested
-    if (!showAllCities && !searchQuery && selectedTags.length === 0) {
+    if (!showAllCities && !searchQuery && selectedTags.length === 0 && selectedFilters.length === 0) {
       filtered = filtered.filter(city => city.isPopular);
     }
 
     return filtered;
-  }, [allCities, searchQuery, selectedTags, budgetRange, showAllCities]);
+  }, [allCities, searchQuery, selectedTags, selectedFilters, budgetRange, showAllCities]);
 
   // Get all unique tags for filter options
   const allTags = useMemo(() => {
@@ -86,19 +169,24 @@ export default function Home() {
     <div className="bg-cream min-h-screen">
       <Navigation />
       <HeroSection />
-      <SearchFilters />
+      <SearchFilters 
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        selectedFilters={selectedFilters}
+        setSelectedFilters={setSelectedFilters}
+      />
       
       {/* Featured Cities Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h2 className="font-serif text-4xl lg:text-5xl font-bold text-travel-blue mb-4">
-            {showAllCities || searchQuery || selectedTags.length > 0 
+            {showAllCities || searchQuery || selectedTags.length > 0 || selectedFilters.length > 0
               ? `Found ${filteredCities.length} Cities` 
               : "Popular Digital Nomad Destinations"
             }
           </h2>
           <p className="text-xl text-muted-navy max-w-3xl mx-auto">
-            {showAllCities || searchQuery || selectedTags.length > 0 
+            {showAllCities || searchQuery || selectedTags.length > 0 || selectedFilters.length > 0
               ? "Explore these amazing destinations perfect for digital nomads"
               : "Handpicked cities with thriving nomad communities, excellent infrastructure, and unique cultural experiences"
             }
@@ -135,6 +223,7 @@ export default function Home() {
                 onClick={() => {
                   setSearchQuery("");
                   setSelectedTags([]);
+                  setSelectedFilters([]);
                   setShowAllCities(false);
                 }}
                 variant="outline"
@@ -146,7 +235,7 @@ export default function Home() {
           )}
         </div>
         
-        {!showAllCities && !searchQuery && selectedTags.length === 0 && (
+        {!showAllCities && !searchQuery && selectedTags.length === 0 && selectedFilters.length === 0 && (
           <div className="text-center mt-12">
             <Button 
               onClick={() => setShowAllCities(true)}

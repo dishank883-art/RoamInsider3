@@ -14,7 +14,7 @@ export const staticCitiesData: City[] = [
     population: 20400000,
     rating: "7.2",
     isPopular: true,
-    tags: ["tech-hub", "startup-scene", "coastal", "finance", "bollywood"],
+    tags: ["tech-hub", "startup-scene", "coastal", "finance", "bollywood", "wifi", "nightlife"],
     createdAt: null,
     updatedAt: null
   },
@@ -30,7 +30,7 @@ export const staticCitiesData: City[] = [
     population: 12340000,
     rating: "8.1",
     isPopular: true,
-    tags: ["tech-hub", "startup-scene", "mild-climate", "coworking"],
+    tags: ["tech-hub", "startup-scene", "mild-climate", "coworking", "wifi", "safe"],
     createdAt: null,
     updatedAt: null
   },
@@ -46,7 +46,7 @@ export const staticCitiesData: City[] = [
     population: 1458000,
     rating: "8.5",
     isPopular: true,
-    tags: ["beaches", "relaxed", "tourism", "nightlife", "portuguese-heritage"],
+    tags: ["beaches", "relaxed", "tourism", "nightlife", "portuguese-heritage", "warm", "budget"],
     createdAt: null,
     updatedAt: null
   },
@@ -62,7 +62,7 @@ export const staticCitiesData: City[] = [
     population: 3100000,
     rating: "7.8",
     isPopular: true,
-    tags: ["education", "it-sector", "cultural", "affordable"],
+    tags: ["education", "it-sector", "cultural", "affordable", "budget", "wifi", "safe"],
     createdAt: null,
     updatedAt: null
   },
@@ -78,7 +78,7 @@ export const staticCitiesData: City[] = [
     population: 32900000,
     rating: "6.5",
     isPopular: true,
-    tags: ["capital", "history", "politics", "culture", "metro"],
+    tags: ["capital", "history", "politics", "culture", "metro", "wifi", "foodie"],
     createdAt: null,
     updatedAt: null
   },
@@ -94,7 +94,7 @@ export const staticCitiesData: City[] = [
     population: 174000,
     rating: "8.7",
     isPopular: true,
-    tags: ["backwaters", "peaceful", "nature", "houseboats", "ayurveda"],
+    tags: ["backwaters", "peaceful", "nature", "houseboats", "ayurveda", "warm", "budget"],
     createdAt: null,
     updatedAt: null
   },
@@ -110,7 +110,7 @@ export const staticCitiesData: City[] = [
     population: 42000,
     rating: "8.9",
     isPopular: true,
-    tags: ["beaches", "cliffs", "spiritual", "yoga", "ayurveda"],
+    tags: ["beaches", "cliffs", "spiritual", "yoga", "ayurveda", "warm", "budget"],
     createdAt: null,
     updatedAt: null
   },
@@ -126,7 +126,7 @@ export const staticCitiesData: City[] = [
     population: 1200,
     rating: "8.4",
     isPopular: true,
-    tags: ["mountains", "trekking", "israeli-culture", "budget-friendly", "nature"],
+    tags: ["mountains", "trekking", "israeli-culture", "budget-friendly", "nature", "cold", "budget"],
     createdAt: null,
     updatedAt: null
   },
@@ -142,7 +142,7 @@ export const staticCitiesData: City[] = [
     population: 475000,
     rating: "8.2",
     isPopular: true,
-    tags: ["royal", "lakes", "heritage", "romantic", "architecture"],
+    tags: ["royal", "lakes", "heritage", "romantic", "architecture", "warm", "foodie"],
     createdAt: null,
     updatedAt: null
   },
