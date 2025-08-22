@@ -71,28 +71,213 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
     }
   ];
 
-  // National and State-specific Online Shopping Portals
+  // Comprehensive Online Shopping Platforms Available in India
   const onlineShoppingPortals = [
+    // Major E-commerce Platforms
     {
-      category: "National E-commerce Platforms",
-      platforms: [
-        { name: "Amazon India", website: "amazon.in", description: "Global marketplace with fastest delivery in metros", offers: "Prime benefits, same-day delivery available" },
-        { name: "Flipkart", website: "flipkart.com", description: "India's leading e-commerce with Big Billion Days sales", offers: "No-cost EMI, exchange offers" },
-        { name: "Myntra", website: "myntra.com", description: "Fashion and lifestyle destination with curated brands", offers: "Free shipping above ₹799, easy returns" },
-        { name: "Nykaa", website: "nykaa.com", description: "Beauty and wellness platform with authentic products", offers: "Free samples, beauty consultations" },
-        { name: "BigBasket", website: "bigbasket.com", description: "Online grocery delivery with fresh produce", offers: "Subscription plans, early morning delivery" },
-        { name: "Swiggy Instamart", website: "swiggy.com/instamart", description: "Quick grocery and essentials delivery in 15-30 mins", offers: "Super membership benefits" },
-      ]
+      name: "Amazon India",
+      category: "Everything Store",
+      description: "Largest online retailer with same-day delivery in major cities",
+      url: "https://amazon.in",
+      specialties: ["Electronics", "Books", "Fashion", "Home & Kitchen", "Groceries"],
+      deliveryTime: "Same day/Next day",
+      paymentMethods: ["Cards", "UPI", "EMI", "Cash on Delivery"],
+      benefits: ["Prime membership", "Easy returns", "Customer service"]
     },
     {
-      category: "Regional & City-Specific Platforms",
-      platforms: [
-        { name: "Grofers (Blinkit)", website: "blinkit.com", description: "Ultra-fast delivery in 10-15 minutes for daily essentials", offers: "No minimum order, lightning fast delivery" },
-        { name: "Dunzo", website: "dunzo.com", description: "Hyperlocal delivery platform for anything from anywhere", offers: "Pick-up and drop services, medicine delivery" },
-        { name: "Zepto", website: "zepto.com", description: "10-minute grocery delivery in select cities", offers: "Fresh produce, household essentials" },
-      ]
-    }
-  ];
+      name: "Flipkart",
+      category: "Multi-category",
+      description: "India's homegrown e-commerce giant with excellent customer service",
+      url: "https://flipkart.com",
+      specialties: ["Electronics", "Fashion", "Mobile phones", "Appliances", "Books"],
+      deliveryTime: "1-7 days",
+      paymentMethods: ["Cards", "UPI", "EMI", "Cash on Delivery"],
+      benefits: ["Plus membership", "Exchange offers", "No-cost EMI"]
+    },
+    {
+      name: "Myntra",
+      category: "Fashion & Lifestyle",
+      description: "Leading fashion platform with latest trends and brands",
+      url: "https://myntra.com",
+      specialties: ["Fashion", "Beauty", "Home decor", "Personal care"],
+      deliveryTime: "2-7 days",
+      paymentMethods: ["Cards", "UPI", "Wallets", "EMI"],
+      benefits: ["Try & Buy", "Free returns", "Style recommendations"]
+    },
+    {
+      name: "Nykaa",
+      category: "Beauty & Wellness",
+      description: "Premium beauty and wellness products",
+      url: "https://nykaa.com",
+      specialties: ["Cosmetics", "Skincare", "Hair care", "Fragrances", "Wellness"],
+      deliveryTime: "2-5 days",
+      paymentMethods: ["Cards", "UPI", "Wallets", "EMI"],
+      benefits: ["Beauty consultations", "Authentic products", "Loyalty rewards"]
+    },
+    
+    // Specialized Platforms
+    {
+      name: "Ajio",
+      category: "Fashion & Lifestyle",
+      description: "Reliance's fashion platform with trendy collections",
+      url: "https://ajio.com",
+      specialties: ["Fashion", "Accessories", "Home decor", "Beauty"],
+      deliveryTime: "3-7 days",
+      paymentMethods: ["Cards", "UPI", "JioMoney", "EMI"],
+      benefits: ["Exclusive brands", "Seasonal sales", "Easy exchanges"]
+    },
+    {
+      name: "Meesho",
+      category: "Social Commerce",
+      description: "Social selling platform with affordable products",
+      url: "https://meesho.com",
+      specialties: ["Fashion", "Home & Kitchen", "Electronics", "Beauty"],
+      deliveryTime: "3-7 days",
+      paymentMethods: ["UPI", "Cards", "Cash on Delivery"],
+      benefits: ["No shipping charges", "Supplier prices", "Return policy"]
+    },
+    {
+      name: "Snapdeal",
+      category: "Value Commerce",
+      description: "Value-focused platform with competitive prices",
+      url: "https://snapdeal.com",
+      specialties: ["Electronics", "Fashion", "Home", "Sports", "Automotive"],
+      deliveryTime: "2-7 days",
+      paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+      benefits: ["Daily deals", "Brand warranty", "Easy returns"]
+    },
+    
+    // Grocery & Daily Essentials
+    {
+      name: "BigBasket",
+      category: "Groceries",
+      description: "Leading online grocery platform",
+      url: "https://bigbasket.com",
+      specialties: ["Groceries", "Fresh produce", "Gourmet food", "Personal care"],
+      deliveryTime: "Same day/Next day",
+      paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+      benefits: ["Fresh guarantee", "Subscription discounts", "Express delivery"]
+    },
+    {
+      name: "Grofers (Blinkit)",
+      category: "Quick Commerce",
+      description: "Ultra-fast grocery delivery in minutes",
+      url: "https://blinkit.com",
+      specialties: ["Groceries", "Fruits & vegetables", "Daily essentials", "Medicine"],
+      deliveryTime: "8-15 minutes",
+      paymentMethods: ["Cards", "UPI", "Wallets"],
+      benefits: ["Ultra-fast delivery", "Fresh products", "No minimum order"]
+    },
+    {
+      name: "JioMart",
+      category: "Groceries & More",
+      description: "Reliance's digital marketplace",
+      url: "https://jiomart.com",
+      specialties: ["Groceries", "Electronics", "Fashion", "Pharmacy"],
+      deliveryTime: "Same day/Next day",
+      paymentMethods: ["JioMoney", "Cards", "UPI", "COD"],
+      benefits: ["No delivery charges", "WhatsApp ordering", "JioCoins rewards"]
+    },
+    
+    // Electronics & Tech
+    {
+      name: "Croma",
+      category: "Electronics",
+      description: "Electronics retail chain with online presence",
+      url: "https://croma.com",
+      specialties: ["Electronics", "Appliances", "Mobile phones", "Gaming"],
+      deliveryTime: "1-3 days",
+      paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+      benefits: ["Extended warranty", "Installation service", "Tech support"]
+    },
+    {
+      name: "Vijay Sales",
+      category: "Electronics",
+      description: "Electronics retailer with competitive prices",
+      url: "https://vijaysales.com",
+      specialties: ["Electronics", "Home appliances", "Mobile", "Computing"],
+      deliveryTime: "2-5 days",
+      paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+      benefits: ["Price matching", "Extended warranty", "Expert advice"]
+    },
+    
+    // Books & Education
+    {
+      name: "Amazon Kindle",
+      category: "Books & eBooks",
+      description: "Digital books and audiobooks platform",
+      url: "https://kindle.amazon.in",
+      specialties: ["eBooks", "Audiobooks", "Magazines", "Comics"],
+      deliveryTime: "Instant download",
+      paymentMethods: ["Cards", "UPI", "Amazon Pay"],
+      benefits: ["Unlimited reading", "Whispersync", "X-Ray feature"]
+    },
+    
+    // Health & Medicine
+    {
+      name: "1mg",
+      category: "Healthcare",
+      description: "Online pharmacy and health platform",
+      url: "https://1mg.com",
+      specialties: ["Medicines", "Health tests", "Consultations", "Wellness"],
+      deliveryTime: "Same day/Next day",
+      paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+      benefits: ["Medicine reminders", "Doctor consultations", "Health records"]
+    },
+    {
+      name: "PharmEasy",
+      category: "Healthcare",
+      description: "Online medicine delivery platform",
+      url: "https://pharmeasy.in",
+      specialties: ["Medicines", "Healthcare products", "Lab tests"],
+      deliveryTime: "Same day/Next day",
+      paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+      benefits: ["Prescription management", "Medicine reminder", "Health wallet"]
+    },
+    
+    // Home & Furniture
+    {
+      name: "Urban Ladder",
+      category: "Furniture",
+      description: "Premium furniture and home decor",
+      url: "https://urbanladder.com",
+      specialties: ["Furniture", "Home decor", "Furnishing", "Lighting"],
+      deliveryTime: "7-21 days",
+      paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+      benefits: ["Design consultation", "Installation service", "Warranty"]
+    },
+    {
+      name: "Pepperfry",
+      category: "Furniture & Home",
+      description: "Online furniture and home products marketplace",
+      url: "https://pepperfry.com",
+      specialties: ["Furniture", "Home decor", "Kitchenware", "Lighting"],
+      deliveryTime: "7-15 days",
+      paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+      benefits: ["Studio experience", "Installation support", "Return policy"]
+    },
+    
+    // Food Delivery
+    {
+      name: "Swiggy",
+      category: "Food Delivery",
+      description: "Food delivery and quick commerce platform",
+      url: "https://swiggy.com",
+      specialties: ["Restaurant delivery", "Groceries", "Medicine", "Alcohol"],
+      deliveryTime: "30-45 minutes",
+      paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+      benefits: ["Live tracking", "Multiple cuisines", "Super membership"]
+    },
+    {
+      name: "Zomato",
+      category: "Food Delivery",
+      description: "Restaurant discovery and food delivery",
+      url: "https://zomato.com",
+      specialties: ["Food delivery", "Dining out", "Pro membership"],
+      deliveryTime: "30-45 minutes",
+      paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+      benefits: ["Restaurant reviews", "Gold membership", "Live tracking"]
+    }];
 
   const shoppingCategories = [
     {
@@ -285,39 +470,60 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
           </div>
         </div>
 
-        {/* Enhanced Online Shopping Platforms */}
+        {/* Comprehensive Online Shopping Platforms */}
         <div>
-          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
+          <h3 className="font-semibold text-travel-blue mb-6 flex items-center">
             <Truck className="mr-2 h-5 w-5" />
-            🛒 Online Shopping Platforms & Delivery
+            🛒 Online Shopping Platforms Available
           </h3>
-          {onlineShoppingPortals.map((category, catIndex) => (
-            <div key={catIndex} className="mb-6">
-              <h4 className="font-semibold text-vintage-gold mb-3 text-lg">{category.category}</h4>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {category.platforms.map((platform, platIndex) => (
-                  <div key={platIndex} className="bg-white rounded-lg p-4 border border-travel-blue/20 hover:shadow-md transition-all duration-200 hover:border-vintage-gold/50">
-                    <div className="flex items-start justify-between mb-2">
-                      <h5 className="font-semibold text-travel-blue text-sm">{platform.name}</h5>
-                      <a 
-                        href={`https://${platform.website}`} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-vintage-gold hover:text-vintage-gold/80 text-xs flex items-center"
-                      >
-                        <ExternalLink className="h-3 w-3 mr-1" />
-                        Visit
-                      </a>
-                    </div>
-                    <p className="text-xs text-muted-navy mb-2 line-clamp-2">{platform.description}</p>
-                    <div className="text-xs text-sage-green bg-sage-green/10 rounded-full px-2 py-1">
-                      💡 {platform.offers}
-                    </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {onlineShoppingPortals.map((platform, index) => (
+              <div key={index} className="bg-white rounded-lg p-4 border border-travel-blue/20 hover:shadow-md transition-all duration-200 hover:border-vintage-gold/50">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <h5 className="font-semibold text-travel-blue text-sm">{platform.name}</h5>
+                    <span className="text-xs text-vintage-gold bg-vintage-gold/10 rounded-full px-2 py-1">
+                      {platform.category}
+                    </span>
                   </div>
-                ))}
+                  <a 
+                    href={platform.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-vintage-gold hover:text-vintage-gold/80 text-xs flex items-center"
+                  >
+                    <ExternalLink className="h-3 w-3 mr-1" />
+                    Visit
+                  </a>
+                </div>
+                <p className="text-xs text-muted-navy mb-3 line-clamp-2">{platform.description}</p>
+                
+                {/* Specialties */}
+                <div className="mb-2">
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {platform.specialties.slice(0, 3).map((specialty, i) => (
+                      <span key={i} className="text-xs bg-sage-green/10 text-sage-green rounded px-2 py-1">
+                        {specialty}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Delivery Info */}
+                <div className="flex items-center justify-between text-xs text-muted-navy mb-2">
+                  <span className="flex items-center">
+                    <Clock className="h-3 w-3 mr-1" />
+                    {platform.deliveryTime}
+                  </span>
+                </div>
+
+                {/* Benefits */}
+                <div className="text-xs text-sage-green bg-sage-green/10 rounded px-2 py-1">
+                  💡 {platform.benefits.join(", ")}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Shopping Etiquette & Tips */}

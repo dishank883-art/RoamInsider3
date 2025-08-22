@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Coffee, Users, Music, Utensils, Dumbbell, Calendar, AlertCircle } from "lucide-react";
+import { Coffee, Users, Music, Utensils, Dumbbell, Calendar, AlertCircle, ExternalLink, MapPin, Globe, ShoppingCart } from "lucide-react";
 import type { Lifestyle } from "@shared/schema";
 
 interface LifestyleCultureProps {
@@ -235,6 +235,100 @@ export default function LifestyleCulture({ lifestyleData }: LifestyleCultureProp
               <span className="font-semibold text-warm-terracotta">Cannabis Laws:</span>
             </div>
             <p className="text-muted-navy">{lifestyleData.cannabisLaws}</p>
+          </div>
+        </div>
+
+        {/* Dynamic City-Specific Resources */}
+        <div>
+          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
+            <Globe className="mr-2 h-5 w-5" />
+            Local Resources & Links
+          </h3>
+          <div className="grid md:grid-cols-3 gap-4">
+            {/* Theater & Entertainment */}
+            <div className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
+              <h4 className="font-semibold text-sage-green mb-3 flex items-center">
+                <Music className="mr-2 h-4 w-4" />
+                Theater & Entertainment
+              </h4>
+              <div className="space-y-2 text-sm">
+                <a href="https://bookmyshow.com" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center text-travel-blue hover:underline">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  BookMyShow - Movies & Events
+                </a>
+                <a href="https://paytm.com/movies" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center text-travel-blue hover:underline">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  Paytm - Entertainment Tickets
+                </a>
+                <a href="https://ticketgenie.in" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center text-travel-blue hover:underline">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  TicketGenie - Live Shows
+                </a>
+              </div>
+            </div>
+
+            {/* Grocery & Daily Needs */}
+            <div className="bg-vintage-gold/5 rounded-lg p-4 border border-vintage-gold/20">
+              <h4 className="font-semibold text-vintage-gold mb-3 flex items-center">
+                <ShoppingCart className="mr-2 h-4 w-4" />
+                Groceries & Daily Needs
+              </h4>
+              <div className="space-y-2 text-sm">
+                <a href="https://blinkit.com" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center text-travel-blue hover:underline">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  Blinkit - 10min Delivery
+                </a>
+                <a href="https://bigbasket.com" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center text-travel-blue hover:underline">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  BigBasket - Groceries
+                </a>
+                <a href="https://dunzo.com" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center text-travel-blue hover:underline">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  Dunzo - Local Delivery
+                </a>
+                <a href="https://grofers.com" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center text-travel-blue hover:underline">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  Grofers - Essential Items
+                </a>
+              </div>
+            </div>
+
+            {/* Local Services */}
+            <div className="bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20">
+              <h4 className="font-semibold text-travel-blue mb-3 flex items-center">
+                <MapPin className="mr-2 h-4 w-4" />
+                Local Services
+              </h4>
+              <div className="space-y-2 text-sm">
+                <a href="https://urbancompany.com" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center text-travel-blue hover:underline">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  Urban Company - Home Services
+                </a>
+                <a href="https://housejoy.in" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center text-travel-blue hover:underline">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  Housejoy - Repairs & Cleaning
+                </a>
+                <a href="https://justdial.com" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center text-travel-blue hover:underline">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  Justdial - Local Business
+                </a>
+                <a href="https://sulekha.com" target="_blank" rel="noopener noreferrer" 
+                   className="flex items-center text-travel-blue hover:underline">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  Sulekha - Professional Services
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
