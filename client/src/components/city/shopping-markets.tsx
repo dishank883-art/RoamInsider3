@@ -71,8 +71,9 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
     }
   ];
 
-  // Comprehensive Online Shopping Platforms Available in India
-  const onlineShoppingPortals = [
+  // Get city-specific available platforms based on location and infrastructure
+  const getCitySpecificPlatforms = (cityName: string) => {
+    const allPlatforms = [
     // Major E-commerce Platforms
     {
       name: "Amazon India",
@@ -277,7 +278,205 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
       deliveryTime: "30-45 minutes",
       paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
       benefits: ["Restaurant reviews", "Gold membership", "Live tracking"]
+    },
+    
+    // Additional Popular Platforms
+    {
+      name: "Lenskart",
+      category: "Eyewear",
+      description: "Online eyewear retailer with home eye checkup",
+      url: "https://lenskart.com",
+      specialties: ["Eyeglasses", "Sunglasses", "Contact lenses", "Eye checkup"],
+      deliveryTime: "3-7 days",
+      paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+      benefits: ["Home eye test", "3D try-on", "Free delivery"]
+    },
+    {
+      name: "FirstCry",
+      category: "Kids & Baby",
+      description: "Baby and kids products specialist",
+      url: "https://firstcry.com",
+      specialties: ["Baby products", "Kids clothing", "Toys", "Maternity"],
+      deliveryTime: "2-7 days",
+      paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+      benefits: ["Expert advice", "Easy returns", "Loyalty rewards"]
+    },
+    {
+      name: "Tata CLiQ",
+      category: "Multi-category",
+      description: "Tata Group's omnichannel marketplace",
+      url: "https://tatacliq.com",
+      specialties: ["Electronics", "Fashion", "Home", "Luxury brands"],
+      deliveryTime: "1-7 days",
+      paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+      benefits: ["Authentic products", "NeuCoins rewards", "Tata brand trust"]
+    },
+    {
+      name: "Paytm Mall",
+      category: "Multi-category",
+      description: "Paytm's e-commerce platform with cashbacks",
+      url: "https://paytmmall.com",
+      specialties: ["Electronics", "Fashion", "Home appliances", "Groceries"],
+      deliveryTime: "1-7 days",
+      paymentMethods: ["Paytm Wallet", "Cards", "UPI", "COD"],
+      benefits: ["Paytm cashback", "Same-day delivery", "Easy returns"]
+    },
+    {
+      name: "Reliance Digital",
+      category: "Electronics",
+      description: "Electronics and appliances from Reliance",
+      url: "https://reliancedigital.in",
+      specialties: ["Electronics", "Appliances", "Mobile phones", "Computing"],
+      deliveryTime: "2-5 days",
+      paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+      benefits: ["ResQ services", "Extended warranty", "Installation"]
+    },
+    {
+      name: "BookMyShow",
+      category: "Entertainment",
+      description: "Movie tickets and event bookings",
+      url: "https://bookmyshow.com",
+      specialties: ["Movie tickets", "Events", "Plays", "Sports"],
+      deliveryTime: "Instant booking",
+      paymentMethods: ["Cards", "UPI", "Wallets", "Net banking"],
+      benefits: ["Advance booking", "Seat selection", "Instant confirmation"]
+    },
+    {
+      name: "Shoppers Stop",
+      category: "Fashion & Lifestyle",
+      description: "Premium fashion and lifestyle destination",
+      url: "https://shoppersstop.com",
+      specialties: ["Premium fashion", "Beauty", "Accessories", "Home"],
+      deliveryTime: "3-7 days",
+      paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+      benefits: ["First Citizen loyalty", "Personal shopping", "Premium brands"]
+    },
+    {
+      name: "Bewakoof",
+      category: "Fashion",
+      description: "Trendy casual wear and accessories",
+      url: "https://bewakoof.com",
+      specialties: ["T-shirts", "Casual wear", "Accessories", "Plus size"],
+      deliveryTime: "3-7 days",
+      paymentMethods: ["Cards", "UPI", "Wallets", "COD"],
+      benefits: ["Unique designs", "Plus size options", "Affordable fashion"]
+    },
+    {
+      name: "Boat Lifestyle",
+      category: "Electronics",
+      description: "Audio and wearables from Indian brand",
+      url: "https://boat-lifestyle.com",
+      specialties: ["Headphones", "Earbuds", "Speakers", "Smartwatches"],
+      deliveryTime: "3-7 days",
+      paymentMethods: ["Cards", "UPI", "EMI", "COD"],
+      benefits: ["Indian brand", "Warranty", "Latest designs"]
     }];
+
+    // City categorization for platform availability
+    const majorMetros = ['mumbai', 'delhi', 'new-delhi', 'bangalore', 'kolkata', 'chennai', 'pune', 'hyderabad'];
+    const tier2Cities = ['goa', 'kochi', 'udaipur', 'pondicherry', 'dehradun', 'mussoorie', 'rishikesh'];
+    const hillStations = ['mussoorie', 'dehradun', 'dharamkot', 'kasol', 'bir', 'darjeeling', 'tosh', 'wayanad'];
+    const coastalCities = ['goa', 'mumbai', 'kochi', 'pondicherry', 'varkala', 'alleppey'];
+    const remoteCities = ['ziro', 'tosh', 'dharamkot', 'kasol'];
+    
+    const cityLower = cityName.toLowerCase().replace(/\s+/g, '-');
+
+    // Filter platforms based on city type and infrastructure
+    let availablePlatforms = allPlatforms.filter(platform => {
+      // All platforms available in major metros
+      if (majorMetros.includes(cityLower)) {
+        return true;
+      }
+      
+      // Most platforms available in tier-2 cities, except ultra-fast delivery
+      if (tier2Cities.includes(cityLower)) {
+        if (platform.name === "Grofers (Blinkit)" || platform.name === "Zepto") {
+          return false; // Ultra-fast delivery not available in smaller cities
+        }
+        return true;
+      }
+      
+      // Limited platforms in hill stations and remote areas
+      if (hillStations.includes(cityLower) || remoteCities.includes(cityLower)) {
+        const limitedPlatforms = [
+          "Amazon India", "Flipkart", "BigBasket", "1mg", "PharmEasy", 
+          "JioMart", "Swiggy", "Zomato", "Amazon Kindle"
+        ];
+        return limitedPlatforms.includes(platform.name);
+      }
+      
+      // Default for other cities - most platforms available
+      return platform.name !== "Grofers (Blinkit)"; // Ultra-fast delivery limited
+    });
+
+    // Adjust delivery times based on city location
+    availablePlatforms = availablePlatforms.map(platform => ({
+      ...platform,
+      deliveryTime: getAdjustedDeliveryTime(platform.deliveryTime, cityLower, majorMetros, tier2Cities, hillStations, remoteCities),
+      citySpecificNote: getCitySpecificNote(platform.name, cityLower, coastalCities, hillStations)
+    }));
+
+    return availablePlatforms;
+  };
+
+  const getAdjustedDeliveryTime = (originalTime: string, cityLower: string, majorMetros: string[], tier2Cities: string[], hillStations: string[], remoteCities: string[]) => {
+    if (majorMetros.includes(cityLower)) {
+      return originalTime; // Original fast delivery times
+    } else if (tier2Cities.includes(cityLower)) {
+      if (originalTime.includes("Same day")) {
+        return "Next day delivery";
+      } else if (originalTime.includes("8-15 minutes")) {
+        return "2-4 hours";
+      }
+      return originalTime;
+    } else if (hillStations.includes(cityLower) || remoteCities.includes(cityLower)) {
+      if (originalTime.includes("Same day") || originalTime.includes("Next day")) {
+        return "2-5 days";
+      } else if (originalTime.includes("30-45 minutes")) {
+        return "1-2 hours";
+      } else if (originalTime.includes("minutes")) {
+        return "Same day";
+      }
+      return originalTime.replace(/(\d+)-(\d+) days/, (match, p1, p2) => `${parseInt(p1) + 2}-${parseInt(p2) + 3} days`);
+    }
+    return originalTime;
+  };
+
+  const getCitySpecificNote = (platformName: string, cityLower: string, coastalCities: string[], hillStations: string[]) => {
+    if (platformName === "BigBasket" && coastalCities.includes(cityLower)) {
+      return "Fresh seafood and coconut products available";
+    }
+    if (platformName === "Amazon India" && hillStations.includes(cityLower)) {
+      return "Mountain delivery available but weather dependent";
+    }
+    if (platformName === "Swiggy" && hillStations.includes(cityLower)) {
+      return "Limited restaurant options, focus on local cuisine";
+    }
+    if (platformName === "1mg" && cityLower === "ziro") {
+      return "Essential medicines only, limited healthcare products";
+    }
+    return "";
+  };
+
+  // Get city-specific platforms
+  const onlineShoppingPortals = getCitySpecificPlatforms(city.name);
+
+  const getCityAvailabilityNote = (cityName: string) => {
+    const cityLower = cityName.toLowerCase().replace(/\s+/g, '-');
+    const majorMetros = ['mumbai', 'delhi', 'new-delhi', 'bangalore', 'kolkata', 'chennai', 'pune', 'hyderabad'];
+    const tier2Cities = ['goa', 'kochi', 'udaipur', 'pondicherry', 'dehradun', 'mussoorie', 'rishikesh'];
+    const hillStations = ['mussoorie', 'dehradun', 'dharamkot', 'kasol', 'bir', 'darjeeling', 'tosh', 'wayanad'];
+    const remoteCities = ['ziro', 'tosh', 'dharamkot', 'kasol'];
+
+    if (majorMetros.includes(cityLower)) {
+      return "All major platforms available with fastest delivery options including 10-minute delivery services.";
+    } else if (tier2Cities.includes(cityLower)) {
+      return "Most platforms available with standard delivery. Ultra-fast delivery services may be limited.";
+    } else if (hillStations.includes(cityLower) || remoteCities.includes(cityLower)) {
+      return "Essential platforms available. Delivery times may be extended due to terrain and weather conditions.";
+    }
+    return "Most platforms available with standard delivery times for this region.";
+  };
 
   const shoppingCategories = [
     {
@@ -470,12 +669,18 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
           </div>
         </div>
 
-        {/* Comprehensive Online Shopping Platforms */}
+        {/* City-Specific Online Shopping Platforms */}
         <div>
-          <h3 className="font-semibold text-travel-blue mb-6 flex items-center">
+          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
             <Truck className="mr-2 h-5 w-5" />
-            🛒 Online Shopping Platforms Available
+            🛒 Online Shopping Platforms in {city.name}
           </h3>
+          <div className="mb-4 p-3 bg-travel-blue/5 rounded-lg border border-travel-blue/20">
+            <p className="text-sm text-muted-navy">
+              <strong>{onlineShoppingPortals.length} platforms available</strong> with delivery to {city.name}. 
+              Delivery times may vary based on location and weather conditions.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {onlineShoppingPortals.map((platform, index) => (
               <div key={index} className="bg-white rounded-lg p-4 border border-travel-blue/20 hover:shadow-md transition-all duration-200 hover:border-vintage-gold/50">
@@ -510,19 +715,31 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
                 </div>
 
                 {/* Delivery Info */}
-                <div className="flex items-center justify-between text-xs text-muted-navy mb-2">
-                  <span className="flex items-center">
-                    <Clock className="h-3 w-3 mr-1" />
-                    {platform.deliveryTime}
-                  </span>
+                <div className="flex items-center text-xs text-muted-navy mb-2">
+                  <Clock className="h-3 w-3 mr-1" />
+                  <span>{platform.deliveryTime}</span>
                 </div>
+
+                {/* City-specific note */}
+                {(platform as any).citySpecificNote && (
+                  <div className="text-xs text-travel-blue bg-travel-blue/10 rounded px-2 py-1 mb-2">
+                    📍 {(platform as any).citySpecificNote}
+                  </div>
+                )}
 
                 {/* Benefits */}
                 <div className="text-xs text-sage-green bg-sage-green/10 rounded px-2 py-1">
-                  💡 {platform.benefits.join(", ")}
+                  💡 {platform.benefits.slice(0, 2).join(", ")}
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* City-specific platform availability note */}
+          <div className="mt-4 p-3 bg-vintage-gold/5 rounded-lg border-l-4 border-vintage-gold">
+            <p className="text-sm text-muted-navy">
+              <strong>Platform Availability:</strong> {getCityAvailabilityNote(city.name)}
+            </p>
           </div>
         </div>
 
