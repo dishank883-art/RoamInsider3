@@ -285,6 +285,233 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
     return marketsByCity[cityLower] || defaultMarkets;
   };
 
+  // City-specific modern shopping centers and malls
+  const getCitySpecificModernShopping = (cityName: string) => {
+    const cityLower = cityName.toLowerCase().replace(/\s+/g, '-');
+    
+    const modernShoppingByCity: Record<string, any[]> = {
+      mumbai: [
+        {
+          name: "Phoenix Marketcity",
+          type: "Premium Mall",
+          brands: ["International", "National", "Luxury"],
+          floors: 4,
+          hours: "11:00 AM - 11:00 PM",
+          priceRange: "₹1000-100000 ($12-1200)",
+          bargaining: "No bargaining",
+          tips: "Visit during weekdays to avoid crowds, great food court",
+          location: "Kurla West",
+          highlights: ["IMAX theater", "Premium brands", "Fine dining"],
+          facilities: ["Parking", "Food court", "Cinema", "ATM", "Rest areas", "Play zone"]
+        },
+        {
+          name: "Palladium Mall",
+          type: "Luxury Shopping",
+          brands: ["Luxury", "International", "Premium"],
+          floors: 6,
+          hours: "11:00 AM - 11:00 PM",
+          priceRange: "₹2000-200000 ($24-2400)",
+          bargaining: "No bargaining",
+          tips: "High-end shopping destination, valet parking available",
+          location: "Lower Parel",
+          highlights: ["Luxury brands", "Premium dining", "Art installations"],
+          facilities: ["Valet parking", "Concierge", "Premium lounges", "Fine dining"]
+        }
+      ],
+      delhi: [
+        {
+          name: "Select City Walk",
+          type: "Premium Mall",
+          brands: ["International", "National", "Luxury"],
+          floors: 6,
+          hours: "10:00 AM - 11:00 PM",
+          priceRange: "₹500-150000 ($6-1800)",
+          bargaining: "No bargaining",
+          tips: "Connected to Saket metro station, excellent food court",
+          location: "Saket",
+          highlights: ["Metro connected", "Premium brands", "Multiplex"],
+          facilities: ["Metro connectivity", "Multiplex", "Food court", "Parking", "ATM"]
+        },
+        {
+          name: "DLF Mall of India",
+          type: "Mega Mall",
+          brands: ["International", "National", "Budget to Luxury"],
+          floors: 5,
+          hours: "10:00 AM - 11:00 PM",
+          priceRange: "₹300-100000 ($3.60-1200)",
+          bargaining: "No bargaining",
+          tips: "Largest mall in India, plan for full day visit",
+          location: "Noida",
+          highlights: ["Largest mall", "Adventure sports", "Ice skating"],
+          facilities: ["Adventure zone", "Ice rink", "Multiplex", "Hypermarket", "Food court"]
+        }
+      ],
+      bangalore: [
+        {
+          name: "UB City Mall",
+          type: "Luxury Mall",
+          brands: ["Luxury", "International", "Premium"],
+          floors: 5,
+          hours: "11:00 AM - 11:00 PM",
+          priceRange: "₹1500-200000 ($18-2400)",
+          bargaining: "No bargaining",
+          tips: "Most expensive mall in Bangalore, rooftop dining available",
+          location: "Vittal Mallya Road",
+          highlights: ["Luxury brands", "Rooftop dining", "Art galleries"],
+          facilities: ["Valet parking", "Fine dining", "Art gallery", "Premium services"]
+        },
+        {
+          name: "Forum Mall Koramangala",
+          type: "Popular Mall",
+          brands: ["National", "International", "Mid-range"],
+          floors: 6,
+          hours: "10:00 AM - 10:00 PM",
+          priceRange: "₹500-50000 ($6-600)",
+          bargaining: "No bargaining",
+          tips: "IT crowd favorite, great for tech accessories",
+          location: "Koramangala",
+          highlights: ["Tech hub", "Young crowd", "Good connectivity"],
+          facilities: ["Multiplex", "Food court", "Electronics stores", "Books", "Parking"]
+        }
+      ],
+      goa: [
+        {
+          name: "Caculo Mall",
+          type: "Regional Mall",
+          brands: ["National", "Regional", "Local"],
+          floors: 3,
+          hours: "10:00 AM - 10:00 PM",
+          priceRange: "₹300-15000 ($3.60-180)",
+          bargaining: "No bargaining",
+          tips: "Only major mall in Goa, good for essentials",
+          location: "Panaji",
+          highlights: ["AC comfort", "Local brands", "Central location"],
+          facilities: ["Food court", "Supermarket", "Parking", "ATM", "Pharmacy"]
+        },
+        {
+          name: "Mapusa Market Complex",
+          type: "Modern Market",
+          brands: ["Local", "Regional", "National"],
+          floors: 2,
+          hours: "9:00 AM - 9:00 PM",
+          priceRange: "₹200-8000 ($2.40-96)",
+          bargaining: "Limited",
+          tips: "Mix of traditional and modern shopping",
+          location: "Mapusa",
+          highlights: ["Local products", "Tourist friendly", "Cultural mix"],
+          facilities: ["Parking", "Local cuisine", "Tourist information"]
+        }
+      ],
+      rishikesh: [
+        {
+          name: "Omaxe Celebration Mall",
+          type: "Small Town Mall",
+          brands: ["National", "Regional", "Local"],
+          floors: 3,
+          hours: "10:00 AM - 9:00 PM",
+          priceRange: "₹300-10000 ($3.60-120)",
+          bargaining: "No bargaining",
+          tips: "Only modern mall in Rishikesh, limited brands",
+          location: "Dehradun Road",
+          highlights: ["AC shopping", "Brand stores", "Food court"],
+          facilities: ["Food court", "Parking", "ATM", "Multiplex"]
+        }
+      ],
+      kochi: [
+        {
+          name: "Lulu Mall",
+          type: "Mega Mall",
+          brands: ["International", "National", "Regional"],
+          floors: 5,
+          hours: "10:00 AM - 11:00 PM",
+          priceRange: "₹300-80000 ($3.60-960)",
+          bargaining: "No bargaining",
+          tips: "Largest mall in India by total floor area",
+          location: "Edapally",
+          highlights: ["Largest mall", "Ice skating", "Hypermarket"],
+          facilities: ["Ice rink", "Multiplex", "Hypermarket", "Food court", "Gaming zone"]
+        },
+        {
+          name: "Oberon Mall",
+          type: "Premium Mall",
+          brands: ["National", "International", "Premium"],
+          floors: 7,
+          hours: "10:00 AM - 10:00 PM",
+          priceRange: "₹500-50000 ($6-600)",
+          bargaining: "No bargaining",
+          tips: "First mall in Kochi, well-established brands",
+          location: "Edapally",
+          highlights: ["Pioneer mall", "Established brands", "Good connectivity"],
+          facilities: ["Multiplex", "Food court", "Bookstore", "Parking"]
+        }
+      ],
+      pune: [
+        {
+          name: "Phoenix MarketCity",
+          type: "Premium Mall",
+          brands: ["International", "National", "Premium"],
+          floors: 4,
+          hours: "11:00 AM - 11:00 PM",
+          priceRange: "₹500-75000 ($6-900)",
+          bargaining: "No bargaining",
+          tips: "Popular weekend destination, great entertainment",
+          location: "Viman Nagar",
+          highlights: ["Entertainment hub", "Premium brands", "Food diversity"],
+          facilities: ["Multiplex", "Gaming zone", "Food court", "Hypermarket", "Parking"]
+        }
+      ],
+      pondicherry: [
+        {
+          name: "Brookefields Mall",
+          type: "Regional Mall",
+          brands: ["National", "Regional", "Local"],
+          floors: 3,
+          hours: "10:00 AM - 10:00 PM",
+          priceRange: "₹400-20000 ($4.80-240)",
+          bargaining: "No bargaining",
+          tips: "Only major mall in Puducherry, French influence",
+          location: "Kurumbapet",
+          highlights: ["French architecture", "AC comfort", "Local brands"],
+          facilities: ["Food court", "Parking", "ATM", "Supermarket"]
+        }
+      ],
+      darjeeling: [
+        {
+          name: "Hong Kong Market",
+          type: "Multi-level Market",
+          brands: ["Local", "Regional", "Import goods"],
+          floors: 4,
+          hours: "9:00 AM - 8:00 PM",
+          priceRange: "₹100-8000 ($1.20-96)",
+          bargaining: "Moderate",
+          tips: "Tibetan and Nepali goods, warm clothing available",
+          location: "Mall Road",
+          highlights: ["Himalayan goods", "Warm clothing", "Local crafts"],
+          facilities: ["Mountain views", "Local cuisine", "Warm clothing"]
+        }
+      ]
+    };
+
+    // Default modern shopping for cities not specifically listed
+    const defaultModernShopping = [
+      {
+        name: `${cityName} Shopping Complex`,
+        type: "Local Shopping Center",
+        brands: ["National", "Regional", "Local"],
+        floors: 2,
+        hours: "10:00 AM - 9:00 PM",
+        priceRange: "₹300-15000 ($3.60-180)",
+        bargaining: "No bargaining",
+        tips: "Main shopping center for branded goods",
+        location: "City center",
+        highlights: ["Brand stores", "AC comfort", "Fixed pricing"],
+        facilities: ["Parking", "Food court", "ATM"]
+      }
+    ];
+
+    return modernShoppingByCity[cityLower] || defaultModernShopping;
+  };
+
   // Get city-specific available platforms based on location and infrastructure
   const getCitySpecificPlatforms = (cityName: string) => {
     const allPlatforms = [
@@ -678,34 +905,7 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
             Modern Shopping Centers & Malls
           </h3>
           <div className="grid md:grid-cols-2 gap-4 mb-6">
-            {[
-              {
-                name: "City Center Mall",
-                type: "Shopping Mall",
-                brands: ["International", "National", "Local"],
-                floors: 4,
-                hours: "10:00 AM - 10:00 PM",
-                priceRange: "₹500-50000 ($6-600)",
-                bargaining: "No bargaining",
-                tips: "Look for end-of-season sales",
-                location: "CBD area",
-                highlights: ["AC comfort", "Brand guarantees", "Fixed pricing"],
-                facilities: ["Food court", "Parking", "ATM", "Rest areas"]
-              },
-              {
-                name: "Electronics Hub",
-                type: "Electronics Market",
-                specialties: ["Mobile phones", "Laptops", "Accessories", "Repairs"],
-                hours: "10:00 AM - 8:00 PM",
-                bestTime: "Weekdays for better deals",
-                priceRange: "₹200-100000 ($2.40-1200)",
-                bargaining: "Moderate to high",
-                tips: "Compare prices across multiple shops",
-                location: "Commercial district",
-                highlights: ["Latest tech", "Service centers nearby", "Competitive pricing"],
-                facilities: ["Warranty service", "Tech support", "Installation"]
-              }
-            ].map((center, index) => (
+            {getCitySpecificModernShopping(city.name).map((center, index) => (
               <div key={index} className="bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20">
                 <div className="flex items-start justify-between mb-2">
                   <div>
