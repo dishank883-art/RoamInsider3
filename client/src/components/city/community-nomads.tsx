@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, MessageCircle, Calendar, MapPin, Coffee, Briefcase } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Users, MessageCircle, Calendar, MapPin, Coffee, Briefcase, Crown, ExternalLink } from "lucide-react";
 import type { CityWithDetails } from "@shared/schema";
 
 interface CommunityNomadsProps {
@@ -44,6 +45,56 @@ export default function CommunityNomads({ city }: CommunityNomadsProps) {
         </p>
       </CardHeader>
       <CardContent className="space-y-8">
+
+        {/* Roam Insider Community */}
+        <div className="bg-gradient-to-r from-travel-blue/10 to-vintage-gold/10 rounded-xl p-6 border-2 border-travel-blue/20">
+          <div className="text-center">
+            <h3 className="font-semibold text-travel-blue text-xl mb-3 flex items-center justify-center">
+              <Users className="mr-2 h-6 w-6 text-vintage-gold" />
+              Join Roam Insider Community
+            </h3>
+            <p className="text-muted-navy mb-6 max-w-md mx-auto">
+              Connect with fellow digital nomads and travelers in {city.name}. Ask questions, share experiences, 
+              get local tips, and meet like-minded individuals.
+            </p>
+            
+            <div className="space-y-4">
+              <Button 
+                asChild
+                className="bg-travel-blue hover:bg-travel-blue/90 text-white font-semibold px-6 py-3 rounded-xl w-full sm:w-auto"
+              >
+                <a 
+                  href="https://discord.gg/Y39GGpQtMm" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center"
+                  data-testid="join-community-button"
+                >
+                  Join Free Community
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+              
+              <div className="flex flex-wrap justify-center gap-3 text-sm">
+                <Badge className="bg-sage-green/10 text-sage-green">✓ Free Forever</Badge>
+                <Badge className="bg-vintage-gold/10 text-vintage-gold">✓ City Guides</Badge>
+                <Badge className="bg-travel-blue/10 text-travel-blue">✓ Active Travelers</Badge>
+              </div>
+            </div>
+            
+            {/* Premium Membership Teaser */}
+            <div className="mt-6 pt-4 border-t border-travel-blue/20">
+              <div className="flex items-center justify-center mb-2">
+                <Crown className="h-4 w-4 text-vintage-gold mr-1" />
+                <span className="text-vintage-gold font-semibold text-sm">Premium Membership</span>
+                <Crown className="h-4 w-4 text-vintage-gold ml-1" />
+              </div>
+              <p className="text-muted-navy text-xs">
+                Coming Soon: Exclusive city meetups, 1-on-1 local guides, priority support & more
+              </p>
+            </div>
+          </div>
+        </div>
         
         {/* Coworking Spaces */}
         <div>

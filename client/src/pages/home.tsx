@@ -160,6 +160,36 @@ export default function Home() {
         )}
       </section>
 
+      {/* Discord Community Section */}
+      <section className="bg-travel-blue py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-serif text-3xl lg:text-4xl font-bold text-white mb-4">
+            Join the Roam Insider Community
+          </h2>
+          <p className="text-xl text-cream/90 mb-8 max-w-2xl mx-auto">
+            Connect with fellow digital nomads and travelers. Ask questions, share experiences, 
+            get city guides, and meet like-minded individuals from around the world.
+          </p>
+          <Button 
+            asChild
+            size="lg"
+            className="bg-vintage-gold hover:bg-vintage-gold/90 text-travel-blue font-semibold px-8 py-4 text-lg rounded-xl"
+          >
+            <a 
+              href="https://discord.gg/Y39GGpQtMm" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              data-testid="join-discord-community"
+            >
+              Join Free Community on Discord
+            </a>
+          </Button>
+          <p className="text-cream/70 text-sm mt-4">
+            100% Free • City Guides Available • Active Community
+          </p>
+        </div>
+      </section>
+
       <FeaturesSection />
       <CommunitySection />
       <NewsletterSection />
