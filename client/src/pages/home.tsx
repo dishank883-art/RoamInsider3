@@ -9,7 +9,7 @@ import CityCard from "@/components/ui/city-card";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import type { City } from "@shared/schema";
 import { staticCitiesData, getAllTags } from "@/lib/static-cities-data";
 
@@ -18,15 +18,23 @@ export default function Home() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [budgetRange, setBudgetRange] = useState<[number, number]>([0, 100000]);
   const [showAllCities, setShowAllCities] = useState(false);
-  const [allCities, setAllCities] = useState<City[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  // Load cities data on component mount
-  useEffect(() => {
-    // For static deployment, always use static data directly without API calls
-    setAllCities(staticCitiesData);
-    setIsLoading(false);
-  }, []);
+  const { data: allCities, isLoading } = useQuery<City[]>({
+    queryKey: ["/api/cities"],
+    queryFn: async () => {
+      try {
+        const res = await fetch('/api/cities');
+        if (!res.ok) {
+          throw new Error('API not available');
+        }
+        return await res.json();
+      } catch (error) {
+        // Fallback to static data for deployment
+        console.log('Using static data fallback');
+        return staticCitiesData;
+      }
+    },
+  });
 
   // Filter and search cities
   const filteredCities = useMemo(() => {

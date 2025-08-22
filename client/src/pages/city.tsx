@@ -1,6 +1,6 @@
 import { useRoute } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import CityOverview from "@/components/city/city-overview";
@@ -24,45 +24,16 @@ import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { ArrowLeft, Star, MapPin, Users, DollarSign, Wifi, Car, Cloud, Shield, Heart, Compass, Lightbulb, Train } from "lucide-react";
 import type { CityWithDetails } from "@shared/schema";
-import { staticCitiesData } from "@/lib/static-cities-data";
 
 export default function CityPage() {
   const [, params] = useRoute("/city/:slug");
   const slug = params?.slug;
   const [activeTab, setActiveTab] = useState("overview");
-  const [city, setCity] = useState<CityWithDetails | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
-  // Load city data on component mount
-  useEffect(() => {
-    if (!slug) {
-      setError('No city slug provided');
-      setIsLoading(false);
-      return;
-    }
-
-    // For static deployment, use static data directly
-    const staticCity = staticCitiesData.find(c => c.slug === slug);
-    if (!staticCity) {
-      setError('City not found');
-      setIsLoading(false);
-      return;
-    }
-
-    // Convert City to CityWithDetails
-    const cityWithDetails: CityWithDetails = {
-      ...staticCity,
-      internetSpeed: 50,
-      safetyScore: 7.5,
-      costOfLivingIndex: 3500,
-      nomadFriendliness: 8.0,
-      climate: { temperature: 28, humidity: 65, rainfall: 150 },
-    };
-
-    setCity(cityWithDetails);
-    setIsLoading(false);
-  }, [slug]);
+  const { data: city, isLoading, error } = useQuery<CityWithDetails>({
+    queryKey: ["/api/cities", slug],
+    enabled: !!slug,
+  });
 
   // Complete tab configuration as per requirements
   const tabs = [
