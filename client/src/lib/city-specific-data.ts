@@ -1563,6 +1563,145 @@ export const citySpecificData: Record<string, CitySpecificData> = {
       bestMonths: "March to May and September to November for optimal conditions"
     }
   },
+  goa: {
+    moneyTips: [
+      "Stay in North Goa guest houses near Anjuna/Arambol for ₹800-1,500/night",
+      "Eat at local Goan family restaurants for authentic fish curry rice ₹150-250", 
+      "Rent monthly scooters for ₹3,000-4,000 to explore all beaches freely",
+      "Shop at Mapusa Friday Market for cheapest groceries and local produce",
+      "Book accommodation during off-season (June-September) for 50% discounts",
+      "Join beach shacks for co-working - many offer WiFi + workspace deals"
+    ],
+    streetFood: [
+      { item: "Fish Curry Rice", price: "₹120-180 ($1.50-2.20)" },
+      { item: "Bebinca (Sweet)", price: "₹50-80 ($0.60-1)" },
+      { item: "Prawn Balchão", price: "₹200-300 ($2.40-3.60)" },
+      { item: "Pork Vindaloo", price: "₹250-350 ($3-4.20)" },
+      { item: "Sol Kadhi", price: "₹30-50 ($0.40-0.60)" },
+      { item: "Goan Sausage Pav", price: "₹60-100 ($0.75-1.20)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Artjuna (Anjuna)", speed: "40-60 Mbps", quality: "Excellent" },
+        { name: "Café Lilliput (Anjuna)", speed: "35-50 Mbps", quality: "Good" },
+        { name: "Sublime (Morjim)", speed: "50-80 Mbps", quality: "Excellent" },
+        { name: "Baba Au Rhum (Anjuna)", speed: "30-45 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "Panaji City Center", speed: "25-40 Mbps", quality: "Good" },
+        { name: "Dabolim Airport", speed: "60-100 Mbps", quality: "Excellent" },
+        { name: "Mapusa Market Area", speed: "20-35 Mbps", quality: "Fair" },
+        { name: "Beach Shacks (Anjuna/Arambol)", speed: "25-45 Mbps", quality: "Good" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "COWRKS Goa",
+        address: "Porvorim, North Goa",
+        pricing: "₹6,000/month",
+        speedMbps: 100,
+        amenities: ["Modern Design", "Meeting Rooms", "Events", "Cafe", "24/7 Access"]
+      },
+      {
+        name: "Drishti Marine",
+        address: "Arambol Beach",
+        pricing: "₹4,500/month",
+        speedMbps: 60,
+        amenities: ["Beach Views", "Yoga Classes", "Community", "Wellness Focus"]
+      },
+      {
+        name: "91springboard Goa",
+        address: "Panaji",
+        pricing: "₹5,500/month", 
+        speedMbps: 80,
+        amenities: ["Central Location", "Networking", "Events", "Professional Environment"]
+      }
+    ],
+    localExperienceTips: [
+      "Explore Old Goa churches and Portuguese colonial architecture on heritage walks",
+      "Take sunset boat cruises on Mandovi River with live Goan folk music",
+      "Visit spice plantations in Ponda for authentic Goan agricultural experiences",
+      "Experience Saturday Night Market in Arpora for shopping and live entertainment",
+      "Join Goan cooking classes to learn traditional recipes using coconut and spices",
+      "Attend local festivals like Carnival (February) and Festa celebrations throughout year"
+    ],
+    transportationTips: [
+      "Rent scooters for beach hopping - most convenient way to explore Goa",
+      "Use Kadamba buses for budget travel between North and South Goa (₹15-30)",
+      "Book prepaid taxis at Dabolim Airport to avoid overcharging by drivers",
+      "Try river ferries between North and South Goa for scenic and cheap transport",
+      "Use ride-hailing apps like Ola/Uber in main areas, limited in remote beaches",
+      "Negotiate auto-rickshaw fares beforehand or insist on meter usage"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Peak season (Nov-Mar): Perfect weather for beach-side coworking and outdoor cafes",
+        "Monsoon season (Jun-Sep): Heavy rains require indoor workspaces with good ventilation", 
+        "Hot season (Apr-May): Air conditioning essential for comfortable indoor work"
+      ],
+      healthConsiderations: [
+        "High humidity year-round - stay hydrated and use dehumidifiers indoors",
+        "Monsoon brings increased risk of water-borne diseases - stick to bottled water",
+        "Strong sun exposure on beaches - use sunscreen and protective clothing"
+      ],
+      equipmentNeeds: [
+        "Moisture protection for electronics during monsoon season",
+        "Reliable internet backup solutions for weather-related outages",
+        "Cooling solutions for laptops in high humidity and heat"
+      ],
+      bestMonths: "November to March for optimal working conditions and weather"
+    },
+    insiderHacks: {
+      accommodation: [
+        "Stay in Portuguese heritage homes converted to guesthouses in Fontainhas",
+        "Book monthly beach house rentals in Arambol/Mandrem for long-term stays",
+        "Consider homestays with Goan families for cultural immersion and better prices",
+        "Look for places with backup generators - power cuts common during monsoons",
+        "Choose accommodations walking distance to beaches for daily swim breaks"
+      ],
+      food: [
+        "Eat at family-run restaurants in villages for authentic Goan home cooking",
+        "Try cashew feni (local spirit) and fresh seafood at beach shacks",
+        "Visit Margao market for fresh fish and traditional Goan ingredients",
+        "Join locals for traditional fish curry rice meals served on banana leaves",
+        "Experience Goan-Portuguese fusion cuisine at heritage restaurants in Panaji"
+      ],
+      transport: [
+        "Use motorcycle taxis (pilots) for quick rides through narrow village roads",
+        "Download GoaMiles app for reliable local taxi booking and fair pricing",
+        "Take early morning buses to avoid crowds and get better seats",
+        "Rent bicycles in quieter areas like Divar Island for eco-friendly exploration",
+        "Book shared cabs to airport in advance for better rates than individual taxis"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Divar Island", 
+        location: "Old Goa Ferry Route",
+        tip: "Peaceful Portuguese village perfect for quiet work with rural charm",
+        coordinates: "15.5058°N, 73.9196°E",
+        timing: "Best during early morning and sunset"
+      },
+      {
+        name: "Fontainhas Quarter",
+        location: "Panaji Latin Quarter", 
+        tip: "Colorful Portuguese heritage area with charming cafes for creative work",
+        website: "goa-tourism.com"
+      },
+      {
+        name: "Hollant Beach",
+        location: "South Goa",
+        tip: "Secluded black sand beach perfect for peaceful work sessions",
+        coordinates: "15.0074°N, 74.0296°E"
+      },
+      {
+        name: "Sahakari Spice Farm",
+        location: "Ponda",
+        tip: "Organic spice plantation with peaceful environment for nature-focused work",
+        timing: "Morning tours best for cool weather"
+      }
+    ]
+  },
   tosh: {
     moneyTips: [
       "Book accommodation in advance during peak trekking seasons (April-June, September-October)",

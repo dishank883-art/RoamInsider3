@@ -457,7 +457,297 @@ export class MemStorage implements IStorage {
       updatedAt: new Date(),
     });
 
+    // Goa Cost of Living
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: goaId,
+      monthlyBudgetINR: 28000,
+      monthlyBudgetUSD: 336,
+      studioRentINR: 12000,
+      oneBhkRentINR: 18000,
+      twoBhkRentINR: 28000,
+      utilitiesINR: 2000,
+      groceriesINR: 5500,
+      eatingOutINR: 4000,
+      coworkingINR: 5000,
+      transportINR: 3000,
+      simDataINR: 400,
+      gymINR: 1200,
+      coffeeINR: 120,
+      entertainmentINR: 4500,
+      updatedAt: new Date(),
+    });
 
+    // Goa Internet Connectivity
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: goaId,
+      avgSpeedMbps: 45,
+      coworkingSpaces: [
+        {
+          name: "COWRKS Goa",
+          address: "Porvorim, North Goa",
+          pricing: "₹6,000/month",
+          speedMbps: 100,
+          amenities: ["Beach Proximity", "Modern Design", "Events", "Cafe"]
+        },
+        {
+          name: "Drishti Marine",
+          address: "Arambol Beach",
+          pricing: "₹4,500/month",
+          speedMbps: 60,
+          amenities: ["Beachfront", "Yoga Classes", "Community", "Wellness"]
+        },
+        {
+          name: "91springboard Goa",
+          address: "Panaji",
+          pricing: "₹5,500/month",
+          speedMbps: 80,
+          amenities: ["Central Location", "Networking", "Meeting Rooms"]
+        }
+      ],
+      simProviders: [
+        {
+          provider: "Jio",
+          plans: [
+            { data: "2GB/day", validity: "28 days", price: 399 },
+            { data: "3GB/day", validity: "28 days", price: 599 }
+          ]
+        },
+        {
+          provider: "Airtel",
+          plans: [
+            { data: "2GB/day", validity: "28 days", price: 449 },
+            { data: "3GB/day", validity: "28 days", price: 649 }
+          ]
+        }
+      ],
+      wifiAvailability: "Excellent - Available in beach shacks, cafes, hotels, and coworking spaces",
+      updatedAt: new Date(),
+    });
+
+    // Goa Transportation
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: goaId,
+      localTransport: {
+        metro: false,
+        bus: true,
+        autoRickshaw: true,
+        taxi: true,
+        bike: true
+      },
+      walkabilityScore: 6,
+      rideHailing: ["Ola", "Uber", "GoaMiles"],
+      airports: [
+        { name: "Dabolim Airport", code: "GOI", distance: "30km from North Goa" }
+      ],
+      trainStations: [
+        { name: "Madgaon Railway Station", type: "Major Junction (South Goa)" },
+        { name: "Thivim Railway Station", type: "Convenient for North Goa" }
+      ],
+      intercityConnectivity: "Excellent rail and flight connections to Mumbai, Bangalore, Delhi",
+      updatedAt: new Date(),
+    });
+
+    // Goa Climate
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: goaId,
+      avgTempCelsius: 28,
+      avgHumidity: 75,
+      rainyMonths: ["June", "July", "August", "September"],
+      bestTimeToVisit: "November to March",
+      climateType: "Tropical monsoon climate",
+      currentWeather: {
+        temperature: 29,
+        humidity: 78,
+        description: "Warm and humid",
+        icon: "partly-cloudy"
+      },
+      updatedAt: new Date(),
+    });
+
+    // Goa Safety
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: goaId,
+      safetyScore: "7.8",
+      womenSafetyScore: "7.5",
+      crimeRate: "Moderate - generally safe but be cautious of petty theft in tourist areas",
+      hospitals: [
+        { name: "Goa Medical College", address: "Bambolim", type: "Government Hospital", emergency: true },
+        { name: "Manipal Hospital Goa", address: "Dona Paula", type: "Multi-specialty", emergency: true },
+        { name: "Apollo Victor Hospital", address: "Margao", type: "Multi-specialty", emergency: true },
+        { name: "Healthway Hospital", address: "Panaji", type: "Multi-specialty", emergency: true }
+      ],
+      emergencyNumbers: {
+        police: "100",
+        medical: "108",
+        fire: "101"
+      },
+      pollutionIndex: 88,
+      updatedAt: new Date(),
+    });
+
+    // Goa Lifestyle
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: goaId,
+      foodScene: {
+        specialties: ["Fish Curry Rice", "Vindaloo", "Bebinca", "Feni", "Prawn Balchão"],
+        vegFriendly: true,
+        streetFood: true,
+        internationalCuisine: true
+      },
+      nightlife: {
+        bars: true,
+        clubs: true,
+        lateNightEating: true,
+        alcoholLaws: "Liberal - 24/7 availability, beach shacks open late"
+      },
+      fitness: {
+        gyms: 80,
+        parks: 15,
+        yogaStudios: 150,
+        outdoorActivities: ["Beach Volleyball", "Water Sports", "Yoga", "Cycling", "Swimming"]
+      },
+      culture: {
+        languages: ["Konkani", "English", "Portuguese", "Hindi", "Marathi"],
+        festivals: ["Carnival", "Shigmo", "Christmas", "Easter", "Diwali"],
+        customs: ["Portuguese heritage", "Beach culture", "Siesta culture", "Relaxed lifestyle"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - strict enforcement in tourist areas, heavy penalties",
+      updatedAt: new Date(),
+    });
+
+    // Goa Attractions
+    const goaAttr1 = randomUUID();
+    this.attractions.set(goaAttr1, {
+      id: goaAttr1,
+      cityId: goaId,
+      name: "Baga Beach",
+      description: "Popular beach known for water sports, shacks, and vibrant nightlife",
+      category: "Beach",
+      priceRange: "Free (shack expenses extra)",
+      address: "Baga, North Goa",
+      timings: "24 hours",
+      isHiddenGem: false,
+      rating: "4.2",
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19",
+      createdAt: new Date(),
+    });
+
+    const goaAttr2 = randomUUID();
+    this.attractions.set(goaAttr2, {
+      id: goaAttr2,
+      cityId: goaId,
+      name: "Old Goa Churches",
+      description: "UNESCO World Heritage Portuguese colonial churches and architecture",
+      category: "Cultural",
+      priceRange: "Free",
+      address: "Old Goa",
+      timings: "9:00 AM - 6:30 PM",
+      isHiddenGem: false,
+      rating: "4.6",
+      image: "https://images.unsplash.com/photo-1582049877405-bec6f3b0e4bb",
+      createdAt: new Date(),
+    });
+
+    const goaAttr3 = randomUUID();
+    this.attractions.set(goaAttr3, {
+      id: goaAttr3,
+      cityId: goaId,
+      name: "Dudhsagar Waterfalls",
+      description: "Spectacular four-tiered waterfall in the Western Ghats",
+      category: "Nature",
+      priceRange: "₹500-1,500 (jeep safari)",
+      address: "Bhagwan Mahaveer Sanctuary, Goa-Karnataka border",
+      timings: "6:00 AM - 5:00 PM",
+      isHiddenGem: false,
+      rating: "4.4",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      createdAt: new Date(),
+    });
+
+    const goaAttr4 = randomUUID();
+    this.attractions.set(goaAttr4, {
+      id: goaAttr4,
+      cityId: goaId,
+      name: "Anjuna Flea Market",
+      description: "Famous Wednesday market with handicrafts, clothes, and local goods",
+      category: "Shopping",
+      priceRange: "Varies",
+      address: "Anjuna Beach, North Goa",
+      timings: "Wednesday 8:00 AM - 6:00 PM",
+      isHiddenGem: false,
+      rating: "4.0",
+      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+      createdAt: new Date(),
+    });
+
+    const goaAttr5 = randomUUID();
+    this.attractions.set(goaAttr5, {
+      id: goaAttr5,
+      cityId: goaId,
+      name: "Divar Island",
+      description: "Peaceful Portuguese village perfect for quiet exploration",
+      category: "Cultural",
+      priceRange: "Ferry ₹5",
+      address: "Divar Island, Old Goa",
+      timings: "Ferry: 7:00 AM - 9:00 PM",
+      isHiddenGem: true,
+      rating: "4.8",
+      image: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c",
+      createdAt: new Date(),
+    });
+
+    // Goa Events
+    const goaEvent1 = randomUUID();
+    this.events.set(goaEvent1, {
+      id: goaEvent1,
+      cityId: goaId,
+      title: "Goa Carnival",
+      description: "Colorful three-day festival with parades, music, and dance",
+      date: new Date("2025-02-15"),
+      venue: "Throughout Goa",
+      category: "Cultural",
+      isPaid: false,
+      price: null,
+      url: "https://www.goatourism.gov.in/",
+      createdAt: new Date(),
+    });
+
+    const goaEvent2 = randomUUID();
+    this.events.set(goaEvent2, {
+      id: goaEvent2,
+      cityId: goaId,
+      title: "Sunburn Festival",
+      description: "Asia's largest electronic dance music festival",
+      date: new Date("2024-12-28"),
+      venue: "Vagator Beach, North Goa",
+      category: "Music",
+      isPaid: true,
+      price: "₹4,000-25,000",
+      url: "https://sunburn.in/",
+      createdAt: new Date(),
+    });
+
+    const goaEvent3 = randomUUID();
+    this.events.set(goaEvent3, {
+      id: goaEvent3,
+      cityId: goaId,
+      title: "Shigmo Festival",
+      description: "Traditional Goan Hindu spring festival with folk dances",
+      date: new Date("2025-03-10"),
+      venue: "Various temples across Goa",
+      category: "Cultural",
+      isPaid: false,
+      price: null,
+      url: null,
+      createdAt: new Date(),
+    });
 
     // Pune
     const puneId = randomUUID();
