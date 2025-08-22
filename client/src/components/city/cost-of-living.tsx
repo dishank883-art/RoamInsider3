@@ -69,9 +69,9 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
     const accommodationData: Record<string, any> = {
       mumbai: {
         hostels: [
-          { name: "Zostel Mumbai", area: "Fort", price: "₹800-1200/night ($10-14)", rating: 4.2, amenities: ["WiFi", "AC", "Kitchen", "Lounge"], bookingUrl: "https://www.zostel.com/zostel/mumbai/" },
-          { name: "Backpacker Panda", area: "Andheri", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Common area", "Kitchen"], bookingUrl: "https://www.backpackerpanda.com/mumbai" },
-          { name: "Mad Monkey Hostel", area: "Colaba", price: "₹900-1400/night ($11-17)", rating: 4.3, amenities: ["WiFi", "Bar", "Tours", "AC"], bookingUrl: "https://www.madmonkeyhostels.com/mumbai/" }
+          { name: "Zostel Mumbai", area: "Andheri East", price: "₹189-500/night ($6-8)", rating: 4.2, amenities: ["WiFi", "Cafe", "Rooftop", "Games room"], bookingUrl: "https://www.zostel.com/zostel/mumbai/mumbai-bkc-mumh529/" },
+          { name: "Backpacker Cowies", area: "Colaba", price: "₹800-1200/night ($11-14)", rating: 4.1, amenities: ["WiFi", "Heritage building", "Rooftop terrace", "Central location"], bookingUrl: "https://www.hostelworld.com/hostels/p/89674/backpacker-panda-colaba/" },
+          { name: "Hostel Mantra", area: "Andheri West", price: "₹500-800/night ($6-10)", rating: 3.9, amenities: ["WiFi", "Games room", "Social atmosphere", "CCTV"], bookingUrl: "https://www.hostelworld.com/hostels/p/87362/hostel-mantra/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/mumbai-in.html", features: ["Instant booking", "Local support", "Best price guarantee"] },
@@ -107,9 +107,9 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       bangalore: {
         hostels: [
-          { name: "Zostel Bangalore", area: "Koramangala", price: "₹800-1200/night ($10-14)", rating: 4.3, amenities: ["WiFi", "AC", "Kitchen", "Co-working"] },
-          { name: "The Hive Hostel", area: "Indiranagar", price: "₹700-1000/night ($8-12)", rating: 4.1, amenities: ["WiFi", "Kitchen", "Common area"] },
-          { name: "Backpacker Panda", area: "MG Road", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Tours", "Kitchen"] }
+          { name: "The Hosteller Bangalore", area: "Koramangala", price: "₹800-1200/night ($10-14)", rating: 4.3, amenities: ["WiFi", "Co-working space", "Terrace cafe", "City views"], bookingUrl: "https://www.hostelworld.com/hostels/p/319151/the-hosteller-bangalore-koramangala/" },
+          { name: "Zostel Bangalore", area: "Koramangala", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "Large common areas", "Quiet working spaces", "AC"], bookingUrl: "https://www.hostelworld.com/hostels/p/323027/zostel-bangalore-koramangala/" },
+          { name: "Woke Hostel", area: "Indiranagar", price: "₹600-950/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Digital nomad friendly", "Bedside power", "Free water"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/bangalore/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/bangalore-in.html", features: ["Tech-friendly", "Best rates", "Easy booking"] },
@@ -126,9 +126,9 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       goa: {
         hostels: [
-          { name: "Zostel Goa", area: "Anjuna", price: "₹700-1100/night ($8-13)", rating: 4.2, amenities: ["WiFi", "Pool", "Beach access", "Kitchen"] },
-          { name: "Backpacker Panda", area: "Arambol", price: "₹500-800/night ($6-10)", rating: 3.9, amenities: ["WiFi", "Beach nearby", "Kitchen"] },
-          { name: "Mad Monkey Hostel", area: "Calangute", price: "₹800-1200/night ($10-14)", rating: 4.1, amenities: ["WiFi", "Pool", "Bar", "Tours"] }
+          { name: "Happy Panda Hostel", area: "Arambol", price: "₹700-900/night ($9-11)", rating: 4.5, amenities: ["WiFi", "Neon art room", "Rooftop bar", "Beach 10min walk"], bookingUrl: "https://www.hostelworld.com/hostels/p/269088/happy-panda-hostel-arambol/" },
+          { name: "Roadhouse Anjuna", area: "Anjuna", price: "₹650-950/night ($8-11)", rating: 4.2, amenities: ["WiFi", "AC", "Community kitchen", "Near Shiva Valley"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/goa/d/anjuna/" },
+          { name: "78 Backpackers", area: "Anjuna", price: "₹600-800/night ($8-10)", rating: 4.0, amenities: ["WiFi", "Vibrant rooftop bar", "4min to beach", "Adventure community"], bookingUrl: "https://78backpackers.com/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/goa-in.html", features: ["Beach properties", "Local deals", "Easy booking"] },
@@ -144,9 +144,9 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       rishikesh: {
         hostels: [
-          { name: "Zostel Rishikesh", area: "Tapovan", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Yoga space", "Kitchen", "River views"] },
-          { name: "Backpacker Panda", area: "Laxman Jhula", price: "₹400-700/night ($5-8)", rating: 3.8, amenities: ["WiFi", "Yoga", "Simple rooms"] },
-          { name: "The Hosteller", area: "Ram Jhula", price: "₹500-800/night ($6-10)", rating: 4.1, amenities: ["WiFi", "Yoga deck", "Kitchen", "Library"] }
+          { name: "Zostel Rishikesh", area: "Laxman Jhula", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "5min to bridge", "Ganga views", "Common room"], bookingUrl: "https://www.hostelworld.com/hostels/p/315053/zostel-rishikesh-laxman-jhula/" },
+          { name: "The Hosteller Ganges", area: "Laxman Jhula", price: "₹550-850/night ($7-10)", rating: 4.2, amenities: ["WiFi", "Bright common rooms", "Yoga access", "Riverside"], bookingUrl: "https://www.thehosteller.com/hostels/the-hosteller-rishikesh-ganges/" },
+          { name: "Shalom Backpackers", area: "Ram Jhula", price: "₹500-800/night ($6-10)", rating: 3.9, amenities: ["WiFi", "Adult-only", "Pool", "Yoga mornings"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/rishikesh/" }
         ],
         platforms: [
           { name: "Booking.com", url: "https://www.booking.com/city/in/rishikesh.html", features: ["Spiritual retreats", "Ashram bookings", "Nature stays"] },
@@ -198,9 +198,9 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       udaipur: {
         hostels: [
-          { name: "Zostel Udaipur", area: "Hanuman Ghat", price: "₹600-900/night ($7-11)", rating: 4.2, amenities: ["WiFi", "Lake views", "Rooftop", "Cultural tours"], bookingUrl: "https://www.zostel.com/zostel/udaipur/" },
-          { name: "Backpacker Panda", area: "Old City", price: "₹500-750/night ($6-9)", rating: 3.9, amenities: ["WiFi", "Heritage location", "Palace views"], bookingUrl: "https://www.backpackerpanda.com/udaipur" },
-          { name: "Mad Monkey Hostel", area: "Lake Pichola", price: "₹700-1000/night ($8-12)", rating: 4.0, amenities: ["WiFi", "Lake access", "Cultural activities"], bookingUrl: "https://www.madmonkeyhostels.com/udaipur/" }
+          { name: "Zostel Udaipur", area: "City Palace area", price: "₹600-900/night ($7-11)", rating: 4.2, amenities: ["WiFi", "Killer lake views", "Social atmosphere", "500m to palace"], bookingUrl: "https://www.zostel.com/zostel/udaipur/" },
+          { name: "The Hosteller Udaipur", area: "City Palace", price: "₹650-950/night ($8-11)", rating: 4.3, amenities: ["WiFi", "3-tier rooftop terrace", "5min to palace", "AC rooms"], bookingUrl: "https://www.thehosteller.com/hostels/the-hosteller-udaipur/" },
+          { name: "Raahi Backpackers", area: "Silawatwari", price: "₹500-750/night ($6-9)", rating: 4.0, amenities: ["WiFi", "Lake Pichola rooftop", "275m to Jagdish Temple", "Bonfire"], bookingUrl: "https://www.goibibo.com/hotels/raahi-backpackers-hostel-rooftop-restaurant-at-lake-pichola-hotel-in-udaipur-516008976659554345/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/udaipur-in.html", features: ["Palace hotels", "Lake views", "Heritage properties"] },
