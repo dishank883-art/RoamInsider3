@@ -314,6 +314,135 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
           { type: "Mountain guesthouses", price: "₹4000-8000/month ($48-96)", includes: "Mountain views, basic amenities, trekking access" },
           { type: "Tibetan family homestays", price: "₹5000-10000/month ($60-120)", includes: "Cultural immersion, home meals, spiritual environment" }
         ]
+      },
+      kasol: {
+        hostels: [
+          { name: "Zostel Kasol", area: "Old Kasol", price: "₹400-650/night ($5-8)", rating: 4.1, amenities: ["WiFi", "River views", "Trekking", "Cafe"], bookingUrl: "https://www.zostel.com/zostel/kasol/" },
+          { name: "Backpacker Panda", area: "Chalal", price: "₹300-500/night ($4-6)", rating: 3.9, amenities: ["WiFi", "Nature walks", "Budget friendly"], bookingUrl: "https://www.backpackerpanda.com/kasol" },
+          { name: "The Hosteller", area: "Tosh Road", price: "₹350-550/night ($4-7)", rating: 4.0, amenities: ["WiFi", "Mountain views", "Common kitchen"], bookingUrl: "https://www.thehosteller.com/kasol/" }
+        ],
+        platforms: [
+          { name: "Booking.com", url: "https://www.booking.com/city/in/kasol.html", features: ["Mountain stays", "Trekking base", "Nature retreats"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Kasol--Himachal-Pradesh--India", features: ["River-side cottages", "Local families", "Mountain experiences"] },
+          { name: "Zostel", url: "https://www.zostel.com/zostel/kasol/", features: ["Backpacker community", "Trekking groups", "River activities"] }
+        ],
+        monthlyOptions: [
+          { type: "Riverside guesthouses", price: "₹4000-8000/month ($48-96)", includes: "River access, mountain views, basic amenities" },
+          { type: "Local family homestays", price: "₹3000-6000/month ($36-72)", includes: "Home meals, cultural experience, trekking guidance" }
+        ]
+      },
+      tosh: {
+        hostels: [
+          { name: "Zostel Tosh", area: "Upper Tosh", price: "₹350-550/night ($4-7)", rating: 4.0, amenities: ["WiFi", "Mountain views", "Trekking", "Stargazing"], bookingUrl: "https://www.zostel.com/zostel/tosh/" },
+          { name: "Backpacker Panda", area: "Lower Tosh", price: "₹250-450/night ($3-5)", rating: 3.8, amenities: ["WiFi", "Budget stay", "Valley views"], bookingUrl: "https://www.backpackerpanda.com/tosh" },
+          { name: "Mountain Guest House", area: "Tosh Village", price: "₹300-500/night ($4-6)", rating: 3.9, amenities: ["WiFi", "Local food", "Himalayan views"], bookingUrl: "https://www.mountainguesthouse.com/tosh" }
+        ],
+        platforms: [
+          { name: "Booking.com", url: "https://www.booking.com/city/in/tosh.html", features: ["Mountain villages", "Trekking stays", "Remote locations"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Tosh--Himachal-Pradesh--India", features: ["Village homestays", "Mountain cottages", "Local experiences"] }
+        ],
+        monthlyOptions: [
+          { type: "Village homestays", price: "₹3000-6000/month ($36-72)", includes: "Home meals, village life, mountain access" },
+          { type: "Mountain guesthouses", price: "₹4000-7000/month ($48-84)", includes: "Himalayan views, basic amenities, trekking access" }
+        ]
+      },
+      bir: {
+        hostels: [
+          { name: "Zostel Bir", area: "Bir Billing", price: "₹500-750/night ($6-9)", rating: 4.2, amenities: ["WiFi", "Paragliding", "Mountain views", "Adventure sports"], bookingUrl: "https://www.zostel.com/zostel/bir/" },
+          { name: "Backpacker Panda", area: "Bir Village", price: "₹400-600/night ($5-7)", rating: 3.9, amenities: ["WiFi", "Tibetan culture", "Monastery visits"], bookingUrl: "https://www.backpackerpanda.com/bir" },
+          { name: "The Hosteller", area: "Billing", price: "₹450-650/night ($5-8)", rating: 4.0, amenities: ["WiFi", "Paragliding take-off", "Adventure activities"], bookingUrl: "https://www.thehosteller.com/bir/" }
+        ],
+        platforms: [
+          { name: "Booking.com", url: "https://www.booking.com/city/in/bir.html", features: ["Paragliding hub", "Adventure stays", "Tibetan culture"] },
+          { name: "Agoda", url: "https://www.agoda.com/city/bir-in.html", features: ["Adventure sports", "Mountain retreats", "Monastery stays"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Bir--Himachal-Pradesh--India", features: ["Adventure homes", "Tibetan families", "Paragliding access"] }
+        ],
+        monthlyOptions: [
+          { type: "Adventure guesthouses", price: "₹6000-12000/month ($72-144)", includes: "Paragliding access, adventure sports, mountain views" },
+          { type: "Tibetan monastery stays", price: "₹4000-8000/month ($48-96)", includes: "Spiritual environment, meditation, simple living" }
+        ]
+      },
+      ziro: {
+        hostels: [
+          { name: "Ziro Backpackers", area: "Old Ziro", price: "₹400-600/night ($5-7)", rating: 3.8, amenities: ["WiFi", "Tribal culture", "Nature walks", "Local food"], bookingUrl: "https://www.zirobackpackers.com/" },
+          { name: "Apatani Heritage Stay", area: "Hong Village", price: "₹500-800/night ($6-10)", rating: 4.0, amenities: ["WiFi", "Cultural immersion", "Traditional architecture"], bookingUrl: "https://www.apataniheritage.com/" },
+          { name: "Eco Lodge Ziro", area: "Hapoli", price: "₹600-900/night ($7-11)", rating: 4.1, amenities: ["WiFi", "Eco-friendly", "Nature trails", "Bird watching"], bookingUrl: "https://www.ecolodgeziro.com/" }
+        ],
+        platforms: [
+          { name: "Booking.com", url: "https://www.booking.com/region/in/arunachal-pradesh.html", features: ["Tribal culture", "Remote locations", "Nature stays"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Ziro--Arunachal-Pradesh--India", features: ["Tribal homestays", "Cultural experiences", "Remote villages"] }
+        ],
+        monthlyOptions: [
+          { type: "Apatani family homestays", price: "₹5000-10000/month ($60-120)", includes: "Cultural immersion, traditional food, tribal lifestyle" },
+          { type: "Nature lodge stays", price: "₹8000-15000/month ($96-180)", includes: "Eco-friendly living, nature access, bird watching" }
+        ]
+      },
+      varkala: {
+        hostels: [
+          { name: "Zostel Varkala", area: "Cliff Beach", price: "₹700-1000/night ($8-12)", rating: 4.1, amenities: ["WiFi", "Beach access", "Cliff views", "Ayurveda"], bookingUrl: "https://www.zostel.com/zostel/varkala/" },
+          { name: "Backpacker Panda", area: "North Cliff", price: "₹600-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Beach proximity", "Yoga classes"], bookingUrl: "https://www.backpackerpanda.com/varkala" },
+          { name: "Mad Monkey Hostel", area: "South Cliff", price: "₹750-1100/night ($9-13)", rating: 4.0, amenities: ["WiFi", "Beach parties", "Cliff restaurant"], bookingUrl: "https://www.madmonkeyhostels.com/varkala/" }
+        ],
+        platforms: [
+          { name: "Agoda", url: "https://www.agoda.com/city/varkala-in.html", features: ["Beach resorts", "Ayurveda retreats", "Cliff accommodations"] },
+          { name: "Booking.com", url: "https://www.booking.com/city/in/varkala.html", features: ["Beach hotels", "Spiritual retreats", "Ayurveda spas"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Varkala--Kerala--India", features: ["Cliff houses", "Beach cottages", "Ayurveda homes"] }
+        ],
+        monthlyOptions: [
+          { type: "Cliff-side apartments", price: "₹10000-20000/month ($120-240)", includes: "Beach access, cliff views, Ayurveda centers nearby" },
+          { type: "Beach house rentals", price: "₹8000-16000/month ($96-192)", includes: "Beach proximity, local fishing community, peaceful environment" }
+        ]
+      },
+      alleppey: {
+        hostels: [
+          { name: "Backpacker Panda", area: "Alleppey Beach", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Beach access", "Backwater tours", "Kitchen"], bookingUrl: "https://www.backpackerpanda.com/alleppey" },
+          { name: "The Hosteller", area: "Kumbakonam", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Houseboat access", "Cultural tours"], bookingUrl: "https://www.thehosteller.com/alleppey/" },
+          { name: "Zostel Alleppey", area: "Backwater Junction", price: "₹650-950/night ($8-11)", rating: 4.1, amenities: ["WiFi", "Backwater views", "Boat tours", "Local cuisine"], bookingUrl: "https://www.zostel.com/zostel/alleppey/" }
+        ],
+        platforms: [
+          { name: "Agoda", url: "https://www.agoda.com/city/alleppey-in.html", features: ["Houseboat stays", "Backwater resorts", "Beach hotels"] },
+          { name: "Booking.com", url: "https://www.booking.com/city/in/alleppey.html", features: ["Backwater experiences", "Houseboat bookings", "Beach access"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Alleppey--Kerala--India", features: ["Traditional houseboats", "Backwater homes", "Local families"] }
+        ],
+        monthlyOptions: [
+          { type: "Backwater homestays", price: "₹8000-16000/month ($96-192)", includes: "Backwater access, local cuisine, boat rides" },
+          { type: "Traditional Kerala homes", price: "₹10000-20000/month ($120-240)", includes: "Heritage architecture, home meals, cultural immersion" }
+        ]
+      },
+      wayanad: {
+        hostels: [
+          { name: "Zostel Wayanad", area: "Kalpetta", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Plantation views", "Trekking", "Wildlife tours"], bookingUrl: "https://www.zostel.com/zostel/wayanad/" },
+          { name: "Backpacker Panda", area: "Sulthan Bathery", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Nature walks", "Spice tours"], bookingUrl: "https://www.backpackerpanda.com/wayanad" },
+          { name: "The Hosteller", area: "Meppadi", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Coffee plantations", "Hill views"], bookingUrl: "https://www.thehosteller.com/wayanad/" }
+        ],
+        platforms: [
+          { name: "Booking.com", url: "https://www.booking.com/city/in/wayanad.html", features: ["Plantation stays", "Wildlife resorts", "Hill stations"] },
+          { name: "Agoda", url: "https://www.agoda.com/city/wayanad-in.html", features: ["Nature resorts", "Coffee plantations", "Tribal experiences"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/Wayanad--Kerala--India", features: ["Plantation homes", "Tribal homestays", "Wildlife lodges"] }
+        ],
+        monthlyOptions: [
+          { type: "Coffee plantation stays", price: "₹8000-15000/month ($96-180)", includes: "Plantation tours, fresh coffee, nature access" },
+          { type: "Tribal community homestays", price: "₹6000-12000/month ($72-144)", includes: "Cultural immersion, traditional lifestyle, nature walks" }
+        ]
+      },
+      'new-delhi': {
+        hostels: [
+          { name: "Zostel New Delhi", area: "Paharganj", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "AC", "Kitchen", "Terrace"], bookingUrl: "https://www.zostel.com/zostel/delhi/" },
+          { name: "Jugaad Hostels", area: "Hauz Khas", price: "₹800-1200/night ($10-14)", rating: 4.4, amenities: ["WiFi", "Events", "Kitchen", "Co-working"], bookingUrl: "https://www.jugaadhostels.com/delhi" },
+          { name: "Bleisure Hospitality", area: "Connaught Place", price: "₹900-1300/night ($11-16)", rating: 4.2, amenities: ["WiFi", "Restaurant", "AC"], bookingUrl: "https://www.bleisure.in/delhi" }
+        ],
+        platforms: [
+          { name: "Agoda", url: "https://www.agoda.com/city/new-delhi-in.html", features: ["Best prices", "Local partnerships", "Mobile app"] },
+          { name: "Booking.com", url: "https://www.booking.com/city/in/new-delhi.html", features: ["Largest inventory", "Multiple languages", "Flexible booking"] },
+          { name: "Hostelworld", url: "https://www.hostelworld.com/hostels/New-Delhi", features: ["Hostel focus", "Social features", "Group bookings"] },
+          { name: "Airbnb", url: "https://www.airbnb.com/s/New-Delhi--India", features: ["Unique spaces", "Long-term stays", "Local experiences"] },
+          { name: "Treebo", url: "https://www.treebohotels.com/hotels-in-delhi", features: ["Indian chain", "Consistent quality", "Good locations"] }
+        ],
+        monthlyOptions: [
+          { type: "PG accommodations", price: "₹6000-12000/month ($72-144)", includes: "Meals, utilities, basic amenities" },
+          { type: "Co-living", price: "₹10000-20000/month ($120-240)", includes: "Furnished rooms, community, events" },
+          { type: "Studio apartments", price: "₹15000-30000/month ($180-360)", includes: "Independent living, kitchen" }
+        ]
       }
     };
 
