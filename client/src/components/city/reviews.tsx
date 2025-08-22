@@ -32,79 +32,8 @@ export default function Reviews({ city }: ReviewsProps) {
   const [sortBy, setSortBy] = useState("recent");
   const [filterRating, setFilterRating] = useState("all");
 
-  // Sample reviews for demonstration (in production, these would come from API)
-  const reviews: Review[] = [
-    {
-      id: "1",
-      author: "Priya Sharma",
-      rating: 4,
-      title: "Great for digital nomads but can be expensive",
-      content: `Spent 3 months in ${city.name} and overall had a fantastic experience. The coworking spaces are excellent and the internet connectivity is reliable. The local food scene is amazing and there's always something to do. However, accommodation costs can be quite high during peak season.`,
-      date: "2024-01-15",
-      stayDuration: "3 months",
-      workType: "Software Developer",
-      pros: ["Excellent WiFi", "Great food scene", "Active nomad community", "Good coworking spaces"],
-      cons: ["High accommodation costs", "Traffic can be bad", "Monsoon season challenges"],
-      helpful: 12,
-      verified: true
-    },
-    {
-      id: "2", 
-      author: "Arjun Mehta",
-      rating: 5,
-      title: "Perfect work-life balance destination",
-      content: `${city.name} exceeded all my expectations. The combination of affordable living, reliable internet, and incredible culture made this my favorite nomad destination so far. The local community is welcoming and there are tons of networking opportunities.`,
-      date: "2024-01-08",
-      stayDuration: "2 months",
-      workType: "Marketing Consultant",
-      pros: ["Affordable living", "Amazing culture", "Friendly locals", "Great weather"],
-      cons: ["Language barrier sometimes", "Limited nightlife"],
-      helpful: 8,
-      verified: true
-    },
-    {
-      id: "3",
-      author: "Kavya Patel",
-      rating: 3,
-      title: "Good for short stays, challenging for longer",
-      content: `${city.name} is beautiful and has a lot to offer, but I found it challenging for extended work periods. While the scenery is breathtaking and perfect for inspiration, the internet can be unreliable in some areas and finding quiet workspaces was difficult.`,
-      date: "2024-01-02",
-      stayDuration: "1 month",
-      workType: "Content Creator", 
-      pros: ["Beautiful scenery", "Peaceful environment", "Affordable food", "Adventure activities"],
-      cons: ["Inconsistent internet", "Limited coworking options", "Power outages"],
-      helpful: 5,
-      verified: false
-    },
-    {
-      id: "4",
-      author: "Rohit Singh",
-      rating: 5,
-      title: "Amazing experience for remote workers",
-      content: `As a freelancer working remotely, ${city.name} provided everything I needed. The cost of living is very reasonable, locals are friendly, and the food is incredible. I extended my stay by 2 months because I loved it so much.`,
-      date: "2023-12-20",
-      stayDuration: "4 months",
-      workType: "Freelance Designer",
-      pros: ["Very affordable", "Excellent food", "Helpful locals", "Good infrastructure"],
-      cons: ["Monsoon can be challenging", "Limited international cuisine"],
-      helpful: 15,
-      verified: true
-    },
-    {
-      id: "5",
-      author: "Jessica Wong",
-      rating: 4,
-      title: "International perspective on this gem",
-      content: `Coming from Singapore, I was amazed by how welcoming ${city.name} is to international remote workers. The cultural experiences are unmatched and the value for money is incredible. Definitely planning to return next year.`,
-      date: "2023-12-10",
-      stayDuration: "6 weeks",
-      workType: "UX Designer",
-      pros: ["Cultural richness", "Great value", "Welcoming atmosphere", "Unique experiences"],
-      cons: ["Climate adjustment needed", "Different work culture"],
-      helpful: 9,
-      verified: true
-    }
-  ];
+  // Reviews would come from API in production - currently empty to collect authentic reviews
+  const reviews: Review[] = [];
 
   const filteredReviews = reviews
     .filter(review => filterRating === "all" || review.rating.toString() === filterRating)
@@ -115,11 +44,11 @@ export default function Reviews({ city }: ReviewsProps) {
       return 0;
     });
 
-  const averageRating = reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length;
+  const averageRating = reviews.length > 0 ? reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length : 0;
   const ratingDistribution = [5, 4, 3, 2, 1].map(rating => ({
     rating,
     count: reviews.filter(r => r.rating === rating).length,
-    percentage: (reviews.filter(r => r.rating === rating).length / reviews.length) * 100
+    percentage: reviews.length > 0 ? (reviews.filter(r => r.rating === rating).length / reviews.length) * 100 : 0
   }));
 
   const renderStars = (rating: number, className = "h-4 w-4") => {
@@ -145,71 +74,89 @@ export default function Reviews({ city }: ReviewsProps) {
       <CardContent className="space-y-8">
         
         {/* Rating Summary */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="text-center">
-            <div className="text-5xl font-bold text-travel-blue mb-2">
-              {averageRating.toFixed(1)}
-            </div>
-            <div className="flex justify-center mb-2">
-              {renderStars(Math.round(averageRating), "h-6 w-6")}
-            </div>
-            <p className="text-muted-navy">Based on {reviews.length} reviews</p>
-          </div>
-          
-          <div className="space-y-2">
-            {ratingDistribution.map(({ rating, count, percentage }) => (
-              <div key={rating} className="flex items-center space-x-3">
-                <span className="text-sm font-medium w-8">{rating}★</span>
-                <div className="flex-1 bg-gray-200 rounded-full h-2">
-                  <div 
-                    className="bg-vintage-gold h-2 rounded-full" 
-                    style={{ width: `${percentage}%` }}
-                  />
-                </div>
-                <span className="text-sm text-muted-navy w-8">{count}</span>
+        {reviews.length > 0 ? (
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-travel-blue mb-2">
+                {averageRating.toFixed(1)}
               </div>
-            ))}
+              <div className="flex justify-center mb-2">
+                {renderStars(Math.round(averageRating), "h-6 w-6")}
+              </div>
+              <p className="text-muted-navy">Based on {reviews.length} reviews</p>
+            </div>
+            
+            <div className="space-y-2">
+              {ratingDistribution.map(({ rating, count, percentage }) => (
+                <div key={rating} className="flex items-center space-x-3">
+                  <span className="text-sm font-medium w-8">{rating}★</span>
+                  <div className="flex-1 bg-gray-200 rounded-full h-2">
+                    <div 
+                      className="bg-vintage-gold h-2 rounded-full" 
+                      style={{ width: `${percentage}%` }}
+                    />
+                  </div>
+                  <span className="text-sm text-muted-navy w-8">{count}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="text-center py-8 bg-gray-50 rounded-xl">
+            <MessageSquare className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-travel-blue mb-2">No Reviews Yet</h3>
+            <p className="text-muted-navy mb-4">
+              Be the first to share your experience living and working in {city.name}!
+            </p>
+            <Button 
+              onClick={() => setShowAddReview(true)}
+              className="bg-travel-blue hover:bg-travel-blue/90 text-white"
+            >
+              Write the First Review
+            </Button>
+          </div>
+        )}
 
         {/* Add Review Button & Filters */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-6 border-t">
-          <Button 
-            onClick={() => setShowAddReview(!showAddReview)}
-            className="bg-travel-blue hover:bg-travel-blue/90 text-white"
-            data-testid="add-review-button"
-          >
-            <MessageSquare className="mr-2 h-4 w-4" />
-            Write a Review
-          </Button>
-          
-          <div className="flex space-x-3">
-            <Select value={sortBy} onValueChange={setSortBy}>
-              <SelectTrigger className="w-32">
-                <SelectValue placeholder="Sort by" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="recent">Recent</SelectItem>
-                <SelectItem value="rating">Rating</SelectItem>
-                <SelectItem value="helpful">Helpful</SelectItem>
-              </SelectContent>
-            </Select>
+        {reviews.length > 0 && (
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-6 border-t">
+            <Button 
+              onClick={() => setShowAddReview(!showAddReview)}
+              className="bg-travel-blue hover:bg-travel-blue/90 text-white"
+              data-testid="add-review-button"
+            >
+              <MessageSquare className="mr-2 h-4 w-4" />
+              Write a Review
+            </Button>
             
-            <Select value={filterRating} onValueChange={setFilterRating}>
-              <SelectTrigger className="w-32">
-                <SelectValue placeholder="All ratings" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All ratings</SelectItem>
-                <SelectItem value="5">5 stars</SelectItem>
-                <SelectItem value="4">4 stars</SelectItem>
-                <SelectItem value="3">3 stars</SelectItem>
-                <SelectItem value="2">2 stars</SelectItem>
-                <SelectItem value="1">1 star</SelectItem>
-              </SelectContent>
-            </Select>
+            <div className="flex space-x-3">
+              <Select value={sortBy} onValueChange={setSortBy}>
+                <SelectTrigger className="w-32">
+                  <SelectValue placeholder="Sort by" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="recent">Recent</SelectItem>
+                  <SelectItem value="rating">Rating</SelectItem>
+                  <SelectItem value="helpful">Helpful</SelectItem>
+                </SelectContent>
+              </Select>
+              
+              <Select value={filterRating} onValueChange={setFilterRating}>
+                <SelectTrigger className="w-32">
+                  <SelectValue placeholder="All ratings" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All ratings</SelectItem>
+                  <SelectItem value="5">5 stars</SelectItem>
+                  <SelectItem value="4">4 stars</SelectItem>
+                  <SelectItem value="3">3 stars</SelectItem>
+                  <SelectItem value="2">2 stars</SelectItem>
+                  <SelectItem value="1">1 star</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Add Review Form */}
         {showAddReview && (
@@ -269,8 +216,9 @@ export default function Reviews({ city }: ReviewsProps) {
         )}
 
         {/* Reviews List */}
-        <div className="space-y-6">
-          {filteredReviews.map((review) => (
+        {reviews.length > 0 && (
+          <div className="space-y-6">
+            {filteredReviews.map((review) => (
             <div key={review.id} className="border-b border-gray-200 pb-6 last:border-b-0">
               <div className="flex justify-between items-start mb-3">
                 <div className="flex items-center space-x-3">
@@ -331,8 +279,9 @@ export default function Reviews({ city }: ReviewsProps) {
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         {/* Join Community CTA */}
         <div className="bg-gradient-to-r from-travel-blue/10 to-vintage-gold/10 rounded-xl p-6 border-2 border-travel-blue/20 text-center">
