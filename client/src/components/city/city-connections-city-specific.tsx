@@ -181,6 +181,167 @@ export default function CityConnections({ city }: CityConnectionsProps) {
           { city: "Guwahati", duration: "3h", price: "₹150-300", frequency: "30+ daily", type: "AC Bus", operator: "ASTC, Private", bookingUrl: "https://www.redbus.in/" },
           { city: "Cherrapunji", duration: "1h 30m", price: "₹50-100", frequency: "10+ daily", type: "Local bus", operator: "ASTC", bookingUrl: "Local booking" }
         ]
+      },
+      "Dharamkot": {
+        trainConnections: [
+          { city: "Delhi", duration: "4h drive + 12h train", price: "₹500 + ₹300-1,500", frequency: "Via Pathankot", type: "Road to Pathankot + train", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Pathankot", duration: "3h drive", price: "₹400-600", frequency: "Multiple daily", type: "Road connection to railway", bookingUrl: "Local booking" }
+        ],
+        flightConnections: [
+          { city: "Delhi", duration: "30m drive + 1h 30m flight", price: "₹200 + ₹4,000-12,000", frequency: "Via Dharamshala airport", airlines: "Local transport + Air India", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Delhi", duration: "10h", price: "₹800-1,400", frequency: "5+ daily", type: "Volvo AC", operator: "HRTC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Chandigarh", duration: "4h", price: "₹350-600", frequency: "8+ daily", type: "AC Bus", operator: "HRTC", bookingUrl: "https://www.redbus.in/" },
+          { city: "McLeod Ganj", duration: "20m", price: "₹20-50", frequency: "Every 30min", type: "Local bus", operator: "HRTC", bookingUrl: "Local booking" }
+        ]
+      },
+      "Darjeeling": {
+        trainConnections: [
+          { city: "Kolkata", duration: "12h", price: "₹200-1,000", frequency: "Daily", type: "Darjeeling Mail", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Delhi", duration: "18h", price: "₹600-2,500", frequency: "Daily", type: "Rajdhani to NJP + Toy Train", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "New Jalpaiguri", duration: "2h toy train", price: "₹100-500", frequency: "Multiple daily", type: "Darjeeling Himalayan Railway", bookingUrl: "https://www.irctc.co.in/" }
+        ],
+        flightConnections: [
+          { city: "Kolkata", duration: "1h 15m", price: "₹4,500-12,000", frequency: "2+ daily", airlines: "SpiceJet, IndiGo", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Delhi", duration: "2h 15m", price: "₹6,000-18,000", frequency: "1+ daily", airlines: "SpiceJet, IndiGo", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Kolkata", duration: "10h", price: "₹400-800", frequency: "8+ daily", type: "AC Bus", operator: "WBTC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Gangtok", duration: "4h", price: "₹150-300", frequency: "6+ daily", type: "Shared jeep/bus", operator: "Sikkim Transport", bookingUrl: "Local booking" },
+          { city: "Siliguri", duration: "3h", price: "₹80-150", frequency: "20+ daily", type: "Local bus", operator: "NBSTC", bookingUrl: "Local booking" }
+        ]
+      },
+      "Kochi": {
+        trainConnections: [
+          { city: "Bangalore", duration: "12h", price: "₹300-1,500", frequency: "Multiple daily", type: "Island Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Chennai", duration: "11h", price: "₹350-1,600", frequency: "Daily", type: "Chennai Mail", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Mumbai", duration: "14h", price: "₹500-2,200", frequency: "Daily", type: "Netravati Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Delhi", duration: "42h", price: "₹900-4,000", frequency: "Weekly", type: "Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" }
+        ],
+        flightConnections: [
+          { city: "Bangalore", duration: "1h 20m", price: "₹3,200-10,000", frequency: "15+ daily", airlines: "IndiGo, Air India, SpiceJet", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Mumbai", duration: "1h 45m", price: "₹3,800-12,000", frequency: "12+ daily", airlines: "IndiGo, Air India, Vistara", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Delhi", duration: "3h", price: "₹5,000-16,000", frequency: "10+ daily", airlines: "IndiGo, Air India, SpiceJet", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Chennai", duration: "1h 30m", price: "₹3,500-11,000", frequency: "8+ daily", airlines: "IndiGo, Air India", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Bangalore", duration: "10h", price: "₹600-1,500", frequency: "20+ daily", type: "Volvo AC", operator: "KPN, KSRTC", bookingUrl: "https://www.redbus.in/" },
+          { city: "Chennai", duration: "12h", price: "₹700-1,800", frequency: "15+ daily", type: "AC Sleeper", operator: "KPN, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Trivandrum", duration: "4h", price: "₹200-500", frequency: "25+ daily", type: "AC Bus", operator: "KSRTC", bookingUrl: "https://www.redbus.in/" }
+        ]
+      },
+      "Pondicherry": {
+        trainConnections: [
+          { city: "Chennai", duration: "3h 30m", price: "₹100-500", frequency: "Multiple daily", type: "Pondicherry Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Bangalore", duration: "6h", price: "₹200-1,000", frequency: "Daily", type: "Yesvantpur Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Delhi", duration: "32h", price: "₹800-3,500", frequency: "Weekly", type: "Via Chennai", bookingUrl: "https://www.irctc.co.in/" }
+        ],
+        flightConnections: [
+          { city: "Chennai", duration: "45m drive + 1h flight", price: "₹300 + ₹3,000-9,000", frequency: "Via Chennai airport", airlines: "Road + All airlines", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Bangalore", duration: "45m drive + 1h 15m flight", price: "₹300 + ₹3,200-10,000", frequency: "Via Chennai airport", airlines: "Road + All airlines", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Chennai", duration: "3h", price: "₹150-400", frequency: "30+ daily", type: "AC Bus", operator: "TNSTC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Bangalore", duration: "5h 30m", price: "₹350-800", frequency: "20+ daily", type: "Volvo AC", operator: "KPN, KSRTC", bookingUrl: "https://www.redbus.in/" },
+          { city: "Auroville", duration: "20m", price: "₹30-50", frequency: "Every 30min", type: "Local bus", operator: "TNSTC", bookingUrl: "Local booking" }
+        ]
+      },
+      "Kolkata": {
+        trainConnections: [
+          { city: "Delhi", duration: "17h", price: "₹600-3,200", frequency: "Multiple daily", type: "Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Mumbai", duration: "27h", price: "₹800-3,800", frequency: "Daily", type: "Howrah Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Chennai", duration: "26h", price: "₹700-3,500", frequency: "Daily", type: "Coromandel Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Bangalore", duration: "28h", price: "₹800-3,800", frequency: "Daily", type: "Yeshvantpur Express", bookingUrl: "https://www.irctc.co.in/" }
+        ],
+        flightConnections: [
+          { city: "Delhi", duration: "2h", price: "₹3,800-13,000", frequency: "18+ daily", airlines: "IndiGo, Air India, Vistara", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Mumbai", duration: "2h 30m", price: "₹4,500-16,000", frequency: "15+ daily", airlines: "IndiGo, Air India, Vistara", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Bangalore", duration: "2h 15m", price: "₹4,200-14,000", frequency: "12+ daily", airlines: "IndiGo, Air India, SpiceJet", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Chennai", duration: "2h 10m", price: "₹4,000-13,000", frequency: "10+ daily", airlines: "IndiGo, Air India", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Darjeeling", duration: "10h", price: "₹400-800", frequency: "8+ daily", type: "AC Bus", operator: "WBTC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Guwahati", duration: "12h", price: "₹600-1,200", frequency: "6+ daily", type: "Volvo AC", operator: "ASTC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Bhubaneswar", duration: "7h", price: "₹350-700", frequency: "15+ daily", type: "AC Bus", operator: "Private operators", bookingUrl: "https://www.redbus.in/" }
+        ]
+      }
+      },
+      "Bir": {
+        trainConnections: [
+          { city: "Delhi", duration: "5h drive + 12h train", price: "₹600 + ₹300-1,500", frequency: "Via Chandigarh", type: "Road to Chandigarh + Shatabdi", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Chandigarh", duration: "3h 30m drive", price: "₹400-800", frequency: "Multiple daily buses", type: "Road connection", bookingUrl: "https://www.redbus.in/" }
+        ],
+        flightConnections: [
+          { city: "Delhi", duration: "3h 30m drive + 1h 30m flight", price: "₹400 + ₹4,000-12,000", frequency: "Via Chandigarh", airlines: "Road + All airlines", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Delhi", duration: "10h", price: "₹800-1,500", frequency: "4+ daily", type: "Volvo AC", operator: "HPTDC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Chandigarh", duration: "3h 30m", price: "₹300-600", frequency: "8+ daily", type: "AC Bus", operator: "HRTC", bookingUrl: "https://www.redbus.in/" },
+          { city: "Dharamshala", duration: "1h", price: "₹50-100", frequency: "15+ daily", type: "Local bus", operator: "HRTC", bookingUrl: "Local booking" }
+        ]
+      },
+      "Dehradun": {
+        trainConnections: [
+          { city: "Delhi", duration: "6h", price: "₹200-1,200", frequency: "Multiple daily", type: "Shatabdi Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Mumbai", duration: "22h", price: "₹600-2,800", frequency: "Daily", type: "Dehradun Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Kolkata", duration: "24h", price: "₹700-3,200", frequency: "Daily", type: "Doon Express", bookingUrl: "https://www.irctc.co.in/" }
+        ],
+        flightConnections: [
+          { city: "Delhi", duration: "1h 15m", price: "₹3,500-10,000", frequency: "3+ daily", airlines: "IndiGo, Air India", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Mumbai", duration: "2h 15m", price: "₹5,000-15,000", frequency: "1+ daily", airlines: "IndiGo", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Delhi", duration: "5h 30m", price: "₹400-1,000", frequency: "25+ daily", type: "AC Bus", operator: "UTC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Rishikesh", duration: "1h", price: "₹50-100", frequency: "30+ daily", type: "Local bus", operator: "UTC", bookingUrl: "Local booking" },
+          { city: "Mussoorie", duration: "1h 30m", price: "₹80-150", frequency: "20+ daily", type: "Local bus", operator: "UTC", bookingUrl: "Local booking" }
+        ]
+      },
+      "Udaipur": {
+        trainConnections: [
+          { city: "Delhi", duration: "12h", price: "₹400-2,000", frequency: "Daily", type: "Mewar Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Mumbai", duration: "16h", price: "₹500-2,500", frequency: "Daily", type: "Udaipur City Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Jaipur", duration: "6h", price: "₹200-1,000", frequency: "Daily", type: "Chetak Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Ahmedabad", duration: "8h", price: "₹300-1,200", frequency: "Daily", type: "Ahmedabad Express", bookingUrl: "https://www.irctc.co.in/" }
+        ],
+        flightConnections: [
+          { city: "Delhi", duration: "1h 30m", price: "₹4,000-12,000", frequency: "3+ daily", airlines: "IndiGo, Air India", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Mumbai", duration: "1h 45m", price: "₹4,500-13,000", frequency: "2+ daily", airlines: "IndiGo, Air India", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Bangalore", duration: "2h", price: "₹5,000-14,000", frequency: "1+ daily", airlines: "IndiGo", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Delhi", duration: "10h", price: "₹800-1,800", frequency: "8+ daily", type: "Volvo AC", operator: "RSRTC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Jaipur", duration: "5h", price: "₹300-700", frequency: "15+ daily", type: "AC Bus", operator: "RSRTC", bookingUrl: "https://www.redbus.in/" },
+          { city: "Jodhpur", duration: "4h 30m", price: "₹250-600", frequency: "12+ daily", type: "AC Bus", operator: "RSRTC", bookingUrl: "https://www.redbus.in/" }
+        ]
+      },
+      "Rishikesh": {
+        trainConnections: [
+          { city: "Delhi", duration: "6h 30m", price: "₹200-1,200", frequency: "Multiple daily", type: "Via Haridwar + local transport", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Haridwar", duration: "30m drive", price: "₹50-100", frequency: "Every 15min", type: "Road connection to railway", bookingUrl: "Local booking" }
+        ],
+        flightConnections: [
+          { city: "Delhi", duration: "1h drive + 1h 15m flight", price: "₹100 + ₹3,500-10,000", frequency: "Via Dehradun airport", airlines: "Local transport + IndiGo, Air India", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Delhi", duration: "6h", price: "₹400-1,000", frequency: "20+ daily", type: "AC Bus", operator: "UTC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Dehradun", duration: "1h", price: "₹50-100", frequency: "30+ daily", type: "Local bus", operator: "UTC", bookingUrl: "Local booking" },
+          { city: "Haridwar", duration: "30m", price: "₹30-60", frequency: "Every 15min", type: "Local bus", operator: "UTC", bookingUrl: "Local booking" }
+        ]
+      },
+      "Mussoorie": {
+        trainConnections: [
+          { city: "Delhi", duration: "6h 30m + 1h 30m drive", price: "₹200-1,200 + ₹200", frequency: "Via Dehradun", type: "Shatabdi to Dehradun + taxi", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Dehradun", duration: "1h 30m drive", price: "₹200-400", frequency: "Multiple daily", type: "Road connection", bookingUrl: "Local booking" }
+        ],
+        flightConnections: [
+          { city: "Delhi", duration: "1h 15m + 1h 30m drive", price: "₹3,500-10,000 + ₹200", frequency: "Via Dehradun airport", airlines: "Flight + taxi", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Delhi", duration: "7h", price: "₹500-1,200", frequency: "15+ daily", type: "AC Bus", operator: "UTC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Dehradun", duration: "1h 30m", price: "₹80-150", frequency: "20+ daily", type: "Local bus", operator: "UTC", bookingUrl: "Local booking" },
+          { city: "Haridwar", duration: "2h", price: "₹100-200", frequency: "15+ daily", type: "Direct bus", operator: "UTC", bookingUrl: "Local booking" }
+        ]
       }
     };
 
