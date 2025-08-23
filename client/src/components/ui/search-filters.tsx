@@ -85,7 +85,7 @@ export default function SearchFilters({
         </div>
         
         {/* Quick Filters */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-2 sm:gap-3 mb-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-2 sm:gap-3 mb-6">
           {filters.map((filter) => {
             const isActive = selectedFilters.includes(filter.id);
             return (
@@ -101,7 +101,7 @@ export default function SearchFilters({
                 data-testid={`filter-${filter.id}`}
               >
                 {filter.icon}
-              <span className="hidden sm:inline">{filter.label}</span>
+              <span className="text-xs sm:text-sm">{filter.label}</span>
               </Button>
             );
           })}

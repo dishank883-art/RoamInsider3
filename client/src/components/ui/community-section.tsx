@@ -15,25 +15,17 @@ export default function CommunitySection() {
                 Join Our Growing <span className="text-vintage-gold">Community</span>
               </h2>
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Connect with thousands of digital nomads, share experiences, and get real-time advice from people living your dream lifestyle.
+                Connect with fellow digital nomads, share experiences, and get real-time advice from people living your dream lifestyle.
               </p>
               
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-vintage-gold mb-2">10K+</div>
+                  <div className="text-3xl font-bold text-vintage-gold mb-2">200+</div>
                   <div className="text-blue-100">Active Members</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-vintage-gold mb-2">50+</div>
+                  <div className="text-3xl font-bold text-vintage-gold mb-2">20+</div>
                   <div className="text-blue-100">Cities Covered</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-vintage-gold mb-2">500+</div>
-                  <div className="text-blue-100">Monthly Meetups</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-vintage-gold mb-2">24/7</div>
-                  <div className="text-blue-100">Community Support</div>
                 </div>
               </div>
               
