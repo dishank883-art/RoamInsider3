@@ -69,9 +69,9 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
     const accommodationData: Record<string, any> = {
       mumbai: {
         hostels: [
-          { name: "Zostel Mumbai", area: "Andheri East", price: "₹189-500/night ($6-8)", rating: 4.2, amenities: ["WiFi", "Cafe", "Rooftop", "Games room"], bookingUrl: "https://www.zostel.com/zostel/mumbai/mumbai-bkc-mumh529/" },
-          { name: "Backpacker Cowies", area: "Colaba", price: "₹800-1200/night ($11-14)", rating: 4.1, amenities: ["WiFi", "Heritage building", "Rooftop terrace", "Central location"], bookingUrl: "https://www.hostelworld.com/hostels/p/89674/backpacker-panda-colaba/" },
-          { name: "Hostel Mantra", area: "Andheri West", price: "₹500-800/night ($6-10)", rating: 3.9, amenities: ["WiFi", "Games room", "Social atmosphere", "CCTV"], bookingUrl: "https://www.hostelworld.com/hostels/p/87362/hostel-mantra/" }
+          { name: "Zostel Mumbai", area: "Andheri East", price: "₹800-1400/night ($10-17)", rating: 4.2, amenities: ["WiFi", "Cafe", "Rooftop", "Games room"], bookingUrl: "https://www.zostel.com/zostel/mumbai/mumbai-mmbh714/" },
+          { name: "Backpacker Panda Colaba", area: "Colaba", price: "₹500-800/night ($6-10)", rating: 4.1, amenities: ["WiFi", "Gateway of India nearby", "Cultural area", "Tourist hub"], bookingUrl: "https://www.agoda.com/en-in/backpacker-panda-colaba/hotel/mumbai-in.html" },
+          { name: "The Hosteller Mumbai", area: "Andheri", price: "₹700-1200/night ($8-14)", rating: 4.0, amenities: ["WiFi", "Modern facilities", "Social atmosphere", "Airport proximity"], bookingUrl: "https://www.thehosteller.com/hostels/mumbai/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/mumbai-in.html", features: ["Instant booking", "Local support", "Best price guarantee"] },
@@ -89,8 +89,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       delhi: {
         hostels: [
           { name: "Zostel Delhi", area: "Paharganj", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "AC", "Kitchen", "Terrace"], bookingUrl: "https://www.zostel.com/zostel/delhi/" },
-          { name: "Jugaad Hostels", area: "Hauz Khas", price: "₹800-1200/night ($10-14)", rating: 4.4, amenities: ["WiFi", "Events", "Kitchen", "Co-working"], bookingUrl: "https://www.jugaadhostels.com/delhi" },
-          { name: "Bleisure Hospitality", area: "Connaught Place", price: "₹900-1300/night ($11-16)", rating: 4.2, amenities: ["WiFi", "Restaurant", "AC"], bookingUrl: "https://www.bleisure.in/delhi" }
+          { name: "The Hosteller Delhi", area: "Hauz Khas", price: "₹800-1200/night ($10-14)", rating: 4.4, amenities: ["WiFi", "Events", "Kitchen", "Co-working"], bookingUrl: "https://www.thehosteller.com/hostels/delhi/" },
+          { name: "Stops Hostel Delhi", area: "Connaught Place", price: "₹700-1100/night ($8-13)", rating: 4.2, amenities: ["WiFi", "Restaurant", "AC", "Central location"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/new-delhi/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/new-delhi-in.html", features: ["Best prices", "Local partnerships", "Mobile app"] },
@@ -163,8 +163,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       kochi: {
         hostels: [
           { name: "Zostel Kochi", area: "Fort Kochi", price: "₹700-1000/night ($8-12)", rating: 4.1, amenities: ["WiFi", "AC", "Kitchen", "Heritage location"], bookingUrl: "https://www.zostel.com/zostel/kochi/" },
-          { name: "Backpacker Panda", area: "Marine Drive", price: "₹600-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Backwater views", "Kitchen"], bookingUrl: "https://www.backpackerpanda.com/kochi" },
-          { name: "The Tea Bungalow", area: "Mattancherry", price: "₹800-1200/night ($10-14)", rating: 4.2, amenities: ["WiFi", "Heritage building", "Cultural tours"], bookingUrl: "https://www.teabungalow.com/" }
+          { name: "Kochi Backpackers", area: "Marine Drive", price: "₹600-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Backwater views", "Kitchen"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/kochi/" },
+          { name: "Fort Kochi Hostel", area: "Mattancherry", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "Heritage area", "Cultural tours", "Fort Kochi proximity"], bookingUrl: "https://www.booking.com/city/in/kochi.html" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/kochi-in.html", features: ["Backwater properties", "Heritage stays", "Local partnerships"] },
@@ -181,7 +181,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       pune: {
         hostels: [
           { name: "Zostel Pune", area: "Koregaon Park", price: "₹700-1100/night ($8-13)", rating: 4.0, amenities: ["WiFi", "AC", "Kitchen", "Party area"], bookingUrl: "https://www.zostel.com/zostel/pune/" },
-          { name: "Backpacker Panda", area: "Camp", price: "₹500-800/night ($6-10)", rating: 3.8, amenities: ["WiFi", "Common area", "Tours"], bookingUrl: "https://www.backpackerpanda.com/pune" },
+          { name: "Mad Packer Hostel", area: "Camp", price: "₹500-800/night ($6-10)", rating: 3.8, amenities: ["WiFi", "Common area", "Tours", "Central location"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/pune/" },
           { name: "The Hosteller", area: "Viman Nagar", price: "₹600-900/night ($7-11)", rating: 4.1, amenities: ["WiFi", "Kitchen", "Airport proximity"], bookingUrl: "https://www.thehosteller.com/pune/" }
         ],
         platforms: [
@@ -217,7 +217,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       pondicherry: {
         hostels: [
           { name: "Villa Shanti Backpackers", area: "French Quarter", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "French architecture", "Beach proximity"], bookingUrl: "https://villashanti.com/backpackers" },
-          { name: "Backpacker Panda", area: "White Town", price: "₹600-900/night ($7-11)", rating: 3.9, amenities: ["WiFi", "Colonial charm", "Beach access"], bookingUrl: "https://www.backpackerpanda.com/pondicherry" },
+          { name: "French Quarter Hostel", area: "White Town", price: "₹600-900/night ($7-11)", rating: 3.9, amenities: ["WiFi", "Colonial charm", "Beach access", "French heritage"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/puducherry/" },
           { name: "Zostel Pondicherry", area: "Auroville Road", price: "₹650-950/night ($8-11)", rating: 4.0, amenities: ["WiFi", "Spiritual vibes", "Auroville access"], bookingUrl: "https://www.zostel.com/zostel/pondicherry/" }
         ],
         platforms: [
@@ -284,9 +284,9 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       kolkata: {
         hostels: [
-          { name: "Backpacker Panda", area: "Park Street", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Cultural heart", "Metro access", "AC"], bookingUrl: "https://www.backpackerpanda.com/kolkata" },
+          { name: "Kolkata Backpackers", area: "Park Street", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Cultural heart", "Metro access", "AC"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/kolkata/" },
           { name: "The Hosteller", area: "New Market", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Heritage location", "Cultural tours"], bookingUrl: "https://www.thehosteller.com/kolkata/" },
-          { name: "Mad Monkey Hostel", area: "Salt Lake", price: "₹700-1000/night ($8-12)", rating: 4.1, amenities: ["WiFi", "Modern area", "IT hub proximity"], bookingUrl: "https://www.madmonkeyhostels.com/kolkata/" }
+          { name: "The Hosteller Kolkata", area: "Salt Lake", price: "₹600-900/night ($7-11)", rating: 4.1, amenities: ["WiFi", "Modern area", "IT hub proximity", "Social spaces"], bookingUrl: "https://www.thehosteller.com/hostels/kolkata/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/kolkata-in.html", features: ["Cultural heritage", "Metro connectivity", "Budget options"] },
@@ -334,7 +334,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       tosh: {
         hostels: [
           { name: "Zostel Tosh", area: "Upper Tosh", price: "₹350-550/night ($4-7)", rating: 4.0, amenities: ["WiFi", "Mountain views", "Trekking", "Stargazing"], bookingUrl: "https://www.zostel.com/zostel/tosh/" },
-          { name: "Backpacker Panda", area: "Lower Tosh", price: "₹250-450/night ($3-5)", rating: 3.8, amenities: ["WiFi", "Budget stay", "Valley views"], bookingUrl: "https://www.backpackerpanda.com/tosh" },
+          { name: "Tosh Valley Stay", area: "Lower Tosh", price: "₹250-450/night ($3-5)", rating: 3.8, amenities: ["WiFi", "Budget stay", "Valley views", "Local food"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/tosh/" },
           { name: "Mountain Guest House", area: "Tosh Village", price: "₹300-500/night ($4-6)", rating: 3.9, amenities: ["WiFi", "Local food", "Himalayan views"], bookingUrl: "https://www.mountainguesthouse.com/tosh" }
         ],
         platforms: [
@@ -364,7 +364,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       ziro: {
         hostels: [
-          { name: "Ziro Backpackers", area: "Old Ziro", price: "₹400-600/night ($5-7)", rating: 3.8, amenities: ["WiFi", "Tribal culture", "Nature walks", "Local food"], bookingUrl: "https://www.zirobackpackers.com/" },
+          { name: "Ziro Valley Homestay", area: "Old Ziro", price: "₹400-600/night ($5-7)", rating: 3.8, amenities: ["WiFi", "Tribal culture", "Nature walks", "Local food"], bookingUrl: "https://www.booking.com/region/in/arunachal-pradesh.html" },
           { name: "Apatani Heritage Stay", area: "Hong Village", price: "₹500-800/night ($6-10)", rating: 4.0, amenities: ["WiFi", "Cultural immersion", "Traditional architecture"], bookingUrl: "https://www.apataniheritage.com/" },
           { name: "Eco Lodge Ziro", area: "Hapoli", price: "₹600-900/night ($7-11)", rating: 4.1, amenities: ["WiFi", "Eco-friendly", "Nature trails", "Bird watching"], bookingUrl: "https://www.ecolodgeziro.com/" }
         ],
@@ -380,8 +380,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       varkala: {
         hostels: [
           { name: "Zostel Varkala", area: "Cliff Beach", price: "₹700-1000/night ($8-12)", rating: 4.1, amenities: ["WiFi", "Beach access", "Cliff views", "Ayurveda"], bookingUrl: "https://www.zostel.com/zostel/varkala/" },
-          { name: "Backpacker Panda", area: "North Cliff", price: "₹600-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Beach proximity", "Yoga classes"], bookingUrl: "https://www.backpackerpanda.com/varkala" },
-          { name: "Mad Monkey Hostel", area: "South Cliff", price: "₹750-1100/night ($9-13)", rating: 4.0, amenities: ["WiFi", "Beach parties", "Cliff restaurant"], bookingUrl: "https://www.madmonkeyhostels.com/varkala/" }
+          { name: "Cliff House Hostel", area: "North Cliff", price: "₹600-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Beach proximity", "Yoga classes", "Cliff views"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/varkala/" },
+          { name: "Zostel Varkala", area: "South Cliff", price: "₹700-1000/night ($8-12)", rating: 4.0, amenities: ["WiFi", "Beach parties", "Cliff restaurant", "Beach access"], bookingUrl: "https://www.zostel.com/zostel/varkala/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/varkala-in.html", features: ["Beach resorts", "Ayurveda retreats", "Cliff accommodations"] },
@@ -429,7 +429,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
         hostels: [
           { name: "Zostel New Delhi", area: "Paharganj", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "AC", "Kitchen", "Terrace"], bookingUrl: "https://www.zostel.com/zostel/delhi/" },
           { name: "Jugaad Hostels", area: "Hauz Khas", price: "₹800-1200/night ($10-14)", rating: 4.4, amenities: ["WiFi", "Events", "Kitchen", "Co-working"], bookingUrl: "https://www.jugaadhostels.com/delhi" },
-          { name: "Bleisure Hospitality", area: "Connaught Place", price: "₹900-1300/night ($11-16)", rating: 4.2, amenities: ["WiFi", "Restaurant", "AC"], bookingUrl: "https://www.bleisure.in/delhi" }
+          { name: "Stops Hostel Delhi", area: "Connaught Place", price: "₹700-1100/night ($8-13)", rating: 4.2, amenities: ["WiFi", "Restaurant", "AC", "Central location"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/new-delhi/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/new-delhi-in.html", features: ["Best prices", "Local partnerships", "Mobile app"] },
