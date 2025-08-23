@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Play, Search, MapPin, Users, Star } from "lucide-react";
+import { Search, MapPin, Users, Star } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -46,14 +46,6 @@ export default function HeroSection() {
               >
                 <Search className="mr-2 h-5 w-5" />
                 Explore Cities
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-white hover:text-travel-blue transition-all duration-200 touch-manipulation min-h-[48px]"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Watch Guide
               </Button>
             </div>
             
