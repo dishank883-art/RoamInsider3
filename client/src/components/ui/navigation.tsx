@@ -20,7 +20,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-3">
             <Compass className="h-8 w-8 text-vintage-gold" />
-            <h1 className="font-serif text-2xl font-bold text-travel-blue">
+            <h1 className="font-serif text-xl sm:text-2xl font-bold text-travel-blue">
               Roam <span className="text-vintage-gold">Insider</span>
             </h1>
           </Link>
@@ -59,14 +59,15 @@ export default function Navigation() {
             </Button>
             <Button 
               asChild
-              className="bg-vintage-gold text-white hover:bg-vintage-gold/90"
+              className="bg-vintage-gold text-white hover:bg-vintage-gold/90 text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-2.5 touch-manipulation min-h-[44px]"
             >
               <a 
                 href="https://discord.gg/Y39GGpQtMm" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                Join Free Community
+                <span className="hidden sm:inline">Join Free Community</span>
+                <span className="sm:hidden">Join</span>
               </a>
             </Button>
             

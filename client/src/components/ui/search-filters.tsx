@@ -60,8 +60,8 @@ export default function SearchFilters({
   };
 
   return (
-    <section className="bg-white shadow-lg -mt-10 relative z-20 mx-4 sm:mx-6 lg:mx-8 rounded-2xl border border-vintage-gold/20">
-      <div className="p-6 lg:p-8">
+    <section className="bg-white shadow-lg -mt-10 relative z-20 mx-2 sm:mx-4 lg:mx-8 rounded-2xl border border-vintage-gold/20">
+      <div className="p-4 sm:p-6 lg:p-8">
         {/* Search Bar */}
         <div className="mb-6">
           <div className="relative max-w-2xl mx-auto">
@@ -71,20 +71,21 @@ export default function SearchFilters({
               placeholder="Search cities, regions, or experiences..." 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-vintage-gold focus:border-transparent text-lg"
+              className="w-full pl-12 pr-4 py-3 sm:py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-vintage-gold focus:border-transparent text-base sm:text-lg touch-manipulation min-h-[48px]"
               onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
             />
             <Button 
               onClick={handleSearch}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-vintage-gold text-white rounded-lg font-medium hover:bg-vintage-gold/90 transition-colors"
+              className="absolute right-1 sm:right-2 top-1/2 transform -translate-y-1/2 px-4 sm:px-6 py-2 bg-vintage-gold text-white rounded-lg font-medium hover:bg-vintage-gold/90 transition-colors text-sm sm:text-base touch-manipulation"
             >
-              Search
+              <span className="hidden sm:inline">Search</span>
+              <Search className="h-4 w-4 sm:hidden" />
             </Button>
           </div>
         </div>
         
         {/* Quick Filters */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 mb-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-2 sm:gap-3 mb-6">
           {filters.map((filter) => {
             const isActive = selectedFilters.includes(filter.id);
             return (
@@ -92,7 +93,7 @@ export default function SearchFilters({
                 key={filter.id}
                 onClick={() => toggleFilter(filter.id)}
                 variant={isActive ? "default" : "secondary"}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center space-x-1 ${
+                className={`px-3 sm:px-4 py-3 rounded-lg text-xs sm:text-sm font-medium transition-colors flex items-center justify-center space-x-1 touch-manipulation min-h-[44px] ${
                   isActive
                     ? "bg-travel-blue text-white hover:bg-travel-blue/90" 
                     : "bg-gray-100 text-muted-navy hover:bg-gray-200"
@@ -100,7 +101,7 @@ export default function SearchFilters({
                 data-testid={`filter-${filter.id}`}
               >
                 {filter.icon}
-              <span>{filter.label}</span>
+              <span className="hidden sm:inline">{filter.label}</span>
               </Button>
             );
           })}

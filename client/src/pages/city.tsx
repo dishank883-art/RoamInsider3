@@ -243,7 +243,7 @@ export default function CityPage() {
             
             <div 
               id="tab-container"
-              className="flex space-x-1 py-4 overflow-x-auto scroll-smooth mx-10"
+              className="flex space-x-1 py-4 overflow-x-auto scroll-smooth mx-8 sm:mx-10"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {tabs.map((tab) => {
@@ -252,15 +252,15 @@ export default function CityPage() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`flex items-center space-x-2 px-4 py-3 rounded-lg font-medium text-sm whitespace-nowrap transition-all duration-200 ${
+                    className={`flex items-center space-x-1 sm:space-x-2 px-2 sm:px-4 py-2 sm:py-3 rounded-lg font-medium text-xs sm:text-sm whitespace-nowrap transition-all duration-200 touch-manipulation min-h-[44px] ${
                       activeTab === tab.id
                         ? 'bg-travel-blue text-white shadow-md transform scale-105'
                         : 'text-travel-blue hover:bg-travel-blue/10 hover:text-travel-blue/80 hover:scale-102'
                     }`}
                   >
-                    <span className="text-lg">{tab.emoji}</span>
-                    <IconComponent className="h-4 w-4" />
-                    <span>{tab.label}</span>
+                    <span className="text-base sm:text-lg">{tab.emoji}</span>
+                    <IconComponent className="h-3 w-3 sm:h-4 sm:w-4" />
+                    <span className="hidden sm:inline">{tab.label}</span>
                   </button>
                 );
               })}

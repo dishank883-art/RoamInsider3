@@ -17,24 +17,24 @@ export default function HeroSection() {
         <MapPin className="w-12 h-12" />
       </div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="text-white">
-            <h1 className="font-serif text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Discover India's Hidden 
-              <span className="text-vintage-gold font-script text-6xl lg:text-7xl block mt-2">
+              <span className="text-vintage-gold font-script text-4xl sm:text-6xl lg:text-7xl block mt-2">
                 Gems
               </span>
             </h1>
-            <p className="text-xl lg:text-2xl text-blue-100 mb-8 leading-relaxed">
+            <p className="text-base sm:text-xl lg:text-2xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
               The ultimate guide for digital nomads exploring incredible Indian cities. 
               Real insights, local secrets, and everything you need to roam like an insider.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
               <Button 
                 size="lg" 
-                className="px-8 py-4 bg-vintage-gold text-white rounded-xl font-semibold text-lg hover:bg-vintage-gold/90 transition-all duration-200 shadow-lg"
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-vintage-gold text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-vintage-gold/90 transition-all duration-200 shadow-lg touch-manipulation min-h-[48px]"
               >
                 <Search className="mr-2 h-5 w-5" />
                 Explore Cities
@@ -42,14 +42,14 @@ export default function HeroSection() {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold text-lg hover:bg-white hover:text-travel-blue transition-all duration-200"
+                className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-white hover:text-travel-blue transition-all duration-200 touch-manipulation min-h-[48px]"
               >
                 <Play className="mr-2 h-5 w-5" />
                 Watch Guide
               </Button>
             </div>
             
-            <div className="flex items-center space-x-8 text-blue-100">
+            <div className="flex items-center space-x-4 sm:space-x-8 text-blue-100 text-sm sm:text-base">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-5 w-5 text-vintage-gold" />
                 <span className="font-semibold">50+ Cities</span>

@@ -71,6 +71,35 @@
   --chart-5: hsl(341, 75%, 51%);
 }
 
+/* Mobile-First Responsive Utilities */
+@layer utilities {
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  .min-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  @media (max-width: 640px) {
+    .text-responsive {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+    
+    .heading-responsive {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    
+    .container-mobile {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
