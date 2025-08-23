@@ -9,6 +9,11 @@ import CityPage from "@/pages/city";
 import CostCalculator from "@/pages/cost-calculator";
 import VisaGuide from "@/pages/visa-guide";
 import Contact from "@/pages/contact";
+import AllCities from "@/pages/all-cities";
+import PopularDestinations from "@/pages/popular-destinations";
+import HiddenGems from "@/pages/hidden-gems";
+import BudgetCities from "@/pages/budget-cities";
+import TechHubs from "@/pages/tech-hubs";
 
 function Router() {
   return (
@@ -17,6 +22,11 @@ function Router() {
       <Route path="/calculator" component={CostCalculator} />
       <Route path="/visa" component={VisaGuide} />
       <Route path="/contact" component={Contact} />
+      <Route path="/cities" component={AllCities} />
+      <Route path="/popular" component={PopularDestinations} />
+      <Route path="/hidden-gems" component={HiddenGems} />
+      <Route path="/budget" component={BudgetCities} />
+      <Route path="/tech-hubs" component={TechHubs} />
       <Route path="/city/:slug" component={CityPage} />
       {/* Direct city access routes - redirect to proper format */}
       <Route path="/mumbai">{() => <Redirect to="/city/mumbai" />}</Route>
