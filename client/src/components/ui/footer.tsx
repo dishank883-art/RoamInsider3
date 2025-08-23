@@ -104,7 +104,7 @@ export default function Footer() {
                 <svg className="w-4 h-4 text-vintage-gold" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16.5c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5H18v4h2zM12.5 11.5c.83 0 1.5-.67 1.5-1.5V4c0-1.66-1.34-3-3-3S8 2.34 8 4v6c0 .83.67 1.5 1.5 1.5H12.5zm-2-7.5c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM11 22v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 9.54 8H7.5C6.67 8 6 8.67 6 9.5v7c0 .83.67 1.5 1.5 1.5H9v4h2z"/>
                 </svg>
-                <span>10K+ Members</span>
+                <span>200+ Members</span>
               </span>
             </div>
           </div>

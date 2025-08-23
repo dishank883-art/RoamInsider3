@@ -306,19 +306,19 @@ export default function CommunityNomads({ city }: CommunityNomadsProps) {
   const coworkingSpaces = cityData.coworkingSpaces;
 
   const meetupGroups = [
-    { name: "Digital Nomads " + city.name, members: "450+", focus: "Networking & Events", frequency: "Weekly" },
-    { name: "Startup Community", members: "800+", focus: "Entrepreneurship", frequency: "Bi-weekly" },
-    { name: "Freelancers Hub", members: "320+", focus: "Skill sharing", frequency: "Monthly" },
-    { name: "Remote Workers", members: "600+", focus: "Coworking meetups", frequency: "Weekly" },
-    { name: "Tech Talks", members: "1200+", focus: "Technology trends", frequency: "Monthly" }
+    { name: "Digital Nomads " + city.name, members: "45+", focus: "Networking & Events", frequency: "Monthly" },
+    { name: "Startup Community", members: "35+", focus: "Entrepreneurship", frequency: "Monthly" },
+    { name: "Freelancers Hub", members: "25+", focus: "Skill sharing", frequency: "Monthly" },
+    { name: "Remote Workers", members: "40+", focus: "Coworking meetups", frequency: "Bi-weekly" },
+    { name: "Tech Talks", members: "30+", focus: "Technology trends", frequency: "Monthly" }
   ];
 
   const expatCommunities = [
-    { nationality: "International", platform: "Facebook Groups", members: "2000+", activity: "Very Active" },
-    { nationality: "European", platform: "WhatsApp", members: "150+", activity: "Active" },
-    { nationality: "American", platform: "Telegram", members: "300+", activity: "Moderate" },
-    { nationality: "Asian", platform: "WeChat", members: "200+", activity: "Active" },
-    { nationality: "General Expat", platform: "Reddit", members: "1500+", activity: "Very Active" }
+    { nationality: "International", platform: "Facebook Groups", members: "80+", activity: "Active" },
+    { nationality: "European", platform: "WhatsApp", members: "25+", activity: "Active" },
+    { nationality: "American", platform: "Telegram", members: "35+", activity: "Moderate" },
+    { nationality: "Asian", platform: "WeChat", members: "20+", activity: "Active" },
+    { nationality: "General Expat", platform: "Reddit", members: "40+", activity: "Active" }
   ];
 
   return (

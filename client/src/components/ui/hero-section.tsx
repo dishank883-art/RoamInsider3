@@ -56,11 +56,11 @@ export default function HeroSection() {
               </div>
               <div className="flex items-center space-x-2">
                 <Users className="h-5 w-5 text-vintage-gold" />
-                <span className="font-semibold">10K+ Nomads</span>
+                <span className="font-semibold">200+ Members</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Star className="h-5 w-5 text-vintage-gold fill-current" />
-                <span className="font-semibold">4.9 Rating</span>
+                <span className="font-semibold">4.7 Rating</span>
               </div>
             </div>
           </div>
