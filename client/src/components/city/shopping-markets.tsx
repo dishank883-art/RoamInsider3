@@ -480,7 +480,11 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
 
   // City-specific price guide function
   const getCitySpecificPriceGuide = (cityName: string) => {
-    if (cityName === "Ziro") {
+    console.log("getCitySpecificPriceGuide called with:", cityName);
+    
+    const cityLower = cityName.toLowerCase();
+    
+    if (cityLower === "ziro") {
       return [
         {
           category: "Tribal Handicrafts & Artifacts",
@@ -512,7 +516,7 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
       ];
     }
     
-    if (cityName === "Mumbai") {
+    if (cityLower === "mumbai") {
       return [
         {
           category: "Bollywood & Entertainment",
@@ -544,7 +548,7 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
       ];
     }
     
-    if (cityName === "Bangalore") {
+    if (cityLower === "bangalore") {
       return [
         {
           category: "Tech & Electronics",
@@ -576,7 +580,7 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
       ];
     }
     
-    if (cityName === "Goa") {
+    if (cityLower === "goa") {
       return [
         {
           category: "Beach & Portuguese Heritage",
@@ -648,9 +652,7 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
     { season: "Summer Sale (Apr-Jun)", discounts: "30-60%", bestFor: "Electronics, branded clothing" },
     { season: "Monsoon (Jul-Sep)", discounts: "15-40%", bestFor: "Indoor items, books, crafts" }
   ];
-            { item: "Sandalwood items", priceRange: "₹200-5000 ($2.40-60)", bestPlace: "Cauvery Arts & Crafts" },
-            { item: "Filter coffee powder (1kg)", priceRange: "₹400-800 ($4.80-9.60)", bestPlace: "VV Puram Food Street" },
-            { item: "Ragi products", priceRange: "₹100-400 ($1.20-4.80)", bestPlace: "Organic stores, Jayanagar" }
+
   return (
     <Card className="bg-white rounded-2xl shadow-lg">
       <CardHeader>
