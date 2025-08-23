@@ -38,14 +38,26 @@ export default function CommunitySection() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="px-8 py-4 bg-vintage-gold text-white rounded-xl font-semibold text-lg hover:bg-vintage-gold/90 transition-all duration-200">
-                  Join Community
+                <Button 
+                  asChild
+                  className="px-10 py-5 bg-vintage-gold text-travel-blue rounded-xl font-bold text-lg hover:bg-vintage-gold/90 transition-all duration-200 transform hover:scale-105 shadow-2xl"
+                >
+                  <a 
+                    href="https://discord.gg/Y39GGpQtMm" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2"
+                  >
+                    <span>🚀</span>
+                    <span>Join Free Discord Community</span>
+                  </a>
                 </Button>
                 <Button 
                   variant="outline"
                   className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold text-lg hover:bg-white hover:text-travel-blue transition-all duration-200"
                 >
-                  Find Meetups
+                  <span className="mr-2">📍</span>
+                  Find Local Meetups
                 </Button>
               </div>
             </div>

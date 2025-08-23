@@ -319,33 +319,138 @@ export default function Home() {
         )}
       </section>
 
-      {/* Discord Community Section */}
-      <section className="bg-travel-blue py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl lg:text-4xl font-bold text-white mb-4">
-            Join the Roam Insider Community
-          </h2>
-          <p className="text-xl text-cream/90 mb-8 max-w-2xl mx-auto">
-            Connect with fellow digital nomads and travelers. Ask questions, share experiences, 
-            get city guides, and meet like-minded individuals from around the world.
-          </p>
-          <Button 
-            asChild
-            size="lg"
-            className="bg-vintage-gold hover:bg-vintage-gold/90 text-travel-blue font-semibold px-8 py-4 text-lg rounded-xl"
-          >
-            <a 
-              href="https://discord.gg/Y39GGpQtMm" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              data-testid="join-discord-community"
-            >
-              Join Free Community on Discord
-            </a>
-          </Button>
-          <p className="text-cream/70 text-sm mt-4">
-            100% Free • City Guides Available • Active Community
-          </p>
+      {/* Enhanced Discord Community CTA Section */}
+      <section className="bg-gradient-to-br from-travel-blue via-travel-blue to-muted-navy py-20 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-vintage-gold/5 rounded-full -translate-y-48 translate-x-48"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-vintage-gold/5 rounded-full translate-y-32 -translate-x-32"></div>
+        
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center bg-vintage-gold/20 text-vintage-gold px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                🔥 Join 5,000+ Active Members
+              </div>
+              
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                Get <span className="text-vintage-gold">Instant Access</span> to India's Largest Digital Nomad Community
+              </h2>
+              
+              <p className="text-xl text-cream/90 mb-8 leading-relaxed">
+                Skip the research. Get real-time advice from nomads living in your next destination. 
+                From finding the best coworking spaces to avoiding tourist traps.
+              </p>
+              
+              {/* Benefits Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-vintage-gold/20 rounded-full flex items-center justify-center">
+                    <span className="text-vintage-gold text-sm">💬</span>
+                  </div>
+                  <span className="text-cream text-sm">Live City Updates</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-vintage-gold/20 rounded-full flex items-center justify-center">
+                    <span className="text-vintage-gold text-sm">🏠</span>
+                  </div>
+                  <span className="text-cream text-sm">Accommodation Tips</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-vintage-gold/20 rounded-full flex items-center justify-center">
+                    <span className="text-vintage-gold text-sm">🤝</span>
+                  </div>
+                  <span className="text-cream text-sm">Local Meetups</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-vintage-gold/20 rounded-full flex items-center justify-center">
+                    <span className="text-vintage-gold text-sm">⚡</span>
+                  </div>
+                  <span className="text-cream text-sm">Instant Support</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start">
+                <Button 
+                  asChild
+                  size="lg"
+                  className="bg-vintage-gold hover:bg-vintage-gold/90 text-travel-blue font-bold px-10 py-5 text-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-200"
+                >
+                  <a 
+                    href="https://discord.gg/Y39GGpQtMm" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    data-testid="join-discord-community"
+                    className="flex items-center space-x-2"
+                  >
+                    <span>🚀</span>
+                    <span>Join Free on Discord</span>
+                  </a>
+                </Button>
+                
+                <div className="text-center sm:text-left">
+                  <p className="text-cream/70 text-sm">
+                    ✅ 100% Free Forever
+                  </p>
+                  <p className="text-cream/70 text-sm">
+                    ✅ No Spam, Just Value
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right Content - Social Proof */}
+            <div className="relative">
+              <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Join Today & Get:</h3>
+                  <div className="h-1 w-20 bg-vintage-gold mx-auto rounded-full"></div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-4 bg-white/5 rounded-xl p-4">
+                    <div className="w-12 h-12 bg-vintage-gold rounded-full flex items-center justify-center text-travel-blue font-bold text-lg">
+                      📱
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">Exclusive City Guides</p>
+                      <p className="text-cream/80 text-sm">Insider tips from 50+ Indian cities</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4 bg-white/5 rounded-xl p-4">
+                    <div className="w-12 h-12 bg-vintage-gold rounded-full flex items-center justify-center text-travel-blue font-bold text-lg">
+                      💸
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">Cost Savings</p>
+                      <p className="text-cream/80 text-sm">Save 30-50% on accommodation & food</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4 bg-white/5 rounded-xl p-4">
+                    <div className="w-12 h-12 bg-vintage-gold rounded-full flex items-center justify-center text-travel-blue font-bold text-lg">
+                      🎯
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">Skip The Research</p>
+                      <p className="text-cream/80 text-sm">Get answers in minutes, not hours</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-6 pt-6 border-t border-white/10 text-center">
+                  <p className="text-vintage-gold font-semibold text-lg">5,000+ Members Can't Be Wrong</p>
+                  <div className="flex justify-center space-x-1 mt-2">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <span key={i} className="text-vintage-gold text-lg">⭐</span>
+                    ))}
+                  </div>
+                  <p className="text-cream/70 text-sm mt-1">Average 4.9/5 rating from members</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
