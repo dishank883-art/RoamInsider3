@@ -231,23 +231,23 @@ export default function CityPage() {
       <section className="sticky top-0 z-20 bg-white backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
-            {/* Left Scroll Button */}
+            {/* Prominent Left Scroll Button */}
             <button 
               onClick={() => {
                 const container = document.getElementById('tab-container');
                 if (container) container.scrollLeft -= 300;
               }}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-gray-50 shadow-md rounded-full p-2 text-gray-500 hover:text-travel-blue transition-colors duration-200"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-travel-blue to-travel-blue/90 hover:from-travel-blue/90 hover:to-vintage-gold text-white shadow-xl hover:shadow-2xl rounded-full p-4 transition-all duration-300 hover:scale-110 border-2 border-white"
             >
-              <ArrowLeft className="h-4 w-4" />
+              <ArrowLeft className="h-6 w-6 drop-shadow-sm" />
             </button>
             
             <div 
               id="tab-container"
-              className="overflow-x-auto scrollbar-hide mx-8"
+              className="overflow-x-auto scrollbar-hide mx-16 py-6"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
-              <div className="flex space-x-2 py-4 min-w-max">
+              <div className="flex space-x-3 min-w-max">
                 {tabs.map((tab) => {
                   const IconComponent = tab.icon;
                   const isActive = activeTab === tab.id;
@@ -255,30 +255,30 @@ export default function CityPage() {
                     <button
                       key={tab.id}
                       onClick={() => setActiveTab(tab.id)}
-                      className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+                      className={`inline-flex items-center gap-2.5 px-5 py-3 rounded-xl text-sm font-semibold transition-all duration-200 whitespace-nowrap border ${
                         isActive
-                          ? 'bg-travel-blue text-white shadow-sm'
-                          : 'text-gray-600 hover:text-travel-blue hover:bg-gray-50/80'
+                          ? 'bg-travel-blue text-white shadow-lg border-travel-blue'
+                          : 'text-gray-700 hover:text-travel-blue hover:bg-travel-blue/5 bg-white border-gray-200 hover:border-travel-blue/30 hover:shadow-md'
                       }`}
                     >
                       <span className="text-base">{tab.emoji}</span>
-                      <IconComponent className="h-3.5 w-3.5" />
-                      <span>{tab.label}</span>
+                      <IconComponent className="h-4 w-4" />
+                      <span className="font-medium">{tab.label}</span>
                     </button>
                   );
                 })}
               </div>
             </div>
             
-            {/* Right Scroll Button */}
+            {/* Prominent Right Scroll Button */}
             <button 
               onClick={() => {
                 const container = document.getElementById('tab-container');
                 if (container) container.scrollLeft += 300;
               }}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-gray-50 shadow-md rounded-full p-2 text-gray-500 hover:text-travel-blue transition-colors duration-200"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-travel-blue to-travel-blue/90 hover:from-travel-blue/90 hover:to-vintage-gold text-white shadow-xl hover:shadow-2xl rounded-full p-4 transition-all duration-300 hover:scale-110 border-2 border-white"
             >
-              <ArrowLeft className="h-4 w-4 rotate-180" />
+              <ArrowLeft className="h-6 w-6 rotate-180 drop-shadow-sm" />
             </button>
           </div>
         </div>
