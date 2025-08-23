@@ -15,8 +15,8 @@ export default function CityConnections({ city }: CityConnectionsProps) {
       "Goa": {
         trainConnections: [
           { city: "Mumbai", duration: "12h", price: "₹450-2,200", frequency: "Daily", type: "Konkan Railway Express", bookingUrl: "https://www.irctc.co.in/" },
-          { city: "Delhi", duration: "26h", price: "₹800-3,500", frequency: "Daily", type: "Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" },
-          { city: "Bangalore", duration: "15h", price: "₹600-2,800", frequency: "Daily", type: "Goa Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Delhi", duration: "28h", price: "₹800-3,500", frequency: "Daily", type: "Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Bangalore", duration: "11h", price: "₹600-2,800", frequency: "Daily", type: "Goa Express", bookingUrl: "https://www.irctc.co.in/" },
           { city: "Pune", duration: "12h", price: "₹400-1,800", frequency: "Daily", type: "Mandovi Express", bookingUrl: "https://www.irctc.co.in/" }
         ],
         flightConnections: [
@@ -33,9 +33,9 @@ export default function CityConnections({ city }: CityConnectionsProps) {
       "Mumbai": {
         trainConnections: [
           { city: "Delhi", duration: "16h", price: "₹500-3,000", frequency: "Multiple daily", type: "Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" },
-          { city: "Bangalore", duration: "24h", price: "₹600-2,800", frequency: "Daily", type: "Udyan Express", bookingUrl: "https://www.irctc.co.in/" },
-          { city: "Chennai", duration: "26h", price: "₹700-3,200", frequency: "Daily", type: "Chennai Express", bookingUrl: "https://www.irctc.co.in/" },
-          { city: "Kolkata", duration: "32h", price: "₹800-3,800", frequency: "Daily", type: "Howrah Express", bookingUrl: "https://www.irctc.co.in/" }
+          { city: "Bangalore", duration: "21h", price: "₹600-2,800", frequency: "Daily", type: "Udyan Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Chennai", duration: "23h", price: "₹700-3,200", frequency: "Daily", type: "Chennai Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Kolkata", duration: "27h", price: "₹800-3,800", frequency: "Daily", type: "Howrah Express", bookingUrl: "https://www.irctc.co.in/" }
         ],
         flightConnections: [
           { city: "Delhi", duration: "2h 15m", price: "₹4,000-15,000", frequency: "30+ daily", airlines: "All major airlines", bookingUrl: "https://www.makemytrip.com/" },
@@ -52,8 +52,8 @@ export default function CityConnections({ city }: CityConnectionsProps) {
       "Bangalore": {
         trainConnections: [
           { city: "Chennai", duration: "5h", price: "₹200-1,200", frequency: "Multiple daily", type: "Shatabdi Express", bookingUrl: "https://www.irctc.co.in/" },
-          { city: "Mumbai", duration: "24h", price: "₹600-2,800", frequency: "Daily", type: "Udyan Express", bookingUrl: "https://www.irctc.co.in/" },
-          { city: "Delhi", duration: "34h", price: "₹800-4,000", frequency: "Daily", type: "Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Mumbai", duration: "21h", price: "₹600-2,800", frequency: "Daily", type: "Udyan Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Delhi", duration: "31h", price: "₹800-4,000", frequency: "Daily", type: "Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" },
           { city: "Hyderabad", duration: "12h", price: "₹400-2,000", frequency: "Daily", type: "Intercity Express", bookingUrl: "https://www.irctc.co.in/" }
         ],
         flightConnections: [
@@ -73,7 +73,7 @@ export default function CityConnections({ city }: CityConnectionsProps) {
           { city: "Mumbai", duration: "16h", price: "₹500-3,000", frequency: "Multiple daily", type: "Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" },
           { city: "Kolkata", duration: "17h", price: "₹600-3,200", frequency: "Multiple daily", type: "Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" },
           { city: "Chennai", duration: "28h", price: "₹800-3,800", frequency: "Daily", type: "Grand Trunk Express", bookingUrl: "https://www.irctc.co.in/" },
-          { city: "Bangalore", duration: "34h", price: "₹800-4,000", frequency: "Daily", type: "Karnataka Express", bookingUrl: "https://www.irctc.co.in/" }
+          { city: "Bangalore", duration: "31h", price: "₹800-4,000", frequency: "Daily", type: "Karnataka Express", bookingUrl: "https://www.irctc.co.in/" }
         ],
         flightConnections: [
           { city: "Mumbai", duration: "2h 15m", price: "₹4,000-15,000", frequency: "30+ daily", airlines: "All major airlines", bookingUrl: "https://www.makemytrip.com/" },
