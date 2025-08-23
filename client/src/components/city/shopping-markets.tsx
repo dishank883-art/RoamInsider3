@@ -828,6 +828,209 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
             { item: "Pine cone crafts", priceRange: "₹100-500 ($1.20-6)", bestPlace: "Local crafters" }
           ]
         }
+      ],
+      "Ziro": [
+        {
+          category: "Tribal Handicrafts & Artifacts",
+          items: [
+            { item: "Apatani bamboo crafts", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Tribal artisan cooperatives" },
+            { item: "Traditional cane baskets", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Local weavers" },
+            { item: "Tribal jewelry (beads)", priceRange: "₹150-800 ($1.80-9.60)", bestPlace: "Village markets" },
+            { item: "Apatani textiles", priceRange: "₹500-3000 ($6-36)", bestPlace: "Women's weaving groups" }
+          ]
+        },
+        {
+          category: "Natural & Organic Products",
+          items: [
+            { item: "Wild honey (500g)", priceRange: "₹400-1000 ($4.80-12)", bestPlace: "Tribal honey collectors" },
+            { item: "Local rice varieties", priceRange: "₹100-400 ($1.20-4.80)", bestPlace: "Village farms" },
+            { item: "Forest herbs & medicines", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Traditional healers" },
+            { item: "Bamboo shoot pickles", priceRange: "₹150-500 ($1.80-6)", bestPlace: "Local homes" }
+          ]
+        },
+        {
+          category: "Adventure & Survival Gear",
+          items: [
+            { item: "Basic trekking supplies", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Small local shops" },
+            { item: "Rain protection gear", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Practical stores" },
+            { item: "Traditional fishing gear", priceRange: "₹100-600 ($1.20-7.20)", bestPlace: "Local fishermen" },
+            { item: "Warm tribal blankets", priceRange: "₹800-2500 ($9.60-30)", bestPlace: "Handloom centers" }
+          ]
+        }
+      ],
+      "Dharamkot": [
+        {
+          category: "Tibetan Buddhist Items",
+          items: [
+            { item: "Tibetan prayer flags", priceRange: "₹50-300 ($0.60-3.60)", bestPlace: "Monastery shops" },
+            { item: "Singing bowls", priceRange: "₹500-3000 ($6-36)", bestPlace: "Tibetan artisans" },
+            { item: "Buddhist books & texts", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Dharamkot library" },
+            { item: "Meditation malas", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Spiritual shops" }
+          ]
+        },
+        {
+          category: "Backpacker & Trekking Gear",
+          items: [
+            { item: "Trekking backpacks", priceRange: "₹1500-5000 ($18-60)", bestPlace: "Adventure gear shops" },
+            { item: "Mountain boots", priceRange: "₹2000-6000 ($24-72)", bestPlace: "Trekking equipment stores" },
+            { item: "Sleeping bags", priceRange: "₹2500-8000 ($30-96)", bestPlace: "Outdoor gear shops" },
+            { item: "Warm winter clothing", priceRange: "₹800-3000 ($9.60-36)", bestPlace: "Local woolen shops" }
+          ]
+        },
+        {
+          category: "Local Himachali Products",
+          items: [
+            { item: "Himachali woolen caps", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Local knitters" },
+            { item: "Mountain honey", priceRange: "₹400-1200 ($4.80-14.40)", bestPlace: "Beekeepers" },
+            { item: "Himalayan tea", priceRange: "₹300-900 ($3.60-10.80)", bestPlace: "Tea gardens" },
+            { item: "Apple products", priceRange: "₹200-600 ($2.40-7.20)", bestPlace: "Orchard farmers" }
+          ]
+        }
+      ],
+      "Bir": [
+        {
+          category: "Paragliding & Adventure Gear",
+          items: [
+            { item: "Paragliding equipment", priceRange: "₹15000-80000 ($180-960)", bestPlace: "Certified dealers" },
+            { item: "Adventure photography gear", priceRange: "₹1000-8000 ($12-96)", bestPlace: "Sports shops" },
+            { item: "Altitude gear", priceRange: "₹500-3000 ($6-36)", bestPlace: "Mountain sports stores" },
+            { item: "Safety equipment", priceRange: "₹800-4000 ($9.60-48)", bestPlace: "Adventure centers" }
+          ]
+        },
+        {
+          category: "Tibetan Refugee Community Items",
+          items: [
+            { item: "Hand-knitted sweaters", priceRange: "₹800-2500 ($9.60-30)", bestPlace: "Tibetan settlement" },
+            { item: "Tibetan carpets (small)", priceRange: "₹2000-10000 ($24-120)", bestPlace: "Carpet weaving center" },
+            { item: "Yak cheese products", priceRange: "₹300-800 ($3.60-9.60)", bestPlace: "Tibetan dairy" },
+            { item: "Traditional incense", priceRange: "₹100-500 ($1.20-6)", bestPlace: "Monastery stores" }
+          ]
+        },
+        {
+          category: "Mountain Village Specialties",
+          items: [
+            { item: "Fresh mountain herbs", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Local collectors" },
+            { item: "Pine needle products", priceRange: "₹150-600 ($1.80-7.20)", bestPlace: "Forest cooperatives" },
+            { item: "Traditional Kangra tea", priceRange: "₹400-1200 ($4.80-14.40)", bestPlace: "Tea estates" },
+            { item: "Mountain berry jams", priceRange: "₹250-700 ($3-8.40)", bestPlace: "Village producers" }
+          ]
+        }
+      ],
+      "Darjeeling": [
+        {
+          category: "World-Famous Tea Products",
+          items: [
+            { item: "Darjeeling Black Tea (premium)", priceRange: "₹800-3000 ($9.60-36)", bestPlace: "Tea estates" },
+            { item: "Tea tasting sets", priceRange: "₹500-2000 ($6-24)", bestPlace: "Tea boutiques" },
+            { item: "Tea accessories", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Tea shops" },
+            { item: "Green tea varieties", priceRange: "₹600-1800 ($7.20-21.60)", bestPlace: "Specialty tea stores" }
+          ]
+        },
+        {
+          category: "Himalayan Railway Memorabilia",
+          items: [
+            { item: "Toy Train souvenirs", priceRange: "₹200-1200 ($2.40-14.40)", bestPlace: "Railway station shops" },
+            { item: "Vintage railway photos", priceRange: "₹300-1000 ($3.60-12)", bestPlace: "Heritage stores" },
+            { item: "Train model replicas", priceRange: "₹800-3000 ($9.60-36)", bestPlace: "Souvenir shops" },
+            { item: "Railway-themed books", priceRange: "₹250-800 ($3-9.60)", bestPlace: "Local bookstores" }
+          ]
+        },
+        {
+          category: "Traditional Hill Station Items",
+          items: [
+            { item: "Woolen shawls", priceRange: "₹800-3500 ($9.60-42)", bestPlace: "Tibetan markets" },
+            { item: "Himalayan singing bowls", priceRange: "₹1000-5000 ($12-60)", bestPlace: "Tibetan Buddhist shops" },
+            { item: "Traditional masks", priceRange: "₹500-2500 ($6-30)", bestPlace: "Cultural craft stores" },
+            { item: "Local honey varieties", priceRange: "₹400-1000 ($4.80-12)", bestPlace: "Mountain beekeepers" }
+          ]
+        }
+      ],
+      "Dehradun": [
+        {
+          category: "Educational Hub Items",
+          items: [
+            { item: "Academic books", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "University bookstores" },
+            { item: "Stationery supplies", priceRange: "₹100-800 ($1.20-9.60)", bestPlace: "Student markets" },
+            { item: "Technical equipment", priceRange: "₹500-5000 ($6-60)", bestPlace: "Electronics markets" },
+            { item: "Study accessories", priceRange: "₹200-1200 ($2.40-14.40)", bestPlace: "Campus shops" }
+          ]
+        },
+        {
+          category: "Garhwali Traditional Items",
+          items: [
+            { item: "Garhwali woolen products", priceRange: "₹600-2500 ($7.20-30)", bestPlace: "Local weavers" },
+            { item: "Traditional brass items", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Handicraft centers" },
+            { item: "Local pickle varieties", priceRange: "₹150-600 ($1.80-7.20)", bestPlace: "Home-made stores" },
+            { item: "Garhwali musical instruments", priceRange: "₹800-5000 ($9.60-60)", bestPlace: "Traditional music shops" }
+          ]
+        },
+        {
+          category: "Gateway to Hills Shopping",
+          items: [
+            { item: "Trekking preparation gear", priceRange: "₹1000-8000 ($12-96)", bestPlace: "Adventure stores" },
+            { item: "Hill station clothing", priceRange: "₹500-2500 ($6-30)", bestPlace: "Outdoor clothing stores" },
+            { item: "Travel essentials", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Travel gear shops" },
+            { item: "Local organic products", priceRange: "₹300-1200 ($3.60-14.40)", bestPlace: "Organic stores" }
+          ]
+        }
+      ],
+      "Mussoorie": [
+        {
+          category: "Queen of Hills Souvenirs",
+          items: [
+            { item: "Colonial-era postcards", priceRange: "₹50-300 ($0.60-3.60)", bestPlace: "Heritage shops" },
+            { item: "Mussoorie branded items", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Mall Road shops" },
+            { item: "Hill station photography", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Tourist photograph studios" },
+            { item: "Vintage hill maps", priceRange: "₹150-600 ($1.80-7.20)", bestPlace: "Antique stores" }
+          ]
+        },
+        {
+          category: "Mall Road Shopping",
+          items: [
+            { item: "British-era replicas", priceRange: "₹500-3000 ($6-36)", bestPlace: "Heritage boutiques" },
+            { item: "Hill station sweets", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Traditional sweet shops" },
+            { item: "Woolen winter wear", priceRange: "₹800-4000 ($9.60-48)", bestPlace: "Mall Road stores" },
+            { item: "Tourist memorabilia", priceRange: "₹150-1200 ($1.80-14.40)", bestPlace: "Souvenir shops" }
+          ]
+        },
+        {
+          category: "Mountain Resort Items",
+          items: [
+            { item: "Hiking accessories", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Sports goods stores" },
+            { item: "Mountain herbs & teas", priceRange: "₹250-1000 ($3-12)", bestPlace: "Local herb shops" },
+            { item: "Resort lifestyle items", priceRange: "₹500-2500 ($6-30)", bestPlace: "Boutique stores" },
+            { item: "Local jam & preserves", priceRange: "₹200-700 ($2.40-8.40)", bestPlace: "Home-made product stores" }
+          ]
+        }
+      ],
+      "Alleppey": [
+        {
+          category: "Backwater & Houseboat Items",
+          items: [
+            { item: "Miniature houseboat models", priceRange: "₹500-3000 ($6-36)", bestPlace: "Boat jetty shops" },
+            { item: "Coconut shell crafts", priceRange: "₹150-1000 ($1.80-12)", bestPlace: "Local artisans" },
+            { item: "Traditional boat accessories", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Boat workshops" },
+            { item: "Water-themed decor", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Handicraft stores" }
+          ]
+        },
+        {
+          category: "Kerala Spices & Products",
+          items: [
+            { item: "Fresh coconut products", priceRange: "₹100-600 ($1.20-7.20)", bestPlace: "Coconut farms" },
+            { item: "Kerala spice mixes", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Spice markets" },
+            { item: "Ayurvedic oils", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Ayurveda centers" },
+            { item: "Traditional rice varieties", priceRange: "₹150-500 ($1.80-6)", bestPlace: "Rice mills" }
+          ]
+        },
+        {
+          category: "Coastal Lifestyle Items",
+          items: [
+            { item: "Fishing net decorations", priceRange: "₹200-1200 ($2.40-14.40)", bestPlace: "Fishing community shops" },
+            { item: "Beach lifestyle items", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Beachside stores" },
+            { item: "Traditional Kerala clothing", priceRange: "₹500-2500 ($6-30)", bestPlace: "Local textile shops" },
+            { item: "Backwater photographs", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Photography studios" }
+          ]
+        }
       ]
     };
 
