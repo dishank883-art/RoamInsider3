@@ -3,7 +3,6 @@ import HeroSection from "@/components/ui/hero-section";
 import SearchFilters from "@/components/ui/search-filters";
 import FeaturesSection from "@/components/ui/features-section";
 import CommunitySection from "@/components/ui/community-section";
-import NewsletterSection from "@/components/ui/newsletter-section";
 import Footer from "@/components/ui/footer";
 import CityCard from "@/components/ui/city-card";
 import { useQuery } from "@tanstack/react-query";
@@ -630,7 +629,6 @@ export default function Home() {
 
       <FeaturesSection />
       <CommunitySection />
-      <NewsletterSection />
       <Footer />
     </div>
   );
