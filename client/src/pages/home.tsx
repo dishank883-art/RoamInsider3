@@ -22,7 +22,9 @@ export default function Home() {
     minBudget: 0,
     maxBudget: 100000,
     minInternetSpeed: 0,
-    minSafetyScore: 0
+    minSafetyScore: 0,
+    climate: '',
+    cityType: ''
   });
   const [showAllCities, setShowAllCities] = useState(false);
 
@@ -122,6 +124,171 @@ export default function Home() {
         }
       }
 
+      // Internet Speed filtering (NOW IMPLEMENTED!)
+      if (advancedFilters.minInternetSpeed > 0) {
+        let internetSpeed = 25; // Default moderate speed
+        
+        // High-speed internet cities (tech hubs, metros)
+        if (city.tags?.some(tag => 
+          tag.toLowerCase().includes('tech-hub') ||
+          tag.toLowerCase().includes('startup') ||
+          city.name.toLowerCase().includes('bangalore') ||
+          city.name.toLowerCase().includes('pune') ||
+          city.name.toLowerCase().includes('hyderabad')
+        )) {
+          internetSpeed = 75; // High speed: 50-100 Mbps
+        }
+        // Metro cities usually have good internet
+        else if (city.tags?.some(tag => 
+          tag.toLowerCase().includes('metro') ||
+          city.name.toLowerCase().includes('mumbai') ||
+          city.name.toLowerCase().includes('delhi') ||
+          city.name.toLowerCase().includes('kolkata')
+        )) {
+          internetSpeed = 50; // Good speed: 25-75 Mbps
+        }
+        // Tourist destinations often have moderate internet
+        else if (city.tags?.some(tag => 
+          tag.toLowerCase().includes('tourism') ||
+          tag.toLowerCase().includes('beaches') ||
+          tag.toLowerCase().includes('heritage')
+        )) {
+          internetSpeed = 30; // Moderate: 15-45 Mbps
+        }
+        // Hill stations and remote areas may have slower internet
+        else if (city.tags?.some(tag => 
+          tag.toLowerCase().includes('hill') ||
+          tag.toLowerCase().includes('mountain') ||
+          tag.toLowerCase().includes('remote')
+        )) {
+          internetSpeed = 15; // Basic: 10-25 Mbps
+        }
+        
+        if (internetSpeed < advancedFilters.minInternetSpeed) {
+          return false;
+        }
+      }
+
+      // Climate filtering
+      if (advancedFilters.climate) {
+        const cityTags = city.tags || [];
+        const climate = advancedFilters.climate;
+        let hasClimateMatch = false;
+        
+        switch (climate) {
+          case 'tropical':
+            hasClimateMatch = cityTags.some(tag => 
+              tag.toLowerCase().includes('beach') ||
+              tag.toLowerCase().includes('coastal') ||
+              tag.toLowerCase().includes('tropical') ||
+              city.name.toLowerCase().includes('goa') ||
+              city.name.toLowerCase().includes('kerala')
+            );
+            break;
+          case 'moderate':
+            hasClimateMatch = cityTags.some(tag => 
+              tag.toLowerCase().includes('moderate') ||
+              tag.toLowerCase().includes('pleasant') ||
+              city.name.toLowerCase().includes('bangalore') ||
+              city.name.toLowerCase().includes('pune')
+            );
+            break;
+          case 'cool':
+            hasClimateMatch = cityTags.some(tag => 
+              tag.toLowerCase().includes('cool') ||
+              tag.toLowerCase().includes('hill') ||
+              tag.toLowerCase().includes('mountain') ||
+              city.name.toLowerCase().includes('darjeeling') ||
+              city.name.toLowerCase().includes('shimla')
+            );
+            break;
+          case 'hot':
+            hasClimateMatch = cityTags.some(tag => 
+              tag.toLowerCase().includes('hot') ||
+              tag.toLowerCase().includes('desert') ||
+              city.name.toLowerCase().includes('rajasthan') ||
+              city.name.toLowerCase().includes('delhi')
+            );
+            break;
+        }
+        
+        if (!hasClimateMatch) {
+          return false;
+        }
+      }
+
+      // City Type filtering
+      if (advancedFilters.cityType) {
+        const cityTags = city.tags || [];
+        const cityType = advancedFilters.cityType;
+        let hasCityTypeMatch = false;
+        
+        switch (cityType) {
+          case 'metro':
+            hasCityTypeMatch = cityTags.some(tag => 
+              tag.toLowerCase().includes('metro') ||
+              tag.toLowerCase().includes('city') ||
+              city.name.toLowerCase().includes('mumbai') ||
+              city.name.toLowerCase().includes('delhi') ||
+              city.name.toLowerCase().includes('kolkata') ||
+              city.name.toLowerCase().includes('chennai')
+            );
+            break;
+          case 'tech-hub':
+            hasCityTypeMatch = cityTags.some(tag => 
+              tag.toLowerCase().includes('tech') ||
+              tag.toLowerCase().includes('startup') ||
+              tag.toLowerCase().includes('digital') ||
+              city.name.toLowerCase().includes('bangalore') ||
+              city.name.toLowerCase().includes('pune') ||
+              city.name.toLowerCase().includes('hyderabad')
+            );
+            break;
+          case 'coastal':
+            hasCityTypeMatch = cityTags.some(tag => 
+              tag.toLowerCase().includes('coastal') ||
+              tag.toLowerCase().includes('beach') ||
+              tag.toLowerCase().includes('sea') ||
+              city.name.toLowerCase().includes('goa') ||
+              city.name.toLowerCase().includes('mumbai') ||
+              city.name.toLowerCase().includes('kochi')
+            );
+            break;
+          case 'hill-station':
+            hasCityTypeMatch = cityTags.some(tag => 
+              tag.toLowerCase().includes('hill') ||
+              tag.toLowerCase().includes('mountain') ||
+              city.name.toLowerCase().includes('darjeeling') ||
+              city.name.toLowerCase().includes('shimla') ||
+              city.name.toLowerCase().includes('mussoorie')
+            );
+            break;
+          case 'heritage':
+            hasCityTypeMatch = cityTags.some(tag => 
+              tag.toLowerCase().includes('heritage') ||
+              tag.toLowerCase().includes('historical') ||
+              tag.toLowerCase().includes('culture') ||
+              city.name.toLowerCase().includes('jaipur') ||
+              city.name.toLowerCase().includes('udaipur') ||
+              city.name.toLowerCase().includes('agra')
+            );
+            break;
+          case 'startup':
+            hasCityTypeMatch = cityTags.some(tag => 
+              tag.toLowerCase().includes('startup') ||
+              tag.toLowerCase().includes('entrepreneur') ||
+              tag.toLowerCase().includes('innovation') ||
+              city.name.toLowerCase().includes('bangalore') ||
+              city.name.toLowerCase().includes('pune')
+            );
+            break;
+        }
+        
+        if (!hasCityTypeMatch) {
+          return false;
+        }
+      }
+
       // Filter categories (Budget, WiFi, Weather, etc.)
       if (selectedFilters.length > 0) {
         const cityTags = city.tags || [];
@@ -210,7 +377,8 @@ export default function Home() {
     // Show only popular cities initially, or all if requested
     const hasAnyFilter = searchQuery || selectedTags.length > 0 || selectedFilters.length > 0 || 
                         advancedFilters.minBudget > 0 || advancedFilters.maxBudget < 100000 || 
-                        advancedFilters.minSafetyScore > 0;
+                        advancedFilters.minInternetSpeed > 0 || advancedFilters.minSafetyScore > 0 ||
+                        advancedFilters.climate || advancedFilters.cityType;
                         
     if (!showAllCities && !hasAnyFilter) {
       filtered = filtered.filter(city => city.isPopular);
@@ -247,14 +415,18 @@ export default function Home() {
         <div className="text-center mb-12">
           <h2 className="font-serif text-4xl lg:text-5xl font-bold text-travel-blue mb-4">
             {showAllCities || searchQuery || selectedTags.length > 0 || selectedFilters.length > 0 || 
-             advancedFilters.minBudget > 0 || advancedFilters.maxBudget < 100000 || advancedFilters.minSafetyScore > 0
+             advancedFilters.minBudget > 0 || advancedFilters.maxBudget < 100000 || 
+             advancedFilters.minInternetSpeed > 0 || advancedFilters.minSafetyScore > 0 ||
+             advancedFilters.climate || advancedFilters.cityType
               ? `Found ${filteredCities.length} Cities` 
               : "Popular Digital Nomad Destinations"
             }
           </h2>
           <p className="text-xl text-muted-navy max-w-3xl mx-auto">
             {showAllCities || searchQuery || selectedTags.length > 0 || selectedFilters.length > 0 ||
-             advancedFilters.minBudget > 0 || advancedFilters.maxBudget < 100000 || advancedFilters.minSafetyScore > 0
+             advancedFilters.minBudget > 0 || advancedFilters.maxBudget < 100000 || 
+             advancedFilters.minInternetSpeed > 0 || advancedFilters.minSafetyScore > 0 ||
+             advancedFilters.climate || advancedFilters.cityType
               ? "Explore these amazing destinations perfect for digital nomads"
               : "Handpicked cities with thriving nomad communities, excellent infrastructure, and unique cultural experiences"
             }
@@ -292,7 +464,7 @@ export default function Home() {
                   setSearchQuery("");
                   setSelectedTags([]);
                   setSelectedFilters([]);
-                  setAdvancedFilters({ minBudget: 0, maxBudget: 100000, minInternetSpeed: 0, minSafetyScore: 0 });
+                  setAdvancedFilters({ minBudget: 0, maxBudget: 100000, minInternetSpeed: 0, minSafetyScore: 0, climate: '', cityType: '' });
                   setShowAllCities(false);
                 }}
                 variant="outline"
@@ -305,7 +477,9 @@ export default function Home() {
         </div>
         
         {!showAllCities && !searchQuery && selectedTags.length === 0 && selectedFilters.length === 0 && 
-         advancedFilters.minBudget === 0 && advancedFilters.maxBudget === 100000 && advancedFilters.minSafetyScore === 0 && (
+         advancedFilters.minBudget === 0 && advancedFilters.maxBudget === 100000 && 
+         advancedFilters.minInternetSpeed === 0 && advancedFilters.minSafetyScore === 0 &&
+         !advancedFilters.climate && !advancedFilters.cityType && (
           <div className="text-center mt-12">
             <Button 
               onClick={() => setShowAllCities(true)}
