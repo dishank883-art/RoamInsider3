@@ -547,23 +547,18 @@ export function addNewCitiesData(storage: any, cityIds: {
   storage.safety.set(randomUUID(), {
     id: randomUUID(),
     cityId: birId,
-    overallSafetyScore: 9.2,
-    healthcare: {
-      hospitals: ["Bir Civil Hospital"],
-      emergencyServices: "Basic - Dharamshala hospitals 35km away",
-      pharmacies: 3
-    },
-    crimeRate: 0.5,
+    safetyScore: "8.5",
+    womenSafetyScore: "8.0",
+    crimeRate: "Very Low - peaceful mountain community",
+    hospitals: [
+      { name: "Bir Civil Hospital", address: "Bir Village", type: "Primary", emergency: true }
+    ],
     emergencyNumbers: {
       police: "100",
-      hospital: "108",
+      medical: "108",
       fire: "101"
     },
-    safetyTips: [
-      "Inform someone before solo treks",
-      "Carry warm clothes even in summer",
-      "Respect local monastery timings"
-    ],
+    pollutionIndex: 25,
     updatedAt: new Date(),
   });
 

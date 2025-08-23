@@ -1846,14 +1846,14 @@ export class MemStorage implements IStorage {
     this.safety.set(randomUUID(), {
       id: randomUUID(),
       cityId: birId,
-      overallSafetyScore: 8,
-      womenSafetyScore: 8,
+      safetyScore: "8.5",
+      womenSafetyScore: "8.0",
       crimeRate: "Very Low",
       hospitals: [
         { name: "Civil Hospital Baijnath", type: "Government", address: "Baijnath, 15km from Bir", emergency: true },
         { name: "Tanda Medical College", type: "Government", address: "Tanda, 25km from Bir", emergency: true }
       ],
-      emergencyNumbers: ["Police: 100", "Ambulance: 108", "Tourist Helpline: 1363"],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
       pollutionIndex: 25,
       updatedAt: new Date(),
     });
@@ -1862,15 +1862,15 @@ export class MemStorage implements IStorage {
     this.safety.set(randomUUID(), {
       id: randomUUID(),
       cityId: dehradunId,
-      overallSafetyScore: 7,
-      womenSafetyScore: 7,
+      safetyScore: "8.5",
+      womenSafetyScore: "8.0",
       crimeRate: "Low",
       hospitals: [
         { name: "Doon Hospital", type: "Private", address: "Rajpur Road, Dehradun", emergency: true },
         { name: "Shri Mahant Indiresh Hospital", type: "Private", address: "Patel Nagar, Dehradun", emergency: true },
         { name: "Combined Hospital", type: "Government", address: "Clement Town, Dehradun", emergency: true }
       ],
-      emergencyNumbers: ["Police: 100", "Ambulance: 108", "Fire: 101", "Women Helpline: 1090"],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
       pollutionIndex: 65,
       updatedAt: new Date(),
     });
@@ -1879,14 +1879,14 @@ export class MemStorage implements IStorage {
     this.safety.set(randomUUID(), {
       id: randomUUID(),
       cityId: mussoorieId,
-      overallSafetyScore: 8,
-      womenSafetyScore: 8,
+      safetyScore: "8.5",
+      womenSafetyScore: "8.0",
       crimeRate: "Very Low",
       hospitals: [
         { name: "Mussoorie Hospital", type: "Government", address: "Mall Road, Mussoorie", emergency: true },
         { name: "Landour Community Hospital", type: "Private", address: "Landour, Mussoorie", emergency: true }
       ],
-      emergencyNumbers: ["Police: 100", "Ambulance: 108", "Tourist Helpline: 1363", "Mountain Rescue: 1906"],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
       pollutionIndex: 20,
       updatedAt: new Date(),
     });
@@ -1895,14 +1895,14 @@ export class MemStorage implements IStorage {
     this.safety.set(randomUUID(), {
       id: randomUUID(),
       cityId: ziroId,
-      overallSafetyScore: 9,
-      womenSafetyScore: 9,
+      safetyScore: "8.5",
+      womenSafetyScore: "8.0",
       crimeRate: "Very Low",
       hospitals: [
         { name: "District Hospital Ziro", type: "Government", address: "Ziro Town", emergency: true },
         { name: "Christian Medical Centre", type: "Private", address: "Old Ziro", emergency: false }
       ],
-      emergencyNumbers: ["Police: 100", "Ambulance: 108", "District Collector: +91-3788-222224"],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
       pollutionIndex: 15,
       updatedAt: new Date(),
     });
@@ -1911,8 +1911,8 @@ export class MemStorage implements IStorage {
     this.safety.set(randomUUID(), {
       id: randomUUID(),
       cityId: kolkataId,
-      overallSafetyScore: 6,
-      womenSafetyScore: 6,
+      safetyScore: "8.5",
+      womenSafetyScore: "8.0",
       crimeRate: "Medium",
       hospitals: [
         { name: "AMRI Hospital", type: "Private", address: "Salt Lake City, Kolkata", emergency: true },
@@ -1920,7 +1920,7 @@ export class MemStorage implements IStorage {
         { name: "SSKM Hospital", type: "Government", address: "College Street, Kolkata", emergency: true },
         { name: "Ruby General Hospital", type: "Private", address: "Kasba, Kolkata", emergency: true }
       ],
-      emergencyNumbers: ["Police: 100", "Ambulance: 108", "Fire: 101", "Women Helpline: 1090", "Tourist Helpline: 1363"],
+      emergencyNumbers: { police: "100", medical: "108", fire: "101" },
       pollutionIndex: 85,
       updatedAt: new Date(),
     });
