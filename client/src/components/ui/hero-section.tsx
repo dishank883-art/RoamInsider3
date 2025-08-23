@@ -21,13 +21,13 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="text-white">
             <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Discover India's Hidden 
+              Explore India's Best 
               <span className="text-vintage-gold font-script text-4xl sm:text-6xl lg:text-7xl block mt-2">
-                Gems
+                Cities
               </span>
             </h1>
             <p className="text-base sm:text-xl lg:text-2xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
-              The ultimate guide for digital nomads exploring incredible Indian cities. 
+              The ultimate guide for digital nomads and travelers exploring incredible Indian destinations. 
               Real insights, local secrets, and everything you need to roam like an insider.
             </p>
             
@@ -52,7 +52,7 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 md:space-x-8 text-blue-100 text-sm sm:text-base">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-5 w-5 text-vintage-gold" />
-                <span className="font-semibold">50+ Cities</span>
+                <span className="font-semibold">20+ Cities</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Users className="h-5 w-5 text-vintage-gold" />
@@ -61,6 +61,17 @@ export default function HeroSection() {
               <div className="flex items-center space-x-2">
                 <Star className="h-5 w-5 text-vintage-gold fill-current" />
                 <span className="font-semibold">4.7 Rating</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <a href="https://www.instagram.com/roaminsider?igsh=dDN5bHUwNXdxYjMy&utm_source=qr" 
+                   target="_blank" rel="noopener noreferrer"
+                   className="flex items-center space-x-1 text-blue-100 hover:text-vintage-gold transition-colors">
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                  <span className="font-semibold hidden sm:inline">@roaminsider</span>
+                  <span className="font-semibold sm:hidden">Instagram</span>
+                </a>
               </div>
             </div>
           </div>

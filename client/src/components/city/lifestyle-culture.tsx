@@ -50,8 +50,7 @@ export default function LifestyleCulture({ lifestyleData, city }: LifestyleCultu
         { name: 'Justdial - Local Business', url: 'https://justdial.com' },
         { name: 'Sulekha - Professional Services', url: 'https://sulekha.com' }
       ] : [
-        { name: 'Justdial - Local Business', url: 'https://justdial.com' },
-        { name: 'Local Service Providers', url: '#' }
+        { name: 'Justdial - Local Business', url: 'https://justdial.com' }
       ]
     };
   };
