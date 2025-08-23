@@ -227,56 +227,132 @@ export default function CityPage() {
         </div>
       </section>
 
-      {/* Enhanced Tab Navigation with Arrows */}
-      <section className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+      {/* Enhanced User-Friendly Tab Navigation */}
+      <section className="sticky top-0 z-20 bg-gradient-to-r from-white via-vintage-gold/5 to-white backdrop-blur-md border-b-2 border-vintage-gold/20 shadow-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Tab Navigation Header */}
+          <div className="text-center py-3 border-b border-vintage-gold/10">
+            <h3 className="text-sm font-semibold text-travel-blue/80 uppercase tracking-wider">
+              🗺️ Explore {city.name} • Click Any Tab Below 👇
+            </h3>
+          </div>
+          
           <div className="relative flex items-center">
+            {/* Left Scroll Button with Enhanced Design */}
             <button 
               onClick={() => {
                 const container = document.getElementById('tab-container');
-                if (container) container.scrollLeft -= 200;
+                if (container) container.scrollLeft -= 250;
               }}
-              className="absolute left-0 z-10 bg-white/90 hover:bg-white shadow-md rounded-full p-2 text-travel-blue"
+              className="absolute left-0 z-10 bg-gradient-to-r from-vintage-gold to-vintage-gold/90 hover:from-vintage-gold/90 hover:to-vintage-gold text-white shadow-lg hover:shadow-xl rounded-full p-3 transition-all duration-300 hover:scale-110 group"
             >
-              <ArrowLeft className="h-4 w-4" />
+              <ArrowLeft className="h-5 w-5 group-hover:animate-pulse" />
             </button>
             
             <div 
               id="tab-container"
-              className="flex space-x-1 py-4 overflow-x-auto scroll-smooth mx-8 sm:mx-10"
+              className="flex space-x-3 py-6 overflow-x-auto scroll-smooth mx-12 sm:mx-14"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
-              {tabs.map((tab) => {
+              {tabs.map((tab, index) => {
                 const IconComponent = tab.icon;
+                const isActive = activeTab === tab.id;
                 return (
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`flex items-center space-x-1 sm:space-x-2 px-2 sm:px-4 py-2 sm:py-3 rounded-lg font-medium text-xs sm:text-sm whitespace-nowrap transition-all duration-200 touch-manipulation min-h-[44px] ${
-                      activeTab === tab.id
-                        ? 'bg-travel-blue text-white shadow-md transform scale-105'
-                        : 'text-travel-blue hover:bg-travel-blue/10 hover:text-travel-blue/80 hover:scale-102'
+                    className={`group relative flex flex-col items-center space-y-2 px-4 sm:px-6 py-4 sm:py-5 rounded-2xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-300 transform hover:scale-105 touch-manipulation min-h-[80px] min-w-[120px] sm:min-w-[140px] ${
+                      isActive
+                        ? 'bg-gradient-to-br from-travel-blue to-travel-blue/90 text-white shadow-2xl scale-105 ring-4 ring-vintage-gold/50'
+                        : 'bg-white/90 hover:bg-gradient-to-br hover:from-vintage-gold/10 hover:to-travel-blue/10 text-travel-blue hover:text-travel-blue/90 shadow-md hover:shadow-xl border border-travel-blue/10 hover:border-vintage-gold/30'
                     }`}
+                    style={{
+                      animationDelay: `${index * 50}ms`,
+                      animation: isActive ? 'none' : 'fadeInUp 0.6s ease-out forwards'
+                    }}
                   >
-                    <span className="text-base sm:text-lg">{tab.emoji}</span>
-                    <IconComponent className="h-3 w-3 sm:h-4 sm:w-4" />
-                    <span className="hidden sm:inline">{tab.label}</span>
+                    {/* Active Tab Indicator */}
+                    {isActive && (
+                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2">
+                        <div className="w-2 h-2 bg-vintage-gold rounded-full animate-pulse"></div>
+                      </div>
+                    )}
+                    
+                    {/* Tab Content */}
+                    <div className="flex flex-col items-center space-y-1">
+                      <span className={`text-2xl transition-transform duration-300 ${isActive ? 'animate-bounce' : 'group-hover:scale-125'}`}>
+                        {tab.emoji}
+                      </span>
+                      <IconComponent className={`h-4 w-4 transition-all duration-300 ${isActive ? 'text-vintage-gold' : 'group-hover:text-vintage-gold'}`} />
+                      <span className={`text-center leading-tight font-medium ${isActive ? 'text-white' : ''}`}>
+                        {tab.label}
+                      </span>
+                    </div>
+
+                    {/* Hover Effect Overlay */}
+                    {!isActive && (
+                      <div className="absolute inset-0 bg-gradient-to-br from-vintage-gold/0 to-travel-blue/0 group-hover:from-vintage-gold/5 group-hover:to-travel-blue/5 rounded-2xl transition-all duration-300"></div>
+                    )}
+
+                    {/* Click Ripple Effect */}
+                    <div className={`absolute inset-0 rounded-2xl transition-all duration-150 ${isActive ? 'bg-white/10' : ''}`}></div>
                   </button>
                 );
               })}
             </div>
             
+            {/* Right Scroll Button with Enhanced Design */}
             <button 
               onClick={() => {
                 const container = document.getElementById('tab-container');
-                if (container) container.scrollLeft += 200;
+                if (container) container.scrollLeft += 250;
               }}
-              className="absolute right-0 z-10 bg-white/90 hover:bg-white shadow-md rounded-full p-2 text-travel-blue"
+              className="absolute right-0 z-10 bg-gradient-to-r from-vintage-gold to-vintage-gold/90 hover:from-vintage-gold/90 hover:to-vintage-gold text-white shadow-lg hover:shadow-xl rounded-full p-3 transition-all duration-300 hover:scale-110 group"
             >
-              <span className="rotate-180"><ArrowLeft className="h-4 w-4" /></span>
+              <span className="rotate-180 group-hover:animate-pulse">
+                <ArrowLeft className="h-5 w-5" />
+              </span>
             </button>
           </div>
+
+          {/* Bottom Indicator */}
+          <div className="flex justify-center py-2">
+            <div className="flex space-x-1">
+              {tabs.slice(0, Math.min(5, tabs.length)).map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-2 h-1 rounded-full transition-all duration-300 ${
+                    tabs.findIndex(tab => tab.id === activeTab) === index
+                      ? 'bg-vintage-gold w-6'
+                      : 'bg-travel-blue/20'
+                  }`}
+                ></div>
+              ))}
+            </div>
+          </div>
         </div>
+
+        {/* CSS Animation Styles */}
+        <style jsx>{`
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          
+          #tab-container::-webkit-scrollbar {
+            display: none;
+          }
+          
+          .group:hover .animate-pulse {
+            animation-duration: 0.8s;
+          }
+        `}</style>
       </section>
 
       {/* Tab Content */}
