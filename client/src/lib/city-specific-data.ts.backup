@@ -1213,6 +1213,244 @@ export const citySpecificData: Record<string, CitySpecificData> = {
       }
     ]
   },
+  dehradun: {
+    moneyTips: [
+      "Stay in student-friendly areas like Patel Nagar for affordable long-term accommodation",
+      "Eat at local Garhwali restaurants and student hangouts for meals under ₹100",
+      "Use city bus system and share autos for economical daily transportation",
+      "Shop at wholesale markets like Paltan Bazaar for groceries and supplies",
+      "Take advantage of educational city discounts with proximity to universities"
+    ],
+    streetFood: [
+      { item: "Aloo Ke Gutke", price: "₹60-90 ($0.70-1.10)" },
+      { item: "Bal Mithai", price: "₹200-300/kg ($2.4-3.6)" },
+      { item: "Kafuli", price: "₹80-120 ($1-1.5)" },
+      { item: "Singori", price: "₹150-250/kg ($1.8-3)" },
+      { item: "Jhangora Kheer", price: "₹50-80 ($0.60-1)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Café Coffee Day (Multiple locations)", speed: "30-50 Mbps", quality: "Good" },
+        { name: "The Clock Tower Café", speed: "40-60 Mbps", quality: "Excellent" },
+        { name: "Ellora's Melting Moments", speed: "25-45 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "Pacific Mall", speed: "50-80 Mbps", quality: "Excellent" },
+        { name: "Railway Station", speed: "30-50 Mbps", quality: "Good" },
+        { name: "University Campuses", speed: "60-100 Mbps", quality: "Excellent" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Doon Co-working Hub",
+        address: "Rajpur Road, Dehradun",
+        pricing: "₹4,000/month",
+        speedMbps: 75,
+        amenities: ["Mountain Views", "24/7 Access", "Conference Rooms", "Student Community"]
+      },
+      {
+        name: "Valley Workspace",
+        address: "Patel Nagar, Dehradun", 
+        pricing: "₹3,200/month",
+        speedMbps: 60,
+        amenities: ["Budget-Friendly", "Study Groups", "Printing Services", "Cafeteria"]
+      }
+    ],
+    localExperienceTips: [
+      "Explore nearby hill stations like Mussoorie and Chakrata on weekends",
+      "Visit Robber's Cave and Tapkeshwar Temple for local natural attractions",
+      "Experience Garhwali culture through local festivals and traditional cuisine",
+      "Take day trips to Rishikesh for yoga and adventure sports experiences",
+      "Join trekking groups for Himalayan foothills exploration from the city",
+      "Attend cultural events at Forest Research Institute's colonial campus"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Stay near educational institutions for student-friendly pricing and community",
+        "Look for PG accommodations in Patel Nagar and Rajpur Road areas",
+        "Consider family accommodations for authentic Garhwali cultural experience",
+        "Choose places with mountain views - many available at reasonable prices",
+        "Select accommodations near main roads for better connectivity and amenities"
+      ],
+      food: [
+        "Try authentic Garhwali thalis at local family restaurants",
+        "Visit Tibetan refugee colony for momos and Tibetan cuisine",
+        "Explore student food joints near universities for budget-friendly meals",
+        "Shop at Gandhi Park market for fresh local produce and hill vegetables",
+        "Experience traditional Garhwali sweets and preparations at local sweet shops"
+      ],
+      transport: [
+        "Use extensive city bus network for affordable daily commuting",
+        "Share auto-rickshaws with students for economical short-distance travel",
+        "Rent bikes for exploring nearby attractions and hill station day trips",
+        "Use app-based rides for convenience - good availability throughout city",
+        "Join group tours to nearby destinations for cost-effective weekend trips"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Forest Research Institute Grounds",
+        location: "FRI Campus",
+        tip: "Colonial architecture campus perfect for peaceful outdoor work",
+        coordinates: "30.37°N, 78.05°E"
+      },
+      {
+        name: "Malsi Deer Park",
+        location: "Mussoorie Road",
+        tip: "Quiet natural setting with deer and peacocks - great for nature work",
+        timing: "9 AM - 5 PM"
+      },
+      {
+        name: "Tapovan Temple Complex",
+        location: "Tapkeshwar Road",
+        tip: "Spiritual riverside location with natural caves and temple atmosphere"
+      }
+    ],
+    transportationTips: [
+      "Use extensive city bus network for affordable daily commuting",
+      "Share auto-rickshaws with students for economical short-distance travel", 
+      "Rent bikes for exploring nearby attractions and hill station day trips",
+      "Use app-based rides for convenience - good availability throughout city",
+      "Join group tours to nearby destinations for cost-effective weekend trips"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant spring and autumn weather ideal for outdoor and coworking spaces",
+        "Hot summers (Apr-Jun) require air-conditioned spaces for comfortable work",
+        "Cool winters (Dec-Feb) perfect for focused indoor work with heating"
+      ],
+      healthConsiderations: [
+        "Clean mountain air beneficial for health compared to major metros",
+        "Moderate pollution levels during winter months due to vehicular traffic",
+        "Pleasant climate year-round with few extreme weather challenges"
+      ],
+      equipmentNeeds: [
+        "Air conditioning or cooling solutions necessary during summer months",
+        "Heating arrangements helpful during cool winter evenings",
+        "Rain protection during monsoon season for outdoor commuting"
+      ],
+      bestMonths: "March to May and September to November for optimal conditions"
+    }
+  },
+  mussoorie: {
+    moneyTips: [
+      "Stay in budget hotels near Library or Landour area away from main Mall Road",
+      "Eat at local cafes and Tibetan restaurants for authentic hill station cuisine",
+      "Walk along Mall Road and avoid taxi rides for short distances within town",
+      "Shop for woolens and local handicrafts at wholesale prices in off-season",
+      "Book accommodations in advance during peak season for better rates"
+    ],
+    streetFood: [
+      { item: "Momos", price: "₹100-150 ($1.2-1.8)" },
+      { item: "Maggi Noodles", price: "₹80-120 ($1-1.5)" },
+      { item: "Aloo Tikki", price: "₹40-60 ($0.50-0.70)" },
+      { item: "Hot Chocolate", price: "₹60-100 ($0.70-1.20)" },
+      { item: "Pancakes", price: "₹150-250 ($1.8-3)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Landour Bakehouse", speed: "40-60 Mbps", quality: "Excellent" },
+        { name: "Char Dukan", speed: "30-50 Mbps", quality: "Good" },
+        { name: "Café Ivy", speed: "35-55 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "Library Point", speed: "25-45 Mbps", quality: "Good" },
+        { name: "Mall Road Area", speed: "30-50 Mbps", quality: "Good" },
+        { name: "Hotel Lobbies", speed: "40-70 Mbps", quality: "Excellent" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "Mountain View Workspace",
+        address: "Landour, Mussoorie",
+        pricing: "₹3,500/month",
+        speedMbps: 50,
+        amenities: ["Valley Views", "Colonial Architecture", "Peaceful Environment", "Library Access"]
+      },
+      {
+        name: "Mall Road Co-work",
+        address: "Mall Road, Mussoorie",
+        pricing: "₹4,200/month", 
+        speedMbps: 45,
+        amenities: ["Central Location", "Tourist Hub Access", "Networking Events", "Modern Facilities"]
+      }
+    ],
+    localExperienceTips: [
+      "Take early morning walks along Mall Road before tourist crowds arrive",
+      "Visit Gun Hill via cable car for spectacular Himalayan mountain views",
+      "Explore Landour area for colonial heritage and peaceful walking trails", 
+      "Experience British colonial history at various heritage buildings and churches",
+      "Take day trips to nearby Dhanaulti and Chamba for nature and tranquility",
+      "Attend local cultural events and festivals during tourist season"
+    ],
+    insiderHacks: {
+      accommodation: [
+        "Stay in Landour area for authentic colonial experience and lower prices",
+        "Book heritage hotels during off-season for luxury at budget prices",
+        "Consider homestays with local families for cultural immersion",
+        "Look for accommodations with valley views - many available at reasonable rates",
+        "Choose places away from Mall Road for quieter environment and better prices"
+      ],
+      food: [
+        "Try colonial-era bakeries and cafes for authentic hill station cuisine",
+        "Visit local markets for fresh mountain produce and regional specialties",
+        "Experience high tea culture at heritage hotels and colonial cafes",
+        "Explore Tibetan cuisine at refugee-run restaurants in the area",
+        "Join cooking classes to learn traditional Garhwali mountain cuisine"
+      ],
+      transport: [
+        "Walk along Mall Road - most attractions within comfortable walking distance",
+        "Use shared taxis for trips to nearby attractions and viewpoints",
+        "Take cable car to Gun Hill for convenience and scenic mountain views",
+        "Hire bikes for exploring Landour and surrounding colonial-era areas",
+        "Join group tours for day trips to Kempty Falls and nearby destinations"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Sister's Bazaar",
+        location: "Landour",
+        tip: "Quiet colonial area perfect for writing and peaceful work",
+        coordinates: "30.45°N, 78.08°E"
+      },
+      {
+        name: "Camel's Back Road",
+        location: "Circular Walking Path",
+        tip: "Scenic walking trail with mountain views - perfect for thinking walks",
+        timing: "Best during sunrise and sunset"
+      },
+      {
+        name: "St. Paul's Church",
+        location: "Landour",
+        tip: "Historic colonial church with peaceful grounds for quiet contemplation"
+      }
+    ],
+    transportationTips: [
+      "Walk along Mall Road - most attractions within comfortable walking distance",
+      "Use shared taxis for trips to nearby attractions and viewpoints",
+      "Take cable car to Gun Hill for convenience and scenic mountain views",
+      "Hire bikes for exploring Landour and surrounding colonial-era areas",
+      "Join group tours for day trips to Kempty Falls and nearby destinations"
+    ],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant summer weather (Apr-Jun) perfect for outdoor coworking and cafes",
+        "Cool winter months (Dec-Mar) require heated indoor spaces for comfort",
+        "Monsoon season (Jul-Sep) brings heavy rains - indoor work spaces essential"
+      ],
+      healthConsiderations: [
+        "Cool mountain air excellent for health and mental clarity",
+        "High altitude may cause initial breathing adjustments for some visitors",
+        "Clean environment beneficial for respiratory health and stress reduction"
+      ],
+      equipmentNeeds: [
+        "Warm clothing essential during winter months for comfortable outdoor work",
+        "Rain gear necessary during monsoon season for daily commuting",
+        "Heating solutions helpful for indoor work during cold winter evenings"
+      ],
+      bestMonths: "April to June and September to November for optimal conditions"
+    }
+  },
   goa: {
     moneyTips: [
       "Stay in North Goa guest houses near Anjuna/Arambol for ₹800-1,500/night",
