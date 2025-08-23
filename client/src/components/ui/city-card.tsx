@@ -107,58 +107,65 @@ interface CityCardProps {
 
 export default function CityCard({ city }: CityCardProps) {
   return (
-    <Card className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border border-gray-100 mx-1 sm:mx-0">
-      <div className="relative h-48 sm:h-48 md:h-52 overflow-hidden">
-        <img 
-          src={`${city.heroImage}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400`}
-          alt={`${city.name} cityscape`}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-        />
-        
-        {city.isPopular && (
-          <div className="absolute top-4 left-4 bg-vintage-gold text-white px-3 py-1 rounded-full text-sm font-semibold">
-            {getCityPopularityBadge(city)}
-          </div>
-        )}
-        
-        <button className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors">
-          <Heart className="h-4 w-4 text-gray-400 hover:text-warm-terracotta transition-colors" />
-        </button>
-      </div>
-      
-      <CardContent className="p-3 sm:p-4 md:p-6">
-        <div className="flex items-center justify-between mb-3">
-          <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-travel-blue">{city.name}</h3>
-          <div className="flex items-center space-x-1 text-vintage-gold">
-            <Star className="h-4 w-4 fill-current" />
-            <span className="font-semibold">{city.rating}</span>
-          </div>
+    <Link href={`/city/${city.slug}`}>
+      <Card className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border border-gray-100 mx-1 sm:mx-0">
+        <div className="relative h-48 sm:h-48 md:h-52 overflow-hidden">
+          <img 
+            src={`${city.heroImage}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400`}
+            alt={`${city.name} cityscape`}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+          />
+          
+          {city.isPopular && (
+            <div className="absolute top-4 left-4 bg-vintage-gold text-white px-3 py-1 rounded-full text-sm font-semibold">
+              {getCityPopularityBadge(city)}
+            </div>
+          )}
+          
+          <button 
+            className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              // Handle favorite functionality here
+            }}
+          >
+            <Heart className="h-4 w-4 text-gray-400 hover:text-warm-terracotta transition-colors" />
+          </button>
         </div>
         
-        <p className="text-sm sm:text-base text-muted-navy mb-3 sm:mb-4 leading-relaxed line-clamp-2">
-          {city.description}
-        </p>
-        
-        <CityStatsGrid city={city} />
-        
-        <div className="flex flex-wrap gap-2 mb-4">
-          {city.tags?.slice(0, 3).map((tag, index) => (
-            <Badge 
-              key={index}
-              variant="secondary"
-              className="px-2 py-1 bg-travel-blue/10 text-travel-blue rounded-full text-xs font-medium"
-            >
-              {tag}
-            </Badge>
-          ))}
-        </div>
-        
-        <Link href={`/city/${city.slug}`}>
+        <CardContent className="p-3 sm:p-4 md:p-6">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-travel-blue">{city.name}</h3>
+            <div className="flex items-center space-x-1 text-vintage-gold">
+              <Star className="h-4 w-4 fill-current" />
+              <span className="font-semibold">{city.rating}</span>
+            </div>
+          </div>
+          
+          <p className="text-sm sm:text-base text-muted-navy mb-3 sm:mb-4 leading-relaxed line-clamp-2">
+            {city.description}
+          </p>
+          
+          <CityStatsGrid city={city} />
+          
+          <div className="flex flex-wrap gap-2 mb-4">
+            {city.tags?.slice(0, 3).map((tag, index) => (
+              <Badge 
+                key={index}
+                variant="secondary"
+                className="px-2 py-1 bg-travel-blue/10 text-travel-blue rounded-full text-xs font-medium"
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+          
           <Button className="w-full py-3 sm:py-4 bg-travel-blue text-white rounded-lg font-semibold hover:bg-travel-blue/90 transition-colors touch-manipulation min-h-[48px] text-sm sm:text-base">
             Explore {city.name}
           </Button>
-        </Link>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </Link>
   );
 }

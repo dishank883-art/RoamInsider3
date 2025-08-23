@@ -6,11 +6,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import CityPage from "@/pages/city";
+import CostCalculator from "@/pages/cost-calculator";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/calculator" component={CostCalculator} />
       <Route path="/city/:slug" component={CityPage} />
       {/* Direct city access routes - redirect to proper format */}
       <Route path="/mumbai">{() => <Redirect to="/city/mumbai" />}</Route>
