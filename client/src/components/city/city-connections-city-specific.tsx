@@ -72,7 +72,7 @@ export default function CityConnections({ city }: CityConnectionsProps) {
         trainConnections: [
           { city: "Mumbai", duration: "16h", price: "₹500-3,000", frequency: "Multiple daily", type: "Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" },
           { city: "Kolkata", duration: "17h", price: "₹600-3,200", frequency: "Multiple daily", type: "Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" },
-          { city: "Chennai", duration: "28h", price: "₹800-3,800", frequency: "Daily", type: "Grand Trunk Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Chennai", duration: "36h", price: "₹800-3,800", frequency: "Daily", type: "Grand Trunk Express", bookingUrl: "https://www.irctc.co.in/" },
           { city: "Bangalore", duration: "31h", price: "₹800-4,000", frequency: "Daily", type: "Karnataka Express", bookingUrl: "https://www.irctc.co.in/" }
         ],
         flightConnections: [
@@ -138,10 +138,57 @@ export default function CityConnections({ city }: CityConnectionsProps) {
           { city: "Chandigarh", duration: "5h", price: "₹400-1,000", frequency: "10+ daily", type: "AC Bus", operator: "HRTC", bookingUrl: "https://www.redbus.in/" },
           { city: "Manali", duration: "3h", price: "₹200-500", frequency: "8+ daily", type: "Local bus", operator: "HRTC", bookingUrl: "Local booking" }
         ]
+      },
+      "Ziro": {
+        trainConnections: [
+          { city: "Guwahati", duration: "10h drive + 5h train", price: "₹1,200 + ₹300-1,500", frequency: "Daily buses to Naharlagun + trains", type: "Road to Naharlagun Rly Stn + Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Delhi", duration: "16h drive + 34h train", price: "₹2,000 + ₹800-4,000", frequency: "Daily via Naharlagun", type: "Road + Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" }
+        ],
+        flightConnections: [
+          { city: "Guwahati", duration: "10h drive + 2h flight", price: "₹1,200 + ₹4,000-12,000", frequency: "Daily road + multiple flights", airlines: "Road to Guwahati + All airlines", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Delhi", duration: "16h drive + 2h 30m flight", price: "₹2,000 + ₹6,000-18,000", frequency: "Daily via Guwahati", airlines: "Road + IndiGo, Air India", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Guwahati", duration: "10h", price: "₹800-1,200", frequency: "3+ daily", type: "AC Bus", operator: "ARUNACHAL PRADESH STATE TRANSPORT", bookingUrl: "Local booking" },
+          { city: "Itanagar", duration: "2h", price: "₹150-300", frequency: "10+ daily", type: "Local bus", operator: "Local operators", bookingUrl: "Local booking" },
+          { city: "Naharlagun", duration: "1h 30m", price: "₹100-200", frequency: "15+ daily", type: "Shared taxi/bus", operator: "Local transport", bookingUrl: "Local booking" }
+        ]
+      },
+      "Tosh": {
+        trainConnections: [
+          { city: "Delhi", duration: "14h drive + 12h train", price: "₹1,500 + ₹300-1,500", frequency: "Via Chandigarh", type: "Road to Chandigarh + Shatabdi", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Chandigarh", duration: "6h drive + train access", price: "₹800 + train fare", frequency: "Daily buses", type: "Road to railway", bookingUrl: "https://www.redbus.in/" }
+        ],
+        flightConnections: [
+          { city: "Delhi", duration: "6h drive + 1h 30m flight", price: "₹800 + ₹4,000-12,000", frequency: "Via Chandigarh/Kullu", airlines: "Road + Air India, Alliance", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Delhi", duration: "14h", price: "₹1,200-2,000", frequency: "2+ daily", type: "Volvo AC", operator: "HRTC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Chandigarh", duration: "6h", price: "₹500-800", frequency: "5+ daily", type: "AC Bus", operator: "HRTC", bookingUrl: "https://www.redbus.in/" },
+          { city: "Manali", duration: "1h 30m", price: "₹100-200", frequency: "10+ daily", type: "Local bus", operator: "HRTC", bookingUrl: "Local booking" }
+        ]
+      },
+      "Shillong": {
+        trainConnections: [
+          { city: "Guwahati", duration: "3h drive + train access", price: "₹200-400 + train fare", frequency: "Multiple daily buses", type: "Road to Guwahati railway", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Delhi", duration: "3h drive + 34h train", price: "₹400 + ₹800-4,000", frequency: "Via Guwahati", type: "Road + Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" }
+        ],
+        flightConnections: [
+          { city: "Guwahati", duration: "3h drive + flight access", price: "₹200-400 + flight fare", frequency: "Multiple daily buses", airlines: "Road + all airlines", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Delhi", duration: "2h 30m", price: "₹6,000-18,000", frequency: "2+ daily", airlines: "Air India, IndiGo", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Guwahati", duration: "3h", price: "₹150-300", frequency: "30+ daily", type: "AC Bus", operator: "ASTC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Cherrapunji", duration: "1h 30m", price: "₹50-100", frequency: "10+ daily", type: "Local bus", operator: "ASTC", bookingUrl: "Local booking" }
+        ]
       }
     };
 
-    return connectionsByCity[cityName] || connectionsByCity["Goa"];
+    return connectionsByCity[cityName] || {
+      trainConnections: [],
+      flightConnections: [],
+      busConnections: []
+    };
   };
 
   const connections = getCitySpecificConnections(city.name);
