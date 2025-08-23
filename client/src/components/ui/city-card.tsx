@@ -6,6 +6,33 @@ import { Star, Heart, Wifi, Shield, DollarSign, Thermometer } from "lucide-react
 import { useQuery } from "@tanstack/react-query";
 import type { City, CostOfLiving, InternetConnectivity, Climate, Safety } from "@shared/schema";
 
+function getCityPopularityBadge(city: City): string {
+  const rating = parseFloat(city.rating);
+  const popularCities: { [key: string]: string } = {
+    'mumbai': '#1 Popular',
+    'bangalore': '#2 Popular', 
+    'goa': '#3 Popular',
+    'pune': '#4 Popular',
+    'new-delhi': '#5 Popular',
+    'varkala': 'Top Beach',
+    'alleppey': 'Backwaters',
+    'kasol': 'Mountain Gem',
+    'bir': 'Adventure Hub',
+    'dehradun': 'Hill Station',
+    'mussoorie': 'Queen of Hills',
+    'ziro': 'Hidden Gem',
+    'kolkata': 'Cultural Hub',
+    'rishikesh': 'Yoga Capital',
+    'udaipur': 'Royal City',
+    'pondicherry': 'French Vibes',
+    'kochi': 'Spice Coast',
+    'dharamkot': 'Peaceful Retreat',
+    'darjeeling': 'Tea Gardens'
+  };
+  
+  return popularCities[city.slug] || (rating >= 8.0 ? 'Top Rated' : 'Rising Star');
+}
+
 interface CityStatsGridProps {
   city: City;
 }
@@ -90,7 +117,7 @@ export default function CityCard({ city }: CityCardProps) {
         
         {city.isPopular && (
           <div className="absolute top-4 left-4 bg-vintage-gold text-white px-3 py-1 rounded-full text-sm font-semibold">
-            #1 Popular
+            {getCityPopularityBadge(city)}
           </div>
         )}
         
