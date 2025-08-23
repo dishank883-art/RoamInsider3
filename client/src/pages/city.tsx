@@ -233,7 +233,7 @@ export default function CityPage() {
           {/* Mobile Hint Text */}
           <div className="block sm:hidden text-center py-2 bg-gradient-to-r from-travel-blue/5 to-vintage-gold/5">
             <p className="text-xs text-travel-blue font-medium animate-pulse">
-              👆 Swipe left & right to explore all sections 👆
+              👇 Swipe left & right to explore all sections 👇
             </p>
           </div>
           
