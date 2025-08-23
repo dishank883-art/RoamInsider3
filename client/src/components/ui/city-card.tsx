@@ -107,8 +107,8 @@ interface CityCardProps {
 
 export default function CityCard({ city }: CityCardProps) {
   return (
-    <Card className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border border-gray-100">
-      <div className="relative h-40 sm:h-48 overflow-hidden">
+    <Card className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border border-gray-100 mx-1 sm:mx-0">
+      <div className="relative h-48 sm:h-48 md:h-52 overflow-hidden">
         <img 
           src={`${city.heroImage}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400`}
           alt={`${city.name} cityscape`}
@@ -126,16 +126,16 @@ export default function CityCard({ city }: CityCardProps) {
         </button>
       </div>
       
-      <CardContent className="p-4 sm:p-6">
+      <CardContent className="p-3 sm:p-4 md:p-6">
         <div className="flex items-center justify-between mb-3">
-          <h3 className="font-serif text-xl sm:text-2xl font-bold text-travel-blue">{city.name}</h3>
+          <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-travel-blue">{city.name}</h3>
           <div className="flex items-center space-x-1 text-vintage-gold">
             <Star className="h-4 w-4 fill-current" />
             <span className="font-semibold">{city.rating}</span>
           </div>
         </div>
         
-        <p className="text-muted-navy mb-4 leading-relaxed line-clamp-2">
+        <p className="text-sm sm:text-base text-muted-navy mb-3 sm:mb-4 leading-relaxed line-clamp-2">
           {city.description}
         </p>
         
@@ -154,7 +154,7 @@ export default function CityCard({ city }: CityCardProps) {
         </div>
         
         <Link href={`/city/${city.slug}`}>
-          <Button className="w-full py-3 sm:py-4 bg-travel-blue text-white rounded-lg font-semibold hover:bg-travel-blue/90 transition-colors touch-manipulation min-h-[48px]">
+          <Button className="w-full py-3 sm:py-4 bg-travel-blue text-white rounded-lg font-semibold hover:bg-travel-blue/90 transition-colors touch-manipulation min-h-[48px] text-sm sm:text-base">
             Explore {city.name}
           </Button>
         </Link>

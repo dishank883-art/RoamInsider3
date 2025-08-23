@@ -45,15 +45,15 @@ export default function Footer() {
   return (
     <footer className="bg-travel-blue text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <Compass className="h-8 w-8 text-vintage-gold" />
-              <h3 className="font-serif text-2xl font-bold">
+              <h3 className="font-serif text-xl sm:text-2xl font-bold">
                 Roam <span className="text-vintage-gold">Insider</span>
               </h3>
             </div>
-            <p className="text-blue-100 leading-relaxed mb-6">
+            <p className="text-sm sm:text-base text-blue-100 leading-relaxed mb-4 sm:mb-6">
               Your ultimate guide to digital nomad life in incredible Indian cities. Discover, explore, and thrive.
             </p>
             <div className="flex space-x-4">
@@ -71,8 +71,8 @@ export default function Footer() {
           
           {footerSections.map((section, index) => (
             <div key={index}>
-              <h4 className="font-semibold text-lg mb-6">{section.title}</h4>
-              <ul className="space-y-3 text-blue-100">
+              <h4 className="font-semibold text-base sm:text-lg mb-4 sm:mb-6">{section.title}</h4>
+              <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-blue-100">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <Link 
@@ -88,12 +88,12 @@ export default function Footer() {
           ))}
         </div>
         
-        <div className="border-t border-blue-600 pt-8">
+        <div className="border-t border-blue-600 pt-6 sm:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-blue-100 mb-4 md:mb-0">
               © 2024 Roam Insider. All rights reserved. Made with ❤️ for digital nomads.
             </p>
-            <div className="flex items-center space-x-6 text-blue-100">
+            <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm sm:text-base text-blue-100">
               <span className="flex items-center space-x-2">
                 <svg className="w-4 h-4 text-vintage-gold" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>

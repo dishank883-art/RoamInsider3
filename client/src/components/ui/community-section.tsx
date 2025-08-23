@@ -4,35 +4,35 @@ export default function CommunitySection() {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-travel-blue to-muted-navy rounded-3xl p-8 lg:p-16 text-white relative overflow-hidden">
+        <div className="bg-gradient-to-r from-travel-blue to-muted-navy rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-16 text-white relative overflow-hidden mx-2 sm:mx-0">
           {/* Background elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-vintage-gold/10 rounded-full -translate-y-32 translate-x-32"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-vintage-gold/10 rounded-full translate-y-24 -translate-x-24"></div>
           
           <div className="relative grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
+              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6">
                 Join Our Growing <span className="text-vintage-gold">Community</span>
               </h2>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
                 Connect with fellow digital nomads, share experiences, and get real-time advice from people living your dream lifestyle.
               </p>
               
-              <div className="grid grid-cols-2 gap-6 mb-8">
+              <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-vintage-gold mb-2">200+</div>
-                  <div className="text-blue-100">Active Members</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-vintage-gold mb-1 sm:mb-2">200+</div>
+                  <div className="text-sm sm:text-base text-blue-100">Active Members</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-vintage-gold mb-2">20+</div>
-                  <div className="text-blue-100">Cities Covered</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-vintage-gold mb-1 sm:mb-2">20+</div>
+                  <div className="text-sm sm:text-base text-blue-100">Cities Covered</div>
                 </div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   asChild
-                  className="px-10 py-5 bg-vintage-gold text-travel-blue rounded-xl font-bold text-lg hover:bg-vintage-gold/90 transition-all duration-200 transform hover:scale-105 shadow-2xl"
+                  className="px-6 sm:px-10 py-4 sm:py-5 bg-vintage-gold text-travel-blue rounded-xl font-bold text-base sm:text-lg hover:bg-vintage-gold/90 transition-all duration-200 transform hover:scale-105 shadow-2xl touch-manipulation min-h-[48px]"
                 >
                   <a 
                     href="https://discord.gg/Y39GGpQtMm" 
@@ -46,7 +46,7 @@ export default function CommunitySection() {
                 </Button>
                 <Button 
                   variant="outline"
-                  className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold text-lg hover:bg-white hover:text-travel-blue transition-all duration-200"
+                  className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-white hover:text-travel-blue transition-all duration-200 touch-manipulation min-h-[48px]"
                 >
                   <span className="mr-2">📍</span>
                   Find Local Meetups

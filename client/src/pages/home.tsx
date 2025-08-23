@@ -411,9 +411,9 @@ export default function Home() {
       />
       
       {/* Featured Cities Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-8 sm:py-16">
         <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold text-travel-blue mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-travel-blue mb-4">
             {showAllCities || searchQuery || selectedTags.length > 0 || selectedFilters.length > 0 || 
              advancedFilters.minBudget > 0 || advancedFilters.maxBudget < 100000 || 
              advancedFilters.minInternetSpeed > 0 || advancedFilters.minSafetyScore > 0 ||
@@ -422,7 +422,7 @@ export default function Home() {
               : "Popular Digital Nomad Destinations"
             }
           </h2>
-          <p className="text-xl text-muted-navy max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-navy max-w-3xl mx-auto px-2">
             {showAllCities || searchQuery || selectedTags.length > 0 || selectedFilters.length > 0 ||
              advancedFilters.minBudget > 0 || advancedFilters.maxBudget < 100000 || 
              advancedFilters.minInternetSpeed > 0 || advancedFilters.minSafetyScore > 0 ||
@@ -433,7 +433,7 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 px-2 sm:px-0">
           {isLoading ? (
             Array.from({ length: 6 }).map((_, i) => (
               <div key={i} className="bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -494,12 +494,12 @@ export default function Home() {
       </section>
 
       {/* Enhanced Discord Community CTA Section */}
-      <section className="bg-gradient-to-br from-travel-blue via-travel-blue to-muted-navy py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-travel-blue via-travel-blue to-muted-navy py-12 sm:py-16 lg:py-20 relative overflow-hidden mx-2 sm:mx-0">
         {/* Background decorative elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-vintage-gold/5 rounded-full -translate-y-48 translate-x-48"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-vintage-gold/5 rounded-full translate-y-32 -translate-x-32"></div>
         
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="text-center lg:text-left">
@@ -507,11 +507,11 @@ export default function Home() {
                 🔥 Join 200+ Active Members
               </div>
               
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                 Get <span className="text-vintage-gold">Instant Access</span> to India's Largest Digital Nomad Community
               </h2>
               
-              <p className="text-xl text-cream/90 mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-cream/90 mb-6 sm:mb-8 leading-relaxed">
                 Skip the research. Get real-time advice from nomads living in your next destination. 
                 From finding the best coworking spaces to avoiding tourist traps.
               </p>
