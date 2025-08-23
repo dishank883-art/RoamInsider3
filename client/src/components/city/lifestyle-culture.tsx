@@ -1,13 +1,144 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Coffee, Users, Music, Utensils, Dumbbell, Calendar, AlertCircle, ExternalLink, MapPin, Globe, ShoppingCart } from "lucide-react";
-import type { Lifestyle } from "@shared/schema";
+import type { Lifestyle, CityWithDetails } from "@shared/schema";
 
 interface LifestyleCultureProps {
   lifestyleData: Lifestyle | null;
+  city: CityWithDetails;
 }
 
-export default function LifestyleCulture({ lifestyleData }: LifestyleCultureProps) {
+export default function LifestyleCulture({ lifestyleData, city }: LifestyleCultureProps) {
+  
+  // City-specific local resources based on city characteristics
+  const getCitySpecificResources = () => {
+    const majorCities = ['Mumbai', 'Bangalore', 'New Delhi', 'Pune', 'Goa', 'Kochi'];
+    const hillStations = ['Mussoorie', 'Bir', 'Kasol', 'Dharamkot', 'Darjeeling'];
+    const techHubs = ['Bangalore', 'Pune', 'Mumbai', 'New Delhi'];
+    const coastalCities = ['Goa', 'Varkala', 'Alleppey', 'Kochi', 'Pondicherry'];
+    
+    const isMajorCity = majorCities.includes(city.name);
+    const isHillStation = hillStations.includes(city.name);
+    const isTechHub = techHubs.includes(city.name);
+    const isCoastal = coastalCities.includes(city.name);
+    
+    return {
+      theater: isMajorCity || isTechHub ? [
+        { name: 'BookMyShow - Movies & Events', url: 'https://bookmyshow.com' },
+        { name: 'Paytm - Entertainment Tickets', url: 'https://paytm.com/movies' },
+        { name: 'TicketGenie - Live Shows', url: 'https://ticketgenie.in' }
+      ] : [
+        { name: 'BookMyShow - Movies & Events', url: 'https://bookmyshow.com' }
+      ],
+      
+      groceries: isMajorCity ? [
+        { name: 'Blinkit - 10min Delivery', url: 'https://blinkit.com' },
+        { name: 'BigBasket - Groceries', url: 'https://bigbasket.com' },
+        { name: 'Dunzo - Local Delivery', url: 'https://dunzo.com' },
+        { name: 'Grofers - Essential Items', url: 'https://grofers.com' }
+      ] : isHillStation ? [
+        { name: 'Local Markets - Fresh Produce', url: '#' },
+        { name: 'BigBasket - Groceries', url: 'https://bigbasket.com' }
+      ] : [
+        { name: 'BigBasket - Groceries', url: 'https://bigbasket.com' },
+        { name: 'Local Markets - Fresh Items', url: '#' }
+      ],
+      
+      services: isMajorCity ? [
+        { name: 'Urban Company - Home Services', url: 'https://urbancompany.com' },
+        { name: 'Housejoy - Repairs & Cleaning', url: 'https://housejoy.in' },
+        { name: 'Justdial - Local Business', url: 'https://justdial.com' },
+        { name: 'Sulekha - Professional Services', url: 'https://sulekha.com' }
+      ] : [
+        { name: 'Justdial - Local Business', url: 'https://justdial.com' },
+        { name: 'Local Service Providers', url: '#' }
+      ]
+    };
+  };
+  
+  // City-specific cultural integration tips
+  const getCitySpecificCulturalTips = () => {
+    const cityName = city.name.toLowerCase();
+    
+    const cityTips: Record<string, string[]> = {
+      'mumbai': [
+        '• Learn basic Hindi and Marathi phrases - locals appreciate the effort',
+        '• Respect the fast-paced lifestyle; Mumbaikars value punctuality',
+        '• Try street food from established vendors, especially at Juhu Beach',
+        '• Use local trains during off-peak hours to avoid rush crowds',
+        '• Join film industry events and workshops to connect with creative community',
+        '• Respect diverse communities in different neighborhoods'
+      ],
+      'bangalore': [
+        '• Learn basic Kannada greetings like "Namaskara" and "Dhanyavada"',
+        '• Embrace the pub culture but respect local timings and regulations',
+        '• Join tech meetups and startup events for professional networking',
+        '• Try authentic South Indian breakfast at local darshinis',
+        '• Respect traffic rules and be patient during peak hours',
+        '• Connect with the vibrant expat community in Koramangala and Indiranagar'
+      ],
+      'goa': [
+        '• Learn basic Portuguese-influenced local phrases and Konkani greetings',
+        '• Respect the laid-back "susegad" lifestyle and slower pace',
+        '• Join beach cleanup drives and environmental conservation efforts',
+        '• Respect local fishing communities and their traditional practices',
+        '• Participate in local festivals like Carnival and Shigmo',
+        '• Support local businesses and avoid over-touristy areas for authentic experience'
+      ],
+      'bir': [
+        '• Learn basic Tibetan phrases and respect Buddhist customs',
+        '• Participate in meditation sessions and spiritual practices',
+        '• Respect the peaceful mountain environment and local wildlife',
+        '• Support local handicrafts and Tibetan refugee community',
+        '• Join paragliding and adventure sports communities respectfully',
+        '• Embrace the slower pace of Himalayan life'
+      ],
+      'dharamkot': [
+        '• Respect the strong Buddhist and spiritual culture',
+        '• Learn about Tibetan customs and the Dalai Lama\'s teachings',
+        '• Join meditation and yoga sessions with local practitioners',
+        '• Support Tibetan refugees through local businesses and crafts',
+        '• Respect the mountain environment and practice Leave No Trace',
+        '• Engage with the international spiritual community mindfully'
+      ],
+      'pondicherry': [
+        '• Learn basic French phrases alongside Tamil and Hindi',
+        '• Respect the unique Franco-Tamil cultural blend',
+        '• Join Auroville community activities and volunteer programs',
+        '• Explore both the French Quarter and Tamil areas equally',
+        '• Try authentic French and Tamil cuisines from local establishments',
+        '• Respect spiritual practices and ashram guidelines'
+      ],
+      'new delhi': [
+        '• Learn Hindi and Punjabi basics - very useful in daily interactions',
+        '• Respect the historical significance of monuments and heritage sites',
+        '• Navigate the complex metro system and respect queue etiquette',
+        '• Try authentic North Indian cuisine from local dhabas and restaurants',
+        '• Be aware of air quality and take necessary health precautions',
+        '• Join cultural events at India Habitat Centre and other venues'
+      ],
+      'kochi': [
+        '• Learn basic Malayalam phrases and respect Kerala\'s high literacy culture',
+        '• Appreciate the spice trade history and traditional Syrian Christian culture',
+        '• Try authentic Malayali cuisine including fish curry and appam',
+        '• Respect the backwater ecosystem and support eco-tourism',
+        '• Join Kathakali and classical music performances',
+        '• Support local spice markets and traditional handicrafts'
+      ]
+    };
+    
+    return cityTips[cityName] || [
+      '• Learn basic greetings in the local language',
+      '• Respect religious and cultural sites by dressing appropriately',
+      '• Join local events and festivals to meet people',
+      '• Try authentic local cuisine from established local restaurants',
+      '• Be patient and open-minded about cultural differences',
+      '• Connect with expat communities for support and friendship'
+    ];
+  };
+  
+  const cityResources = getCitySpecificResources();
+  const culturalTips = getCitySpecificCulturalTips();
   if (!lifestyleData) {
     return (
       <Card className="bg-white rounded-2xl shadow-lg">
@@ -238,11 +369,11 @@ export default function LifestyleCulture({ lifestyleData }: LifestyleCultureProp
           </div>
         </div>
 
-        {/* Dynamic City-Specific Resources */}
+        {/* City-Specific Local Resources */}
         <div>
           <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
             <Globe className="mr-2 h-5 w-5" />
-            Local Resources & Links
+            Local Resources & Links - {city.name}
           </h3>
           <div className="grid md:grid-cols-3 gap-4">
             {/* Theater & Entertainment */}
@@ -252,21 +383,13 @@ export default function LifestyleCulture({ lifestyleData }: LifestyleCultureProp
                 Theater & Entertainment
               </h4>
               <div className="space-y-2 text-sm">
-                <a href="https://bookmyshow.com" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  BookMyShow - Movies & Events
-                </a>
-                <a href="https://paytm.com/movies" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  Paytm - Entertainment Tickets
-                </a>
-                <a href="https://ticketgenie.in" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  TicketGenie - Live Shows
-                </a>
+                {cityResources.theater.map((resource, index) => (
+                  <a key={index} href={resource.url} target="_blank" rel="noopener noreferrer" 
+                     className="flex items-center text-travel-blue hover:underline">
+                    <ExternalLink className="h-3 w-3 mr-1" />
+                    {resource.name}
+                  </a>
+                ))}
               </div>
             </div>
 
@@ -277,26 +400,13 @@ export default function LifestyleCulture({ lifestyleData }: LifestyleCultureProp
                 Groceries & Daily Needs
               </h4>
               <div className="space-y-2 text-sm">
-                <a href="https://blinkit.com" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  Blinkit - 10min Delivery
-                </a>
-                <a href="https://bigbasket.com" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  BigBasket - Groceries
-                </a>
-                <a href="https://dunzo.com" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  Dunzo - Local Delivery
-                </a>
-                <a href="https://grofers.com" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  Grofers - Essential Items
-                </a>
+                {cityResources.groceries.map((resource, index) => (
+                  <a key={index} href={resource.url} target="_blank" rel="noopener noreferrer" 
+                     className="flex items-center text-travel-blue hover:underline">
+                    <ExternalLink className="h-3 w-3 mr-1" />
+                    {resource.name}
+                  </a>
+                ))}
               </div>
             </div>
 
@@ -307,44 +417,28 @@ export default function LifestyleCulture({ lifestyleData }: LifestyleCultureProp
                 Local Services
               </h4>
               <div className="space-y-2 text-sm">
-                <a href="https://urbancompany.com" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  Urban Company - Home Services
-                </a>
-                <a href="https://housejoy.in" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  Housejoy - Repairs & Cleaning
-                </a>
-                <a href="https://justdial.com" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  Justdial - Local Business
-                </a>
-                <a href="https://sulekha.com" target="_blank" rel="noopener noreferrer" 
-                   className="flex items-center text-travel-blue hover:underline">
-                  <ExternalLink className="h-3 w-3 mr-1" />
-                  Sulekha - Professional Services
-                </a>
+                {cityResources.services.map((resource, index) => (
+                  <a key={index} href={resource.url} target="_blank" rel="noopener noreferrer" 
+                     className="flex items-center text-travel-blue hover:underline">
+                    <ExternalLink className="h-3 w-3 mr-1" />
+                    {resource.name}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
-        {/* Cultural Tips */}
+        {/* City-Specific Cultural Integration Tips */}
         <div className="bg-vintage-gold/5 rounded-lg p-4 border-l-4 border-vintage-gold">
           <h4 className="font-semibold text-vintage-gold mb-2 flex items-center">
             <Users className="mr-2 h-4 w-4" />
-            Cultural Integration Tips
+            Cultural Integration Tips for {city.name}
           </h4>
           <ul className="space-y-1 text-muted-navy text-sm">
-            <li>• Learn basic greetings in the local language</li>
-            <li>• Respect religious and cultural sites by dressing appropriately</li>
-            <li>• Join local events and festivals to meet people</li>
-            <li>• Try to understand local customs and social norms</li>
-            <li>• Be patient and open-minded about cultural differences</li>
-            <li>• Connect with expat communities for support and friendship</li>
+            {culturalTips.map((tip: string, index: number) => (
+              <li key={index}>{tip}</li>
+            ))}
           </ul>
         </div>
       </CardContent>

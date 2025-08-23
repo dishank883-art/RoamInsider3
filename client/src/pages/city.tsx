@@ -127,7 +127,7 @@ export default function CityPage() {
       case "safety":
         return <SafetyHealthcare safetyData={city.safety} />;
       case "lifestyle":
-        return <LifestyleCulture lifestyleData={city.lifestyle} />;
+        return <LifestyleCulture lifestyleData={city.lifestyle} city={city} />;
       case "festivals":
         return <FestivalsEvents city={city} />;
       case "things-to-do":

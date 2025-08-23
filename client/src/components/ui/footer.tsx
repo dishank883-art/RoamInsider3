@@ -34,7 +34,7 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: "fab fa-twitter", href: "#" },
-    { icon: "fab fa-instagram", href: "#" },
+    { icon: "fab fa-instagram", href: "https://www.instagram.com/roaminsider?igsh=dDN5bHUwNXdxYjMy&utm_source=qr" },
     { icon: "fab fa-telegram", href: "#" },
     { icon: "fab fa-discord", href: "#" }
   ];
