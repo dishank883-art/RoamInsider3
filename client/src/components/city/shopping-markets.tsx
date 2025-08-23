@@ -478,42 +478,42 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
     return "Most platforms available with standard delivery times for this region.";
   };
 
-  // City-specific price guide by category
-  const getCitySpecificPriceGuide = (cityName: string) => {
-    const cityData: Record<string, any> = {
-      "Mumbai": [
-        {
-          category: "Clothing & Fashion",
-          items: [
-            { item: "Designer kurtas", priceRange: "₹800-3000 ($9.60-36)", bestPlace: "Linking Road, Bandra" },
-            { item: "Branded jeans", priceRange: "₹2000-8000 ($24-96)", bestPlace: "Palladium Mall, Phoenix Mills" },
-            { item: "Cotton sarees", priceRange: "₹1500-15000 ($18-180)", bestPlace: "Crawford Market" },
-            { item: "Vintage clothes", priceRange: "₹500-2500 ($6-30)", bestPlace: "Chor Bazaar" }
-          ]
-        },
-        {
-          category: "Street Food & Specialties",
-          items: [
-            { item: "Vada pav", priceRange: "₹15-40 ($0.18-0.48)", bestPlace: "Local street vendors" },
-            { item: "Pav bhaji", priceRange: "₹80-200 ($0.96-2.40)", bestPlace: "Juhu Chowpatty" },
-            { item: "Bombay duck pickle", priceRange: "₹300-600 ($3.60-7.20)", bestPlace: "Crawford Market" },
-            { item: "Alphonso mangoes (1kg)", priceRange: "₹400-1200 ($4.80-14.40)", bestPlace: "Dadar Market" }
-          ]
-        },
-        {
-          category: "Art & Collectibles",
-          items: [
-            { item: "Warli paintings", priceRange: "₹1000-8000 ($12-96)", bestPlace: "Kala Ghoda Art District" },
-            { item: "Antique furniture", priceRange: "₹5000-50000 ($60-600)", bestPlace: "Chor Bazaar" },
-            { item: "Silver jewelry", priceRange: "₹500-5000 ($6-60)", bestPlace: "Zaveri Bazaar" },
-            { item: "Bollywood posters", priceRange: "₹200-2000 ($2.40-24)", bestPlace: "Lamington Road" }
-          ]
-        }
-      ],
-      "Bangalore": [
-        {
-          category: "Technology & Electronics",
-          items: [
+  const shoppingCategories = [
+    {
+      category: "Clothing & Textiles",
+      items: [
+        { item: "Cotton kurtas", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Local boutiques" },
+        { item: "Silk sarees", priceRange: "₹2000-25000 ($24-300)", bestPlace: "Traditional markets" },
+        { item: "Branded jeans", priceRange: "₹1500-5000 ($18-60)", bestPlace: "Malls" },
+        { item: "Handloom fabrics", priceRange: "₹200-2000 per meter ($2.40-24)", bestPlace: "Weaver cooperatives" }
+      ]
+    },
+    {
+      category: "Spices & Food Items",
+      items: [
+        { item: "Turmeric powder (1kg)", priceRange: "₹150-300 ($1.80-3.60)", bestPlace: "Spice markets" },
+        { item: "Premium tea (250g)", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Tea estates" },
+        { item: "Organic honey (500g)", priceRange: "₹250-600 ($3-7.20)", bestPlace: "Organic stores" },
+        { item: "Dry fruits mix (1kg)", priceRange: "₹800-2000 ($9.60-24)", bestPlace: "Wholesale markets" }
+      ]
+    },
+    {
+      category: "Handicrafts & Souvenirs",
+      items: [
+        { item: "Wooden sculptures", priceRange: "₹500-5000 ($6-60)", bestPlace: "Artisan workshops" },
+        { item: "Brass items", priceRange: "₹200-2000 ($2.40-24)", bestPlace: "Metal craft centers" },
+        { item: "Paintings", priceRange: "₹800-8000 ($9.60-96)", bestPlace: "Art galleries" },
+        { item: "Pottery items", priceRange: "₹100-1500 ($1.20-18)", bestPlace: "Potter villages" }
+      ]
+    }
+  ];
+
+  const shoppingSeason = [
+    { season: "Festival Season (Oct-Nov)", discounts: "20-50%", bestFor: "Clothing, jewelry, home decor" },
+    { season: "Wedding Season (Nov-Feb)", discounts: "10-30%", bestFor: "Silk, gold, gift items" },
+    { season: "Summer Sale (Apr-Jun)", discounts: "30-60%", bestFor: "Electronics, branded clothing" },
+    { season: "Monsoon (Jul-Sep)", discounts: "15-40%", bestFor: "Indoor items, books, crafts" }
+  ];
             { item: "Branded laptops", priceRange: "₹30000-150000 ($360-1800)", bestPlace: "SP Road Electronics Market" },
             { item: "Mobile accessories", priceRange: "₹100-2000 ($1.20-24)", bestPlace: "National Market" },
             { item: "Gaming peripherals", priceRange: "₹500-8000 ($6-96)", bestPlace: "Forum Mall, Brigade Road" },
@@ -1034,7 +1034,10 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
       ]
     };
 
-    return cityData[cityName] || [
+    const result = cityData[cityName];
+    console.log("Result for", cityName, ":", result ? "Found specific data" : "Using fallback");
+    
+    return result || [
       {
         category: "Local Specialties",
         items: [
