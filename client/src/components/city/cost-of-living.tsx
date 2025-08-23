@@ -235,7 +235,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       darjeeling: {
         hostels: [
           { name: "Zostel Darjeeling", area: "Mall Road", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Mountain views", "Tea garden tours", "Heating"], bookingUrl: "https://www.zostel.com/zostel/darjeeling/" },
-          { name: "Backpacker Panda", area: "Chowrasta", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Himalayan views", "Warm blankets"], bookingUrl: "https://www.backpackerpanda.com/darjeeling" },
+          { name: "Hill Lodge Darjeeling", area: "Chowrasta", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Himalayan views", "Warm blankets"], bookingUrl: "https://www.makemytrip.com/hotels/darjeeling-hotels.html" },
           { name: "The Hosteller", area: "Observatory Hill", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Sunrise views", "Tea tasting", "Library"], bookingUrl: "https://www.thehosteller.com/darjeeling/" }
         ],
         platforms: [
@@ -253,7 +253,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       mussoorie: {
         hostels: [
           { name: "Zostel Mussoorie", area: "Mall Road", price: "₹600-900/night ($7-11)", rating: 3.9, amenities: ["WiFi", "Mountain views", "Heating", "Library"], bookingUrl: "https://www.zostel.com/zostel/mussoorie/" },
-          { name: "Backpacker Panda", area: "Landour", price: "₹500-750/night ($6-9)", rating: 3.7, amenities: ["WiFi", "Hill station charm", "Warm blankets"], bookingUrl: "https://www.backpackerpanda.com/mussoorie" },
+          { name: "Mussoorie Valley Hostel", area: "Landour", price: "₹500-750/night ($6-9)", rating: 3.7, amenities: ["WiFi", "Hill station charm", "Warm blankets"], bookingUrl: "https://www.makemytrip.com/hotels/mussoorie-hotels.html" },
           { name: "The Hosteller", area: "Picture Palace", price: "₹550-800/night ($7-10)", rating: 3.8, amenities: ["WiFi", "Valley views", "Common kitchen"], bookingUrl: "https://www.thehosteller.com/mussoorie/" }
         ],
         platforms: [
@@ -269,7 +269,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       dehradun: {
         hostels: [
           { name: "Zostel Dehradun", area: "Clock Tower", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "AC", "Kitchen", "City access"], bookingUrl: "https://www.zostel.com/zostel/dehradun/" },
-          { name: "Backpacker Panda", area: "Paltan Bazaar", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Central location", "Budget friendly"], bookingUrl: "https://www.backpackerpanda.com/dehradun" },
+          { name: "Dehradun Budget Stay", area: "Paltan Bazaar", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Central location", "Budget friendly"], bookingUrl: "https://www.makemytrip.com/hotels/dehradun-hotels.html" },
           { name: "The Hosteller", area: "Rajpur Road", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Modern amenities", "Hill access"], bookingUrl: "https://www.thehosteller.com/dehradun/" }
         ],
         platforms: [
@@ -301,9 +301,9 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       dharamkot: {
         hostels: [
-          { name: "Pink House Cafe & Hostel", area: "Upper Dharamkot", price: "₹400-600/night ($5-7)", rating: 4.2, amenities: ["WiFi", "Mountain views", "Cafe", "Trekking"], bookingUrl: "https://www.pinkhouse-dharamkot.com/" },
+          { name: "Pink House Dharamshala", area: "Upper Dharamkot", price: "₹400-600/night ($5-7)", rating: 4.2, amenities: ["WiFi", "Mountain views", "Cafe", "Trekking"], bookingUrl: "https://www.agoda.com/pink-house/hotel/dharamshala-in.html" },
           { name: "Zostel Dharamshala", area: "McLeod Ganj", price: "₹500-750/night ($6-9)", rating: 4.0, amenities: ["WiFi", "Tibetan culture", "Mountain treks"], bookingUrl: "https://www.zostel.com/zostel/dharamshala/" },
-          { name: "Backpacker Panda", area: "Dharamkot", price: "₹350-550/night ($4-7)", rating: 3.9, amenities: ["WiFi", "Budget stay", "Yoga classes"], bookingUrl: "https://www.backpackerpanda.com/dharamshala" }
+          { name: "Dharamkot Valley Hostel", area: "Dharamkot", price: "₹350-550/night ($4-7)", rating: 3.9, amenities: ["WiFi", "Budget stay", "Yoga classes"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/dharamshala/" }
         ],
         platforms: [
           { name: "Booking.com", url: "https://www.booking.com/city/in/dharamshala.html", features: ["Tibetan culture", "Mountain treks", "Spiritual stays"] },
@@ -318,7 +318,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       kasol: {
         hostels: [
           { name: "Zostel Kasol", area: "Old Kasol", price: "₹400-650/night ($5-8)", rating: 4.1, amenities: ["WiFi", "River views", "Trekking", "Cafe"], bookingUrl: "https://www.zostel.com/zostel/kasol/" },
-          { name: "Backpacker Panda", area: "Chalal", price: "₹300-500/night ($4-6)", rating: 3.9, amenities: ["WiFi", "Nature walks", "Budget friendly"], bookingUrl: "https://www.backpackerpanda.com/kasol" },
+          { name: "Kasol Nature Hostel", area: "Chalal", price: "₹300-500/night ($4-6)", rating: 3.9, amenities: ["WiFi", "Nature walks", "Budget friendly"], bookingUrl: "https://www.booking.com/city/in/kasol.html" },
           { name: "The Hosteller", area: "Tosh Road", price: "₹350-550/night ($4-7)", rating: 4.0, amenities: ["WiFi", "Mountain views", "Common kitchen"], bookingUrl: "https://www.thehosteller.com/kasol/" }
         ],
         platforms: [
@@ -349,7 +349,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       bir: {
         hostels: [
           { name: "Zostel Bir", area: "Bir Billing", price: "₹500-750/night ($6-9)", rating: 4.2, amenities: ["WiFi", "Paragliding", "Mountain views", "Adventure sports"], bookingUrl: "https://www.zostel.com/zostel/bir/" },
-          { name: "Backpacker Panda", area: "Bir Village", price: "₹400-600/night ($5-7)", rating: 3.9, amenities: ["WiFi", "Tibetan culture", "Monastery visits"], bookingUrl: "https://www.backpackerpanda.com/bir" },
+          { name: "Bir Billing Hostel", area: "Bir Village", price: "₹400-600/night ($5-7)", rating: 3.9, amenities: ["WiFi", "Tibetan culture", "Monastery visits"], bookingUrl: "https://www.booking.com/searchresults.html?ss=Bir%2C%20Himachal%20Pradesh" },
           { name: "The Hosteller", area: "Billing", price: "₹450-650/night ($5-8)", rating: 4.0, amenities: ["WiFi", "Paragliding take-off", "Adventure activities"], bookingUrl: "https://www.thehosteller.com/bir/" }
         ],
         platforms: [
@@ -395,7 +395,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       alleppey: {
         hostels: [
-          { name: "Backpacker Panda", area: "Alleppey Beach", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Beach access", "Backwater tours", "Kitchen"], bookingUrl: "https://www.backpackerpanda.com/alleppey" },
+          { name: "Alleppey Beach Hostel", area: "Alleppey Beach", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Beach access", "Backwater tours", "Kitchen"], bookingUrl: "https://www.booking.com/city/in/alleppey.html" },
           { name: "The Hosteller", area: "Kumbakonam", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Houseboat access", "Cultural tours"], bookingUrl: "https://www.thehosteller.com/alleppey/" },
           { name: "Zostel Alleppey", area: "Backwater Junction", price: "₹650-950/night ($8-11)", rating: 4.1, amenities: ["WiFi", "Backwater views", "Boat tours", "Local cuisine"], bookingUrl: "https://www.zostel.com/zostel/alleppey/" }
         ],
@@ -412,7 +412,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       wayanad: {
         hostels: [
           { name: "Zostel Wayanad", area: "Kalpetta", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Plantation views", "Trekking", "Wildlife tours"], bookingUrl: "https://www.zostel.com/zostel/wayanad/" },
-          { name: "Backpacker Panda", area: "Sulthan Bathery", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Nature walks", "Spice tours"], bookingUrl: "https://www.backpackerpanda.com/wayanad" },
+          { name: "Wayanad Spice Hostel", area: "Sulthan Bathery", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Nature walks", "Spice tours"], bookingUrl: "https://www.booking.com/city/in/wayanad.html" },
           { name: "The Hosteller", area: "Meppadi", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Coffee plantations", "Hill views"], bookingUrl: "https://www.thehosteller.com/wayanad/" }
         ],
         platforms: [
@@ -428,7 +428,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       'new-delhi': {
         hostels: [
           { name: "Zostel New Delhi", area: "Paharganj", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "AC", "Kitchen", "Terrace"], bookingUrl: "https://www.zostel.com/zostel/delhi/" },
-          { name: "Jugaad Hostels", area: "Hauz Khas", price: "₹800-1200/night ($10-14)", rating: 4.4, amenities: ["WiFi", "Events", "Kitchen", "Co-working"], bookingUrl: "https://www.jugaadhostels.com/delhi" },
+          { name: "The Hosteller Delhi", area: "Hauz Khas", price: "₹800-1200/night ($10-14)", rating: 4.4, amenities: ["WiFi", "Events", "Kitchen", "Co-working"], bookingUrl: "https://www.thehosteller.com/hostels/delhi/" },
           { name: "Stops Hostel Delhi", area: "Connaught Place", price: "₹700-1100/night ($8-13)", rating: 4.2, amenities: ["WiFi", "Restaurant", "AC", "Central location"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/new-delhi/" }
         ],
         platforms: [
@@ -472,37 +472,56 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
           <h4 className="font-semibold text-vintage-gold mb-3">Popular Hostels & Budget Stays</h4>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.hostels.map((hostel, index) => (
-              <div key={index} className="bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20">
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    {hostel.bookingUrl ? (
-                      <a 
-                        href={hostel.bookingUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="font-semibold text-travel-blue hover:text-vintage-gold flex items-center"
-                      >
+              hostel.bookingUrl ? (
+                <a 
+                  key={index}
+                  href={hostel.bookingUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20 hover:bg-travel-blue/10 hover:border-vintage-gold/40 transition-all duration-200"
+                >
+                  <div className="flex items-start justify-between mb-2">
+                    <div>
+                      <h5 className="font-semibold text-travel-blue hover:text-vintage-gold flex items-center">
                         {hostel.name}
                         <ExternalLink className="ml-1 h-3 w-3" />
-                      </a>
-                    ) : (
+                      </h5>
+                      <p className="text-sm text-muted-navy">{hostel.area}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-bold text-vintage-gold">{hostel.price}</div>
+                      <div className="text-xs text-muted-navy">⭐ {hostel.rating}</div>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {hostel.amenities.map((amenity, i) => (
+                      <Badge key={i} variant="secondary" className="text-xs bg-sage-green/10 text-sage-green">
+                        {amenity}
+                      </Badge>
+                    ))}
+                  </div>
+                </a>
+              ) : (
+                <div key={index} className="bg-travel-blue/5 rounded-lg p-4 border border-travel-blue/20">
+                  <div className="flex items-start justify-between mb-2">
+                    <div>
                       <h5 className="font-semibold text-travel-blue">{hostel.name}</h5>
-                    )}
-                    <p className="text-sm text-muted-navy">{hostel.area}</p>
+                      <p className="text-sm text-muted-navy">{hostel.area}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-bold text-vintage-gold">{hostel.price}</div>
+                      <div className="text-xs text-muted-navy">⭐ {hostel.rating}</div>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <div className="font-bold text-vintage-gold">{hostel.price}</div>
-                    <div className="text-xs text-muted-navy">⭐ {hostel.rating}</div>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {hostel.amenities.map((amenity, i) => (
+                      <Badge key={i} variant="secondary" className="text-xs bg-sage-green/10 text-sage-green">
+                        {amenity}
+                      </Badge>
+                    ))}
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-1 mt-2">
-                  {hostel.amenities.map((amenity, i) => (
-                    <Badge key={i} variant="secondary" className="text-xs bg-sage-green/10 text-sage-green">
-                      {amenity}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
+              )
             ))}
           </div>
         </div>
