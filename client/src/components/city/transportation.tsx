@@ -93,7 +93,7 @@ export default function Transportation({ transportData, citySlug }: Transportati
             Local Transportation
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {transportData.localTransport && Object.entries(transportData.localTransport).map(([key, available]) => {
+            {transportData.localTransport && Object.entries(transportData.localTransport || {}).map(([key, available]) => {
               const IconComponent = transportIcons[key as keyof typeof transportIcons] || Car;
               return (
                 <div 
@@ -205,7 +205,7 @@ export default function Transportation({ transportData, citySlug }: Transportati
             City-Specific Transportation Tips
           </h4>
           <ul className="space-y-1 text-muted-navy text-sm">
-            {cityData?.transportationTips.map((tip, index) => (
+            {(cityData?.transportationTips || []).map((tip, index) => (
               <li key={index}>• {tip}</li>
             )) || (
               <>

@@ -13,9 +13,9 @@ interface ThingsToDoProps {
 
 export default function ThingsToDo({ attractions, events, citySlug }: ThingsToDoProps) {
   const cityData = getCitySpecificData(citySlug);
-  const featuredAttractions = attractions.filter(a => !a.isHiddenGem).slice(0, 6);
-  const hiddenGems = attractions.filter(a => a.isHiddenGem).slice(0, 4);
-  const upcomingEvents = events.filter(e => new Date(e.date) > new Date()).slice(0, 4);
+  const featuredAttractions = (attractions || []).filter(a => !a.isHiddenGem).slice(0, 6);
+  const hiddenGems = (attractions || []).filter(a => a.isHiddenGem).slice(0, 4);
+  const upcomingEvents = (events || []).filter(e => new Date(e.date) > new Date()).slice(0, 4);
 
   return (
     <Card className="bg-white rounded-2xl shadow-lg">

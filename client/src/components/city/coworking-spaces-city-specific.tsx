@@ -1312,7 +1312,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           }
         }
       ],
-      "Ziro": [
+      "Ziro Valley": [
         {
           name: "Apatani Valley Workspace",
           location: "Ziro Valley, Arunachal Pradesh",
