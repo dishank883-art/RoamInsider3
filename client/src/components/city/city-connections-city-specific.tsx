@@ -265,7 +265,6 @@ export default function CityConnections({ city }: CityConnectionsProps) {
           { city: "Guwahati", duration: "12h", price: "₹600-1,200", frequency: "6+ daily", type: "Volvo AC", operator: "ASTC, Private", bookingUrl: "https://www.redbus.in/" },
           { city: "Bhubaneswar", duration: "7h", price: "₹350-700", frequency: "15+ daily", type: "AC Bus", operator: "Private operators", bookingUrl: "https://www.redbus.in/" }
         ]
-      }
       },
       "Bir": {
         trainConnections: [
