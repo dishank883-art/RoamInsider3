@@ -480,11 +480,15 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
 
   // City-specific price guide function
   const getCitySpecificPriceGuide = (cityName: string) => {
-    console.log("getCitySpecificPriceGuide called with:", cityName);
+    console.log("=== FUNCTION CALLED ===");
+    console.log("Original cityName:", cityName);
+    console.log("Type:", typeof cityName);
     
     const cityLower = cityName.toLowerCase();
+    console.log("Lowercase city:", cityLower);
     
     if (cityLower === "ziro") {
+      console.log("MATCHED ZIRO!");
       return [
         {
           category: "Tribal Handicrafts & Artifacts",
@@ -517,6 +521,7 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
     }
     
     if (cityLower === "mumbai") {
+      console.log("MATCHED MUMBAI!");
       return [
         {
           category: "Bollywood & Entertainment",
@@ -549,6 +554,7 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
     }
     
     if (cityLower === "bangalore") {
+      console.log("MATCHED BANGALORE!");
       return [
         {
           category: "Tech & Electronics",
@@ -805,8 +811,15 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
     ];
   };
 
+  console.log("=== DEBUGGING CITY-SPECIFIC PRICE GUIDE ===");
+  console.log("Raw city.name:", city.name);
+  console.log("Type of city.name:", typeof city.name);
+  
   const shoppingCategories = getCitySpecificPriceGuide(city.name);
-  console.log("Final shoppingCategories for", city.name, ":", shoppingCategories);
+  console.log("Final shoppingCategories for", city.name, ":");
+  console.log("Categories count:", shoppingCategories.length);
+  console.log("First category:", shoppingCategories[0]?.category);
+  console.log("First item:", shoppingCategories[0]?.items[0]?.item);
 
   const shoppingSeason = [
     { season: "Festival Season (Oct-Nov)", discounts: "20-50%", bestFor: "Clothing, jewelry, home decor" },
