@@ -235,7 +235,7 @@ export default function ThingsToDo({ attractions, events, citySlug }: ThingsToDo
             Local Experience Tips
           </h4>
           <ul className="space-y-1 text-muted-navy text-sm">
-            {cityData?.localExperienceTips.map((tip, index) => (
+            {(cityData?.localExperienceTips || []).map((tip, index) => (
               <li key={index}>• {tip}</li>
             )) || (
               <>
