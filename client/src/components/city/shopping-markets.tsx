@@ -612,7 +612,168 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
       ];
     }
     
+    if (cityLower === "rishikesh") {
+      return [
+        {
+          category: "Spiritual & Yoga Items",
+          items: [
+            { item: "Yoga mats & accessories", priceRange: "₹500-3000 ($6-36)", bestPlace: "Spiritual shops" },
+            { item: "Meditation cushions", priceRange: "₹800-2500 ($9.60-30)", bestPlace: "Ashram stores" },
+            { item: "Rudraksha beads", priceRange: "₹200-2000 ($2.40-24)", bestPlace: "Ram Jhula market" },
+            { item: "Spiritual books", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Philosophy bookstores" }
+          ]
+        },
+        {
+          category: "Adventure Gear",
+          items: [
+            { item: "River rafting equipment", priceRange: "₹1000-5000 ($12-60)", bestPlace: "Adventure sports shops" },
+            { item: "Trekking gear", priceRange: "₹800-4000 ($9.60-48)", bestPlace: "Outdoor equipment stores" },
+            { item: "Hiking boots", priceRange: "₹1500-8000 ($18-96)", bestPlace: "Trekking gear shops" },
+            { item: "Waterproof accessories", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Sports equipment stores" }
+          ]
+        },
+        {
+          category: "Himalayan Products",
+          items: [
+            { item: "Mountain honey", priceRange: "₹300-800 ($3.60-9.60)", bestPlace: "Mountain beekeepers" },
+            { item: "Herbal teas & medicines", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Ayurvedic stores" },
+            { item: "Garhwali handicrafts", priceRange: "₹400-2500 ($4.80-30)", bestPlace: "Local artisan shops" },
+            { item: "Traditional musical instruments", priceRange: "₹800-5000 ($9.60-60)", bestPlace: "Cultural music stores" }
+          ]
+        }
+      ];
+    }
+    
+    if (cityLower === "udaipur") {
+      return [
+        {
+          category: "Royal Rajasthani Items",
+          items: [
+            { item: "Miniature paintings", priceRange: "₹1000-15000 ($12-180)", bestPlace: "City Palace area" },
+            { item: "Traditional Rajasthani jewelry", priceRange: "₹500-8000 ($6-96)", bestPlace: "Hathi Pol Bazaar" },
+            { item: "Silk bandhani sarees", priceRange: "₹2000-20000 ($24-240)", bestPlace: "Bada Bazaar" },
+            { item: "Royal handicrafts", priceRange: "₹800-5000 ($9.60-60)", bestPlace: "Heritage craft shops" }
+          ]
+        },
+        {
+          category: "Lake City Specialties",
+          items: [
+            { item: "Lake-themed artwork", priceRange: "₹600-3000 ($7.20-36)", bestPlace: "Lakeside art shops" },
+            { item: "Palace replica items", priceRange: "₹1000-8000 ($12-96)", bestPlace: "Souvenir stores" },
+            { item: "Traditional pottery", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Potter communities" },
+            { item: "Mewar marble work", priceRange: "₹1000-12000 ($12-144)", bestPlace: "Marble craft workshops" }
+          ]
+        },
+        {
+          category: "Rajasthani Heritage",
+          items: [
+            { item: "Traditional turbans", priceRange: "₹400-2000 ($4.80-24)", bestPlace: "Rajasthani clothing stores" },
+            { item: "Spice mixes", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Traditional spice markets" },
+            { item: "Puppet shows items", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Cultural centers" },
+            { item: "Desert crafts", priceRange: "₹500-3000 ($6-36)", bestPlace: "Rajasthani craft stores" }
+          ]
+        }
+      ];
+    }
+    
+    if (cityLower === "kolkata") {
+      return [
+        {
+          category: "Cultural City Items",
+          items: [
+            { item: "Bengali literature", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "College Street bookstores" },
+            { item: "Traditional dhoti & punjabi", priceRange: "₹800-3000 ($9.60-36)", bestPlace: "New Market" },
+            { item: "Classical music instruments", priceRange: "₹2000-15000 ($24-180)", bestPlace: "Music instrument shops" },
+            { item: "Durga Puja memorabilia", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Festival stores" }
+          ]
+        },
+        {
+          category: "Adda Culture Items",
+          items: [
+            { item: "Tea accessories", priceRange: "₹200-1200 ($2.40-14.40)", bestPlace: "Tea culture stores" },
+            { item: "Intellectual cafe items", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "College area shops" },
+            { item: "Bengali poetry books", priceRange: "₹150-800 ($1.80-9.60)", bestPlace: "Literary bookstores" },
+            { item: "Coffee house memorabilia", priceRange: "₹400-2000 ($4.80-24)", bestPlace: "Heritage coffee houses" }
+          ]
+        },
+        {
+          category: "Bengali Sweets & Heritage",
+          items: [
+            { item: "Rosogolla & sweets", priceRange: "₹300-800 ($3.60-9.60)", bestPlace: "KC Das, Balaram Mullick" },
+            { item: "Howrah Bridge replicas", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Souvenir shops" },
+            { item: "Vintage tram items", priceRange: "₹500-3000 ($6-36)", bestPlace: "Heritage stores" },
+            { item: "Colonial architecture books", priceRange: "₹400-2000 ($4.80-24)", bestPlace: "Architecture bookstores" }
+          ]
+        }
+      ];
+    }
+    
+    if (cityLower === "pune") {
+      return [
+        {
+          category: "Student City Items",
+          items: [
+            { item: "Educational supplies", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "University area shops" },
+            { item: "Student lifestyle accessories", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "FC Road" },
+            { item: "Technical books", priceRange: "₹500-3000 ($6-36)", bestPlace: "Academic bookstores" },
+            { item: "Campus branded items", priceRange: "₹200-1200 ($2.40-14.40)", bestPlace: "Campus stores" }
+          ]
+        },
+        {
+          category: "IT Hub Products",
+          items: [
+            { item: "Tech accessories", priceRange: "₹300-2500 ($3.60-30)", bestPlace: "Camp electronics market" },
+            { item: "Professional attire", priceRange: "₹1000-5000 ($12-60)", bestPlace: "Corporate clothing stores" },
+            { item: "Startup culture items", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Koregaon Park" },
+            { item: "Co-working accessories", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Modern office stores" }
+          ]
+        },
+        {
+          category: "Marathi Culture Items",
+          items: [
+            { item: "Paithani sarees", priceRange: "₹5000-50000 ($60-600)", bestPlace: "Laxmi Road" },
+            { item: "Marathi literature", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Marathi bookstores" },
+            { item: "Kolhapuri chappals", priceRange: "₹500-2000 ($6-24)", bestPlace: "Traditional markets" },
+            { item: "Local food specialties", priceRange: "₹150-800 ($1.80-9.60)", bestPlace: "Traditional food stores" }
+          ]
+        }
+      ];
+    }
+    
+    if (cityLower === "new delhi" || cityLower === "delhi") {
+      return [
+        {
+          category: "Capital City Items",
+          items: [
+            { item: "Government souvenirs", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Government emporia" },
+            { item: "Political memorabilia", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Connaught Place shops" },
+            { item: "Delhi-themed books", priceRange: "₹400-2000 ($4.80-24)", bestPlace: "Khan Market bookstores" },
+            { item: "Designer lehengas", priceRange: "₹5000-100000 ($60-1200)", bestPlace: "Chandni Chowk, Karol Bagh" }
+          ]
+        },
+        {
+          category: "Historical Delhi Products",
+          items: [
+            { item: "Red Fort replicas", priceRange: "₹400-2500 ($4.80-30)", bestPlace: "Heritage stores" },
+            { item: "Mughal era crafts", priceRange: "₹800-5000 ($9.60-60)", bestPlace: "Chandni Chowk" },
+            { item: "Delhi sultanate items", priceRange: "₹600-3000 ($7.20-36)", bestPlace: "Historical craft shops" },
+            { item: "India Gate memorabilia", priceRange: "₹200-1200 ($2.40-14.40)", bestPlace: "Monument area shops" }
+          ]
+        },
+        {
+          category: "Modern Metro Items",
+          items: [
+            { item: "Export surplus clothing", priceRange: "₹500-3000 ($6-36)", bestPlace: "Janpath Market" },
+            { item: "Urban lifestyle products", priceRange: "₹500-2500 ($6-30)", bestPlace: "Select City Walk" },
+            { item: "Khadi products", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Khadi Gramodyog" },
+            { item: "Corporate accessories", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Connaught Place" }
+          ]
+        }
+      ];
+    }
+    
     // Default fallback for other cities
+    console.log("Using fallback data for city:", cityName);
     return [
       {
         category: "Local Specialties",
@@ -645,6 +806,7 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
   };
 
   const shoppingCategories = getCitySpecificPriceGuide(city.name);
+  console.log("Final shoppingCategories for", city.name, ":", shoppingCategories);
 
   const shoppingSeason = [
     { season: "Festival Season (Oct-Nov)", discounts: "20-50%", bestFor: "Clothing, jewelry, home decor" },
