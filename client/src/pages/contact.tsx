@@ -45,14 +45,6 @@ export default function Contact() {
       action: "Join Discord",
       link: "https://discord.gg/roaminsider"
     },
-    {
-      icon: <Users className="h-6 w-6" />,
-      title: "Community Support",
-      description: "Get help from fellow nomads",
-      contact: "Community Forum",
-      action: "Visit Forum",
-      link: "/forum"
-    }
   ];
 
   const faqs = [

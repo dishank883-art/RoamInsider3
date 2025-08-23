@@ -16,11 +16,8 @@ export default function Footer() {
     {
       title: "Resources",
       links: [
-        { label: "City Guides", href: "/guides" },
         { label: "Cost Calculator", href: "/calculator" },
         { label: "Visa Guide", href: "/visa" },
-        { label: "Safety Tips", href: "/safety" },
-        { label: "Community Forum", href: "/forum" },
       ]
     },
     {
