@@ -7,10 +7,10 @@ import { Compass, Menu } from "lucide-react";
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = [
+  const navItems: Array<{ href: string; label: string; external?: boolean }> = [
     { href: "/", label: "Cities" },
     { href: "#", label: "Guides" },
-    { href: "#", label: "Community" },
+    { href: "https://discord.gg/Y39GGpQtMm", label: "Community", external: true },
     { href: "#", label: "Blog" },
   ];
 
@@ -28,13 +28,25 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link 
-                key={item.label}
-                href={item.href}
-                className="text-muted-navy hover:text-travel-blue font-medium transition-colors"
-              >
-                {item.label}
-              </Link>
+              item.external ? (
+                <a 
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-navy hover:text-travel-blue font-medium transition-colors"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link 
+                  key={item.label}
+                  href={item.href}
+                  className="text-muted-navy hover:text-travel-blue font-medium transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </div>
           
@@ -45,8 +57,17 @@ export default function Navigation() {
             >
               Sign In
             </Button>
-            <Button className="bg-vintage-gold text-white hover:bg-vintage-gold/90">
-              Join Free
+            <Button 
+              asChild
+              className="bg-vintage-gold text-white hover:bg-vintage-gold/90"
+            >
+              <a 
+                href="https://discord.gg/Y39GGpQtMm" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Join Free Community
+              </a>
             </Button>
             
             {/* Mobile Menu */}
@@ -59,14 +80,27 @@ export default function Navigation() {
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col space-y-4 mt-6">
                   {navItems.map((item) => (
-                    <Link 
-                      key={item.label}
-                      href={item.href}
-                      className="text-muted-navy hover:text-travel-blue font-medium transition-colors py-2"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
+                    item.external ? (
+                      <a 
+                        key={item.label}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-navy hover:text-travel-blue font-medium transition-colors py-2"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link 
+                        key={item.label}
+                        href={item.href}
+                        className="text-muted-navy hover:text-travel-blue font-medium transition-colors py-2"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    )
                   ))}
                   <div className="pt-4 border-t">
                     <Button 

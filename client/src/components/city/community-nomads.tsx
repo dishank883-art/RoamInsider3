@@ -124,54 +124,6 @@ export default function CommunityNomads({ city }: CommunityNomadsProps) {
           </div>
         </div>
 
-        {/* Meetup Groups */}
-        <div>
-          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
-            <Calendar className="mr-2 h-5 w-5" />
-            Meetup Groups & Networking
-          </h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            {meetupGroups.map((group, index) => (
-              <div key={index} className="bg-sage-green/5 rounded-lg p-4 border border-sage-green/20">
-                <div className="flex justify-between items-start mb-2">
-                  <h4 className="font-semibold text-travel-blue">{group.name}</h4>
-                  <Badge className="bg-sage-green/10 text-sage-green">{group.members}</Badge>
-                </div>
-                <div className="space-y-1 text-sm text-muted-navy">
-                  <div><strong>Focus:</strong> {group.focus}</div>
-                  <div><strong>Meets:</strong> {group.frequency}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Expat Communities */}
-        <div>
-          <h3 className="font-semibold text-travel-blue mb-4 flex items-center">
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Expat Communities
-          </h3>
-          <div className="grid gap-3">
-            {expatCommunities.map((community, index) => (
-              <div key={index} className="flex items-center justify-between p-3 bg-travel-blue/5 rounded-lg">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-vintage-gold/20 rounded-full flex items-center justify-center">
-                    <Users className="h-5 w-5 text-vintage-gold" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-travel-blue">{community.nationality}</h4>
-                    <p className="text-sm text-muted-navy">{community.platform}</p>
-                  </div>
-                </div>
-                <div className="text-right">
-                  <div className="font-semibold text-travel-blue">{community.members}</div>
-                  <div className="text-sm text-muted-navy">{community.activity}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Popular Nomad Hangouts */}
         <div>
@@ -208,12 +160,12 @@ export default function CommunityNomads({ city }: CommunityNomadsProps) {
             Community Tips
           </h4>
           <ul className="space-y-1 text-muted-navy text-sm">
-            <li>• Join Facebook groups before arriving for local tips and housing</li>
-            <li>• Attend coworking space events for instant networking</li>
-            <li>• Use Bumble BFF or Meetup apps to find like-minded people</li>
-            <li>• Many nomads organize informal beach/park workdays</li>
-            <li>• WhatsApp groups are very active for daily coordination</li>
-            <li>• Respect local customs when organizing public meetups</li>
+            <li>• Join Roam Insider Discord for instant local tips and connections in {city.name}</li>
+            <li>• Connect with fellow Roam Insider members for meetups and coworking</li>
+            <li>• Share accommodation and travel tips within our trusted community</li>
+            <li>• Get real-time updates about {city.name} from active community members</li>
+            <li>• Access exclusive city guides and insider knowledge from locals</li>
+            <li>• Organize informal workdays and social events with verified nomads</li>
           </ul>
         </div>
 
