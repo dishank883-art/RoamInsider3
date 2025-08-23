@@ -7,12 +7,16 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import CityPage from "@/pages/city";
 import CostCalculator from "@/pages/cost-calculator";
+import VisaGuide from "@/pages/visa-guide";
+import Contact from "@/pages/contact";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/calculator" component={CostCalculator} />
+      <Route path="/visa" component={VisaGuide} />
+      <Route path="/contact" component={Contact} />
       <Route path="/city/:slug" component={CityPage} />
       {/* Direct city access routes - redirect to proper format */}
       <Route path="/mumbai">{() => <Redirect to="/city/mumbai" />}</Route>
