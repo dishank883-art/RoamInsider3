@@ -478,358 +478,10 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
     return "Most platforms available with standard delivery times for this region.";
   };
 
-  const shoppingCategories = [
-    {
-      category: "Clothing & Textiles",
-      items: [
-        { item: "Cotton kurtas", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Local boutiques" },
-        { item: "Silk sarees", priceRange: "₹2000-25000 ($24-300)", bestPlace: "Traditional markets" },
-        { item: "Branded jeans", priceRange: "₹1500-5000 ($18-60)", bestPlace: "Malls" },
-        { item: "Handloom fabrics", priceRange: "₹200-2000 per meter ($2.40-24)", bestPlace: "Weaver cooperatives" }
-      ]
-    },
-    {
-      category: "Spices & Food Items",
-      items: [
-        { item: "Turmeric powder (1kg)", priceRange: "₹150-300 ($1.80-3.60)", bestPlace: "Spice markets" },
-        { item: "Premium tea (250g)", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Tea estates" },
-        { item: "Organic honey (500g)", priceRange: "₹250-600 ($3-7.20)", bestPlace: "Organic stores" },
-        { item: "Dry fruits mix (1kg)", priceRange: "₹800-2000 ($9.60-24)", bestPlace: "Wholesale markets" }
-      ]
-    },
-    {
-      category: "Handicrafts & Souvenirs",
-      items: [
-        { item: "Wooden sculptures", priceRange: "₹500-5000 ($6-60)", bestPlace: "Artisan workshops" },
-        { item: "Brass items", priceRange: "₹200-2000 ($2.40-24)", bestPlace: "Metal craft centers" },
-        { item: "Paintings", priceRange: "₹800-8000 ($9.60-96)", bestPlace: "Art galleries" },
-        { item: "Pottery items", priceRange: "₹100-1500 ($1.20-18)", bestPlace: "Potter villages" }
-      ]
-    }
-  ];
-
-  const shoppingSeason = [
-    { season: "Festival Season (Oct-Nov)", discounts: "20-50%", bestFor: "Clothing, jewelry, home decor" },
-    { season: "Wedding Season (Nov-Feb)", discounts: "10-30%", bestFor: "Silk, gold, gift items" },
-    { season: "Summer Sale (Apr-Jun)", discounts: "30-60%", bestFor: "Electronics, branded clothing" },
-    { season: "Monsoon (Jul-Sep)", discounts: "15-40%", bestFor: "Indoor items, books, crafts" }
-  ];
-            { item: "Branded laptops", priceRange: "₹30000-150000 ($360-1800)", bestPlace: "SP Road Electronics Market" },
-            { item: "Mobile accessories", priceRange: "₹100-2000 ($1.20-24)", bestPlace: "National Market" },
-            { item: "Gaming peripherals", priceRange: "₹500-8000 ($6-96)", bestPlace: "Forum Mall, Brigade Road" },
-            { item: "Software books", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Gangaram Book Bureau" }
-          ]
-        },
-        {
-          category: "Traditional Karnataka Items",
-          items: [
-            { item: "Mysore silk sarees", priceRange: "₹3000-25000 ($36-300)", bestPlace: "Chickpet Market" },
-            { item: "Sandalwood items", priceRange: "₹200-5000 ($2.40-60)", bestPlace: "Cauvery Arts & Crafts" },
-            { item: "Filter coffee powder (1kg)", priceRange: "₹400-800 ($4.80-9.60)", bestPlace: "VV Puram Food Street" },
-            { item: "Ragi products", priceRange: "₹100-400 ($1.20-4.80)", bestPlace: "Organic stores, Jayanagar" }
-          ]
-        },
-        {
-          category: "Pub Culture & Lifestyle",
-          items: [
-            { item: "Craft beer merchandise", priceRange: "₹300-1200 ($3.60-14.40)", bestPlace: "Indiranagar breweries" },
-            { item: "Band merchandise", priceRange: "₹500-2000 ($6-24)", bestPlace: "Commercial Street" },
-            { item: "Coffee shop accessories", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Third Wave Coffee stores" },
-            { item: "Books (used)", priceRange: "₹50-500 ($0.60-6)", bestPlace: "Blossoms Book House" }
-          ]
-        }
-      ],
-      "Goa": [
-        {
-          category: "Beach & Tourist Items",
-          items: [
-            { item: "Beach wear", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Anjuna Flea Market" },
-            { item: "Coconut oil (500ml)", priceRange: "₹150-400 ($1.80-4.80)", bestPlace: "Local coconut farms" },
-            { item: "Feni bottles", priceRange: "₹300-800 ($3.60-9.60)", bestPlace: "Government shops" },
-            { item: "Seashell jewelry", priceRange: "₹100-800 ($1.20-9.60)", bestPlace: "Beach shacks" }
-          ]
-        },
-        {
-          category: "Portuguese Heritage Items",
-          items: [
-            { item: "Azulejo tiles", priceRange: "₹500-2000 per piece ($6-24)", bestPlace: "Fontainhas, Panjim" },
-            { item: "Cashew nuts (1kg)", priceRange: "₹800-1500 ($9.60-18)", bestPlace: "Local farms" },
-            { item: "Portuguese pastries", priceRange: "₹50-200 ($0.60-2.40)", bestPlace: "Confeitaria 31 de Janeiro" },
-            { item: "Colonial furniture", priceRange: "₹3000-30000 ($36-360)", bestPlace: "Margao antique shops" }
-          ]
-        },
-        {
-          category: "Spices & Local Products",
-          items: [
-            { item: "Kokum syrup (500ml)", priceRange: "₹200-400 ($2.40-4.80)", bestPlace: "Local markets" },
-            { item: "Goan spice mix", priceRange: "₹100-300 ($1.20-3.60)", bestPlace: "Mapusa Market" },
-            { item: "Palm jaggery", priceRange: "₹80-200 ($0.96-2.40)", bestPlace: "Village cooperatives" },
-            { item: "Goan chorizo", priceRange: "₹400-800 ($4.80-9.60)", bestPlace: "Local meat shops" }
-          ]
-        }
-      ],
-      "Rishikesh": [
-        {
-          category: "Spiritual & Yoga Items",
-          items: [
-            { item: "Yoga mats", priceRange: "₹500-2500 ($6-30)", bestPlace: "Laxman Jhula market" },
-            { item: "Meditation cushions", priceRange: "₹300-1200 ($3.60-14.40)", bestPlace: "Ashram shops" },
-            { item: "Rudraksha malas", priceRange: "₹200-2000 ($2.40-24)", bestPlace: "Ram Jhula area" },
-            { item: "Spiritual books", priceRange: "₹150-800 ($1.80-9.60)", bestPlace: "Parmarth Ashram bookstore" }
-          ]
-        },
-        {
-          category: "Ayurveda & Natural Products",
-          items: [
-            { item: "Ayurvedic oils", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Patanjali stores" },
-            { item: "Himalayan herbs", priceRange: "₹100-600 ($1.20-7.20)", bestPlace: "Local herb shops" },
-            { item: "Natural soaps", priceRange: "₹80-300 ($0.96-3.60)", bestPlace: "Organic stores" },
-            { item: "Honey (500g)", priceRange: "₹300-800 ($3.60-9.60)", bestPlace: "Hill honey vendors" }
-          ]
-        },
-        {
-          category: "Adventure & Trekking Gear",
-          items: [
-            { item: "Trekking shoes", priceRange: "₹1500-5000 ($18-60)", bestPlace: "Adventure sports shops" },
-            { item: "Sleeping bags", priceRange: "₹2000-8000 ($24-96)", bestPlace: "Tapovan market" },
-            { item: "Water bottles", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Sports equipment stores" },
-            { item: "Backpacks", priceRange: "₹1000-4000 ($12-48)", bestPlace: "Main market" }
-          ]
-        }
-      ],
-      "Udaipur": [
-        {
-          category: "Royal Heritage Items",
-          items: [
-            { item: "Miniature paintings", priceRange: "₹1000-15000 ($12-180)", bestPlace: "City Palace shops" },
-            { item: "Silver jewelry", priceRange: "₹500-8000 ($6-96)", bestPlace: "Hathi Pol Bazaar" },
-            { item: "Rajasthani puppets", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Shilpgram" },
-            { item: "Royal textiles", priceRange: "₹1500-20000 ($18-240)", bestPlace: "Bada Bazaar" }
-          ]
-        },
-        {
-          category: "Traditional Crafts",
-          items: [
-            { item: "Bandhani fabrics", priceRange: "₹300-3000 ($3.60-36)", bestPlace: "Local textile shops" },
-            { item: "Blue pottery", priceRange: "₹150-2000 ($1.80-24)", bestPlace: "Craft workshops" },
-            { item: "Leather mojaris", priceRange: "₹400-1500 ($4.80-18)", bestPlace: "Clock Tower market" },
-            { item: "Wooden toys", priceRange: "₹100-800 ($1.20-9.60)", bestPlace: "Chetak Circle" }
-          ]
-        },
-        {
-          category: "Lake City Specialties",
-          items: [
-            { item: "Lake view paintings", priceRange: "₹800-5000 ($9.60-60)", bestPlace: "Ghats area artists" },
-            { item: "Sunset photography prints", priceRange: "₹300-1200 ($3.60-14.40)", bestPlace: "Tourist spots" },
-            { item: "Traditional sweets", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Jagdish Temple area" },
-            { item: "Marble items", priceRange: "₹500-5000 ($6-60)", bestPlace: "Marble workshops" }
-          ]
-        }
-      ],
-      "Kolkata": [
-        {
-          category: "Literary & Cultural Items",
-          items: [
-            { item: "Bengali books", priceRange: "₹100-800 ($1.20-9.60)", bestPlace: "College Street" },
-            { item: "Vintage magazines", priceRange: "₹50-500 ($0.60-6)", bestPlace: "Sunday Book Market" },
-            { item: "Handloom sarees", priceRange: "₹1000-10000 ($12-120)", bestPlace: "New Market" },
-            { item: "Musical instruments", priceRange: "₹500-15000 ($6-180)", bestPlace: "Rabindra Sarobar" }
-          ]
-        },
-        {
-          category: "Sweets & Food Items",
-          items: [
-            { item: "Rosogolla (1kg)", priceRange: "₹300-600 ($3.60-7.20)", bestPlace: "KC Das, Balaram Mullick" },
-            { item: "Fish market items", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Howrah Fish Market" },
-            { item: "Tea (Darjeeling)", priceRange: "₹400-1500 ($4.80-18)", bestPlace: "Tea Board shops" },
-            { item: "Bengali spices", priceRange: "₹100-500 ($1.20-6)", bestPlace: "Burrabazar" }
-          ]
-        },
-        {
-          category: "Art & Handicrafts",
-          items: [
-            { item: "Durga Puja items", priceRange: "₹200-2000 ($2.40-24)", bestPlace: "Kumartuli" },
-            { item: "Terracotta items", priceRange: "₹150-1500 ($1.80-18)", bestPlace: "Craft museums" },
-            { item: "Kantha work", priceRange: "₹500-3000 ($6-36)", bestPlace: "Women's cooperatives" },
-            { item: "Clay dolls", priceRange: "₹100-800 ($1.20-9.60)", bestPlace: "Traditional potters" }
-          ]
-        }
-      ],
-      "Pune": [
-        {
-          category: "Educational & Student Items",
-          items: [
-            { item: "Engineering books", priceRange: "₹400-2000 ($4.80-24)", bestPlace: "FC Road bookstores" },
-            { item: "Study materials", priceRange: "₹100-800 ($1.20-9.60)", bestPlace: "University area" },
-            { item: "Laptop accessories", priceRange: "₹200-3000 ($2.40-36)", bestPlace: "Camp area" },
-            { item: "Student stationery", priceRange: "₹50-500 ($0.60-6)", bestPlace: "Appa Balwant Chowk" }
-          ]
-        },
-        {
-          category: "Traditional Marathi Items",
-          items: [
-            { item: "Paithani sarees", priceRange: "₹5000-50000 ($60-600)", bestPlace: "Laxmi Road" },
-            { item: "Maharashtrian jewelry", priceRange: "₹800-8000 ($9.60-96)", bestPlace: "Tulsi Baug" },
-            { item: "Kolhapuri chappals", priceRange: "₹500-2000 ($6-24)", bestPlace: "Traditional markets" },
-            { item: "Chitpavan sweets", priceRange: "₹200-600 ($2.40-7.20)", bestPlace: "Chitale Bandhu" }
-          ]
-        },
-        {
-          category: "IT Hub Lifestyle",
-          items: [
-            { item: "Tech gadgets", priceRange: "₹1000-20000 ($12-240)", bestPlace: "Phoenix Mall, Seasons Mall" },
-            { item: "Cafe merchandise", priceRange: "₹300-1200 ($3.60-14.40)", bestPlace: "Koregaon Park" },
-            { item: "Fitness gear", priceRange: "₹500-5000 ($6-60)", bestPlace: "Baner area" },
-            { item: "Organic food", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Modern stores" }
-          ]
-        }
-      ],
-      "New Delhi": [
-        {
-          category: "Capital City Fashion",
-          items: [
-            { item: "Designer lehengas", priceRange: "₹5000-100000 ($60-1200)", bestPlace: "Chandni Chowk, Karol Bagh" },
-            { item: "Branded suits", priceRange: "₹3000-25000 ($36-300)", bestPlace: "Connaught Place" },
-            { item: "Export surplus", priceRange: "₹500-3000 ($6-36)", bestPlace: "Janpath Market" },
-            { item: "Winter wear", priceRange: "₹1000-8000 ($12-96)", bestPlace: "Lajpat Nagar" }
-          ]
-        },
-        {
-          category: "Government Quarter Items",
-          items: [
-            { item: "Khadi products", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Khadi Gramodyog" },
-            { item: "Government books", priceRange: "₹100-1500 ($1.20-18)", bestPlace: "Daryaganj" },
-            { item: "Official accessories", priceRange: "₹200-2000 ($2.40-24)", bestPlace: "Palika Bazaar" },
-            { item: "Political memorabilia", priceRange: "₹150-1500 ($1.80-18)", bestPlace: "Khan Market" }
-          ]
-        },
-        {
-          category: "Heritage & Crafts",
-          items: [
-            { item: "Mughal jewelry replicas", priceRange: "₹1000-15000 ($12-180)", bestPlace: "Red Fort area" },
-            { item: "Miniature paintings", priceRange: "₹800-8000 ($9.60-96)", bestPlace: "Central Cottage Industries" },
-            { item: "Carpet runners", priceRange: "₹2000-20000 ($24-240)", bestPlace: "Karol Bagh" },
-            { item: "Antique items", priceRange: "₹1000-50000 ($12-600)", bestPlace: "Chor Bazaar" }
-          ]
-        }
-      ],
-      "Pondicherry": [
-        {
-          category: "French Colonial Items",
-          items: [
-            { item: "French perfumes", priceRange: "₹800-3000 ($9.60-36)", bestPlace: "White Town boutiques" },
-            { item: "Auroville pottery", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Auroville shops" },
-            { item: "Colonial furniture", priceRange: "₹5000-50000 ($60-600)", bestPlace: "Heritage stores" },
-            { item: "French wines", priceRange: "₹1200-5000 ($14.40-60)", bestPlace: "Government wine shops" }
-          ]
-        },
-        {
-          category: "Beach & Coastal Items",
-          items: [
-            { item: "Seashell crafts", priceRange: "₹100-800 ($1.20-9.60)", bestPlace: "Beach Road" },
-            { item: "Fishing nets decor", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Fishing harbor" },
-            { item: "Coastal paintings", priceRange: "₹500-5000 ($6-60)", bestPlace: "Local art galleries" },
-            { item: "Palm products", priceRange: "₹150-600 ($1.80-7.20)", bestPlace: "Village cooperatives" }
-          ]
-        },
-        {
-          category: "Spiritual & Meditation",
-          items: [
-            { item: "Meditation books", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Auroville bookstores" },
-            { item: "Incense & candles", priceRange: "₹100-500 ($1.20-6)", bestPlace: "Ashram stores" },
-            { item: "Yoga accessories", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Wellness centers" },
-            { item: "Crystal items", priceRange: "₹200-2000 ($2.40-24)", bestPlace: "Spiritual shops" }
-          ]
-        }
-      ],
-      "Kochi": [
-        {
-          category: "Spice Trade Heritage",
-          items: [
-            { item: "Black pepper (1kg)", priceRange: "₹600-1200 ($7.20-14.40)", bestPlace: "Mattancherry Spice Market" },
-            { item: "Cardamom (250g)", priceRange: "₹1500-2500 ($18-30)", bestPlace: "Jew Town" },
-            { item: "Cinnamon bark", priceRange: "₹300-800 ($3.60-9.60)", bestPlace: "Spice markets" },
-            { item: "Vanilla pods", priceRange: "₹500-1500 ($6-18)", bestPlace: "Export quality stores" }
-          ]
-        },
-        {
-          category: "Kerala Traditional Items",
-          items: [
-            { item: "Kasavu sarees", priceRange: "₹2000-15000 ($24-180)", bestPlace: "Broadway" },
-            { item: "Coconut shell crafts", priceRange: "₹150-1000 ($1.80-12)", bestPlace: "Handicraft emporiums" },
-            { item: "Kathakali masks", priceRange: "₹500-3000 ($6-36)", bestPlace: "Cultural centers" },
-            { item: "Ayurvedic medicines", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Traditional pharmacies" }
-          ]
-        },
-        {
-          category: "Marine & Coastal Products",
-          items: [
-            { item: "Chinese fishing nets miniatures", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Fort Kochi" },
-            { item: "Fresh seafood", priceRange: "₹200-1000/kg ($2.40-12)", bestPlace: "Fish markets" },
-            { item: "Boat models", priceRange: "₹500-3000 ($6-36)", bestPlace: "Marine Drive shops" },
-            { item: "Sea salt varieties", priceRange: "₹100-400 ($1.20-4.80)", bestPlace: "Coastal villages" }
-          ]
-        }
-      ],
-      "Varkala": [
-        {
-          category: "Cliff & Beach Items",
-          items: [
-            { item: "Cliff photography prints", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Cliff-top shops" },
-            { item: "Beach jewelry", priceRange: "₹150-800 ($1.80-9.60)", bestPlace: "Cliff market" },
-            { item: "Hammocks", priceRange: "₹800-2500 ($9.60-30)", bestPlace: "Beach shacks" },
-            { item: "Surf accessories", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Water sports shops" }
-          ]
-        },
-        {
-          category: "Ayurveda & Wellness",
-          items: [
-            { item: "Herbal oils", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Ayurveda centers" },
-            { item: "Yoga props", priceRange: "₹400-2000 ($4.80-24)", bestPlace: "Cliff yoga studios" },
-            { item: "Meditation cushions", priceRange: "₹500-1500 ($6-18)", bestPlace: "Wellness shops" },
-            { item: "Natural cosmetics", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Organic stores" }
-          ]
-        },
-        {
-          category: "Backpacker Essentials",
-          items: [
-            { item: "Travel accessories", priceRange: "₹200-1200 ($2.40-14.40)", bestPlace: "Backpacker shops" },
-            { item: "Hippie clothes", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Cliff boutiques" },
-            { item: "Handmade bags", priceRange: "₹400-2000 ($4.80-24)", bestPlace: "Local artisans" },
-            { item: "Beach essentials", priceRange: "₹100-800 ($1.20-9.60)", bestPlace: "Beach vendors" }
-          ]
-        }
-      ],
-      "Kasol": [
-        {
-          category: "Israeli & International Items",
-          items: [
-            { item: "Israeli food products", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Israeli cafes" },
-            { item: "Traveler clothing", priceRange: "₹500-2500 ($6-30)", bestPlace: "Local shops" },
-            { item: "International music", priceRange: "₹300-1200 ($3.60-14.40)", bestPlace: "Music cafes" },
-            { item: "Travel guides", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Cafe libraries" }
-          ]
-        },
-        {
-          category: "Mountain & Trekking Gear",
-          items: [
-            { item: "Trekking equipment", priceRange: "₹1000-8000 ($12-96)", bestPlace: "Adventure stores" },
-            { item: "Warm clothing", priceRange: "₹800-3000 ($9.60-36)", bestPlace: "Local woolen shops" },
-            { item: "Camping gear", priceRange: "₹1500-10000 ($18-120)", bestPlace: "Outdoor equipment stores" },
-            { item: "Mountain shoes", priceRange: "₹2000-8000 ($24-96)", bestPlace: "Trekking stores" }
-          ]
-        },
-        {
-          category: "Local Himalayan Products",
-          items: [
-            { item: "Local honey", priceRange: "₹400-1000 ($4.80-12)", bestPlace: "Mountain villages" },
-            { item: "Himalayan herbs", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Local herb collectors" },
-            { item: "Woolen handicrafts", priceRange: "₹500-3000 ($6-36)", bestPlace: "Village artisans" },
-            { item: "Pine cone crafts", priceRange: "₹100-500 ($1.20-6)", bestPlace: "Local crafters" }
-          ]
-        }
-      ],
-      "Ziro": [
+  // City-specific price guide function
+  const getCitySpecificPriceGuide = (cityName: string) => {
+    if (cityName === "Ziro") {
+      return [
         {
           category: "Tribal Handicrafts & Artifacts",
           items: [
@@ -857,187 +509,107 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
             { item: "Warm tribal blankets", priceRange: "₹800-2500 ($9.60-30)", bestPlace: "Handloom centers" }
           ]
         }
-      ],
-      "Dharamkot": [
-        {
-          category: "Tibetan Buddhist Items",
-          items: [
-            { item: "Tibetan prayer flags", priceRange: "₹50-300 ($0.60-3.60)", bestPlace: "Monastery shops" },
-            { item: "Singing bowls", priceRange: "₹500-3000 ($6-36)", bestPlace: "Tibetan artisans" },
-            { item: "Buddhist books & texts", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Dharamkot library" },
-            { item: "Meditation malas", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Spiritual shops" }
-          ]
-        },
-        {
-          category: "Backpacker & Trekking Gear",
-          items: [
-            { item: "Trekking backpacks", priceRange: "₹1500-5000 ($18-60)", bestPlace: "Adventure gear shops" },
-            { item: "Mountain boots", priceRange: "₹2000-6000 ($24-72)", bestPlace: "Trekking equipment stores" },
-            { item: "Sleeping bags", priceRange: "₹2500-8000 ($30-96)", bestPlace: "Outdoor gear shops" },
-            { item: "Warm winter clothing", priceRange: "₹800-3000 ($9.60-36)", bestPlace: "Local woolen shops" }
-          ]
-        },
-        {
-          category: "Local Himachali Products",
-          items: [
-            { item: "Himachali woolen caps", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Local knitters" },
-            { item: "Mountain honey", priceRange: "₹400-1200 ($4.80-14.40)", bestPlace: "Beekeepers" },
-            { item: "Himalayan tea", priceRange: "₹300-900 ($3.60-10.80)", bestPlace: "Tea gardens" },
-            { item: "Apple products", priceRange: "₹200-600 ($2.40-7.20)", bestPlace: "Orchard farmers" }
-          ]
-        }
-      ],
-      "Bir": [
-        {
-          category: "Paragliding & Adventure Gear",
-          items: [
-            { item: "Paragliding equipment", priceRange: "₹15000-80000 ($180-960)", bestPlace: "Certified dealers" },
-            { item: "Adventure photography gear", priceRange: "₹1000-8000 ($12-96)", bestPlace: "Sports shops" },
-            { item: "Altitude gear", priceRange: "₹500-3000 ($6-36)", bestPlace: "Mountain sports stores" },
-            { item: "Safety equipment", priceRange: "₹800-4000 ($9.60-48)", bestPlace: "Adventure centers" }
-          ]
-        },
-        {
-          category: "Tibetan Refugee Community Items",
-          items: [
-            { item: "Hand-knitted sweaters", priceRange: "₹800-2500 ($9.60-30)", bestPlace: "Tibetan settlement" },
-            { item: "Tibetan carpets (small)", priceRange: "₹2000-10000 ($24-120)", bestPlace: "Carpet weaving center" },
-            { item: "Yak cheese products", priceRange: "₹300-800 ($3.60-9.60)", bestPlace: "Tibetan dairy" },
-            { item: "Traditional incense", priceRange: "₹100-500 ($1.20-6)", bestPlace: "Monastery stores" }
-          ]
-        },
-        {
-          category: "Mountain Village Specialties",
-          items: [
-            { item: "Fresh mountain herbs", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Local collectors" },
-            { item: "Pine needle products", priceRange: "₹150-600 ($1.80-7.20)", bestPlace: "Forest cooperatives" },
-            { item: "Traditional Kangra tea", priceRange: "₹400-1200 ($4.80-14.40)", bestPlace: "Tea estates" },
-            { item: "Mountain berry jams", priceRange: "₹250-700 ($3-8.40)", bestPlace: "Village producers" }
-          ]
-        }
-      ],
-      "Darjeeling": [
-        {
-          category: "World-Famous Tea Products",
-          items: [
-            { item: "Darjeeling Black Tea (premium)", priceRange: "₹800-3000 ($9.60-36)", bestPlace: "Tea estates" },
-            { item: "Tea tasting sets", priceRange: "₹500-2000 ($6-24)", bestPlace: "Tea boutiques" },
-            { item: "Tea accessories", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Tea shops" },
-            { item: "Green tea varieties", priceRange: "₹600-1800 ($7.20-21.60)", bestPlace: "Specialty tea stores" }
-          ]
-        },
-        {
-          category: "Himalayan Railway Memorabilia",
-          items: [
-            { item: "Toy Train souvenirs", priceRange: "₹200-1200 ($2.40-14.40)", bestPlace: "Railway station shops" },
-            { item: "Vintage railway photos", priceRange: "₹300-1000 ($3.60-12)", bestPlace: "Heritage stores" },
-            { item: "Train model replicas", priceRange: "₹800-3000 ($9.60-36)", bestPlace: "Souvenir shops" },
-            { item: "Railway-themed books", priceRange: "₹250-800 ($3-9.60)", bestPlace: "Local bookstores" }
-          ]
-        },
-        {
-          category: "Traditional Hill Station Items",
-          items: [
-            { item: "Woolen shawls", priceRange: "₹800-3500 ($9.60-42)", bestPlace: "Tibetan markets" },
-            { item: "Himalayan singing bowls", priceRange: "₹1000-5000 ($12-60)", bestPlace: "Tibetan Buddhist shops" },
-            { item: "Traditional masks", priceRange: "₹500-2500 ($6-30)", bestPlace: "Cultural craft stores" },
-            { item: "Local honey varieties", priceRange: "₹400-1000 ($4.80-12)", bestPlace: "Mountain beekeepers" }
-          ]
-        }
-      ],
-      "Dehradun": [
-        {
-          category: "Educational Hub Items",
-          items: [
-            { item: "Academic books", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "University bookstores" },
-            { item: "Stationery supplies", priceRange: "₹100-800 ($1.20-9.60)", bestPlace: "Student markets" },
-            { item: "Technical equipment", priceRange: "₹500-5000 ($6-60)", bestPlace: "Electronics markets" },
-            { item: "Study accessories", priceRange: "₹200-1200 ($2.40-14.40)", bestPlace: "Campus shops" }
-          ]
-        },
-        {
-          category: "Garhwali Traditional Items",
-          items: [
-            { item: "Garhwali woolen products", priceRange: "₹600-2500 ($7.20-30)", bestPlace: "Local weavers" },
-            { item: "Traditional brass items", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Handicraft centers" },
-            { item: "Local pickle varieties", priceRange: "₹150-600 ($1.80-7.20)", bestPlace: "Home-made stores" },
-            { item: "Garhwali musical instruments", priceRange: "₹800-5000 ($9.60-60)", bestPlace: "Traditional music shops" }
-          ]
-        },
-        {
-          category: "Gateway to Hills Shopping",
-          items: [
-            { item: "Trekking preparation gear", priceRange: "₹1000-8000 ($12-96)", bestPlace: "Adventure stores" },
-            { item: "Hill station clothing", priceRange: "₹500-2500 ($6-30)", bestPlace: "Outdoor clothing stores" },
-            { item: "Travel essentials", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Travel gear shops" },
-            { item: "Local organic products", priceRange: "₹300-1200 ($3.60-14.40)", bestPlace: "Organic stores" }
-          ]
-        }
-      ],
-      "Mussoorie": [
-        {
-          category: "Queen of Hills Souvenirs",
-          items: [
-            { item: "Colonial-era postcards", priceRange: "₹50-300 ($0.60-3.60)", bestPlace: "Heritage shops" },
-            { item: "Mussoorie branded items", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Mall Road shops" },
-            { item: "Hill station photography", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Tourist photograph studios" },
-            { item: "Vintage hill maps", priceRange: "₹150-600 ($1.80-7.20)", bestPlace: "Antique stores" }
-          ]
-        },
-        {
-          category: "Mall Road Shopping",
-          items: [
-            { item: "British-era replicas", priceRange: "₹500-3000 ($6-36)", bestPlace: "Heritage boutiques" },
-            { item: "Hill station sweets", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Traditional sweet shops" },
-            { item: "Woolen winter wear", priceRange: "₹800-4000 ($9.60-48)", bestPlace: "Mall Road stores" },
-            { item: "Tourist memorabilia", priceRange: "₹150-1200 ($1.80-14.40)", bestPlace: "Souvenir shops" }
-          ]
-        },
-        {
-          category: "Mountain Resort Items",
-          items: [
-            { item: "Hiking accessories", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Sports goods stores" },
-            { item: "Mountain herbs & teas", priceRange: "₹250-1000 ($3-12)", bestPlace: "Local herb shops" },
-            { item: "Resort lifestyle items", priceRange: "₹500-2500 ($6-30)", bestPlace: "Boutique stores" },
-            { item: "Local jam & preserves", priceRange: "₹200-700 ($2.40-8.40)", bestPlace: "Home-made product stores" }
-          ]
-        }
-      ],
-      "Alleppey": [
-        {
-          category: "Backwater & Houseboat Items",
-          items: [
-            { item: "Miniature houseboat models", priceRange: "₹500-3000 ($6-36)", bestPlace: "Boat jetty shops" },
-            { item: "Coconut shell crafts", priceRange: "₹150-1000 ($1.80-12)", bestPlace: "Local artisans" },
-            { item: "Traditional boat accessories", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Boat workshops" },
-            { item: "Water-themed decor", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Handicraft stores" }
-          ]
-        },
-        {
-          category: "Kerala Spices & Products",
-          items: [
-            { item: "Fresh coconut products", priceRange: "₹100-600 ($1.20-7.20)", bestPlace: "Coconut farms" },
-            { item: "Kerala spice mixes", priceRange: "₹200-800 ($2.40-9.60)", bestPlace: "Spice markets" },
-            { item: "Ayurvedic oils", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Ayurveda centers" },
-            { item: "Traditional rice varieties", priceRange: "₹150-500 ($1.80-6)", bestPlace: "Rice mills" }
-          ]
-        },
-        {
-          category: "Coastal Lifestyle Items",
-          items: [
-            { item: "Fishing net decorations", priceRange: "₹200-1200 ($2.40-14.40)", bestPlace: "Fishing community shops" },
-            { item: "Beach lifestyle items", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Beachside stores" },
-            { item: "Traditional Kerala clothing", priceRange: "₹500-2500 ($6-30)", bestPlace: "Local textile shops" },
-            { item: "Backwater photographs", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Photography studios" }
-          ]
-        }
-      ]
-    };
-
-    const result = cityData[cityName];
-    console.log("Result for", cityName, ":", result ? "Found specific data" : "Using fallback");
+      ];
+    }
     
-    return result || [
+    if (cityName === "Mumbai") {
+      return [
+        {
+          category: "Bollywood & Entertainment",
+          items: [
+            { item: "Vintage Bollywood posters", priceRange: "₹200-2000 ($2.40-24)", bestPlace: "Lamington Road" },
+            { item: "Film memorabilia", priceRange: "₹500-5000 ($6-60)", bestPlace: "Chor Bazaar" },
+            { item: "Music instruments", priceRange: "₹1000-10000 ($12-120)", bestPlace: "Mohammed Ali Road" },
+            { item: "Dance costumes", priceRange: "₹800-4000 ($9.60-48)", bestPlace: "Crawford Market" }
+          ]
+        },
+        {
+          category: "Street Food & Specialties",
+          items: [
+            { item: "Vada pav ingredients", priceRange: "₹50-200 ($0.60-2.40)", bestPlace: "Local vendors" },
+            { item: "Mumbai street snacks", priceRange: "₹100-500 ($1.20-6)", bestPlace: "Mohammed Ali Road" },
+            { item: "Bombay duck pickle", priceRange: "₹300-600 ($3.60-7.20)", bestPlace: "Crawford Market" },
+            { item: "Alphonso mangoes (1kg)", priceRange: "₹400-1200 ($4.80-14.40)", bestPlace: "Dadar Market" }
+          ]
+        },
+        {
+          category: "Fashion & Textiles",
+          items: [
+            { item: "Designer kurtas", priceRange: "₹800-3000 ($9.60-36)", bestPlace: "Linking Road, Bandra" },
+            { item: "Cotton sarees", priceRange: "₹1500-15000 ($18-180)", bestPlace: "Crawford Market" },
+            { item: "Vintage clothes", priceRange: "₹500-2500 ($6-30)", bestPlace: "Chor Bazaar" },
+            { item: "Branded accessories", priceRange: "₹300-2000 ($3.60-24)", bestPlace: "Palladium Mall" }
+          ]
+        }
+      ];
+    }
+    
+    if (cityName === "Bangalore") {
+      return [
+        {
+          category: "Tech & Electronics",
+          items: [
+            { item: "Laptop accessories", priceRange: "₹500-3000 ($6-36)", bestPlace: "SP Road Electronics Market" },
+            { item: "Gaming peripherals", priceRange: "₹800-8000 ($9.60-96)", bestPlace: "Forum Mall, Brigade Road" },
+            { item: "Software & tech books", priceRange: "₹300-1500 ($3.60-18)", bestPlace: "Gangaram Book Bureau" },
+            { item: "Mobile accessories", priceRange: "₹100-2000 ($1.20-24)", bestPlace: "National Market" }
+          ]
+        },
+        {
+          category: "Pub Culture & Lifestyle",
+          items: [
+            { item: "Craft beer merchandise", priceRange: "₹300-1200 ($3.60-14.40)", bestPlace: "Indiranagar breweries" },
+            { item: "Band merchandise", priceRange: "₹500-2000 ($6-24)", bestPlace: "Commercial Street" },
+            { item: "Coffee culture items", priceRange: "₹200-1000 ($2.40-12)", bestPlace: "Third Wave Coffee stores" },
+            { item: "Used books", priceRange: "₹50-500 ($0.60-6)", bestPlace: "Blossoms Book House" }
+          ]
+        },
+        {
+          category: "Traditional Karnataka Items",
+          items: [
+            { item: "Mysore silk sarees", priceRange: "₹3000-25000 ($36-300)", bestPlace: "Chickpet Market" },
+            { item: "Sandalwood products", priceRange: "₹200-5000 ($2.40-60)", bestPlace: "Cauvery Arts & Crafts" },
+            { item: "Filter coffee powder (1kg)", priceRange: "₹400-800 ($4.80-9.60)", bestPlace: "VV Puram Food Street" },
+            { item: "Ragi products", priceRange: "₹100-400 ($1.20-4.80)", bestPlace: "Organic stores, Jayanagar" }
+          ]
+        }
+      ];
+    }
+    
+    if (cityName === "Goa") {
+      return [
+        {
+          category: "Beach & Portuguese Heritage",
+          items: [
+            { item: "Feni bottles", priceRange: "₹300-800 ($3.60-9.60)", bestPlace: "Government shops" },
+            { item: "Cashew nuts (1kg)", priceRange: "₹800-1500 ($9.60-18)", bestPlace: "Local farms" },
+            { item: "Azulejo tiles", priceRange: "₹500-2000 per piece ($6-24)", bestPlace: "Fontainhas, Panjim" },
+            { item: "Portuguese pastries", priceRange: "₹50-200 ($0.60-2.40)", bestPlace: "Confeitaria 31 de Janeiro" }
+          ]
+        },
+        {
+          category: "Beach Lifestyle",
+          items: [
+            { item: "Beach wear", priceRange: "₹200-1500 ($2.40-18)", bestPlace: "Anjuna Flea Market" },
+            { item: "Coconut oil (500ml)", priceRange: "₹150-400 ($1.80-4.80)", bestPlace: "Local coconut farms" },
+            { item: "Seashell jewelry", priceRange: "₹100-800 ($1.20-9.60)", bestPlace: "Beach shacks" },
+            { item: "Hammocks", priceRange: "₹800-2500 ($9.60-30)", bestPlace: "Hippie markets" }
+          ]
+        },
+        {
+          category: "Spices & Local Products",
+          items: [
+            { item: "Kokum syrup (500ml)", priceRange: "₹200-400 ($2.40-4.80)", bestPlace: "Local markets" },
+            { item: "Goan spice mix", priceRange: "₹100-300 ($1.20-3.60)", bestPlace: "Mapusa Market" },
+            { item: "Palm jaggery", priceRange: "₹80-200 ($0.96-2.40)", bestPlace: "Village cooperatives" },
+            { item: "Goan chorizo", priceRange: "₹400-800 ($4.80-9.60)", bestPlace: "Local meat shops" }
+          ]
+        }
+      ];
+    }
+    
+    // Default fallback for other cities
+    return [
       {
         category: "Local Specialties",
         items: [
@@ -1076,7 +648,9 @@ export default function ShoppingMarkets({ city }: ShoppingMarketsProps) {
     { season: "Summer Sale (Apr-Jun)", discounts: "30-60%", bestFor: "Electronics, branded clothing" },
     { season: "Monsoon (Jul-Sep)", discounts: "15-40%", bestFor: "Indoor items, books, crafts" }
   ];
-
+            { item: "Sandalwood items", priceRange: "₹200-5000 ($2.40-60)", bestPlace: "Cauvery Arts & Crafts" },
+            { item: "Filter coffee powder (1kg)", priceRange: "₹400-800 ($4.80-9.60)", bestPlace: "VV Puram Food Street" },
+            { item: "Ragi products", priceRange: "₹100-400 ($1.20-4.80)", bestPlace: "Organic stores, Jayanagar" }
   return (
     <Card className="bg-white rounded-2xl shadow-lg">
       <CardHeader>
