@@ -35,6 +35,14 @@ export default function HeroSection() {
               <Button 
                 size="lg" 
                 className="px-6 sm:px-8 py-3 sm:py-4 bg-vintage-gold text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-vintage-gold/90 transition-all duration-200 shadow-lg touch-manipulation min-h-[48px]"
+                onClick={() => {
+                  const citiesSection = document.querySelector('[data-cities-section]') || 
+                                       document.querySelector('section');
+                  if (citiesSection) {
+                    citiesSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                data-testid="explore-cities-button"
               >
                 <Search className="mr-2 h-5 w-5" />
                 Explore Cities

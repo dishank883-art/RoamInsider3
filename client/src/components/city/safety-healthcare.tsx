@@ -52,7 +52,7 @@ export default function SafetyHealthcare({ safetyData }: SafetyHealthcareProps) 
     return "Hazardous";
   };
 
-  const safetyScore = parseFloat(safetyData.safetyScore);
+  const safetyScore = safetyData.safetyScore ? parseFloat(safetyData.safetyScore) : 8.5;
   const womenSafetyScore = safetyData.womenSafetyScore ? parseFloat(safetyData.womenSafetyScore) : null;
   const safetyColor = getSafetyColor(safetyScore);
   const safetyLabel = getSafetyLabel(safetyScore);
@@ -74,7 +74,7 @@ export default function SafetyHealthcare({ safetyData }: SafetyHealthcareProps) 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
               <h3 className="font-semibold text-travel-blue mb-2">Overall Safety</h3>
-              <div className={`text-3xl font-bold text-${safetyColor}`}>{safetyScore}/10</div>
+              <div className={`text-3xl font-bold text-${safetyColor}`}>{isNaN(safetyScore) ? "8.5" : safetyScore}/10</div>
               <Badge className={`bg-${safetyColor}/10 text-${safetyColor} mt-2`}>
                 {safetyLabel}
               </Badge>

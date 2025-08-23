@@ -411,7 +411,7 @@ export default function Home() {
       />
       
       {/* Featured Cities Section */}
-      <section className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-8 sm:py-16">
+      <section className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-8 sm:py-16" data-cities-section>
         <div className="text-center mb-12">
           <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-travel-blue mb-4">
             {showAllCities || searchQuery || selectedTags.length > 0 || selectedFilters.length > 0 || 
