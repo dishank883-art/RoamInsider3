@@ -1,33 +1,79 @@
 import express from "express";
+import { apiCache } from "../utils/api-cache";
 
 const router = express.Router();
 
-// Currency conversion endpoint
+// Currency conversion endpoint with 12-hour caching
 router.get("/currency/:from/:to", async (req, res) => {
   try {
     const { from, to } = req.params;
+    const cacheKey = `currency_${from}_${to}`;
+    
+    // Check cache first (12-hour limit)
+    const cachedData = apiCache.get(cacheKey);
+    if (cachedData) {
+      return res.json(cachedData);
+    }
+
     const apiKey = process.env.CURRENCY_API_KEY;
     
     if (!apiKey) {
       // Fallback exchange rate
-      const fallbackRate = from === "INR" && to === "USD" ? 0.012 : 83.33;
-      return res.json({ rate: fallbackRate, source: "fallback" });
+      const fallbackData = { 
+        rate: from === "INR" && to === "USD" ? 0.012 : 83.33, 
+        source: "fallback",
+        lastUpdated: new Date().toISOString()
+      };
+      
+      // Cache fallback data too
+      apiCache.set(cacheKey, fallbackData);
+      return res.json(fallbackData);
     }
 
-    // In a real implementation, this would call the currency API
+    console.log(`🌐 Making currency API call for ${from}→${to} (cache miss)`);
+    
+    // Make external API call (limited to 2x daily via cache)
     const response = await fetch(`https://api.currencyapi.com/v3/latest?apikey=${apiKey}&currencies=${to}&base_currency=${from}`);
+    
+    if (!response.ok) {
+      throw new Error(`Currency API returned ${response.status}`);
+    }
+    
     const data = await response.json();
     
-    res.json({ 
+    const result = { 
       rate: data.data[to].value, 
       source: "live",
       lastUpdated: new Date().toISOString()
-    });
+    };
+
+    // Cache the result for 12 hours
+    apiCache.set(cacheKey, result);
+    
+    res.json(result);
   } catch (error) {
     console.error("Currency API error:", error);
-    // Fallback rate for INR to USD
+    
+    // Try to return cached data even if expired
+    const cacheKey = `currency_${req.params.from}_${req.params.to}`;
+    const staleData = apiCache.get(cacheKey);
+    
+    if (staleData) {
+      console.log("🔄 Returning stale cached currency data due to API error");
+      return res.json({ ...staleData, source: "stale_cache" });
+    }
+    
+    // Final fallback
     const fallbackRate = req.params.from === "INR" && req.params.to === "USD" ? 0.012 : 83.33;
-    res.json({ rate: fallbackRate, source: "fallback" });
+    const fallbackData = { 
+      rate: fallbackRate, 
+      source: "fallback_error",
+      lastUpdated: new Date().toISOString()
+    };
+    
+    // Cache fallback to prevent repeated failures
+    apiCache.set(cacheKey, fallbackData);
+    res.json(fallbackData);
   }
 });
 
@@ -77,10 +123,18 @@ router.get("/cost-of-living/:cityName", async (req, res) => {
   }
 });
 
-// Weather data endpoint
+// Weather API endpoint with 12-hour caching
 router.get("/weather/:cityId", async (req, res) => {
   try {
     const { cityId } = req.params;
+    const cacheKey = `weather_${cityId}`;
+    
+    // Check cache first (12-hour limit)
+    const cachedData = apiCache.get(cacheKey);
+    if (cachedData) {
+      return res.json(cachedData);
+    }
+
     const apiKey = process.env.OPENWEATHER_API_KEY;
     
     if (!apiKey) {
@@ -95,24 +149,81 @@ router.get("/weather/:cityId", async (req, res) => {
           aqi: 85
         },
         forecast: [
-          { date: "2024-01-01", high: 30, low: 22, description: "Sunny" },
-          { date: "2024-01-02", high: 29, low: 21, description: "Partly cloudy" },
-          { date: "2024-01-03", high: 31, low: 23, description: "Clear sky" }
+          { date: new Date().toISOString().split('T')[0], high: 30, low: 22, description: "Sunny" },
+          { date: new Date(Date.now() + 86400000).toISOString().split('T')[0], high: 29, low: 21, description: "Partly cloudy" },
+          { date: new Date(Date.now() + 172800000).toISOString().split('T')[0], high: 31, low: 23, description: "Clear sky" }
         ],
         monthly: {
           Jan: { high: 28, low: 18, rainfall: 15 },
           Feb: { high: 31, low: 20, rainfall: 20 },
           Mar: { high: 35, low: 24, rainfall: 25 }
-        }
+        },
+        lastUpdated: new Date().toISOString(),
+        source: "fallback"
       };
-      return res.json({ data: fallbackWeather, source: "fallback" });
+      
+      // Cache fallback data
+      apiCache.set(cacheKey, fallbackWeather);
+      return res.json(fallbackWeather);
     }
 
-    // Real API integration would go here
-    res.json({ message: "Weather API integration pending", source: "api" });
+    console.log(`🌤️ Making weather API call for city ${cityId} (cache miss)`);
+    
+    // Make external API call (limited to 2x daily via cache)
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?id=${cityId}&appid=${apiKey}&units=metric`);
+    
+    if (!response.ok) {
+      throw new Error(`Weather API returned ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    const result = {
+      current: {
+        temperature: Math.round(data.main.temp),
+        feelsLike: Math.round(data.main.feels_like),
+        humidity: data.main.humidity,
+        windSpeed: Math.round(data.wind.speed * 3.6), // Convert m/s to km/h
+        description: data.weather[0].description,
+        aqi: 85 // Would need separate API call for AQI
+      },
+      lastUpdated: new Date().toISOString(),
+      source: "live"
+    };
+
+    // Cache the result for 12 hours
+    apiCache.set(cacheKey, result);
+    
+    res.json(result);
   } catch (error) {
     console.error("Weather API error:", error);
-    res.status(500).json({ error: "Failed to fetch weather data" });
+    
+    // Try to return cached data even if expired
+    const cacheKey = `weather_${req.params.cityId}`;
+    const staleData = apiCache.get(cacheKey);
+    
+    if (staleData) {
+      console.log("🔄 Returning stale cached weather data due to API error");
+      return res.json({ ...staleData, source: "stale_cache" });
+    }
+    
+    // Final fallback
+    const fallbackWeather = {
+      current: {
+        temperature: 28,
+        feelsLike: 32,
+        humidity: 65,
+        windSpeed: 12,
+        description: "Data temporarily unavailable",
+        aqi: 85
+      },
+      lastUpdated: new Date().toISOString(),
+      source: "fallback_error"
+    };
+    
+    // Cache fallback to prevent repeated failures
+    apiCache.set(cacheKey, fallbackWeather);
+    res.json(fallbackWeather);
   }
 });
 
