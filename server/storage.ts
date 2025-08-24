@@ -1176,7 +1176,7 @@ export class MemStorage implements IStorage {
       timings: "9:30 AM - 5:00 PM",
       isHiddenGem: false,
       rating: "4.5",
-      image: "https://images.unsplash.com/photo-1477587458883-47145ed94245",
+      image: "https://plus.unsplash.com/premium_photo-1691031430107-79076cba9d5e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHhzZWFyY2h8NXx8Y2l0eSUyMHBhbGFjZSUyMGphaXB1cnxlbnwwfHwwfHx8MA%3D%3D",
       createdAt: new Date(),
     });
 
@@ -1192,7 +1192,7 @@ export class MemStorage implements IStorage {
       timings: "9:00 AM - 4:30 PM",
       isHiddenGem: false,
       rating: "4.4",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+      image: "https://images.unsplash.com/photo-1650530777057-3a7dbc24bf6c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGF3YSUyMG1haGFsfGVufDB8fDB8fHww",
       createdAt: new Date(),
     });
 
@@ -1224,7 +1224,7 @@ export class MemStorage implements IStorage {
       timings: "10:00 AM - 9:00 PM",
       isHiddenGem: false,
       rating: "4.2",
-      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+      image: "https://images.unsplash.com/photo-1706794441044-2c65e66e6bdc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHhzZWFyY2h8MTF8fGpvaGFyaSUyMGJhemFyfGVufDB8fDB8fHww",
       createdAt: new Date(),
     });
 
