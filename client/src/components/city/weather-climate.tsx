@@ -314,6 +314,744 @@ export default function WeatherClimate({ climateData, cityName, cityId, citySlug
             activities: ["Festival season", "Heritage tourism", "Romantic lake evenings"]
           }
         ]
+      },
+      "Mumbai": {
+        bestTime: {
+          optimal: "October to March",
+          avoid: "June to September (Heavy monsoon)",
+          shoulder: "April to May"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "19-29°C",
+            weather: "Pleasant coastal winter",
+            rainfall: "Minimal",
+            humidity: "60-75%",
+            activities: ["Beach walks", "Outdoor coworking", "Street food tours", "Film city visits"]
+          },
+          {
+            name: "Summer (Mar-May)",
+            temp: "25-35°C",
+            weather: "Hot and humid coastal climate",
+            rainfall: "Occasional pre-monsoon showers",
+            humidity: "75-85%",
+            activities: ["Mall coworking", "Marine Drive evenings", "AC train commutes", "Indoor malls"]
+          },
+          {
+            name: "Monsoon (Jun-Sep)",
+            temp: "24-30°C",
+            weather: "Heavy rains, flooding in low areas",
+            rainfall: "2400mm annually",
+            humidity: "85-95%",
+            activities: ["Indoor coworking", "Train delays expected", "Monsoon photography", "Vada pav hunting"]
+          },
+          {
+            name: "Post-Monsoon (Oct-Nov)",
+            temp: "22-32°C",
+            weather: "Fresh post-rain atmosphere",
+            rainfall: "Light showers",
+            humidity: "70-80%",
+            activities: ["Festival season", "Outdoor networking", "Gateway of India visits", "Business events"]
+          }
+        ]
+      },
+      "New Delhi": {
+        bestTime: {
+          optimal: "October to March",
+          avoid: "May to July (Extreme heat), December to January (Cold & pollution)",
+          shoulder: "April, August to September"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "5-20°C",
+            weather: "Cold with dense fog and pollution",
+            rainfall: "Minimal winter rains",
+            humidity: "60-80%",
+            activities: ["Indoor coworking", "Metro travel", "Heritage tours", "Warm food exploration"]
+          },
+          {
+            name: "Spring (Mar-Apr)",
+            temp: "15-30°C",
+            weather: "Pleasant transition period",
+            rainfall: "Occasional spring showers",
+            humidity: "45-65%",
+            activities: ["India Gate visits", "Outdoor meetings", "Garden tours", "Connaught Place walks"]
+          },
+          {
+            name: "Summer (May-Jun)",
+            temp: "30-45°C",
+            weather: "Extreme heat, dust storms",
+            rainfall: "Minimal",
+            humidity: "30-50%",
+            activities: ["Metro-connected coworking", "Mall-based work", "Early morning activities", "AC spaces only"]
+          },
+          {
+            name: "Monsoon (Jul-Sep)",
+            temp: "25-35°C",
+            weather: "Moderate to heavy rains, cleaner air",
+            rainfall: "790mm annually",
+            humidity: "70-85%",
+            activities: ["Indoor coworking", "Monsoon drives", "Cultural venues", "Government office work"]
+          }
+        ]
+      },
+      "Kolkata": {
+        bestTime: {
+          optimal: "October to March",
+          avoid: "June to September (Monsoon), April to May (Very hot)",
+          shoulder: "April, October"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "12-25°C",
+            weather: "Cool and comfortable",
+            rainfall: "Minimal",
+            humidity: "50-70%",
+            activities: ["Cultural heritage tours", "Outdoor coworking", "Howrah Bridge walks", "Adda sessions"]
+          },
+          {
+            name: "Summer (Mar-May)",
+            temp: "27-40°C",
+            weather: "Hot and humid pre-monsoon",
+            rainfall: "Thunderstorms common",
+            humidity: "65-85%",
+            activities: ["Indoor cultural spaces", "AC shopping malls", "Museums", "Literary cafes"]
+          },
+          {
+            name: "Monsoon (Jun-Sep)",
+            temp: "26-32°C",
+            weather: "Heavy rains, waterlogging",
+            rainfall: "1600mm annually",
+            humidity: "80-90%",
+            activities: ["Indoor coworking", "Monsoon poetry sessions", "Cultural centers", "Book cafe work"]
+          },
+          {
+            name: "Post-Monsoon (Oct-Nov)",
+            temp: "20-30°C",
+            weather: "Pleasant post-rain freshness",
+            rainfall: "Light post-monsoon showers",
+            humidity: "65-75%",
+            activities: ["Durga Puja festivals", "Outdoor networking", "Ganga walks", "Cultural events"]
+          }
+        ]
+      },
+      "Alleppey": {
+        bestTime: {
+          optimal: "November to February",
+          avoid: "June to September (Heavy monsoon)",
+          shoulder: "March to May, October"
+        },
+        seasons: [
+          {
+            name: "Winter (Nov-Feb)",
+            temp: "23-32°C",
+            weather: "Perfect backwater weather",
+            rainfall: "Minimal",
+            humidity: "65-75%",
+            activities: ["Houseboat work", "Backwater tours", "Beach visits", "Coconut grove walks"]
+          },
+          {
+            name: "Summer (Mar-May)",
+            temp: "25-35°C",
+            weather: "Hot coastal humidity",
+            rainfall: "Pre-monsoon showers",
+            humidity: "75-85%",
+            activities: ["Early morning houseboat work", "Shaded backwater spots", "AC accommodations", "Sunset work"]
+          },
+          {
+            name: "Monsoon (Jun-Sep)",
+            temp: "24-30°C",
+            weather: "Heavy rains transform backwaters",
+            rainfall: "2800mm annually",
+            humidity: "85-95%",
+            activities: ["Indoor houseboat work", "Monsoon backwater photography", "Ayurveda retreats", "Covered workspace"]
+          },
+          {
+            name: "Post-Monsoon (Oct)",
+            temp: "24-32°C",
+            weather: "Lush green backwater paradise",
+            rainfall: "Light showers",
+            humidity: "75-85%",
+            activities: ["Backwater exploration", "Photography season", "Cultural programs", "Village visits"]
+          }
+        ]
+      },
+      "Varkala": {
+        bestTime: {
+          optimal: "November to March",
+          avoid: "June to September (Heavy monsoon)",
+          shoulder: "April to May, October"
+        },
+        seasons: [
+          {
+            name: "Winter (Nov-Mar)",
+            temp: "22-32°C",
+            weather: "Perfect cliff and beach weather",
+            rainfall: "Minimal",
+            humidity: "65-75%",
+            activities: ["Cliff-top coworking", "Beach yoga", "Sunset work sessions", "Ayurveda treatments"]
+          },
+          {
+            name: "Summer (Apr-May)",
+            temp: "25-35°C",
+            weather: "Hot coastal weather",
+            rainfall: "Pre-monsoon showers",
+            humidity: "75-85%",
+            activities: ["Early morning beach work", "Shaded cliff cafes", "Indoor retreat spaces", "Temple visits"]
+          },
+          {
+            name: "Monsoon (Jun-Sep)",
+            temp: "24-30°C",
+            weather: "Heavy rains, rough seas",
+            rainfall: "3000mm annually",
+            humidity: "85-95%",
+            activities: ["Indoor spiritual retreats", "Monsoon meditation", "Covered cliff cafes", "Reading retreats"]
+          },
+          {
+            name: "Post-Monsoon (Oct)",
+            temp: "24-32°C",
+            weather: "Fresh coastal atmosphere",
+            rainfall: "Light showers",
+            humidity: "75-85%",
+            activities: ["Cliff photography", "Cultural events", "Beach returns", "Sunset sessions"]
+          }
+        ]
+      },
+      "Kasol": {
+        bestTime: {
+          optimal: "March to June, September to November",
+          avoid: "December to February (Snow), July to August (Heavy rains)",
+          shoulder: "December, February"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "0-15°C",
+            weather: "Snow-covered valley, freezing nights",
+            rainfall: "Snow and occasional rain",
+            humidity: "60-75%",
+            activities: ["Indoor cafe work", "Snow photography", "Hot soup sessions", "Fireplace coworking"]
+          },
+          {
+            name: "Spring/Summer (Mar-Jun)",
+            temp: "15-30°C",
+            weather: "Perfect valley weather, crystal clear views",
+            rainfall: "Occasional spring showers",
+            humidity: "50-70%",
+            activities: ["Riverside coworking", "Trekking to villages", "Outdoor cafe work", "River-side meditation"]
+          },
+          {
+            name: "Monsoon (Jul-Aug)",
+            temp: "18-25°C",
+            weather: "Heavy mountain rains, landslide risk",
+            rainfall: "1200mm annually",
+            humidity: "80-90%",
+            activities: ["Indoor cafe work", "Cultural exchanges", "Music sessions", "Card games with nomads"]
+          },
+          {
+            name: "Autumn (Sep-Nov)",
+            temp: "10-25°C",
+            weather: "Clear mountain air, perfect visibility",
+            rainfall: "Light post-monsoon showers",
+            humidity: "60-75%",
+            activities: ["Trekking season", "Outdoor work", "Valley photography", "Harvest festivals"]
+          }
+        ]
+      },
+      "Bir": {
+        bestTime: {
+          optimal: "March to June, September to November",
+          avoid: "December to February (Very cold), July to August (Monsoon)",
+          shoulder: "February, December"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "0-18°C",
+            weather: "Cold mountain winter, clear skies",
+            rainfall: "Light winter rains",
+            humidity: "55-70%",
+            activities: ["Monastery visits", "Indoor meditation", "Tibetan language learning", "Hot tea work sessions"]
+          },
+          {
+            name: "Spring/Summer (Mar-Jun)",
+            temp: "15-32°C",
+            weather: "Perfect paragliding and trekking weather",
+            rainfall: "Occasional spring showers",
+            humidity: "45-65%",
+            activities: ["Paragliding", "Outdoor coworking", "Monastery work", "Mountain biking", "Tibetan cultural immersion"]
+          },
+          {
+            name: "Monsoon (Jul-Aug)",
+            temp: "20-28°C",
+            weather: "Heavy mountain rains",
+            rainfall: "1500mm annually",
+            humidity: "75-85%",
+            activities: ["Indoor monastery work", "Cultural learning", "Traditional crafts", "Meditation retreats"]
+          },
+          {
+            name: "Autumn (Sep-Nov)",
+            temp: "12-25°C",
+            weather: "Crystal clear mountain views",
+            rainfall: "Minimal",
+            humidity: "50-70%",
+            activities: ["Perfect paragliding season", "Outdoor work", "Trekking", "Festival celebrations"]
+          }
+        ]
+      },
+      "Dehradun": {
+        bestTime: {
+          optimal: "March to June, September to November",
+          avoid: "July to August (Heavy monsoon), December to January (Cold)",
+          shoulder: "February, December"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "5-20°C",
+            weather: "Cool valley climate, some fog",
+            rainfall: "Light winter showers",
+            humidity: "60-75%",
+            activities: ["IIT campus visits", "Indoor coworking", "Educational institutions", "Administrative work"]
+          },
+          {
+            name: "Spring/Summer (Mar-Jun)",
+            temp: "18-35°C",
+            weather: "Pleasant valley summer",
+            rainfall: "Pre-monsoon thunderstorms",
+            humidity: "50-70%",
+            activities: ["Educational networking", "Government liaison work", "Outdoor meetings", "Hill station base"]
+          },
+          {
+            name: "Monsoon (Jul-Aug)",
+            temp: "22-30°C",
+            weather: "Heavy Uttarakhand monsoon",
+            rainfall: "2100mm annually",
+            humidity: "80-90%",
+            activities: ["Indoor academic work", "Research facilities", "Library sessions", "Educational conferences"]
+          },
+          {
+            name: "Post-Monsoon (Sep-Nov)",
+            temp: "15-28°C",
+            weather: "Clear valley air, perfect weather",
+            rainfall: "Light showers",
+            humidity: "60-75%",
+            activities: ["Educational tours", "Government work", "Outdoor networking", "Valley exploration"]
+          }
+        ]
+      },
+      "Mussoorie": {
+        bestTime: {
+          optimal: "April to June, September to November",
+          avoid: "July to August (Heavy monsoon), December to February (Very cold)",
+          shoulder: "March, December"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "1-15°C",
+            weather: "Cold hill station, possible snow",
+            rainfall: "Light winter rain and snow",
+            humidity: "60-75%",
+            activities: ["Indoor heritage hotel work", "Fireplace coworking", "Colonial architecture tours", "Hot beverage sessions"]
+          },
+          {
+            name: "Spring/Summer (Mar-Jun)",
+            temp: "15-30°C",
+            weather: "Perfect hill station weather",
+            rainfall: "Occasional spring showers",
+            humidity: "50-70%",
+            activities: ["Mall Road coworking", "Mountain view work", "Colonial heritage tours", "Cable car office views"]
+          },
+          {
+            name: "Monsoon (Jul-Aug)",
+            temp: "18-25°C",
+            weather: "Heavy mountain rains, landslide risk",
+            rainfall: "2200mm annually",
+            humidity: "80-90%",
+            activities: ["Indoor heritage spaces", "Library work", "Monsoon photography", "Traditional hill culture"]
+          },
+          {
+            name: "Autumn (Sep-Nov)",
+            temp: "12-25°C",
+            weather: "Clear Himalayan views, crisp air",
+            rainfall: "Light post-monsoon showers",
+            humidity: "60-75%",
+            activities: ["Outdoor heritage walks", "Mountain photography", "Clear weather networking", "Festival season"]
+          }
+        ]
+      },
+      "Ziro": {
+        bestTime: {
+          optimal: "March to May, September to November",
+          avoid: "June to August (Heavy monsoon), December to February (Very cold)",
+          shoulder: "February, December"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "2-18°C",
+            weather: "Cold tribal valley, clear mountain views",
+            rainfall: "Light winter rains",
+            humidity: "65-80%",
+            activities: ["Cultural immersion", "Tribal art learning", "Indoor cultural centers", "Traditional craft work"]
+          },
+          {
+            name: "Spring/Summer (Mar-May)",
+            temp: "15-28°C",
+            weather: "Perfect tribal valley weather",
+            rainfall: "Light spring showers",
+            humidity: "60-75%",
+            activities: ["Rice terrace photography", "Tribal village visits", "Music festival season", "Outdoor cultural work"]
+          },
+          {
+            name: "Monsoon (Jun-Aug)",
+            temp: "20-25°C",
+            weather: "Heavy northeastern monsoon",
+            rainfall: "2500mm annually",
+            humidity: "85-95%",
+            activities: ["Indoor tribal cultural work", "Traditional music sessions", "Craft learning", "Community centers"]
+          },
+          {
+            name: "Autumn (Sep-Nov)",
+            temp: "12-24°C",
+            weather: "Clear valley views, harvest season",
+            rainfall: "Light showers",
+            humidity: "70-85%",
+            activities: ["Harvest participation", "Music festivals", "Valley photography", "Cultural documentation"]
+          }
+        ]
+      },
+      "Rishikesh": {
+        bestTime: {
+          optimal: "March to June, September to November",
+          avoid: "July to August (Monsoon), December to January (Cold)",
+          shoulder: "February, December"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "5-22°C",
+            weather: "Cool spiritual weather",
+            rainfall: "Light winter showers",
+            humidity: "55-70%",
+            activities: ["Ashram work", "Ganga meditation", "Yoga teacher training", "Spiritual retreat work"]
+          },
+          {
+            name: "Spring/Summer (Mar-Jun)",
+            temp: "20-35°C",
+            weather: "Perfect for spiritual tourism",
+            rainfall: "Pre-monsoon thunderstorms",
+            humidity: "45-65%",
+            activities: ["River rafting", "Outdoor yoga", "Ashram networking", "Adventure sports", "Ganga aarti"]
+          },
+          {
+            name: "Monsoon (Jul-Aug)",
+            temp: "24-30°C",
+            weather: "Heavy Ganga valley rains",
+            rainfall: "1500mm annually",
+            humidity: "75-85%",
+            activities: ["Indoor ashram work", "Meditation retreats", "Yoga philosophy study", "Spiritual library work"]
+          },
+          {
+            name: "Post-Monsoon (Sep-Nov)",
+            temp: "18-30°C",
+            weather: "Clear mountain air, spiritual vibes",
+            rainfall: "Light showers",
+            humidity: "60-75%",
+            activities: ["Perfect yoga season", "Ganga ceremonies", "Adventure activities", "Spiritual networking"]
+          }
+        ]
+      },
+      "Pondicherry": {
+        bestTime: {
+          optimal: "November to March",
+          avoid: "June to September (Monsoon), April to May (Hot)",
+          shoulder: "April, October"
+        },
+        seasons: [
+          {
+            name: "Winter (Nov-Mar)",
+            temp: "20-30°C",
+            weather: "Perfect French colonial weather",
+            rainfall: "Minimal",
+            humidity: "65-75%",
+            activities: ["French Quarter coworking", "Beach promenade work", "Auroville visits", "Heritage cafe work"]
+          },
+          {
+            name: "Summer (Apr-May)",
+            temp: "25-38°C",
+            weather: "Hot coastal summer",
+            rainfall: "Pre-monsoon showers",
+            humidity: "75-85%",
+            activities: ["Early morning beach work", "AC heritage buildings", "Auroville workshops", "Indoor French cafes"]
+          },
+          {
+            name: "Monsoon (Jun-Sep)",
+            temp: "25-32°C",
+            weather: "Northeast monsoon rains",
+            rainfall: "1200mm annually",
+            humidity: "80-90%",
+            activities: ["Indoor colonial spaces", "Monsoon heritage tours", "Library work", "Cultural center activities"]
+          },
+          {
+            name: "Post-Monsoon (Oct)",
+            temp: "23-32°C",
+            weather: "Pleasant return of colonial charm",
+            rainfall: "Occasional showers",
+            humidity: "70-80%",
+            activities: ["Festival season", "Beach return", "French cultural events", "Heritage walks"]
+          }
+        ]
+      },
+      "Kochi": {
+        bestTime: {
+          optimal: "December to March",
+          avoid: "June to September (Heavy monsoon)",
+          shoulder: "April to May, October to November"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Mar)",
+            temp: "23-32°C",
+            weather: "Perfect port city weather",
+            rainfall: "Minimal",
+            humidity: "65-75%",
+            activities: ["Fort Kochi heritage work", "Backwater networking", "Chinese fishing net tours", "Spice market visits"]
+          },
+          {
+            name: "Summer (Apr-May)",
+            temp: "26-36°C",
+            weather: "Hot coastal humidity",
+            rainfall: "Pre-monsoon thunderstorms",
+            humidity: "75-85%",
+            activities: ["Indoor heritage spaces", "AC malls and offices", "Early morning backwater work", "Cultural programs"]
+          },
+          {
+            name: "Monsoon (Jun-Sep)",
+            temp: "24-30°C",
+            weather: "Heavy southwest monsoon",
+            rainfall: "3000mm annually",
+            humidity: "85-95%",
+            activities: ["Indoor heritage work", "Monsoon backwater photography", "Cultural center activities", "Kathakali performances"]
+          },
+          {
+            name: "Post-Monsoon (Oct-Nov)",
+            temp: "24-32°C",
+            weather: "Fresh backwater atmosphere",
+            rainfall: "Light northeast monsoon",
+            humidity: "75-85%",
+            activities: ["Backwater exploration", "Heritage photography", "Cultural festivals", "Business networking"]
+          }
+        ]
+      },
+      "Darjeeling": {
+        bestTime: {
+          optimal: "March to May, September to November",
+          avoid: "June to August (Heavy monsoon), December to February (Very cold)",
+          shoulder: "February, December"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "2-15°C",
+            weather: "Cold mountain air, possible snow",
+            rainfall: "Light winter rains",
+            humidity: "65-80%",
+            activities: ["Tea estate indoor work", "Heritage hotel coworking", "Hot tea sessions", "Indoor monastery visits"]
+          },
+          {
+            name: "Spring (Mar-May)",
+            temp: "10-25°C",
+            weather: "Perfect tea garden weather",
+            rainfall: "Light spring showers",
+            humidity: "60-75%",
+            activities: ["Tea garden tours", "Kanchenjunga views", "Toy train rides", "Outdoor heritage work", "Mountain photography"]
+          },
+          {
+            name: "Monsoon (Jun-Aug)",
+            temp: "15-22°C",
+            weather: "Heavy mountain rains, mist-covered",
+            rainfall: "2500mm annually",
+            humidity: "85-95%",
+            activities: ["Indoor tea estate work", "Heritage building coworking", "Monsoon photography", "Cultural center activities"]
+          },
+          {
+            name: "Autumn (Sep-Nov)",
+            temp: "8-20°C",
+            weather: "Crystal clear Himalayan views",
+            rainfall: "Light post-monsoon showers",
+            humidity: "70-85%",
+            activities: ["Best mountain photography", "Tea harvest season", "Clear weather trekking", "Festival celebrations"]
+          }
+        ]
+      },
+      "Dharamkot": {
+        bestTime: {
+          optimal: "March to June, September to November",
+          avoid: "December to February (Snow), July to August (Monsoon)",
+          shoulder: "February, December"
+        },
+        seasons: [
+          {
+            name: "Winter (Dec-Feb)",
+            temp: "-2-12°C",
+            weather: "Snow-covered spiritual village",
+            rainfall: "Snow and light rain",
+            humidity: "60-75%",
+            activities: ["Indoor meditation retreats", "Tibetan philosophy study", "Hot soup sessions", "Fireplace coworking"]
+          },
+          {
+            name: "Spring/Summer (Mar-Jun)",
+            temp: "15-28°C",
+            weather: "Perfect mountain spiritual weather",
+            rainfall: "Occasional spring showers",
+            humidity: "50-70%",
+            activities: ["Outdoor meditation", "Trekking to Triund", "Spiritual networking", "Mountain view work", "Dharamshala visits"]
+          },
+          {
+            name: "Monsoon (Jul-Aug)",
+            temp: "18-24°C",
+            weather: "Heavy mountain rains",
+            rainfall: "1800mm annually",
+            humidity: "80-90%",
+            activities: ["Indoor spiritual work", "Philosophy discussions", "Reading retreats", "Covered meditation spaces"]
+          },
+          {
+            name: "Autumn (Sep-Nov)",
+            temp: "10-22°C",
+            weather: "Clear mountain views, spiritual energy",
+            rainfall: "Light showers",
+            humidity: "60-75%",
+            activities: ["Peak trekking season", "Outdoor spiritual practices", "Clear view meditation", "Festival participation"]
+          }
+        ]
+      },
+      "Tosh": {
+        bestTime: {
+          optimal: "April to June, September to October",
+          avoid: "November to March (Heavy snow), July to August (Monsoon)",
+          shoulder: "March, November"
+        },
+        seasons: [
+          {
+            name: "Winter (Nov-Mar)",
+            temp: "-5-10°C",
+            weather: "Heavy snow, isolated village",
+            rainfall: "Heavy snow coverage",
+            humidity: "65-80%",
+            activities: ["Indoor guesthouse work", "Snow photography", "Fireplace sessions", "Limited village access"]
+          },
+          {
+            name: "Spring/Summer (Apr-Jun)",
+            temp: "12-25°C",
+            weather: "Perfect isolated valley weather",
+            rainfall: "Light spring showers",
+            humidity: "55-70%",
+            activities: ["Valley exploration", "River-side work", "Village immersion", "Apple orchard visits", "Basic digital detox"]
+          },
+          {
+            name: "Monsoon (Jul-Aug)",
+            temp: "15-20°C",
+            weather: "Heavy mountain rains, landslide risk",
+            rainfall: "1000mm annually",
+            humidity: "80-90%",
+            activities: ["Indoor village work", "Cultural exchanges", "Basic connectivity work", "Monsoon village life"]
+          },
+          {
+            name: "Post-Monsoon (Sep-Oct)",
+            temp: "8-20°C",
+            weather: "Clear valley views before winter",
+            rainfall: "Light post-monsoon showers",
+            humidity: "65-75%",
+            activities: ["Last outdoor work season", "Valley photography", "Harvest season participation", "Pre-winter preparation"]
+          }
+        ]
+      },
+      "Wayanad": {
+        bestTime: {
+          optimal: "October to May",
+          avoid: "June to September (Heavy monsoon)",
+          shoulder: "May, October"
+        },
+        seasons: [
+          {
+            name: "Winter (Nov-Feb)",
+            temp: "18-28°C",
+            weather: "Perfect plantation weather",
+            rainfall: "Minimal",
+            humidity: "60-75%",
+            activities: ["Coffee plantation tours", "Wildlife safaris", "Outdoor coworking", "Spice garden visits", "Tribal village tours"]
+          },
+          {
+            name: "Summer (Mar-May)",
+            temp: "22-32°C",
+            weather: "Warm plantation climate",
+            rainfall: "Pre-monsoon showers",
+            humidity: "65-80%",
+            activities: ["Early morning plantation work", "Hill station coworking", "Waterfall visits", "Wildlife photography"]
+          },
+          {
+            name: "Monsoon (Jun-Sep)",
+            temp: "20-26°C",
+            weather: "Heavy Western Ghats monsoon",
+            rainfall: "3500mm annually",
+            humidity: "85-95%",
+            activities: ["Indoor plantation stays", "Monsoon waterfall photography", "Ayurveda treatments", "Cultural center work"]
+          },
+          {
+            name: "Post-Monsoon (Oct)",
+            temp: "19-29°C",
+            weather: "Lush green plantation paradise",
+            rainfall: "Light showers",
+            humidity: "75-85%",
+            activities: ["Perfect wildlife season", "Plantation photography", "Outdoor adventure", "Cultural programs"]
+          }
+        ]
+      },
+      "Jaipur": {
+        bestTime: {
+          optimal: "October to March",
+          avoid: "April to June (Extreme heat)",
+          shoulder: "July to September"
+        },
+        seasons: [
+          {
+            name: "Winter (Nov-Feb)",
+            temp: "8-25°C",
+            weather: "Perfect royal city weather",
+            rainfall: "Minimal",
+            humidity: "40-60%",
+            activities: ["Palace tours", "Heritage coworking", "Outdoor markets", "Cultural events", "Camel safaris"]
+          },
+          {
+            name: "Summer (Mar-Jun)",
+            temp: "25-45°C",
+            weather: "Extreme desert heat",
+            rainfall: "Minimal",
+            humidity: "20-40%",
+            activities: ["Indoor heritage hotels", "AC palace spaces", "Early morning activities", "Mall-based coworking"]
+          },
+          {
+            name: "Monsoon (Jul-Sep)",
+            temp: "26-35°C",
+            weather: "Desert monsoon, moderate rains",
+            rainfall: "650mm annually",
+            humidity: "60-80%",
+            activities: ["Indoor palace work", "Monsoon palace photography", "Cultural center activities", "Heritage hotel coworking"]
+          },
+          {
+            name: "Post-Monsoon (Oct)",
+            temp: "20-32°C",
+            weather: "Pleasant return of royal tourism",
+            rainfall: "Occasional",
+            humidity: "50-70%",
+            activities: ["Festival season", "Heritage tourism peak", "Outdoor palace visits", "Cultural celebrations"]
+          }
+        ]
       }
     };
     
