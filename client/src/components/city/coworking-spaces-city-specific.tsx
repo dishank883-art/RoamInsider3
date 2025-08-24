@@ -42,7 +42,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹12,000",
           features: ["Beach location", "Outdoor workspace", "Yoga classes", "Healthy cafe", "Bike rental"],
           rating: 4.3,
-          website: "https://drishticoworking.com/",
+          website: null, // Website not working
           phone: "+91 832 227 8900",
           description: "Unique beachside coworking with wellness focus and outdoor workspace options.",
           amenities: {
@@ -84,7 +84,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "Not available",
           features: ["Tibetan ambiance", "Good WiFi", "Authentic food", "Community space", "Cultural environment"],
           rating: 4.0,
-          website: "Contact locally",
+          website: null, // No website available
           phone: "+91 9816098765",
           description: "Authentic Tibetan café perfect for cultural immersion while working.",
           amenities: {
@@ -168,7 +168,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "Not available",
           features: ["Tourist area", "Good connectivity", "Food options", "Central location", "Multiple café options"],
           rating: 3.8,
-          website: "Various local cafés",
+          website: null, // No specific website
           phone: "Contact individual cafés",
           description: "Multiple café options along Mall Road offering workspace-friendly environments.",
           amenities: {
@@ -190,7 +190,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹4,000",
           features: ["Cultural immersion", "Basic WiFi", "Community interaction", "Traditional environment", "Learning opportunities"],
           rating: 3.5,
-          website: "Contact local administration",
+          website: null, // No website available
           phone: "+91 3788 222333",
           description: "Unique workspace opportunity to work while learning about Apatani culture.",
           amenities: {
@@ -210,7 +210,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹3,500",
           features: ["Basic facilities", "Common areas", "Accommodation combo", "Local interaction", "Budget-friendly"],
           rating: 3.0,
-          website: "Contact local lodges",
+          website: null, // No website available
           phone: "Various lodge contacts",
           description: "Basic workspace facilities available in tourist lodges for budget-conscious nomads.",
           amenities: {
@@ -252,7 +252,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹12,000",
           features: ["Cultural ambiance", "Good WiFi", "Central location", "Networking events", "Creative community"],
           rating: 4.2,
-          website: "https://theaddakolkata.com/",
+          website: null, // Website not working
           phone: "+91 33 2229 1234",
           description: "Coworking space celebrating Kolkata's cultural heritage with modern facilities.",
           amenities: {
@@ -272,7 +272,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "Not available",
           features: ["Lake views", "Peaceful environment", "Good connectivity", "Multiple café options", "Cultural area"],
           rating: 4.0,
-          website: "Various local cafés",
+          website: null, // No specific website
           phone: "Contact individual establishments",
           description: "Multiple cafés around the lake offering peaceful workspace environments.",
           amenities: {
@@ -460,7 +460,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹8,000",
           features: ["Lake view", "Quiet environment", "Local cafe", "Bike rental", "Nature setting"],
           rating: 4.2,
-          website: "Local inquiry",
+          website: null, // No website available
           phone: "+91 477 225 1234",
           description: "Peaceful coworking space with backwater views, perfect for remote work and digital detox.",
           amenities: {
@@ -480,7 +480,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹7,000",
           features: ["Beach access", "Flexible hours", "Community space", "Yoga classes", "Local network"],
           rating: 4.0,
-          website: "Local inquiry",
+          website: null, // No website available
           phone: "+91 477 225 5678",
           description: "Beach-side coworking with flexible schedule and community of remote workers.",
           amenities: {
@@ -502,7 +502,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹10,000",
           features: ["Ocean view", "Yoga classes", "Wellness focus", "Healthy cafe", "Sunset workspace"],
           rating: 4.5,
-          website: "https://varkalacowork.com/",
+          website: null, // Website not working
           phone: "+91 470 260 1234",
           description: "Stunning cliff-top coworking with ocean views and wellness-focused community.",
           amenities: {
@@ -544,7 +544,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹6,000",
           features: ["Mountain views", "Quiet space", "Local cafe", "Trekking info", "Community board"],
           rating: 4.1,
-          website: "Local inquiry",
+          website: null, // No website available
           phone: "+91 190 222 1234",
           description: "Simple mountain coworking space with stunning valley views and trekking community.",
           amenities: {
@@ -564,7 +564,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹5,000",
           features: ["Village setting", "Trekking base", "Community kitchen", "Local guides", "Nature immersion"],
           rating: 3.9,
-          website: "Local inquiry",
+          website: null, // No website available
           phone: "+91 190 222 5678",
           description: "Rustic village coworking perfect for digital detox and mountain lifestyle.",
           amenities: {
@@ -692,7 +692,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹14,000",
           features: ["IT ecosystem", "Startup programs", "Mentorship", "Networking events", "Modern facilities"],
           rating: 4.4,
-          website: "https://www.infopark.in/",
+          website: null, // Website not working
           phone: "+91 484 2801 234",
           description: "Premier tech coworking in Kerala's IT hub with strong startup ecosystem and mentorship.",
           amenities: {
@@ -712,7 +712,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹11,000",
           features: ["Heritage buildings", "Cultural atmosphere", "Art galleries proximity", "Backwater views", "Tourist area"],
           rating: 4.2,
-          website: "Heritage hotel partnerships",
+          website: null, // No specific website
           phone: "+91 484 2666 789",
           description: "Work in colonial heritage buildings with cultural atmosphere and backwater views.",
           amenities: {
@@ -818,7 +818,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹8,000",
           features: ["Tea garden views", "Colonial heritage", "Mountain vistas", "Cool climate", "Cultural atmosphere"],
           rating: 4.0,
-          website: "Heritage hotel partnerships",
+          website: null, // No specific website
           phone: "+91 354 225 4567",
           description: "Work with stunning tea garden views in historic hill station with colonial charm and cool climate.",
           amenities: {
@@ -1170,7 +1170,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹9,000",
           features: ["Modern amenities", "Heritage charm", "Tourism networking", "Cultural immersion", "Affordable rates"],
           rating: 3.9,
-          website: "Pink city coworking",
+          website: null, // No specific website
           phone: "+91 141 228 9000",
           description: "Modern coworking in Pink City combining heritage charm with contemporary business facilities.",
           amenities: {
@@ -1192,7 +1192,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹12,000",
           features: ["Lake views", "Royal architecture", "Tourism industry", "Cultural heritage", "Peaceful environment"],
           rating: 4.3,
-          website: "Heritage hotel partnerships",
+          website: null, // No specific website
           phone: "+91 294 242 8000",
           description: "Stunning lake-view coworking in royal Udaipur with heritage architecture and peaceful environment.",
           amenities: {
@@ -1212,7 +1212,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹10,000",
           features: ["Palace proximity", "Tourism business", "Cultural networking", "Royal ambiance", "Heritage experience"],
           rating: 4.0,
-          website: "Royal business centers",
+          website: null, // No specific website
           phone: "+91 294 241 7000",
           description: "Heritage business center near City Palace with royal ambiance and tourism industry connections.",
           amenities: {
@@ -1234,7 +1234,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹7,000",
           features: ["Mountain views", "Clean environment", "Peaceful setting", "Tourism base", "Cultural diversity"],
           rating: 4.0,
-          website: "Mountain coworking",
+          website: null, // No specific website
           phone: "+91 3592 208 000",
           description: "Mountain capital coworking with stunning Himalayan views and peaceful environment for productivity.",
           amenities: {
@@ -1256,7 +1256,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹6,000",
           features: ["Spiritual environment", "Dalai Lama proximity", "International community", "Meditation spaces", "Mountain peace"],
           rating: 4.2,
-          website: "Spiritual center partnerships",
+          website: null, // No specific website
           phone: "+91 1892 221 000",
           description: "Unique spiritual coworking in Dalai Lama's residence with international community and meditation spaces.",
           amenities: {
@@ -1278,7 +1278,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹8,000",
           features: ["Hill station charm", "Colonial architecture", "Mountain views", "Tourist season work", "Cool climate"],
           rating: 3.9,
-          website: "Hill station hotels",
+          website: null, // No specific website
           phone: "+91 135 263 2000",
           description: "Charming hill station coworking with colonial heritage and stunning mountain views in cool climate.",
           amenities: {
@@ -1300,7 +1300,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹6,500",
           features: ["Music culture", "Cultural diversity", "Pleasant climate", "Creative community", "Unique cuisine"],
           rating: 3.8,
-          website: "Northeast cultural centers",
+          website: null, // No specific website
           phone: "+91 364 250 2000",
           description: "Cultural coworking in Northeast India's music capital with creative community and pleasant climate.",
           amenities: {
@@ -1322,7 +1322,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹5,000",
           features: ["UNESCO heritage", "Tribal culture", "Rice terraces", "Music festivals", "Unique experience"],
           rating: 4.0,
-          website: "Local cultural partnerships",
+          website: null, // No specific website
           phone: "+91 3788 225 000",
           description: "Unique tribal valley coworking in UNESCO heritage site with rice terraces and cultural immersion.",
           amenities: {
