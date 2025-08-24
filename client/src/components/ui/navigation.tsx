@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Compass, Menu } from "lucide-react";
+import { Compass, Menu, Bell } from "lucide-react";
+import SubscriptionPopup from "@/components/ui/subscription-popup";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,12 +51,16 @@ export default function Navigation() {
           </div>
           
           <div className="flex items-center space-x-4">
-            <Button 
-              variant="outline" 
-              className="hidden md:block border-travel-blue text-travel-blue hover:bg-travel-blue hover:text-white"
-            >
-              Sign In
-            </Button>
+            <SubscriptionPopup>
+              <Button 
+                variant="outline" 
+                className="hidden md:block border-travel-blue text-travel-blue hover:bg-travel-blue hover:text-white"
+                data-testid="subscription-trigger-desktop"
+              >
+                <Bell className="h-4 w-4 mr-2" />
+                Get Updates
+              </Button>
+            </SubscriptionPopup>
             <Button 
               asChild
               className="bg-vintage-gold text-white hover:bg-vintage-gold/90 text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-2.5 touch-manipulation min-h-[44px]"
@@ -103,12 +108,17 @@ export default function Navigation() {
                     )
                   ))}
                   <div className="pt-4 border-t">
-                    <Button 
-                      variant="outline" 
-                      className="w-full mb-2 border-travel-blue text-travel-blue hover:bg-travel-blue hover:text-white"
-                    >
-                      Sign In
-                    </Button>
+                    <SubscriptionPopup>
+                      <Button 
+                        variant="outline" 
+                        className="w-full mb-2 border-travel-blue text-travel-blue hover:bg-travel-blue hover:text-white"
+                        data-testid="subscription-trigger-mobile"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <Bell className="h-4 w-4 mr-2" />
+                        Get Updates
+                      </Button>
+                    </SubscriptionPopup>
                   </div>
                 </div>
               </SheetContent>
