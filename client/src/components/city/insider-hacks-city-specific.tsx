@@ -415,7 +415,7 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
         ],
         apps: [
           { name: "Dharamshala Connect", description: "Local Tibetan community events", url: "https://www.facebook.com/groups/dharamshalacommunity" },
-          { name: "Trek HP", description: "Himalayan trekking routes and weather", url: "https://play.google.com/store/apps/details?id=com.trekhp" },
+          { name: "AllTrails", description: "Himalayan trekking routes and weather", url: "https://play.google.com/store/apps/details?id=com.alltrails.alltrails" },
           { name: "Tibet Info", description: "Tibetan cultural programs and teachings", url: "https://www.dalailama.com/" },
           { name: "Himachal Tourism", description: "Official state tourism information", url: "https://himachaltourism.gov.in/" }
         ],
@@ -544,10 +544,9 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "m-Indicator", description: "Real-time train schedules and platform info", url: "https://play.google.com/store/apps/details?id=com.mobond.mindicator" },
-          { name: "Mumbai Traffic Police", description: "Traffic updates and route optimization", url: "https://play.google.com/store/apps/details?id=com.mumbai.traffic" },
-          { name: "Zomato Gold", description: "Restaurant deals and delivery discounts", url: "https://zomato.com" },
-          { name: "BookMyShow", description: "Entertainment and cultural events", url: "https://bookmyshow.com" }
+          { name: "Zomato", description: "Restaurant deals and delivery discounts", url: "https://zomato.com" },
+          { name: "BookMyShow", description: "Entertainment and cultural events", url: "https://bookmyshow.com" },
+          { name: "RedBus", description: "Bus and train booking platform", url: "https://play.google.com/store/apps/details?id=in.redbus.android" }
         ],
         emergencyNumbers: [
           { label: "Mumbai Police", number: "100" },
@@ -609,8 +608,8 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Namma Metro", description: "Official metro app with routes and timing", url: "https://play.google.com/store/apps/details?id=com.bmrcl.nammametro" },
-          { name: "BMTC", description: "Bus routes and live tracking", url: "https://play.google.com/store/apps/details?id=com.tummoc.bmtc" },
+          { name: "Bangalore Metro", description: "Official metro routes and timing", url: "https://english.bmrc.co.in/" },
+          { name: "BMTC", description: "Bus routes and live tracking", url: "https://play.google.com/store/apps/details?id=in.redbus.android" },
           { name: "Bangalore Mirror", description: "Local news and startup ecosystem updates", url: "https://bangaloremirror.indiatimes.com/" },
           { name: "10Times", description: "Tech events and startup meetups", url: "https://10times.com" }
         ],
@@ -674,7 +673,7 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "PMPML", description: "Public bus routes and timing", url: "https://play.google.com/store/apps/details?id=com.tummoc.pmpml" },
+          { name: "PMPML", description: "Public bus routes and timing", url: "https://play.google.com/store/apps/details?id=in.redbus.android" },
           { name: "Pune Mirror", description: "Local news and events", url: "https://punemirror.indiatimes.com/" },
           { name: "BookMyShow", description: "Entertainment and cultural events", url: "https://bookmyshow.com" },
           { name: "Zomato", description: "Student-friendly restaurants and deals", url: "https://zomato.com" }
@@ -739,8 +738,8 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Delhi Metro Rail", description: "Official metro app with routes", url: "https://play.google.com/store/apps/details?id=com.dmrc.dmrcapp" },
-          { name: "DTC Bus", description: "Bus routes and live tracking", url: "https://play.google.com/store/apps/details?id=com.tummoc.dtc" },
+          { name: "Delhi Metro Rail", description: "Official metro timings and routes", url: "https://www.delhimetrorail.com/" },
+          { name: "RedBus", description: "Bus routes and bookings", url: "https://play.google.com/store/apps/details?id=in.redbus.android" },
           { name: "Delhi Tourism", description: "Official tourism and heritage sites", url: "https://delhitourism.gov.in/" },
           { name: "Zomato", description: "Restaurant reviews and deals", url: "https://zomato.com" }
         ],
@@ -871,7 +870,6 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
         apps: [
           { name: "Varkala Guide", description: "Local attractions and yoga class schedules", url: "https://www.varkala.org/" },
           { name: "Kerala Ayurveda", description: "Authentic treatment centers and practitioners", url: "https://www.ayurvedacollege.com/" },
-          { name: "Cliff Walk", description: "Tide timings and safe swimming spots", url: "https://play.google.com/store/apps/details?id=com.tides.kerala" },
           { name: "Temple Connect", description: "Local temple timings and festival info", url: "https://www.templesinkerala.com/" }
         ],
         emergencyNumbers: [
@@ -1260,7 +1258,7 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
         ],
         apps: [
           { name: "Arunachal Tourism", description: "Official state tourism and permits", url: "https://arunachaltourism.com/" },
-          { name: "Tribe Connect", description: "Local tribal culture and customs guide", url: "https://play.google.com/store/apps/details?id=com.indiatoday.cultureguide" },
+          { name: "India Culture", description: "Local tribal culture and customs guide", url: "https://www.incredibleindia.org/content/incredible-india-v2/en/experiences/tribal-life.html" },
           { name: "Northeast Weather", description: "Regional weather and monsoon updates", url: "https://play.google.com/store/apps/details?id=com.imd.weather" },
           { name: "Music Festival", description: "Ziro Music Festival schedule and artists", url: "https://zirofestival.com/" }
         ],
@@ -1324,7 +1322,7 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Kolkata Metro", description: "Metro routes and timings", url: "https://play.google.com/store/apps/details?id=com.kmrc.metro" },
+          { name: "Kolkata Metro", description: "Metro routes and timings", url: "https://www.mtp.indianrailways.gov.in/" },
           { name: "Kolkata Trams", description: "Heritage tram routes and schedules", url: "https://www.wbtourism.gov.in/" },
           { name: "Adda Kolkata", description: "Cultural events and intellectual gatherings", url: "https://www.facebook.com/groups/kolkataculture" },
           { name: "Bengali Culture", description: "Festivals and traditional events", url: "https://www.incredibleindia.org/" }
