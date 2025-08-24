@@ -952,6 +952,282 @@ export class MemStorage implements IStorage {
       updatedAt: new Date(),
     });
 
+    // Jaipur - Cost of Living
+    this.costsOfLiving.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: jaipurId,
+      monthlyBudgetINR: 32000,
+      monthlyBudgetUSD: 384,
+      studioRentINR: 15000,
+      oneBhkRentINR: 22000,
+      twoBhkRentINR: 35000,
+      utilitiesINR: 2200,
+      groceriesINR: 6000,
+      eatingOutINR: 4500,
+      coworkingINR: 5500,
+      transportINR: 2000,
+      simDataINR: 400,
+      gymINR: 1500,
+      coffeeINR: 100,
+      entertainmentINR: 3500,
+      updatedAt: new Date(),
+    });
+
+    // Jaipur - Internet Connectivity
+    this.internetConnectivity.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: jaipurId,
+      avgSpeedMbps: 55,
+      coworkingSpaces: [
+        {
+          name: "91springboard Jaipur",
+          address: "Malviya Nagar",
+          pricing: "₹7,000/month",
+          speedMbps: 100,
+          amenities: ["Heritage Building", "Meeting Rooms", "Events", "Networking"]
+        },
+        {
+          name: "CoWork Jaipur",
+          address: "C-Scheme",
+          pricing: "₹5,500/month",
+          speedMbps: 80,
+          amenities: ["Modern Workspace", "AC", "Printing", "Cafe"]
+        },
+        {
+          name: "Pink City Workspace",
+          address: "Vaishali Nagar",
+          pricing: "₹4,800/month",
+          speedMbps: 75,
+          amenities: ["Royal Ambiance", "Quiet Zones", "Parking"]
+        }
+      ],
+      simProviders: [
+        {
+          provider: "Jio",
+          plans: [
+            { data: "2GB/day", validity: "28 days", price: 399 },
+            { data: "3GB/day", validity: "28 days", price: 599 }
+          ]
+        },
+        {
+          provider: "Airtel",
+          plans: [
+            { data: "2GB/day", validity: "28 days", price: 449 },
+            { data: "3GB/day", validity: "28 days", price: 649 }
+          ]
+        }
+      ],
+      wifiAvailability: "Good - Available in cafes, hotels, and most commercial areas",
+      updatedAt: new Date(),
+    });
+
+    // Jaipur - Transportation
+    this.transportation.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: jaipurId,
+      localTransport: {
+        metro: true,
+        bus: true,
+        autoRickshaw: true,
+        taxi: true,
+        bike: true
+      },
+      walkabilityScore: 6,
+      rideHailing: ["Uber", "Ola", "Rapido"],
+      airports: [
+        { name: "Jaipur International Airport", code: "JAI", distance: "12km from city center" }
+      ],
+      trainStations: [
+        { name: "Jaipur Junction", type: "Major Railway Station" },
+        { name: "Gandhinagar Jaipur", type: "Important Station" }
+      ],
+      intercityConnectivity: "Excellent connectivity to Delhi, Mumbai, Agra, and other major cities",
+      updatedAt: new Date(),
+    });
+
+    // Jaipur - Climate
+    this.climate.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: jaipurId,
+      avgTempCelsius: 26,
+      avgHumidity: 58,
+      rainyMonths: ["July", "August", "September"],
+      bestTimeToVisit: "October to March",
+      climateType: "Hot semi-arid climate",
+      currentWeather: {
+        temperature: 24,
+        humidity: 55,
+        description: "Pleasant royal weather",
+        icon: "sunny"
+      },
+      updatedAt: new Date(),
+    });
+
+    // Jaipur - Safety
+    this.safety.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: jaipurId,
+      safetyScore: "7.8",
+      womenSafetyScore: "7.2",
+      crimeRate: "Moderate - tourist areas are well-patrolled",
+      hospitals: [
+        { name: "SMS Hospital", address: "JLN Marg", type: "Government Medical College", emergency: true },
+        { name: "Fortis Escorts Hospital", address: "Malviya Nagar", type: "Multi-specialty", emergency: true },
+        { name: "Eternal Heart Care", address: "Jawahar Lal Nehru Marg", type: "Cardiac Specialty", emergency: true }
+      ],
+      emergencyNumbers: {
+        police: "100",
+        medical: "108",
+        fire: "101"
+      },
+      pollutionIndex: 142,
+      updatedAt: new Date(),
+    });
+
+    // Jaipur - Lifestyle
+    this.lifestyle.set(randomUUID(), {
+      id: randomUUID(),
+      cityId: jaipurId,
+      foodScene: {
+        specialties: ["Dal Baati Churma", "Laal Maas", "Ghewar", "Pyaaz Kachori"],
+        vegFriendly: true,
+        streetFood: true,
+        internationalCuisine: true
+      },
+      nightlife: {
+        bars: true,
+        clubs: true,
+        lateNightEating: true,
+        alcoholLaws: "Available; bars close at 12:30 AM"
+      },
+      fitness: {
+        gyms: 300,
+        parks: 25,
+        yogaStudios: 80,
+        outdoorActivities: ["Heritage walks", "Cycling", "Trekking", "Polo", "Hot air ballooning"]
+      },
+      culture: {
+        languages: ["Hindi", "Rajasthani", "English"],
+        festivals: ["Diwali", "Holi", "Teej", "Karva Chauth", "Jaipur Literature Festival"],
+        customs: ["Royal heritage", "Traditional Rajasthani culture", "Respect for elders"],
+        artScene: true
+      },
+      cannabisLaws: "Illegal - strict enforcement in tourist areas",
+      updatedAt: new Date(),
+    });
+
+    // Jaipur - Events
+    const jaipurEvent1 = randomUUID();
+    this.events.set(jaipurEvent1, {
+      id: jaipurEvent1,
+      cityId: jaipurId,
+      title: "Jaipur Literature Festival",
+      description: "World's largest free literary festival featuring renowned authors and thinkers",
+      date: new Date("2025-01-23"),
+      venue: "Diggi Palace, Jaipur",
+      category: "Literature",
+      isPaid: false,
+      price: "Free",
+      url: "https://jaipurliteraturefestival.org/",
+      createdAt: new Date(),
+    });
+
+    const jaipurEvent2 = randomUUID();
+    this.events.set(jaipurEvent2, {
+      id: jaipurEvent2,
+      cityId: jaipurId,
+      title: "Jaipur International Film Festival",
+      description: "Celebrating cinema from around the world in the Pink City",
+      date: new Date("2025-01-17"),
+      venue: "Raj Mandir Cinema & Various Venues",
+      category: "Film",
+      isPaid: true,
+      price: "₹200-1,500",
+      url: "https://jiff.in/",
+      createdAt: new Date(),
+    });
+
+    // Jaipur - Attractions
+    const jaipurAttr1 = randomUUID();
+    this.attractions.set(jaipurAttr1, {
+      id: jaipurAttr1,
+      cityId: jaipurId,
+      name: "Amber Fort",
+      description: "Magnificent fort with stunning architecture and elephant rides",
+      category: "Heritage",
+      priceRange: "₹100-500",
+      address: "Amer, Jaipur",
+      timings: "8:00 AM - 6:00 PM",
+      isHiddenGem: false,
+      rating: "4.6",
+      image: "https://images.unsplash.com/photo-1599661046827-dacde703ed42",
+      createdAt: new Date(),
+    });
+
+    const jaipurAttr2 = randomUUID();
+    this.attractions.set(jaipurAttr2, {
+      id: jaipurAttr2,
+      cityId: jaipurId,
+      name: "City Palace",
+      description: "Royal palace complex showcasing Rajasthani architecture",
+      category: "Palace",
+      priceRange: "₹75-300",
+      address: "City Palace Road, Jaipur",
+      timings: "9:30 AM - 5:00 PM",
+      isHiddenGem: false,
+      rating: "4.5",
+      image: "https://images.unsplash.com/photo-1477587458883-47145ed94245",
+      createdAt: new Date(),
+    });
+
+    const jaipurAttr3 = randomUUID();
+    this.attractions.set(jaipurAttr3, {
+      id: jaipurAttr3,
+      cityId: jaipurId,
+      name: "Hawa Mahal",
+      description: "Iconic palace with 953 windows offering panoramic city views",
+      category: "Architecture",
+      priceRange: "₹50-200",
+      address: "Hawa Mahal Road, Badi Choupad",
+      timings: "9:00 AM - 4:30 PM",
+      isHiddenGem: false,
+      rating: "4.4",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+      createdAt: new Date(),
+    });
+
+    const jaipurAttr4 = randomUUID();
+    this.attractions.set(jaipurAttr4, {
+      id: jaipurAttr4,
+      cityId: jaipurId,
+      name: "Nahargarh Fort",
+      description: "Hilltop fort offering stunning sunset views over the Pink City",
+      category: "Heritage",
+      priceRange: "₹25-100",
+      address: "Krishna Nagar, Brahampuri",
+      timings: "10:00 AM - 10:00 PM",
+      isHiddenGem: true,
+      rating: "4.3",
+      image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad",
+      createdAt: new Date(),
+    });
+
+    const jaipurAttr5 = randomUUID();
+    this.attractions.set(jaipurAttr5, {
+      id: jaipurAttr5,
+      cityId: jaipurId,
+      name: "Johari Bazaar",
+      description: "Traditional market famous for jewelry, textiles, and handicrafts",
+      category: "Shopping",
+      priceRange: "Varies",
+      address: "Johari Bazaar, Old City",
+      timings: "10:00 AM - 9:00 PM",
+      isHiddenGem: false,
+      rating: "4.2",
+      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+      createdAt: new Date(),
+    });
+
     // Add New Delhi
     const newDelhiId = randomUUID();
     this.cities.set(newDelhiId, {
