@@ -3,6 +3,27 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Wifi, Coffee, Users, MapPin, DollarSign, Clock, Star, ExternalLink, Phone, Calendar } from "lucide-react";
 
+interface CoworkingSpace {
+  name: string;
+  location: string;
+  type: string;
+  dayPass: string;
+  monthlyDesk: string;
+  monthlyPrivate: string;
+  features: string[];
+  rating: number;
+  website: string | null;
+  phone: string;
+  description: string;
+  amenities: {
+    wifi: string;
+    hours: string;
+    printers: string;
+    coffee: string;
+    aircon: string;
+  };
+}
+
 interface CoworkingSpacesProps {
   cityName: string;
 }
@@ -38,7 +59,7 @@ export default function CoworkingSpaces({ cityName }: CoworkingSpacesProps) {
       monthlyPrivate: "₹12,000",
       features: ["Beach location", "Outdoor workspace", "Yoga classes", "Healthy cafe", "Bike rental"],
       rating: 4.3,
-      website: "https://drishticoworking.com/",
+      website: null, // Website not working
       phone: "+91 832 227 8900",
       description: "Unique beachside coworking with wellness focus and outdoor workspace options.",
       amenities: {
@@ -247,12 +268,14 @@ export default function CoworkingSpaces({ cityName }: CoworkingSpacesProps) {
                     </div>
                     
                     <div className="space-y-2">
-                      <a href={space.website} target="_blank" rel="noopener noreferrer">
-                        <Button className="w-full bg-travel-blue hover:bg-travel-blue/90 text-white">
-                          <ExternalLink className="h-3 w-3 mr-1" />
-                          Visit Website
-                        </Button>
-                      </a>
+                      {space.website && (
+                        <a href={space.website} target="_blank" rel="noopener noreferrer">
+                          <Button className="w-full bg-travel-blue hover:bg-travel-blue/90 text-white">
+                            <ExternalLink className="h-3 w-3 mr-1" />
+                            Visit Website
+                          </Button>
+                        </a>
+                      )}
                       <a href={`tel:${space.phone}`}>
                         <Button variant="outline" className="w-full">
                           <Phone className="h-3 w-3 mr-1" />
