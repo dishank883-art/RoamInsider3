@@ -63,6 +63,65 @@ export default function InsiderHacks({ city }: InsiderHacksProps) {
       }
     ]
       },
+      "Jaipur": {
+        moneyHacks: {
+      accommodation: [
+        "Stay in heritage havelis in Old City for authentic experience at ₹800-2,000/night",
+        "Book heritage hotels during off-season (April-June) for 50% discounts",
+        "Share apartments in Malviya Nagar/C-Scheme with other nomads for ₹8,000-15,000/month",
+        "Use StayVista or similar platforms for monthly discounts on heritage properties",
+        "Consider homestays in residential areas for authentic Rajasthani experience"
+      ],
+      food: [
+        "Eat at traditional thali restaurants like Chokhi Dhani for authentic meals ₹200-400",
+        "Try street food at Masala Chowk - hygienic local food court with fixed prices",
+        "Shop at Johari Bazaar spice market for authentic ingredients at wholesale rates",
+        "Visit Laxmi Mishthan Bhandar for authentic Rajasthani sweets and snacks",
+        "Use food delivery apps during summer months to avoid heat"
+      ],
+      transport: [
+        "Use JCTSL bus passes for unlimited city travel - monthly pass ₹500",
+        "Rent monthly bikes for ₹2,000-3,000 from government-approved vendors",
+        "Use pre-paid auto stands at tourist spots to avoid haggling",
+        "Download Jaipur Smart City app for real-time bus routes and timings",
+        "Book Uber/Ola during peak summer for AC comfort (₹100-200 vs ₹50-80 for auto)"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Sisodia Rani Garden Workspace",
+        location: "8km from city center",
+        tip: "Peaceful terraced garden perfect for morning work sessions with WiFi zones",
+        timing: "6:00 AM - 9:00 AM",
+        coordinates: "26.8512°N, 75.8747°E"
+      },
+      {
+        name: "Nahargarh Fort Sunset Coworking",
+        location: "Aravalli Hills",
+        tip: "Work with panoramic city views - bring laptop for evening sessions, small café available",
+        timing: "4:00 PM - 6:30 PM",
+        website: "https://www.facebook.com/nahargarhjaipur/"
+      },
+      {
+        name: "Central Park Rose Garden WiFi",
+        location: "Heart of Jaipur",
+        tip: "Early morning jogging track with free WiFi zones for outdoor work",
+        timing: "5:30 AM - 8:00 AM"
+      },
+      {
+        name: "Hidden Café at Anokhi Museum",
+        location: "7 Tilak Marg, C-Scheme",
+        tip: "Quiet museum café with excellent WiFi, AC, and cultural ambiance - ₹300/day with unlimited coffee",
+        website: "https://www.anokhi.com/"
+      },
+      {
+        name: "City Palace Secret Courtyard",
+        location: "City Palace Complex",
+        tip: "Ask guards for 'Zenana' courtyard access - quiet heritage workspace for ₹100 extra entry fee",
+        timing: "10:00 AM - 4:00 PM"
+      }
+    ]
+      },
       "Mumbai": {
         moneyHacks: {
       accommodation: [

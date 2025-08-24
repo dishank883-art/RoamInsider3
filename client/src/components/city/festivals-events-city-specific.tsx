@@ -43,6 +43,58 @@ export default function FestivalsEvents({ city }: FestivalsEventsProps) {
           tipCost: "Free to attend, ₹200-500 for travel to venues"
         }
       ],
+      "Jaipur": [
+        {
+          name: "Jaipur Literature Festival",
+          date: "January",
+          duration: "5 days",
+          type: "Literature",
+          description: "World's largest free literary festival featuring renowned authors, thinkers, and cultural events",
+          highlights: ["International authors", "Panel discussions", "Cultural performances", "Book launches"],
+          bestSpots: ["Diggi Palace", "Hotel Clarks Amer", "Various heritage venues"],
+          tipCost: "Free entry to all events, ₹500-2000 for special dining"
+        },
+        {
+          name: "Jaipur International Film Festival",
+          date: "January",
+          duration: "4 days",
+          type: "Film",
+          description: "Celebrating cinema from around the world in the Pink City",
+          highlights: ["International films", "Regional cinema", "Celebrity interactions", "Awards ceremony"],
+          bestSpots: ["Raj Mandir Cinema", "Inox Crystal Palm", "Various venues"],
+          tipCost: "₹200-1,500 for different screenings and events"
+        },
+        {
+          name: "Teej Festival",
+          date: "August/September",
+          duration: "3 days",
+          type: "Traditional",
+          description: "Traditional Rajasthani festival celebrating monsoon with colorful processions and folk performances",
+          highlights: ["Royal processions", "Traditional attire", "Folk dances", "Street celebrations"],
+          bestSpots: ["City Palace", "Hawa Mahal", "Local neighborhoods"],
+          tipCost: "Free to watch, ₹300-800 for traditional costumes"
+        },
+        {
+          name: "Diwali in Pink City",
+          date: "October/November",
+          duration: "5 days",
+          type: "Religious",
+          description: "Festival of lights celebrated with royal grandeur in heritage palaces and local markets",
+          highlights: ["Palace illuminations", "Fireworks displays", "Traditional sweets", "Cultural programs"],
+          bestSpots: ["City Palace", "Amer Fort", "Johari Bazaar", "Local temples"],
+          tipCost: "Free celebrations, ₹200-1000 for special events"
+        },
+        {
+          name: "Gangaur Festival",
+          date: "March/April",
+          duration: "2 days",
+          type: "Traditional",
+          description: "Colorful Rajasthani festival honoring Goddess Gauri with elaborate processions",
+          highlights: ["Traditional processions", "Cultural performances", "Royal participation", "Local customs"],
+          bestSpots: ["City Palace to Talkatora", "Local neighborhoods", "Temples"],
+          tipCost: "Free to observe, ₹100-500 for participation"
+        }
+      ],
       "Bir": [
         {
           name: "Bir Paragliding Festival",
