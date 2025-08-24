@@ -64,7 +64,7 @@ export default function SubscriptionPopup({ children }: SubscriptionPopupProps) 
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md mx-4 max-w-[calc(100vw-2rem)]">
         <DialogHeader>
           <DialogTitle className="flex items-center space-x-2 text-travel-blue">
             <Mail className="h-5 w-5 text-vintage-gold" />
@@ -86,7 +86,7 @@ export default function SubscriptionPopup({ children }: SubscriptionPopupProps) 
               placeholder="your@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="border-gray-300 focus:border-travel-blue focus:ring-travel-blue"
+              className="border-gray-300 focus:border-travel-blue focus:ring-travel-blue touch-manipulation min-h-[48px] text-base"
               required
               data-testid="subscription-email-input"
             />
@@ -121,7 +121,7 @@ export default function SubscriptionPopup({ children }: SubscriptionPopupProps) 
             <Button
               type="submit"
               disabled={isLoading}
-              className="flex-1 bg-vintage-gold hover:bg-vintage-gold/90 text-white"
+              className="flex-1 bg-vintage-gold hover:bg-vintage-gold/90 text-white touch-manipulation min-h-[48px]"
               data-testid="subscribe-button"
             >
               {isLoading ? "Subscribing..." : "Subscribe Now"}
@@ -130,7 +130,7 @@ export default function SubscriptionPopup({ children }: SubscriptionPopupProps) 
               type="button"
               variant="outline"
               onClick={() => setIsOpen(false)}
-              className="border-gray-300 text-muted-navy hover:bg-gray-50"
+              className="border-gray-300 text-muted-navy hover:bg-gray-50 touch-manipulation min-h-[48px] min-w-[48px]"
               data-testid="cancel-subscription"
             >
               <X className="h-4 w-4" />

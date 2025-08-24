@@ -165,30 +165,30 @@ export default function CityPage() {
             Back to Cities
           </Button>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-white">
-              <h1 className="font-serif text-5xl lg:text-6xl font-bold leading-tight mb-4">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
                 {city.name}
-                <span className="text-vintage-gold font-script text-4xl lg:text-5xl block mt-2">
+                <span className="text-vintage-gold font-script text-2xl sm:text-3xl md:text-4xl lg:text-5xl block mt-2">
                   {city.state}
                 </span>
               </h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
                 {city.description}
               </p>
               
-              <div className="flex items-center space-x-8 text-blue-100 mb-8">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 text-blue-100 mb-6 sm:mb-8">
                 <div className="flex items-center space-x-2">
-                  <Star className="h-5 w-5 text-vintage-gold fill-current" />
-                  <span className="font-semibold">{city.rating} Rating</span>
+                  <Star className="h-4 w-4 sm:h-5 sm:w-5 text-vintage-gold fill-current" />
+                  <span className="font-semibold text-sm sm:text-base">{city.rating} Rating</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Users className="h-5 w-5 text-vintage-gold" />
-                  <span className="font-semibold">{city.population?.toLocaleString()} People</span>
+                  <Users className="h-4 w-4 sm:h-5 sm:w-5 text-vintage-gold" />
+                  <span className="font-semibold text-sm sm:text-base">{city.population?.toLocaleString()} People</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <MapPin className="h-5 w-5 text-vintage-gold" />
-                  <span className="font-semibold">India</span>
+                  <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-vintage-gold" />
+                  <span className="font-semibold text-sm sm:text-base">India</span>
                 </div>
               </div>
               
@@ -212,12 +212,12 @@ export default function CityPage() {
               />
               
               {city.costOfLiving && (
-                <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-xl transform -rotate-3">
+                <div className="absolute -bottom-2 sm:-bottom-4 -right-2 sm:-right-4 bg-white rounded-xl p-3 sm:p-4 shadow-xl transform -rotate-3">
                   <div className="flex items-center space-x-2">
-                    <span className="text-warm-terracotta">₹</span>
+                    <span className="text-warm-terracotta text-lg sm:text-xl">₹</span>
                     <div>
-                      <p className="font-semibold text-sm">Cost/Month</p>
-                      <p className="text-vintage-gold font-bold">₹{city.costOfLiving.monthlyBudgetINR.toLocaleString()}</p>
+                      <p className="font-semibold text-xs sm:text-sm">Cost/Month</p>
+                      <p className="text-vintage-gold font-bold text-sm sm:text-base">₹{city.costOfLiving.monthlyBudgetINR.toLocaleString()}</p>
                     </div>
                   </div>
                 </div>

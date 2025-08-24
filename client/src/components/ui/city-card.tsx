@@ -7,7 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import type { City, CostOfLiving, InternetConnectivity, Climate, Safety } from "@shared/schema";
 
 function getCityPopularityBadge(city: City): string {
-  const rating = parseFloat(city.rating);
+  const rating = parseFloat(city.rating || '0');
   const popularCities: { [key: string]: string } = {
     'mumbai': '#1 Popular',
     'bangalore': '#2 Popular', 

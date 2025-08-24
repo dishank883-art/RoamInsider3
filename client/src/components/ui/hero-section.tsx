@@ -20,13 +20,13 @@ export default function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="text-white">
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Explore India's Best 
-              <span className="text-vintage-gold font-script text-4xl sm:text-6xl lg:text-7xl block mt-2">
+              <span className="text-vintage-gold font-script text-3xl sm:text-4xl md:text-6xl lg:text-7xl block mt-2">
                 Cities
               </span>
             </h1>
-            <p className="text-base sm:text-xl lg:text-2xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
               The ultimate guide for digital nomads and travelers exploring incredible Indian destinations. 
               Real insights, local secrets, and everything you need to roam like an insider.
             </p>
@@ -34,7 +34,7 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
               <Button 
                 size="lg" 
-                className="px-6 sm:px-8 py-3 sm:py-4 bg-vintage-gold text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-vintage-gold/90 transition-all duration-200 shadow-lg touch-manipulation min-h-[48px]"
+                className="px-6 sm:px-8 py-4 sm:py-5 bg-vintage-gold text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-vintage-gold/90 transition-all duration-200 shadow-lg touch-manipulation min-h-[52px]"
                 onClick={() => {
                   const citiesSection = document.querySelector('[data-cities-section]') || 
                                        document.querySelector('section');
