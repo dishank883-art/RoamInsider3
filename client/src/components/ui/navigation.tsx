@@ -53,12 +53,11 @@ export default function Navigation() {
           <div className="flex items-center space-x-4">
             <SubscriptionPopup>
               <Button 
-                variant="outline" 
-                className="hidden md:block border-travel-blue text-travel-blue hover:bg-travel-blue hover:text-white"
+                variant="ghost" 
+                className="hidden md:block text-muted-navy hover:text-travel-blue font-medium transition-colors"
                 data-testid="subscription-trigger-desktop"
               >
-                <Bell className="h-4 w-4 mr-2" />
-                Get Updates
+                Updates
               </Button>
             </SubscriptionPopup>
             <Button 
@@ -110,13 +109,12 @@ export default function Navigation() {
                   <div className="pt-4 border-t">
                     <SubscriptionPopup>
                       <Button 
-                        variant="outline" 
-                        className="w-full mb-2 border-travel-blue text-travel-blue hover:bg-travel-blue hover:text-white"
+                        variant="ghost" 
+                        className="w-full mb-2 text-muted-navy hover:text-travel-blue font-medium transition-colors py-3"
                         data-testid="subscription-trigger-mobile"
                         onClick={() => setIsOpen(false)}
                       >
-                        <Bell className="h-4 w-4 mr-2" />
-                        Get Updates
+                        Updates
                       </Button>
                     </SubscriptionPopup>
                   </div>
