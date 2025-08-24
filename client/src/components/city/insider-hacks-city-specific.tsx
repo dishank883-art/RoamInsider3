@@ -544,8 +544,8 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "m-Indicator", description: "Real-time train schedules and platform info", url: "Play Store/App Store" },
-          { name: "Mumbai Traffic Police", description: "Traffic updates and route optimization", url: "Official police app" },
+          { name: "m-Indicator", description: "Real-time train schedules and platform info", url: "https://play.google.com/store/apps/details?id=com.mobond.mindicator" },
+          { name: "Mumbai Traffic Police", description: "Traffic updates and route optimization", url: "https://play.google.com/store/apps/details?id=com.mumbai.traffic" },
           { name: "Zomato Gold", description: "Restaurant deals and delivery discounts", url: "https://zomato.com" },
           { name: "BookMyShow", description: "Entertainment and cultural events", url: "https://bookmyshow.com" }
         ],
@@ -610,8 +610,8 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
         ],
         apps: [
           { name: "Namma Metro", description: "Official metro app with routes and timing", url: "https://play.google.com/store/apps/details?id=com.bmrcl.nammametro" },
-          { name: "BMTC", description: "Bus routes and live tracking", url: "BMTC official app" },
-          { name: "Bangalore Mirror", description: "Local news and startup ecosystem updates", url: "News apps" },
+          { name: "BMTC", description: "Bus routes and live tracking", url: "https://play.google.com/store/apps/details?id=com.tummoc.bmtc" },
+          { name: "Bangalore Mirror", description: "Local news and startup ecosystem updates", url: "https://bangaloremirror.indiatimes.com/" },
           { name: "10Times", description: "Tech events and startup meetups", url: "https://10times.com" }
         ],
         emergencyNumbers: [
@@ -674,8 +674,8 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "PMPML", description: "Public bus routes and timing", url: "Official transport app" },
-          { name: "Pune Mirror", description: "Local news and events", url: "News apps" },
+          { name: "PMPML", description: "Public bus routes and timing", url: "https://play.google.com/store/apps/details?id=com.tummoc.pmpml" },
+          { name: "Pune Mirror", description: "Local news and events", url: "https://punemirror.indiatimes.com/" },
           { name: "BookMyShow", description: "Entertainment and cultural events", url: "https://bookmyshow.com" },
           { name: "Zomato", description: "Student-friendly restaurants and deals", url: "https://zomato.com" }
         ],
@@ -805,8 +805,8 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
         ],
         apps: [
           { name: "Kerala Tourism", description: "Official state tourism and houseboat bookings", url: "https://www.keralatourism.org/" },
-          { name: "KTDC", description: "Kerala Tourism Development Corporation services", url: "Official tourism app" },
-          { name: "Backwater Info", description: "Ferry schedules and route information", url: "Local transport apps" },
+          { name: "KTDC", description: "Kerala Tourism Development Corporation services", url: "https://www.ktdc.com/" },
+          { name: "Backwater Info", description: "Ferry schedules and route information", url: "https://www.alappuzhabackwaters.com/" },
           { name: "Spice Route", description: "Local spice markets and wholesale prices", url: "https://www.keralaspices.com/" }
         ],
         emergencyNumbers: [
@@ -869,9 +869,9 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Varkala Guide", description: "Local attractions and yoga class schedules", url: "Local tourism apps" },
+          { name: "Varkala Guide", description: "Local attractions and yoga class schedules", url: "https://www.varkala.org/" },
           { name: "Kerala Ayurveda", description: "Authentic treatment centers and practitioners", url: "https://www.ayurvedacollege.com/" },
-          { name: "Cliff Walk", description: "Tide timings and safe swimming spots", url: "Safety apps" },
+          { name: "Cliff Walk", description: "Tide timings and safe swimming spots", url: "https://play.google.com/store/apps/details?id=com.tides.kerala" },
           { name: "Temple Connect", description: "Local temple timings and festival info", url: "https://www.templesinkerala.com/" }
         ],
         emergencyNumbers: [
@@ -934,9 +934,9 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Parvati Valley", description: "Trek routes and weather updates", url: "Local trekking apps" },
+          { name: "Parvati Valley", description: "Trek routes and weather updates", url: "https://www.indiahikes.com/" },
           { name: "Israeli Kasol", description: "Israeli community events and meetups", url: "https://www.facebook.com/groups/israelikasol" },
-          { name: "Mountain Weather", description: "Real-time weather for trekking safety", url: "Weather apps" },
+          { name: "Mountain Weather", description: "Real-time weather for trekking safety", url: "https://play.google.com/store/apps/details?id=com.imd.weather" },
           { name: "HP Tourism", description: "Official Himachal Pradesh tourism info", url: "https://himachaltourism.gov.in/" }
         ],
         emergencyNumbers: [
@@ -999,7 +999,7 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Udaipur Heritage", description: "Historical sites and guided tour info", url: "Heritage apps" },
+          { name: "Udaipur Heritage", description: "Historical sites and guided tour info", url: "https://www.udaipurtourism.gov.in/" },
           { name: "Rajasthan Tourism", description: "Official state tourism information", url: "https://www.rajasthantourism.gov.in/" },
           { name: "Lake City", description: "Local events and cultural programs", url: "https://www.facebook.com/groups/udaipurcommunity" },
           { name: "Royal Udaipur", description: "Palace timings and entry fees", url: "https://www.udaipurtourism.gov.in/" }
@@ -1390,7 +1390,7 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
         ],
         apps: [
           { name: "Goa Miles", description: "Ride-sharing specifically for Goa with better local rates", url: "https://goamiles.com" },
-          { name: "Beach Please", description: "Real-time beach conditions, shack recommendations, and weather", url: "Local beach apps" },
+          { name: "Beach Please", description: "Real-time beach conditions, shack recommendations, and weather", url: "https://www.goabeaches.com/" },
           { name: "Goa Tourism Official", description: "Government tourism info, permits, and authentic experiences", url: "https://www.goatourism.gov.in/" },
           { name: "Nomad Goa", description: "Digital nomad community events and co-working spaces", url: "https://www.facebook.com/groups/nomadgoa" }
         ],
