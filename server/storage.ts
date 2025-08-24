@@ -3344,7 +3344,7 @@ export class MemStorage implements IStorage {
       state: "Meghalaya",
       slug: "shillong", 
       description: "Scotland of the East with rolling hills, waterfalls, music culture, and cool climate year-round.",
-      heroImage: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f",
+      heroImage: "https://images.unsplash.com/photo-1594514113865-d1deac339435?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNoaWxsb25nfGVufDB8fDB8fHww",
       latitude: "25.5788",
       longitude: "91.8933",
       population: 354325,
