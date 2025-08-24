@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Compass, Menu, Bell } from "lucide-react";
@@ -7,9 +7,20 @@ import SubscriptionPopup from "@/components/ui/subscription-popup";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [location] = useLocation();
 
-  const navItems: Array<{ href: string; label: string; external?: boolean }> = [
-    { href: "/", label: "Cities" },
+  const handleCitiesClick = (e: React.MouseEvent) => {
+    if (location === "/") {
+      e.preventDefault();
+      const citiesSection = document.querySelector('[data-cities-section]');
+      if (citiesSection) {
+        citiesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const navItems: Array<{ href: string; label: string; external?: boolean; onClick?: (e: React.MouseEvent) => void }> = [
+    { href: "/", label: "Cities", onClick: handleCitiesClick },
     { href: "https://discord.gg/Y39GGpQtMm", label: "Community", external: true },
     { href: "/blog", label: "Blog" },
   ];
@@ -43,6 +54,7 @@ export default function Navigation() {
                   key={item.label}
                   href={item.href}
                   className="text-muted-navy hover:text-travel-blue font-medium transition-colors"
+                  onClick={item.onClick}
                 >
                   {item.label}
                 </Link>
@@ -100,7 +112,10 @@ export default function Navigation() {
                         key={item.label}
                         href={item.href}
                         className="text-muted-navy hover:text-travel-blue font-medium transition-colors py-2"
-                        onClick={() => setIsOpen(false)}
+                        onClick={(e) => {
+                          if (item.onClick) item.onClick(e);
+                          setIsOpen(false);
+                        }}
                       >
                         {item.label}
                       </Link>
