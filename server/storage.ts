@@ -1160,7 +1160,7 @@ export class MemStorage implements IStorage {
       timings: "8:00 AM - 6:00 PM",
       isHiddenGem: false,
       rating: "4.6",
-      image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&auto=format&fit=crop&q=60",
+      image: "https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YW1iZXIlMjBmb3J0fGVufDB8fDB8fHww",
       createdAt: new Date(),
     });
 
