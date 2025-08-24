@@ -612,7 +612,27 @@ export const citySpecificDataComplete: Record<string, CitySpecificData> = {
     coworkingSpaces: [{ name: "91springboard Bangalore", address: "Koramangala", pricing: "₹9,500/month", speedMbps: 100, amenities: ["Tech Community", "Events", "24/7 Access"] }],
     localExperienceTips: ["Explore Cubbon Park for morning jogs", "Visit tech meetups in Koramangala", "Take weekend trips to Nandi Hills"],
     transportationTips: ["Use Namma Metro for fast travel across the city", "Book Ola/Uber during off-peak hours", "Rent bikes for short commutes in IT corridors"],
-    climateImpact: { workingConditions: ["Pleasant weather year-round perfect for outdoor work"], healthConsiderations: ["Moderate pollution - use air purifiers"], equipmentNeeds: ["Light cooling needed during summer"], bestMonths: "October to March" },
+    climateImpact: {
+      workingConditions: [
+        "Bangalore's moderate climate (15-28°C) allows outdoor work most of the year",
+        "Occasional power cuts during peak summer - backup power essential",
+        "Monsoon season (June-September) requires indoor coworking due to heavy rains",
+        "Pleasant post-monsoon period (October-December) ideal for rooftop and balcony work"
+      ],
+      healthConsiderations: [
+        "Traffic pollution in IT corridors - air purifiers recommended for home offices",
+        "Moderate humidity year-round - generally comfortable without special measures",
+        "Pollen allergies during spring months - keep antihistamines handy",
+        "Good water quality but recommended to use filters for drinking"
+      ],
+      equipmentNeeds: [
+        "Light cooling (fans/coolers) sufficient for most of the year",
+        "Dehumidifier useful during monsoon months for equipment protection",
+        "Backup power solutions for frequent outages in IT areas",
+        "Good internet backup - mobile hotspots recommended for critical work"
+      ],
+      bestMonths: "October to March for optimal working conditions with pleasant weather"
+    },
     insiderHacks: { accommodation: ["Stay near tech hubs for networking"], food: ["Try authentic South Indian breakfast"], transport: ["Use metro during peak hours"] },
     secretSpots: [{ name: "Peaceful Park", location: "Cubbon Park", tip: "Early morning for quiet work" }]
   },
@@ -623,7 +643,27 @@ export const citySpecificDataComplete: Record<string, CitySpecificData> = {
     coworkingSpaces: [{ name: "91springboard Delhi", address: "Sector 44, Gurgaon", pricing: "₹10,500/month", speedMbps: 100, amenities: ["Business Hub", "Events", "Meeting Rooms"] }],
     localExperienceTips: ["Visit India Gate area", "Explore Old Delhi markets", "Take heritage walks"],
     transportationTips: ["Use Delhi Metro for all major destinations", "Keep cash for auto-rickshaws", "Avoid peak hours 8-10 AM and 6-8 PM"],
-    climateImpact: { workingConditions: ["Extreme weather - AC essential in summer"], healthConsiderations: ["High pollution levels - masks recommended"], equipmentNeeds: ["Air purifiers mandatory", "Backup power during summer"], bestMonths: "October to March" },
+    climateImpact: {
+      workingConditions: [
+        "Extreme summer heat (40-47°C) makes outdoor work impossible from April-June",
+        "Air conditioning absolutely essential for productivity during summer months",
+        "Winter fog (December-January) can affect outdoor activities and internet connectivity",
+        "Pleasant spring (February-March) and autumn (October-November) perfect for outdoor work"
+      ],
+      healthConsiderations: [
+        "Severe air pollution during winter months - N95 masks and air purifiers essential",
+        "Heat stroke risk during summer - stay hydrated and work in AC spaces only",
+        "Monsoon waterlogging creates dengue/malaria risk - use mosquito protection",
+        "Respiratory issues common due to pollution - consider relocating during winter peak"
+      ],
+      equipmentNeeds: [
+        "Heavy-duty air conditioning mandatory for summer work",
+        "High-grade air purifiers essential for indoor air quality",
+        "Backup power systems critical due to frequent summer outages",
+        "Dehumidifiers needed during monsoon for equipment protection"
+      ],
+      bestMonths: "October to March avoiding extreme summer heat and peak pollution periods"
+    },
     insiderHacks: { accommodation: ["Stay in South Delhi for better connectivity"], food: ["Try street food in Chandni Chowk"], transport: ["Download Delhi Metro app"] },
     secretSpots: [{ name: "Quiet Garden", location: "Lodhi Gardens", tip: "Early morning for peaceful work" }]
   },
@@ -634,7 +674,27 @@ export const citySpecificDataComplete: Record<string, CitySpecificData> = {
     coworkingSpaces: [{ name: "Backwater Workspace", address: "Alleppey", pricing: "₹4,500/month", speedMbps: 50, amenities: ["Lake Views", "Peaceful Environment"] }],
     localExperienceTips: ["Take houseboat tours", "Visit backwater villages", "Learn about coir making"],
     transportationTips: ["Use boats for backwater exploration", "Rent scooters for mainland travel", "Book auto-rickshaws for short distances"],
-    climateImpact: { workingConditions: ["High humidity - use dehumidifiers"], healthConsiderations: ["Monsoon health risks"], equipmentNeeds: ["Waterproof equipment storage"], bestMonths: "October to March" },
+    climateImpact: {
+      workingConditions: [
+        "High humidity (65-85%) year-round affects comfort - fans and dehumidifiers essential",
+        "Heavy monsoon rains (June-September) create indoor work preference",
+        "Pleasant winter mornings (November-February) ideal for outdoor coworking",
+        "Hot, humid summers (March-May) require air-conditioned workspaces"
+      ],
+      healthConsiderations: [
+        "Monsoon brings waterborne diseases - strict water purification needed",
+        "High humidity can cause skin fungal infections - maintain good hygiene",
+        "Air quality deteriorates during winter due to crop burning in nearby states",
+        "Heat and humidity combination causes dehydration - increase fluid intake"
+      ],
+      equipmentNeeds: [
+        "Waterproof storage essential for electronics during monsoon months",
+        "Dehumidifiers critical for equipment longevity in high humidity",
+        "Air conditioning necessary for summer productivity and comfort",
+        "Water purification systems mandatory for health safety"
+      ],
+      bestMonths: "November to February for optimal humidity and temperature balance"
+    },
     insiderHacks: { accommodation: ["Book backwater homestays"], food: ["Try toddy and seafood"], transport: ["Use country boats"] },
     secretSpots: [{ name: "Hidden Beach", location: "Marari Beach", tip: "Quiet spot for remote work" }]
   },
@@ -645,7 +705,27 @@ export const citySpecificDataComplete: Record<string, CitySpecificData> = {
     coworkingSpaces: [{ name: "Cliff Coworking", address: "Varkala Cliff", pricing: "₹5,000/month", speedMbps: 60, amenities: ["Ocean Views", "Peaceful Environment"] }],
     localExperienceTips: ["Watch sunset from cliff", "Visit Sivagiri Mutt", "Try Ayurvedic treatments"],
     transportationTips: ["Walk along the cliff", "Rent scooters for exploration", "Use auto-rickshaws to beach"],
-    climateImpact: { workingConditions: ["Sea breeze keeps it cool"], healthConsiderations: ["Sun protection essential"], equipmentNeeds: ["Salt air protection for equipment"], bestMonths: "October to March" },
+    climateImpact: {
+      workingConditions: [
+        "Coastal humidity (70-85%) requires dehumidification for comfortable work",
+        "Sea breeze provides natural cooling but carries salt that affects electronics",
+        "Monsoon season (June-September) brings heavy rains limiting outdoor cliff work",
+        "Pleasant winter months (November-March) perfect for cliff-top coworking"
+      ],
+      healthConsiderations: [
+        "Intense UV exposure on cliffs - sunscreen and protective clothing essential",
+        "Salt air can cause respiratory irritation for sensitive individuals",
+        "Monsoon brings risk of waterborne diseases - water purification critical",
+        "High humidity may cause skin issues - maintain dry, clean environment"
+      ],
+      equipmentNeeds: [
+        "Protective covers for electronics against salt air corrosion",
+        "Dehumidifiers essential for equipment longevity in coastal humidity",
+        "Waterproof storage during monsoon season for device protection",
+        "UV-resistant materials for outdoor setups due to strong coastal sun"
+      ],
+      bestMonths: "November to March for perfect cliff weather and outdoor working conditions"
+    },
     insiderHacks: { accommodation: ["Book cliff-facing rooms"], food: ["Try seafood at beach shacks"], transport: ["Walk the cliff path"] },
     secretSpots: [{ name: "Hidden Beach", location: "Kappil Beach", tip: "Quiet backwaters for work" }]
   },
@@ -656,7 +736,27 @@ export const citySpecificDataComplete: Record<string, CitySpecificData> = {
     coworkingSpaces: [{ name: "Mountain Café Workspace", address: "Kasol Main Road", pricing: "₹3,000/month", speedMbps: 30, amenities: ["Mountain Views", "Trekking Community"] }],
     localExperienceTips: ["Trek to Tosh and Malana", "Visit hot springs", "Experience Israeli culture"],
     transportationTips: ["Walk within Kasol", "Take local buses to nearby villages", "Trek to remote locations"],
-    climateImpact: { workingConditions: ["Cool mountain weather perfect for work"], healthConsiderations: ["High altitude adjustment"], equipmentNeeds: ["Warm clothing essential"], bestMonths: "March to June, September to November" },
+    climateImpact: {
+      workingConditions: [
+        "Cool mountain temperatures (5-25°C) create excellent working conditions year-round",
+        "River-side cafes provide natural white noise perfect for focused work sessions",
+        "Winter snow (December-February) limits outdoor activities but creates cozy indoor work",
+        "Monsoon season (July-August) brings heavy rains affecting village connectivity"
+      ],
+      healthConsiderations: [
+        "High altitude (1580m) may cause initial breathlessness - gradual acclimatization needed",
+        "Clean mountain air excellent for respiratory health and mental clarity",
+        "Cold temperatures require warm clothing to prevent health issues",
+        "Limited medical facilities - carry basic medications and first aid"
+      ],
+      equipmentNeeds: [
+        "Warm clothing essential for comfortable work during cold months",
+        "Reliable heating source needed for winter productivity",
+        "Backup power solutions for frequent outages in remote mountain location",
+        "Waterproof gear necessary during monsoon season for equipment protection"
+      ],
+      bestMonths: "March to June and September to November for optimal valley weather"
+    },
     insiderHacks: { accommodation: ["Stay in Israeli-run places"], food: ["Try Israeli and local food"], transport: ["Trek to hidden villages"] },
     secretSpots: [{ name: "Hidden Valley", location: "Tosh Village", tip: "Quiet spot for mountain work" }]
   },
@@ -667,9 +767,215 @@ export const citySpecificDataComplete: Record<string, CitySpecificData> = {
     coworkingSpaces: [{ name: "Pink City Coworking", address: "C-Scheme, Jaipur", pricing: "₹6,500/month", speedMbps: 70, amenities: ["Heritage Setting", "Cultural Events"] }],
     localExperienceTips: ["Visit City Palace", "Explore Hawa Mahal", "Take heritage walks"],
     transportationTips: ["Use auto-rickshaws", "Rent bikes for city exploration", "Take buses to nearby attractions"],
-    climateImpact: { workingConditions: ["Hot summers require AC", "Pleasant winters perfect for outdoor work"], healthConsiderations: ["Desert heat in summer"], equipmentNeeds: ["Cooling systems essential"], bestMonths: "October to March" },
+    climateImpact: {
+      workingConditions: [
+        "Extreme desert heat (35-47°C) in summer makes outdoor work impossible April-June",
+        "Pleasant winter weather (8-25°C) perfect for heritage hotel courtyards and palace work",
+        "Moderate monsoon (July-September) brings relief but occasional connectivity issues",
+        "Royal heritage buildings provide natural cooling and inspiring work environments"
+      ],
+      healthConsiderations: [
+        "Severe dehydration risk during summer months - constant hydration essential",
+        "Desert heat can cause heat exhaustion - work only in air-conditioned spaces",
+        "Dry air year-round requires skin and lip protection",
+        "Tourist season crowds (October-March) may affect peaceful working spots"
+      ],
+      equipmentNeeds: [
+        "Heavy-duty air conditioning essential for summer survival and productivity",
+        "Cooling systems insufficient during peak summer - AC mandatory",
+        "Minimal heating needed - light woolens sufficient for winter nights",
+        "Electronics may overheat in summer - ensure proper cooling and ventilation"
+      ],
+      bestMonths: "October to March for comfortable royal city weather and optimal productivity"
+    },
     insiderHacks: { accommodation: ["Stay near City Palace"], food: ["Try authentic Rajasthani cuisine"], transport: ["Use pre-paid auto stands"] },
     secretSpots: [{ name: "Peaceful Garden", location: "Central Park", tip: "Early morning for quiet work" }]
+  },
+  mumbai: {
+    moneyTips: ["Share 1BHK in Andheri or Bandra East for ₹20,000-30,000/month", "Eat at local Udipi restaurants for meals under ₹150", "Use monthly train passes for unlimited local travel", "Shop at Linking Road and Colaba Causeway for reasonable prices"],
+    streetFood: [{ item: "Vada Pav", price: "₹15-25 ($0.20)" }, { item: "Pav Bhaji", price: "₹60-100 ($0.70-1.20)" }, { item: "Bhel Puri", price: "₹40-70 ($0.50)" }],
+    wifiHotspots: { cafes: [{ name: "Starbucks Bandra", speed: "50-80 Mbps", quality: "Excellent" }], publicSpaces: [{ name: "Mumbai Airport", speed: "80-120 Mbps", quality: "Excellent" }] },
+    coworkingSpaces: [{ name: "WeWork BKC", address: "Bandra Kurla Complex", pricing: "₹15,000/month", speedMbps: 120, amenities: ["Business District", "Networking", "Premium Location"] }],
+    localExperienceTips: ["Experience local train culture", "Visit Bollywood film studios", "Explore Marine Drive at sunset"],
+    transportationTips: ["Master the local train system for fast city travel", "Use app-based rides during peak hours", "Keep train pass for unlimited travel"],
+    climateImpact: {
+      workingConditions: [
+        "High coastal humidity (70-90%) year-round affects comfort and productivity",
+        "Monsoon season (June-September) brings flooding and disrupts office commutes",
+        "Pleasant winter months (December-February) ideal for outdoor networking events",
+        "Hot, humid summers (March-May) require air-conditioned workspaces only"
+      ],
+      healthConsiderations: [
+        "Severe air pollution affects respiratory health - air purifiers essential",
+        "Monsoon brings waterborne diseases - strict water purification needed",
+        "High humidity can cause skin fungal infections and equipment damage",
+        "Dense population increases risk of viral infections - maintain hygiene"
+      ],
+      equipmentNeeds: [
+        "Dehumidifiers critical for electronics protection in coastal humidity",
+        "Air conditioning mandatory for comfortable summer work",
+        "Waterproof storage essential during heavy monsoon flooding",
+        "Backup power solutions for frequent outages during peak hours"
+      ],
+      bestMonths: "November to February for optimal business weather and networking"
+    },
+    insiderHacks: { accommodation: ["Stay near train stations for easy commute"], food: ["Try street food at Mohammed Ali Road"], transport: ["Learn train timing patterns"] },
+    secretSpots: [{ name: "Peaceful Beach", location: "Versova Beach", tip: "Early morning for quiet work with ocean sounds" }]
+  },
+  kolkata: {
+    moneyTips: ["Share apartments in Salt Lake or New Town for ₹8,000-15,000/month", "Eat at local fish markets and Bengali restaurants for under ₹120", "Use metro and buses with monthly passes", "Shop at New Market and Gariahat for local prices"],
+    streetFood: [{ item: "Fish Curry Rice", price: "₹80-150 ($1-1.8)" }, { item: "Kathi Roll", price: "₹40-80 ($0.50-1)" }, { item: "Rosogolla", price: "₹10-20 ($0.12-0.25)" }],
+    wifiHotspots: { cafes: [{ name: "Café Coffee Day Park Street", speed: "35-55 Mbps", quality: "Good" }], publicSpaces: [{ name: "South City Mall", speed: "45-70 Mbps", quality: "Good" }] },
+    coworkingSpaces: [{ name: "Kolkata Coworking", address: "Salt Lake Sector V", pricing: "₹6,500/month", speedMbps: 80, amenities: ["IT Hub Location", "Cultural Events", "Book Clubs"] }],
+    localExperienceTips: ["Explore intellectual coffee house culture", "Visit Durga Puja festivals", "Experience Bengali literature scene"],
+    transportationTips: ["Use metro for fastest travel across the city", "Take trams for heritage city experience", "Auto-rickshaws for short distances"],
+    climateImpact: {
+      workingConditions: [
+        "High humidity (70-90%) year-round makes indoor work more comfortable",
+        "Extreme summer heat (35-42°C) with humidity creates oppressive working conditions",
+        "Heavy monsoon (June-September) with waterlogging disrupts daily work routines",
+        "Pleasant winter months (December-February) perfect for outdoor cultural activities"
+      ],
+      healthConsiderations: [
+        "High pollution during winter months affects respiratory health significantly",
+        "Monsoon brings cholera and dengue risks - water purification mandatory",
+        "Heat and humidity combination causes dehydration and heat exhaustion",
+        "Air quality drops during festival season due to fireworks and emissions"
+      ],
+      equipmentNeeds: [
+        "Dehumidifiers essential for equipment protection in high humidity",
+        "Air conditioning necessary for summer productivity and health",
+        "Waterproof storage mandatory during monsoon flooding seasons",
+        "Air purifiers recommended for indoor air quality improvement"
+      ],
+      bestMonths: "November to February for cultural festivals and comfortable working weather"
+    },
+    insiderHacks: { accommodation: ["Stay in cultural areas like Ballygunge"], food: ["Try authentic Bengali sweets"], transport: ["Experience heritage tram rides"] },
+    secretSpots: [{ name: "Quiet Library", location: "National Library", tip: "Peaceful reading rooms for focused work" }]
+  },
+  bir: {
+    moneyTips: ["Stay in Tibetan guesthouses for ₹1,500-3,000/month", "Eat at local monasteries and Tibetan cafes for under ₹100", "Trek to nearby villages for exploration", "Learn paragliding for adventure tourism"],
+    streetFood: [{ item: "Momos", price: "₹80-120 ($1-1.5)" }, { item: "Thukpa", price: "₹100-150 ($1.2-1.8)" }, { item: "Tibetan Bread", price: "₹40-60 ($0.50)" }],
+    wifiHotspots: { cafes: [{ name: "Bir Café", speed: "25-40 Mbps", quality: "Good" }], publicSpaces: [{ name: "Monastery Area", speed: "20-35 Mbps", quality: "Fair" }] },
+    coworkingSpaces: [{ name: "Mountain Workspace", address: "Bir Billing Road", pricing: "₹3,500/month", speedMbps: 45, amenities: ["Paragliding Views", "Tibetan Culture", "Monastery Access"] }],
+    localExperienceTips: ["Learn paragliding from world-class instructors", "Visit Tibetan monasteries for meditation", "Trek to Billing for panoramic views"],
+    transportationTips: ["Use local buses to reach from Pathankot", "Trek between Bir and Billing", "Shared taxis for regional travel"],
+    climateImpact: {
+      workingConditions: [
+        "Perfect mountain climate (15-30°C) ideal for outdoor coworking year-round",
+        "Clear skies during paragliding season (March-June, Sep-Nov) provide inspiring views",
+        "Cold winter months (December-February) require heated indoor workspaces",
+        "Monsoon season (July-August) limits outdoor activities but creates cozy indoor work"
+      ],
+      healthConsiderations: [
+        "High altitude (2400m) requires gradual acclimatization for newcomers",
+        "Clean mountain air excellent for respiratory health and mental clarity",
+        "Cold mountain nights require warm clothing to prevent hypothermia",
+        "Limited medical facilities - carry comprehensive first aid and medications"
+      ],
+      equipmentNeeds: [
+        "Warm clothing essential for cold mountain evenings and winter months",
+        "Backup heating solutions for comfortable winter productivity",
+        "Reliable internet backup due to remote mountain location",
+        "Solar chargers useful for outdoor work sessions with mountain views"
+      ],
+      bestMonths: "March to June and September to November for optimal paragliding and working weather"
+    },
+    insiderHacks: { accommodation: ["Stay near monastery for peaceful environment"], food: ["Try authentic Tibetan monastery meals"], transport: ["Trek for exercise and exploration"] },
+    secretSpots: [{ name: "Secret Viewpoint", location: "Billing Top", tip: "Sunrise work sessions with Dhauladhar views" }]
+  },
+  dehradun: {
+    moneyTips: ["Stay in areas near IIT or FRI for educational atmosphere", "Eat at local dhabas and Garhwali restaurants for under ₹120", "Use local buses for city travel", "Shop at Paltan Bazaar for reasonable prices"],
+    streetFood: [{ item: "Aloo Puri", price: "₹40-60 ($0.50)" }, { item: "Kachori Sabzi", price: "₹30-50 ($0.40)" }, { item: "Garhwali Thali", price: "₹100-150 ($1.2-1.8)" }],
+    wifiHotspots: { cafes: [{ name: "Café Coffee Day Pacific Mall", speed: "40-60 Mbps", quality: "Good" }], publicSpaces: [{ name: "IIT Roorkee Campus", speed: "80-120 Mbps", quality: "Excellent" }] },
+    coworkingSpaces: [{ name: "Dehradun Hub", address: "Rajpur Road", pricing: "₹5,500/month", speedMbps: 70, amenities: ["Educational Environment", "Government Access", "Hill Station Base"] }],
+    localExperienceTips: ["Visit IIT campus for academic environment", "Explore Robber's Cave for natural beauty", "Take day trips to Mussoorie and hill stations"],
+    transportationTips: ["Use auto-rickshaws for city travel", "Take buses to nearby hill stations", "Rent bikes for valley exploration"],
+    climateImpact: {
+      workingConditions: [
+        "Pleasant valley climate (18-35°C) provides comfortable working conditions year-round",
+        "Moderate summer heat allows outdoor work with shade and fans",
+        "Heavy monsoon (July-September) requires indoor coworking due to valley flooding",
+        "Cool winter months (December-February) perfect for outdoor administrative work"
+      ],
+      healthConsiderations: [
+        "Clean valley air beneficial for respiratory health compared to plains",
+        "Monsoon brings risk of waterborne diseases - water purification essential",
+        "Moderate pollution from traffic - significantly better than major cities",
+        "Valley location provides natural temperature regulation and comfort"
+      ],
+      equipmentNeeds: [
+        "Light cooling sufficient for summer months - fans and ventilation adequate",
+        "Backup power solutions for monsoon outages in valley areas",
+        "Waterproof storage during heavy monsoon flooding periods",
+        "Minimal heating needed for comfortable winter work environments"
+      ],
+      bestMonths: "March to June and September to November for perfect valley weather"
+    },
+    insiderHacks: { accommodation: ["Stay near educational institutions"], food: ["Try authentic Garhwali cuisine"], transport: ["Use it as base for hill station visits"] },
+    secretSpots: [{ name: "Peaceful Campus", location: "Forest Research Institute", tip: "Historic colonial campus for inspiring work environment" }]
+  },
+  mussoorie: {
+    moneyTips: ["Stay in budget hotels near Mall Road for ₹3,000-6,000/month", "Eat at local dhabas away from tourist areas for under ₹150", "Walk Mall Road instead of using taxis", "Shop at lower bazaar for better prices"],
+    streetFood: [{ item: "Aloo Tikki", price: "₹40-60 ($0.50)" }, { item: "Maggi", price: "₹60-100 ($0.70-1.20)" }, { item: "Momos", price: "₹80-120 ($1-1.5)" }],
+    wifiHotspots: { cafes: [{ name: "Café By The Way", speed: "30-50 Mbps", quality: "Good" }], publicSpaces: [{ name: "Mall Road Area", speed: "25-45 Mbps", quality: "Good" }] },
+    coworkingSpaces: [{ name: "Hill Station Hub", address: "Mall Road, Mussoorie", pricing: "₹4,500/month", speedMbps: 55, amenities: ["Mountain Views", "Colonial Heritage", "Tourist Season Networking"] }],
+    localExperienceTips: ["Take cable car for panoramic Himalayan views", "Visit Gun Hill for sunset work sessions", "Explore colonial heritage buildings"],
+    transportationTips: ["Walk Mall Road for most activities", "Use shared taxis to Dehradun", "Take cable car for mountain access"],
+    climateImpact: {
+      workingConditions: [
+        "Cool hill station climate (15-30°C) perfect for outdoor work during summer",
+        "Pleasant summer months (April-June) ideal for balcony and terrace work",
+        "Cold winter weather (1-15°C) requires heated indoor workspaces",
+        "Heavy monsoon (July-September) brings landslide risks affecting connectivity"
+      ],
+      healthConsiderations: [
+        "High altitude (2000m) may require brief acclimatization period",
+        "Clean mountain air excellent for respiratory health and productivity",
+        "Cold temperatures can affect those not used to hill climates",
+        "Tourist season crowds may affect peaceful working environments"
+      ],
+      equipmentNeeds: [
+        "Essential heating during cold winter months for comfortable work",
+        "Warm clothing necessary for year-round comfort in hill station",
+        "Backup power solutions for outages during monsoon season",
+        "Rain gear essential during heavy monsoon for commuting to work"
+      ],
+      bestMonths: "April to June and September to November for optimal hill station weather"
+    },
+    insiderHacks: { accommodation: ["Stay in heritage hotels for colonial experience"], food: ["Try local hill station specialties"], transport: ["Walk for exercise and views"] },
+    secretSpots: [{ name: "Quiet Viewpoint", location: "Lal Tibba", tip: "Highest point for panoramic work sessions" }]
+  },
+  ziro: {
+    moneyTips: ["Stay in tribal homestays for ₹1,000-2,500/month authentic experience", "Eat with local Apatani families for traditional meals under ₹80", "Trek to nearby villages for cultural exploration", "Support local handicraft communities"],
+    streetFood: [{ item: "Rice Beer", price: "₹30-50 ($0.40)" }, { item: "Bamboo Shoot Curry", price: "₹60-100 ($0.70-1.20)" }, { item: "Fish Curry", price: "₹80-120 ($1-1.5)" }],
+    wifiHotspots: { cafes: [{ name: "Ziro Music Café", speed: "15-30 Mbps", quality: "Fair" }], publicSpaces: [{ name: "Cultural Center", speed: "20-35 Mbps", quality: "Fair" }] },
+    coworkingSpaces: [{ name: "Tribal Valley Workspace", address: "Ziro Valley", pricing: "₹2,500/month", speedMbps: 35, amenities: ["Cultural Immersion", "Music Scene", "Sustainable Living"] }],
+    localExperienceTips: ["Experience Apatani tribal culture and traditions", "Visit during Ziro Music Festival", "Learn about sustainable rice terrace farming"],
+    transportationTips: ["Use local shared vehicles for valley travel", "Trek to remote villages", "Plan for limited connectivity"],
+    climateImpact: {
+      workingConditions: [
+        "Cool tribal valley climate (15-28°C) provides excellent working conditions",
+        "Pleasant summer months (March-May) perfect for outdoor cultural work",
+        "Heavy monsoon (June-August) creates lush green valley but limits travel",
+        "Cool winter months (December-February) require warm clothing for comfort"
+      ],
+      healthConsiderations: [
+        "High altitude (1500m) in tribal valley may require brief adjustment",
+        "Pristine air quality excellent for health and mental clarity",
+        "Limited medical facilities - carry comprehensive first aid supplies",
+        "Traditional lifestyle promotes natural health and work-life balance"
+      ],
+      equipmentNeeds: [
+        "Warm clothing essential for cold mountain evenings and winter",
+        "Backup power solutions crucial due to remote tribal location",
+        "Solar charging equipment useful for sustainable valley living",
+        "Rain gear necessary during heavy monsoon season"
+      ],
+      bestMonths: "March to May and September to November for optimal valley weather and cultural festivals"
+    },
+    insiderHacks: { accommodation: ["Stay with Apatani families for cultural exchange"], food: ["Try traditional tribal fermented foods"], transport: ["Trek for authentic village experiences"] },
+    secretSpots: [{ name: "Hidden Valley View", location: "Kile Pakho", tip: "Sacred hill with panoramic valley views for inspiration" }]
   }
 };
 
