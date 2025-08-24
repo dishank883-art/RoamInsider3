@@ -68,6 +68,28 @@ export default function CityConnections({ city }: CityConnectionsProps) {
           { city: "Mysore", duration: "3h", price: "₹200-500", frequency: "30+ daily", type: "AC Bus", operator: "KSRTC, Private", bookingUrl: "https://www.redbus.in/" }
         ]
       },
+      "Jaipur": {
+        trainConnections: [
+          { city: "Delhi", duration: "4h 30m", price: "₹200-1,500", frequency: "Multiple daily", type: "Shatabdi Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Mumbai", duration: "17h", price: "₹500-2,800", frequency: "Daily", type: "Mumbai Central Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Agra", duration: "4h", price: "₹150-800", frequency: "Multiple daily", type: "Gatimaan Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Udaipur", duration: "6h", price: "₹200-1,000", frequency: "Daily", type: "Chetak Express", bookingUrl: "https://www.irctc.co.in/" },
+          { city: "Jodhpur", duration: "5h", price: "₹180-900", frequency: "Daily", type: "Mandore Express", bookingUrl: "https://www.irctc.co.in/" }
+        ],
+        flightConnections: [
+          { city: "Delhi", duration: "1h 20m", price: "₹3,000-10,000", frequency: "15+ daily", airlines: "IndiGo, Air India, SpiceJet", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Mumbai", duration: "1h 45m", price: "₹3,500-12,000", frequency: "12+ daily", airlines: "IndiGo, Air India, Vistara", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Bangalore", duration: "2h 15m", price: "₹4,000-14,000", frequency: "8+ daily", airlines: "IndiGo, Air India", bookingUrl: "https://www.makemytrip.com/" },
+          { city: "Ahmedabad", duration: "1h 30m", price: "₹3,200-9,000", frequency: "6+ daily", airlines: "IndiGo, Air India", bookingUrl: "https://www.makemytrip.com/" }
+        ],
+        busConnections: [
+          { city: "Delhi", duration: "5h", price: "₹400-1,000", frequency: "25+ daily", type: "Volvo AC", operator: "RSRTC, Private", bookingUrl: "https://www.redbus.in/" },
+          { city: "Agra", duration: "4h 30m", price: "₹300-700", frequency: "20+ daily", type: "AC Bus", operator: "RSRTC, UP Roadways", bookingUrl: "https://www.redbus.in/" },
+          { city: "Udaipur", duration: "5h", price: "₹300-700", frequency: "15+ daily", type: "AC Bus", operator: "RSRTC", bookingUrl: "https://www.redbus.in/" },
+          { city: "Jodhpur", duration: "6h", price: "₹350-800", frequency: "12+ daily", type: "AC Bus", operator: "RSRTC", bookingUrl: "https://www.redbus.in/" },
+          { city: "Pushkar", duration: "3h", price: "₹200-450", frequency: "10+ daily", type: "AC Bus", operator: "RSRTC, Private", bookingUrl: "https://www.redbus.in/" }
+        ]
+      },
       "New Delhi": {
         trainConnections: [
           { city: "Mumbai", duration: "16h", price: "₹500-3,000", frequency: "Multiple daily", type: "Rajdhani Express", bookingUrl: "https://www.irctc.co.in/" },

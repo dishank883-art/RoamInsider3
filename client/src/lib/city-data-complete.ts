@@ -761,35 +761,134 @@ export const citySpecificDataComplete: Record<string, CitySpecificData> = {
     secretSpots: [{ name: "Hidden Valley", location: "Tosh Village", tip: "Quiet spot for mountain work" }]
   },
   jaipur: {
-    moneyTips: ["Stay in old city guesthouses", "Eat at local Rajasthani thali places", "Use local buses", "Shop at Johari Bazaar"],
-    streetFood: [{ item: "Dal Baati Churma", price: "₹100-150 ($1.2-1.8)" }, { item: "Kachori", price: "₹20-40 ($0.25-0.50)" }],
-    wifiHotspots: { cafes: [{ name: "Tapri Central", speed: "35-50 Mbps", quality: "Good" }], publicSpaces: [{ name: "Jaipur Airport", speed: "50-80 Mbps", quality: "Excellent" }] },
-    coworkingSpaces: [{ name: "Pink City Coworking", address: "C-Scheme, Jaipur", pricing: "₹6,500/month", speedMbps: 70, amenities: ["Heritage Setting", "Cultural Events"] }],
-    localExperienceTips: ["Visit City Palace", "Explore Hawa Mahal", "Take heritage walks"],
-    transportationTips: ["Use auto-rickshaws", "Rent bikes for city exploration", "Take buses to nearby attractions"],
+    moneyTips: [
+      "Stay in heritage havelis in Old City for authentic experience at ₹800-2,000/night",
+      "Eat at traditional Rajasthani thali restaurants like Chokhi Dhani for ₹200-400",
+      "Use JCTSL bus passes for city transport - monthly pass ₹500",
+      "Shop at Johari Bazaar for jewelry and Bapu Bazaar for textiles at wholesale prices",
+      "Book heritage hotels during off-season (April-June) for 50% discounts"
+    ],
+    streetFood: [
+      { item: "Dal Baati Churma", price: "₹100-150 ($1.2-1.8)" },
+      { item: "Pyaaz Kachori", price: "₹20-40 ($0.25-0.50)" },
+      { item: "Laal Maas", price: "₹200-350 ($2.4-4.2)" },
+      { item: "Ghewar", price: "₹30-60 ($0.36-0.72)" },
+      { item: "Mirchi Bada", price: "₹15-30 ($0.18-0.36)" },
+      { item: "Kulfi Faluda", price: "₹40-80 ($0.48-0.96)" }
+    ],
+    wifiHotspots: {
+      cafes: [
+        { name: "Tapri Central", speed: "35-50 Mbps", quality: "Good" },
+        { name: "Café Coffee Day City Palace", speed: "30-45 Mbps", quality: "Good" },
+        { name: "The Tea Room at Amer", speed: "25-40 Mbps", quality: "Fair" },
+        { name: "Anokhi Café", speed: "40-60 Mbps", quality: "Good" }
+      ],
+      publicSpaces: [
+        { name: "Jaipur Airport", speed: "50-80 Mbps", quality: "Excellent" },
+        { name: "World Trade Park", speed: "45-70 Mbps", quality: "Excellent" },
+        { name: "Jaipur Railway Station", speed: "20-35 Mbps", quality: "Fair" }
+      ]
+    },
+    coworkingSpaces: [
+      {
+        name: "91springboard Jaipur",
+        address: "Malviya Nagar, Jaipur",
+        pricing: "₹7,000/month",
+        speedMbps: 100,
+        amenities: ["Heritage Building", "Meeting Rooms", "Events", "Networking"]
+      },
+      {
+        name: "Pink City Coworking",
+        address: "C-Scheme, Jaipur",
+        pricing: "₹6,500/month",
+        speedMbps: 70,
+        amenities: ["Heritage Setting", "Cultural Events", "Royal Ambiance"]
+      },
+      {
+        name: "CoWork Jaipur",
+        address: "Vaishali Nagar, Jaipur",
+        pricing: "₹5,500/month",
+        speedMbps: 80,
+        amenities: ["Modern Workspace", "AC", "Printing", "Cafe"]
+      }
+    ],
+    localExperienceTips: [
+      "Visit City Palace early morning (9 AM) to avoid crowds and heat",
+      "Explore Hawa Mahal from street level for best photography angles",
+      "Take heritage walks in Old City - free walking tours available",
+      "Experience puppet shows at Ravindra Rang Manch for authentic Rajasthani culture",
+      "Visit Amer Fort via elephant ride for royal experience",
+      "Attend evening aarti at Birla Mandir for spiritual experience"
+    ],
+    transportationTips: [
+      "Use pre-paid auto stands at tourist spots to avoid haggling",
+      "Rent bikes for city exploration - many rental shops near railway station",
+      "Take JCTSL buses for budget-friendly city travel (₹8-15 per ride)",
+      "Book Uber/Ola for comfortable rides during peak summer months",
+      "Use Metro service connecting major areas - clean and air-conditioned",
+      "Hire cycle-rickshaws for short distances in Old City narrow lanes"
+    ],
     climateImpact: {
       workingConditions: [
         "Extreme desert heat (35-47°C) in summer makes outdoor work impossible April-June",
         "Pleasant winter weather (8-25°C) perfect for heritage hotel courtyards and palace work",
         "Moderate monsoon (July-September) brings relief but occasional connectivity issues",
-        "Royal heritage buildings provide natural cooling and inspiring work environments"
+        "Royal heritage buildings provide natural cooling and inspiring work environments",
+        "Morning hours (6-10 AM) ideal for outdoor meetings and heritage site visits"
       ],
       healthConsiderations: [
         "Severe dehydration risk during summer months - constant hydration essential",
         "Desert heat can cause heat exhaustion - work only in air-conditioned spaces",
         "Dry air year-round requires skin and lip protection",
-        "Tourist season crowds (October-March) may affect peaceful working spots"
+        "Tourist season crowds (October-March) may affect peaceful working spots",
+        "Air quality drops during winter due to crop burning - consider air purifiers"
       ],
       equipmentNeeds: [
         "Heavy-duty air conditioning essential for summer survival and productivity",
         "Cooling systems insufficient during peak summer - AC mandatory",
         "Minimal heating needed - light woolens sufficient for winter nights",
-        "Electronics may overheat in summer - ensure proper cooling and ventilation"
+        "Electronics may overheat in summer - ensure proper cooling and ventilation",
+        "Power backup essential during summer due to high AC load causing outages"
       ],
       bestMonths: "October to March for comfortable royal city weather and optimal productivity"
     },
-    insiderHacks: { accommodation: ["Stay near City Palace"], food: ["Try authentic Rajasthani cuisine"], transport: ["Use pre-paid auto stands"] },
-    secretSpots: [{ name: "Peaceful Garden", location: "Central Park", tip: "Early morning for quiet work" }]
+    insiderHacks: {
+      accommodation: [
+        "Stay near City Palace for walking access to major attractions",
+        "Book heritage havelis in advance during peak season (October-March)",
+        "Consider homestays in residential areas like Malviya Nagar for authentic experience"
+      ],
+      food: [
+        "Try authentic Rajasthani cuisine at Laxmi Mishthan Bhandar",
+        "Eat street food at Masala Chowk for hygienic local options",
+        "Visit Chokhi Dhani for traditional village-style dining experience"
+      ],
+      transport: [
+        "Use pre-paid auto stands to avoid overcharging",
+        "Download Jaipur Smart City app for bus routes and timings",
+        "Rent bikes from government-approved vendors for better service"
+      ]
+    },
+    secretSpots: [
+      {
+        name: "Sisodia Rani Garden",
+        location: "8km from city center",
+        tip: "Peaceful terraced garden perfect for morning work sessions",
+        timing: "6:00 AM - 9:00 AM"
+      },
+      {
+        name: "Nahargarh Fort Sunset Point",
+        location: "Aravalli Hills",
+        tip: "Work with panoramic city views - bring laptop for evening sessions",
+        timing: "4:00 PM - 6:30 PM"
+      },
+      {
+        name: "Central Park Rose Garden",
+        location: "Heart of Jaipur",
+        tip: "Early morning jogging track with WiFi zones for outdoor work",
+        timing: "5:30 AM - 8:00 AM"
+      }
+    ]
   },
   mumbai: {
     moneyTips: ["Share 1BHK in Andheri or Bandra East for ₹20,000-30,000/month", "Eat at local Udipi restaurants for meals under ₹150", "Use monthly train passes for unlimited local travel", "Shop at Linking Road and Colaba Causeway for reasonable prices"],
