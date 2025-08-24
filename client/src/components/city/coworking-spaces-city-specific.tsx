@@ -586,7 +586,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹3,500",
           features: ["Valley Views", "Quiet Space", "Solar Power", "Outdoor Deck", "Basic amenities"],
           rating: 4.0,
-          website: "Local guesthouse arrangements",
+          website: null, // No website available
           phone: "Contact locally",
           description: "Simple workspace in Himalayan village with stunning valley views and peaceful environment.",
           amenities: {
@@ -670,7 +670,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹9,000",
           features: ["Colonial architecture", "French ambiance", "Heritage cafés", "Beach proximity", "Cultural immersion"],
           rating: 4.1,
-          website: "Various French Quarter cafés",
+          website: null, // No specific website available
           phone: "Contact individual cafés",
           description: "Work in French colonial heritage cafés with unique architecture and cultural atmosphere.",
           amenities: {
