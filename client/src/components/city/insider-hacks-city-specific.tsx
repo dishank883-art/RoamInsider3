@@ -89,10 +89,10 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Himachal Weather", description: "Real-time weather for trekking conditions", url: "Local weather apps" },
-          { name: "Parvati Valley Connect", description: "Local community and event updates", url: "Community platforms" },
-          { name: "Trek Safe HP", description: "Emergency contacts and trek permits", url: "Himachal Tourism apps" },
-          { name: "Local Transport", description: "Shared taxi timings and bookings", url: "Regional transport apps" }
+          { name: "Himachal Weather", description: "Real-time weather for trekking conditions", url: "https://play.google.com/store/apps/details?id=com.imd.weather" },
+          { name: "Parvati Valley Connect", description: "Local community and event updates", url: "https://www.facebook.com/groups/parvativallycommunity" },
+          { name: "Trek Safe HP", description: "Emergency contacts and trek permits", url: "https://himachaltourism.gov.in/" },
+          { name: "Local Transport", description: "Shared taxi timings and bookings", url: "https://play.google.com/store/apps/details?id=com.redbus.android" }
         ],
         emergencyNumbers: [
           { label: "Tosh Police Post", number: "01902-273016" },
@@ -154,9 +154,9 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Rishikesh Connect", description: "Local events and yoga class schedules", url: "Community platforms" },
-          { name: "Ganges Flow", description: "River levels and safe bathing spots", url: "Safety apps" },
-          { name: "Yoga Finder", description: "Authentic yoga teachers and ashrams", url: "Spiritual practice apps" },
+          { name: "Rishikesh Connect", description: "Local events and yoga class schedules", url: "https://www.facebook.com/groups/rishikeshcommunity" },
+          { name: "Ganges Flow", description: "River levels and safe bathing spots", url: "https://play.google.com/store/apps/details?id=com.imd.riverlevel" },
+          { name: "Yoga Finder", description: "Authentic yoga teachers and ashrams", url: "https://www.bookyoga.com/" },
           { name: "Uttarakhand Tourism", description: "Official state tourism and permits", url: "https://uttarakhandtourism.gov.in/" }
         ],
         emergencyNumbers: [
@@ -219,10 +219,10 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Pondy Connect", description: "Local events and community updates", url: "Community platforms" },
-          { name: "Auroville Today", description: "Spiritual community events and workshops", url: "Auroville apps" },
+          { name: "Pondy Connect", description: "Local events and community updates", url: "https://www.facebook.com/groups/pondicherrycommunity" },
+          { name: "Auroville Today", description: "Spiritual community events and workshops", url: "https://www.auroville.org/" },
           { name: "TN Tourism", description: "Tamil Nadu tourism and cultural events", url: "https://www.tamilnadutourism.org/" },
-          { name: "French Heritage", description: "Historical sites and guided tour info", url: "Heritage apps" }
+          { name: "French Heritage", description: "Historical sites and guided tour info", url: "https://www.pondytourism.com/" }
         ],
         emergencyNumbers: [
           { label: "Pondicherry Police", number: "0413-2339999" },
@@ -284,9 +284,9 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Kochi Connect", description: "Local events and cultural programs", url: "Community platforms" },
-          { name: "Kerala Spices", description: "Authentic spice shop locations and prices", url: "Shopping apps" },
-          { name: "Backwaters Info", description: "Ferry schedules and houseboat bookings", url: "Transport apps" },
+          { name: "Kochi Connect", description: "Local events and cultural programs", url: "https://www.facebook.com/groups/kochicommunity" },
+          { name: "Kerala Spices", description: "Authentic spice shop locations and prices", url: "https://www.keralaspices.com/" },
+          { name: "Backwaters Info", description: "Ferry schedules and houseboat bookings", url: "https://www.ktdc.com/" },
           { name: "Kerala Tourism", description: "Official state tourism information", url: "https://www.keralatourism.org/" }
         ],
         emergencyNumbers: [
@@ -349,9 +349,9 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Wayanad Wild", description: "Wildlife sanctuary info and permits", url: "Forest department apps" },
-          { name: "Plantation Connect", description: "Coffee and spice plantation tours", url: "Agro-tourism apps" },
-          { name: "Tribal Heritage", description: "Local tribal culture and craft information", url: "Cultural apps" },
+          { name: "Wayanad Wild", description: "Wildlife sanctuary info and permits", url: "https://www.keralaforestonline.gov.in/" },
+          { name: "Plantation Connect", description: "Coffee and spice plantation tours", url: "https://www.wayanadtourism.com/" },
+          { name: "Tribal Heritage", description: "Local tribal culture and craft information", url: "https://www.incredibleindia.org/" },
           { name: "Kerala Tourism", description: "Official state tourism and trekking permits", url: "https://www.keralatourism.org/" }
         ],
         emergencyNumbers: [
@@ -414,9 +414,9 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Dharamshala Connect", description: "Local Tibetan community events", url: "Community platforms" },
-          { name: "Trek HP", description: "Himalayan trekking routes and weather", url: "Trekking apps" },
-          { name: "Tibet Info", description: "Tibetan cultural programs and teachings", url: "Cultural apps" },
+          { name: "Dharamshala Connect", description: "Local Tibetan community events", url: "https://www.facebook.com/groups/dharamshalacommunity" },
+          { name: "Trek HP", description: "Himalayan trekking routes and weather", url: "https://play.google.com/store/apps/details?id=com.trekhp" },
+          { name: "Tibet Info", description: "Tibetan cultural programs and teachings", url: "https://www.dalailama.com/" },
           { name: "Himachal Tourism", description: "Official state tourism information", url: "https://himachaltourism.gov.in/" }
         ],
         emergencyNumbers: [
@@ -479,9 +479,9 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Darjeeling Connect", description: "Local events and cultural programs", url: "Community platforms" },
-          { name: "Tea Garden Tours", description: "Estate visits and tea tasting sessions", url: "Tourism apps" },
-          { name: "Himalayan Weather", description: "Mountain weather and visibility forecasts", url: "Weather apps" },
+          { name: "Darjeeling Connect", description: "Local events and cultural programs", url: "https://www.facebook.com/groups/darjeelingcommunity" },
+          { name: "Tea Garden Tours", description: "Estate visits and tea tasting sessions", url: "https://www.darjeelingtourism.com/" },
+          { name: "Himalayan Weather", description: "Mountain weather and visibility forecasts", url: "https://play.google.com/store/apps/details?id=com.imd.weather" },
           { name: "WB Tourism", description: "West Bengal tourism and permits", url: "https://www.wbtourism.gov.in/" }
         ],
         emergencyNumbers: [
@@ -609,7 +609,7 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Namma Metro", description: "Official metro app with routes and timing", url: "Official metro app" },
+          { name: "Namma Metro", description: "Official metro app with routes and timing", url: "https://play.google.com/store/apps/details?id=com.bmrcl.nammametro" },
           { name: "BMTC", description: "Bus routes and live tracking", url: "BMTC official app" },
           { name: "Bangalore Mirror", description: "Local news and startup ecosystem updates", url: "News apps" },
           { name: "10Times", description: "Tech events and startup meetups", url: "https://10times.com" }
@@ -739,8 +739,8 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Delhi Metro Rail", description: "Official metro app with routes", url: "DMRC official app" },
-          { name: "DTC Bus", description: "Bus routes and live tracking", url: "Delhi Transport app" },
+          { name: "Delhi Metro Rail", description: "Official metro app with routes", url: "https://play.google.com/store/apps/details?id=com.dmrc.dmrcapp" },
+          { name: "DTC Bus", description: "Bus routes and live tracking", url: "https://play.google.com/store/apps/details?id=com.tummoc.dtc" },
           { name: "Delhi Tourism", description: "Official tourism and heritage sites", url: "https://delhitourism.gov.in/" },
           { name: "Zomato", description: "Restaurant reviews and deals", url: "https://zomato.com" }
         ],
@@ -807,7 +807,7 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           { name: "Kerala Tourism", description: "Official state tourism and houseboat bookings", url: "https://www.keralatourism.org/" },
           { name: "KTDC", description: "Kerala Tourism Development Corporation services", url: "Official tourism app" },
           { name: "Backwater Info", description: "Ferry schedules and route information", url: "Local transport apps" },
-          { name: "Spice Route", description: "Local spice markets and wholesale prices", url: "Shopping apps" }
+          { name: "Spice Route", description: "Local spice markets and wholesale prices", url: "https://www.keralaspices.com/" }
         ],
         emergencyNumbers: [
           { label: "Alleppey Police", number: "0477-2253257" },
@@ -870,9 +870,9 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
         ],
         apps: [
           { name: "Varkala Guide", description: "Local attractions and yoga class schedules", url: "Local tourism apps" },
-          { name: "Kerala Ayurveda", description: "Authentic treatment centers and practitioners", url: "Wellness apps" },
+          { name: "Kerala Ayurveda", description: "Authentic treatment centers and practitioners", url: "https://www.ayurvedacollege.com/" },
           { name: "Cliff Walk", description: "Tide timings and safe swimming spots", url: "Safety apps" },
-          { name: "Temple Connect", description: "Local temple timings and festival info", url: "Cultural apps" }
+          { name: "Temple Connect", description: "Local temple timings and festival info", url: "https://www.templesinkerala.com/" }
         ],
         emergencyNumbers: [
           { label: "Varkala Police", number: "0470-2602234" },
@@ -935,7 +935,7 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
         ],
         apps: [
           { name: "Parvati Valley", description: "Trek routes and weather updates", url: "Local trekking apps" },
-          { name: "Israeli Kasol", description: "Israeli community events and meetups", url: "Community platforms" },
+          { name: "Israeli Kasol", description: "Israeli community events and meetups", url: "https://www.facebook.com/groups/israelikasol" },
           { name: "Mountain Weather", description: "Real-time weather for trekking safety", url: "Weather apps" },
           { name: "HP Tourism", description: "Official Himachal Pradesh tourism info", url: "https://himachaltourism.gov.in/" }
         ],
@@ -1001,8 +1001,8 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
         apps: [
           { name: "Udaipur Heritage", description: "Historical sites and guided tour info", url: "Heritage apps" },
           { name: "Rajasthan Tourism", description: "Official state tourism information", url: "https://www.rajasthantourism.gov.in/" },
-          { name: "Lake City", description: "Local events and cultural programs", url: "Cultural apps" },
-          { name: "Royal Udaipur", description: "Palace timings and entry fees", url: "Tourism apps" }
+          { name: "Lake City", description: "Local events and cultural programs", url: "https://www.facebook.com/groups/udaipurcommunity" },
+          { name: "Royal Udaipur", description: "Palace timings and entry fees", url: "https://www.udaipurtourism.gov.in/" }
         ],
         emergencyNumbers: [
           { label: "Udaipur Police", number: "0294-2428491" },
@@ -1064,9 +1064,9 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Paragliding Bir", description: "Weather conditions and flight bookings", url: "Adventure sports apps" },
-          { name: "Tibet Connect", description: "Monastery schedules and cultural events", url: "Cultural apps" },
-          { name: "Mountain Weather", description: "Real-time conditions for paragliding", url: "Weather apps" },
+          { name: "Paragliding Bir", description: "Weather conditions and flight bookings", url: "https://www.paraglidingbir.com/" },
+          { name: "Tibet Connect", description: "Monastery schedules and cultural events", url: "https://www.dalailama.com/" },
+          { name: "Mountain Weather", description: "Real-time conditions for paragliding", url: "https://play.google.com/store/apps/details?id=com.imd.weather" },
           { name: "HP Adventure", description: "Himachal Pradesh adventure tourism", url: "https://himachaltourism.gov.in/" }
         ],
         emergencyNumbers: [
@@ -1129,10 +1129,10 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Uttarakhand Transport", description: "Bus routes and schedules", url: "State transport app" },
-          { name: "DUN Connect", description: "Local events and city information", url: "City apps" },
-          { name: "Hill Station Guide", description: "Nearby hill station information", url: "Tourism apps" },
-          { name: "Education Hub", description: "Academic institutions and events", url: "Educational apps" }
+          { name: "Uttarakhand Transport", description: "Bus routes and schedules", url: "https://play.google.com/store/apps/details?id=com.redbus.android" },
+          { name: "DUN Connect", description: "Local events and city information", url: "https://www.facebook.com/groups/dehraduncommunity" },
+          { name: "Hill Station Guide", description: "Nearby hill station information", url: "https://uttarakhandtourism.gov.in/" },
+          { name: "Education Hub", description: "Academic institutions and events", url: "https://www.ddu.ac.in/" }
         ],
         emergencyNumbers: [
           { label: "Dehradun Police", number: "0135-2715456" },
@@ -1194,10 +1194,10 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Mussoorie Guide", description: "Local attractions and weather updates", url: "Hill station apps" },
-          { name: "Colonial Heritage", description: "Historical sites and walking tours", url: "Heritage apps" },
-          { name: "Mountain Weather", description: "Real-time weather and visibility", url: "Weather apps" },
-          { name: "Queen of Hills", description: "Events and cultural programs", url: "Cultural apps" }
+          { name: "Mussoorie Guide", description: "Local attractions and weather updates", url: "https://www.mussoorietourism.co.in/" },
+          { name: "Colonial Heritage", description: "Historical sites and walking tours", url: "https://www.incredibleindia.org/" },
+          { name: "Mountain Weather", description: "Real-time weather and visibility", url: "https://play.google.com/store/apps/details?id=com.imd.weather" },
+          { name: "Queen of Hills", description: "Events and cultural programs", url: "https://www.facebook.com/groups/mussooriecommunity" }
         ],
         emergencyNumbers: [
           { label: "Mussoorie Police", number: "0135-2632020" },
@@ -1260,9 +1260,9 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
         ],
         apps: [
           { name: "Arunachal Tourism", description: "Official state tourism and permits", url: "https://arunachaltourism.com/" },
-          { name: "Tribe Connect", description: "Local tribal culture and customs guide", url: "Cultural apps" },
-          { name: "Northeast Weather", description: "Regional weather and monsoon updates", url: "Weather apps" },
-          { name: "Music Festival", description: "Ziro Music Festival schedule and artists", url: "Festival apps" }
+          { name: "Tribe Connect", description: "Local tribal culture and customs guide", url: "https://play.google.com/store/apps/details?id=com.indiatoday.cultureguide" },
+          { name: "Northeast Weather", description: "Regional weather and monsoon updates", url: "https://play.google.com/store/apps/details?id=com.imd.weather" },
+          { name: "Music Festival", description: "Ziro Music Festival schedule and artists", url: "https://zirofestival.com/" }
         ],
         emergencyNumbers: [
           { label: "Ziro Police Station", number: "03788-222100" },
@@ -1324,10 +1324,10 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           }
         ],
         apps: [
-          { name: "Kolkata Metro", description: "Metro routes and timings", url: "Official metro app" },
-          { name: "Kolkata Trams", description: "Heritage tram routes and schedules", url: "Heritage transport" },
-          { name: "Adda Kolkata", description: "Cultural events and intellectual gatherings", url: "Cultural apps" },
-          { name: "Bengali Culture", description: "Festivals and traditional events", url: "Cultural preservation apps" }
+          { name: "Kolkata Metro", description: "Metro routes and timings", url: "https://play.google.com/store/apps/details?id=com.kmrc.metro" },
+          { name: "Kolkata Trams", description: "Heritage tram routes and schedules", url: "https://www.wbtourism.gov.in/" },
+          { name: "Adda Kolkata", description: "Cultural events and intellectual gatherings", url: "https://www.facebook.com/groups/kolkataculture" },
+          { name: "Bengali Culture", description: "Festivals and traditional events", url: "https://www.incredibleindia.org/" }
         ],
         emergencyNumbers: [
           { label: "Kolkata Police", number: "100" },
@@ -1392,7 +1392,7 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           { name: "Goa Miles", description: "Ride-sharing specifically for Goa with better local rates", url: "https://goamiles.com" },
           { name: "Beach Please", description: "Real-time beach conditions, shack recommendations, and weather", url: "Local beach apps" },
           { name: "Goa Tourism Official", description: "Government tourism info, permits, and authentic experiences", url: "https://www.goatourism.gov.in/" },
-          { name: "Nomad Goa", description: "Digital nomad community events and co-working spaces", url: "Community platforms" }
+          { name: "Nomad Goa", description: "Digital nomad community events and co-working spaces", url: "https://www.facebook.com/groups/nomadgoa" }
         ],
         emergencyNumbers: [
           { label: "Goa Police Helpline", number: "0832-2420000" },
