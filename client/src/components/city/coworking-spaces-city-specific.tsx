@@ -138,48 +138,6 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           }
         }
       ],
-      "Mussoorie": [
-        {
-          name: "Landour Language School Workspace",
-          location: "Landour",
-          type: "Educational Coworking",
-          dayPass: "₹350",
-          monthlyDesk: "₹5,500",
-          monthlyPrivate: "₹9,000",
-          features: ["Mountain views", "Quiet environment", "Good WiFi", "Library", "Language learning community"],
-          rating: 4.0,
-          website: "https://landourlanguageschool.com/",
-          phone: "+91 135 2631327",
-          description: "Peaceful workspace in educational setting with stunning mountain views.",
-          amenities: {
-            wifi: "30+ Mbps",
-            hours: "9 AM - 6 PM",
-            printers: "Yes",
-            coffee: "Tea/coffee facility",
-            aircon: "No (natural cooling)"
-          }
-        },
-        {
-          name: "Mall Road Café Workspaces",
-          location: "Various Mall Road locations",
-          type: "Café Coworking",
-          dayPass: "₹250",
-          monthlyDesk: "₹4,000",
-          monthlyPrivate: "Not available",
-          features: ["Tourist area", "Good connectivity", "Food options", "Central location", "Multiple café options"],
-          rating: 3.8,
-          website: null, // No specific website
-          phone: "Contact individual cafés",
-          description: "Multiple café options along Mall Road offering workspace-friendly environments.",
-          amenities: {
-            wifi: "15-25 Mbps",
-            hours: "8 AM - 10 PM",
-            printers: "Limited",
-            coffee: "Good food and beverages",
-            aircon: "Some locations"
-          }
-        }
-      ],
       "Ziro": [
         {
           name: "Apatani Cultural Center",
@@ -219,234 +177,6 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
             printers: "No",
             coffee: "Lodge dining available",
             aircon: "No"
-          }
-        }
-      ],
-      "Kolkata": [
-        {
-          name: "91springboard Kolkata",
-          location: "Salt Lake, Sector V",
-          type: "Premium Coworking",
-          dayPass: "₹500",
-          monthlyDesk: "₹8,000",
-          monthlyPrivate: "₹15,000",
-          features: ["High-speed WiFi", "Meeting rooms", "Events", "Cafe", "IT hub location", "Networking"],
-          rating: 4.5,
-          website: "https://www.91springboard.com/",
-          phone: "+91 33 4064 1234",
-          description: "Premium coworking space in Kolkata's IT hub with excellent facilities and community.",
-          amenities: {
-            wifi: "100+ Mbps",
-            hours: "24/7 access",
-            printers: "Yes",
-            coffee: "Unlimited",
-            aircon: "Yes"
-          }
-        },
-        {
-          name: "The ADDA",
-          location: "Park Street",
-          type: "Cultural Coworking",
-          dayPass: "₹400",
-          monthlyDesk: "₹7,000",
-          monthlyPrivate: "₹12,000",
-          features: ["Cultural ambiance", "Good WiFi", "Central location", "Networking events", "Creative community"],
-          rating: 4.2,
-          website: null, // Website not working
-          phone: "+91 33 2229 1234",
-          description: "Coworking space celebrating Kolkata's cultural heritage with modern facilities.",
-          amenities: {
-            wifi: "80+ Mbps",
-            hours: "9 AM - 11 PM",
-            printers: "Yes",
-            coffee: "Excellent café",
-            aircon: "Yes"
-          }
-        },
-        {
-          name: "Rabindra Sarovar Area Cafés",
-          location: "Near Rabindra Sarovar",
-          type: "Café Coworking",
-          dayPass: "₹250",
-          monthlyDesk: "₹5,000",
-          monthlyPrivate: "Not available",
-          features: ["Lake views", "Peaceful environment", "Good connectivity", "Multiple café options", "Cultural area"],
-          rating: 4.0,
-          website: null, // No specific website
-          phone: "Contact individual establishments",
-          description: "Multiple cafés around the lake offering peaceful workspace environments.",
-          amenities: {
-            wifi: "30-50 Mbps",
-            hours: "8 AM - 10 PM",
-            printers: "Limited",
-            coffee: "Bengali coffee culture",
-            aircon: "Most locations"
-          }
-        }
-      ],
-      "Mumbai": [
-        {
-          name: "WeWork BKC",
-          location: "Bandra Kurla Complex",
-          type: "Premium Corporate",
-          dayPass: "₹800",
-          monthlyDesk: "₹12,000",
-          monthlyPrivate: "₹22,000",
-          features: ["Premium location", "24/7 access", "Meeting rooms", "Events", "Concierge"],
-          rating: 4.6,
-          website: "https://www.wework.com/",
-          phone: "+91 22 6789 0000",
-          description: "Premium corporate coworking in Mumbai's financial district with all amenities.",
-          amenities: {
-            wifi: "200+ Mbps",
-            hours: "24/7 access",
-            printers: "Yes",
-            coffee: "Barista coffee",
-            aircon: "Central AC"
-          }
-        },
-        {
-          name: "91springboard Andheri",
-          location: "Andheri East",
-          type: "Tech Hub",
-          dayPass: "₹600",
-          monthlyDesk: "₹9,500",
-          monthlyPrivate: "₹18,000",
-          features: ["Tech community", "Mentorship", "Networking", "Events", "Startup programs"],
-          rating: 4.4,
-          website: "https://www.91springboard.com/",
-          phone: "+91 22 6789 1234",
-          description: "Tech-focused coworking space with strong startup community and mentorship programs.",
-          amenities: {
-            wifi: "150+ Mbps",
-            hours: "24/7 access",
-            printers: "Yes",
-            coffee: "Unlimited",
-            aircon: "Yes"
-          }
-        },
-        {
-          name: "IndiQube Powai",
-          location: "Powai, Near Tech Parks",
-          type: "Business Center",
-          dayPass: "₹700",
-          monthlyDesk: "₹11,000",
-          monthlyPrivate: "₹20,000",
-          features: ["Business services", "Reception", "IT support", "Security", "Parking"],
-          rating: 4.3,
-          website: "https://www.indiqube.com/",
-          phone: "+91 22 6789 5678",
-          description: "Professional business center with full corporate services and IT support.",
-          amenities: {
-            wifi: "200+ Mbps",
-            hours: "24/7 access",
-            printers: "Yes",
-            coffee: "Cafe",
-            aircon: "Central AC"
-          }
-        }
-      ],
-      "Bangalore": [
-        {
-          name: "WeWork Koramangala",
-          location: "Koramangala 5th Block",
-          type: "Tech Hub",
-          dayPass: "₹700",
-          monthlyDesk: "₹10,000",
-          monthlyPrivate: "₹19,000",
-          features: ["Startup ecosystem", "Tech community", "Events", "Meeting rooms", "Game zone"],
-          rating: 4.5,
-          website: "https://www.wework.com/",
-          phone: "+91 80 6789 0000",
-          description: "Premier tech coworking space in Bangalore's startup district with vibrant community.",
-          amenities: {
-            wifi: "200+ Mbps",
-            hours: "24/7 access",
-            printers: "Yes",
-            coffee: "Unlimited",
-            aircon: "Central AC"
-          }
-        },
-        {
-          name: "The Hive",
-          location: "Indiranagar",
-          type: "Creative Hub",
-          dayPass: "₹500",
-          monthlyDesk: "₹8,500",
-          monthlyPrivate: "₹16,000",
-          features: ["Creative community", "Design studios", "Workshops", "Networking", "Rooftop"],
-          rating: 4.4,
-          website: "https://thehive.work/",
-          phone: "+91 80 6789 1234",
-          description: "Creative coworking space for designers, developers, and digital professionals.",
-          amenities: {
-            wifi: "150+ Mbps",
-            hours: "8 AM - 10 PM",
-            printers: "Yes",
-            coffee: "Specialty coffee",
-            aircon: "Yes"
-          }
-        },
-        {
-          name: "CoWrks RMZ Infinity",
-          location: "Old Madras Road",
-          type: "Premium Corporate",
-          dayPass: "₹800",
-          monthlyDesk: "₹12,000",
-          monthlyPrivate: "₹23,000",
-          features: ["Premium facilities", "Corporate services", "Tech support", "Wellness center", "Food court"],
-          rating: 4.6,
-          website: "https://cowrks.com/",
-          phone: "+91 80 6789 5678",
-          description: "Premium corporate coworking with enterprise-grade facilities and services.",
-          amenities: {
-            wifi: "300+ Mbps",
-            hours: "24/7 access",
-            printers: "Yes",
-            coffee: "Multiple cafes",
-            aircon: "Central AC"
-          }
-        }
-      ],
-      "New Delhi": [
-        {
-          name: "WeWork Cyber Hub",
-          location: "DLF Cyber Hub, Gurgaon",
-          type: "Corporate Premium",
-          dayPass: "₹900",
-          monthlyDesk: "₹13,000",
-          monthlyPrivate: "₹25,000",
-          features: ["Premium location", "Corporate services", "International community", "Events", "Wellness"],
-          rating: 4.7,
-          website: "https://www.wework.com/",
-          phone: "+91 124 6789 0000",
-          description: "Premium corporate coworking in Delhi NCR's tech hub with international standards.",
-          amenities: {
-            wifi: "300+ Mbps",
-            hours: "24/7 access",
-            printers: "Yes",
-            coffee: "Premium coffee",
-            aircon: "Central AC"
-          }
-        },
-        {
-          name: "91springboard Delhi",
-          location: "Connaught Place",
-          type: "Startup Hub",
-          dayPass: "₹650",
-          monthlyDesk: "₹10,500",
-          monthlyPrivate: "₹20,000",
-          features: ["Central location", "Startup community", "Government connects", "Events", "Mentorship"],
-          rating: 4.4,
-          website: "https://www.91springboard.com/",
-          phone: "+91 11 6789 1234",
-          description: "Central Delhi coworking space with strong startup ecosystem and government connections.",
-          amenities: {
-            wifi: "200+ Mbps",
-            hours: "24/7 access",
-            printers: "Yes",
-            coffee: "Unlimited",
-            aircon: "Yes"
           }
         }
       ],
@@ -1456,7 +1186,17 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
                   </div>
                 </div>
                 <div className="flex space-x-2">
-                  {space.website && space.website !== "Local inquiry" && (
+                  {space.website && 
+                   space.website !== "Local inquiry" && 
+                   space.website !== "Community-based workspace" &&
+                   space.website !== "Various spiritual centers" &&
+                   space.website !== "Various Mall Road cafés" &&
+                   space.website !== "Contact individual cafés" &&
+                   space.website !== "Contact locally" &&
+                   space.website !== "Local inquiry only" &&
+                   !space.website.includes("Various") &&
+                   !space.website.includes("Contact") &&
+                   space.website.startsWith("http") && (
                     <Button size="sm" variant="outline" asChild>
                       <a href={space.website} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-3 w-3 mr-1" />
