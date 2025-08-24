@@ -3029,7 +3029,7 @@ export class MemStorage implements IStorage {
       state: "Himachal Pradesh", 
       slug: "mcleodganj",
       description: "Little Lhasa with Dalai Lama's residence, Tibetan culture, trekking, and spiritual retreats.",
-      heroImage: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+      heroImage: "https://images.unsplash.com/photo-1655469795982-40b85d7faf92?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWNsZW9kZ2FuanxlbnwwfHwwfHx8MA%3D%3D",
       latitude: "32.2396",
       longitude: "76.3200",
       population: 9000,
