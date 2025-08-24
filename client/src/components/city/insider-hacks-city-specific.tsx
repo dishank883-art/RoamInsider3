@@ -1399,6 +1399,80 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           { label: "Fire Brigade", number: "101" },
           { label: "Women's Helpline", number: "1091" }
         ]
+      },
+      "Jaipur": {
+        moneyHacks: {
+          accommodation: [
+            "Stay in heritage havelis in Old City for authentic royal experience at ₹800-2,000/night",
+            "Book heritage hotels during off-season (April-June) for 50% discounts on palace stays",
+            "Share apartments in Malviya Nagar/C-Scheme with other nomads for ₹8,000-15,000/month",
+            "Use StayVista or similar platforms for monthly discounts on heritage properties",
+            "Consider homestays in residential areas like Civil Lines for authentic Rajasthani family experience"
+          ],
+          food: [
+            "Eat at traditional thali restaurants like Chokhi Dhani for authentic royal cuisine ₹200-400",
+            "Try street food at Masala Chowk - hygienic local food court with fixed government prices",
+            "Shop at Johari Bazaar spice market for authentic ingredients at wholesale rates (60% cheaper)",
+            "Visit Laxmi Mishthan Bhandar for authentic Rajasthani sweets and snacks since 1954",
+            "Use food delivery apps during summer months (April-June) to avoid extreme heat"
+          ],
+          transport: [
+            "Use JCTSL bus passes for unlimited city travel - monthly pass ₹500 vs ₹15 per ride",
+            "Rent monthly bikes for ₹2,000-3,000 from government-approved vendors near railway station",
+            "Use pre-paid auto stands at tourist spots (City Palace, Hawa Mahal) to avoid haggling",
+            "Download Jaipur Smart City app for real-time bus routes, timings, and digital payments",
+            "Book Uber/Ola during peak summer for AC comfort (₹100-200 vs ₹50-80 for auto in heat)"
+          ]
+        },
+        secretSpots: [
+          {
+            name: "Sisodia Rani Garden Workspace",
+            location: "8km from city center",
+            tip: "Peaceful terraced garden perfect for morning work sessions with natural WiFi zones and heritage ambiance",
+            timing: "6:00 AM - 9:00 AM for cool weather and solitude",
+            coordinates: "26.8512°N, 75.8747°E"
+          },
+          {
+            name: "Nahargarh Fort Sunset Coworking",
+            location: "Aravalli Hills overlooking Pink City",
+            tip: "Work with panoramic city views from 700-year-old fort - bring laptop for evening sessions, small heritage café available",
+            timing: "4:00 PM - 6:30 PM for golden hour productivity",
+            website: "https://www.facebook.com/nahargarhjaipur/"
+          },
+          {
+            name: "Central Park Rose Garden WiFi Zone",
+            location: "Heart of Jaipur near SMS Stadium",
+            tip: "Early morning jogging track with free government WiFi zones for outdoor work and fresh air",
+            timing: "5:30 AM - 8:00 AM before heat and crowds"
+          },
+          {
+            name: "Hidden Café at Anokhi Museum",
+            location: "7 Tilak Marg, C-Scheme",
+            tip: "Quiet museum café with excellent WiFi, AC, and cultural textile exhibition ambiance - ₹300/day with unlimited coffee",
+            timing: "10:00 AM - 7:00 PM",
+            website: "https://www.anokhi.com/"
+          },
+          {
+            name: "City Palace Secret Zenana Courtyard",
+            location: "City Palace Complex",
+            tip: "Ask museum guards for 'Zenana Deodi' courtyard access - quiet heritage workspace for ₹100 extra entry fee, royal atmosphere",
+            timing: "10:00 AM - 4:00 PM",
+            coordinates: "26.9260°N, 75.8239°E"
+          }
+        ],
+        apps: [
+          { name: "Jaipur Smart City", description: "Official app for bus routes, timings, digital payments, and city services", url: "https://play.google.com/store/apps/details?id=in.gov.rajasthan.jaipursmartcity" },
+          { name: "RSRTC Bus Service", description: "Real-time Rajasthan state transport bus tracking and bookings", url: "https://rsrtconline.rajasthan.gov.in/" },
+          { name: "Pink City Guide", description: "Authentic local recommendations and heritage walk routes", url: "https://www.jaipurtourism.co.in/" },
+          { name: "Rajasthan Tourism", description: "Official state tourism app with permits, events, and authentic experiences", url: "https://www.rajasthantourism.gov.in/" }
+        ],
+        emergencyNumbers: [
+          { label: "Jaipur Police Control", number: "0141-2743000" },
+          { label: "Tourist Helpline Rajasthan", number: "1363" },
+          { label: "Medical Emergency", number: "108" },
+          { label: "Fire Brigade", number: "101" },
+          { label: "Women's Helpline", number: "1091" }
+        ]
       }
     };
 
