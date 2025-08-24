@@ -9,9 +9,8 @@ export default function Navigation() {
 
   const navItems: Array<{ href: string; label: string; external?: boolean }> = [
     { href: "/", label: "Cities" },
-    { href: "#", label: "Guides" },
     { href: "https://discord.gg/Y39GGpQtMm", label: "Community", external: true },
-    { href: "#", label: "Blog" },
+    { href: "/blog", label: "Blog" },
   ];
 
   return (

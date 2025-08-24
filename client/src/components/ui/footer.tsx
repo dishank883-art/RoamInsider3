@@ -74,7 +74,8 @@ export default function Footer() {
                   <li key={linkIndex}>
                     <Link 
                       href={link.href} 
-                      className="hover:text-vintage-gold transition-colors"
+                      className="hover:text-vintage-gold transition-colors block py-1 touch-manipulation"
+                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
                     >
                       {link.label}
                     </Link>
