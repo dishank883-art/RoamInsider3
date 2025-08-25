@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useToast } from "@/hooks/use-toast";
 import { Star, MessageSquare, ThumbsUp, Calendar, User, MapPin, ExternalLink } from "lucide-react";
 import type { CityWithDetails } from "@shared/schema";
 
@@ -31,6 +32,15 @@ export default function Reviews({ city }: ReviewsProps) {
   const [showAddReview, setShowAddReview] = useState(false);
   const [sortBy, setSortBy] = useState("recent");
   const [filterRating, setFilterRating] = useState("all");
+  const [rating, setRating] = useState(0);
+  const [formData, setFormData] = useState({
+    name: "",
+    profession: "",
+    stayDuration: "",
+    title: "",
+    content: ""
+  });
+  const { toast } = useToast();
 
   // Reviews would come from API in production - currently empty to collect authentic reviews
   const reviews: Review[] = [];
@@ -58,6 +68,34 @@ export default function Reviews({ city }: ReviewsProps) {
         className={`${className} ${i < rating ? "fill-vintage-gold text-vintage-gold" : "text-gray-300"}`}
       />
     ));
+  };
+
+  const handleSubmitReview = async () => {
+    if (!formData.name || !formData.profession || !formData.title || !formData.content || !rating || !formData.stayDuration) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all fields and provide a rating.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // In a real app, this would submit to an API
+    toast({
+      title: "Review Submitted!",
+      description: `Thank you for sharing your experience in ${city.name}. Your review helps other nomads make informed decisions.`,
+    });
+
+    // Reset form
+    setFormData({
+      name: "",
+      profession: "",
+      stayDuration: "",
+      title: "",
+      content: ""
+    });
+    setRating(0);
+    setShowAddReview(false);
   };
 
   return (
@@ -164,12 +202,22 @@ export default function Reviews({ city }: ReviewsProps) {
             <h3 className="font-semibold text-travel-blue mb-4">Share Your Experience</h3>
             <div className="space-y-4">
               <div className="grid md:grid-cols-2 gap-4">
-                <Input placeholder="Your name" data-testid="reviewer-name" />
-                <Input placeholder="Your profession (e.g., Software Developer)" data-testid="reviewer-profession" />
+                <Input 
+                  placeholder="Your name" 
+                  data-testid="reviewer-name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                />
+                <Input 
+                  placeholder="Your profession (e.g., Software Developer)" 
+                  data-testid="reviewer-profession"
+                  value={formData.profession}
+                  onChange={(e) => setFormData({...formData, profession: e.target.value})}
+                />
               </div>
               
               <div className="grid md:grid-cols-2 gap-4">
-                <Select>
+                <Select value={formData.stayDuration} onValueChange={(value) => setFormData({...formData, stayDuration: value})}>
                   <SelectTrigger data-testid="stay-duration">
                     <SelectValue placeholder="How long did you stay?" />
                   </SelectTrigger>
@@ -188,7 +236,10 @@ export default function Reviews({ city }: ReviewsProps) {
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star
                         key={i}
-                        className="h-6 w-6 cursor-pointer text-gray-300 hover:text-vintage-gold transition-colors"
+                        className={`h-6 w-6 cursor-pointer transition-colors ${
+                          i < rating ? "fill-vintage-gold text-vintage-gold" : "text-gray-300 hover:text-vintage-gold"
+                        }`}
+                        onClick={() => setRating(i + 1)}
                         data-testid={`rating-star-${i + 1}`}
                       />
                     ))}
@@ -196,18 +247,29 @@ export default function Reviews({ city }: ReviewsProps) {
                 </div>
               </div>
               
-              <Input placeholder="Review title" data-testid="review-title" />
+              <Input 
+                placeholder="Review title" 
+                data-testid="review-title"
+                value={formData.title}
+                onChange={(e) => setFormData({...formData, title: e.target.value})}
+              />
               <Textarea 
                 placeholder="Share your detailed experience living and working in this city..." 
                 className="min-h-[120px]"
                 data-testid="review-content"
+                value={formData.content}
+                onChange={(e) => setFormData({...formData, content: e.target.value})}
               />
               
               <div className="flex justify-end space-x-3">
                 <Button variant="outline" onClick={() => setShowAddReview(false)}>
                   Cancel
                 </Button>
-                <Button className="bg-vintage-gold text-white hover:bg-vintage-gold/90">
+                <Button 
+                  className="bg-vintage-gold text-white hover:bg-vintage-gold/90"
+                  onClick={handleSubmitReview}
+                  data-testid="submit-review-button"
+                >
                   Submit Review
                 </Button>
               </div>
