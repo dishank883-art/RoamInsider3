@@ -6,28 +6,28 @@ export default function Footer() {
     {
       title: "Explore",
       links: [
-        { label: "All Cities", href: "cities-section", type: "scroll" },
-        { label: "Popular Destinations", href: "cities-section", type: "scroll" },
-        { label: "Hidden Gems", href: "mailto:remote@roaminsider.com", type: "email" },
-        { label: "Budget Cities", href: "mailto:remote@roaminsider.com", type: "email" },
-        { label: "Tech Hubs", href: "mailto:remote@roaminsider.com", type: "email" },
+        { label: "All Cities", href: "/cities", type: "link" },
+        { label: "Popular Destinations", href: "/popular", type: "link" },
+        { label: "Hidden Gems", href: "/hidden-gems", type: "link" },
+        { label: "Budget Cities", href: "/budget", type: "link" },
+        { label: "Tech Hubs", href: "/tech-hubs", type: "link" },
       ]
     },
     {
       title: "Resources",
       links: [
-        { label: "Cost Calculator", href: "mailto:remote@roaminsider.com", type: "email" },
-        { label: "Visa Guide", href: "mailto:remote@roaminsider.com", type: "email" },
+        { label: "Cost Calculator", href: "/calculator", type: "link" },
+        { label: "Visa Guide", href: "/visa", type: "link" },
       ]
     },
     {
       title: "Company",
       links: [
-        { label: "About Us", href: "mailto:remote@roaminsider.com", type: "email" },
-        { label: "Blog", href: "mailto:remote@roaminsider.com", type: "email" },
-        { label: "Contact", href: "mailto:remote@roaminsider.com", type: "email" },
-        { label: "Privacy Policy", href: "mailto:remote@roaminsider.com", type: "email" },
-        { label: "Terms of Service", href: "mailto:remote@roaminsider.com", type: "email" },
+        { label: "About Us", href: "/about", type: "link" },
+        { label: "Blog", href: "/blog", type: "link" },
+        { label: "Contact", href: "/contact", type: "link" },
+        { label: "Privacy Policy", href: "/privacy", type: "link" },
+        { label: "Terms of Service", href: "/terms", type: "link" },
       ]
     }
   ];
@@ -74,32 +74,13 @@ export default function Footer() {
               <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-blue-100">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    {link.type === 'scroll' ? (
-                      <button 
-                        onClick={() => {
-                          // For scroll type, look for the element by data attribute
-                          const element = document.querySelector(`[data-cities-section]`);
-                          if (element) {
-                            element.scrollIntoView({ behavior: 'smooth' });
-                          } else {
-                            // If section doesn't exist, scroll to top
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                          }
-                        }}
-                        className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation text-left w-full"
-                        data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                      >
-                        {link.label}
-                      </button>
-                    ) : (
-                      <a 
-                        href={link.href}
-                        className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation"
-                        data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                      >
-                        {link.label}
-                      </a>
-                    )}
+                    <Link 
+                      href={link.href}
+                      className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation"
+                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                    >
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
