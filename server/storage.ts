@@ -4442,6 +4442,15 @@ export class MemStorage implements IStorage {
       createdAt: new Date(),
     });
 
+    const rishikeshAttr2 = randomUUID();
+    this.attractions.set(rishikeshAttr2, {
+      id: rishikeshAttr2, cityId: rishikeshId, name: "Laxman Jhula",
+      description: "Historic suspension bridge connecting Tapovan and Jonk with spiritual significance", category: "Spiritual",
+      priceRange: "Free", address: "Laxman Jhula, Rishikesh", timings: "24 hours",
+      isHiddenGem: false, rating: "4.6", image: "https://images.unsplash.com/photo-1718431108698-2324891fd796?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxheG1hbiUyMGpodWxhfGVufDB8fDB8fHww",
+      createdAt: new Date(),
+    });
+
     const pondicherryAttr1 = randomUUID();
     this.attractions.set(pondicherryAttr1, {
       id: pondicherryAttr1, cityId: pondicherryId, name: "French Quarter",
