@@ -4438,7 +4438,7 @@ export class MemStorage implements IStorage {
       id: rishikeshAttr1, cityId: rishikeshId, name: "Ram Jhula",
       description: "Iconic suspension bridge over Ganges river", category: "Spiritual",
       priceRange: "Free", address: "Ram Jhula, Rishikesh", timings: "24 hours",
-      isHiddenGem: false, rating: "4.5", image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da",
+      isHiddenGem: false, rating: "4.5", image: "https://images.unsplash.com/photo-1724432191302-6133b34c7105?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFtJTIwamh1bGF8ZW58MHx8MHx8fDA%3D",
       createdAt: new Date(),
     });
 
