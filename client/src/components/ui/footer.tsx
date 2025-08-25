@@ -6,28 +6,28 @@ export default function Footer() {
     {
       title: "Explore",
       links: [
-        { label: "All Cities", href: "/cities" },
-        { label: "Popular Destinations", href: "/popular" },
-        { label: "Hidden Gems", href: "/hidden-gems" },
-        { label: "Budget Cities", href: "/budget" },
-        { label: "Tech Hubs", href: "/tech-hubs" },
+        { label: "All Cities", href: "/#all-cities", type: "scroll" },
+        { label: "Popular Destinations", href: "/#popular-cities", type: "scroll" },
+        { label: "Hidden Gems", href: "/#hidden-gems", type: "scroll" },
+        { label: "Budget Cities", href: "/#budget-cities", type: "scroll" },
+        { label: "Tech Hubs", href: "/#tech-hubs", type: "scroll" },
       ]
     },
     {
       title: "Resources",
       links: [
-        { label: "Cost Calculator", href: "/calculator" },
-        { label: "Visa Guide", href: "/visa" },
+        { label: "Cost Calculator", href: "mailto:remote@roaminsider.com", type: "email" },
+        { label: "Visa Guide", href: "mailto:remote@roaminsider.com", type: "email" },
       ]
     },
     {
       title: "Company",
       links: [
-        { label: "About Us", href: "/about" },
-        { label: "Blog", href: "/blog" },
-        { label: "Contact", href: "/contact" },
-        { label: "Privacy Policy", href: "/privacy" },
-        { label: "Terms of Service", href: "/terms" },
+        { label: "About Us", href: "/#about", type: "scroll" },
+        { label: "Blog", href: "mailto:remote@roaminsider.com", type: "email" },
+        { label: "Contact", href: "mailto:remote@roaminsider.com", type: "email" },
+        { label: "Privacy Policy", href: "mailto:remote@roaminsider.com", type: "email" },
+        { label: "Terms of Service", href: "mailto:remote@roaminsider.com", type: "email" },
       ]
     }
   ];
@@ -74,14 +74,36 @@ export default function Footer() {
               <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-blue-100">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    {/* For non-existing pages, redirect to contact email */}
-                    <a 
-                      href="mailto:remote@roaminsider.com" 
-                      className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation"
-                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                    >
-                      {link.label}
-                    </a>
+                    {link.type === 'scroll' ? (
+                      <Link 
+                        href={link.href} 
+                        className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation"
+                        data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                        onClick={() => {
+                          // Extract the section ID from href and scroll to it
+                          const sectionId = link.href.split('#')[1];
+                          setTimeout(() => {
+                            const element = document.getElementById(sectionId);
+                            if (element) {
+                              element.scrollIntoView({ behavior: 'smooth' });
+                            } else {
+                              // If section doesn't exist, scroll to top
+                              window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }
+                          }, 100);
+                        }}
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a 
+                        href={link.href} 
+                        className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation"
+                        data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

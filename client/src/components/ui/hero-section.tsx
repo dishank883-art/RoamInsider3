@@ -21,20 +21,63 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="text-white">
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Explore India's Best 
+              India's #1 Digital Nomad
               <span className="text-vintage-gold font-script text-3xl sm:text-4xl md:text-6xl lg:text-7xl block mt-2">
-                Cities
+                Community
               </span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
-              The ultimate guide for digital nomads and travelers exploring incredible Indian destinations. 
-              Real insights, local secrets, and everything you need to roam like an insider.
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-4 sm:mb-6 leading-relaxed">
+              Connect with 200+ digital nomads exploring India's best cities. Get real cost breakdowns, insider hacks, 
+              and authentic reviews from nomads living there right now.
             </p>
+            
+            {/* Community Highlight Banner */}
+            <div className="bg-vintage-gold/20 border border-vintage-gold/30 rounded-xl p-4 mb-6 sm:mb-8">
+              <div className="flex items-center space-x-3">
+                <div className="flex -space-x-2">
+                  <div className="w-8 h-8 bg-vintage-gold rounded-full border-2 border-white flex items-center justify-center">
+                    <Users className="w-4 h-4 text-white" />
+                  </div>
+                  <div className="w-8 h-8 bg-travel-blue rounded-full border-2 border-white flex items-center justify-center">
+                    <MapPin className="w-4 h-4 text-white" />
+                  </div>
+                  <div className="w-8 h-8 bg-warm-terracotta rounded-full border-2 border-white flex items-center justify-center">
+                    <Star className="w-4 h-4 text-white fill-current" />
+                  </div>
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-sm sm:text-base">
+                    Join our active Discord community • 200+ members across 20+ Indian cities
+                  </p>
+                  <p className="text-blue-100 text-xs sm:text-sm">
+                    Real nomads sharing real experiences, costs, and insider tips daily
+                  </p>
+                </div>
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
               <Button 
                 size="lg" 
-                className="px-6 sm:px-8 py-4 sm:py-5 bg-vintage-gold text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-vintage-gold/90 transition-all duration-200 shadow-lg touch-manipulation min-h-[52px]"
+                className="px-6 sm:px-8 py-4 sm:py-5 bg-vintage-gold text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-vintage-gold/90 transition-all duration-200 shadow-lg touch-manipulation min-h-[52px] animate-pulse"
+                asChild
+              >
+                <a 
+                  href="https://discord.gg/Y39GGpQtMm" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  data-testid="join-discord-button"
+                >
+                  <Users className="mr-2 h-5 w-5" />
+                  <span className="hidden sm:inline">Join Discord Community FREE</span>
+                  <span className="sm:hidden">Join Discord FREE</span>
+                </a>
+              </Button>
+              
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="px-6 sm:px-8 py-4 sm:py-5 bg-white/10 text-white border-white/30 rounded-xl font-semibold text-base sm:text-lg hover:bg-white/20 transition-all duration-200 shadow-lg touch-manipulation min-h-[52px]"
                 onClick={() => {
                   const citiesSection = document.querySelector('[data-cities-section]') || 
                                        document.querySelector('section');
