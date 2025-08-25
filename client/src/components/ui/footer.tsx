@@ -57,8 +57,10 @@ export default function Footer() {
               {socialLinks.map((social, index) => (
                 <a 
                   key={index}
-                  href={social.href} 
-                  className="w-10 h-10 bg-vintage-gold rounded-full flex items-center justify-center hover:bg-vintage-gold/90 transition-colors"
+                  href={social.href === "#" ? "mailto:remote@roaminsider.com" : social.href}
+                  target={social.href !== "#" ? "_blank" : undefined}
+                  rel={social.href !== "#" ? "noopener noreferrer" : undefined}
+                  className="w-12 h-12 sm:w-10 sm:h-10 bg-vintage-gold rounded-full flex items-center justify-center hover:bg-vintage-gold/90 transition-colors touch-manipulation"
                 >
                   <i className={social.icon}></i>
                 </a>
@@ -72,13 +74,14 @@ export default function Footer() {
               <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-blue-100">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <Link 
-                      href={link.href} 
-                      className="hover:text-vintage-gold transition-colors block py-1 touch-manipulation"
+                    {/* For non-existing pages, redirect to contact email */}
+                    <a 
+                      href="mailto:remote@roaminsider.com" 
+                      className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation"
                       data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
                     >
                       {link.label}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

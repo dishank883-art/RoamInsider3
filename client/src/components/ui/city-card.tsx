@@ -107,7 +107,15 @@ interface CityCardProps {
 
 export default function CityCard({ city }: CityCardProps) {
   return (
-    <Link href={`/city/${city.slug}`}>
+    <Link 
+      href={`/city/${city.slug}`}
+      onClick={() => {
+        // Smooth scroll to top when navigating to city page
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+      }}
+    >
       <Card className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border border-gray-100 mx-1 sm:mx-0">
         <div className="relative h-48 sm:h-48 md:h-52 overflow-hidden">
           <img 

@@ -62,40 +62,107 @@ export default function Home() {
         }
       }
 
-      // Tags filter
+      // Quick filter handling for better functionality
       if (selectedTags.length > 0) {
-        if (!city.tags?.some(tag => selectedTags.includes(tag))) {
+        let quickFilterMatch = false;
+        
+        for (const filter of selectedTags) {
+          switch (filter) {
+            case 'budget':
+              // Budget cities: Smaller cities, hill stations, spiritual places
+              if (city.tags?.some(tag => tag.toLowerCase().includes('budget')) ||
+                  ['kasol', 'bir', 'dharamkot', 'tosh', 'rishikesh', 'mussoorie', 'dehradun', 'ziro', 'darjeeling'].includes(city.slug.toLowerCase())) {
+                quickFilterMatch = true;
+              }
+              break;
+            case 'warm':
+              // Warm cities: Coastal, southern India, tropical
+              if (city.tags?.some(tag => 
+                tag.toLowerCase().includes('beach') || 
+                tag.toLowerCase().includes('coastal') ||
+                tag.toLowerCase().includes('tropical')
+              ) || ['goa', 'varkala', 'alleppey', 'kochi', 'pondicherry', 'mumbai', 'pune', 'bangalore'].includes(city.slug.toLowerCase())) {
+                quickFilterMatch = true;
+              }
+              break;
+            case 'cold':
+              // Cold cities: Hill stations, northern mountain regions
+              if (city.tags?.some(tag => 
+                tag.toLowerCase().includes('hill') || 
+                tag.toLowerCase().includes('mountain') ||
+                tag.toLowerCase().includes('cold')
+              ) || ['mussoorie', 'dehradun', 'kasol', 'bir', 'dharamkot', 'tosh', 'ziro', 'darjeeling'].includes(city.slug.toLowerCase())) {
+                quickFilterMatch = true;
+              }
+              break;
+            case 'wifi':
+              // Good WiFi cities: Tech hubs, major cities
+              if (city.tags?.some(tag => 
+                tag.toLowerCase().includes('tech') || 
+                tag.toLowerCase().includes('digital')
+              ) || ['mumbai', 'bangalore', 'pune', 'new-delhi', 'goa', 'pondicherry'].includes(city.slug.toLowerCase())) {
+                quickFilterMatch = true;
+              }
+              break;
+            case 'safe':
+              // Safe cities: Well-developed areas, touristy places
+              if (parseFloat(city.rating || '0') >= 4.0 || 
+                  ['pondicherry', 'rishikesh', 'mussoorie', 'pune', 'bangalore', 'udaipur'].includes(city.slug.toLowerCase())) {
+                quickFilterMatch = true;
+              }
+              break;
+            case 'nightlife':
+              // Nightlife cities: Major metros, party destinations
+              if (['mumbai', 'bangalore', 'pune', 'goa', 'new-delhi'].includes(city.slug.toLowerCase())) {
+                quickFilterMatch = true;
+              }
+              break;
+            case 'nature':
+              // Nature cities: Hill stations, coastal, spiritual
+              if (city.tags?.some(tag => 
+                tag.toLowerCase().includes('nature') || 
+                tag.toLowerCase().includes('hill') ||
+                tag.toLowerCase().includes('mountain') ||
+                tag.toLowerCase().includes('beach') ||
+                tag.toLowerCase().includes('spiritual')
+              ) || ['kasol', 'bir', 'dharamkot', 'tosh', 'rishikesh', 'mussoorie', 'dehradun', 'ziro', 'darjeeling', 'varkala', 'alleppey'].includes(city.slug.toLowerCase())) {
+                quickFilterMatch = true;
+              }
+              break;
+            case 'foodie':
+              // Foodie cities: Cultural hubs, diverse cuisine
+              if (['mumbai', 'new-delhi', 'kolkata', 'kochi', 'bangalore', 'pondicherry', 'udaipur'].includes(city.slug.toLowerCase())) {
+                quickFilterMatch = true;
+              }
+              break;
+            default:
+              // For other tags, check if city has matching tags
+              if (city.tags?.some(tag => tag.toLowerCase().includes(filter.toLowerCase()))) {
+                quickFilterMatch = true;
+              }
+          }
+        }
+        
+        if (!quickFilterMatch) {
           return false;
         }
       }
 
       // Advanced filters
       if (advancedFilters.minBudget > 0 || advancedFilters.maxBudget < 100000) {
-        // Budget filtering based on city characteristics
+        // Budget filtering based on city characteristics and actual data
         let avgCost = 25000; // Default mid-range cost
         
-        // Budget-friendly cities (marked with budget tags)
-        if (city.tags?.some(tag => 
-          tag.toLowerCase().includes('budget') || 
-          tag.toLowerCase().includes('affordable') ||
-          tag.toLowerCase().includes('cheap')
-        )) {
+        // Budget-friendly cities (smaller places, hill stations)
+        if (['kasol', 'bir', 'dharamkot', 'tosh', 'rishikesh', 'mussoorie', 'dehradun', 'ziro', 'darjeeling'].includes(city.slug.toLowerCase())) {
           avgCost = 15000; // Budget range: 10k-20k
         }
-        // Tech hubs and major cities tend to be more expensive  
-        else if (city.tags?.some(tag => 
-          tag.toLowerCase().includes('tech-hub') ||
-          tag.toLowerCase().includes('finance') ||
-          city.name.toLowerCase().includes('mumbai') ||
-          city.name.toLowerCase().includes('bangalore')
-        )) {
-          avgCost = 40000; // Higher cost: 35k-50k
+        // Major metros and tech hubs
+        else if (['mumbai', 'bangalore', 'new-delhi'].includes(city.slug.toLowerCase())) {
+          avgCost = 45000; // Higher cost: 35k-50k
         }
-        // Tourist destinations can be expensive
-        else if (city.tags?.some(tag => 
-          tag.toLowerCase().includes('tourism') ||
-          tag.toLowerCase().includes('beaches')
-        )) {
+        // Mid-tier cities
+        else if (['pune', 'goa', 'pondicherry', 'kochi', 'udaipur', 'kolkata'].includes(city.slug.toLowerCase())) {
           avgCost = 30000; // Mid-high: 25k-35k
         }
         

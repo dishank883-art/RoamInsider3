@@ -221,7 +221,7 @@ export default function SearchFilters({
 
         {/* Advanced Filters Toggle */}
         <div className="border-t border-gray-200 pt-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center">
             <Button 
               variant="ghost"
               onClick={() => setShowAdvanced(!showAdvanced)}
@@ -242,58 +242,6 @@ export default function SearchFilters({
                 <path d="M7 10l5 5 5-5z"/>
               </svg>
             </Button>
-            
-            {/* Quick Preset Buttons */}
-            <div className="flex space-x-2">
-              <Button 
-                variant="outline" 
-                size="sm"
-                onClick={() => {
-                  setAdvancedFilters({
-                    ...advancedFilters,
-                    minBudget: 10000,
-                    maxBudget: 25000,
-                    climate: '',
-                    cityType: ''
-                  });
-                  setSelectedFilters(['budget']);
-                }}
-                className="text-xs px-3 py-1 border-green-200 text-green-700 hover:bg-green-50"
-              >
-                💰 Budget Friendly
-              </Button>
-              <Button 
-                variant="outline" 
-                size="sm"
-                onClick={() => {
-                  setAdvancedFilters({
-                    ...advancedFilters,
-                    minInternetSpeed: 50,
-                    cityType: 'tech-hub',
-                    climate: ''
-                  });
-                  setSelectedFilters(['wifi']);
-                }}
-                className="text-xs px-3 py-1 border-blue-200 text-blue-700 hover:bg-blue-50"
-              >
-                💻 Digital Nomad
-              </Button>
-              <Button 
-                variant="outline" 
-                size="sm"
-                onClick={() => {
-                  setAdvancedFilters({
-                    ...advancedFilters,
-                    climate: 'tropical',
-                    cityType: 'coastal'
-                  });
-                  setSelectedFilters(['warm']);
-                }}
-                className="text-xs px-3 py-1 border-orange-200 text-orange-700 hover:bg-orange-50"
-              >
-                🏖️ Beach Life
-              </Button>
-            </div>
           </div>
         </div>
 

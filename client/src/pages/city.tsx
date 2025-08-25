@@ -1,6 +1,6 @@
 import { useRoute } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import CityOverview from "@/components/city/city-overview";
@@ -30,6 +30,11 @@ export default function CityPage() {
   const [, params] = useRoute("/city/:slug");
   const slug = params?.slug;
   const [activeTab, setActiveTab] = useState("overview");
+
+  // Scroll to top when component mounts (new city page loads)
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [slug]);
 
   const { data: city, isLoading, error } = useQuery<CityWithDetails>({
     queryKey: ["/api/cities", slug],
@@ -227,46 +232,49 @@ export default function CityPage() {
         </div>
       </section>
 
-      {/* Enhanced Mobile-Friendly Tab Navigation */}
+      {/* Mobile-Friendly Slider Tab Navigation */}
       <section className="sticky top-0 z-20 bg-white backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Mobile Hint Text */}
           <div className="block sm:hidden text-center py-2 bg-gradient-to-r from-travel-blue/5 to-vintage-gold/5">
             <p className="text-xs text-travel-blue font-medium animate-pulse">
-              👇 Swipe left & right to explore all sections 👇
+              👆 Swipe left & right to explore all sections 👆
             </p>
           </div>
           
           <div className="relative">
-            {/* Enhanced Left Scroll Button - More Prominent on Mobile */}
-            <button 
-              onClick={() => {
-                const container = document.getElementById('tab-container');
-                if (container) container.scrollLeft -= 300;
-              }}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-gradient-to-r from-travel-blue to-vintage-gold text-white shadow-2xl rounded-full p-3 sm:p-4 transition-all duration-300 hover:scale-110 border-2 border-white animate-bounce sm:animate-none"
-              aria-label="Scroll left to see more tabs"
-            >
-              <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 drop-shadow-sm" />
-            </button>
-            
-            {/* Left Gradient Fade Effect */}
-            <div className="absolute left-12 sm:left-16 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
-            
+            {/* Tab Container with Native Slider Behavior */}
             <div 
               id="tab-container"
-              className="overflow-x-auto scrollbar-hide mx-12 sm:mx-16 py-4 sm:py-6"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              className="overflow-x-auto scrollbar-hide py-4 sm:py-6 px-4"
+              style={{ 
+                scrollbarWidth: 'none', 
+                msOverflowStyle: 'none',
+                scrollBehavior: 'smooth',
+                WebkitOverflowScrolling: 'touch'
+              }}
             >
-              <div className="flex space-x-3 min-w-max">
-                {tabs.map((tab) => {
+              <div className="flex space-x-3 min-w-max pb-2">
+                {tabs.map((tab, index) => {
                   const IconComponent = tab.icon;
                   const isActive = activeTab === tab.id;
                   return (
                     <button
                       key={tab.id}
-                      onClick={() => setActiveTab(tab.id)}
-                      className={`inline-flex items-center gap-2 sm:gap-2.5 px-3 sm:px-5 py-2 sm:py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 whitespace-nowrap border ${
+                      onClick={() => {
+                        setActiveTab(tab.id);
+                        // Auto-scroll to center the active tab
+                        const container = document.getElementById('tab-container');
+                        const tabElement = document.querySelector(`[data-tab="${tab.id}"]`);
+                        if (container && tabElement) {
+                          const tabRect = tabElement.getBoundingClientRect();
+                          const containerRect = container.getBoundingClientRect();
+                          const scrollLeft = tabElement.offsetLeft - (containerRect.width / 2) + (tabRect.width / 2);
+                          container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+                        }
+                      }}
+                      data-tab={tab.id}
+                      className={`inline-flex items-center gap-2 sm:gap-2.5 px-3 sm:px-5 py-2 sm:py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap border min-w-fit ${
                         isActive
                           ? 'bg-gradient-to-r from-travel-blue to-vintage-gold text-white shadow-xl border-travel-blue transform scale-105 ring-2 ring-vintage-gold/30'
                           : 'text-gray-700 hover:text-travel-blue hover:bg-travel-blue/5 bg-white border-gray-200 hover:border-travel-blue/30 hover:shadow-md'
@@ -280,27 +288,18 @@ export default function CityPage() {
                 })}
               </div>
             </div>
-            
-            {/* Right Gradient Fade Effect */}
-            <div className="absolute right-12 sm:right-16 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none"></div>
-            
-            {/* Enhanced Right Scroll Button - More Prominent on Mobile */}
-            <button 
-              onClick={() => {
-                const container = document.getElementById('tab-container');
-                if (container) container.scrollLeft += 300;
-              }}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-gradient-to-r from-vintage-gold to-travel-blue text-white shadow-2xl rounded-full p-3 sm:p-4 transition-all duration-300 hover:scale-110 border-2 border-white animate-bounce sm:animate-none"
-              aria-label="Scroll right to see more tabs"
-            >
-              <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 rotate-180 drop-shadow-sm" />
-            </button>
           </div>
         </div>
         
         <style>{`
           .scrollbar-hide::-webkit-scrollbar {
             display: none;
+          }
+          #tab-container {
+            scroll-snap-type: x proximity;
+          }
+          #tab-container button {
+            scroll-snap-align: center;
           }
         `}</style>
       </section>
