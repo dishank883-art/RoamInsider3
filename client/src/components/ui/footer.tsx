@@ -74,36 +74,27 @@ export default function Footer() {
               <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-blue-100">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    {link.type === 'scroll' ? (
-                      <Link 
-                        href={link.href} 
-                        className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation"
-                        data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                        onClick={() => {
+                    <button 
+                      onClick={() => {
+                        if (link.type === 'scroll') {
                           // Extract the section ID from href and scroll to it
                           const sectionId = link.href.split('#')[1];
-                          setTimeout(() => {
-                            const element = document.getElementById(sectionId);
-                            if (element) {
-                              element.scrollIntoView({ behavior: 'smooth' });
-                            } else {
-                              // If section doesn't exist, scroll to top
-                              window.scrollTo({ top: 0, behavior: 'smooth' });
-                            }
-                          }, 100);
-                        }}
-                      >
-                        {link.label}
-                      </Link>
-                    ) : (
-                      <a 
-                        href={link.href} 
-                        className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation"
-                        data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                      >
-                        {link.label}
-                      </a>
-                    )}
+                          const element = document.getElementById(sectionId);
+                          if (element) {
+                            element.scrollIntoView({ behavior: 'smooth' });
+                          } else {
+                            // If section doesn't exist, scroll to top
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                          }
+                        } else if (link.type === 'email') {
+                          window.location.href = link.href;
+                        }
+                      }}
+                      className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation text-left w-full"
+                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                    >
+                      {link.label}
+                    </button>
                   </li>
                 ))}
               </ul>

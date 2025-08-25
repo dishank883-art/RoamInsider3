@@ -21,14 +21,14 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="text-white">
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              India's #1 Digital Nomad
+              Discover India's Best Cities for
               <span className="text-vintage-gold font-script text-3xl sm:text-4xl md:text-6xl lg:text-7xl block mt-2">
-                Community
+                Digital Nomads
               </span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-4 sm:mb-6 leading-relaxed">
-              Connect with 200+ digital nomads exploring India's best cities. Get real cost breakdowns, insider hacks, 
-              and authentic reviews from nomads living there right now.
+              Complete city guides with real costs, internet speeds, safety ratings, and insider tips. 
+              Plus connect with 200+ nomads already living in these incredible Indian destinations.
             </p>
             
             {/* Community Highlight Banner */}
@@ -47,10 +47,10 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <p className="text-white font-semibold text-sm sm:text-base">
-                    Join our active Discord community • 200+ members across 20+ Indian cities
+                    Get access to exclusive city data • 200+ nomads across 20+ cities
                   </p>
                   <p className="text-blue-100 text-xs sm:text-sm">
-                    Real nomads sharing real experiences, costs, and insider tips daily
+                    Real costs, safety updates, coworking spaces, and insider tips shared daily
                   </p>
                 </div>
               </div>
