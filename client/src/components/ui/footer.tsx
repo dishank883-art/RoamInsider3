@@ -6,11 +6,11 @@ export default function Footer() {
     {
       title: "Explore",
       links: [
-        { label: "All Cities", href: "/#all-cities", type: "scroll" },
-        { label: "Popular Destinations", href: "/#popular-cities", type: "scroll" },
-        { label: "Hidden Gems", href: "/#hidden-gems", type: "scroll" },
-        { label: "Budget Cities", href: "/#budget-cities", type: "scroll" },
-        { label: "Tech Hubs", href: "/#tech-hubs", type: "scroll" },
+        { label: "All Cities", href: "cities-section", type: "scroll" },
+        { label: "Popular Destinations", href: "cities-section", type: "scroll" },
+        { label: "Hidden Gems", href: "mailto:remote@roaminsider.com", type: "email" },
+        { label: "Budget Cities", href: "mailto:remote@roaminsider.com", type: "email" },
+        { label: "Tech Hubs", href: "mailto:remote@roaminsider.com", type: "email" },
       ]
     },
     {
@@ -23,7 +23,7 @@ export default function Footer() {
     {
       title: "Company",
       links: [
-        { label: "About Us", href: "/#about", type: "scroll" },
+        { label: "About Us", href: "mailto:remote@roaminsider.com", type: "email" },
         { label: "Blog", href: "mailto:remote@roaminsider.com", type: "email" },
         { label: "Contact", href: "mailto:remote@roaminsider.com", type: "email" },
         { label: "Privacy Policy", href: "mailto:remote@roaminsider.com", type: "email" },
@@ -77,9 +77,9 @@ export default function Footer() {
                     <button 
                       onClick={() => {
                         if (link.type === 'scroll') {
-                          // Extract the section ID from href and scroll to it
-                          const sectionId = link.href.split('#')[1];
-                          const element = document.getElementById(sectionId);
+                          // For scroll type, look for the element by data attribute or ID
+                          const element = document.querySelector(`[data-cities-section]`) || 
+                                        document.getElementById(link.href);
                           if (element) {
                             element.scrollIntoView({ behavior: 'smooth' });
                           } else {
