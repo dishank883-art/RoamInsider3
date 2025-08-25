@@ -74,27 +74,32 @@ export default function Footer() {
               <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-blue-100">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <button 
-                      onClick={() => {
-                        if (link.type === 'scroll') {
-                          // For scroll type, look for the element by data attribute or ID
-                          const element = document.querySelector(`[data-cities-section]`) || 
-                                        document.getElementById(link.href);
+                    {link.type === 'scroll' ? (
+                      <button 
+                        onClick={() => {
+                          // For scroll type, look for the element by data attribute
+                          const element = document.querySelector(`[data-cities-section]`);
                           if (element) {
                             element.scrollIntoView({ behavior: 'smooth' });
                           } else {
                             // If section doesn't exist, scroll to top
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                           }
-                        } else if (link.type === 'email') {
-                          window.location.href = link.href;
-                        }
-                      }}
-                      className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation text-left w-full"
-                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                    >
-                      {link.label}
-                    </button>
+                        }}
+                        className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation text-left w-full"
+                        data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      >
+                        {link.label}
+                      </button>
+                    ) : (
+                      <a 
+                        href={link.href}
+                        className="hover:text-vintage-gold transition-colors block py-2 sm:py-1 min-h-[44px] flex items-center touch-manipulation"
+                        data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
