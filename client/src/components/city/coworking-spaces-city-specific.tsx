@@ -42,7 +42,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹12,000",
           features: ["Beach location", "Outdoor workspace", "Yoga classes", "Healthy cafe", "Bike rental"],
           rating: 4.3,
-          website: "NA",
+          website: null, // No website available
           phone: "+91 832 227 8900",
           description: "Unique beachside coworking with wellness focus and outdoor workspace options.",
           amenities: {
@@ -73,7 +73,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
             printers: "Yes",
             coffee: "Excellent coffee and food",
             aircon: "Heating System Available",
-            other_amenities: "Standing Desks,Pet Friendly, Personal Lockers, Showers, Restaurant, Free Drinking Water"      
+            other_amenities: "Standing Desks, Pet Friendly, Personal Lockers, Showers, Restaurant, Free Drinking Water"      
           }
         }
       ],
