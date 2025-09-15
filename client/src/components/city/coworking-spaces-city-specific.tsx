@@ -152,7 +152,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyDesk: "NA",
           monthlyPrivate: "NA",
           features: ["NA"],
-          rating: NA,
+          rating: 0,
           website: null, // No website available
           phone: "NA",
           description: "NA",
