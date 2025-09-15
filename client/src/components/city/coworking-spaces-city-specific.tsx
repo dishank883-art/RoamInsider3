@@ -970,7 +970,8 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
             wifi: "50+ Mbps",
             printers: "Basic",
             coffee: "Himalayan tea culture",
-            aircon: "Natural mountain cooling"
+            aircon: "Natural mountain cooling",
+            other_amenities: "Strong Wi-Fi"
           }
         },
         {
@@ -1191,6 +1192,9 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
                       <Coffee className="h-3 w-3 mr-2" />
                       Coffee: {space.amenities.coffee}
                     </div>
+                    <div className="flex items-center">
+                      <Coffee className="h-3 w-3 mr-2" />
+                      Other Amenities: {space.amenities.other_amenities}
                   </div>
                 </div>
               </div>
