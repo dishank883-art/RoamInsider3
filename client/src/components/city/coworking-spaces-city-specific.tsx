@@ -973,6 +973,27 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
             aircon: "Natural mountain cooling"
           }
         }
+        {
+          name: "MyBranch Gangtok",
+          location: "1st Floor, Mohora Commercial, Opp. Deorali Bazar, Near Butterfly Bridge, Gangtok, Sikkim",
+          type: "Mountain Capital",
+          dayPass: "Enquire by visiting the website",
+          monthlyDesk: "Enquire by visiting the website",
+          monthlyPrivate: "Enquire by visiting the website",
+          features: ["Mountain views", "Clean environment", "Peaceful setting", "Tourism base", "Cultural diversity"],
+          rating: 4.0,
+          website: "https://www.mybranch.co.in"
+          phone: "+91 8541999506",
+          description: "Mountain capital coworking with stunning Himalayan views and peaceful environment for productivity.",
+          amenities: {
+            Fully Furnished Offices, House Keeping, Internet Facility, IT Support Executive, Meeting Room, Private Cabin, Training Room
+            wifi: "60+ Mbps",
+            hours: "9 AM - 7 PM",
+            printers: "Basic",
+            coffee: "Maharaja hospitality",
+            aircon: "Yes"
+          }
+        }
       ],
       "McLeodganj": [
         {
