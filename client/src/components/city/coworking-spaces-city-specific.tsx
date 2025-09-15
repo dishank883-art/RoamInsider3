@@ -77,7 +77,6 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           }
         }
       ],
-      
       "Dehradun": [
         {
           name: "Iksana Workspaces",
@@ -119,7 +118,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
             coffee: "Cooffee & Tea",
             aircon: "Yes",
             other_amenities: "Parking, First-Aid, Biometric/Face Lock"
-               }
+          }
         }
       ],
       "Ziro": [
