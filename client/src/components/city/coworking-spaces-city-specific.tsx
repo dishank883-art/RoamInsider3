@@ -961,6 +961,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           type: "Mountain Capital",
           dayPass: "₹450",
           monthlyDesk: "₹4,500",
+          monthlyPrivate: "₹7,000,
           features: ["Mountain views", "Clean environment", "Peaceful setting", "Tourism base", "Cultural diversity"],
           rating: 4.0,
           website: https://www.sanctorum.work/,
