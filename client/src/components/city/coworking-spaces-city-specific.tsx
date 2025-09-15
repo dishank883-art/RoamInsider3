@@ -266,43 +266,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       ],
       "Kasol": [
         {
-          name: "Mountain View Co-Work",
-          location: "Kasol Main Market",
-          type: "Mountain Remote",
-          dayPass: "₹200",
-          monthlyDesk: "₹3,000",
-          monthlyPrivate: "₹6,000",
-          features: ["Mountain views", "Quiet space", "Local cafe", "Trekking info", "Community board"],
-          rating: 4.1,
-          website: null, // No website available
-          phone: "+91 190 222 1234",
-          description: "Simple mountain coworking space with stunning valley views and trekking community.",
-          amenities: {
-            wifi: "30+ Mbps",
-            hours: "8 AM - 8 PM",
-            printers: "Basic",
-            coffee: "Israeli cafe",
-            aircon: "Natural mountain air"
-          }
-        },
-        {
-          name: "Parvati Valley Digital Hub",
-          location: "Chalal Village",
-          type: "Village Setting",
-          dayPass: "₹150",
-          monthlyDesk: "₹2,500",
-          monthlyPrivate: "₹5,000",
-          features: ["Village setting", "Trekking base", "Community kitchen", "Local guides", "Nature immersion"],
-          rating: 3.9,
-          website: null, // No website available
-          phone: "+91 190 222 5678",
-          description: "Rustic village coworking perfect for digital detox and mountain lifestyle.",
-          amenities: {
-            wifi: "25+ Mbps",
-            hours: "Flexible",
-            printers: "No",
-            coffee: "Chai & local",
-            aircon: "Mountain breeze"
+          name: "No Co-working spaces",
           }
         }
       ],
