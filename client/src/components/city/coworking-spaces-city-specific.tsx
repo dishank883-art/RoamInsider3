@@ -164,85 +164,47 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       ],
       "Alleppey": [
         {
-          name: "Backwater Co-Work",
-          location: "Mullakkal Street",
-          type: "Peaceful Remote",
-          dayPass: "₹300",
-          monthlyDesk: "₹4,000",
-          monthlyPrivate: "₹8,000",
+          name: "Oops! No corking space in Alleppey",
+          location: "NA",
+          type: "NA",
+          dayPass: "NA",
+          monthlyDesk: "NA",
+          monthlyPrivate: "NA",
           features: ["Lake view", "Quiet environment", "Local cafe", "Bike rental", "Nature setting"],
           rating: 4.2,
           website: null, // No website available
-          phone: "+91 477 225 1234",
-          description: "Peaceful coworking space with backwater views, perfect for remote work and digital detox.",
+          phone: "NA",
+          description: "NA",
           amenities: {
-            wifi: "50+ Mbps",
-            hours: "8 AM - 8 PM",
-            printers: "Basic",
-            coffee: "Local cafe",
-            aircon: "Fans + AC"
-          }
-        },
-        {
-          name: "Alleppey Digital Hub",
-          location: "Near Beach",
-          type: "Beach Work",
-          dayPass: "₹250",
-          monthlyDesk: "₹3,500",
-          monthlyPrivate: "₹7,000",
-          features: ["Beach access", "Flexible hours", "Community space", "Yoga classes", "Local network"],
-          rating: 4.0,
-          website: null, // No website available
-          phone: "+91 477 225 5678",
-          description: "Beach-side coworking with flexible schedule and community of remote workers.",
-          amenities: {
-            wifi: "40+ Mbps",
-            hours: "Flexible",
-            printers: "Basic",
-            coffee: "Local style",
-            aircon: "Natural ventilation"
+            wifi: "NA",
+            hours: "NA",
+            printers: "NA",
+            coffee: "NA",
+            aircon: "NA",
+            other_amenities: "NA"
           }
         }
       ],
       "Varkala": [
         {
-          name: "Cliff Top Co-Work",
-          location: "North Cliff",
+          name: "Sarwaa - Kapi Coworking",
+          location: "Sarwaa, Bal mahal, to, DPI Rd, opposite All India Radio Road, DPI, Vazhuthacaud, Thiruvananthapuram, Kerala 695014",
           type: "Ocean View",
-          dayPass: "₹400",
-          monthlyDesk: "₹5,000",
-          monthlyPrivate: "₹10,000",
+          dayPass: "Contact the Team",
+          monthlyDesk: "Contact the Team",
+          monthlyPrivate: "Contact the Team",
           features: ["Ocean view", "Yoga classes", "Wellness focus", "Healthy cafe", "Sunset workspace"],
           rating: 4.5,
-          website: null, // Website not working
-          phone: "+91 470 260 1234",
-          description: "Stunning cliff-top coworking with ocean views and wellness-focused community.",
+          website: "https://www.sarwaa.in/",
+          phone: null, // No phone number available",
+          description: "Stunning coworking with ocean views and wellness-focused community.",
           amenities: {
-            wifi: "60+ Mbps",
+            wifi: "50+ Mbps",
             hours: "7 AM - 9 PM",
             printers: "Yes",
             coffee: "Organic coffee",
-            aircon: "Sea breeze + fans"
-          }
-        },
-        {
-          name: "Soul & Surf Digital Nomad Hub",
-          location: "South Cliff",
-          type: "Surf & Work",
-          dayPass: "₹350",
-          monthlyDesk: "₹4,500",
-          monthlyPrivate: "₹9,000",
-          features: ["Surf lessons", "Community events", "Healthy food", "Beach access", "Yoga"],
-          rating: 4.3,
-          website: "https://soulandsurf.com/",
-          phone: "+91 470 260 5678",
-          description: "Unique surf and work combination with strong international nomad community.",
-          amenities: {
-            wifi: "55+ Mbps",
-            hours: "6 AM - 10 PM",
-            printers: "Basic",
-            coffee: "Specialty coffee",
-            aircon: "Natural + fans"
+            aircon: "Sea breeze + fans",
+            other_amenities: "Strong Wi-Fi, Cafe, Handicraft Store"
           }
         }
       ],
