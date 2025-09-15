@@ -122,49 +122,30 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       ],
       "Ziro": [
         {
-          name: "Apatani Cultural Center",
-          location: "Hapoli",
-          type: "Cultural Workspace",
-          dayPass: "₹200",
-          monthlyDesk: "₹2,500",
-          monthlyPrivate: "₹4,000",
-          features: ["Cultural immersion", "Basic WiFi", "Community interaction", "Traditional environment", "Learning opportunities"],
-          rating: 3.5,
+          name: "Oops! No coworking space in Ziro",
+          location: "NA",
+          type: "NA",
+          dayPass: "NA",
+          monthlyDesk: "NA",
+          monthlyPrivate: "NA",
+          features: [""],
+          rating: 4.2,
           website: null, // No website available
-          phone: "+91 3788 222333",
-          description: "Unique workspace opportunity to work while learning about Apatani culture.",
+          phone: "NA",
+          description: "NA",
           amenities: {
-            wifi: "10-15 Mbps (limited)",
-            hours: "9 AM - 5 PM",
-            printers: "Basic",
-            coffee: "Local tea available",
-            aircon: "No"
-          }
-        },
-        {
-          name: "Tourist Lodge Common Areas",
-          location: "Various locations in Ziro",
-          type: "Lodge Workspace",
-          dayPass: "₹150",
-          monthlyDesk: "₹2,000",
-          monthlyPrivate: "₹3,500",
-          features: ["Basic facilities", "Common areas", "Accommodation combo", "Local interaction", "Budget-friendly"],
-          rating: 3.0,
-          website: null, // No website available
-          phone: "Various lodge contacts",
-          description: "Basic workspace facilities available in tourist lodges for budget-conscious nomads.",
-          amenities: {
-            wifi: "5-10 Mbps (sporadic)",
-            hours: "24 hours (lodge guests)",
-            printers: "No",
-            coffee: "Lodge dining available",
-            aircon: "No"
+            wifi: "NA",
+            hours: "NA",
+            printers: "NA",
+            coffee: "NA",
+            aircon: "NA",
+            other_amenities: "NA"
           }
         }
       ],
       "Alleppey": [
         {
-          name: "Oops! No corking space in Alleppey",
+          name: "Oops! No coworking space in Alleppey",
           location: "NA",
           type: "NA",
           dayPass: "NA",
