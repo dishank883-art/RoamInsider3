@@ -972,7 +972,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
             coffee: "Himalayan tea culture",
             aircon: "Natural mountain cooling"
           }
-        }
+        },
         {
           name: "MyBranch Gangtok",
           location: "1st Floor, Mohora Commercial, Opp. Deorali Bazar, Near Butterfly Bridge, Gangtok, Sikkim",
