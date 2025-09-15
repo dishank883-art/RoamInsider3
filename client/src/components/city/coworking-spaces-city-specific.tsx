@@ -106,16 +106,16 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           dayPass: "₹500",
           monthlyDesk: "₹5,400",
           monthlyPrivate: "Visit the Website",
-          features: ["Highseed Wifi", "Gaming Area", "Security Surveillance", "24/6"],
+          features: ["Highspeed Wifi", "Gaming Area", "Security Surveillance", "24/6"],
           rating: 4.1,
           website: "https://jumpstartcoworking.com/",
           phone: "+91 8193045555",
           description: "Ready-to-move-in private offices by iKSANA",
           amenities: {
             wifi: "50+ Mbps",
-            hours: "24 hours/6 days",
+            hours: "9 AM - 6 PM",
             printers: "Yes",
-            coffee: "Cooffee & Tea",
+            coffee: "Coffee & Tea",
             aircon: "Yes",
             other_amenities: "Parking, First-Aid, Biometric/Face Lock"
           }
