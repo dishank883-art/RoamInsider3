@@ -956,20 +956,18 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       ],
       "Gangtok": [
         {
-          name: "Himalayan Digital Hub",
-          location: "MG Marg, Gangtok",
+          name: "Sanctorum Co-Working",
+          location: "Development Area, opposite of Nettle & Fern, Upper Sichey, Sungava, Gangtok, Sikkim",
           type: "Mountain Capital",
-          dayPass: "₹300",
-          monthlyDesk: "₹4,000",
-          monthlyPrivate: "₹7,000",
+          dayPass: "₹450",
+          monthlyDesk: "₹4,500",
           features: ["Mountain views", "Clean environment", "Peaceful setting", "Tourism base", "Cultural diversity"],
           rating: 4.0,
-          website: null, // No specific website
-          phone: "+91 3592 208 000",
+          website: https://www.sanctorum.work/,
+          phone: "+91 99070 61463",
           description: "Mountain capital coworking with stunning Himalayan views and peaceful environment for productivity.",
           amenities: {
             wifi: "50+ Mbps",
-            hours: "8 AM - 7 PM",
             printers: "Basic",
             coffee: "Himalayan tea culture",
             aircon: "Natural mountain cooling"
