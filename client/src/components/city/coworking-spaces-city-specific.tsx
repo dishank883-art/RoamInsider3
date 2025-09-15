@@ -100,7 +100,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           }
         },
         {
-        name: "JumpStart Coworking Spaces",
+          name: "JumpStart Coworking Spaces",
           location: "Shagun Tower 2nd floor, New Road, Dwarka Store Chowk, Dehradun, India",
           type: "Professional Coworking",
           dayPass: "₹500",
