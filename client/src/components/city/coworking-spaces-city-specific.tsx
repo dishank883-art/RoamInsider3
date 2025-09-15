@@ -982,7 +982,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "Enquire by visiting the website",
           features: ["Mountain views", "Clean environment", "Peaceful setting", "Tourism base", "Cultural diversity"],
           rating: 4.0,
-          website: "https://www.mybranch.co.in"
+          website: "https://www.mybranch.co.in",
           phone: "+91 8541999506",
           description: "Mountain capital coworking with stunning Himalayan views and peaceful environment for productivity.",
           amenities: {
