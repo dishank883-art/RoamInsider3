@@ -333,42 +333,43 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       ],
       "Pondicherry": [
         {
-          name: "Auroville Coworking",
-          location: "Auroville Township",
-          type: "Spiritual Community",
-          dayPass: "₹400",
-          monthlyDesk: "₹6,000",
-          monthlyPrivate: "₹10,000",
-          features: ["Spiritual community", "Sustainable practices", "International environment", "Workshops", "Meditation"],
+          name: "Pulsebay Coworking",
+          location: "Vazhudavur Main Road, Shanmugapuram, Puducherry 605009.",
+          type: "Elegant Working Spaces",
+          dayPass: "500",
+          monthlyDesk: "₹3,999",
+          monthlyPrivate: "Visit the Website",
+          features: ["Elegant Working Space", "Air Conditioned", "International environment", "Meeting Rooms"],
           rating: 4.3,
-          website: "https://auroville.org/",
-          phone: "+91 413 2622 657",
+          website: "https://pulsebay.in/",
+          phone: "+91 93604 08452",
           description: "Unique coworking experience in international spiritual community focused on conscious living.",
           amenities: {
             wifi: "60+ Mbps",
             hours: "6 AM - 9 PM",
             printers: "Yes",
-            coffee: "Organic café with international cuisine",
-            aircon: "Eco-friendly cooling"
+            coffee: "Dining Area and Canteen",
+            aircon: "Yes",
+            other_amenities: "Backup Internet, Power Back-Up, CCustomer Lounge, Basement Parking, On-Demand Tech Support"
           }
         },
         {
-          name: "French Quarter Café Workspaces",
-          location: "White Town, Pondicherry",
-          type: "Colonial Heritage",
-          dayPass: "₹350",
-          monthlyDesk: "₹5,500",
-          monthlyPrivate: "₹9,000",
+          name: "Klite Space",
+          location: "11, 1st Cross St, Jawahar Nagar, Sundararaja Nagar, Anna Nagar, Puducherry, 605005",
+          type: "Professinal Office Space",
+          dayPass: "Visit the Website",
+          monthlyDesk: "Visit the Website",
+          monthlyPrivate: "Visit the Website",
           features: ["Colonial architecture", "French ambiance", "Heritage cafés", "Beach proximity", "Cultural immersion"],
           rating: 4.1,
-          website: null, // No specific website available
-          phone: "Contact individual cafés",
+          website: "https://www.klitespace.com",
+          phone: "NA",
           description: "Work in French colonial heritage cafés with unique architecture and cultural atmosphere.",
           amenities: {
             wifi: "40+ Mbps",
             hours: "7 AM - 10 PM",
             printers: "Limited",
-            coffee: "French pastries and coffee culture",
+            coffee: "Cafe",
             aircon: "Yes"
           }
         }
