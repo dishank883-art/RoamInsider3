@@ -268,7 +268,6 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
         {
           name: "No Co-working spaces",
           }
-        }
       ],
       "Tosh": [
         {
