@@ -56,46 +56,28 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       ],
       "Bir": [
         {
-          name: "Avva's Café Workspace",
-          location: "Main Bir Road",
+          name: "Bir Nest Workspace",
+          location: "Near Learn Well School Village Chougan, Bir, Himachal Pradesh 176077, India",
           type: "Café Coworking",
-          dayPass: "₹300",
-          monthlyDesk: "₹4,000",
-          monthlyPrivate: "Not available",
+          dayPass: "₹400",
+          monthlyDesk: "Connect with them",
+          monthlyPrivate: "Connect with them",
           features: ["Mountain views", "Good WiFi", "Healthy food", "Quiet environment", "Power outlets"],
           rating: 4.2,
-          website: "https://www.facebook.com/avvascafe/",
-          phone: "+91 9816012345",
+          website: "https://www.coworker.com/india/bir/bir-nest",
+          phone: "NA",
           description: "Popular café with coworking-friendly environment and beautiful mountain views.",
           amenities: {
-            wifi: "25+ Mbps",
+            wifi: "30+ Mbps",
             hours: "8 AM - 8 PM",
-            printers: "No",
+            printers: "Yes",
             coffee: "Excellent coffee and food",
-            aircon: "No (natural ventilation)"
-          }
-        },
-        {
-          name: "June 16th Café",
-          location: "Bir Tibetan Colony",
-          type: "Tibetan Café",
-          dayPass: "₹200",
-          monthlyDesk: "₹3,500",
-          monthlyPrivate: "Not available",
-          features: ["Tibetan ambiance", "Good WiFi", "Authentic food", "Community space", "Cultural environment"],
-          rating: 4.0,
-          website: null, // No website available
-          phone: "+91 9816098765",
-          description: "Authentic Tibetan café perfect for cultural immersion while working.",
-          amenities: {
-            wifi: "20+ Mbps",
-            hours: "7 AM - 9 PM",
-            printers: "Basic printing",
-            coffee: "Tibetan tea and coffee",
-            aircon: "No"
+            aircon: "Heating System Available",
+            other_amenities: "Standing Desks,Pet Friendly, Personal Lockers, Showers, Restaurant, Free Drinking Water"      
           }
         }
       ],
+      
       "Dehradun": [
         {
           name: "91springboard Dehradun",
