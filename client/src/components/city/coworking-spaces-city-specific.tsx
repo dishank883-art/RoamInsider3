@@ -1195,6 +1195,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
                     <div className="flex items-center">
                       <Coffee className="h-3 w-3 mr-2" />
                       Other Amenities: {space.amenities.other_amenities}
+                      </div>
                   </div>
                 </div>
               </div>
