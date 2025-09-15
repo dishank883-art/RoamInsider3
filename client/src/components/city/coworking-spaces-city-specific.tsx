@@ -986,7 +986,6 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           phone: "+91 8541999506",
           description: "Mountain capital coworking with stunning Himalayan views and peaceful environment for productivity.",
           amenities: {
-            Fully Furnished Offices, House Keeping, Internet Facility, IT Support Executive, Meeting Room, Private Cabin, Training Room
             wifi: "60+ Mbps",
             hours: "9 AM - 7 PM",
             printers: "Basic",
