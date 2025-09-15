@@ -80,44 +80,46 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       
       "Dehradun": [
         {
-          name: "91springboard Dehradun",
-          location: "Rajpur Road",
-          type: "Premium Coworking",
-          dayPass: "₹400",
+          name: "Iksana Workspaces",
+          location: "IT Park: CPL-I Tower",
+          type: "Professional Coworking",
+          dayPass: "₹500",
           monthlyDesk: "₹6,000",
-          monthlyPrivate: "₹12,000",
-          features: ["High-speed WiFi", "Meeting rooms", "Events", "Cafe", "Parking", "Community"],
-          rating: 4.4,
-          website: "https://www.91springboard.com/",
-          phone: "+91 135 2711234",
-          description: "Professional coworking space with startup ecosystem and networking events.",
-          amenities: {
-            wifi: "100+ Mbps",
-            hours: "24/7 access",
-            printers: "Yes",
-            coffee: "Unlimited",
-            aircon: "Yes"
-          }
-        },
-        {
-          name: "The Doon School Incubation Center",
-          location: "The Doon School Campus",
-          type: "Academic Coworking",
-          dayPass: "₹300",
-          monthlyDesk: "₹5,000",
-          monthlyPrivate: "₹10,000",
-          features: ["Academic environment", "Mentorship", "Good WiFi", "Library access", "Peaceful campus"],
+          monthlyPrivate: "Visit the Website",
+          features: ["Housekeeping & Maintenance", "Good WiFi", "Library access", "A/V Equipment", "Unlimited Coffee & Tea", "Parking", "24x7 Tech Support" ],
           rating: 4.1,
-          website: "https://www.doonschool.com/",
-          phone: "+91 135 2526400",
-          description: "Unique coworking space within prestigious school campus with academic atmosphere.",
+          website: "https://www.iksana.work/",
+          phone: "+91 9354064958",
+          description: "Ready-to-move-in private offices by iKSANA",
           amenities: {
             wifi: "50+ Mbps",
             hours: "9 AM - 6 PM",
             printers: "Yes",
-            coffee: "Canteen available",
-            aircon: "Yes"
+            coffee: "Serviced Cafeteria",
+            aircon: "Yes",
+            other_amenities: "Meeting Rooms, Power Backup, CCTC Survelliance, Breakout Spaces & Lounges, Door Acess Control"
           }
+        },
+        {
+        name: "JumpStart Coworking Spaces",
+          location: "Shagun Tower 2nd floor, New Road, Dwarka Store Chowk, Dehradun, India",
+          type: "Professional Coworking",
+          dayPass: "₹500",
+          monthlyDesk: "₹5,400",
+          monthlyPrivate: "Visit the Website",
+          features: ["Highseed Wifi", "Gaming Area", "Security Surveillance", "24/6"],
+          rating: 4.1,
+          website: "https://jumpstartcoworking.com/",
+          phone: "+91 8193045555",
+          description: "Ready-to-move-in private offices by iKSANA",
+          amenities: {
+            wifi: "50+ Mbps",
+            hours: "24 hours/6 days",
+            printers: "Yes",
+            coffee: "Cooffee & Tea",
+            aircon: "Yes",
+            other_amenities: "Parking, First-Aid, Biometric/Face Lock"
+               }
         }
       ],
       "Ziro": [
@@ -128,8 +130,8 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           dayPass: "NA",
           monthlyDesk: "NA",
           monthlyPrivate: "NA",
-          features: [""],
-          rating: 4.2,
+          features: ["Not Applicable"],
+          rating: NA,
           website: null, // No website available
           phone: "NA",
           description: "NA",
@@ -151,8 +153,8 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           dayPass: "NA",
           monthlyDesk: "NA",
           monthlyPrivate: "NA",
-          features: ["Lake view", "Quiet environment", "Local cafe", "Bike rental", "Nature setting"],
-          rating: 4.2,
+          features: ["NA"],
+          rating: NA,
           website: null, // No website available
           phone: "NA",
           description: "NA",
