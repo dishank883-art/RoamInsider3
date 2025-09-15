@@ -77,6 +77,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           }
         }
       ],
+      
       "Dehradun": [
         {
           name: "Iksana Workspaces",
@@ -96,7 +97,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
             printers: "Yes",
             coffee: "Serviced Cafeteria",
             aircon: "Yes",
-            other_amenities: "Meeting Rooms, Power Backup, CCTC Survelliance, Breakout Spaces & Lounges, Door Acess Control"
+            other_amenities: "Meeting Rooms, Power Backup, CCTV Surveillance, Breakout Spaces & Lounges, Door Access Control"
           }
         },
         {
@@ -110,17 +111,18 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           rating: 4.1,
           website: "https://jumpstartcoworking.com/",
           phone: "+91 8193045555",
-          description: "Ready-to-move-in private offices by iKSANA",
+          description: "Ready to move in private offices by JumpStart",
           amenities: {
             wifi: "50+ Mbps",
             hours: "9 AM - 6 PM",
             printers: "Yes",
             coffee: "Coffee & Tea",
             aircon: "Yes",
-            other_amenities: "Parking, First-Aid, Biometric/Face Lock"
+            other_amenities: "Parking, First-Aid, Biometric and Face Lock"
           }
         }
       ],
+      
       "Ziro": [
         {
           name: "Oops! No coworking space in Ziro",
@@ -129,7 +131,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           dayPass: "NA",
           monthlyDesk: "NA",
           monthlyPrivate: "NA",
-          features: ["Not Applicable"],
+          features: ["NA"],
           rating: NA,
           website: null, // No website available
           phone: "NA",
