@@ -961,10 +961,9 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           type: "Mountain Capital",
           dayPass: "₹450",
           monthlyDesk: "₹4,500",
-          monthlyPrivate: "₹7,000,
           features: ["Mountain views", "Clean environment", "Peaceful setting", "Tourism base", "Cultural diversity"],
           rating: 4.0,
-          website: https://www.sanctorum.work/,
+          website: "https://www.sanctorum.work",
           phone: "+91 99070 61463",
           description: "Mountain capital coworking with stunning Himalayan views and peaceful environment for productivity.",
           amenities: {
