@@ -31,9 +31,9 @@ export function addNewCitiesData(storage: any, cityIds: {
         amenities: ["Mountain Views", "Meeting Room", "Cafe"]
       },
       {
-        name: "Sikkim Digital Hub",
-        address: "Development Area, Gangtok",
-        pricing: "₹4,000/month", 
+        name: "My Branch",
+        address: "1st Floor, Mohora Commercial, opp. Deorali Bazar, near Butterfly bridge, Gangtok",
+        pricing: "₹4,500/month", 
         speedMbps: 60,
         amenities: ["24/7 Access", "High-speed WiFi", "Conference Rooms"]
       }
