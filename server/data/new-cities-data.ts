@@ -24,9 +24,9 @@ export function addNewCitiesData(storage: any, cityIds: {
     avgSpeedMbps: 40,
     coworkingSpaces: [
       {
-        name: "Mountain Co-work",
-        address: "MG Marg, Gangtok",
-        pricing: "₹3,500/month",
+        name: "Sanctorum Co-Working",
+        address: "1st Floor, Mohora Commercial, opp Deorali, Bazar, Near Butterfly bridge, Gangtok",
+        pricing: "₹4,500/month",
         speedMbps: 50,
         amenities: ["Mountain Views", "Meeting Room", "Cafe"]
       },
