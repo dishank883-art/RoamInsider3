@@ -288,65 +288,46 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       ],
       "Tosh": [
         {
-          name: "Mountain View Workspace",
-          location: "Tosh Village Center",
-          type: "Himalayan Village",
-          dayPass: "₹150",
-          monthlyDesk: "₹2,000",
-          monthlyPrivate: "₹3,500",
-          features: ["Valley Views", "Quiet Space", "Solar Power", "Outdoor Deck", "Basic amenities"],
-          rating: 4.0,
+          name: "No Co-working spaces",
+          location: "NA",
+          type: "NA",
+          dayPass: "NA",
+          monthlyDesk: "NA",
+          monthlyPrivate: "NA",
+          features: ["null"],
+          rating: null,
           website: null, // No website available
-          phone: "Contact locally",
-          description: "Simple workspace in Himalayan village with stunning valley views and peaceful environment.",
+          phone: "NA",
+          description: "NA",
           amenities: {
-            wifi: "15-20 Mbps (weather dependent)",
-            hours: "Flexible (guesthouse arrangement)",
-            printers: "No",
-            coffee: "Local chai available",
-            aircon: "No (natural mountain air)"
+            wifi: "NA",
+            hours: "NA",
+            printers: "NA",
+            coffee: "NA",
+            aircon: "NA"
           }
         }
       ],
       "Rishikesh": [
         {
-          name: "Zostel Rishikesh Co-work",
-          location: "Tapovan, Rishikesh",
+          name: "BunkStay Co-work",
+          location: "Lakshman Jhula, Neelkanth Road, Distt, Rishikesh, Uttarakhand",
           type: "Backpacker Coworking",
-          dayPass: "₹300",
-          monthlyDesk: "₹4,500",
-          monthlyPrivate: "₹8,000",
+          dayPass: "Visit the website",
+          monthlyDesk: "Visit the website",
+          monthlyPrivate: "Visit the website",
           features: ["Ganges views", "Yoga sessions", "Community space", "Rooftop workspace", "Spiritual environment"],
           rating: 4.2,
-          website: "https://zostel.com/",
-          phone: "+91 135 2430 678",
+          website: "https://bunkstay.com/co-working.html",
+          phone: "+91-81716 65566",
           description: "Spiritual coworking space with Ganges views and yoga-friendly environment.",
           amenities: {
             wifi: "50+ Mbps",
             hours: "6 AM - 11 PM",
             printers: "Basic printing",
             coffee: "Healthy café with organic options",
-            aircon: "No (river breeze cooling)"
-          }
-        },
-        {
-          name: "Rishikesh Digital Hub",
-          location: "Laxman Jhula",
-          type: "Spiritual Coworking",
-          dayPass: "₹250",
-          monthlyDesk: "₹3,500",
-          monthlyPrivate: "₹6,500",
-          features: ["Temple proximity", "Meditation sessions", "River views", "Quiet zones", "Spiritual community"],
-          rating: 4.0,
-          website: "Contact local spiritual centers",
-          phone: "+91 135 2431 234",
-          description: "Unique coworking combining digital work with spiritual practices and meditation.",
-          amenities: {
-            wifi: "30+ Mbps",
-            hours: "5 AM - 10 PM",
-            printers: "Basic",
-            coffee: "Herbal teas and healthy drinks",
-            aircon: "No (natural ventilation)"
+            aircon: "Yes",
+            other_amenities: "Strong Wi-Fi, Yoga Sessions, Co-worker's playground, Cozy Lounges"          
           }
         }
       ],
