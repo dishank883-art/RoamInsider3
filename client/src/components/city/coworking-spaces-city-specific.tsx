@@ -267,7 +267,24 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       "Kasol": [
         {
           name: "No Co-working spaces",
+          location: "NA",
+          type: "NA",
+          dayPass: "NA",
+          monthlyDesk: "NA",
+          monthlyPrivate: "NA",
+          features: ["null"],
+          rating: null,
+          website: null, // No website available
+          phone: "NA",
+          description: "NA",
+          amenities: {
+            wifi: "NA",
+            hours: "NA",
+            printers: "NA",
+            coffee: "NA",
+            aircon: "NA"
           }
+            }
       ],
       "Tosh": [
         {
