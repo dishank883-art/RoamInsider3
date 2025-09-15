@@ -77,47 +77,46 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           }
         }
       ],
+      
       "Dehradun": [
         {
-          name: "Iksana Workspaces",
-          location: "IT Park: CPL-I Tower",
-          type: "Professional Coworking",
-          dayPass: "₹500",
+          name: "91springboard Dehradun",
+          location: "Rajpur Road",
+          type: "Premium Coworking",
+          dayPass: "₹400",
           monthlyDesk: "₹6,000",
-          monthlyPrivate: "Visit the Website",
-          features: ["Housekeeping & Maintenance", "Good WiFi", "Library access", "Unlimited Coffee & Tea", "Parking"],
-          rating: 4.1,
-          website: "https://www.iksana.work/",
-          phone: "+91 9354064958",
-          description: "Ready-to-move-in private offices by iKSANA",
+          monthlyPrivate: "₹12,000",
+          features: ["High-speed WiFi", "Meeting rooms", "Events", "Cafe", "Parking", "Community"],
+          rating: 4.4,
+          website: "https://www.91springboard.com/",
+          phone: "+91 135 2711234",
+          description: "Professional coworking space with startup ecosystem and networking events.",
           amenities: {
-            wifi: "50+ Mbps",
-            hours: "9 AM - 6 PM",
+            wifi: "100+ Mbps",
+            hours: "24/7 access",
             printers: "Yes",
-            coffee: "Serviced Cafeteria",
-            aircon: "Yes",
-            other_amenities: "Meeting Rooms, Power Backup, CCTV Surveillance, Breakout Spaces & Lounges, Door Access Control"
+            coffee: "Unlimited",
+            aircon: "Yes"
           }
         },
         {
-          name: "JumpStart Coworking Spaces",
-          location: "Shagun Tower 2nd floor, New Road, Dwarka Store Chowk, Dehradun, India",
-          type: "Professional Coworking",
-          dayPass: "₹500",
-          monthlyDesk: "₹5,400",
-          monthlyPrivate: "Visit the Website",
-          features: ["Highspeed Wifi", "Gaming Area", "Security Surveillance"],
+          name: "The Doon School Incubation Center",
+          location: "The Doon School Campus",
+          type: "Academic Coworking",
+          dayPass: "₹300",
+          monthlyDesk: "₹5,000",
+          monthlyPrivate: "₹10,000",
+          features: ["Academic environment", "Mentorship", "Good WiFi", "Library access", "Peaceful campus"],
           rating: 4.1,
-          website: "https://jumpstartcoworking.com/",
-          phone: "+91 8193045555",
-          description: "Ready to move in private offices by JumpStart",
+          website: "https://www.doonschool.com/",
+          phone: "+91 135 2526400",
+          description: "Unique coworking space within prestigious school campus with academic atmosphere.",
           amenities: {
             wifi: "50+ Mbps",
             hours: "9 AM - 6 PM",
             printers: "Yes",
-            coffee: "Coffee & Tea",
-            aircon: "Yes",
-            other_amenities: "Parking, First-Aid, Biometric and Face Lock"
+            coffee: "Canteen available",
+            aircon: "Yes"
           }
         }
       ],
