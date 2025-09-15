@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Wifi, Coffee, Users, MapPin, DollarSign, Clock, Star, ExternalLink, Phone, Calendar } from "lucide-react";
+import { Wifi, Coffee, Users, MapPin, DollarSign, Clock, Star, ExternalLink, Phone, Calendar, Package } from "lucide-react";
 import type { CityWithDetails } from "@shared/schema";
 
 interface CoworkingSpacesProps {
@@ -1193,7 +1193,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
                       Coffee: {space.amenities.coffee}
                     </div>
                     <div className="flex items-center">
-                      <Coffee className="h-3 w-3 mr-2" />
+                      <Package className="h-3 w-3 mr-2" />
                       Other Amenities: {space.amenities.other_amenities}
                       </div>
                   </div>
