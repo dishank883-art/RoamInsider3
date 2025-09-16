@@ -80,43 +80,45 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       
       "Dehradun": [
         {
-          name: "91springboard Dehradun",
-          location: "Rajpur Road",
+          name: "iKSANA Workspaces Dehradun",
+          location: "IT Park: CPL-I Tower",
           type: "Premium Coworking",
-          dayPass: "₹400",
+          dayPass: "₹500",
           monthlyDesk: "₹6,000",
-          monthlyPrivate: "₹12,000",
-          features: ["High-speed WiFi", "Meeting rooms", "Events", "Cafe", "Parking", "Community"],
+          monthlyPrivate: "Visit the Website",
+          features: ["High-speed WiFi", "Meeting rooms", "Housekeeping & Maintenance", "Dedicated Helpdesk", "24x7 Security"],
           rating: 4.4,
-          website: "https://www.91springboard.com/",
-          phone: "+91 135 2711234",
+          website: "https://www.iksana.work/",
+          phone: "+91 9354064958",
           description: "Professional coworking space with startup ecosystem and networking events.",
           amenities: {
             wifi: "100+ Mbps",
             hours: "24/7 access",
             printers: "Yes",
-            coffee: "Unlimited",
-            aircon: "Yes"
+            coffee: "Unlimited Tea and Coffee",
+            aircon: "Yes",
+            other_amenities: "Power Back-Up, Serviced Cafeteria, Parking, Breakout Spaces & Lounges, A/V Equipment, Door Access control" 
           }
         },
         {
-          name: "The Doon School Incubation Center",
-          location: "The Doon School Campus",
-          type: "Academic Coworking",
-          dayPass: "₹300",
+          name: "Jumpstart Coworking",
+          location: "Shagun Tower 2nd floor, New Road, Dwarka Store Chowk, Dehradun, India",
+          type: "Sustainable Coworking",
+          dayPass: "₹500",
           monthlyDesk: "₹5,000",
           monthlyPrivate: "₹10,000",
-          features: ["Academic environment", "Mentorship", "Good WiFi", "Library access", "Peaceful campus"],
+          features: ["Highspeed WiFi", "Gaming Area", "Security Surveilance", "24/6"],
           rating: 4.1,
-          website: "https://www.doonschool.com/",
-          phone: "+91 135 2526400",
-          description: "Unique coworking space within prestigious school campus with academic atmosphere.",
+          website: "https://jumpstartcoworking.com/",
+          phone: "+91 8193045555",
+          description: "Sustainable Coworking in Your City.",
           amenities: {
             wifi: "50+ Mbps",
             hours: "9 AM - 6 PM",
             printers: "Yes",
-            coffee: "Canteen available",
-            aircon: "Yes"
+            coffee: "Cafeteria",
+            aircon: "Yes",
+            other_amenities: "First-aid, Biometric / Face Lock, Parking"
           }
         }
       ],
