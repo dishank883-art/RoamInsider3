@@ -145,7 +145,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
         {
           name: "Incuspaze Office Spaces",
           location: "302, 3rd Floor, Work Food & Entertainment City (WFEC), Rajpur Rd, Clock , Tower, Dehradun, Uttarakhand 248009",
-          type: "Professional Coworking 
+          type: "Professional Coworking", 
           dayPass: "Visit the Website",
           monthlyDesk: "Visit the Website",
           monthlyPrivate: "Visit the Website",
