@@ -15,7 +15,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       "Goa": [
         {
           name: "91springboard Goa",
-          location: "Porvorim, North Goa",
+          location: "Panaji, Goa",
           type: "Premium",
           dayPass: "₹500",
           monthlyDesk: "₹8,000",
@@ -23,34 +23,57 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           features: ["High-speed WiFi", "Meeting rooms", "Events", "Cafe", "Parking"],
           rating: 4.5,
           website: "https://www.91springboard.com/",
-          phone: "+91 832 671 1234",
+          phone: "+91 95975 19191",
           description: "Professional coworking space with startup ecosystem and regular networking events.",
           amenities: {
             wifi: "100+ Mbps",
             hours: "24/7 access",
             printers: "Yes",
             coffee: "Unlimited",
-            aircon: "Yes"
+            aircon: "Yes",
+            other_amenities: "Customized Private Suites"
           }
         },
         {
-          name: "Drishti Coworking",
-          location: "Anjuna, North Goa",
-          type: "Beach-side",
+          name: "Mewo Coworking Space",
+          location: "MeWo - Meetings & Co-Working, Dempo Trade Center, 002, 004 Ground Floor & 706 7th Floor, Patto, Panjim, Goa",
+          type: "Professional Workspace",
           dayPass: "₹400",
           monthlyDesk: "₹6,500",
           monthlyPrivate: "₹12,000",
-          features: ["Beach location", "Outdoor workspace", "Yoga classes", "Healthy cafe", "Bike rental"],
+          features: ["Enclosed workspace", "Yoga classes", "Healthy cafe"],
           rating: 4.3,
-          website: null, // No website available
-          phone: "+91 832 227 8900",
+          website: "https://mewo.co/",
+          phone: "+91 81045 64129",
           description: "Unique beachside coworking with wellness focus and outdoor workspace options.",
           amenities: {
             wifi: "50+ Mbps",
-            hours: "7 AM - 10 PM",
+            hours: "9 AM - 9 PM",
             printers: "Yes",
             coffee: "Premium coffee",
-            aircon: "Yes"
+            aircon: "Yes",
+            other_amenities: "Unlimited Wifi, Community Events & Activities, Exquisite Cafe Access"
+            }
+        },
+        {
+          name: "The Coworking Space Goa",
+          location: "Third floor, Midas Touch, Opp District and Sessions Court, Old Market, Shop no.1-6, Fatorda, Madgaon, Goa",
+          type: "Professional",
+          dayPass: "₹400",
+          monthlyDesk: "₹6,500",
+          monthlyPrivate: "₹12,000",
+          features: ["High-Speed Internet", "Reserved Workspace", "Secure Storage", "Access to Pantry & Lounge", "Bike rental"],
+          rating: 4.3,
+          website: "https://thecoworkingspacegoa.com/",
+          phone: "+91 91727 23630",
+          description: "Unique beachside coworking with wellness focus and outdoor workspace options.",
+          amenities: {
+            wifi: "50+ Mbps",
+            hours: "9 AM - 7 PM",
+            printers: "Yes",
+            coffee: "Premium coffee",
+            aircon: "Yes",
+            other_amenities: "Secure & Dedicated Lockers, Fully Enclosed Office Space"
           }
         }
       ],
