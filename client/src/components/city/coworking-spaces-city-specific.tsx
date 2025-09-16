@@ -119,6 +119,48 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
             coffee: "Cafeteria",
             aircon: "Yes",
             other_amenities: "First-aid, Biometric / Face Lock, Parking"
+            }
+        },
+        {
+          name: "The Circle . Work",
+          location: "Rajpur Road, Dehradun, India",
+          type: "Professional Coworking",
+          dayPass: "₹499",
+          monthlyDesk: "₹7,999",
+          monthlyPrivate: "₹11,999",
+          features: ["Highspeed WiFi", "Mail Access", "Housekeeping Service", "Dedicated Phoneline"],
+          rating: 4.1,
+          website: "https://jumpstartcoworking.com/",
+          phone: "011-43099785",
+          description: "Professional Coworking in Your City.",
+          amenities: {
+            wifi: "50+ Mbps",
+            hours: "9 AM - 6 PM",
+            printers: "Yes",
+            coffee: "Food and Beverages",
+            aircon: "Yes",
+            other_amenities: "Productive Meeting Spaces, Dedicated Circle"
+            }
+        },
+        {
+          name: "Incuspaze Office Spaces",
+          location: "302, 3rd Floor, Work Food & Entertainment City (WFEC), Rajpur Rd, Clock , Tower, Dehradun, Uttarakhand 248009",
+          type: "Professional Coworking 
+          dayPass: "Visit the Website",
+          monthlyDesk: "Visit the Website",
+          monthlyPrivate: "Visit the Website",
+          features: ["High Speed Internet", "IT Support", "Lounge", "Community Manager", "Conference Room"],
+          rating: 4.1,
+          website: "https://www.incuspaze.com/dehradun/space-details/incuspaze-wfec",
+          phone: "+91 9930662621",
+          description: "Professional Coworking in Your City.",
+          amenities: {
+            wifi: "50+ Mbps",
+            hours: "9 AM - 8 PM",
+            printers: "Yes",
+            coffee: "Cafeteria & Pantry",
+            aircon: "Yes",
+            other_amenities: "Reception, Daily Cleaning"
           }
         }
       ],
