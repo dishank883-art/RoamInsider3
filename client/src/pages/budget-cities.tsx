@@ -19,7 +19,7 @@ export default function BudgetCities() {
   const budgetCities = allCities?.filter((city: any) => 
     city.monthlyBudget <= 35000 || 
     city.tags?.includes('budget-friendly') ||
-    ['dehradun', 'rishikesh', 'mcleodganj', 'dharamkot', 'mussoorie', 'gangtok', 'shillong', 'kasol', 'tosh'].includes(city.slug)
+    ['dehradun', 'rishikesh', 'mcleodganj', 'dharamkot', 'mussoorie', 'alleppey', 'kasol', 'tosh'].includes(city.slug)
   ) || [];
 
   return (
