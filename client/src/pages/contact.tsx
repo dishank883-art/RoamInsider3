@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,9 @@ import { ArrowLeft, Mail, MessageCircle, Users, MapPin, Clock, Send } from "luci
 import { useState } from "react";
 
 export default function Contact() {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
