@@ -462,7 +462,16 @@ export default function Home() {
     });
     return Array.from(tags).sort();
   }, [allCities]);
-
+const globalStyles = (
+    <style jsx global>{`
+      .bg-vintage-gold {
+        animation: none !important;
+      }
+      .bg-vintage-gold:hover {
+        animation: none !important;
+      }
+    `}</style>
+  );
   return (
     <div className="bg-cream min-h-screen">
       <Navigation />
