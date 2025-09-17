@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import CityCard from "@/components/ui/city-card";
@@ -7,13 +8,12 @@ import { ArrowLeft, TrendingUp } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 
 export default function PopularDestinations() {
-  const { data: allCities, isLoading } = useQuery({
-    queryKey: ['/api/cities']
-  });
-
   useEffect(() => {
   window.scrollTo(0, 0);
 }, []);
+  const { data: allCities, isLoading } = useQuery({
+    queryKey: ['/api/cities']
+  });
 
   // Filter for popular destinations (those with higher nomad score or popular tags)
   const popularCities = allCities?.filter((city: any) => 
