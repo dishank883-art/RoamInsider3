@@ -570,7 +570,7 @@ export default function Home() {
             {/* Left Content */}
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center bg-vintage-gold/20 text-vintage-gold px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                🔥 Join 200+ Active Members
+                🔥 Join 300+ Active Members
               </div>
               
               <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
@@ -680,7 +680,7 @@ export default function Home() {
                 </div>
                 
                 <div className="mt-6 pt-6 border-t border-white/10 text-center">
-                  <p className="text-vintage-gold font-semibold text-lg">200+ Members Can't Be Wrong</p>
+                  <p className="text-vintage-gold font-semibold text-lg">300+ Members Can't Be Wrong</p>
                   <div className="flex justify-center space-x-1 mt-2">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <span key={i} className="text-vintage-gold text-lg">⭐</span>
