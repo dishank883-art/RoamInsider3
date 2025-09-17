@@ -1467,11 +1467,12 @@ export default function InsiderHacksCitySpecific({ city }: Props) {
           { name: "Rajasthan Tourism", description: "Official state tourism app with permits, events, and authentic experiences", url: "https://www.rajasthantourism.gov.in/" }
         ],
         emergencyNumbers: [
-          { label: "Jaipur Police Control", number: "0141-2743000" },
+          { label: "Jaipur Police Control", number: "112/100" },
           { label: "Tourist Helpline Rajasthan", number: "1363" },
           { label: "Medical Emergency", number: "108" },
           { label: "Fire Brigade", number: "101" },
-          { label: "Women's Helpline", number: "1091" }
+          { label: "Women's Helpline", number: "1091" },
+          { label: "Ambulance", number: "102" }
         ]
       }
     };
