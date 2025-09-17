@@ -456,8 +456,8 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           }
         },
         {
-          name: "McLeod Shared Spaces",
-          location: "McLeod Ganj (2km)",
+          name: "tHE vOID lIFE",
+          location: "Manisha Rd, Bhagsu Nag, Dharamshala, Himachal Pradesh",
           type: "Spiritual Hub",
           dayPass: "₹300",
           monthlyDesk: "₹4,000",
