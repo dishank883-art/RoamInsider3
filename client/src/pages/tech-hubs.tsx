@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import CityCard from "@/components/ui/city-card";
@@ -7,6 +8,9 @@ import { ArrowLeft, Laptop } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 
 export default function TechHubs() {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   const { data: allCities, isLoading } = useQuery({
     queryKey: ['/api/cities']
   });
