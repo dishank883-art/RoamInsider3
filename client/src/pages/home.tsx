@@ -614,7 +614,7 @@ export default function Home() {
                 <Button 
                   asChild
                   size="lg"
-                  className="bg-vintage-gold hover:bg-vintage-gold/90 text-travel-blue font-bold px-10 py-5 text-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-200"
+                  className="bg-vintage-gold hover:bg-vintage-gold/90 text-travel-blue font-bold px-10 py-5 text-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-none"
                 >
                   <a 
                     href="https://discord.gg/Y39GGpQtMm" 
