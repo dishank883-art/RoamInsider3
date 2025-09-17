@@ -19,8 +19,7 @@ export default function TechHubs() {
   const techHubs = allCities?.filter((city: any) => 
     city.internetSpeed >= 50 ||
     city.tags?.includes('tech-hub') ||
-    city.tags?.includes('startup-scene') ||
-    ['mumbai', 'bangalore', 'pune', 'new-delhi', 'goa', 'pondicherry'].includes(city.slug)
+    ['mumbai', 'bangalore', 'pune', 'new-delhi'].includes(city.slug)
   ) || [];
 
   return (
