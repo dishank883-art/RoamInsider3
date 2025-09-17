@@ -464,7 +464,7 @@ export default function Home() {
   }, [allCities]);
 
   return (
-    <div className="bg-cream min-h-screen">
+    <div className=""pt-16 bg-cream min-h-screen"">
       <Navigation />
       <SearchFilters 
         searchQuery={searchQuery}
