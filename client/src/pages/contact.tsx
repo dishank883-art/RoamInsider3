@@ -44,7 +44,7 @@ export default function Contact() {
     {
       icon: <MessageCircle className="h-6 w-6" />,
       title: "Join Our Community",
-      description: "Connect with 200+ nomads",
+      description: "Connect with 300+ nomads",
       contact: "Discord Community",
       action: "Join Discord",
       link: "https://discord.gg/roaminsider"
@@ -102,7 +102,7 @@ export default function Contact() {
             <div className="flex items-center justify-center space-x-8 text-blue-100 mb-8">
               <div className="flex items-center space-x-2">
                 <Users className="h-5 w-5 text-vintage-gold" />
-                <span className="font-semibold">200+ Members</span>
+                <span className="font-semibold">300+ Members</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-5 w-5 text-vintage-gold" />
@@ -267,7 +267,7 @@ export default function Contact() {
             Join Our Thriving Community
           </h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Connect with 200+ digital nomads exploring India. Share experiences, get recommendations, 
+            Connect with 300+ digital nomads exploring India. Share experiences, get recommendations, 
             and find travel companions in our active Discord community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
