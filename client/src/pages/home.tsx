@@ -466,7 +466,6 @@ export default function Home() {
   return (
     <div className="bg-cream min-h-screen">
       <Navigation />
-      <HeroSection />
       <SearchFilters 
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -475,7 +474,8 @@ export default function Home() {
         advancedFilters={advancedFilters}
         setAdvancedFilters={setAdvancedFilters}
       />
-      
+      <HeroSection />
+       
       {/* Featured Cities Section */}
       <section className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-8 sm:py-16" data-cities-section>
         <div className="text-center mb-12">
