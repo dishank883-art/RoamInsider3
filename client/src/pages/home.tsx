@@ -464,7 +464,7 @@ export default function Home() {
   }, [allCities]);
 
   return (
-    <div className= ""bg-cream min-h-screen"">
+    <div className=""bg-cream min-h-screen"">
       <Navigation />
       <SearchFilters 
         searchQuery={searchQuery}
@@ -474,6 +474,7 @@ export default function Home() {
         advancedFilters={advancedFilters}
         setAdvancedFilters={setAdvancedFilters}
       />
+      
       <HeroSection />
        
       {/* Featured Cities Section */}
