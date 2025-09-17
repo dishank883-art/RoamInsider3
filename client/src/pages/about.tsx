@@ -73,7 +73,7 @@ export default function About() {
                     <div className="flex items-center justify-center w-12 h-12 bg-vintage-gold rounded-full mb-3 mx-auto">
                       <Users className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="font-semibold text-travel-blue mb-2">200+ Members</h3>
+                    <h3 className="font-semibold text-travel-blue mb-2">300+ Members</h3>
                     <p className="text-sm text-muted-navy">Active nomad community</p>
                   </div>
                   <div className="text-center">
@@ -181,7 +181,7 @@ export default function About() {
               Join Our Community
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Connect with 200+ digital nomads exploring India. Share experiences, get real-time advice, 
+              Connect with 300+ digital nomads exploring India. Share experiences, get real-time advice, 
               and discover your next incredible destination.
             </p>
             <a 
