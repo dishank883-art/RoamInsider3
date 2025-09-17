@@ -502,48 +502,50 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       ],
       "Mumbai": [
         {
-          name: "91springboard Andheri",
-          location: "Andheri East, Mumbai",
+          name: "91springboard Andheri Lotus",
+          location: "Plot No. D, 5th Rd, Shree Krishna Nagar, Marol MIDC Industry Estate, Andheri East, Mumbai, Maharashtra",
           type: "Premium Business Hub",
           dayPass: "₹800",
           monthlyDesk: "₹15,000",
           monthlyPrivate: "₹25,000",
           features: ["Metro connectivity", "24/7 access", "Corporate environment", "Networking events", "Premium facilities"],
           rating: 4.6,
-          website: "https://www.91springboard.com/",
-          phone: "+91 22 4061 5555",
-          description: "Premium coworking in Mumbai's business district with excellent connectivity and corporate facilities.",
+          website: "https://www.91springboard.com/co-working-office-space-mumbai/lotus-star-andheri-east/",
+          phone: "+91 95975 19191",
+          description: "Premium coworking in Mumbai's business district with excellent connectivity and corporate facilities and muliple locations in Mumbai.",
           amenities: {
             wifi: "200+ Mbps",
             hours: "24/7 access",
             printers: "Yes",
             coffee: "Barista quality cafe",
-            aircon: "Central AC"
+            aircon: "Central AC",
+            other_amenities: "Game Zones, Parking, Poer Backup, Daily Cleaning & Sanitization, Easy Customization, Pan India Access"
           }
         },
         {
-          name: "WeWork BKC",
-          location: "Bandra Kurla Complex",
+          name: "WeWork BKC Enam Sambhav",
+          location: "C - 20, G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra",
           type: "Global Corporate",
           dayPass: "₹1,200",
           monthlyDesk: "₹18,000",
-          monthlyPrivate: "₹30,000",
+          monthlyPrivate: "₹60,000",
           features: ["BKC location", "International brands", "Premium amenities", "Business networking", "Corporate clients"],
           rating: 4.5,
-          website: "https://www.wework.com/",
-          phone: "+91 22 6162 1000",
-          description: "Global coworking brand in Mumbai's premier business district with world-class facilities.",
+          website: "https://wework.co.in/mumbai/bkc/enam-sambhav/",
+          phone: "1800 123 999 000",
+          description: "Global coworking brand in Mumbai's premier business district with world-class facilities and muliple locations in Mumbai",
           amenities: {
             wifi: "300+ Mbps",
             hours: "24/7 access",
             printers: "High-end printing",
             coffee: "Premium micro-roastery",
-            aircon: "Central AC"
+            aircon: "Central AC",
+            other_amenities: "Wellness room, Outdoor space, Coffee Bar, Mail and package handling, Parking, Bike Storage, Phone booths, Pantry, 24/7 Security, F & B market, Event Spaces"
           }
         },
         {
-          name: "IndiQube Lower Parel",
-          location: "Lower Parel, Mumbai",
+          name: "IndiQube Arena Jogeshwari East",
+          location: "10th and 11th floor, Plot no :, 20, Jogeshwari - Vikhroli Link Rd, nr. Majas Depot, Shyam Nagar, Jogeshwari East, Mumbai, Maharashtra",
           type: "Tech Corporate",
           dayPass: "₹700",
           monthlyDesk: "₹12,000",
@@ -551,21 +553,22 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           features: ["Tech hub location", "Startup ecosystem", "Modern design", "Corporate amenities", "Event spaces"],
           rating: 4.4,
           website: "https://www.indiqube.com/",
-          phone: "+91 22 4905 6000",
-          description: "Modern tech-focused coworking in Lower Parel with strong startup ecosystem and networking.",
+          phone: "+91 7349282552",
+          description: "Modern tech-focused coworking in Lower Parel with strong startup ecosystem and networking and multiple locations in Mumbai.",
           amenities: {
             wifi: "150+ Mbps",
             hours: "24/7 access",
             printers: "Yes",
             coffee: "Tech cafe with snacks",
-            aircon: "Central AC"
+            aircon: "Central AC",
+            other_amenities: "Smart Meeting Rooms, Breakout Zone, Visitor Management, Smart Cafe"
           }
         }
       ],
       "Bangalore": [
         {
           name: "91springboard Koramangala",
-          location: "Koramangala, Bangalore",
+          location: " 3rd Floor, Padmavathi Complex, 80 Feet Rd, Koramangala 8th Block, Koramangala, Bengaluru, Karnataka",
           type: "Startup Ecosystem",
           dayPass: "₹600",
           monthlyDesk: "₹10,000",
@@ -573,19 +576,20 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           features: ["Startup hub", "Investor network", "Mentorship programs", "Perfect weather", "Tech community"],
           rating: 4.7,
           website: "https://www.91springboard.com/",
-          phone: "+91 80 4061 5555",
+          phone: "+91 9597519191",
           description: "Premier startup coworking in Bangalore's Silicon Valley with strong tech ecosystem and mentorship.",
           amenities: {
             wifi: "200+ Mbps",
             hours: "24/7 access",
             printers: "Yes",
             coffee: "Artisan coffee culture",
-            aircon: "Naturally cool + AC"
+            aircon: "Naturally cool + AC",
+            other_amenities: "Game Zones, Parking, Poer Backup, Daily Cleaning & Sanitization, Easy Customization, Pan India Access"
           }
         },
         {
           name: "WeWork Embassy Tech Village",
-          location: "Outer Ring Road, Bangalore",
+          location: "BLOCK-L, Embassy TechVillage, Outer Ring Rd, Devarabisanahalli, Bellandur, Bengaluru, Karnataka",
           type: "Tech Campus",
           dayPass: "₹800",
           monthlyDesk: "₹12,000",
@@ -593,19 +597,20 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           features: ["Tech park location", "IT companies", "Global networking", "Premium facilities", "Food courts"],
           rating: 4.5,
           website: "https://www.wework.com/",
-          phone: "+91 80 6162 1000",
+          phone: "1800 123 999 000",
           description: "Global coworking in Bangalore's largest tech park with access to IT companies and networking.",
           amenities: {
             wifi: "300+ Mbps",
             hours: "24/7 access",
             printers: "Advanced printing",
             coffee: "International cafe brands",
-            aircon: "Central AC"
+            aircon: "Central AC",
+            other_amenities: "Wellness room, Outdoor space, Coffee Bar, Mail and package handling, Parking, Bike Storage, Phone booths, Pantry, 24/7 Security, F & B market, Event Spaces"
           }
         },
         {
           name: "Cowrks RMZ Ecospace",
-          location: "Bellandur, Bangalore",
+          location: " Bay Area, Cowrks 6A, Ground Floor, ECOWORLD, 6A, Outer Ring Rd, adjacent to Building, Devarabisanahalli, Bellandur, Bengaluru, Karnataka",
           type: "Corporate Tech",
           dayPass: "₹500",
           monthlyDesk: "₹8,500",
@@ -613,21 +618,22 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           features: ["Tech corridor", "Lake views", "Modern design", "Corporate networking", "Innovation labs"],
           rating: 4.3,
           website: "https://cowrks.com/",
-          phone: "+91 80 4718 2000",
+          phone: "+91 95386 11122",
           description: "Modern coworking in Bangalore's tech corridor with lake views and innovation-focused environment.",
           amenities: {
             wifi: "150+ Mbps",
             hours: "24/7 access",
             printers: "Yes",
-            coffee: "Local specialty coffee",
-            aircon: "Central AC"
+            coffee: "Gourmet Beverages",
+            aircon: "Central AC",
+            other_amenities: "Community Experience, Exclusive Events, Office Supplies, App Access"
           }
         }
       ],
       "Pune": [
         {
-          name: "91springboard Koregaon Park",
-          location: "Koregaon Park, Pune",
+          name: "91springboard Yerawada",
+          location: "91Springboard, Sky Loft, CREATICITY MALL, opposite Golf Course, off Airport Road, Shastrinagar, Yerawada, Pune",
           type: "Cultural Business Hub",
           dayPass: "₹500",
           monthlyDesk: "₹8,000",
@@ -635,19 +641,20 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           features: ["Cultural district", "Startup community", "Pleasant weather", "Networking events", "Modern facilities"],
           rating: 4.5,
           website: "https://www.91springboard.com/",
-          phone: "+91 20 4061 5555",
+          phone: "+91 95975 19191",
           description: "Premium coworking in Pune's cultural district with perfect weather and vibrant startup community.",
           amenities: {
             wifi: "150+ Mbps",
             hours: "24/7 access",
             printers: "Yes",
             coffee: "Cafe culture",
-            aircon: "Natural breeze + AC"
+            aircon: "Natural breeze + AC",
+            other_amenities: "Game Zones, Parking, Poer Backup, Daily Cleaning & Sanitization, Easy Customization, Pan India Access"
           }
         },
         {
-          name: "IndiQube Hinjewadi",
-          location: "Hinjewadi IT Park, Pune",
+          name: "IndiQube Unity Towers",
+          location: "Balewadi Phata, Baner, Pune, Maharashtra",
           type: "IT Park Coworking",
           dayPass: "₹450",
           monthlyDesk: "₹7,000",
@@ -655,41 +662,43 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           features: ["IT park location", "Tech companies", "Corporate amenities", "Transportation hub", "Modern infrastructure"],
           rating: 4.3,
           website: "https://www.indiqube.com/",
-          phone: "+91 20 4905 6000",
+          phone: "+91 7349282552",
           description: "Corporate coworking in Pune's major IT park with excellent connectivity and tech ecosystem.",
           amenities: {
             wifi: "200+ Mbps",
             hours: "24/7 access",
             printers: "Yes",
             coffee: "IT park food court",
-            aircon: "Central AC"
+            aircon: "Central AC",
+            other_amenities: "Access Contro Systems, EV Charging Station, Visitor Management System"
           }
         },
         {
-          name: "Daftar Viman Nagar",
-          location: "Viman Nagar, Pune",
+          name: "StartHub Cowwork Space",
+          location: "2nd floor, Jewel Square mall, Koregaon Rd, near hotel taj vivanta, Koregaon Park, Pune, Maharashtra",
           type: "Community Focused",
-          dayPass: "₹400",
-          monthlyDesk: "₹6,500",
-          monthlyPrivate: "₹11,000",
+          dayPass: "Visit The Website",
+          monthlyDesk: "Visit The Website",
+          monthlyPrivate: "Visit The Website",
           features: ["Community events", "Affordable pricing", "Local network", "Flexible space", "Airport proximity"],
           rating: 4.2,
-          website: "https://daftar.co.in/",
-          phone: "+91 20 2528 3000",
+          website: "https://www.starthub.in/",
+          phone: "+91 79725 91804",
           description: "Community-focused coworking with affordable pricing and strong local networking opportunities.",
           amenities: {
             wifi: "100+ Mbps",
-            hours: "9 AM - 9 PM",
+            hours: "9:30 AM - 6:30 PM",
             printers: "Yes",
             coffee: "Local cafe partnership",
-            aircon: "Yes"
+            aircon: "Yes",
+            other_amenities: "Recreation Zone, Events, Customized Workplace"
           }
         }
       ],
       "New Delhi": [
         {
           name: "91springboard Gurgaon",
-          location: "Cyber City, Gurgaon",
+          location: "DLF Building No. 7A, 7A, DLF Cyber City, DLF Phase 2, Sector 24, Gurugram, Haryana",
           type: "Corporate Financial Hub",
           dayPass: "₹700",
           monthlyDesk: "₹12,000",
@@ -697,19 +706,20 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           features: ["Financial district", "Corporate networking", "Metro connectivity", "International businesses", "Premium facilities"],
           rating: 4.4,
           website: "https://www.91springboard.com/",
-          phone: "+91 124 4061 5555",
+          phone: "+91 95975 19191",
           description: "Premium coworking in Delhi's financial district with corporate networking and international business access.",
           amenities: {
             wifi: "200+ Mbps",
             hours: "24/7 access",
             printers: "Yes",
             coffee: "International cafe chains",
-            aircon: "Central AC"
+            aircon: "Central AC",
+            other_amenities: "Game Zones, Parking, Poer Backup, Daily Cleaning & Sanitization, Easy Customization, Pan India Access"
           }
         },
         {
-          name: "WeWork Galaxy",
-          location: "Noida, NCR Delhi",
+          name: "WeWork Galaxy Business Park",
+          location: "1st floor, GALAXY BUSINESS PARK, WeWork, A-44 & 45, Sushil Marg, Block A, Industrial Area, Sector 62, Noida, Uttar Pradesh",
           type: "Tech Corporate",
           dayPass: "₹800",
           monthlyDesk: "₹13,000",
@@ -717,118 +727,103 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           features: ["Tech hub", "Modern design", "Global community", "Startup programs", "Innovation spaces"],
           rating: 4.3,
           website: "https://www.wework.com/",
-          phone: "+91 120 6162 1000",
+          phone: "1800 123 999 000",
           description: "Global coworking in Delhi NCR's tech hub with innovation spaces and international community.",
           amenities: {
             wifi: "300+ Mbps",
             hours: "24/7 access",
             printers: "Advanced facilities",
             coffee: "Premium coffee culture",
-            aircon: "Central AC"
+            aircon: "Central AC",
+            other_amenities: "Wellness room, Outdoor space, Coffee Bar, Mail and package handling, Parking, Bike Storage, Phone booths, Pantry, 24/7 Security, F & B market, Event Spaces"
           }
         },
         {
-          name: "MyHQ Connaught Place",
-          location: "Connaught Place, New Delhi",
+          name: "FLYP - myHQ Coworking N Block CP",
+          location: "N - 57, Connaught Cir, Block N, Connaught Place, New Delhi, Delhi 110001",
           type: "Central Business District",
           dayPass: "₹600",
-          monthlyDesk: "₹10,000",
-          monthlyPrivate: "₹18,000",
+          monthlyDesk: "₹7,999",
+          monthlyPrivate: "₹9,999",
           features: ["Central location", "Heritage area", "Government proximity", "Business networking", "Transportation hub"],
           rating: 4.1,
           website: "https://myhq.in/",
-          phone: "+91 11 4061 5000",
+          phone: "+91 9205006361",
           description: "Central Delhi coworking in historic Connaught Place with government and business proximity.",
           amenities: {
             wifi: "150+ Mbps",
             hours: "9 AM - 9 PM",
             printers: "Yes",
             coffee: "Heritage cafe culture",
-            aircon: "Central AC"
+            aircon: "Central AC",
+            other_amenities: "Stationery, Pantry Area, Power Backup"
           }
         }
       ],
       "Kolkata": [
         {
-          name: "91springboard Salt Lake",
-          location: "Salt Lake City, Kolkata",
-          type: "Cultural Business Hub",
-          dayPass: "₹400",
-          monthlyDesk: "₹6,000",
-          monthlyPrivate: "₹10,000",
-          features: ["Cultural city", "Intellectual community", "Affordable pricing", "Creative environment", "Literary heritage"],
-          rating: 4.2,
-          website: "https://www.91springboard.com/",
-          phone: "+91 33 4061 5555",
-          description: "Cultural coworking in Kolkata's business district with intellectual community and creative atmosphere.",
-          amenities: {
-            wifi: "100+ Mbps",
-            hours: "9 AM - 9 PM",
-            printers: "Yes",
-            coffee: "Adda culture with tea",
-            aircon: "Central AC"
-          }
-        },
-        {
           name: "Spaces Park Street",
-          location: "Park Street, Kolkata",
+          location: "5th Floor, Prasad House, 16, Sudder St, near INDIAN MUSEUM, Fire Brigade Head Quarter, New Market Area, Dharmatala, Taltala, Kolkata, West Bengal",
           type: "Heritage Cultural",
-          dayPass: "₹350",
-          monthlyDesk: "₹5,500",
-          monthlyPrivate: "₹9,000",
+          dayPass: "520",
+          monthlyDesk: "₹15000",
+          monthlyPrivate: "₹21000",
           features: ["Heritage location", "Cultural events", "Creative community", "Literature clubs", "Affordable workspace"],
           rating: 4.0,
-          website: "Local cultural centers",
-          phone: "+91 33 2227 8000",
+          website: "https://ideapod.in/",
+          phone: "+91 62922 99064",
           description: "Heritage coworking on famous Park Street with cultural events and creative community atmosphere.",
           amenities: {
             wifi: "80+ Mbps",
-            hours: "8 AM - 8 PM",
+            hours: "9 AM - 9 PM",
             printers: "Basic",
             coffee: "Traditional tea culture",
-            aircon: "Yes"
+            aircon: "Yes",
+            other_amenities: "Reading Den, Complimentary Tea and Coffee, Unwinding Zone, Technical support, Event Space, Lockable private cabins with storage "
           }
         }
       ],
       "Jaipur": [
         {
-          name: "RIICO Industrial Coworking",
-          location: "Malviya Nagar, Jaipur",
+          name: "Office Culture Coworking",
+          location: "Horizon Tower, JEWEL OF INDIA, 606-607, Indra Nagar, Basant Vihar, Bajaj Nagar, Jaipur, Rajasthan",
           type: "Heritage Business",
           dayPass: "₹400",
-          monthlyDesk: "₹6,000",
-          monthlyPrivate: "₹10,000",
+          monthlyDesk: "₹12,000",
+          monthlyPrivate: "₹48,000 (4 Seater)" ,
           features: ["Heritage city", "Handicraft industry", "Tourism business", "Royal architecture", "Cultural events"],
           rating: 4.1,
           website: "Local business centers",
-          phone: "+91 141 227 8000",
+          phone: "+91 9773399090",
           description: "Heritage city coworking with connections to handicraft industry and tourism business networks.",
           amenities: {
             wifi: "80+ Mbps",
             hours: "9 AM - 7 PM",
             printers: "Yes",
-            coffee: "Rajasthani tea culture",
-            aircon: "Central AC"
+            coffee: "Tea / Coffee",
+            aircon: "Central AC",
+            other_amenities: "Conference Room, Power Backup, Ambient Music, Premium Seating"
           }
         },
         {
-          name: "Pink City Digital Hub",
-          location: "Vaishali Nagar, Jaipur",
+          name: "DAFFTAR Co-Working Space",
+          location: "12, Shiv Marg, kirti Nagar, Shyam Nagar, Jaipur, Rajasthan",
           type: "Modern Heritage",
-          dayPass: "₹350",
-          monthlyDesk: "₹5,500",
-          monthlyPrivate: "₹9,000",
+          dayPass: "Visit the Website",
+          monthlyDesk: "Visit the Website",
+          monthlyPrivate: "Visit the Website",
           features: ["Modern amenities", "Heritage charm", "Tourism networking", "Cultural immersion", "Affordable rates"],
-          rating: 3.9,
-          website: null, // No specific website
-          phone: "+91 141 228 9000",
+          rating: 4.2,
+          website: "https://dafftarcoworking.com/",
+          phone: "+91 9829017924",
           description: "Modern coworking in Pink City combining heritage charm with contemporary business facilities.",
           amenities: {
             wifi: "60+ Mbps",
             hours: "8 AM - 8 PM",
             printers: "Basic",
-            coffee: "Royal tea service",
-            aircon: "Yes"
+            coffee: "Free Beverages",
+            aircon: "Yes",
+            other_amenities: "Free Beverages, Power Backup, Biometric, Microwave, Fridge, Dedicated Phone"
           }
         }
       ],
