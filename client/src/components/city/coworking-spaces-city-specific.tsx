@@ -919,89 +919,114 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       ],
       "McLeodganj": [
         {
-          name: "Dharamshala Spiritual Workspace",
+          name: "Ghoomakad",
           location: "McLeod Ganj, Dharamshala",
           type: "Spiritual Community",
-          dayPass: "₹250",
-          monthlyDesk: "₹3,500",
-          monthlyPrivate: "₹6,000",
-          features: ["Spiritual environment", "Dalai Lama proximity", "International community", "Meditation spaces", "Mountain peace"],
+          dayPass: "₹500",
+          monthlyDesk: "₹5,000",
+          monthlyPrivate: "₹7,000",
+          features: ["Spiritual environment", "Dalai Lama proximity", "Community Kitchen", "Meditation spaces", "Mountain peace"],
           rating: 4.2,
-          website: null, // No specific website
-          phone: "+91 1892 221 000",
+          website: "https://ghoomakad.com/",
+          phone: "+91 7018353651",
           description: "Unique spiritual coworking in Dalai Lama's residence with international community and meditation spaces.",
           amenities: {
             wifi: "40+ Mbps",
-            hours: "6 AM - 8 PM",
+            hours: "24 Hrs Access of coworking space",
             printers: "Basic",
             coffee: "Tibetan tea culture",
-            aircon: "Natural mountain air"
+            aircon: "Natural mountain air",
+            other_amenities: "Strong Wi-Fi, Elctrical Backup, Private Mud House and Wooden Huts"
           }
         }
       ],
       "Mussoorie": [
         {
-          name: "Queen of Hills Workspace",
-          location: "Mall Road, Mussoorie",
-          type: "Hill Station Heritage",
-          dayPass: "₹350",
-          monthlyDesk: "₹5,000",
-          monthlyPrivate: "₹8,000",
-          features: ["Hill station charm", "Colonial architecture", "Mountain views", "Tourist season work", "Cool climate"],
-          rating: 3.9,
-          website: null, // No specific website
-          phone: "+91 135 263 2000",
-          description: "Charming hill station coworking with colonial heritage and stunning mountain views in cool climate.",
+          name: "Oops! No Co-working spaces in Mussoorie.",
+          location: "NA",
+          type: "NA",
+          dayPass: "NA",
+          monthlyDesk: "NA",
+          monthlyPrivate: "NA",
+          features: ["null"],
+          rating: null,
+          website: null, // No website available
+          phone: "NA",
+          description: "NA",
           amenities: {
-            wifi: "30+ Mbps",
-            hours: "8 AM - 7 PM",
-            printers: "Basic",
-            coffee: "Hill station tea culture",
-            aircon: "Natural cooling"
+            wifi: "NA",
+            hours: "NA",
+            printers: "NA",
+            coffee: "NA",
+            aircon: "NA",
+            other_amenities: "NA"
           }
         }
       ],
       "Shillong": [
         {
-          name: "Scotland of the East Hub",
-          location: "Police Bazar, Shillong",
+          name: "MyBranch Shillong",
+          location: "2nd Floor, LP Building, Laitumkhrah Main Rd, Nongkynrih, Laitumkhrah, Shillong, Meghalaya",
           type: "Cultural Music Hub",
-          dayPass: "₹300",
-          monthlyDesk: "₹4,000",
-          monthlyPrivate: "₹6,500",
+          dayPass: "Visit the Website",
+          monthlyDesk: "Visit the Website",
+          monthlyPrivate: "Visit the Website",
           features: ["Music culture", "Cultural diversity", "Pleasant climate", "Creative community", "Unique cuisine"],
-          rating: 3.8,
-          website: null, // No specific website
-          phone: "+91 364 250 2000",
+          rating: 4.0,
+          website: "https://www.mybranch.co.in/coworking-space-in-shillong",
+          phone: "+91 84519 99506",
           description: "Cultural coworking in Northeast India's music capital with creative community and pleasant climate.",
           amenities: {
             wifi: "35+ Mbps",
-            hours: "9 AM - 7 PM",
+            hours: "9 AM - 8 PM",
             printers: "Basic",
-            coffee: "Northeast tea culture",
-            aircon: "Natural cooling"
+            coffee: "Tea and Coffee",
+            aircon: "Yes",
+            other_amenities: "House Keeping, IT Support Executive, Power Backup Service, Training Room"
+            }
+        },
+        {
+          name: "BISCI Shillong",
+          location: "Top floor, Handers 2Compound, above HDFC Bank, Laitumkhrah, Shillong, Meghalaya",
+          type: "Mountain Capital",
+          dayPass: "Enquire by visiting the website",
+          monthlyDesk: "Enquire by visiting the website",
+          monthlyPrivate: "Enquire by visiting the website",
+          features: ["Mountain views", "Clean environment", "Peaceful setting", "Tourism base", "Cultural diversity"],
+          rating: 4.0,
+          website: "https://bisci.io/",
+          phone: "+91 60334 22944",
+          description: "Mountain capital coworking with stunning Himalayan views and peaceful environment for productivity.",
+          amenities: {
+            wifi: "60+ Mbps",
+            hours: "10 AM - 8 PM",
+            printers: "Basic",
+            coffee: "Tea and Coffee",
+            aircon: "Yes",
+            other_amenities: "Lounge, Conference Room, Balcony View, Roof Top"
           }
         }
       ],
       "Ziro Valley": [
         {
-          name: "Apatani Valley Workspace",
-          location: "Ziro Valley, Arunachal Pradesh",
-          type: "Tribal Cultural",
-          dayPass: "₹200",
-          monthlyDesk: "₹3,000",
-          monthlyPrivate: "₹5,000",
-          features: ["UNESCO heritage", "Tribal culture", "Rice terraces", "Music festivals", "Unique experience"],
-          rating: 4.0,
-          website: null, // No specific website
-          phone: "+91 3788 225 000",
-          description: "Unique tribal valley coworking in UNESCO heritage site with rice terraces and cultural immersion.",
+          name: "Oops! No Co-working spaces in Ziro.",
+          location: "NA",
+          type: "NA",
+          dayPass: "NA",
+          monthlyDesk: "NA",
+          monthlyPrivate: "NA",
+          features: ["null"],
+          rating: null,
+          website: null, // No website available
+          phone: "NA",
+          description: "NA",
           amenities: {
-            wifi: "20+ Mbps (improving)",
-            hours: "Flexible community hours",
-            printers: "Basic community printing",
-            coffee: "Local millet beverages",
-            aircon: "Natural valley cooling"
+            wifi: "NA",
+            hours: "NA",
+            printers: "NA",
+            coffee: "NA",
+            aircon: "NA",
+            other_amenities: "NA"
           }
         }
       ]
