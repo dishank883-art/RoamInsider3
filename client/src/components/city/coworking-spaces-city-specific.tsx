@@ -376,7 +376,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹14,000",
           features: ["IT ecosystem", "High Speed Internet", "Conference Room", "Networking events", "Modern facilities"],
           rating: 4.4,
-          website: "https://www.incuspaze.com/kochi/space-details/incuspaze-oberon-mall"
+          website: "https://www.incuspaze.com/kochi/space-details/incuspaze-oberon-mall",
           phone: "+91 993662621",
           description: "Premier tech coworking in Kerala's IT hub with strong startup ecosystem and mentorship.",
           amenities: {
@@ -397,7 +397,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           monthlyPrivate: "₹11,000",
           features: ["100% Electricity Backup", "Fully Managed", "Inspiring Views", "Meeting Rooms", "Tourist area"],
           rating: 4.2,
-          website: "https://bizcospaces.com/"
+          website: "https://bizcospaces.com/",
           phone: "+91 80789 99900",
           description: "Work in colonial heritage buildings with cultural atmosphere and backwater views.",
           amenities: {
