@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -58,7 +58,7 @@ export default function CostCalculator() {
   const [workingStyle, setWorkingStyle] = useState<string>("coworking");
   const [socialLevel, setSocialLevel] = useState<number>(3);
 
-   const calculatorRef = useRef<HTMLDivElement>(null);
+  const calculatorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (calculatorRef.current) {
@@ -138,7 +138,7 @@ export default function CostCalculator() {
       </section>
 
       {/* Calculator Section */}
-      <section className="max-w-6xl mx-auto px-4 lg:px-8 py-12 lg:py-16">
+      <section ref={calculatorRef} className="max-w-6xl mx-auto px-4 lg:px-8 py-12 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-8">
           
           {/* Input Controls */}
