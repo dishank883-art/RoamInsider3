@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react"; 
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -57,6 +57,10 @@ export default function CostCalculator() {
   const [accommodation, setAccommodation] = useState<string>("hostel");
   const [workingStyle, setWorkingStyle] = useState<string>("coworking");
   const [socialLevel, setSocialLevel] = useState<number>(3);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const calculateCosts = (): CostBreakdown => {
     if (!selectedCity) {
