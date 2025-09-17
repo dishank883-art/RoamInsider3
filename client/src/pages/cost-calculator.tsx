@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -57,14 +57,6 @@ export default function CostCalculator() {
   const [accommodation, setAccommodation] = useState<string>("hostel");
   const [workingStyle, setWorkingStyle] = useState<string>("coworking");
   const [socialLevel, setSocialLevel] = useState<number>(3);
-
-  const calculatorRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (calculatorRef.current) {
-      calculatorRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
 
   const calculateCosts = (): CostBreakdown => {
     if (!selectedCity) {
@@ -138,7 +130,7 @@ export default function CostCalculator() {
       </section>
 
       {/* Calculator Section */}
-      <section ref={calculatorRef} className="max-w-6xl mx-auto px-4 lg:px-8 py-12 lg:py-16">
+      <section className="max-w-6xl mx-auto px-4 lg:px-8 py-12 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-8">
           
           {/* Input Controls */}
