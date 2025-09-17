@@ -58,6 +58,14 @@ export default function CostCalculator() {
   const [workingStyle, setWorkingStyle] = useState<string>("coworking");
   const [socialLevel, setSocialLevel] = useState<number>(3);
 
+   const calculatorRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (calculatorRef.current) {
+      calculatorRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   const calculateCosts = (): CostBreakdown => {
     if (!selectedCity) {
       return {
