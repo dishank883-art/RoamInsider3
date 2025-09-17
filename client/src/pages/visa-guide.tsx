@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,9 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, ExternalLink, Clock, MapPin, FileText, Users, AlertCircle, CheckCircle } from "lucide-react";
 
 export default function VisaGuide() {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   const visaTypes = [
     {
       title: "Tourist Visa",
