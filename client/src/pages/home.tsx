@@ -464,18 +464,17 @@ export default function Home() {
   }, [allCities]);
 
   return (
-    <div className=""bg-cream min-h-screen"">
-      <Navigation />
+    <div className="bg-cream min-h-screen"> 
+      <Navigation /> 
+      <HeroSection /> 
       <SearchFilters 
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        selectedFilters={selectedFilters}
-        setSelectedFilters={setSelectedFilters}
-        advancedFilters={advancedFilters}
-        setAdvancedFilters={setAdvancedFilters}
-      />
-      
-      <HeroSection />
+        searchQuery={searchQuery} 
+        setSearchQuery={setSearchQuery} 
+        selectedFilters={selectedFilters} 
+        setSelectedFilters={setSelectedFilters} 
+        advancedFilters={advancedFilters} 
+        setAdvancedFilters={setAdvancedFilters} 
+        />
        
       {/* Featured Cities Section */}
       <section className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-8 sm:py-16" data-cities-section>
