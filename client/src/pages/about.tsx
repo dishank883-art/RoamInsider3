@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -5,6 +6,9 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Users, Wifi, Clock, Star, Heart } from "lucide-react";
 
 export default function About() {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   return (
     <>
       {/* SEO Meta Tags */}
