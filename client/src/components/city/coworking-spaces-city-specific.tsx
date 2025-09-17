@@ -412,7 +412,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       ],
       "Wayanad": [
         {
-          name: "Nature Valley Workspace",
+          name: "dewSpace Coworking",
           location: "dewSpace Building, dewSprout Building dew Road Gurukulam Road (Ooty - Mysuru Cross Road, 16/297, dew Road, Sultan Bathery",
           type: "Eco Coworking",
           dayPass: "Visit the Website",
@@ -422,7 +422,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           rating: 4.0,
           website: "https://www.dewspace.org/",
           phone: "+91 99950 22009",
-          description: "edefining Workspaces at dewSpace Coworking.",
+          description: "Redefining Workspaces at dewSpace Coworking.",
           amenities: {
             wifi: "40+ Mbps",
             hours: "9 AM - 8 PM",
@@ -456,7 +456,7 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           }
         },
         {
-          name: "tHE vOID lIFE",
+          name: "The Void Life",
           location: "Manisha Rd, Bhagsu Nag, Dharamshala, Himachal Pradesh",
           type: "Spiritual Hub",
           dayPass: "₹300",
@@ -834,43 +834,45 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       ],
       "Udaipur": [
         {
-          name: "Lake Palace Coworking",
-          location: "Lake Pichola Area, Udaipur",
+          name: "Habitus Coworking Space",
+          location: "Rajlaxmi Prime Building, Nakoda Complex, 5a, Hansa Palace Rd, Sector 4, Pooja Nagar, Hiran Magri, Udaipur, Rajasthan",
           type: "Royal Heritage",
           dayPass: "₹500",
           monthlyDesk: "₹7,000",
           monthlyPrivate: "₹12,000",
-          features: ["Lake views", "Royal architecture", "Tourism industry", "Cultural heritage", "Peaceful environment"],
+          features: ["High Speed Internet", "Clean and Well maintained Washrooms", "Private Working Space", "Basement Parking"],
           rating: 4.3,
-          website: null, // No specific website
-          phone: "+91 294 242 8000",
+          website: "https://habituscoworkingspace.com/",
+          phone: "+91 81077 62795",
           description: "Stunning lake-view coworking in royal Udaipur with heritage architecture and peaceful environment.",
           amenities: {
             wifi: "70+ Mbps",
-            hours: "8 AM - 8 PM",
+            hours: "9 AM - 9 PM",
             printers: "Yes",
             coffee: "Royal hospitality",
-            aircon: "Heritage cooling"
+            aircon: "Yes",
+            other_amenities: "Creative Events every weekend, Whiteboard & Stationery Facility"
           }
         },
         {
-          name: "City Palace Business Center",
-          location: "Near City Palace, Udaipur",
+          name: "House of Words, Udaipur",
+          location: "169, 2nd Floor, O road Infront of Matt Park, 169, Bhopalpura O Rd, above Cox and Kings Office, Bhupalpura, Bhopalpura, Udaipur, Rajasthan",
           type: "Heritage Tourism",
-          dayPass: "₹400",
-          monthlyDesk: "₹6,000",
-          monthlyPrivate: "₹10,000",
-          features: ["Palace proximity", "Tourism business", "Cultural networking", "Royal ambiance", "Heritage experience"],
+          dayPass: "₹250",
+          monthlyDesk: "₹1,000",
+          monthlyPrivate: "₹3,000",
+          features: ["Palace proximity", "Power Backup of 8 Hours", "House Keeping", "Smoking Zone", "Courier Handling"],
           rating: 4.0,
-          website: null, // No specific website
-          phone: "+91 294 241 7000",
+          website: "https://bento.me/houseofwords",
+          phone: "+91 73000 93590",
           description: "Heritage business center near City Palace with royal ambiance and tourism industry connections.",
           amenities: {
-            wifi: "60+ Mbps",
-            hours: "9 AM - 7 PM",
+            wifi: "100+ Mbps",
+            hours: "10 AM - 11 PM",
             printers: "Basic",
-            coffee: "Maharaja hospitality",
-            aircon: "Yes"
+            coffee: "In-House Pantry",
+            aircon: "Yes",
+            other_amenities: "Creative Events every weekend, Whiteboard & Stationery Facility"
           }
         }
       ],
