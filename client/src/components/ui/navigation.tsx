@@ -72,13 +72,19 @@ export default function Navigation() {
                 Updates
               </Button>
             </SubscriptionPopup>
-            <input 
-              type="text"
-              placeholder="Search cities..."
-              value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value)}
-              className="border border-vintage-gold rounded-lg px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-vintage-gold focus:border-vintage-gold"
-              />
+            <Button 
+              asChild
+              className="bg-vintage-gold text-white hover:bg-vintage-gold/90 text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-2.5 touch-manipulation min-h-[44px]"
+              >
+              <a 
+                href="https://discord.gg/Y39GGpQtMm" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                >
+    <span className="hidden sm:inline">Join Free Community</span>
+    <span className="sm:hidden">Join</span>
+  </a>
+</Button>
             
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
