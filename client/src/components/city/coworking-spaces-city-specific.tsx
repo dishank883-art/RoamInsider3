@@ -368,107 +368,91 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
       ],
       "Kochi": [
         {
-          name: "Cochin Innovation Hub",
-          location: "Infopark, Kakkanad",
+          name: "Incuspaze Office Spaces",
+          location: "34/195, 3rd floor NH bypass, Padivattom, Edappally, Kochi, Kerala",
           type: "Tech Hub",
           dayPass: "₹500",
-          monthlyDesk: "₹7,500",
+          monthlyDesk: "₹6,999",
           monthlyPrivate: "₹14,000",
-          features: ["IT ecosystem", "Startup programs", "Mentorship", "Networking events", "Modern facilities"],
+          features: ["IT ecosystem", "High Speed Internet", "Conference Room", "Networking events", "Modern facilities"],
           rating: 4.4,
-          website: null, // Website not working
-          phone: "+91 484 2801 234",
+          website: "https://www.incuspaze.com/kochi/space-details/incuspaze-oberon-mall"
+          phone: "+91 993662621",
           description: "Premier tech coworking in Kerala's IT hub with strong startup ecosystem and mentorship.",
           amenities: {
             wifi: "100+ Mbps",
             hours: "24/7 access",
             printers: "Yes",
-            coffee: "Tech café with healthy options",
-            aircon: "Central AC"
+            coffee: "Cafeteria & Pantry",
+            aircon: "Central AC",
+            other_amenities: "Daily Cleaning, Community Manager, Lounge"      
           }
         },
         {
-          name: "Fort Kochi Heritage Workspace",
-          location: "Fort Kochi",
+          name: "Bizcospaces Kochi",
+          location: "8th Floor, Infra Futura, Seaport - Airport Rd, opposite Bharat Matha College, Thrikkakara, Kakkanad, Kochi",
           type: "Heritage Coworking",
           dayPass: "₹400",
           monthlyDesk: "₹6,000",
           monthlyPrivate: "₹11,000",
-          features: ["Heritage buildings", "Cultural atmosphere", "Art galleries proximity", "Backwater views", "Tourist area"],
+          features: ["100% Electricity Backup", "Fully Managed", "Inspiring Views", "Meeting Rooms", "Tourist area"],
           rating: 4.2,
-          website: null, // No specific website
-          phone: "+91 484 2666 789",
+          website: "https://bizcospaces.com/"
+          phone: "+91 80789 99900",
           description: "Work in colonial heritage buildings with cultural atmosphere and backwater views.",
           amenities: {
             wifi: "50+ Mbps",
             hours: "8 AM - 8 PM",
             printers: "Yes",
-            coffee: "Kerala specialties and international options",
-            aircon: "Yes"
+            coffee: "Pantry Available",
+            aircon: "Yes",
+            other_amenities: "Mail & Package Handling, Parking, Complimentary Tea/Coffee/Water"
           }
         }
       ],
       "Wayanad": [
         {
           name: "Nature Valley Workspace",
-          location: "Kalpetta, Wayanad",
+          location: "dewSpace Building, dewSprout Building dew Road Gurukulam Road (Ooty - Mysuru Cross Road, 16/297, dew Road, Sultan Bathery",
           type: "Eco Coworking",
-          dayPass: "₹300",
-          monthlyDesk: "₹4,000",
-          monthlyPrivate: "₹7,000",
-          features: ["Forest views", "Eco-friendly", "Wildlife proximity", "Organic food", "Nature immersion"],
+          dayPass: "Visit the Website",
+          monthlyDesk: "Visit the Website",
+          monthlyPrivate: "Visit the Website",
+          features: ["High Speed Internet", "Car Parking", "Free Cloud Storage", "Kitchen"],
           rating: 4.0,
-          website: "Eco-resort partnerships",
-          phone: "+91 4936 202 345",
-          description: "Eco-friendly workspace surrounded by Western Ghats forests with wildlife and nature focus.",
+          website: "https://www.dewspace.org/",
+          phone: "+91 99950 22009",
+          description: "edefining Workspaces at dewSpace Coworking.",
           amenities: {
-            wifi: "25+ Mbps",
-            hours: "6 AM - 8 PM",
+            wifi: "40+ Mbps",
+            hours: "9 AM - 8 PM",
             printers: "Basic",
-            coffee: "Organic local produce and spiced tea",
-            aircon: "No (natural mountain cooling)"
-          }
-        },
-        {
-          name: "Plantation Stay Workspaces",
-          location: "Various plantation stays",
-          type: "Plantation Coworking",
-          dayPass: "₹250",
-          monthlyDesk: "₹3,500",
-          monthlyPrivate: "₹6,000",
-          features: ["Tea plantation views", "Rural atmosphere", "Farm-to-table food", "Cultural learning", "Peaceful environment"],
-          rating: 3.8,
-          website: "Contact plantation stays",
-          phone: "Various plantation contacts",
-          description: "Work among tea and spice plantations with authentic rural experience and local culture.",
-          amenities: {
-            wifi: "15-20 Mbps (variable)",
-            hours: "Flexible (stay-dependent)",
-            printers: "No",
-            coffee: "Fresh plantation tea and coffee",
-            aircon: "No (plantation natural cooling)"
+            coffee: "Tea & Coffee",
+            aircon: "Yes",
+            other_amenities: "CRM software, Security"
           }
         }
       ],
       "Dharamkot": [
         {
-          name: "Himalayan Coworking Village",
-          location: "Upper Dharamkot",
+          name: "Nomadgao",
+          location: "Minimart, behind Radhakrishna Cafe, opposite Dharamkot, Dharamkot, Dharamshala, Himachal Pradesh",
           type: "Mountain Community",
           dayPass: "₹250",
           monthlyDesk: "₹3,000",
           monthlyPrivate: "₹5,500",
-          features: ["Mountain views", "Tibetan community", "Meditation sessions", "Digital nomad friendly", "International community"],
+          features: ["Mountain views", "Tibetan community", "Power Backup", "Ergonomic Chairs", "Community"],
           rating: 4.1,
-          website: "Community-based workspace",
-          phone: "+91 1892 221 456",
-          description: "Community-driven coworking space with strong Tibetan Buddhist influence and nomad community.",
+          website: "https://nomadgao.com/destinations/coliving-coworking-remote-work-dharamkot-dharamshala/",
+          phone: "020 7117 9111",
+          description: "A coliving space in Himachal offering rich mountain view rooms, a coworking space and an in-house cafe to get things done.",
           amenities: {
             wifi: "30+ Mbps",
             hours: "6 AM - 10 PM",
             printers: "Basic",
             coffee: "Tibetan butter tea and international options",
-            aircon: "No (mountain air)"
+            aircon: "Yes",
+            other_amenities: "Smoking Area, Laundry"
           }
         },
         {
@@ -478,59 +462,41 @@ export default function CoworkingSpaces({ city }: CoworkingSpacesProps) {
           dayPass: "₹300",
           monthlyDesk: "₹4,000",
           monthlyPrivate: "₹7,000",
-          features: ["Dalai Lama proximity", "Spiritual teachings", "International community", "Library access", "Cultural events"],
-          rating: 4.2,
-          website: "Various spiritual centers",
-          phone: "+91 1892 221 789",
-          description: "Access spiritual center workspaces with teachings, international community, and library resources.",
+          features: ["Dalai Lama proximity", "Spiritual teachings", "International community", "Cultural events"],
+          rating: 4.9,
+          website: "https://www.thevoidlife.com/ ",
+          phone: "+91 6300796184",
+          description: "A coliving and coworking space in the lap of Himachal.",
           amenities: {
             wifi: "35+ Mbps",
-            hours: "5 AM - 9 PM",
+            hours: "8:30 AM - 10 PM",
             printers: "Yes",
             coffee: "Tibetan tea culture",
-            aircon: "No"
+            aircon: "No",
+            other_amenities: "Technology enabled, Yoga Sessions"
           }
         }
       ],
       "Darjeeling": [
         {
-          name: "Tea Garden Workspace",
-          location: "Observatory Hill Area",
-          type: "Heritage Hill Station",
-          dayPass: "₹300",
-          monthlyDesk: "₹4,500",
-          monthlyPrivate: "₹8,000",
-          features: ["Tea garden views", "Colonial heritage", "Mountain vistas", "Cool climate", "Cultural atmosphere"],
-          rating: 4.0,
-          website: null, // No specific website
-          phone: "+91 354 225 4567",
-          description: "Work with stunning tea garden views in historic hill station with colonial charm and cool climate.",
+          name: "Oops! No Co-working spaces in Darjeeling.",
+          location: "NA",
+          type: "NA",
+          dayPass: "NA",
+          monthlyDesk: "NA",
+          monthlyPrivate: "NA",
+          features: ["null"],
+          rating: null,
+          website: null, // No website available
+          phone: "NA",
+          description: "NA",
           amenities: {
-            wifi: "35+ Mbps",
-            hours: "7 AM - 8 PM",
-            printers: "Yes",
-            coffee: "World-famous Darjeeling tea",
-            aircon: "No (naturally cool climate)"
-          }
-        },
-        {
-          name: "Mall Road Co-working Cafés",
-          location: "Mall Road, Darjeeling",
-          type: "Tourist Area",
-          dayPass: "₹250",
-          monthlyDesk: "₹3,500",
-          monthlyPrivate: "₹6,500",
-          features: ["Tourist hub", "Multiple café options", "Central location", "Mountain views", "Cultural shopping"],
-          rating: 3.9,
-          website: "Various Mall Road cafés",
-          phone: "Contact individual cafés",
-          description: "Work in various cafés along historic Mall Road with mountain views and cultural shopping access.",
-          amenities: {
-            wifi: "20-30 Mbps",
-            hours: "8 AM - 9 PM",
-            printers: "Limited",
-            coffee: "Tea culture and local snacks",
-            aircon: "No (cool mountain air)"
+            wifi: "NA",
+            hours: "NA",
+            printers: "NA",
+            coffee: "NA",
+            aircon: "NA",
+            other_amenities: "NA"
           }
         }
       ],
