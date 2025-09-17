@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import CityCard from "@/components/ui/city-card";
@@ -7,6 +8,9 @@ import { ArrowLeft, Gem } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 
 export default function HiddenGems() {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   const { data: allCities, isLoading } = useQuery({
     queryKey: ['/api/cities']
   });
@@ -14,8 +18,7 @@ export default function HiddenGems() {
   // Filter for hidden gems (smaller cities, hill stations, lesser-known but good nomad score)
   const hiddenGems = allCities?.filter((city: any) => 
     city.tags?.includes('hidden-gem') ||
-    city.tags?.includes('hill-station') ||
-    ['mcleodganj', 'mussoorie', 'gangtok', 'shillong', 'ziro', 'dharamkot', 'darjeeling', 'kasol', 'tosh', 'bir'].includes(city.slug)
+    [ 'ziro', 'tosh'].includes(city.slug)
   ) || [];
 
   return (
