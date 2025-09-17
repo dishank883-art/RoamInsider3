@@ -11,6 +11,10 @@ export default function PopularDestinations() {
     queryKey: ['/api/cities']
   });
 
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   // Filter for popular destinations (those with higher nomad score or popular tags)
   const popularCities = allCities?.filter((city: any) => 
     city.nomadScore >= 4.0 || 
