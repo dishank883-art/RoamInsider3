@@ -462,7 +462,7 @@ export default function Home() {
     });
     return Array.from(tags).sort();
   }, [allCities]);
-  
+
   return (
     <div className="bg-cream min-h-screen">
       <Navigation />
@@ -615,7 +615,6 @@ export default function Home() {
                   asChild
                   size="lg"
                   className="bg-vintage-gold hover:bg-vintage-gold/90 text-travel-blue font-bold px-10 py-5 text-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-none"
-                  style={{ animation: 'none' }}
                 >
                   <a 
                     href="https://discord.gg/Y39GGpQtMm" 
