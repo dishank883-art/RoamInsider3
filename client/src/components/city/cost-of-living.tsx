@@ -126,7 +126,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       goa: {
         hostels: [
-          { name: "Happy Panda Hostel", area: "Arambol", price: "₹700-900/night ($9-11)", rating: 4.5, amenities: ["WiFi", "Neon art room", "Rooftop bar", "Beach 10min walk"], bookingUrl: "https://www.hostelworld.com/hostels/p/269088/happy-panda-hostel-arambol/" },
+          { name: "Mitra Hostel", area: "Arambol", price: "₹700-900/night ($9-11)", rating: 4.5, amenities: ["WiFi", "Cafe & Bar", "Beach 5min walk"], bookingUrl: "https://mitrahostel.com/arambol/" },
           { name: "Roadhouse Anjuna", area: "Anjuna", price: "₹650-950/night ($8-11)", rating: 4.2, amenities: ["WiFi", "AC", "Community kitchen", "Near Shiva Valley"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/goa/d/anjuna/" },
           { name: "78 Backpackers", area: "Anjuna", price: "₹600-800/night ($8-10)", rating: 4.0, amenities: ["WiFi", "Vibrant rooftop bar", "4min to beach", "Adventure community"], bookingUrl: "https://78backpackers.com/" }
         ],
@@ -216,8 +216,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       pondicherry: {
         hostels: [
-          { name: "Villa Shanti Backpackers", area: "French Quarter", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "French architecture", "Beach proximity"], bookingUrl: "https://villashanti.com/backpackers" },
-          { name: "French Quarter Hostel", area: "White Town", price: "₹600-900/night ($7-11)", rating: 3.9, amenities: ["WiFi", "Colonial charm", "Beach access", "French heritage"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/puducherry/" },
+          { name: "Unearth Hostel", area: "Auroville", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "French architecture", "Beach proximity"], bookingUrl: "https://www.booking.com/hotel/in/unearth-hostel-pondicherry.en-gb.html" },
+          { name: "GoStops Pondicherry", area: "Pondicherry", price: "₹500-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Colonial charm", "Beach access", "French heritage"], bookingUrl: "https://gostops.com/location/gostops-Pondicherry/" },
           { name: "Zostel Pondicherry", area: "Auroville Road", price: "₹650-950/night ($8-11)", rating: 4.0, amenities: ["WiFi", "Spiritual vibes", "Auroville access"], bookingUrl: "https://www.zostel.com/zostel/pondicherry/" }
         ],
         platforms: [
