@@ -1,4 +1,5 @@
-import { useState } from "react";
+// Reviews.tsx (replace the existing file with this)
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -6,8 +7,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Star, MessageSquare, ThumbsUp, Calendar, User, MapPin, ExternalLink } from "lucide-react";
+import { Star, MessageSquare, ThumbsUp, Calendar, User, ExternalLink } from "lucide-react";
 import type { CityWithDetails } from "@shared/schema";
+import { supabase } from "@/lib/supabaseClient";
 
 interface ReviewsProps {
   city: CityWithDetails;
@@ -21,11 +23,11 @@ interface Review {
   content: string;
   date: string;
   stayDuration: string;
-  workType: string;
-  pros: string[];
-  cons: string[];
-  helpful: number;
-  verified: boolean;
+  workType?: string;
+  pros?: string[];
+  cons?: string[];
+  helpful?: number;
+  verified?: boolean;
 }
 
 export default function Reviews({ city }: ReviewsProps) {
@@ -42,15 +44,34 @@ export default function Reviews({ city }: ReviewsProps) {
   });
   const { toast } = useToast();
 
-  // Reviews would come from API in production - currently empty to collect authentic reviews
-  const reviews: Review[] = [];
+  // ----- Reviews state and fetch -----
+  const [reviews, setReviews] = useState<Review[]>([]);
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      const { data, error } = await supabase
+        .from("reviews")
+        .select("*")
+        .eq("city", city.name)
+        .eq("approved", true)
+        .order("date", { ascending: false });
+
+      if (error) {
+        console.error("Error fetching reviews:", error);
+        return;
+      }
+      setReviews((data || []) as Review[]);
+    };
+
+    fetchReviews();
+  }, [city.name]);
 
   const filteredReviews = reviews
     .filter(review => filterRating === "all" || review.rating.toString() === filterRating)
     .sort((a, b) => {
       if (sortBy === "recent") return new Date(b.date).getTime() - new Date(a.date).getTime();
       if (sortBy === "rating") return b.rating - a.rating;
-      if (sortBy === "helpful") return b.helpful - a.helpful;
+      if (sortBy === "helpful") return (b.helpful || 0) - (a.helpful || 0);
       return 0;
     });
 
@@ -70,6 +91,7 @@ export default function Reviews({ city }: ReviewsProps) {
     ));
   };
 
+  // ----- Submit review: insert into supabase with approved = false -----
   const handleSubmitReview = async () => {
     if (!formData.name || !formData.profession || !formData.title || !formData.content || !rating || !formData.stayDuration) {
       toast({
@@ -80,13 +102,30 @@ export default function Reviews({ city }: ReviewsProps) {
       return;
     }
 
-    // In a real app, this would submit to an API
+    const { error } = await supabase.from("reviews").insert([
+      {
+        city: city.name,
+        author: formData.name,
+        profession: formData.profession,
+        stayDuration: formData.stayDuration,
+        rating,
+        title: formData.title,
+        content: formData.content,
+        approved: false,
+        date: new Date().toISOString(),
+      },
+    ]);
+
+    if (error) {
+      toast({ title: "Error", description: error.message, variant: "destructive" });
+      return;
+    }
+
     toast({
       title: "Review Submitted!",
-      description: `Thank you for sharing your experience in ${city.name}. Your review helps other nomads make informed decisions.`,
+      description: `Thank you for sharing your experience in ${city.name}. Your review will be visible once approved.`,
     });
 
-    // Reset form
     setFormData({
       name: "",
       profession: "",
@@ -110,8 +149,6 @@ export default function Reviews({ city }: ReviewsProps) {
         </p>
       </CardHeader>
       <CardContent className="space-y-8">
-        
-        {/* Rating Summary */}
         {reviews.length > 0 ? (
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
@@ -123,14 +160,14 @@ export default function Reviews({ city }: ReviewsProps) {
               </div>
               <p className="text-muted-navy">Based on {reviews.length} reviews</p>
             </div>
-            
+
             <div className="space-y-2">
               {ratingDistribution.map(({ rating, count, percentage }) => (
                 <div key={rating} className="flex items-center space-x-3">
                   <span className="text-sm font-medium w-8">{rating}★</span>
                   <div className="flex-1 bg-gray-200 rounded-full h-2">
-                    <div 
-                      className="bg-vintage-gold h-2 rounded-full" 
+                    <div
+                      className="bg-vintage-gold h-2 rounded-full"
                       style={{ width: `${percentage}%` }}
                     />
                   </div>
@@ -146,7 +183,7 @@ export default function Reviews({ city }: ReviewsProps) {
             <p className="text-muted-navy mb-4">
               Be the first to share your experience living and working in {city.name}!
             </p>
-            <Button 
+            <Button
               onClick={() => setShowAddReview(true)}
               className="bg-travel-blue hover:bg-travel-blue/90 text-white"
             >
@@ -155,10 +192,9 @@ export default function Reviews({ city }: ReviewsProps) {
           </div>
         )}
 
-        {/* Add Review Button & Filters */}
         {reviews.length > 0 && (
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-6 border-t">
-            <Button 
+            <Button
               onClick={() => setShowAddReview(!showAddReview)}
               className="bg-travel-blue hover:bg-travel-blue/90 text-white"
               data-testid="add-review-button"
@@ -166,7 +202,7 @@ export default function Reviews({ city }: ReviewsProps) {
               <MessageSquare className="mr-2 h-4 w-4" />
               Write a Review
             </Button>
-            
+
             <div className="flex space-x-3">
               <Select value={sortBy} onValueChange={setSortBy}>
                 <SelectTrigger className="w-32">
@@ -178,7 +214,7 @@ export default function Reviews({ city }: ReviewsProps) {
                   <SelectItem value="helpful">Helpful</SelectItem>
                 </SelectContent>
               </Select>
-              
+
               <Select value={filterRating} onValueChange={setFilterRating}>
                 <SelectTrigger className="w-32">
                   <SelectValue placeholder="All ratings" />
@@ -196,26 +232,25 @@ export default function Reviews({ city }: ReviewsProps) {
           </div>
         )}
 
-        {/* Add Review Form */}
         {showAddReview && (
           <div className="bg-gray-50 rounded-xl p-6 border">
             <h3 className="font-semibold text-travel-blue mb-4">Share Your Experience</h3>
             <div className="space-y-4">
               <div className="grid md:grid-cols-2 gap-4">
-                <Input 
-                  placeholder="Your name" 
+                <Input
+                  placeholder="Your name"
                   data-testid="reviewer-name"
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                 />
-                <Input 
-                  placeholder="Your profession (e.g., Software Developer)" 
+                <Input
+                  placeholder="Your profession (e.g., Software Developer)"
                   data-testid="reviewer-profession"
                   value={formData.profession}
                   onChange={(e) => setFormData({...formData, profession: e.target.value})}
                 />
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-4">
                 <Select value={formData.stayDuration} onValueChange={(value) => setFormData({...formData, stayDuration: value})}>
                   <SelectTrigger data-testid="stay-duration">
@@ -229,7 +264,7 @@ export default function Reviews({ city }: ReviewsProps) {
                     <SelectItem value="6plus-months">6+ months</SelectItem>
                   </SelectContent>
                 </Select>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-muted-navy mb-2">Overall Rating</label>
                   <div className="flex space-x-1">
@@ -246,26 +281,26 @@ export default function Reviews({ city }: ReviewsProps) {
                   </div>
                 </div>
               </div>
-              
-              <Input 
-                placeholder="Review title" 
+
+              <Input
+                placeholder="Review title"
                 data-testid="review-title"
                 value={formData.title}
                 onChange={(e) => setFormData({...formData, title: e.target.value})}
               />
-              <Textarea 
-                placeholder="Share your detailed experience living and working in this city..." 
+              <Textarea
+                placeholder="Share your detailed experience living and working in this city..."
                 className="min-h-[120px]"
                 data-testid="review-content"
                 value={formData.content}
                 onChange={(e) => setFormData({...formData, content: e.target.value})}
               />
-              
+
               <div className="flex justify-end space-x-3">
                 <Button variant="outline" onClick={() => setShowAddReview(false)}>
                   Cancel
                 </Button>
-                <Button 
+                <Button
                   className="bg-vintage-gold text-white hover:bg-vintage-gold/90"
                   onClick={handleSubmitReview}
                   data-testid="submit-review-button"
@@ -277,87 +312,85 @@ export default function Reviews({ city }: ReviewsProps) {
           </div>
         )}
 
-        {/* Reviews List */}
         {reviews.length > 0 && (
           <div className="space-y-6">
             {filteredReviews.map((review) => (
-            <div key={review.id} className="border-b border-gray-200 pb-6 last:border-b-0">
-              <div className="flex justify-between items-start mb-3">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-travel-blue/10 rounded-full flex items-center justify-center">
-                    <User className="h-5 w-5 text-travel-blue" />
+              <div key={review.id} className="border-b border-gray-200 pb-6 last:border-b-0">
+                <div className="flex justify-between items-start mb-3">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-travel-blue/10 rounded-full flex items-center justify-center">
+                      <User className="h-5 w-5 text-travel-blue" />
+                    </div>
+                    <div>
+                      <div className="flex items-center space-x-2">
+                        <span className="font-semibold text-travel-blue">{review.author}</span>
+                        {review.verified && (
+                          <Badge className="bg-sage-green/10 text-sage-green text-xs">Verified</Badge>
+                        )}
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-muted-navy">
+                        <span>{review.workType}</span>
+                        <span>•</span>
+                        <span>{review.stayDuration}</span>
+                        <span>•</span>
+                        <span>{new Date(review.date).toLocaleDateString()}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    {renderStars(review.rating)}
+                  </div>
+                </div>
+
+                <h4 className="font-semibold text-travel-blue mb-2">{review.title}</h4>
+                <p className="text-muted-navy mb-4">{review.content}</p>
+
+                <div className="grid md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <h5 className="font-medium text-sage-green mb-1">Pros:</h5>
+                    <ul className="text-sm text-muted-navy space-y-1">
+                      {(review.pros || []).map((pro, i) => (
+                        <li key={i}>• {pro}</li>
+                      ))}
+                    </ul>
                   </div>
                   <div>
-                    <div className="flex items-center space-x-2">
-                      <span className="font-semibold text-travel-blue">{review.author}</span>
-                      {review.verified && (
-                        <Badge className="bg-sage-green/10 text-sage-green text-xs">Verified</Badge>
-                      )}
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm text-muted-navy">
-                      <span>{review.workType}</span>
-                      <span>•</span>
-                      <span>{review.stayDuration}</span>
-                      <span>•</span>
-                      <span>{new Date(review.date).toLocaleDateString()}</span>
-                    </div>
+                    <h5 className="font-medium text-red-600 mb-1">Cons:</h5>
+                    <ul className="text-sm text-muted-navy space-y-1">
+                      {(review.cons || []).map((con, i) => (
+                        <li key={i}>• {con}</li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-                <div className="flex items-center space-x-1">
-                  {renderStars(review.rating)}
+
+                <div className="flex items-center justify-between">
+                  <Button variant="ghost" size="sm" className="text-muted-navy hover:text-travel-blue">
+                    <ThumbsUp className="mr-1 h-4 w-4" />
+                    Helpful ({review.helpful || 0})
+                  </Button>
+                  <div className="text-xs text-muted-navy">
+                    <Calendar className="inline h-3 w-3 mr-1" />
+                    {new Date(review.date).toLocaleDateString()}
+                  </div>
                 </div>
               </div>
-              
-              <h4 className="font-semibold text-travel-blue mb-2">{review.title}</h4>
-              <p className="text-muted-navy mb-4">{review.content}</p>
-              
-              <div className="grid md:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <h5 className="font-medium text-sage-green mb-1">Pros:</h5>
-                  <ul className="text-sm text-muted-navy space-y-1">
-                    {review.pros.map((pro, i) => (
-                      <li key={i}>• {pro}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="font-medium text-red-600 mb-1">Cons:</h5>
-                  <ul className="text-sm text-muted-navy space-y-1">
-                    {review.cons.map((con, i) => (
-                      <li key={i}>• {con}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <Button variant="ghost" size="sm" className="text-muted-navy hover:text-travel-blue">
-                  <ThumbsUp className="mr-1 h-4 w-4" />
-                  Helpful ({review.helpful})
-                </Button>
-                <div className="text-xs text-muted-navy">
-                  <Calendar className="inline h-3 w-3 mr-1" />
-                  {new Date(review.date).toLocaleDateString()}
-                </div>
-              </div>
-            </div>
             ))}
           </div>
         )}
 
-        {/* Join Community CTA */}
         <div className="bg-gradient-to-r from-travel-blue/10 to-vintage-gold/10 rounded-xl p-6 border-2 border-travel-blue/20 text-center">
           <h3 className="font-semibold text-travel-blue mb-3">Want More Insights?</h3>
           <p className="text-muted-navy mb-4">
             Join our Discord community to get real-time advice from nomads currently in {city.name}
           </p>
-          <Button 
+          <Button
             asChild
             className="bg-travel-blue hover:bg-travel-blue/90 text-white"
           >
-            <a 
-              href="https://discord.gg/Y39GGpQtMm" 
-              target="_blank" 
+            <a
+              href="https://discord.gg/Y39GGpQtMm"
+              target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center"
             >
