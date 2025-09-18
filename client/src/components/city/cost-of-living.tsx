@@ -410,8 +410,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       wayanad: {
         hostels: [
           { name: "Zostel Wayanad", area: "Kalpetta", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Plantation views", "Trekking", "Wildlife tours"], bookingUrl: "https://www.zostel.com/zostel/wayanad/" },
-          { name: "Wayanad Spice Hostel", area: "Sulthan Bathery", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Nature walks", "Spice tours"], bookingUrl: "https://www.booking.com/city/in/wayanad.html" },
-          { name: "The Hosteller", area: "Meppadi", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Coffee plantations", "Hill views"], bookingUrl: "https://www.thehosteller.com/wayanad/" }
+          { name: "SkyFall Adventures Hostel", area: "Wayanad", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Nature walks", "Spice tours"], bookingUrl: "https://skyfalladventureswayanad.com/" },
+          { name: "The Hosteller", area: "Meppadi", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Coffee plantations", "Hill views"], bookingUrl: "https://www.thehosteller.com/destinations/wayanad/" }
         ],
         platforms: [
           { name: "Booking.com", url: "https://www.booking.com/city/in/wayanad.html", features: ["Plantation stays", "Wildlife resorts", "Hill stations"] },
@@ -426,8 +426,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       'new-delhi': {
         hostels: [
           { name: "Zostel New Delhi", area: "Paharganj", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "AC", "Kitchen", "Terrace"], bookingUrl: "https://www.zostel.com/zostel/delhi/" },
-          { name: "The Hosteller Delhi", area: "Hauz Khas", price: "₹800-1200/night ($10-14)", rating: 4.4, amenities: ["WiFi", "Events", "Kitchen", "Co-working"], bookingUrl: "https://www.thehosteller.com/hostels/delhi/" },
-          { name: "Stops Hostel Delhi", area: "Connaught Place", price: "₹700-1100/night ($8-13)", rating: 4.2, amenities: ["WiFi", "Restaurant", "AC", "Central location"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/new-delhi/" }
+          { name: "The Hosteller Delhi", area: "Hauz Khas", price: "₹800-1200/night ($10-14)", rating: 4.4, amenities: ["WiFi", "Events", "Kitchen", "Co-working"], bookingUrl: "https://www.thehosteller.com/hostels/the-hosteller-delhi/" },
+          { name: "GoStops Hostel Delhi", area: "Connaught Place", price: "₹700-1100/night ($8-13)", rating: 4.2, amenities: ["WiFi", "Restaurant", "AC", "Central location"], bookingUrl: "https://gostops.com/book-rooms-in-delhi-hostel/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/new-delhi-in.html", features: ["Best prices", "Local partnerships", "Mobile app"] },
