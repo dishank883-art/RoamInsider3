@@ -71,7 +71,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
         hostels: [
           { name: "Zostel Mumbai", area: "Andheri East", price: "₹800-1400/night ($10-17)", rating: 4.2, amenities: ["WiFi", "Cafe", "Rooftop", "Games room"], bookingUrl: "https://www.zostel.com/zostel/mumbai/mumbai-mmbh714/" },
           { name: "Backpacker Panda Colaba", area: "Colaba", price: "₹500-800/night ($6-10)", rating: 4.1, amenities: ["WiFi", "Gateway of India nearby", "Cultural area", "Tourist hub"], bookingUrl: "https://www.agoda.com/en-in/backpacker-panda-colaba/hotel/mumbai-in.html" },
-          { name: "The Hosteller Mumbai", area: "Andheri", price: "₹700-1200/night ($8-14)", rating: 4.0, amenities: ["WiFi", "Modern facilities", "Social atmosphere", "Airport proximity"], bookingUrl: "https://www.thehosteller.com/hostels/mumbai/" }
+          { name: "The Hosteller Mumbai", area: "Andheri", price: "₹700-1200/night ($8-14)", rating: 4.0, amenities: ["WiFi", "Modern facilities", "Social atmosphere", "Airport proximity"], bookingUrl: "https://www.thehosteller.com/hostels/the-hosteller-mumbai-andheri/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/mumbai-in.html", features: ["Instant booking", "Local support", "Best price guarantee"] },
@@ -107,9 +107,9 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       bangalore: {
         hostels: [
-          { name: "The Hosteller Bangalore", area: "Koramangala", price: "₹800-1200/night ($10-14)", rating: 4.3, amenities: ["WiFi", "Co-working space", "Terrace cafe", "City views"], bookingUrl: "https://www.hostelworld.com/hostels/p/319151/the-hosteller-bangalore-koramangala/" },
-          { name: "Zostel Bangalore", area: "Koramangala", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "Large common areas", "Quiet working spaces", "AC"], bookingUrl: "https://www.hostelworld.com/hostels/p/323027/zostel-bangalore-koramangala/" },
-          { name: "Woke Hostel", area: "Indiranagar", price: "₹600-950/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Digital nomad friendly", "Bedside power", "Free water"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/bangalore/" }
+          { name: "The Hosteller Bangalore", area: "Koramangala", price: "₹800-1200/night ($10-14)", rating: 4.3, amenities: ["WiFi", "Co-working space", "Terrace cafe", "City views"], bookingUrl: "https://www.thehosteller.com/destinations/bangalore/" },
+          { name: "Zostel Bangalore", area: "Koramangala", price: "₹700-1100/night ($8-13)", rating: 4.1, amenities: ["WiFi", "Large common areas", "Quiet working spaces", "AC"], bookingUrl: "https://www.zostel.com/destination/bangalore" },
+          { name: "Woke Hostel", area: "Indiranagar", price: "₹600-950/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Digital nomad friendly", "Bedside power", "Free water"], bookingUrl: "https://www.booking.com/hotel/in/woke-hostel-indiranagar.html" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/bangalore-in.html", features: ["Tech-friendly", "Best rates", "Easy booking"] },
@@ -181,8 +181,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       pune: {
         hostels: [
           { name: "Zostel Pune", area: "Koregaon Park", price: "₹700-1100/night ($8-13)", rating: 4.0, amenities: ["WiFi", "AC", "Kitchen", "Party area"], bookingUrl: "https://www.zostel.com/zostel/pune/" },
-          { name: "Mad Packer Hostel", area: "Camp", price: "₹500-800/night ($6-10)", rating: 3.8, amenities: ["WiFi", "Common area", "Tours", "Central location"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/pune/" },
-          { name: "The Hosteller", area: "Viman Nagar", price: "₹600-900/night ($7-11)", rating: 4.1, amenities: ["WiFi", "Kitchen", "Airport proximity"], bookingUrl: "https://www.thehosteller.com/pune/" }
+          { name: "The Voyage Hostel", area: "Koregaon Park", price: "₹500-800/night ($6-10)", rating: 4.0, amenities: ["WiFi", "Common area", "Tours", "Central location"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/pune/" },
+          { name: "Jugglers Backpack", area: "Koregaon Park", price: "₹600-900/night ($7-11)", rating: 4.1, amenities: ["WiFi", "Kitchen", "Airport proximity"], bookingUrl: "https://www.hostelworld.com/hostels/p/295259/jugglers-backpack/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/pune-in.html", features: ["IT hub properties", "Student accommodations", "Airport hotels"] },
@@ -253,8 +253,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       mussoorie: {
         hostels: [
           { name: "Zostel Mussoorie", area: "Mall Road", price: "₹600-900/night ($7-11)", rating: 3.9, amenities: ["WiFi", "Mountain views", "Heating", "Library"], bookingUrl: "https://www.zostel.com/zostel/mussoorie/" },
-          { name: "Mussoorie Valley Hostel", area: "Landour", price: "₹500-750/night ($6-9)", rating: 3.7, amenities: ["WiFi", "Hill station charm", "Warm blankets"], bookingUrl: "https://www.makemytrip.com/hotels/mussoorie-hotels.html" },
-          { name: "The Hosteller", area: "Picture Palace", price: "₹550-800/night ($7-10)", rating: 3.8, amenities: ["WiFi", "Valley views", "Common kitchen"], bookingUrl: "https://www.thehosteller.com/mussoorie/" }
+          { name: "GoStops Hostel", area: "Clock Tower", price: "₹500-750/night ($6-9)", rating: 3.7, amenities: ["WiFi", "Hill station charm", "Warm blankets"], bookingUrl: "https://gostops.com/location/gostops-Mussoorie/" },
+          { name: "The Hosteller", area: "Mall Road", price: "₹550-800/night ($7-10)", rating: 3.8, amenities: ["WiFi", "Valley views", "Common kitchen"], bookingUrl: "https://www.thehosteller.com/destinations/mussoorie/" }
         ],
         platforms: [
           { name: "Booking.com", url: "https://www.booking.com/city/in/mussoorie.html", features: ["Hill station hotels", "Mountain resorts", "Valley views"] },
@@ -269,8 +269,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       dehradun: {
         hostels: [
           { name: "Zostel Dehradun", area: "Clock Tower", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "AC", "Kitchen", "City access"], bookingUrl: "https://www.zostel.com/zostel/dehradun/" },
-          { name: "Dehradun Budget Stay", area: "Paltan Bazaar", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Central location", "Budget friendly"], bookingUrl: "https://www.makemytrip.com/hotels/dehradun-hotels.html" },
-          { name: "The Hosteller", area: "Rajpur Road", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Modern amenities", "Hill access"], bookingUrl: "https://www.thehosteller.com/dehradun/" }
+          { name: "GoStops Dehradun", area: "Maldevta", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Central location", "Budget friendly"], bookingUrl: "https://gostops.com/location/gostops-Dehradun/" },
+          { name: "The Hosteller", area: "Rajpur Road", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Modern amenities", "Hill access"], bookingUrl: "https://www.thehosteller.com/destinations/dehradun/" }
         ],
         platforms: [
           { name: "Booking.com", url: "https://www.booking.com/city/in/dehradun.html", features: ["Gateway to hills", "Business hotels", "Transit stays"] },
@@ -318,8 +318,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       kasol: {
         hostels: [
           { name: "Zostel Kasol", area: "Old Kasol", price: "₹400-650/night ($5-8)", rating: 4.1, amenities: ["WiFi", "River views", "Trekking", "Cafe"], bookingUrl: "https://www.zostel.com/zostel/kasol/" },
-          { name: "Kasol Nature Hostel", area: "Chalal", price: "₹300-500/night ($4-6)", rating: 3.9, amenities: ["WiFi", "Nature walks", "Budget friendly"], bookingUrl: "https://www.booking.com/city/in/kasol.html" },
-          { name: "The Hosteller", area: "Tosh Road", price: "₹350-550/night ($4-7)", rating: 4.0, amenities: ["WiFi", "Mountain views", "Common kitchen"], bookingUrl: "https://www.thehosteller.com/kasol/" }
+          { name: "Wabi Sabi Hostel", area: "Chalal", price: "₹300-500/night ($4-6)", rating: 3.9, amenities: ["WiFi", "Nature walks", "Budget friendly"], bookingUrl: "https://www.instagram.com/wabisabi.hostel/" },
+          { name: "The Hosteller", area: "Tosh Road", price: "₹350-550/night ($4-7)", rating: 4.0, amenities: ["WiFi", "Mountain views", "Common kitchen"], bookingUrl: "https://www.thehosteller.com/destinations/kasol/" }
         ],
         platforms: [
           { name: "Booking.com", url: "https://www.booking.com/city/in/kasol.html", features: ["Mountain stays", "Trekking base", "Nature retreats"] },
