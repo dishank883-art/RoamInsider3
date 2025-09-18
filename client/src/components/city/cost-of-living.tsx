@@ -234,9 +234,9 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       darjeeling: {
         hostels: [
-          { name: "Zostel Darjeeling", area: "Mall Road", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Mountain views", "Tea garden tours", "Heating"], bookingUrl: "https://www.zostel.com/zostel/darjeeling/" },
+          { name: "Hideout Backpackers Hostel", area: "Chowrasta", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Mountain views", "Tea garden tours", "Heating"], bookingUrl: "http://hostelworld.com/hostels/p/287789/hideout-backpackers-hostel/" },
           { name: "Hill Lodge Darjeeling", area: "Chowrasta", price: "₹500-750/night ($6-9)", rating: 3.8, amenities: ["WiFi", "Himalayan views", "Warm blankets"], bookingUrl: "https://www.makemytrip.com/hotels/darjeeling-hotels.html" },
-          { name: "The Hosteller", area: "Observatory Hill", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Sunrise views", "Tea tasting", "Library"], bookingUrl: "https://www.thehosteller.com/darjeeling/" }
+          { name: "Trippers Hostel", area: "Observatory Hill", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Sunrise views", "Tea tasting", "Library"], bookingUrl: "https://www.hostelworld.com/hostels/p/318586/trippers-hostel/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/darjeeling-in.html", features: ["Mountain resorts", "Tea estate stays", "Himalayan views"] },
@@ -333,9 +333,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       tosh: {
         hostels: [
-          { name: "Zostel Tosh", area: "Upper Tosh", price: "₹350-550/night ($4-7)", rating: 4.0, amenities: ["WiFi", "Mountain views", "Trekking", "Stargazing"], bookingUrl: "https://www.zostel.com/zostel/tosh/" },
-          { name: "Tosh Valley Stay", area: "Lower Tosh", price: "₹250-450/night ($3-5)", rating: 3.8, amenities: ["WiFi", "Budget stay", "Valley views", "Local food"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/tosh/" },
-          { name: "Mountain Guest House", area: "Tosh Village", price: "₹300-500/night ($4-6)", rating: 3.9, amenities: ["WiFi", "Local food", "Himalayan views"], bookingUrl: "https://www.mountainguesthouse.com/tosh" }
+          { name: "Whoopers Tosh", area: "Tosh", price: "₹350-550/night ($4-7)", rating: 4.0, amenities: ["WiFi", "Mountain views", "Trekking", "Stargazing"], bookingUrl: "https://www.whoopers.in/tosh" },
+          { name: "YellowJackets Hostel", area: "Lower Tosh", price: "₹250-450/night ($3-5)", rating: 3.8, amenities: ["WiFi", "Budget stay", "Valley views", "Local food"], bookingUrl: "https://www.booking.com/hotel/in/yellowjackets-hostel.html" }
         ],
         platforms: [
           { name: "Booking.com", url: "https://www.booking.com/city/in/tosh.html", features: ["Mountain villages", "Trekking stays", "Remote locations"] },
