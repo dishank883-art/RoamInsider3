@@ -348,8 +348,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       bir: {
         hostels: [
           { name: "Zostel Bir", area: "Bir Billing", price: "₹500-750/night ($6-9)", rating: 4.2, amenities: ["WiFi", "Paragliding", "Mountain views", "Adventure sports"], bookingUrl: "https://www.zostel.com/zostel/bir/" },
-          { name: "Bir Billing Hostel", area: "Bir Village", price: "₹400-600/night ($5-7)", rating: 3.9, amenities: ["WiFi", "Tibetan culture", "Monastery visits"], bookingUrl: "https://www.booking.com/searchresults.html?ss=Bir%2C%20Himachal%20Pradesh" },
-          { name: "The Hosteller", area: "Billing", price: "₹450-650/night ($5-8)", rating: 4.0, amenities: ["WiFi", "Paragliding take-off", "Adventure activities"], bookingUrl: "https://www.thehosteller.com/bir/" }
+          { name: "GoStops Bir", area: "Bir Landing Site", price: "₹400-600/night ($5-7)", rating: 4.4, amenities: ["WiFi", "Tibetan culture", "Monastery visits"], bookingUrl: "https://gostops.com/location/gostops-Bir/" },
+          { name: "The Hosteller", area: "Billing", price: "₹450-650/night ($5-8)", rating: 4.0, amenities: ["WiFi", "Paragliding take-off", "Adventure activities"], bookingUrl: "https://www.thehosteller.com/destinations/bir/" }
         ],
         platforms: [
           { name: "Booking.com", url: "https://www.booking.com/city/in/bir.html", features: ["Paragliding hub", "Adventure stays", "Tibetan culture"] },
@@ -363,9 +363,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       ziro: {
         hostels: [
-          { name: "Ziro Valley Homestay", area: "Old Ziro", price: "₹400-600/night ($5-7)", rating: 3.8, amenities: ["WiFi", "Tribal culture", "Nature walks", "Local food"], bookingUrl: "https://www.booking.com/region/in/arunachal-pradesh.html" },
-          { name: "Apatani Heritage Stay", area: "Hong Village", price: "₹500-800/night ($6-10)", rating: 4.0, amenities: ["WiFi", "Cultural immersion", "Traditional architecture"], bookingUrl: "https://www.apataniheritage.com/" },
-          { name: "Eco Lodge Ziro", area: "Hapoli", price: "₹600-900/night ($7-11)", rating: 4.1, amenities: ["WiFi", "Eco-friendly", "Nature trails", "Bird watching"], bookingUrl: "https://www.ecolodgeziro.com/" }
+          { name: "Dilang Homestay", area: "Old Ziro", price: "₹400-600/night ($5-7)", rating: 3.8, amenities: ["WiFi", "Tribal culture", "Nature walks", "Local food"], bookingUrl: "https://dilanghomestay.com/" },
+          { name: "Kipepeo Homestay", area: "Hong Village", price: "₹500-800/night ($6-10)", rating: 4.0, amenities: ["WiFi", "Cultural immersion", "Traditional architecture"], bookingUrl: "https://www.kipepeo.in/homestays/ziro-homestay/"}
         ],
         platforms: [
           { name: "Booking.com", url: "https://www.booking.com/region/in/arunachal-pradesh.html", features: ["Tribal culture", "Remote locations", "Nature stays"] },
@@ -379,8 +378,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       varkala: {
         hostels: [
           { name: "Zostel Varkala", area: "Cliff Beach", price: "₹700-1000/night ($8-12)", rating: 4.1, amenities: ["WiFi", "Beach access", "Cliff views", "Ayurveda"], bookingUrl: "https://www.zostel.com/zostel/varkala/" },
-          { name: "Cliff House Hostel", area: "North Cliff", price: "₹600-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Beach proximity", "Yoga classes", "Cliff views"], bookingUrl: "https://www.hostelworld.com/hostels/asia/india/varkala/" },
-          { name: "Zostel Varkala", area: "South Cliff", price: "₹700-1000/night ($8-12)", rating: 4.0, amenities: ["WiFi", "Beach parties", "Cliff restaurant", "Beach access"], bookingUrl: "https://www.zostel.com/zostel/varkala/" }
+          { name: "Hostelexp", area: "North Cliff", price: "₹600-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Beach proximity", "Yoga classes", "Cliff views"], bookingUrl: "https://hostelexp.in/hostels/53213e39-303a-418f-bec8-474f8cba2471?section=rooms" },
+          { name: "Molly's Hostel", area: "South Cliff", price: "₹700-1000/night ($8-12)", rating: 4.0, amenities: ["WiFi", "Beach parties", "Cliff restaurant", "Beach access"], bookingUrl: "https://mollyshostel.in/" }
         ],
         platforms: [
           { name: "Agoda", url: "https://www.agoda.com/city/varkala-in.html", features: ["Beach resorts", "Ayurveda retreats", "Cliff accommodations"] },
@@ -394,8 +393,8 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
       },
       alleppey: {
         hostels: [
-          { name: "Alleppey Beach Hostel", area: "Alleppey Beach", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Beach access", "Backwater tours", "Kitchen"], bookingUrl: "https://www.booking.com/city/in/alleppey.html" },
-          { name: "The Hosteller", area: "Kumbakonam", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Houseboat access", "Cultural tours"], bookingUrl: "https://www.thehosteller.com/alleppey/" },
+          { name: "GoStops Alleppey", area: "Cullen Road", price: "₹600-900/night ($7-11)", rating: 4.0, amenities: ["WiFi", "Beach access", "Backwater tours", "Kitchen"], bookingUrl: "https://gostops.com/location/gostops-Alleppey/" },
+          { name: "Dutch Square Hostel", area: "Kumbakonam", price: "₹550-850/night ($7-10)", rating: 3.9, amenities: ["WiFi", "Houseboat access", "Cultural tours"], bookingUrl: "https://www.booking.com/hotel/in/dutch-square-hostel.html/" },
           { name: "Zostel Alleppey", area: "Backwater Junction", price: "₹650-950/night ($8-11)", rating: 4.1, amenities: ["WiFi", "Backwater views", "Boat tours", "Local cuisine"], bookingUrl: "https://www.zostel.com/zostel/alleppey/" }
         ],
         platforms: [
