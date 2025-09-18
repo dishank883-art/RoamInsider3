@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { Star, MessageSquare, ThumbsUp, Calendar, User, ExternalLink } from "lucide-react";
 import type { CityWithDetails } from "@shared/schema";
-import { supabase } from "@/lib/supabaseClient";
+import { supabase } from "../../lib/supabaseClient";
 
 interface ReviewsProps {
   city: CityWithDetails;
