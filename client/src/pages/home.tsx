@@ -69,12 +69,23 @@ export default function Home() {
         for (const filter of selectedTags) {
           switch (filter) {
             case 'budget':
-              // Budget cities: Cost of living between 0-30k per month
-              const cityBudget = city.avgCost || 25000; // use city.avgCost if available, otherwise default 25k
-              if (cityBudget >= 0 && cityBudget <= 30000) {
-              quickFilterMatch = true;
-            }
-            break;
+  // Only show cities with avgCost 0-30k
+  let avgCost = 25000; // default mid-range cost
+
+  // Assign avgCost based on city
+  if (['kasol', 'bir', 'dharamkot', 'tosh', 'rishikesh', 'mussoorie', 'dehradun', 'ziro', 'darjeeling'].includes(city.slug.toLowerCase())) {
+    avgCost = 15000; // budget-friendly
+  } else if (['pune', 'goa', 'pondicherry', 'kochi', 'udaipur', 'kolkata'].includes(city.slug.toLowerCase())) {
+    avgCost = 30000; // mid-budget
+  } else {
+    avgCost = 40000; // high-budget (exclude from quick filter)
+  }
+
+  if (avgCost <= 30000) {
+    quickFilterMatch = true; // only low-budget cities pass
+  }
+  break;
+
             case 'warm':
               // Warm cities: Coastal, southern India, tropical
               if (city.tags?.some(tag => 
