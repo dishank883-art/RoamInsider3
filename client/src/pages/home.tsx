@@ -74,8 +74,7 @@ export default function Home() {
                   ['kasol', 'bir', 'dharamkot', 'tosh', 'rishikesh', 'mussoorie', 'dehradun', 'ziro', 'darjeeling'].includes(city.slug.toLowerCase())) {
                 quickFilterMatch = true;
               }
-  }
-  break;
+              break;
             case 'warm':
               // Warm cities: Coastal, southern India, tropical
               if (city.tags?.some(tag => 
