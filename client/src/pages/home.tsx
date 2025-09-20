@@ -69,12 +69,12 @@ export default function Home() {
         for (const filter of selectedTags) {
           switch (filter) {
             case 'budget':
-  // Budget cities: Smaller cities, hill stations, spiritual places
-              if (city.tags?.some(tag => tag.toLowerCase().includes('budget')) ||
-                  ['kasol', 'bir', 'dharamkot', 'tosh', 'rishikesh', 'mussoorie', 'dehradun', 'ziro', 'darjeeling'].includes(city.slug.toLowerCase())) {
-                quickFilterMatch = true;
-              }
-              break;
+              // Budget cities: Cost of living between 0-30k per month
+              const cityBudget = city.avgCost || 25000; // use city.avgCost if available, otherwise default 25k
+              if (cityBudget >= 0 && cityBudget <= 30000) {
+              quickFilterMatch = true;
+            }
+            break;
             case 'warm':
               // Warm cities: Coastal, southern India, tropical
               if (city.tags?.some(tag => 
