@@ -62,7 +62,7 @@ export const citySpecificData: Record<string, CitySpecificData> = {
       { item: "Misal Pav", price: "₹40-60 ($0.50)" },
       { item: "Vada Pav", price: "₹15-25 ($0.20)" },
       { item: "Puran Poli", price: "₹30-50 ($0.40)" },
-      { item: "Bhel Puri", price: "₹25-40 ($0.30)" },
+      { item: "Sev Puri", price: "₹25-40 ($0.30)" },
       { item: "Pav Bhaji", price: "₹50-80 ($0.60-1)" }
     ],
     wifiHotspots: {
