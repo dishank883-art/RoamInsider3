@@ -69,12 +69,24 @@ export default function Home() {
         for (const filter of selectedTags) {
           switch (filter) {
             case 'budget':
-              // Budget cities: Smaller cities, hill stations, spiritual places
-              if (city.tags?.some(tag => tag.toLowerCase().includes('budget')) ||
-                  ['kasol', 'bir', 'dharamkot', 'tosh', 'rishikesh', 'mussoorie', 'dehradun', 'ziro', 'darjeeling'].includes(city.slug.toLowerCase())) {
-                quickFilterMatch = true;
-              }
-              break;
+  {
+    // Estimate average cost for each city
+    let avgCost = 25000; // Default mid-range
+
+    if (['kasol', 'bir', 'dharamkot', 'tosh', 'rishikesh', 'mussoorie', 'dehradun', 'ziro', 'darjeeling'].includes(city.slug.toLowerCase())) {
+      avgCost = 15000; // budget hill/spiritual towns
+    } else if (['mumbai', 'bangalore', 'new-delhi'].includes(city.slug.toLowerCase())) {
+      avgCost = 45000; // expensive metros
+    } else if (['pune', 'goa', 'pondicherry', 'kochi', 'udaipur', 'kolkata'].includes(city.slug.toLowerCase())) {
+      avgCost = 30000; // mid-tier
+    }
+
+    // ✅ Define budget threshold (say < 25k = budget friendly)
+    if (avgCost <= 25000 || city.tags?.some(tag => tag.toLowerCase().includes('budget'))) {
+      quickFilterMatch = true;
+    }
+  }
+  break;
             case 'warm':
               // Warm cities: Coastal, southern India, tropical
               if (city.tags?.some(tag => 
