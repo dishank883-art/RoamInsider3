@@ -897,7 +897,7 @@ export default function CostOfLiving({ costData, citySlug }: CostOfLivingProps) 
               <li>• Use UPI payments for 1-5% cashback on most transactions</li>
               <li>• Buy monthly groceries from wholesale markets for 30% savings</li>
               <li>• Share accommodation with other nomads to split costs</li>
-              <li>• Use local transport apps (BMTC, Delhi Metro) for route optimization</li>
+              <li>• Use local transport apps for route optimization</li>
               <li>• Cook 60% of meals, eat out 40% for balanced budget</li>
             </ul>
             <ul className="space-y-1">
