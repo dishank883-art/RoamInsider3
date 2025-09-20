@@ -148,7 +148,7 @@ export function addNewCitiesData(storage: any, cityIds: {
     timings: "24 hours",
     isHiddenGem: false,
     rating: "4.4",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+    image: "https://cdn.pixabay.com/photo/2022/12/07/05/57/building-7640276_1280.jpg",
     createdAt: new Date(),
   });
 
@@ -369,7 +369,7 @@ export function addNewCitiesData(storage: any, cityIds: {
     timings: "5:00 AM - 8:00 PM",
     isHiddenGem: false,
     rating: "4.8",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+    image: "https://cdn.pixabay.com/photo/2013/11/29/10/13/temple-complex-221016_1280.jpg",
     createdAt: new Date(),
   });
 
@@ -385,7 +385,7 @@ export function addNewCitiesData(storage: any, cityIds: {
     timings: "24 hours",
     isHiddenGem: false,
     rating: "4.5",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+    image: "https://cdn.pixabay.com/photo/2021/07/17/18/59/waterfall-6473754_1280.jpg",
     createdAt: new Date(),
   });
 
@@ -401,7 +401,7 @@ export function addNewCitiesData(storage: any, cityIds: {
     timings: "Best at sunrise/sunset",
     isHiddenGem: true,
     rating: "4.7",
-    image: "https://images.unsplash.com/photo-1571985969114-7c47498d6b43",
+    image: "https://cdn.pixabay.com/photo/2018/07/15/11/56/triund-3539491_1280.jpg",
     createdAt: new Date(),
   });
 
@@ -417,7 +417,7 @@ export function addNewCitiesData(storage: any, cityIds: {
     timings: "9:00 AM - 5:00 PM",
     isHiddenGem: false,
     rating: "4.2",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+    image: "https://cdn.pixabay.com/photo/2017/09/01/00/39/flags-2702734_1280.jpg",
     createdAt: new Date(),
   });
 
